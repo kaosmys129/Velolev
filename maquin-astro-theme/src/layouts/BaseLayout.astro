@@ -1,0 +1,27 @@
+---
+import AssetLinks from "../components/AssetLinks.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import RawFragment from "../components/RawFragment.astro";
+import RuntimeScripts from "../components/RuntimeScripts.astro";
+import type { ThemeRoute } from "../data/routes";
+
+type Props = {
+  route: ThemeRoute;
+};
+
+const { route } = Astro.props;
+---
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <AssetLinks route={route} />
+  </head>
+  <body class={route.bodyClass}>
+    <RawFragment name={route.preHeaderFragment} />
+    <Header route={route} />
+    <RawFragment name={route.contentFragment} />
+    <Footer route={route} />
+    <RuntimeScripts route={route} />
+  </body>
+</html>

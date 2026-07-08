@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+.astro/
+
+# IDE and OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Playwright temporary logs
+.playwright-cli/*.log
+.playwright-cli/*.yml
+
+# Logs
+*.log

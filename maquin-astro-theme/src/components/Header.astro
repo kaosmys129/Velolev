@@ -1,0 +1,44 @@
+---
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import type { ThemeRoute } from "../data/routes";
+
+type Props = {
+  route: ThemeRoute;
+};
+
+const { route } = Astro.props;
+const { activeNav } = route;
+
+// 读取公共的首页 Header 作为模板底稿
+let html = readFileSync(join(process.cwd(), "src", "fragments", "home", "header.html"), "utf-8");
+
+// 清洗相对路径和占位符链接
+html = html.replaceAll('href="index.html#"', 'href="#"');
+html = html.replaceAll('href="index.html"', 'href="/"');
+
+// 映射 activeNav 到相应的 menu-item ID
+const navMapping: Record<string, string> = {
+  home: "menu-item-112",
+  about: "menu-item-113",
+  equipment: "menu-item-123",
+  contact: "menu-item-116",
+  pages: "menu-item-117",
+};
+
+const activeId = navMapping[activeNav];
+
+if (activeId) {
+  // 1. 为匹配 activeId 的 li 标签的 class 属性中添加 current-menu-item
+  const liRegex = new RegExp(`(<li\\s+class=")([^"]*\\b${activeId}\\b[^"]*)(")`, 'g');
+  html = html.replace(liRegex, `$1$2 current-menu-item$3`);
+
+  // 2. 为匹配 activeId 后的直接子 a 标签添加 elementor-item-active 类和 aria-current="page" 属性
+  const aRegex = new RegExp(
+    `(<li\\s+class="[^"]*\\b${activeId}\\b[^"]*"[^>]*>\\s*<a\\s+[^>]*class=")(elementor-item)([^"]*)(")`,
+    'g'
+  );
+  html = html.replace(aRegex, `$1$2$3 elementor-item-active$4 aria-current="page"`);
+}
+---
+<Fragment set:html={html} />

@@ -1,0 +1,19 @@
+---
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import type { ThemeRoute } from "../data/routes";
+
+type Props = {
+  route: ThemeRoute;
+};
+
+const { route } = Astro.props;
+
+// 读取公共的首页 Footer 作为模板底稿
+let html = readFileSync(join(process.cwd(), "src", "fragments", "home", "footer.html"), "utf-8");
+
+// 清洗其中的相对跳转与占位链接
+html = html.replaceAll('href="index.html#"', 'href="#"');
+html = html.replaceAll('href="index.html"', 'href="/"');
+---
+<Fragment set:html={html} />

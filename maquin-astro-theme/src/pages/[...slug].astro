@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { routes } from "../data/routes";
+
+export function getStaticPaths() {
+  return routes
+    .filter((route) => route.slug !== "" && route.slug !== "404")
+    .map((route) => ({
+      params: { slug: route.slug },
+      props: { route },
+    }));
+}
+
+const { route } = Astro.props;
+---
+<BaseLayout route={route} />

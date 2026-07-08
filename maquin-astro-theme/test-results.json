@@ -1,0 +1,51 @@
+[
+  {
+    "name": "home",
+    "path": "/",
+    "astroStatus": 200,
+    "baseStatus": 200,
+    "activeNavCorrect": true
+  },
+  {
+    "name": "about-us",
+    "path": "/about-us/",
+    "astroStatus": 200,
+    "baseStatus": 200,
+    "activeNavCorrect": true
+  },
+  {
+    "name": "blog",
+    "path": "/blog/",
+    "astroStatus": 200,
+    "baseStatus": 200,
+    "activeNavCorrect": true
+  },
+  {
+    "name": "equipment-detail",
+    "path": "/equipment-detail/",
+    "astroStatus": 200,
+    "baseStatus": 200,
+    "activeNavCorrect": true
+  },
+  {
+    "name": "contact-us",
+    "path": "/contact-us/",
+    "astroStatus": 200,
+    "baseStatus": 200,
+    "activeNavCorrect": true
+  },
+  {
+    "name": "404",
+    "path": "/404.html",
+    "astroStatus": 200,
+    "baseStatus": 404,
+    "activeNavCorrect": true
+  },
+  {
+    "name": "single-post",
+    "path": "/essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency-2/",
+    "astroStatus": 200,
+    "baseStatus": 200,
+    "activeNavCorrect": true
+  }
+]

@@ -1,0 +1,11 @@
+---
+import RawFragment from "./RawFragment.astro";
+import type { ThemeRoute } from "../data/routes";
+
+type Props = {
+  route: ThemeRoute;
+};
+
+const { route } = Astro.props;
+---
+<RawFragment name={route.headFragment} />

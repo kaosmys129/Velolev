@@ -1,0 +1,12 @@
+---
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
+type Props = {
+  name: string;
+};
+
+const { name } = Astro.props;
+const html = readFileSync(join(process.cwd(), "src", "fragments", name), "utf-8");
+---
+<Fragment set:html={html} />
