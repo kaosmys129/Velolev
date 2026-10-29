@@ -1,0 +1,184 @@
+---
+/**
+ * JobSiteCards.astro
+ * 施工工况实战画廊卡片网格组件
+ * 展示市政人行道、密集停车场、偏远太阳能路灯等核心作业场景的真实实录
+ */
+interface Props {
+  limit?: number;
+  class?: string;
+}
+
+const { limit = 3, class: className = "" } = Astro.props;
+
+const scenes = [
+  {
+    id: "sidewalk",
+    title: "Narrow Sidewalks & Roadways",
+    subtitle: "Municipal Lighting Maintenance",
+    image: "/images/evidence/jobsite-sidewalk-municipal-road.jpg",
+    tag: "Tight Urban Space",
+    desc: "Ultra-compact 220 mm profile easily navigates pedestrian walkways and bike paths without heavy equipment access permits or surface weight restrictions.",
+    benefit: "Protects finished pavement slabs from damage"
+  },
+  {
+    id: "parking",
+    title: "Dense Commercial Parking Lots",
+    subtitle: "Campus & Retail Light Poles",
+    image: "/images/evidence/jobsite-parking-lot-tight-space.jpg",
+    tag: "Confined Access",
+    desc: "Operates within standard marked parking stalls and landscaped medians, allowing 2 workers to safely erect replacement poles without blocking traffic lanes.",
+    benefit: "2-man compact maneuverability between parking bays & obstacles"
+  },
+  {
+    id: "rural",
+    title: "Off-Grid Solar Light Deployments",
+    subtitle: "Rural & Remote Roadways",
+    image: "/images/evidence/jobsite-rural-solar-street-light.jpg",
+    tag: "Off-Grid & Remote",
+    desc: "Self-contained 24 V battery power package allows rapid pole raising on unpaved mountain roads and remote off-grid highways without field generators.",
+    benefit: "Autonomous 24 V battery power for remote off-grid installation"
+  }
+];
+
+const items = scenes.slice(0, limit);
+---
+
+<div class:list={["jobsite-showcase", className]}>
+  <div class="jobsite-grid">
+    {items.map((item) => (
+      <article class="jobsite-card" id={`scene-${item.id}`}>
+        <a class="jobsite-image-wrap" href={item.image} data-media-image data-caption={`${item.title}. Application reference view; contact engineering team for site-specific drawing review.`} aria-label={`Enlarge image: ${item.title}`}>
+          <span class="jobsite-badge">{item.tag}</span>
+          <img
+            src={item.image}
+            alt={`${item.title} - application reference view`}
+            loading="lazy"
+            width="680"
+            height="380"
+          />
+          <span class="jobsite-expand" aria-hidden="true">↗</span>
+        </a>
+        <div class="jobsite-content">
+          <p class="jobsite-kicker">{item.subtitle}</p>
+          <h3>{item.title}</h3>
+          <p class="jobsite-desc">{item.desc}</p>
+          <div class="jobsite-highlight">
+            <span class="highlight-icon" aria-hidden="true">✓</span>
+            <span>{item.benefit}</span>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</div>
+
+<style>
+  .jobsite-showcase {
+    margin: 40px 0;
+  }
+  .jobsite-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .jobsite-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #d5d8cd);
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .jobsite-card:hover {
+    transform: translateY(-3px);
+    border-color: #a8b29e;
+  }
+  .jobsite-image-wrap {
+    display:block;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #202622;
+    overflow: hidden;
+  }
+  .jobsite-expand{position:absolute;right:12px;bottom:12px;display:grid;place-items:center;width:36px;height:36px;background:var(--yellow);color:var(--ink);font-size:22px}
+  .jobsite-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .jobsite-card:hover .jobsite-image-wrap img {
+    transform: scale(1.03);
+  }
+  .jobsite-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--yellow, #f4cc3d);
+    color: var(--ink, #1d201e);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 2px;
+    z-index: 2;
+  }
+  .jobsite-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .jobsite-kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted, #626a63);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .jobsite-content h3 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    color: var(--ink, #1d201e);
+  }
+  .jobsite-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4d564e;
+    margin-bottom: 18px;
+    flex-grow: 1;
+  }
+  .jobsite-highlight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line, #d5d8cd);
+    font-size: 12px;
+    font-weight: 600;
+    color: #27482c;
+  }
+  .highlight-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    background: #e6e9de;
+    color: #27482c;
+    border-radius: 50%;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 950px) {
+    .jobsite-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+</style>
