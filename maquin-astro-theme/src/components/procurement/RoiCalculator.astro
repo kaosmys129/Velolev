@@ -1,0 +1,243 @@
+---
+import {translateText,roiErrorMessages} from "../../lib/industrial-localization.mjs";
+import {localizedPagePath} from "../../lib/site-config.mjs";
+import {REGIONAL_PRESETS} from "../../lib/roi.mjs";
+const {locale="en"}=Astro.props;
+const runtimeMessages=[...roiErrorMessages,"A positive scenario.","No positive saving.","Not calculated","{value} months","At these costs and volume, there is no positive annual saving and no calculated payback.","Investment not entered: recurring-cost comparison only. Payback is not calculated.","Conditional on the entered costs, full work scope and annual volume. This is not a guaranteed return.","This browser could not carry the scenario. Copy the results into the project notes manually."];
+const runtimeCopy=Object.fromEntries(runtimeMessages.map(message=>[message,translateText(message,locale)]));
+const t=value=>translateText(value,locale);
+const noteLabels={polesPerProject:"Poles per project",projectsPerYear:"Projects per year",craneFixed:"Mobilisation and other fixed cost per project",craneDaily:"Rental cost per day",craneDays:"Rental days per project",craneCrew:"People in the crew",craneHours:"Full-scope hours per person per project",lifterFixed:"Transport and other fixed cost per project",lifterCrew:"People in the crew",lifterHours:"Full-scope hours per person per project",hourlyRate:"Crew cost per person-hour",lifterVariable:"Energy, wear and other variable cost per project",annualFixed:"Additional annual fixed cost, not counted above"};
+const notesCopy={locale,intro:t("Visitor-entered scenario; not a quotation or suitability approval."),scope:t("Same currency and full scope; taxes, finance, residual value and future changes excluded."),currency:t("Currency"),labels:Object.fromEntries(Object.entries(noteLabels).map(([key,label])=>{const method=key.startsWith("crane")?"02 / Crane-based method":key.startsWith("lifter")?"03 / Pole-lifter method":null;return [key,`${method?t(method)+" · ":""}${t(label)}`];})),crane:t("Crane recurring cost per project"),lifter:t("Pole-lifter recurring cost per project"),annual:t("Annual net saving"),perPole:t("Net difference / pole"),investment:t("Your own total landed equipment investment"),payback:t("Conditional payback"),breakEven:t("Conditional break-even pole count"),notCalculated:t("Not calculated"),months:t("{value} months")};
+
+const groups=[
+ {title:"01 / One common project",fields:[["currency","One currency code for every cost","text"],["polesPerProject","Poles per project","whole"],["projectsPerYear","Projects per year","whole"],["hourlyRate","Crew cost per person-hour","money"]]},
+ {title:"02 / Crane-based method",fields:[["craneFixed","Mobilisation and other fixed cost per project","money"],["craneDaily","Rental cost per day","money"],["craneDays","Rental days per project","number"],["craneCrew","People in the crew","number"],["craneHours","Full-scope hours per person per project","number"]]},
+ {title:"03 / Pole-lifter method",fields:[["lifterFixed","Transport and other fixed cost per project","money"],["lifterCrew","People in the crew","number"],["lifterHours","Full-scope hours per person per project","number"],["lifterVariable","Energy, wear and other variable cost per project","money"],["annualFixed","Additional annual fixed cost, not counted above","money"]]}
+];
+---
+<main id="main"><div class="wrap"><p class="breadcrumb"><a href="/">volvet</a> / Cost scenario</p><header class="page-intro"><p class="eyebrow">Your inputs / Open formulas</p><h1>Calculate a scenario.<br/>Keep the assumptions.</h1><p class="lead muted">Compare crane vs. lifter project costs using regional industry benchmarks or your own jobsite records. Load representative presets with one click and customize parameters anytime.</p></header><div class="scope-note">Establish that both methods are suitable before comparing costs. Results are estimates, not a quotation or a saving guarantee. Do not use the reported lift time as total installation time.</div><div class="calculator-layout"><form id="roi-form" data-roi-copy={JSON.stringify(runtimeCopy)} data-roi-notes-copy={JSON.stringify(notesCopy)} data-quote-path={localizedPagePath("quote",locale)} data-regional-presets={JSON.stringify(REGIONAL_PRESETS)}><div class="preset-strip" role="region" aria-label="Regional benchmark presets"><div class="preset-intro"><span class="preset-badge">FAST BENCHMARK</span><p class="preset-title">Load Regional Industry Benchmark Presets</p><p class="preset-subtitle muted">Click to auto-fill representative crane rental rates, crew labor, and installation volumes:</p></div><div class="preset-buttons"><button type="button" class="preset-button" data-preset-key="sea"><span class="preset-name">Southeast Asia</span><span class="preset-detail">50-pole project benchmark</span></button><button type="button" class="preset-button" data-preset-key="mea"><span class="preset-name">Middle East</span><span class="preset-detail">60-pole project benchmark</span></button><button type="button" class="preset-button" data-preset-key="na_eu"><span class="preset-name">Europe / NA</span><span class="preset-detail">40-pole project benchmark</span></button></div></div><p class="note">Every recurring-cost field is required. Enter zero only when the cost does not apply. Calculations stay in this page until you choose to carry a scenario into an inquiry.</p>{groups.map(group=><fieldset><legend>{group.title}</legend><div class="roi-fields">{group.fields.map(([name,label,type])=><div><label for={`roi-${name}`}>{label}</label><input id={`roi-${name}`} name={name} type={type==="text"?"text":"number"} required min={type==="text"?undefined:"0"} max={type==="whole"?"1000000":type==="text"?undefined:"1000000000"} step={type==="whole"?"1":"any"} maxlength={type==="text"?"3":undefined} inputmode={type==="text"?"text":"decimal"} autocapitalize={type==="text"?"characters":undefined}/></div>)}</div></fieldset>)}<fieldset><legend>04 / Optional investment</legend><label for="roi-investment">Your own total landed equipment investment</label><input id="roi-investment" name="investment" type="number" min="0.01" max="1000000000" step="any" inputmode="decimal"/><p class="note">Leave this blank to compare recurring costs only. Include purchase, delivery and other initial costs once; do not add the investment again as a recurring cost.</p></fieldset><label class="roi-confirm"><input type="checkbox" name="suitability" value="true" required/>I have an appropriate basis to compare these methods for the same project scope. This calculator does not determine equipment suitability.</label><div class="actions"><button class="button" type="submit">Calculate my scenario ↗</button><button class="text-link reset-button" type="reset">Clear inputs</button></div><p id="roi-errors" role="status" aria-live="polite" tabindex="-1"></p><noscript>Enable JavaScript to calculate. The formulas below remain available.</noscript></form><aside class="roi-result" aria-label="Scenario results"><p class="eyebrow">Scenario output</p><div id="roi-empty"><h2>Enter your<br/>project costs.</h2><p>Select a regional preset or input your own project figures to calculate savings.</p></div><section id="roi-results" hidden aria-live="polite"><h2 id="roi-verdict"></h2><div class="kpi-grid"><div class="kpi-card highlight"><span class="kpi-label">Annual Net Saving</span><span class="kpi-value" data-highlight="annualNetSaving">--</span><span class="kpi-sub" data-highlight="savingPercent">Estimated Cost Reduction</span></div><div class="kpi-card"><span class="kpi-label">Saving Per Pole</span><span class="kpi-value" data-highlight="netSavingPerPole">--</span><span class="kpi-sub">Net difference / pole</span></div><div class="kpi-card"><span class="kpi-label">Break-Even Poles</span><span class="kpi-value" data-highlight="breakEvenPoles">--</span><span class="kpi-sub">Poles to recover investment</span></div><div class="kpi-card"><span class="kpi-label">Payback Period</span><span class="kpi-value" data-highlight="paybackMonths">--</span><span class="kpi-sub">Recovery timeline</span></div></div><dl class="roi-details-dl"><div><dt>Crane recurring cost / pole</dt><dd data-result="cranePerPole"></dd></div><div><dt>Pole-lifter cost / pole, including annual allocation</dt><dd data-result="lifterPerPole"></dd></div><div><dt>Net difference / pole</dt><dd data-result="netSavingPerPole"></dd></div><div><dt>Annual net saving</dt><dd data-result="annualNetSaving"></dd></div><div><dt>Conditional payback</dt><dd data-result="paybackMonths"></dd></div><div><dt>Conditional break-even pole count</dt><dd data-result="breakEvenPoles"></dd></div></dl><p id="roi-limits" class="note"></p><button type="button" class="button" id="roi-to-inquiry">Use this scenario in an inquiry ↗</button><p class="note">Only this button temporarily stores the scenario in this browser tab. Review and edit the notes before submitting. Nothing is sent to the inquiry service by calculating.</p></section></aside></div><section class="section formula-section" id="formulas"><p class="eyebrow">Calculation basis / No double counting</p><h2>One project.<br/>One allocation.</h2><ol><li>Crane cost per project = fixed project cost + daily rental × rental days + crew × full-scope hours × person-hour cost.</li><li>Pole-lifter recurring cost per project = fixed project cost + crew × full-scope hours × person-hour cost + other project variable cost.</li><li>Annual net saving = (crane project cost − pole-lifter project cost) × projects per year − additional annual fixed cost.</li><li>Annual poles = poles per project × projects per year. Net saving per pole = annual net saving ÷ annual poles.</li><li>When net saving is positive and an investment is entered: break-even poles = investment ÷ net saving per pole (rounded up); payback months = investment ÷ annual net saving × twelve.</li></ol><p>Annual fixed cost is allocated once. Initial investment is used only in payback. No resale value, financing, discount rate, tax difference, downtime or future cost change is included. Use comparable costs and the same currency throughout; the tool performs no exchange-rate conversion.</p><p>Zero project volume produces no annual result. A zero or negative saving produces no payback. A positive result still depends on the entered scope, volume and cost assumptions remaining valid.</p><div class="actions"><a class="text-link" href="/compare/pole-jack-vs-crane/">Review the comparison ↗</a><a class="text-link" href="/guides/pole-jack-compatibility/">Review compatibility ↗</a></div></section></div></main>
+<script>
+import {calculateRoi,roiInquiryNotes} from "../../lib/roi.mjs";
+const form=document.querySelector<HTMLFormElement>("#roi-form")!,errors=document.querySelector<HTMLElement>("#roi-errors")!,results=document.querySelector<HTMLElement>("#roi-results")!,empty=document.querySelector<HTMLElement>("#roi-empty")!,carry=document.querySelector<HTMLButtonElement>("#roi-to-inquiry")!;
+const locale=document.documentElement.lang;
+const messages:Record<string,string>=JSON.parse(form.dataset.roiCopy??"{}");
+const t=(message:string)=>messages[message]??message;
+const notesCopy=JSON.parse(form.dataset.roiNotesCopy??"{}");
+const regionalPresets:Record<string,any>=JSON.parse(form.dataset.regionalPresets??"{}");
+const presetButtons=document.querySelectorAll<HTMLButtonElement>(".preset-button");
+
+let scenario:{input:Record<string,FormDataEntryValue>,result:any}|null=null;
+const clear=()=>{scenario=null;results.hidden=true;empty.hidden=false;errors.textContent="";};
+
+form.addEventListener("input",()=>{
+  clear();
+  presetButtons.forEach(btn=>btn.classList.remove("is-active"));
+});
+form.addEventListener("reset",()=>{
+  clear();
+  presetButtons.forEach(btn=>btn.classList.remove("is-active"));
+});
+
+presetButtons.forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const key=btn.dataset.presetKey;
+    if(!key||!regionalPresets[key])return;
+    const preset=regionalPresets[key];
+    presetButtons.forEach(b=>b.classList.remove("is-active"));
+    btn.classList.add("is-active");
+    for(const [k,val] of Object.entries(preset)){
+      if(k==="id"||k==="name")continue;
+      const el=form.elements.namedItem(k) as HTMLInputElement|null;
+      if(el){
+        if(el.type==="checkbox"){
+          el.checked=Boolean(val);
+        }else{
+          el.value=String(val);
+        }
+      }
+    }
+    form.requestSubmit();
+  });
+});
+
+form.addEventListener("submit",event=>{
+  event.preventDefault();
+  const input=Object.fromEntries(new FormData(form));
+  const result=calculateRoi(input);
+  clear();
+  if(result.status==="invalid"||result.status==="no_volume"){
+    errors.textContent=result.message?t(result.message):[...new Set(Object.values(result.errors) as string[])].map(t).join(" ");
+    errors.focus();
+    return;
+  }
+  scenario={input,result};
+  results.hidden=false;
+  empty.hidden=true;
+  document.querySelector("#roi-verdict")!.textContent=t(result.status==="positive"?"A positive scenario.":"No positive saving.");
+  
+  for(const node of document.querySelectorAll<HTMLElement>("[data-result]")){
+    const key=node.dataset.result!,value=result[key];
+    node.textContent=value===null?t("Not calculated"):key==="paybackMonths"?t("{value} months").replace("{value}",Number(value).toLocaleString(locale,{maximumFractionDigits:2})):key==="breakEvenPoles"?Number(value).toLocaleString(locale):`${Number(value).toLocaleString(locale,{minimumFractionDigits:2,maximumFractionDigits:2})} ${result.currency}`;
+  }
+
+  const hlAnnual=document.querySelector<HTMLElement>('[data-highlight="annualNetSaving"]');
+  const hlPerPole=document.querySelector<HTMLElement>('[data-highlight="netSavingPerPole"]');
+  const hlBreakEven=document.querySelector<HTMLElement>('[data-highlight="breakEvenPoles"]');
+  const hlPayback=document.querySelector<HTMLElement>('[data-highlight="paybackMonths"]');
+  const hlPercent=document.querySelector<HTMLElement>('[data-highlight="savingPercent"]');
+
+  if(hlAnnual) hlAnnual.textContent=result.annualNetSaving>0?`${Number(result.annualNetSaving).toLocaleString(locale,{maximumFractionDigits:0})} ${result.currency}`:t("Not calculated");
+  if(hlPerPole) hlPerPole.textContent=result.netSavingPerPole>0?`${Number(result.netSavingPerPole).toLocaleString(locale,{minimumFractionDigits:2,maximumFractionDigits:2})} ${result.currency}`:t("Not calculated");
+  if(hlBreakEven) hlBreakEven.textContent=result.breakEvenPoles?`~${Number(result.breakEvenPoles).toLocaleString(locale)} Poles`:t("Not calculated");
+  if(hlPayback) hlPayback.textContent=result.paybackMonths?`${Number(result.paybackMonths).toLocaleString(locale,{minimumFractionDigits:1,maximumFractionDigits:1})} Months`:t("Not calculated");
+  if(hlPercent){
+    const savingPct=result.craneProject>0?Math.round((result.projectGrossSaving/result.craneProject)*100):0;
+    hlPercent.textContent=savingPct>0?`~${savingPct}% Project Cost Reduction`:t("Estimated Cost Reduction");
+  }
+
+  document.querySelector("#roi-limits")!.textContent=t(result.status==="non_positive"?"At these costs and volume, there is no positive annual saving and no calculated payback.":result.investment===null?"Investment not entered: recurring-cost comparison only. Payback is not calculated.":"Conditional on the entered costs, full work scope and annual volume. This is not a guaranteed return.");
+  document.dispatchEvent(new CustomEvent("volvet:calculator-complete",{detail:{page:location.pathname,outcome:result.status}}));
+});
+
+carry.addEventListener("click",()=>{
+  if(!scenario)return;
+  try{
+    sessionStorage.setItem("volvet-roi-inquiry",JSON.stringify({version:2,locale,createdAt:Date.now(),notes:roiInquiryNotes(scenario.input,scenario.result,notesCopy)}));
+    location.assign(`${form.dataset.quotePath??"/quote/"}?context=roi`);
+  }catch{
+    errors.textContent=t("This browser could not carry the scenario. Copy the results into the project notes manually.");
+    errors.focus();
+  }
+});
+</script>
+
+<style>
+  .preset-strip {
+    background: #edf1e8;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--yellow);
+    padding: 20px 22px;
+    margin-bottom: 24px;
+    border-radius: 2px;
+  }
+  .preset-intro {
+    margin-bottom: 14px;
+  }
+  .preset-badge {
+    font-family: 'Courier New', SFMono-Regular, monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: var(--ink);
+    color: var(--white);
+    padding: 3px 6px;
+    border-radius: 2px;
+    margin-right: 8px;
+  }
+  .preset-title {
+    font-size: 15px;
+    font-weight: 650;
+    color: var(--ink);
+    display: inline;
+  }
+  .preset-subtitle {
+    font-size: 13px;
+    margin: 4px 0 0 0;
+    line-height: 1.4;
+  }
+  .preset-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .preset-button {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 12px 14px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.2s ease;
+  }
+  .preset-button:hover {
+    border-color: var(--yellow);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .preset-button.is-active {
+    border-color: #d4ae24;
+    background: #fffdf5;
+    outline: 2px solid var(--yellow);
+  }
+  .preset-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .preset-detail {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0 24px 0;
+  }
+  .kpi-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 14px 16px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .kpi-card.highlight {
+    background: #fffdf5;
+    border-color: #d4ae24;
+    border-left: 3px solid var(--yellow);
+  }
+  .kpi-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+  .kpi-value {
+    font-family: 'Courier New', SFMono-Regular, monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+  .kpi-card.highlight .kpi-value {
+    color: #947100;
+    font-size: 24px;
+  }
+  .kpi-sub {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.2;
+  }
+  .roi-details-dl {
+    margin-top: 16px;
+    border-top: 1px dashed var(--line);
+    padding-top: 16px;
+  }
+
+  @media(max-width: 760px) {
+    .preset-buttons {
+      grid-template-columns: 1fr;
+    }
+    .kpi-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
