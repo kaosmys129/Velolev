@@ -1,0 +1,791 @@
+---
+import baseline from "../../data/content-baseline.json";
+
+interface Props {
+  locale?: string;
+  id?: string;
+}
+
+const { locale = "en", id = "flange-instant-checker" } = Astro.props;
+const specs = baseline.product.specifications;
+const [minSpan, maxSpan] = specs.flangeHoleSpanMm;
+const standardBolts = baseline.product.standardConfiguration.anchorBoltSizesIncluded;
+const listedBolts = specs.listedAnchorBoltSizes;
+---
+
+<div class="flange-checker-container" id={id}>
+  <div class="flange-checker-card">
+    <div class="checker-header">
+      <div class="checker-title-group">
+        <span class="checker-badge">INTERACTIVE ENGINEERING TOOL</span>
+        <h3>Flange Bolt-Circle Instant Checker</h3>
+        <p class="checker-subtitle">
+          Verify foundation compatibility before deployment. Test your pole base bolt-circle span and anchor bolt sizes against the standard {minSpan}–{maxSpan} mm envelope.
+        </p>
+      </div>
+      <div class="preset-group">
+        <span class="preset-label">Quick Presets:</span>
+        <button type="button" class="preset-btn" data-span="200" data-bolt="M18">Standard Solar (200mm / M18)</button>
+        <button type="button" class="preset-btn active" data-span="220" data-bolt="M20">Highway 12m (220mm / M20)</button>
+        <button type="button" class="preset-btn" data-span="240" data-bolt="M24">Heavy Roadway (240mm / M24)</button>
+        <button type="button" class="preset-btn" data-span="300" data-bolt="M30">Custom Base (300mm / M30)</button>
+      </div>
+    </div>
+
+    <div class="checker-grid">
+      <!-- Left Column: Controls -->
+      <div class="checker-controls">
+        <!-- Bolt-Circle Span (mm) -->
+        <div class="control-block">
+          <div class="control-label-row">
+            <label for="span-number-input" class="control-title">
+              Bolt-Circle Diameter / Span (BCD)
+              <span class="info-tip" title="Diagonal center-to-center distance between opposite anchor bolts">ⓘ</span>
+            </label>
+            <div class="input-unit-wrap">
+              <input
+                type="number"
+                id="span-number-input"
+                name="span-mm"
+                min="100"
+                max="400"
+                step="5"
+                value="220"
+                class="span-number"
+                aria-label="Bolt circle diameter in millimeters"
+              />
+              <span class="unit-tag">mm</span>
+            </div>
+          </div>
+
+          <div class="range-slider-wrapper">
+            <input
+              type="range"
+              id="span-range-slider"
+              min="120"
+              max="350"
+              step="5"
+              value="220"
+              class="range-slider"
+              aria-label="Bolt circle diameter range slider"
+            />
+            <div class="range-ticks">
+              <span>120 mm</span>
+              <span class="envelope-marker">Standard Envelope ({minSpan}–{maxSpan} mm)</span>
+              <span>350 mm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anchor Bolt Size Selection -->
+        <div class="control-block">
+          <label class="control-title">
+            Foundation Anchor Bolt Size
+            <span class="info-tip" title="Select your project pre-embedded anchor bolt thread specification">ⓘ</span>
+          </label>
+          <div class="bolt-pill-group" role="radiogroup" aria-label="Anchor bolt size">
+            {["M16", "M18", "M20", "M22", "M24", "M27", "M30", "Other"].map((size) => (
+              <label class={`bolt-pill ${size === "M20" ? "checked" : ""}`}>
+                <input
+                  type="radio"
+                  name="bolt-size"
+                  value={size}
+                  checked={size === "M20"}
+                />
+                <span class="pill-text">{size}</span>
+                {standardBolts.includes(size) && <span class="pill-badge" title="Standard factory included kit">Standard</span>}
+                {size === "M24" && <span class="pill-badge optional" title="Chassis compatible, factory optional kit">Optional</span>}
+                {["M27", "M30", "Other"].includes(size) && <span class="pill-badge custom" title="Requires custom transition plate">Custom</span>}
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <!-- Hole Count Selector -->
+        <div class="control-block">
+          <label for="hole-pattern-select" class="control-title">Flange Hole Count & Layout</label>
+          <select id="hole-pattern-select" class="select-input">
+            <option value="4" selected>4-Hole Foundation (Standard Square / Diamond Pattern)</option>
+            <option value="6">6-Hole Circular Pattern</option>
+            <option value="8">8-Hole Heavy Circular Pattern</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Right Column: Instant Diagnostic & Recommendation -->
+      <div class="checker-results" aria-live="polite" id="checker-diagnostic-panel">
+        <div class="status-card" id="status-card-box">
+          <div class="status-badge-row">
+            <span class="verdict-pill status-direct" id="verdict-pill">
+              <span class="status-icon" aria-hidden="true">✔</span>
+              <span id="verdict-label">100% Direct Fit</span>
+            </span>
+            <span class="envelope-status" id="envelope-summary">In Standard Envelope</span>
+          </div>
+
+          <div class="specs-summary-grid">
+            <div class="spec-cell">
+              <span class="cell-label">Span Status</span>
+              <strong class="cell-val" id="spec-span-val">220 mm (Standard)</strong>
+            </div>
+            <div class="spec-cell">
+              <span class="cell-label">Bolt Hardware</span>
+              <strong class="cell-val" id="spec-bolt-val">M20 (Factory Included)</strong>
+            </div>
+            <div class="spec-cell">
+              <span class="cell-label">Adapter Requirement</span>
+              <strong class="cell-val" id="spec-adapter-val">Zero (Direct Mount)</strong>
+            </div>
+          </div>
+
+          <div class="verdict-explanation">
+            <h4 id="verdict-heading">Standard 180–260 mm Envelope: Ready for Direct Jobsite Deployment</h4>
+            <p id="verdict-desc">
+              Your 220 mm bolt-circle span matches the standard {minSpan}–{maxSpan} mm equipment envelope. Standard factory-included M20 hardware kits bolt directly to your foundation without additional fabrication or field drilling.
+            </p>
+          </div>
+
+          <!-- Dynamic Action CTA -->
+          <div class="action-cta-wrap">
+            <a href="/quote/?span=220&bolt=M20" class="button cta-btn" id="verdict-cta">
+              <span id="cta-btn-text">Request Factory Quotation for This Configuration</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <p class="cta-subnote" id="cta-subnote">
+              FOB/CIF factory direct dispatch • Includes 4 sets of hardware per size
+            </p>
+          </div>
+        </div>
+
+        <!-- Technical Diagram Box -->
+        <div class="flange-diagram-box">
+          <div class="diagram-art">
+            <svg viewBox="0 0 200 120" width="100%" height="100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bolt circle diameter technical illustration">
+              <rect x="10" y="10" width="180" height="100" rx="8" fill="#f4efe6" stroke="#202622" stroke-width="1.5"/>
+              <!-- Circular flange guideline -->
+              <circle cx="100" cy="60" r="38" stroke="#d5cebe" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <!-- 4 bolts -->
+              <circle cx="73" cy="33" r="6" fill="#202622"/>
+              <circle cx="127" cy="33" r="6" fill="#202622"/>
+              <circle cx="73" cy="87" r="6" fill="#202622"/>
+              <circle cx="127" cy="87" r="6" fill="#202622"/>
+              <!-- Diagonal BCD line -->
+              <line x1="73" y1="33" x2="127" y2="87" stroke="#e65100" stroke-width="2" stroke-dasharray="2 2"/>
+              <!-- Center pole cavity -->
+              <circle cx="100" cy="60" r="16" fill="#ffffff" stroke="#202622" stroke-width="1.5"/>
+              <text x="105" y="55" font-size="9" font-family="monospace" fill="#e65100" font-weight="700">BCD (Span)</text>
+              <text x="100" y="63" font-size="8" font-family="monospace" text-anchor="middle" fill="#757575">Base</text>
+            </svg>
+          </div>
+          <div class="diagram-info">
+            <span class="info-kicker">Measurement Rule</span>
+            <p>Always measure diagonal center-to-center span (BCD) between anchor studs. Need engineering verification? Send base drawings for 24h factory audit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .flange-checker-container {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .flange-checker-card {
+    background: #ffffff;
+    border: 1px solid #e0dacf;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
+  .checker-header {
+    border-bottom: 1px solid #ebe5d8;
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+  }
+  .checker-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: #ffd54f;
+    color: #202622;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .checker-title-group h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #202622;
+    margin: 0 0 8px 0;
+    line-height: 1.25;
+  }
+  .checker-subtitle {
+    font-size: 14px;
+    color: #5f6368;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    max-width: 820px;
+  }
+  .preset-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .preset-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #49454f;
+    margin-right: 4px;
+  }
+  .preset-btn {
+    background: #f4efe6;
+    border: 1px solid #ded6c5;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #202622;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .preset-btn:hover {
+    background: #ffd54f;
+    border-color: #fbc02d;
+  }
+  .preset-btn.active {
+    background: #202622;
+    color: #ffffff;
+    border-color: #202622;
+  }
+
+  /* Grid Layout */
+  .checker-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .checker-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Controls Column */
+  .checker-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .control-block {
+    background: #faf8f5;
+    border: 1px solid #ebe5d8;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .control-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .control-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #202622;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .info-tip {
+    display: inline-block;
+    cursor: help;
+    font-size: 12px;
+    color: #757575;
+  }
+  .input-unit-wrap {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1.5px solid #ded6c5;
+    border-radius: 6px;
+    padding: 4px 10px;
+  }
+  .input-unit-wrap:focus-within {
+    border-color: #202622;
+  }
+  .span-number {
+    width: 64px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #202622;
+    text-align: right;
+    outline: none;
+  }
+  .unit-tag {
+    font-size: 13px;
+    font-weight: 600;
+    color: #757575;
+    margin-left: 4px;
+  }
+  .range-slider-wrapper {
+    margin-top: 10px;
+  }
+  .range-slider {
+    width: 100%;
+    accent-color: #202622;
+    cursor: pointer;
+  }
+  .range-ticks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #757575;
+    margin-top: 6px;
+  }
+  .envelope-marker {
+    color: #2e7d32;
+    font-weight: 600;
+  }
+
+  /* Bolt pills */
+  .bolt-pill-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+  }
+  @media (max-width: 480px) {
+    .bolt-pill-group {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .bolt-pill {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 6px;
+    background: #ffffff;
+    border: 1px solid #ded6c5;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  .bolt-pill input {
+    position: absolute;
+    opacity: 0;
+  }
+  .bolt-pill.checked {
+    background: #202622;
+    color: #ffffff;
+    border-color: #202622;
+  }
+  .bolt-pill.checked .pill-text {
+    color: #ffffff;
+  }
+  .pill-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #202622;
+  }
+  .pill-badge {
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 3px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+  .pill-badge.optional {
+    background: #e3f2fd;
+    color: #1565c0;
+  }
+  .pill-badge.custom {
+    background: #fff3e0;
+    color: #e65100;
+  }
+  .bolt-pill.checked .pill-badge {
+    background: #ffd54f;
+    color: #202622;
+  }
+
+  .select-input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid #ded6c5;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #202622;
+    outline: none;
+  }
+
+  /* Results Column */
+  .checker-results {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .status-card {
+    border-radius: 10px;
+    padding: 24px;
+    border: 1.5px solid #a5d6a7;
+    background: #fbfdfa;
+    transition: all 0.3s ease;
+  }
+  .status-card.direct-fit {
+    border-color: #81c784;
+    background: #fbfdfa;
+  }
+  .status-card.notice-fit {
+    border-color: #90caf9;
+    background: #f8fbff;
+  }
+  .status-card.custom-adapter {
+    border-color: #ffcc80;
+    background: #fffcf8;
+  }
+
+  .status-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .verdict-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .verdict-pill.status-direct {
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #a5d6a7;
+  }
+  .verdict-pill.status-notice {
+    background: #e3f2fd;
+    color: #0d47a1;
+    border: 1px solid #90caf9;
+  }
+  .verdict-pill.status-custom {
+    background: #fff3e0;
+    color: #b73800;
+    border: 1px solid #ffcc80;
+  }
+  .envelope-status {
+    font-size: 12px;
+    font-weight: 600;
+    color: #5f6368;
+  }
+
+  .specs-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid #ebe5d8;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 540px) {
+    .specs-summary-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .spec-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .cell-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #757575;
+  }
+  .cell-val {
+    font-size: 13px;
+    font-weight: 700;
+    color: #202622;
+  }
+
+  .verdict-explanation h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #202622;
+    margin: 0 0 8px 0;
+  }
+  .verdict-explanation p {
+    font-size: 13.5px;
+    color: #49454f;
+    line-height: 1.55;
+    margin: 0 0 20px 0;
+  }
+
+  .action-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #202622;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .cta-btn:hover {
+    background: #ffd54f;
+    color: #202622;
+  }
+  .cta-subnote {
+    font-size: 11.5px;
+    color: #757575;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Technical Diagram Box */
+  .flange-diagram-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #faf8f5;
+    border: 1px solid #ebe5d8;
+    border-radius: 8px;
+  }
+  .diagram-art {
+    width: 120px;
+    flex-shrink: 0;
+  }
+  .diagram-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .info-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #e65100;
+  }
+  .diagram-info p {
+    font-size: 12px;
+    color: #5f6368;
+    line-height: 1.45;
+    margin: 0;
+  }
+</style>
+
+<script>
+  function setupFlangeChecker() {
+    const spanInput = document.getElementById("span-number-input") as HTMLInputElement;
+    const spanSlider = document.getElementById("span-range-slider") as HTMLInputElement;
+    const boltRadios = document.querySelectorAll('input[name="bolt-size"]') as NodeListOf<HTMLInputElement>;
+    const boltPills = document.querySelectorAll(".bolt-pill");
+    const presetButtons = document.querySelectorAll(".preset-btn");
+    
+    const cardBox = document.getElementById("status-card-box");
+    const verdictPill = document.getElementById("verdict-pill");
+    const verdictLabel = document.getElementById("verdict-label");
+    const envelopeSummary = document.getElementById("envelope-summary");
+    const specSpanVal = document.getElementById("spec-span-val");
+    const specBoltVal = document.getElementById("spec-bolt-val");
+    const specAdapterVal = document.getElementById("spec-adapter-val");
+    const verdictHeading = document.getElementById("verdict-heading");
+    const verdictDesc = document.getElementById("verdict-desc");
+    const verdictCta = document.getElementById("verdict-cta") as HTMLAnchorElement;
+    const ctaBtnText = document.getElementById("cta-btn-text");
+    const ctaSubnote = document.getElementById("cta-subnote");
+
+    const STANDARD_MIN = 180;
+    const STANDARD_MAX = 260;
+    const STANDARD_BOLTS = ["M16", "M18", "M20", "M22"];
+
+    function getSelectedBolt(): string {
+      for (const r of boltRadios) {
+        if (r.checked) return r.value;
+      }
+      return "M20";
+    }
+
+    function calculateStatus(span: number, bolt: string) {
+      if (isNaN(span) || span < 80 || span > 600) {
+        return {
+          category: "invalid",
+          verdict: "Input Guidance Required",
+          envelope: "Out of Bounds",
+          spanText: `${span || 0} mm (Verify measurement)`,
+          boltText: bolt,
+          adapterText: "Verify BCD measurement",
+          heading: "Please enter a valid foundation bolt-circle diameter",
+          desc: "Typical 6m–12m roadway light pole foundations feature a bolt-circle span between 150 mm and 350 mm. Please verify your diagonal center-to-center measurement.",
+          ctaText: "Ask an Engineering Specialist",
+          ctaHref: "/quote/",
+          subnote: "Submit pole base drawings for manual verification"
+        };
+      }
+
+      const inSpan = span >= STANDARD_MIN && span <= STANDARD_MAX;
+      const isStandardBolt = STANDARD_BOLTS.includes(bolt);
+      const isM24 = bolt === "M24";
+
+      // Case 1: 100% Direct Fit
+      if (inSpan && isStandardBolt) {
+        return {
+          category: "direct",
+          verdict: "100% Direct Fit / Turnkey Ready",
+          envelope: "Within Standard 180–260 mm Envelope",
+          spanText: `${span} mm (100% Standard)`,
+          boltText: `${bolt} (Factory Included)`,
+          adapterText: "Zero (Direct Mount)",
+          heading: `Standard 180–260 mm Envelope: Direct Fit for ${bolt} Studs`,
+          desc: `Your ${span} mm bolt-circle span matches the standard 180–260 mm envelope. Using the factory-included ${bolt} hardware sets (4 sets included), the lifter mounts directly to your foundation with zero modifications.`,
+          ctaText: `Request Factory Direct Quote for ${span}mm / ${bolt}`,
+          ctaHref: `/quote/?span=${span}&bolt=${bolt}&status=direct-fit`,
+          subnote: "Direct factory pricing • Turnkey hardware included • Fast global shipment"
+        };
+      }
+
+      // Case 2: Notice Fit (M24 Compatible Accessory)
+      if (inSpan && isM24) {
+        return {
+          category: "notice",
+          verdict: "Notice Fit / M24 Supported",
+          envelope: "Within Standard Span (180–260 mm)",
+          spanText: `${span} mm (Standard Envelope)`,
+          boltText: "M24 (Optional Accessory)",
+          adapterText: "M24 Bolt Kit Required",
+          heading: "Chassis Accommodates M24: Specify Hardware at Inquiry",
+          desc: `The lifter chassis mechanically accommodates M24 anchor studs within the 180–260 mm span. Important distinction: Standard delivery includes M16–M22 bolt sets; M24 hardware is provided as an optional factory accessory. Please confirm M24 requirement during RFQ.`,
+          ctaText: `Request Quote with Optional M24 Hardware (${span}mm)`,
+          ctaHref: `/quote/?span=${span}&bolt=M24&status=notice-fit`,
+          subnote: "Factory accessory package • Custom sleeve hardware matched to M24 studs"
+        };
+      }
+
+      // Case 3: Custom Transition Plate
+      return {
+        category: "custom",
+        verdict: "Custom Transition Plate Required",
+        envelope: inSpan ? `Heavy ${bolt} Bolt Layout` : `${span} mm (Non-Standard Span)`,
+        spanText: `${span} mm (${inSpan ? "Standard" : "Custom Plate Needed"})`,
+        boltText: `${bolt} (${isStandardBolt ? "Standard Size" : "Custom Layout"})`,
+        adapterText: "CNC Transition Plate (3-Day Turnaround)",
+        heading: "Factory Precision Transition Plate Supported (3-Day CNC Milling)",
+        desc: `Your foundation (${span} mm span or ${bolt} bolt size) falls outside the standard turnkey envelope. Our OEM factory laser-cuts custom high-tensile steel transition adapter plates within 3 business days to match your exact pattern.`,
+        ctaText: `Submit Base Drawing for Free Transition Plate Audit`,
+        ctaHref: `/quote/?span=${span}&bolt=${bolt}&status=custom-adapter`,
+        subnote: "Free 24h engineering drawing review • 3-day rapid CNC plate sampling"
+      };
+    }
+
+    function updateUI() {
+      const span = parseInt(spanInput.value, 10);
+      const bolt = getSelectedBolt();
+      const res = calculateStatus(span, bolt);
+
+      if (cardBox) {
+        cardBox.className = `status-card ${res.category === "direct" ? "direct-fit" : res.category === "notice" ? "notice-fit" : "custom-adapter"}`;
+      }
+
+      if (verdictPill) {
+        verdictPill.className = `verdict-pill ${res.category === "direct" ? "status-direct" : res.category === "notice" ? "status-notice" : "status-custom"}`;
+      }
+
+      if (verdictLabel) verdictLabel.textContent = res.verdict;
+      if (envelopeSummary) envelopeSummary.textContent = res.envelope;
+      if (specSpanVal) specSpanVal.textContent = res.spanText;
+      if (specBoltVal) specBoltVal.textContent = res.boltText;
+      if (specAdapterVal) specAdapterVal.textContent = res.adapterText;
+      if (verdictHeading) verdictHeading.textContent = res.heading;
+      if (verdictDesc) verdictDesc.textContent = res.desc;
+      if (ctaBtnText) ctaBtnText.textContent = res.ctaText;
+      if (verdictCta) verdictCta.setAttribute("href", res.ctaHref);
+      if (ctaSubnote) ctaSubnote.textContent = res.subnote;
+
+      // Update pill classes
+      boltPills.forEach((p) => {
+        const input = p.querySelector("input") as HTMLInputElement;
+        if (input && input.checked) {
+          p.classList.add("checked");
+        } else {
+          p.classList.remove("checked");
+        }
+      });
+    }
+
+    // Event listeners
+    spanInput?.addEventListener("input", () => {
+      spanSlider.value = spanInput.value;
+      updateUI();
+    });
+
+    spanSlider?.addEventListener("input", () => {
+      spanInput.value = spanSlider.value;
+      updateUI();
+    });
+
+    boltRadios.forEach((r) => {
+      r.addEventListener("change", () => {
+        updateUI();
+      });
+    });
+
+    presetButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        presetButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const span = btn.getAttribute("data-span");
+        const bolt = btn.getAttribute("data-bolt");
+        if (span && spanInput && spanSlider) {
+          spanInput.value = span;
+          spanSlider.value = span;
+        }
+        if (bolt) {
+          boltRadios.forEach((r) => {
+            if (r.value === bolt) {
+              r.checked = true;
+            }
+          });
+        }
+        updateUI();
+      });
+    });
+
+    // Initial update
+    updateUI();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupFlangeChecker);
+  } else {
+    setupFlangeChecker();
+  }
+</script>

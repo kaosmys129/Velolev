@@ -1,0 +1,77 @@
+---
+import baseline from "../data/content-baseline.json";
+import {publicOrigin,canonicalUrl,corePages,coreAlternates,industrialLocales,localizePath,localizedPagePath} from "../lib/site-config.mjs";
+import {localizeMarkup,translateText} from "../lib/industrial-localization.mjs";
+import {productSchema, organizationSchema, faqSchema} from "../utils/contentPolicy.mjs";
+import {procurementFaq} from "../data/decision-content.mjs";
+import copies from "../data/inquiry-copy.json";
+import HeaderDiscovery from "../components/procurement/HeaderDiscovery.astro";
+import LanguageSwitcher from "../components/LanguageSwitcher.astro";
+import "../styles/procurement.css";
+import MediaLightbox from "../components/procurement/MediaLightbox.astro";
+const {page="home",locale="en",article=null,errorPage=false,title: customTitle,description: customDescription}=Astro.props;
+const current=Object.hasOwn(copies,locale)?locale:"en";
+const formCopy=copies[current];
+const unified=industrialLocales.includes(current),t=(value)=>translateText(value,current);
+const content=localizeMarkup(await Astro.slots.render("default"),current);
+const meta=article??corePages[page];
+const alternates=errorPage?[]:article?[{lang:"en",path:article.path}]:coreAlternates(page);
+const path=alternates.find(a=>a.lang===current)?.path??meta.path;
+const origin=publicOrigin(),canonical=errorPage?null:canonicalUrl(path,origin);
+const title=customTitle??(current==="en"||unified?t(meta.title):`${formCopy.title} | volvet`);
+const description=customDescription??(current==="en"||unified?t(meta.description):formCopy.contactPending);
+const image="/images/product/portable-pole-lifter-hero-cutout.png";
+const ui={en:["The equipment","Check compatibility","Contact","Request a quote","Menu"],es:["El equipo","Compatibilidad","Contacto","Solicitar cotización","Menú"],fr:["L’équipement","Compatibilité","Contact","Demander un devis","Menu"],pt:["O equipamento","Compatibilidade","Contato","Solicitar cotação","Menu"],vi:["Thiết bị","Độ phù hợp","Liên hệ","Yêu cầu báo giá","Menu"],th:["อุปกรณ์","ความเข้ากันได้","ติดต่อ","ขอใบเสนอราคา","เมนู"],id:["Peralatan","Kesesuaian","Kontak","Minta penawaran","Menu"]}[current];
+const homePath=localizedPagePath("home",current),productPath=localizedPagePath("product",current),contactPath=localizedPagePath("contact",current),quotePath=localizedPagePath("quote",current);
+const aboutPath=current==="en"?"/about-us/":`/${current}/about-us/`;
+const aboutLabel={en:"About us",es:"Nosotros",fr:"À propos",pt:"Sobre nós",vi:"Giới thiệu",th:"เกี่ยวกับเรา",id:"Tentang kami"}[current];
+const organization=organizationSchema(origin);
+---
+<!doctype html>
+<html lang={current}>
+  <head>
+    <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>{title}</title><meta name="description" content={description}/>
+    {(!origin||errorPage)&&<meta name="robots" content="noindex,nofollow"/>}
+    {canonical&&<link rel="canonical" href={canonical}/>}
+    {origin&&alternates.map(a=><link rel="alternate" hreflang={a.lang} href={canonicalUrl(a.path,origin)}/>)}
+    {origin&&!errorPage&&<link rel="alternate" hreflang="x-default" href={canonicalUrl(meta.path,origin)}/>}
+    <link rel="icon" href="/brand/volvet-wordmark.svg" type="image/svg+xml"/>
+    <link rel="preload" href="/fonts/geologica-latin.woff2" as="font" type="font/woff2" crossorigin/>
+    <meta property="og:site_name" content="volvet"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/>
+    {canonical&&<meta property="og:url" content={canonical}/>}
+    <meta property="og:image" content={origin?new URL(image,origin).href:image}/>
+    <script type="application/ld+json" set:html={JSON.stringify(organization)}/>
+    {page==="product"&&<script type="application/ld+json" set:html={JSON.stringify(productSchema(origin,origin?new URL(image,origin).href:image,path))}/>}
+    {page==="faq"&&<script type="application/ld+json" set:html={JSON.stringify(faqSchema(procurementFaq))}/>}
+  </head>
+  <body class={`procurement page-${page}`}>
+    <a href="#main" class="skip-link">{t("Skip to content")}</a>
+    <header class="site-header">
+      <a href={homePath} class="wordmark" aria-label={t("volvet home")}><span aria-hidden="true">v</span>volvet</a>
+      <div class="header-actions"><LanguageSwitcher locale={current} placement="header" alternates={alternates}/><button class="nav-toggle" aria-controls="site-navigation" aria-expanded="false" type="button">{ui[4]} <span aria-hidden="true">＋</span></button></div>
+      <nav id="site-navigation" aria-label={t("Main navigation")}>
+        <a href={productPath} aria-current={page==="product"?"page":undefined}>{ui[0]}</a>
+        <a href={localizePath("/guides/pole-jack-compatibility/",current)} aria-current={page==="compatibility"?"page":undefined}>{ui[1]}{current!=="en"&&!unified&&" (EN)"}</a>
+        <HeaderDiscovery locale={current} page={page}/>
+        <a href={aboutPath} aria-current={page==="about"?"page":undefined}>{aboutLabel}</a>
+        <a href={contactPath} aria-current={page==="contact"?"page":undefined}>{ui[2]}</a>
+        <a href={quotePath} class="button button-small" aria-current={page==="quote"?"page":undefined}>{ui[3]} <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <Fragment set:html={content}/>
+    <MediaLightbox locale={current}/>
+    <footer class="site-footer">
+      <div class="footer-top"><a class="wordmark" href={homePath}><span aria-hidden="true">v</span>volvet</a><p>{t("Portable equipment.")}<br/>{t("Project-specific decisions.")}</p><a href={quotePath} class="text-link">{ui[3]} <span aria-hidden="true">↗</span></a></div>
+      <div class="footer-discovery">{[["solar","Solar lighting"],["parking","Parking & campus"],["compare","Compare methods"],["roi","Cost calculator"],["resources","Resources"],["faq","FAQ"],["about","About volvet"]].map(([key,label])=><a href={localizedPagePath(key,current)??corePages[key].path}>{t(label)}</a>)}</div>
+      <div class="footer-bottom"><p>© {new Date().getUTCFullYear()} volvet</p><div>{[["privacy","Privacy"],["terms","Terms"],["editorial","Information policy"]].map(([key,label])=><a href={localizedPagePath(key,current)??corePages[key].path}>{t(label)}</a>)}</div>
+        <LanguageSwitcher locale={current} placement="footer" alternates={alternates}/>
+      </div>
+    </footer>
+    <script>
+      const toggle=document.querySelector<HTMLButtonElement>(".nav-toggle"),nav=document.getElementById("site-navigation");
+      toggle?.addEventListener("click",()=>{const open=toggle.getAttribute("aria-expanded")!=="true";toggle.setAttribute("aria-expanded",String(open));nav?.classList.toggle("is-open",open);if(!open)nav?.querySelectorAll<HTMLDetailsElement>("details[open]").forEach(d=>d.open=false);});
+      document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!e.defaultPrevented&&toggle?.getAttribute("aria-expanded")==="true"){toggle.setAttribute("aria-expanded","false");nav?.classList.remove("is-open");toggle.focus();}});
+    </script>
+  </body>
+</html>

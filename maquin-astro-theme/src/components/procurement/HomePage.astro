@@ -5,6 +5,7 @@ import SpecStrip from "./SpecStrip.astro";
 import JobSiteCards from "./JobSiteCards.astro";
 import MediaFigure from "./MediaFigure.astro";
 import EquipmentFilm from "./EquipmentFilm.astro";
+import ProcurementCtaTier from "./ProcurementCtaTier.astro";
 const {locale="en"}=Astro.props;
 const s=baseline.product.specifications;
 ---
@@ -24,7 +25,7 @@ const s=baseline.product.specifications;
     <div class="step-row"><span>01</span><h3>Review the equipment</h3><p>Look at the rated load, module dimensions and standard included configuration. Verified specifications ensure field safety.</p></div>
     <div class="step-row"><span>02</span><h3>Collect the project details</h3><p>Use the compatibility guide to prepare pole, flange and foundation dimensions. Our engineers support non-standard base patterns.</p></div>
     <div class="step-row"><span>03</span><h3>Request a configuration review</h3><p>Submit your details and optional drawing. Our mechanical team provides turnkey compatibility analysis within 24 business hours.</p></div>
-    <div class="cta-band" style="margin-top:40px"><h2>Let's start with<br/>the pole you need to install.</h2><a class="button" href="/quote/">Request a project quote <span aria-hidden="true">↗</span></a></div>
+    <div style="margin-top:40px"><ProcurementCtaTier highlightTier={1} /></div>
   </div></section>
 </main>
 <style>

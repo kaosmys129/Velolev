@@ -1,0 +1,396 @@
+---
+interface Props {
+  mode?: "banner" | "compact" | "cards";
+  highlightTier?: 1 | 2 | 3;
+  class?: string;
+}
+
+const {
+  mode = "cards",
+  highlightTier = 1,
+  class: className = ""
+} = Astro.props;
+---
+
+<div class={`procurement-cta-tier mode-${mode} ${className}`} id="procurement-cta-funnel">
+  {mode === "compact" ? (
+    <div class="cta-compact-strip">
+      <div class="strip-text">
+        <span class="strip-eyebrow">3-TIER PROCUREMENT PATH</span>
+        <h4>Ready to evaluate equipment for your upcoming lighting project?</h4>
+        <p>Choose the level of engagement that fits your current project stage—from technical spec download to factory direct RFQ.</p>
+      </div>
+      <div class="strip-actions">
+        <a href="/quote/" class="button ink-button">
+          Request Factory Direct Quote <span aria-hidden="true">↗</span>
+        </a>
+        <a href="/resources/" class="button secondary-button">
+          Download Spec Pack <span aria-hidden="true">↓</span>
+        </a>
+        <a href="/guides/pole-jack-compatibility/" class="button link-action">
+          Free Flange Audit <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  ) : (
+    <div class="tier-cards-container">
+      <div class="tier-section-intro">
+        <span class="tier-kicker">CONVERSION LADDER</span>
+        <h2>Choose Your Project Next Step</h2>
+        <p class="tier-lead">
+          Whether you are comparing crane costs, verifying foundation drawings, or seeking factory-direct commercial terms, select the path aligned with your procurement timeline.
+        </p>
+      </div>
+
+      <div class="tier-grid">
+        <!-- Tier 1: Factory Direct Quotation -->
+        <div class={`tier-card card-tier-1 ${highlightTier === 1 ? "is-highlighted" : ""}`}>
+          <div class="card-badge-wrap">
+            <span class="tier-pill tier-pill-1">Tier 1 • High Intent</span>
+            {highlightTier === 1 && <span class="recommended-flag">Most Popular</span>}
+          </div>
+          <div class="card-header">
+            <h3>Factory-Direct Procurement Quotation</h3>
+            <p class="card-summary">
+              Direct B2B commercial terms from the equipment manufacturer with port-to-port ocean freight estimation and formal proforma quote within 24 hours.
+            </p>
+          </div>
+          <ul class="benefit-list">
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>Source Factory Pricing:</strong> Direct OEM supply with zero intermediary distributor markups.</span>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>Standard Hardware Included:</strong> Complete with 4 sets of M16, M18, M20, and M22 foundation anchor bolt connectors.</span>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>Logistics Packing:</strong> Heat-treated export wooden crate (650×350×500 mm) ready for global multimodal transit.</span>
+            </li>
+          </ul>
+          <div class="card-cta-footer">
+            <a href="/quote/" class="button tier-btn btn-primary">
+              Request Factory Direct Quote <span aria-hidden="true">↗</span>
+            </a>
+            <span class="card-footnote">Fast 24-hour response • Private B2B configuration review</span>
+          </div>
+        </div>
+
+        <!-- Tier 2: Spec Guide & Whitepaper Download -->
+        <div class={`tier-card card-tier-2 ${highlightTier === 2 ? "is-highlighted" : ""}`}>
+          <div class="card-badge-wrap">
+            <span class="tier-pill tier-pill-2">Tier 2 • Evaluation</span>
+          </div>
+          <div class="card-header">
+            <h3>Flange Diagram & Technical Spec Pack</h3>
+            <p class="card-summary">
+              Download complete 12m lifter engineering dimensions, foundation bolt-circle tolerance tables, and structured data files for internal proposal review.
+            </p>
+          </div>
+          <ul class="benefit-list">
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>Verified Fact Sheet:</strong> Full 8-parameter specification package derived from source engineering documentation.</span>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>Flange Compatibility Chart:</strong> 180–260 mm span layout and bolt clearance reference guide.</span>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>CSV & JSON Datasets:</strong> Raw dimension sheets ready to import into your internal bidding spreadsheets.</span>
+            </li>
+          </ul>
+          <div class="card-cta-footer">
+            <a href="/resources/" class="button tier-btn btn-secondary">
+              Download Technical Spec Pack <span aria-hidden="true">↓</span>
+            </a>
+            <span class="card-footnote">Instant download • No commercial spam • Public open access</span>
+          </div>
+        </div>
+
+        <!-- Tier 3: Free Drawing Review & Engineering Verification -->
+        <div class={`tier-card card-tier-3 ${highlightTier === 3 ? "is-highlighted" : ""}`}>
+          <div class="card-badge-wrap">
+            <span class="tier-pill tier-pill-3">Tier 3 • Early Feasibility</span>
+          </div>
+          <div class="card-header">
+            <h3>Free Engineering Drawing & Jobsite Audit</h3>
+            <p class="card-summary">
+              Send your light pole base blueprints, bolt pattern specs, or site constraints for complimentary technical audit by our mechanical engineering team.
+            </p>
+          </div>
+          <ul class="benefit-list">
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>100% Fit Determination:</strong> Expert confirmation of whether your foundation requires custom transition adapter plates.</span>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>Site Rigging Feasibility:</strong> Assessment for narrow sidewalk, parking lot, or remote solar roadway deployments.</span>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✔</span>
+              <span><strong>Zero Purchase Commitment:</strong> Pure technical feasibility review before allocating project budget.</span>
+            </li>
+          </ul>
+          <div class="card-cta-footer">
+            <a href="/quote/?type=drawing-review" class="button tier-btn btn-tertiary">
+              Submit Drawing for Free Review <span aria-hidden="true">↗</span>
+            </a>
+            <span class="card-footnote">24-hour turnaround • Direct dialogue with equipment engineers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+</div>
+
+<style>
+  .procurement-cta-tier {
+    width: 100%;
+    margin: 60px 0;
+  }
+
+  /* Compact Mode */
+  .cta-compact-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #faf8f5;
+    border: 1.5px solid #ebe5d8;
+    border-radius: 12px;
+    padding: 28px 36px;
+    gap: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  }
+  @media (max-width: 900px) {
+    .cta-compact-strip {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px;
+    }
+  }
+  .strip-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e65100;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+  .strip-text h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #202622;
+    margin: 0 0 6px 0;
+  }
+  .strip-text p {
+    font-size: 13.5px;
+    color: #5f6368;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .strip-actions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  /* Full Cards Mode */
+  .tier-section-intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 40px auto;
+  }
+  .tier-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #b73800;
+    background: #ffe0b2;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .tier-section-intro h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #202622;
+    letter-spacing: -0.02em;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+  }
+  .tier-lead {
+    font-size: 15px;
+    color: #5f6368;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+  @media (max-width: 960px) {
+    .tier-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .tier-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1.5px solid #e0dacf;
+    border-radius: 12px;
+    padding: 32px 26px;
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  }
+  .tier-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    border-color: #ffd54f;
+  }
+  .tier-card.is-highlighted {
+    border-color: #202622;
+    box-shadow: 0 6px 20px rgba(32, 38, 34, 0.09);
+    background: #fdfcfa;
+  }
+
+  .card-badge-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .tier-pill {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+  .tier-pill-1 {
+    background: #202622;
+    color: #ffd54f;
+  }
+  .tier-pill-2 {
+    background: #f4efe6;
+    color: #49454f;
+    border: 1px solid #ded6c5;
+  }
+  .tier-pill-3 {
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+  }
+  .recommended-flag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #ffd54f;
+    color: #202622;
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+
+  .card-header h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #202622;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+  }
+  .card-summary {
+    font-size: 13.5px;
+    color: #5f6368;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+  }
+
+  .benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+  }
+  .benefit-list li {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #49454f;
+  }
+  .benefit-check {
+    color: #2e7d32;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .card-cta-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+  }
+  .tier-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 20px;
+    font-weight: 700;
+    font-size: 13.5px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .btn-primary {
+    background: #202622;
+    color: #ffffff;
+    border: 1px solid #202622;
+  }
+  .btn-primary:hover {
+    background: #ffd54f;
+    color: #202622;
+    border-color: #fbc02d;
+  }
+  .btn-secondary {
+    background: #f4efe6;
+    color: #202622;
+    border: 1px solid #ded6c5;
+  }
+  .btn-secondary:hover {
+    background: #e8e2d5;
+    border-color: #202622;
+  }
+  .btn-tertiary {
+    background: #ffffff;
+    color: #202622;
+    border: 1.5px solid #202622;
+  }
+  .btn-tertiary:hover {
+    background: #202622;
+    color: #ffffff;
+  }
+  .card-footnote {
+    font-size: 11.5px;
+    color: #757575;
+    text-align: center;
+  }
+</style>

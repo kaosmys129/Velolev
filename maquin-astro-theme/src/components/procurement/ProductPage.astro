@@ -4,6 +4,7 @@ import ProductGallery from "./ProductGallery.astro";
 import PackagingShowcase from "./PackagingShowcase.astro";
 import SpecStrip from "./SpecStrip.astro";
 import EquipmentFilm from "./EquipmentFilm.astro";
+import ProcurementCtaTier from "./ProcurementCtaTier.astro";
 const {locale="en"}=Astro.props;
 const s=baseline.product.specifications,c=baseline.product.standardConfiguration,p=baseline.product.manufacturerReportedPerformance;
 const rows=[
@@ -17,6 +18,6 @@ const rows=[
   <section class="section"><div class="wrap two-column"><div><p class="eyebrow">03 / Standard configuration</p><h2>Know what<br/>the set includes.</h2><p class="muted" style="margin-top:22px">Listed compatibility and included parts are separate pieces of information. In particular, M24 appears in the compatibility table but not in the standard included bolt list.</p></div><table class="technical-table"><tbody><tr><th>Equipment</th><td>{c.equipmentSets} set</td></tr><tr><th>Anchor bolt sets</th><td>{c.anchorBoltSizesIncluded.map(x=><div>{x} · {c.anchorBoltSetsPerSize} sets</div>)}</td></tr><tr><th>Ground stakes</th><td>{c.groundStakeSets} set</td></tr></tbody></table></div></section>
   <div class="wrap"><PackagingShowcase/></div>
   <section class="section" style="padding-top:0"><div class="wrap evidence-panel" data-evidence-status="specification-only"><div class="two-column"><div><p class="eyebrow">04 / Performance evidence</p><h3>Factory Proof-Load Calibration & Reliability</h3><p style="margin-top:18px">Every production unit undergoes 300 kg proof-load dynamic calibration on vertical test rigs prior to packing. Standard cycle specifications reflect consistent factory quality benchmarks: 20 s lift stroke, >50 lifts per charge, and >3000 lifetime cycles.</p><p class="note" style="margin-top:12px"><span>Manufacturer-reported.</span> <span>Field validation pending.</span></p></div><table class="technical-table"><tbody><tr><th>Reported lift time</th><td>{p.liftTimeSeconds} s</td></tr><tr><th>Lifts per full charge</th><td>{p.liftsPerFullCharge}</td></tr><tr><th>Reported usage cycles</th><td>{p.usageCycles}</td></tr></tbody></table></div></div></section>
-  <section class="section" style="padding-top:0"><div class="wrap cta-band"><h2>Erect 12m Poles Without a Crane.<br/>Get Your Direct Factory Quote.</h2><a class="button" href="/quote/">Request a project quote <span aria-hidden="true">↗</span></a></div></section>
+  <section class="section" style="padding-top:0"><div class="wrap"><ProcurementCtaTier highlightTier={1} /></div></section>
 </main>
 <style>.product-film{margin-bottom:48px;--muted:#c0c9ba;--line:#ffffff30}</style>
