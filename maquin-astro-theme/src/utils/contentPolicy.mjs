@@ -135,16 +135,16 @@ export function organizationSchema(origin) {
   };
 }
 
-export function faqSchema(faqList = []) {
+export function faqSchema(faqList = [], translate = value => value) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqList.map(([q, a]) => ({
       "@type": "Question",
-      name: q,
+      name: translate(q),
       acceptedAnswer: {
         "@type": "Answer",
-        text: a
+        text: translate(a)
       }
     }))
   };

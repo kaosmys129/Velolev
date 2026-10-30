@@ -7,10 +7,13 @@ import pt from "../data/industrial-copy/pt.json" with {type:"json"};
 import vi from "../data/industrial-copy/vi.json" with {type:"json"};
 import th from "../data/industrial-copy/th.json" with {type:"json"};
 import id from "../data/industrial-copy/id.json" with {type:"json"};
+import reconstructionRows from "../data/reconstruction-copy.json" with {type:"json"};
 import extra from "../data/industrial-extra-copy.json" with {type:"json"};
 import {industrialLocales, localizePath} from "./site-config.mjs";
 
-const catalogs=Object.fromEntries(Object.entries({es,fr,pt,vi,th,id}).map(([lang,copy])=>[lang,{...copy,...extra[lang]}]));
+// Each row: English source, then the six industrialLocales in their registered order.
+const reconstruction=Object.fromEntries(industrialLocales.map((lang,i)=>[lang,Object.fromEntries(reconstructionRows.map(row=>[row[0],row[i+1]]))]));
+const catalogs=Object.fromEntries(Object.entries({es,fr,pt,vi,th,id}).map(([lang,copy])=>[lang,{...copy,...extra[lang],...reconstruction[lang]}]));
 const normalize=value=>value.replace(/\s+/g," ").trim();
 const displayAttributes=new Set(["alt","aria-label","title","placeholder","data-caption","data-label","data-alt","data-enlarge-template","data-ready-template"]);
 export const roiErrorMessages=["Enter a number from zero to one billion.","Use a whole number up to one million.","Enter one three-letter currency code for all costs.","Use a positive investment or leave this blank.","Confirm that both methods are suitable for comparison before estimating.","A positive project volume is needed. No annual saving or payback is calculated.","These values exceed the reliable calculation range."];

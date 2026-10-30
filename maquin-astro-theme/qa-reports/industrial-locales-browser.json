@@ -1,5 +1,5 @@
 {
-  "sourceDigest": "ad798f5033c1de7e090d566e2cb7893db47f39527fc61e885a75947b40391d77",
+  "sourceDigest": "27fba3415c6f7405a897caea15193335bcc885826d89e6a4a56f6ac6be3355fb",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "snapshotDigest": null,
   "origin": null,
@@ -1429,31 +1429,31 @@
   "controlledInquiries": [
     {
       "locale": "en",
-      "reference": "VOL-20261029-01620E8A"
+      "reference": "VOL-20261030-EDE28CFB"
     },
     {
       "locale": "es",
-      "reference": "VOL-20261029-1AA382A3"
+      "reference": "VOL-20261030-4576A29C"
     },
     {
       "locale": "fr",
-      "reference": "VOL-20261029-94AA4D5F"
+      "reference": "VOL-20261030-BA27F190"
     },
     {
       "locale": "pt",
-      "reference": "VOL-20261029-459B00A1"
+      "reference": "VOL-20261030-4FAE45C3"
     },
     {
       "locale": "vi",
-      "reference": "VOL-20261029-E988C0FD"
+      "reference": "VOL-20261030-6612B0AB"
     },
     {
       "locale": "th",
-      "reference": "VOL-20261029-18A58FBB"
+      "reference": "VOL-20261030-7D21B6A7"
     },
     {
       "locale": "id",
-      "reference": "VOL-20261029-A859D05F"
+      "reference": "VOL-20261030-80C416A9"
     }
   ],
   "testDataOnly": true,

@@ -68,3 +68,28 @@ test("build-time translation preserves markup, interactive data and form contrac
   assert.equal(localizeMarkup(source,"en"),source);
   assert.equal(serialize(parseFragment(out)).includes('id="main"'),true);
 });
+
+test('reconstruction copy has all six translations and retains runtime placeholders',async()=>{
+ const {default:rows}=await import('../src/data/reconstruction-copy.json',{with:{type:'json'}});
+ const {translateText}=await import('../src/lib/industrial-localization.mjs');
+ const keys=new Set();
+ for(const row of rows){assert.equal(row.length,7,row[0]);assert.ok(!keys.has(row[0]),`Duplicate reconstruction key: ${row[0]}`);keys.add(row[0]);
+  for(const [index,locale] of ['es','fr','pt','vi','th','id'].entries()){
+   assert.ok(typeof row[index+1]==='string'&&row[index+1].trim(),`${locale}: ${row[0]}`);
+   assert.deepEqual(row[index+1].match(/\{\w+\}/g)??[],row[0].match(/\{\w+\}/g)??[],`${locale}: ${row[0]}`);
+   assert.equal(translateText(row[0],locale),row[index+1]);
+  }
+ }
+});
+
+test('flange states handle boundaries, decimal measurements, missing inputs and the hole pattern',async()=>{
+ const {checkFlange,flangeMessages}=await import('../src/lib/flange-checker.mjs');
+ const {translateText}=await import('../src/lib/industrial-localization.mjs');
+ for(const span of [180,220.5,260])assert.equal(checkFlange({span,bolt:'M20',holes:4}).status,'listed');
+ for(const span of [179.9,260.1])assert.equal(checkFlange({span,bolt:'M20',holes:4}).status,'review');
+ assert.equal(checkFlange({span:220,bolt:'M24',holes:4}).status,'hardware');
+ for(const holes of [6,8])assert.equal(checkFlange({span:220,bolt:'M20',holes}).status,'review');
+ for(const span of ['', ' ', NaN, Infinity,99,401])assert.equal(checkFlange({span,bolt:'M20',holes:4}).status,'invalid');
+ assert.equal(checkFlange({span:220,bolt:'M999',holes:4}).status,'invalid');
+ for(const locale of ['es','fr','pt','vi','th','id'])for(const message of flangeMessages)if(message!=='{value} mm')assert.notEqual(translateText(message,locale),message);
+});

@@ -30,7 +30,8 @@
     "language:browser": "node --experimental-sqlite scripts/browser-language-switching.mjs",
     "retirement:test": "node --test scripts/wordpress-retirement.test.mjs",
     "retirement:check": "node scripts/verify-wordpress-retirement.mjs",
-    "retirement:http": "node --experimental-sqlite scripts/verify-wordpress-retirement.mjs --http"
+    "retirement:http": "node --experimental-sqlite scripts/verify-wordpress-retirement.mjs --http",
+    "reconstruction:browser": "node --experimental-sqlite scripts/browser-reconstruction.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

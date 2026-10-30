@@ -152,11 +152,11 @@
       "passed": true
     },
     {
-      "name": "home: local link /quote/",
+      "name": "home: local link /resources/volvet-specifications.csv",
       "passed": true
     },
     {
-      "name": "home: local link /resources/",
+      "name": "home: local link /guides/pole-jack-compatibility/",
       "passed": true
     },
     {
@@ -368,11 +368,11 @@
       "passed": true
     },
     {
-      "name": "product: local link /quote/",
+      "name": "product: local link /resources/volvet-specifications.csv",
       "passed": true
     },
     {
-      "name": "product: local link /resources/",
+      "name": "product: local link /guides/pole-jack-compatibility/",
       "passed": true
     },
     {
@@ -576,11 +576,11 @@
       "passed": true
     },
     {
-      "name": "compatibility: local link /quote/",
+      "name": "compatibility: local link /resources/volvet-specifications.csv",
       "passed": true
     },
     {
-      "name": "compatibility: local link /resources/",
+      "name": "compatibility: local link /guides/pole-jack-compatibility/",
       "passed": true
     },
     {

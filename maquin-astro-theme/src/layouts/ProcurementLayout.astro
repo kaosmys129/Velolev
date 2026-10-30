@@ -43,7 +43,7 @@ const organization=organizationSchema(origin);
     <meta property="og:image" content={origin?new URL(image,origin).href:image}/>
     <script type="application/ld+json" set:html={JSON.stringify(organization)}/>
     {page==="product"&&<script type="application/ld+json" set:html={JSON.stringify(productSchema(origin,origin?new URL(image,origin).href:image,path))}/>}
-    {page==="faq"&&<script type="application/ld+json" set:html={JSON.stringify(faqSchema(procurementFaq))}/>}
+    {page==="faq"&&<script type="application/ld+json" set:html={JSON.stringify(faqSchema(procurementFaq,t))}/>}
   </head>
   <body class={`procurement page-${page}`}>
     <a href="#main" class="skip-link">{t("Skip to content")}</a>

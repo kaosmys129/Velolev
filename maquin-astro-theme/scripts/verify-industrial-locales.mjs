@@ -4,6 +4,7 @@ import {join,resolve} from "node:path";
 import {verifyBuiltVersion} from "./lib/source-fingerprint.mjs";
 import {languageNames,languageLabels} from "../src/lib/languages.mjs";
 import aboutCopy from "../src/data/about-copy.json" with {type:"json"};
+import reconstructionRows from "../src/data/reconstruction-copy.json" with {type:"json"};
 import extra from "../src/data/industrial-extra-copy.json" with {type:"json"};
 import {fileURLToPath} from "node:url";
 import {parse} from "parse5";
@@ -26,8 +27,17 @@ for(const locale of industrialLocales){
   const copy=JSON.parse(readFileSync(join(root,`src/data/industrial-copy/${locale}.json`),"utf8"));
   const values=value=>typeof value==="string"?[value]:value&&typeof value==="object"?Object.values(value).flatMap(values):[];
   const authoredNative=new Set(values(aboutCopy[locale]));
+  const intentionalSame=new Set(reconstructionRows.filter(row=>row[industrialLocales.indexOf(locale)+1]===row[0]).map(row=>row[0]));
   check(`${locale}: catalog coverage and placeholders`,()=>{
     assert.deepEqual(Object.keys(copy).sort(),[...source].sort());
+    const seen=new Set();
+    for(const row of reconstructionRows){
+      assert.equal(row.length,industrialLocales.length+1,row[0]);assert.ok(!seen.has(row[0]),`Duplicate reconstruction key: ${row[0]}`);seen.add(row[0]);
+      const translated=row[industrialLocales.indexOf(locale)+1];
+      assert.ok(typeof translated==='string'&&translated.trim(),`Missing reconstruction translation: ${row[0]}`);
+      assert.deepEqual(translated.match(/\{\w+\}/g)??[],row[0].match(/\{\w+\}/g)??[],row[0]);
+    }
+
     for(const key of source){assert.ok(typeof copy[key]==="string"&&copy[key].trim());assert.deepEqual(copy[key].match(/\{\w+\}/g)??[],key.match(/\{\w+\}/g)??[],key);}
   });
   for(const [key,meta] of Object.entries(corePages)){
@@ -44,6 +54,17 @@ for(const locale of industrialLocales){
         const clean=url.split(/[?#]/)[0];
         assert.ok(existsSync(join(dist,clean))||existsSync(join(dist,clean,"index.html")),`Missing ${url}`);
       }}
+    });
+    check(`${path}: translated display attributes`,()=>{
+      const englishNodes=all(english);
+      for(const name of ['alt','aria-label','title','placeholder','data-caption','data-label','data-alt','data-enlarge-template','data-ready-template']){
+        const englishValues=new Set(englishNodes.map(n=>attrs(n)[name]).filter(Boolean));
+        for(const n of nodes){const value=attrs(n)[name];if(!value||!/[A-Za-z]{3}/.test(value)||!englishValues.has(value)||authoredNative.has(value)||value==='volvet')continue;
+          if(copy[value]!==value&&extra[locale][value]!==value&&!intentionalSame.has(value)&&![...Object.values(languageNames),...Object.values(languageLabels[locale])].includes(value))assert.fail(`Untranslated ${name}: ${value}`);
+          // Language picker names are explicitly authored in the language UI.
+          if(name==='aria-label'&&/^(Choose language|Choose language:)/.test(value))assert.fail(`English language picker: ${value}`);
+        }
+      }
     });
     check(`${path}: lightweight local assets`,()=>{
       const assets=nodes.flatMap(n=>{const a=attrs(n);return n.tagName==="script"&&a.src?[a.src]:n.tagName==="link"&&a.rel==="stylesheet"?[a.href]:[];});
@@ -64,6 +85,6 @@ for(const locale of industrialLocales){
 }
 for(const key of Object.keys(corePages))check(`${key}: alternates resolve`,()=>{for(const a of coreAlternates(key))assert.ok(existsSync(join(dist,a.path,"index.html")),a.path);});
 const report={sourceDigest:version.sourceDigest,assetDigest:version.assetDigest,origin:version.origin,locales:industrialLocales,passed:failures.length===0,pages:Object.keys(corePages).length*industrialLocales.length,checks:checks.length,failures};
-writeFileSync(join(root,`qa-reports/industrial-locales${target?"-configured":""}.json`),JSON.stringify(report,null,2)+"\n");
+writeFileSync(join(root,`qa-reports/industrial-locales${version.origin?"-configured":target&&resolve(target)!==join(root,"dist")?"-custom":""}.json`),JSON.stringify(report,null,2)+"\n");
 console.log(JSON.stringify(report,null,2));
 if(failures.length)process.exitCode=1;

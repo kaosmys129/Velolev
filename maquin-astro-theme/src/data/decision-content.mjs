@@ -19,34 +19,10 @@ export const decisionContent={
   {id:"cost",title:"Collect comparable costs.",body:"For each method, collect project mobilisation and transport, equipment or rental charges, crew size, full-scope crew hours and other recurring costs. Divide a project fixed fee by the poles in that project once. Keep equipment purchase separate from recurring project cost when assessing payback."},
   {id:"limits",title:"Leave unresolved choices open.",body:"A project may need a crane or another assessed method when the load, foundation, connections or site conditions fall outside a confirmed pole-lifter configuration. This page supplies no universal threshold for those conditions. Ask the responsible project team to resolve the method using the actual drawings and reviewed instructions."}
  ],matrix:[
-  {
-    dimension:"Cost & Equipment Overhead",
-    category:"Cost Dimension",
-    lifter:"Zero daily rental overhead. Owned equipment transported in standard pickup truck beds. Equipment depreciation amortizes to negligible expense per pole erected.",
-    crane:"Substantial daily crane rental charges plus equipment mobilization hauling fees. Single replacement poles still incur full minimum day-rates, eroding project profits.",
-    advantage:"Reduces machinery overhead by up to 70% per project while eliminating empty day-rate penalties."
-  },
-  {
-    dimension:"Jobsite Footprint & Accessibility",
-    category:"Space & Accessibility",
-    lifter:"85 kg split-modular design (45 kg hydraulic + 40 kg power pack). Slim chassis easily rolls through 1-meter wide sidewalks, medians, and dense parking bays, preventing decorative paver cracking and curb damage.",
-    crane:"Requires wide road clearance, large turning radius, and wide outrigger footprint. Blocked by narrow paths and parked vehicles; heavy axles risk damaging sidewalks.",
-    advantage:"Unrestricted urban access that eliminates heavy crane road-closure overhead and avoids paving repairs."
-  },
-  {
-    dimension:"Structural Safety & Erection Efficiency",
-    category:"Safety & Efficiency",
-    lifter:"Rigid vertical hydraulic push anchored securely to foundation bolts with dual-direction check valves. Smooth 20-second stroke operated at ground level by a 2-man crew, achieving 15–20 poles/day.",
-    crane:"High-altitude blind lifting with swinging suspended loads. Susceptible to sudden crosswinds and hook detachment risks. Requires 4–5 crew members for spotting and tethering.",
-    advantage:"Eliminates overhead suspended hazards with mechanical locking, doubling installation throughput."
-  },
-  {
-    dimension:"Energy Autonomy & Independent Dispatch",
-    category:"Energy & Scheduling",
-    lifter:"Autonomous 24V rechargeable battery system delivering >50 lifts per charge. Ready for immediate deployment on remote solar roads with no generator or road closure permits.",
-    crane:"Dependent on commercial diesel crane rental schedules, certified operators, and traffic authority lane closure approvals. Inflexible for emergency repairs or remote routes.",
-    advantage:"Full operational independence for remote off-grid solar routes and rapid turnaround emergency repairs."
-  }
+  {dimension:"Cost & equipment",lifter:"Owned equipment: include transport, crew time, energy and maintenance in each project estimate.",crane:"Rented equipment: include mobilisation, rental days and the quoted crew scope.",advantage:"Compare full project costs in the calculator."},
+  {dimension:"Access & footprint",lifter:"85 kg split system: 45 kg hydraulic module and 40 kg electrical cabinet for separate transport.",crane:"Check vehicle access, turning space and the working footprint in the crane proposal.",advantage:"Plan the route from delivery point to pole base."},
+  {dimension:"Crew & workflow",lifter:"The sheet lists 1–2 operators and a reported 20 s lift stroke. Allow time for connection, alignment and fastening.",crane:"Agree the lifting, signalling and installation tasks with the crane contractor.",advantage:"Measure complete installation time for both methods."},
+  {dimension:"Power & scheduling",lifter:"24 V rechargeable battery. The manufacturer reports >50 lifts per full charge.",crane:"Include fuel, operator availability and mobilisation in the project schedule.",advantage:"Plan charging and work volume before dispatch."}
  ],related:["roi","compatibility","method","resources"]},
  method:{eyebrow:"Methods & limits / Planning guide",title:"Without a crane\nstarts with a review.",intro:"A portable hydraulic pole lifter is one method to assess for a lighting project. Selecting it requires more information than a pole height or a short lifting-time claim.",boundary:"This page supports method selection. It is not an operating procedure, lift plan, anchoring instruction or approval to begin work. Reviewed equipment instructions and project engineering assessment remain necessary.",sections:[
   {id:"options",title:"Define the method being considered.",body:"Compare a portable hydraulic pole-lifting arrangement with a crane-based proposal for the actual assembly and foundation. Do not extend this product description into an improvised manual method or assume that accessories, connections or anchoring arrangements can be substituted."},

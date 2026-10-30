@@ -1,5 +1,5 @@
 {
-  "sourceDigest": "61ea59993ffc62a713913c63291a0873fa31d116219b73a92d431f9e576563ac",
+  "sourceDigest": "27fba3415c6f7405a897caea15193335bcc885826d89e6a4a56f6ac6be3355fb",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "origin": null,
   "locales": [
@@ -10,21 +10,8 @@
     "th",
     "id"
   ],
-  "passed": false,
+  "passed": true,
   "pages": 102,
-  "checks": 521,
-  "failures": [
-    "/es/: localized content and metadata: Untranslated text: Erect 12m Light Poles",
-    "/es/equipment/: localized content and metadata: Untranslated text: 12-Meter / 300 kg",
-    "/fr/: localized content and metadata: Untranslated text: Erect 12m Light Poles",
-    "/fr/equipment/: localized content and metadata: Untranslated text: 12-Meter / 300 kg",
-    "/pt/: localized content and metadata: Untranslated text: Erect 12m Light Poles",
-    "/pt/equipment/: localized content and metadata: Untranslated text: 12-Meter / 300 kg",
-    "/vi/: localized content and metadata: Untranslated text: Erect 12m Light Poles",
-    "/vi/equipment/: localized content and metadata: Untranslated text: 12-Meter / 300 kg",
-    "/th/: localized content and metadata: Untranslated text: Erect 12m Light Poles",
-    "/th/equipment/: localized content and metadata: Untranslated text: 12-Meter / 300 kg",
-    "/id/: localized content and metadata: Untranslated text: Erect 12m Light Poles",
-    "/id/equipment/: localized content and metadata: Untranslated text: 12-Meter / 300 kg"
-  ]
+  "checks": 635,
+  "failures": []
 }

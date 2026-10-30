@@ -1,5 +1,5 @@
 {
-  "sourceDigest": "d98de2379654878cd955ba07ab1364a3f89675c7e12edb0f9086ebbf9198211f",
+  "sourceDigest": "27fba3415c6f7405a897caea15193335bcc885826d89e6a4a56f6ac6be3355fb",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "date": "2026-10-28",
   "stage": "D31-D60",
@@ -2083,11 +2083,11 @@
       "passed": true
     },
     {
-      "name": "home: linked resource /quote/",
+      "name": "home: linked resource /resources/volvet-specifications.csv",
       "passed": true
     },
     {
-      "name": "home: linked resource /resources/",
+      "name": "home: linked resource /guides/pole-jack-compatibility/",
       "passed": true
     },
     {
@@ -2299,11 +2299,11 @@
       "passed": true
     },
     {
-      "name": "product: linked resource /quote/",
+      "name": "product: linked resource /resources/volvet-specifications.csv",
       "passed": true
     },
     {
-      "name": "product: linked resource /resources/",
+      "name": "product: linked resource /guides/pole-jack-compatibility/",
       "passed": true
     },
     {
@@ -2507,11 +2507,11 @@
       "passed": true
     },
     {
-      "name": "compatibility: linked resource /quote/",
+      "name": "compatibility: linked resource /resources/volvet-specifications.csv",
       "passed": true
     },
     {
-      "name": "compatibility: linked resource /resources/",
+      "name": "compatibility: linked resource /guides/pole-jack-compatibility/",
       "passed": true
     },
     {
