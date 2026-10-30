@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-29",
+  "sourceDigest": "ad798f5033c1de7e090d566e2cb7893db47f39527fc61e885a75947b40391d77",
+  "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
+  "snapshotDigest": null,
+  "origin": null,
+  "scope": "Current local source, fresh build, local HTTP/browser navigation and recovery archives; GEOFlow WordPress adapter inspected statically only.",
+  "siteRetirementPassed": true,
+  "allValidationPassed": false,
+  "repositoryContainsOptionalWordPressFunctionality": true,
+  "deployment": "local_only_not_deployed",
+  "pages": {
+    "html": 206,
+    "core": 119,
+    "error": 1,
+    "redirect": 85,
+    "admin": 1,
+    "legacy": 0
+  },
+  "deploymentResidualScan": {
+    "extensions": [
+      "html",
+      "css",
+      "js",
+      "json",
+      "svg",
+      "xml",
+      "txt"
+    ],
+    "patterns": [
+      "wp-content",
+      "wp-includes",
+      "wp-admin",
+      "wp-json",
+      "wp-embed",
+      "wp-emoji",
+      "elementor",
+      "jquery"
+    ],
+    "matches": []
+  },
+  "sizes": {
+    "before": {
+      "publicBytes": 38343778,
+      "distBytes": 44186735,
+      "wordpressBytes": 33903368
+    },
+    "after": {
+      "publicBytes": 6980669,
+      "distBytes": 11847850
+    },
+    "distReductionBytes": 32338885,
+    "distReductionPercent": 73.18686252786046
+  },
+  "tests": {
+    "npmTest": {
+      "passed": true,
+      "unitAndIntegration": 49,
+      "testGroups": [
+        6,
+        26,
+        13,
+        4
+      ]
+    },
+    "localeStatic": {
+      "passed": true,
+      "checks": 533,
+      "failures": []
+    },
+    "retirementStatic": {
+      "passed": true,
+      "checks": 631,
+      "failures": []
+    },
+    "retirementHttp": {
+      "passed": true,
+      "checks": 1172,
+      "failures": []
+    },
+    "industrialBrowser": {
+      "passed": true,
+      "checks": 1406,
+      "failures": []
+    },
+    "languageBrowser": {
+      "passed": false,
+      "checks": 2975,
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: /project/: untranslated content falls back to real homepage without page state\n    at check (file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/scripts/browser-language-switching.mjs:25:36)\n    at file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/scripts/browser-language-switching.mjs:79:487"
+      ]
+    },
+    "legacyLanguageSupplement": {
+      "passed": true,
+      "checks": 35,
+      "failures": []
+    }
+  },
+  "archives": {
+    "archives": [
+      {
+        "archive": "archives/wordpress-before-retirement-2026-10-29.tar.gz",
+        "verifiedFiles": 1870,
+        "expectedFiles": 1870,
+        "mismatches": [],
+        "unlistedFiles": 2193
+      },
+      {
+        "archive": "archives/wordpress-retired-tools.tar.gz",
+        "verifiedFiles": 4,
+        "expectedFiles": 4,
+        "mismatches": [],
+        "unlistedFiles": 0
+      }
+    ],
+    "removedFiles": 1751,
+    "retiredFilesStillPresent": [],
+    "unrecoverableRemovedFiles": [],
+    "mainArchiveUnlistedFileClassification": {
+      "appleDoubleMetadataFiles": 2193,
+      "otherUnlistedRegularFiles": 0
+    }
+  },
+  "findings": [
+    {
+      "id": "WP-R01",
+      "priority": "medium",
+      "kind": "outdated_test_expectation",
+      "path": "maquin-astro-theme/scripts/browser-language-switching.mjs",
+      "line": 79,
+      "status": "open",
+      "detail": "Legacy-entry assertions still require target-language homepage fallback after those entries became 301 aliases to translated topics. Full suite failed at /project/; supplemental navigation verified the five topic aliases and error-page fallbacks."
+    },
+    {
+      "id": "WP-R02",
+      "priority": "low",
+      "kind": "legacy_source_cleanup",
+      "path": "maquin-astro-theme/src/utils/contentPolicy.mjs",
+      "line": 41,
+      "status": "open",
+      "detail": "Elementor fragment policy sanitizer remains and is called by policy tests; the public layout imports only productSchema. Split retained policy/schema responsibilities before pruning legacy branches."
+    }
+  ],
+  "retainedByScope": [
+    {
+      "kind": "optional_geoflow_publisher",
+      "path": "geoflow/app/Services/GeoFlow/DistributionPublisherManager.php",
+      "line": 20,
+      "detail": "GEOFlow retains wordpress_rest publishing integration, form fields, media/taxonomy helpers and tests. It is not a dependency of the current procurement site. Actual channel database configuration was not inspected."
+    },
+    {
+      "kind": "recovery_and_regression_evidence",
+      "detail": "Archived source, historic documents, route mappings, prohibited-path checks and installed dependency caches are outside the active deployment."
+    }
+  ],
+  "limits": [
+    "No public deployment or external WordPress publication verified.",
+    "Language browser suite remains failed until its expectations are updated and it is fully rerun.",
+    "Archive contents were hash-verified without restoring and running the entire former site."
+  ],
+  "evidence": [
+    "wordpress-retirement-reaudit-2026-10-29.md",
+    "wordpress-retirement-legacy-language-reaudit.json",
+    "wordpress-retirement-static-verification.json",
+    "wordpress-retirement-http-verification.json",
+    "../../maquin-astro-theme/qa-reports/industrial-locales-browser.json",
+    "../../maquin-astro-theme/qa-reports/language-switching-browser.json"
+  ]
+}

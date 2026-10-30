@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29",
+  "sourceDigest": "d98de2379654878cd955ba07ab1364a3f89675c7e12edb0f9086ebbf9198211f",
+  "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
+  "snapshotDigest": null,
+  "origin": null,
+  "passed": true,
+  "transport": "static",
+  "modernPublicHtml": 120,
+  "redirects": 85,
+  "wordpressFiles": 0,
+  "buildBytes": 12391545,
+  "checks": 638,
+  "failures": []
+}

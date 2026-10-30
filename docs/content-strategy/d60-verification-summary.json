@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "stage": "D60-remainder",
+  "developmentAndAutomaticQA": "complete",
+  "equalWeightPackageCompletion": {
+    "completed": 12,
+    "total": 13,
+    "percent": 92.3,
+    "remaining": "business_engineering_and_human_publication_review"
+  },
+  "corePages": 17,
+  "downloadableFiles": 3,
+  "publicHtml": 113,
+  "tests": {
+    "policy": 6,
+    "decisionAndContent": 17,
+    "inquiryAPI": 12,
+    "total": 35
+  },
+  "coreChecks": 665,
+  "configuredChecks": 1043,
+  "snapshotChecks": 669,
+  "workflowChecks": 4,
+  "d30BrowserChecks": 81,
+  "d60BrowserChecks": 142,
+  "browserFailures": 0,
+  "publicSourcesVerified": 4,
+  "sourceDigest": "b376a44c2b11f9425e8f4b24af61efdce0c1f03d196842c67153e4f22e019c9c",
+  "assetDigest": "5136a81bca66e27bbf0478b458c602e2e8340912c8b4c00da2071046a06b5d21",
+  "mediaReferencesFrozen": 11,
+  "corporateEvidence": "pending",
+  "fieldValidation": "pending",
+  "nativeReview": "pending",
+  "domainEmailPhone": "pending_per_user_confirmation",
+  "externalEmailSent": false,
+  "productionDeployed": false,
+  "privateTestInquiriesOnly": true,
+  "finalIntegrity": {
+    "sourceVersionMatches": true,
+    "referenceMediaMatches": true,
+    "corePageHashesMatch": true,
+    "privateKeyAbsentFromReports": true,
+    "normalOutputHasNoTestArticle": true,
+    "domainEmailPhoneStillPending": true,
+    "viewport390DocumentWidth": 390
+  },
+  "aboutNavigation": {
+    "fromCompatibilityPageToAbout": true,
+    "mobileMenuLocales": [
+      "en",
+      "es",
+      "fr",
+      "pt",
+      "vi",
+      "th",
+      "id"
+    ]
+  }
+}

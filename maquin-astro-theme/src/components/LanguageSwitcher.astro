@@ -1,0 +1,59 @@
+---
+import {languageNames,languageLabels} from "../lib/languages.mjs";
+import {languageOptions} from "../lib/language-navigation.mjs";
+import {pageKeyForPath,coreAlternates} from "../lib/site-config.mjs";
+const {locale="en",placement="header",alternates:provided}=Astro.props;
+const current=Object.hasOwn(languageNames,locale)?locale:"en",copy=languageLabels[current];
+const page=pageKeyForPath(Astro.url.pathname);
+const core=page?coreAlternates(page):[];
+const registered=core.some(item=>item.lang===current&&item.path===Astro.url.pathname);
+const alternates=provided??(registered?core:[{lang:current,path:Astro.url.pathname}]);
+const options=languageOptions({locale:current,pathname:Astro.url.pathname,alternates});
+const menuId=`${placement}-language-options`;
+---
+<details class:list={["locale-switcher",`locale-switcher--${placement}`,{"language-picker":placement==="footer"}]} data-language-switcher data-placement={placement}>
+ <summary aria-label={`${copy.choose}: ${languageNames[current]}`} aria-controls={menuId}>
+  <svg class="locale-globe" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+  <span class="locale-current-name">{languageNames[current]}</span><span class="locale-current-code" aria-hidden="true">{current.toUpperCase()}</span>
+  <span class="locale-menu-label">/ {copy.languages}</span><svg class="locale-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="m1 1 4 4 4-4" stroke="currentColor" stroke-width="1.3"/></svg>
+ </summary>
+ <ul id={menuId} class="locale-options" aria-label={copy.choose}>
+  {options.map(option=><li><a href={option.path} lang={option.lang} hreflang={option.lang} data-language-destination={option.path} data-language-context={option.samePage?"page":"home"} aria-current={option.current?"true":undefined}><span class="locale-option-code" aria-hidden="true">{option.lang.toUpperCase()}</span><span class="locale-option-name">{option.name}<small class="locale-fallback">{option.fallback?copy.home:""}</small></span><span class="locale-check" aria-hidden="true">{option.current?"✓":""}</span></a></li>)}
+ </ul>
+</details>
+<script>
+ import {languageHref} from "../lib/language-navigation.mjs";
+ const selectors=[...document.querySelectorAll<HTMLDetailsElement>('[data-language-switcher]')];
+ const sync=()=>{for(const root of selectors)for(const link of root.querySelectorAll<HTMLAnchorElement>('a[data-language-destination]'))link.setAttribute('href',languageHref(link.dataset.languageDestination!,location.href,link.dataset.languageContext==='page'));};
+ sync();
+ const closeOthers=(root:HTMLDetailsElement)=>{for(const other of selectors)if(other!==root)other.open=false;};
+ for(const root of selectors){
+  const trigger=root.querySelector<HTMLElement>('summary')!,links=[...root.querySelectorAll<HTMLAnchorElement>('a[hreflang]')];
+  root.addEventListener('toggle',()=>{if(root.open){closeOthers(root);for(const other of document.querySelectorAll<HTMLDetailsElement>('[data-header-discovery][open]'))other.open=false;}});
+  root.addEventListener('keydown',event=>{
+   if(event.key==='Escape'&&root.open){event.preventDefault();event.stopPropagation();root.open=false;trigger.focus();}
+   else if(event.target===trigger&&['ArrowDown','ArrowUp'].includes(event.key)){event.preventDefault();root.open=true;(event.key==='ArrowDown'?links[0]:links.at(-1))?.focus();}
+  });
+  root.addEventListener('focusout',event=>{const next=event.relatedTarget;if(next instanceof Node){if(!root.contains(next))root.open=false;}else requestAnimationFrame(()=>{if(!root.contains(document.activeElement))root.open=false;});});
+  root.addEventListener('pointerdown',sync);
+  root.addEventListener('click',event=>{const target=event.target instanceof Element?event.target.closest<HTMLAnchorElement>('a[hreflang]'):null;if(!target)return;sync();try{localStorage.setItem('pll-locale',target.hreflang);}catch{}root.open=false;});
+ }
+ document.addEventListener('pointerdown',event=>{for(const root of selectors)if(root.open&&!root.contains(event.target as Node))root.open=false;});
+ window.addEventListener('hashchange',sync);window.addEventListener('popstate',sync);
+ window.addEventListener('pageshow',()=>{sync();for(const root of selectors)root.open=false;});
+</script>
+<style>
+ .locale-switcher{position:relative;flex-shrink:0;font-family:Geologica,'Trebuchet MS',sans-serif;font-size:12px;line-height:1.5;color:inherit;z-index:50}
+ .locale-switcher>summary{display:flex;align-items:center;gap:8px;min-height:44px;padding:9px 10px;list-style:none;cursor:pointer;border:1px solid currentColor;border-radius:2px;white-space:nowrap;font:inherit;color:inherit}
+ .locale-switcher>summary::-webkit-details-marker{display:none}.locale-switcher>summary::marker{content:''}.locale-switcher>summary:hover{background:#c6ceba33}
+ .locale-globe,.locale-chevron{flex-shrink:0}.locale-chevron{margin-left:4px;transition:transform .15s}.locale-switcher[open] .locale-chevron{transform:rotate(180deg)}
+ .locale-current-code{display:none}.locale-menu-label{opacity:.75}.locale-switcher--header .locale-menu-label{display:none}
+ .locale-switcher .locale-options{position:absolute;top:calc(100% + 8px);right:0;bottom:auto;left:auto;min-width:220px;max-width:calc(100vw - 36px);margin:0;padding:7px;list-style:none;background:#f3f2ec;color:#1d201e;border:1px solid #d5d8cd;border-top:3px solid #f4cc3d;border-radius:2px;box-shadow:0 12px 35px #20262224;z-index:60}
+ .locale-options>li{margin:0;padding:0;list-style:none}.locale-switcher .locale-options a{display:flex;align-items:center;gap:10px;min-height:44px;padding:10px 12px;border:0;border-radius:1px;color:#1d201e;background:transparent;text-decoration:none;font-size:13px;font-weight:500;line-height:1.5}
+ .locale-switcher .locale-options a:hover,.locale-switcher .locale-options a:focus-visible{background:#e5e9dc}.locale-switcher .locale-options a[aria-current=true]{background:#e5e9dc;border-left:3px solid #f4cc3d;padding-left:9px}
+ .locale-option-code{font:10px/1.4 'Courier New',monospace;color:#626a63;width:22px;flex-shrink:0}.locale-option-name{flex:1;min-width:0}.locale-check{font-size:13px;min-width:12px}.locale-fallback{display:block;font-size:10px;color:#626a63;line-height:1.4}.locale-fallback:empty{display:none}
+ .locale-switcher--footer .locale-options{top:auto;bottom:calc(100% + 9px)}
+ .locale-switcher :is(summary,a):focus-visible{outline:3px solid #947500;outline-offset:3px}
+ @media(max-width:600px){.locale-switcher--header .locale-current-name{display:none}.locale-switcher--header .locale-current-code{display:inline;font-size:11px;font-weight:600}.locale-switcher--header>summary{gap:6px;padding:8px}.locale-switcher--header .locale-options{min-width:215px}.locale-switcher--footer .locale-options{left:0;right:auto}}
+ @media(prefers-reduced-motion:reduce){.locale-chevron{transition:none}}
+</style>

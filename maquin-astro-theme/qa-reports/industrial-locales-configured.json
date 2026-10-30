@@ -1,0 +1,17 @@
+{
+  "sourceDigest": "ad798f5033c1de7e090d566e2cb7893db47f39527fc61e885a75947b40391d77",
+  "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
+  "origin": "https://example.test",
+  "locales": [
+    "es",
+    "fr",
+    "pt",
+    "vi",
+    "th",
+    "id"
+  ],
+  "passed": true,
+  "pages": 102,
+  "checks": 533,
+  "failures": []
+}

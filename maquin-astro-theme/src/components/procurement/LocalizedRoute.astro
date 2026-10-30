@@ -1,0 +1,9 @@
+---
+import ProcurementLayout from "../../layouts/ProcurementLayout.astro";
+import LocalizedPage from "./LocalizedPage.astro";
+import aboutCopy from "../../data/about-copy.json";
+const {page,locale}=Astro.props;
+---
+<ProcurementLayout page={page} locale={locale} title={page==="about"?aboutCopy[locale]?.metaTitle:undefined} description={page==="about"?aboutCopy[locale]?.metaDescription:undefined}>
+  <LocalizedPage page={page} locale={locale}/>
+</ProcurementLayout>

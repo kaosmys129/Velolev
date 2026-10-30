@@ -1,0 +1,72 @@
+---
+import copies from "../../data/inquiry-copy.json";
+import {translateText,inquiryFieldMessages} from "../../lib/industrial-localization.mjs";
+const {locale="en",inquiryType="project"}=Astro.props;
+const t=value=>translateText(value,locale);
+const c={...(copies[locale]??copies.en),serverErrors:Object.fromEntries(inquiryFieldMessages.map(message=>[message,t(message)])),roiCarried:t("Your cost scenario is included in the project notes. Review or edit it before submitting; it has not been sent.")};
+const id=`inquiry-${locale}`;
+---
+<div class="inquiry-shell" data-inquiry-shell data-copy={JSON.stringify(c)}>
+  <form class="project-inquiry" data-inquiry-form action="/api/inquiries" method="post" enctype="multipart/form-data">
+    <div class="inquiry-grid">
+      <div class="inquiry-field"><label for={`${id}-name`}>{c.name} <span aria-hidden="true">*</span></label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="100"/><small data-error-for="name" id={`${id}-name-error`}></small></div>
+      <div class="inquiry-field"><label for={`${id}-company`}>{c.company}</label><input id={`${id}-company`} name="company" autocomplete="organization" maxlength="160"/><small data-error-for="company" id={`${id}-company-error`}></small></div>
+      <div class="inquiry-field"><label for={`${id}-email`}>{c.email}</label><input id={`${id}-email`} name="email" type="email" autocomplete="email" maxlength="254" aria-describedby={`${id}-contact-help`}/><small data-error-for="email" id={`${id}-email-error`}></small></div>
+      <div class="inquiry-field"><label for={`${id}-phone`}>{c.phone}</label><input id={`${id}-phone`} name="phone" type="tel" autocomplete="tel" maxlength="50" aria-describedby={`${id}-contact-help`}/><small data-error-for="phone" id={`${id}-phone-error`}></small></div>
+      <p class="inquiry-help full-width" id={`${id}-contact-help`}>{c.contactRequired}</p>
+      <div class="inquiry-field"><label for={`${id}-country`}>{c.country} <span aria-hidden="true">*</span></label><input id={`${id}-country`} name="country" autocomplete="country-name" required minlength="2" maxlength="80"/><small data-error-for="country" id={`${id}-country-error`}></small></div>
+      <div class="inquiry-field"><label for={`${id}-type`}>{c.inquiryType}</label><select id={`${id}-type`} name="inquiryType"><option value="project" selected={inquiryType==="project"}>{c.typeProject}</option><option value="distributor" selected={inquiryType==="distributor"}>{c.typeDistributor}</option><option value="support" selected={inquiryType==="support"}>{c.typeSupport}</option><option value="privacy" selected={inquiryType==="privacy"}>{c.typePrivacy}</option></select></div>
+      <div class="inquiry-field"><label for={`${id}-app`}>{c.application}</label><select id={`${id}-app`} name="application"><option value="not-sure">{c.appUnknown}</option><option value="street-lighting">{c.appStreet}</option><option value="solar-lighting">{c.appSolar}</option><option value="parking-campus">{c.appParking}</option><option value="other">{c.appOther}</option></select></div>
+      <div class="inquiry-field"><label for={`${id}-quantity`}>{c.quantity}</label><input id={`${id}-quantity`} name="quantity" type="number" min="1" max="999999" step="1" inputmode="numeric"/><small data-error-for="quantity" id={`${id}-quantity-error`}></small></div>
+    </div>
+    <details class="inquiry-details"><summary>{c.extraDetails}</summary><div class="inquiry-grid">
+      <div class="inquiry-field"><label for={`${id}-height`}>{c.poleHeight}</label><input id={`${id}-height`} name="poleHeight" type="number" min="0.01" step="0.01" inputmode="decimal"/><small data-error-for="poleHeight" id={`${id}-poleHeight-error`}></small></div>
+      <div class="inquiry-field"><label for={`${id}-weight`}>{c.poleWeight}</label><input id={`${id}-weight`} name="poleWeight" type="number" min="0.01" step="0.01" inputmode="decimal"/><small data-error-for="poleWeight" id={`${id}-poleWeight-error`}></small></div>
+      <div class="inquiry-field full-width"><label for={`${id}-foundation`}>{c.foundation}</label><textarea id={`${id}-foundation`} name="foundation" rows="2" maxlength="1000"></textarea><small data-error-for="foundation" id={`${id}-foundation-error`}></small></div>
+      <div class="inquiry-field full-width"><label for={`${id}-message`}>{c.message}</label><textarea id={`${id}-message`} name="message" rows="4" maxlength="4000"></textarea><small data-error-for="message" id={`${id}-message-error`}></small></div>
+      <div class="inquiry-field full-width"><label for={`${id}-attachment`}>{c.attachment}</label><input id={`${id}-attachment`} name="attachment" type="file" accept=".pdf,.jpg,.jpeg,.png" aria-describedby={`${id}-file-help`}/><p class="inquiry-help" id={`${id}-file-help`}>{c.fileHelp}</p><small data-error-for="attachment" id={`${id}-attachment-error`}></small></div>
+    </div></details>
+    <div class="trap" aria-hidden="true"><label for={`${id}-website`}>Website</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off"/></div>
+    <label class="inquiry-consent"><input type="checkbox" name="consent" value="true" required/><span>{c.consent} <a href="/privacy/">{c.privacy} ↗</a></span></label><small class="field-error" data-error-for="consent"></small>
+    <button class="inquiry-submit" type="submit">{c.submit}<span aria-hidden="true">↗</span></button>
+    <p data-submit-status class="inquiry-status" role="status" aria-live="polite" tabindex="-1"></p>
+    <noscript><p>Enable JavaScript to submit the inquiry and receive a confirmation reference.</p></noscript>
+  </form>
+  <section class="inquiry-success" data-inquiry-success hidden aria-live="polite" tabindex="-1"><span class="receipt-icon" aria-hidden="true">✓</span><h2>{c.successTitle}</h2><p>{c.success}</p><strong data-receipt-reference></strong><p data-test-marker hidden>Test submission / not a sales lead</p><button type="button" data-new-inquiry>{c.newInquiry}</button></section>
+</div>
+<style>
+ .inquiry-details{border-top:1px solid #c8cec3;border-bottom:1px solid #c8cec3;margin-top:26px;padding:18px 0}.inquiry-details summary{cursor:pointer;font-size:13px;font-weight:600}.inquiry-details[open] summary{margin-bottom:24px}.inquiry-shell{font:inherit;color:#1d201e}.inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.inquiry-field label{color:#1d201e;display:block;font-size:12px;font-weight:600;margin-bottom:9px}.inquiry-field input:not([type=file]),.inquiry-field textarea,.inquiry-field select{width:100%;padding:13px 14px;background:#fff;border:1px solid #c8cec3;border-radius:2px;font:inherit;color:#1d201e;min-height:48px}.inquiry-field input[type=file]{width:100%;padding:12px;background:#e8ebdf;border:1px dashed #a8b29e;font-size:12px}.inquiry-field input[type=file]::file-selector-button{padding:8px 12px;margin-right:12px;border:1px solid #9ca593;background:#fff;cursor:pointer}.inquiry-field textarea{resize:vertical}.full-width{grid-column:1/-1}.inquiry-field input:focus,.inquiry-field textarea:focus,.inquiry-field select:focus{outline:2px solid #a08216;outline-offset:2px}.inquiry-field [aria-invalid=true]{border:2px solid #a52a20}.inquiry-help{font-size:12px;line-height:1.6;color:#60695f;margin:0}.inquiry-field .inquiry-help{margin-top:8px}.inquiry-consent{color:#1d201e;display:flex;gap:12px;align-items:start;font-size:12px;line-height:1.8;margin:28px 0 6px;cursor:pointer}.inquiry-consent input{width:18px;height:18px;flex-shrink:0;accent-color:#202622;margin-top:3px}.inquiry-consent a{text-decoration:underline}.inquiry-submit{display:flex;justify-content:space-between;align-items:center;gap:35px;background:#f4cc3d;color:#1d201e;font:inherit;font-weight:600;padding:17px 22px;border:0;border-radius:2px;cursor:pointer;margin-top:23px;min-width:260px}.inquiry-submit:hover{background:#ffdc57}.inquiry-submit:disabled{opacity:.6;cursor:wait}.inquiry-status{font-size:13px;margin-top:18px;color:#9f2b20}.inquiry-field small,.field-error{font-size:12px;display:block;color:#9f2b20;margin-top:6px;line-height:1.5}.trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.inquiry-success{background:#e6e9de;border-top:5px solid #f4cc3d;padding:40px 30px}.inquiry-success[hidden]{display:none}.receipt-icon{display:block;font-size:40px}.inquiry-success h2{font-size:32px;color:#1d201e;margin:20px 0}.inquiry-success p{color:#4c584d}.inquiry-success strong{display:block;font:20px 'Courier New',monospace;margin:25px 0;overflow-wrap:anywhere}.inquiry-success button{padding:12px 18px;border:1px solid #28352b;background:transparent;font:inherit;cursor:pointer}.inquiry-success [data-test-marker]{font-size:12px;border:1px solid #747f6c;padding:8px;margin-bottom:20px}@media(max-width:600px){.inquiry-grid{grid-template-columns:1fr;gap:18px}.inquiry-submit{width:100%;min-width:0}.inquiry-success{padding:30px 18px}}
+</style>
+<script>
+ for(const shell of document.querySelectorAll<HTMLElement>("[data-inquiry-shell]")){
+  const form=shell.querySelector<HTMLFormElement>("[data-inquiry-form]")!,success=shell.querySelector<HTMLElement>("[data-inquiry-success]")!,button=form.querySelector<HTMLButtonElement>('[type="submit"]')!,status=form.querySelector<HTMLElement>("[data-submit-status]")!;
+  const copy=JSON.parse(shell.dataset.copy!),locale=document.documentElement.lang||"en";
+  let key:string|null=null,busy=false;
+  const clearErrors=()=>{form.querySelectorAll("[data-error-for]").forEach(n=>n.textContent="");form.querySelectorAll("[aria-invalid]").forEach(n=>n.removeAttribute("aria-invalid"));};
+  form.addEventListener("invalid",event=>{const details=(event.target as HTMLElement).closest("details");if(details)details.open=true;},true);
+  form.addEventListener("input",()=>{if(!busy)key=null;});
+  const params=new URLSearchParams(location.search);for(const name of ["quantity","poleHeight","poleWeight","inquiryType","application"]){const value=params.get(name),field=form.elements.namedItem(name) as HTMLInputElement|HTMLSelectElement|null;if(value&&field){if(field instanceof HTMLSelectElement){if([...field.options].some(x=>x.value===value))field.value=value;}else if(/^\d{1,6}(?:\.\d{1,2})?$/.test(value))field.value=value;}}
+  if(params.get("context")==="roi")try{const raw=sessionStorage.getItem("volvet-roi-inquiry");sessionStorage.removeItem("volvet-roi-inquiry");if(raw){const scenario=JSON.parse(raw),notes=form.elements.namedItem("message") as HTMLTextAreaElement;const compatible=(scenario.version===2&&scenario.locale===locale)||(scenario.version===1&&locale==="en");if(compatible&&Number.isFinite(scenario.createdAt)&&Date.now()-scenario.createdAt>=0&&Date.now()-scenario.createdAt<30*60*1000&&typeof scenario.notes==="string"&&scenario.notes.length<=3000&&!notes.value){notes.value=scenario.notes;const details=notes.closest("details");if(details)details.open=true;const notice=document.createElement("p");notice.className="note";notice.textContent=copy.roiCarried;form.prepend(notice);}}}catch{}
+  form.addEventListener("submit",async event=>{
+   event.preventDefault();if(busy)return;clearErrors();status.textContent="";
+   const data=new FormData(form);data.set("locale",locale);data.set("sourcePage",location.pathname);
+   const attribution:Record<string,string>={};for(const k of ["utm_source","utm_medium","utm_campaign"]){const v=params.get(k);if(v)attribution[k]=v;}data.set("attribution",JSON.stringify(attribution));
+   if(!String(data.get("email")??"").trim()&&!String(data.get("phone")??"").trim()){status.textContent=copy.contactRequired;form.querySelector<HTMLInputElement>('[name="email"]')?.focus();return;}
+   key??=crypto.randomUUID();busy=true;button.disabled=true;button.textContent=copy.sending;form.setAttribute("aria-busy","true");
+   form.querySelectorAll<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>("input,select,textarea").forEach(n=>n.disabled=true);
+   const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
+   try{
+    const response=await fetch("/api/inquiries",{method:"POST",body:data,headers:{"Idempotency-Key":key},signal:controller.signal});
+    const result=await response.json();
+    if(!response.ok){status.textContent=result.error?.code==="validation_failed"?copy.validation:copy.failed;for(const [name,message] of Object.entries(result.error?.fields??{})){const note=form.querySelector<HTMLElement>(`[data-error-for="${name}"]`),field=form.elements.namedItem(name) as HTMLElement|null;if(note)note.textContent=copy.serverErrors[String(message)]??copy.validation;field?.setAttribute("aria-invalid","true");if(note?.id)field?.setAttribute("aria-describedby",note.id);const details=field?.closest("details");if(details)details.open=true;}status.focus();return;}
+    if(result.receipt?.status!=="received"||!result.receipt?.reference)throw new Error("No confirmed receipt");
+    shell.querySelector<HTMLElement>("[data-receipt-reference]")!.textContent=result.receipt.reference;
+    shell.querySelector<HTMLElement>("[data-test-marker]")!.hidden=!result.receipt.isTest;
+    form.hidden=true;success.hidden=false;success.focus();
+    document.dispatchEvent(new CustomEvent("volvet:inquiry-submitted",{detail:{locale,page:location.pathname,method:"private_inbox"}}));
+   }catch{status.textContent=copy.failed;status.focus();}
+   finally{clearTimeout(timeout);busy=false;button.disabled=false;button.textContent=copy.submit;form.removeAttribute("aria-busy");form.querySelectorAll<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>("input,select,textarea").forEach(n=>n.disabled=false);}
+  });
+  shell.querySelector("[data-new-inquiry]")?.addEventListener("click",()=>{form.reset();key=null;status.textContent="";clearErrors();form.hidden=false;success.hidden=true;form.querySelector<HTMLInputElement>('[name="name"]')?.focus();});
+ }
+</script>

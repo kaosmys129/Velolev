@@ -1,0 +1,23 @@
+{
+  "name": "liftpolemachine-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm --prefix maquin-astro-theme test",
+    "dev": "npm --prefix maquin-astro-theme run dev",
+    "build": "npm --prefix maquin-astro-theme run build",
+    "start": "npm --prefix maquin-astro-theme run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaosmys129/Velolev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaosmys129/Velolev/issues"
+  },
+  "homepage": "https://github.com/kaosmys129/Velolev#readme"
+}

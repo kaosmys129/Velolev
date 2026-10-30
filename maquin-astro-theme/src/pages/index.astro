@@ -1,7 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { getRoute } from "../data/routes";
-
-const route = getRoute("");
+import ProcurementLayout from "../layouts/ProcurementLayout.astro";
+import HomePage from "../components/procurement/HomePage.astro";
 ---
-<BaseLayout route={route} />
+<ProcurementLayout page="home"><HomePage/></ProcurementLayout>

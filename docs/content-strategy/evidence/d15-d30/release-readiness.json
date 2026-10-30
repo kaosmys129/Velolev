@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-28",
+  "stage": "D15-D30",
+  "exitCode": 1,
+  "status": "pending_production_configuration_per_user_confirmation",
+  "localInquiryVerified": true,
+  "output": "\n> maquin-astro-theme@1.0.0 release:check\n> node scripts/check-release-readiness.mjs\n\n当前可本地预览，正式上线配置待补充：\n- 已确认的 HTTPS 正式域名（PUBLIC_SITE_URL）\n- 已确认的询盘联系方式\n- 正式部署的私有收件箱管理密钥（INQUIRY_ADMIN_TOKEN）\n"
+}

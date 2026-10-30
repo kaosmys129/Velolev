@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# 本地内容后台与错误处理页不对外暴露
+Disallow: /admin/
+Disallow: /404.html
+
+# XML sitemap（由 @astrojs/sitemap 生成，含所有已发布页面与 GEOFlow 文章）
+Sitemap: https://www.velolev.com/sitemap-index.xml

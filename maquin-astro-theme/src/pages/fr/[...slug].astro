@@ -1,0 +1,9 @@
+---
+import LocalizedRoute from "../../components/procurement/LocalizedRoute.astro";
+import {industrialStaticPaths,localizedPagePath} from "../../lib/site-config.mjs";
+export function getStaticPaths(){return industrialStaticPaths("fr");}
+const {page}=Astro.props;
+const target=localizedPagePath(page,"fr");
+if(Astro.url.pathname!==target)return Astro.redirect(target,301);
+---
+<LocalizedRoute page={page} locale="fr"/>

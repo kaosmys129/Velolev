@@ -1,0 +1,19 @@
+{
+  "capturedOn": "2026-10-28",
+  "basis": "local_source_and_built_output_not_live_crawl",
+  "fragmentRecords": 119,
+  "generatedRouteRecords": 95,
+  "renderedPublicHtml": 110,
+  "renderedContentRoutes": 109,
+  "newEnglishCorePages": 8,
+  "localizedInquiryPages": 6,
+  "migrationRecords": 107,
+  "sourceEvidenceSha256": "5460abd6197005250c826b9211298b9a26ccd95469e4970a78acefa8a2f29ce4",
+  "gsc": "not_connected",
+  "analytics": "not_connected",
+  "crm": "not_connected",
+  "productionDomain": "pending_configuration",
+  "inquiryEndpoint": "/api/inquiries",
+  "inquiryServiceStatus": "controlled_local_e2e_verified",
+  "inferredMetrics": false
+}

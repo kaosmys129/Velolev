@@ -1,0 +1,8 @@
+---
+import InquiryForm from "./InquiryForm.astro";
+import copies from "../../data/inquiry-copy.json";
+const {contact=false,locale="en"}=Astro.props;
+const c=copies[locale]??copies.en;
+---
+<main id="main"><div class="wrap"><p class="breadcrumb"><a href="/">volvet</a> / {c.title}</p><div class="page-intro"><p class="eyebrow">{contact?"Project / Distribution / Support":"B2B project review"}</p><h1>{contact?"A conversation starts\nwith your project.":"Tell us what\nyou need to lift."}</h1><p class="lead muted">{contact?"Choose the purpose of your request and share a way to reach you. You can send specifications and an optional drawing in the same form.":"Share the pole, application and destination. Unknown dimensions can be left open—we can start with the information you have."}</p></div><div class="form-layout"><InquiryForm locale={locale}/><aside class="form-aside"><p class="eyebrow">What happens next</p><h3>Your inquiry, recorded.</h3><ol><li>Send your project information and optional PDF or image.</li><li>A receipt reference appears once the request has been saved.</li><li>The project details are available for a configuration review and private follow-up.</li></ol><p class="note">An inquiry is not a purchase order or confirmation that the equipment fits your application.</p><div class="evidence-panel"><h3>Not sure about the base?</h3><p>Our compatibility guide shows the pole, flange and foundation information to prepare.</p><a href="/guides/pole-jack-compatibility/" class="text-link" style="margin-top:20px">Review the checklist →</a></div><p class="note">Direct email and phone contact details are not published yet. This form records your request in the project inquiry inbox.</p></aside></div></div></main>
+<style>h1{white-space:pre-line}</style>

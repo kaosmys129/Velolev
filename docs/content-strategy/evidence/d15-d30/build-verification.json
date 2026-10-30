@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-28",
+  "baselineVersion": "2026-10-28.2",
+  "sourceDigest": "1b6f4ad1013f07c633b2c7b404e236aebef3af357a5599bae5a2dd1a988aa7f4",
+  "sourceFiles": 800,
+  "publicHtmlChecked": 110,
+  "locales": 7,
+  "failures": [],
+  "passed": true,
+  "scope": "built HTML, metadata, JSON-LD, source-derived facts, B2B commercial policy, preview configuration"
+}

@@ -1,0 +1,582 @@
+{
+  "sourceDigest": "ebfabf0008405dcee05499ce7c748dd28ddfb50f8e7296017a98841bf69e0fc4",
+  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "date": "2026-10-28",
+  "stage": "D31-D60",
+  "passed": true,
+  "checks": [
+    {
+      "name": "solar: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "solar: one main heading",
+      "passed": true
+    },
+    {
+      "name": "solar: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "solar: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "parking: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "parking: one main heading",
+      "passed": true
+    },
+    {
+      "name": "parking: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "parking: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "compare: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "compare: one main heading",
+      "passed": true
+    },
+    {
+      "name": "compare: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "compare: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "roi: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "roi: one main heading",
+      "passed": true
+    },
+    {
+      "name": "roi: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "roi: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "method: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "method: one main heading",
+      "passed": true
+    },
+    {
+      "name": "method: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "method: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "resources: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "resources: one main heading",
+      "passed": true
+    },
+    {
+      "name": "resources: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "resources: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "faq: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "faq: one main heading",
+      "passed": true
+    },
+    {
+      "name": "faq: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "faq: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "about: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "about: one main heading",
+      "passed": true
+    },
+    {
+      "name": "about: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "about: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "guides: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "guides: one main heading",
+      "passed": true
+    },
+    {
+      "name": "guides: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "guides: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "home: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "home: one main heading",
+      "passed": true
+    },
+    {
+      "name": "home: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "home: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "product: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "product: one main heading",
+      "passed": true
+    },
+    {
+      "name": "product: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "product: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "compatibility: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "compatibility: one main heading",
+      "passed": true
+    },
+    {
+      "name": "compatibility: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "compatibility: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "quote: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "quote: one main heading",
+      "passed": true
+    },
+    {
+      "name": "quote: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "quote: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "contact: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "contact: one main heading",
+      "passed": true
+    },
+    {
+      "name": "contact: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "contact: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "privacy: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "privacy: one main heading",
+      "passed": true
+    },
+    {
+      "name": "privacy: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "privacy: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "terms: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "terms: one main heading",
+      "passed": true
+    },
+    {
+      "name": "terms: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "terms: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "editorial: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "editorial: one main heading",
+      "passed": true
+    },
+    {
+      "name": "editorial: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "editorial: source and B2B boundaries",
+      "passed": true
+    },
+    {
+      "name": "FAQ: actual configuration answer expands",
+      "passed": true
+    },
+    {
+      "name": "resource: actual downloadable file",
+      "passed": true
+    },
+    {
+      "name": "resource: downloaded source facts and evidence state",
+      "passed": true
+    },
+    {
+      "name": "solar plan: correct application carried into inquiry",
+      "passed": true
+    },
+    {
+      "name": "ROI: browser result matches hand-worked annual saving",
+      "passed": true
+    },
+    {
+      "name": "ROI: conditional payback matches hand calculation",
+      "passed": true
+    },
+    {
+      "name": "ROI: correct break-even pole count",
+      "passed": true
+    },
+    {
+      "name": "ROI calculation does not submit financial inputs",
+      "passed": true
+    },
+    {
+      "name": "ROI: calculation alone stores no scenario",
+      "passed": true
+    },
+    {
+      "name": "ROI: analytics event excludes financial inputs and personal data",
+      "passed": true
+    },
+    {
+      "name": "ROI: edited inputs invalidate previous result",
+      "passed": true
+    },
+    {
+      "name": "ROI: negative outcome displayed",
+      "passed": true
+    },
+    {
+      "name": "ROI: no misleading negative-scenario payback",
+      "passed": true
+    },
+    {
+      "name": "ROI: investment optional without payback",
+      "passed": true
+    },
+    {
+      "name": "ROI: zero volume explained",
+      "passed": true
+    },
+    {
+      "name": "ROI: no stale result after zero volume",
+      "passed": true
+    },
+    {
+      "name": "ROI: mobile calculator and results fit",
+      "passed": true
+    },
+    {
+      "name": "ROI: financial details absent from URL",
+      "passed": true
+    },
+    {
+      "name": "ROI: scenario carried into editable inquiry notes",
+      "passed": true
+    },
+    {
+      "name": "ROI: temporary scenario consumed",
+      "passed": true
+    },
+    {
+      "name": "ROI: actual persisted inquiry retains the chosen scenario",
+      "passed": true
+    },
+    {
+      "name": "guides: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "resources: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "faq: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "compare: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "solar: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "parking: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "method: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "about: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: 320px regression width",
+      "passed": true
+    },
+    {
+      "name": "/about-us/: 320px regression width",
+      "passed": true
+    },
+    {
+      "name": "/es/about-us/: 320px regression width",
+      "passed": true
+    },
+    {
+      "name": "/fr/about-us/: 320px regression width",
+      "passed": true
+    },
+    {
+      "name": "/pt/about-us/: 320px regression width",
+      "passed": true
+    },
+    {
+      "name": "/vi/about-us/: 320px regression width",
+      "passed": true
+    },
+    {
+      "name": "/th/about-us/: 320px regression width",
+      "passed": true
+    },
+    {
+      "name": "/id/about-us/: 320px regression width",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: 390px regression width",
+      "passed": true
+    },
+    {
+      "name": "/about-us/: 390px regression width",
+      "passed": true
+    },
+    {
+      "name": "/es/about-us/: 390px regression width",
+      "passed": true
+    },
+    {
+      "name": "/fr/about-us/: 390px regression width",
+      "passed": true
+    },
+    {
+      "name": "/pt/about-us/: 390px regression width",
+      "passed": true
+    },
+    {
+      "name": "/vi/about-us/: 390px regression width",
+      "passed": true
+    },
+    {
+      "name": "/th/about-us/: 390px regression width",
+      "passed": true
+    },
+    {
+      "name": "/id/about-us/: 390px regression width",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: 768px regression width",
+      "passed": true
+    },
+    {
+      "name": "/about-us/: 768px regression width",
+      "passed": true
+    },
+    {
+      "name": "/es/about-us/: 768px regression width",
+      "passed": true
+    },
+    {
+      "name": "/fr/about-us/: 768px regression width",
+      "passed": true
+    },
+    {
+      "name": "/pt/about-us/: 768px regression width",
+      "passed": true
+    },
+    {
+      "name": "/vi/about-us/: 768px regression width",
+      "passed": true
+    },
+    {
+      "name": "/th/about-us/: 768px regression width",
+      "passed": true
+    },
+    {
+      "name": "/id/about-us/: 768px regression width",
+      "passed": true
+    },
+    {
+      "name": "gallery: keyboard selects last reference",
+      "passed": true
+    },
+    {
+      "name": "gallery: selected reference updates image description",
+      "passed": true
+    },
+    {
+      "name": "migration: /en/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: / final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /equipment/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /products/light-pole-jack/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /equipment-detail/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /products/light-pole-jack/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /pricing-plan/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /quote/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /blog/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /guides/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /eco-friendly-heavy-equipment-maintaining-machines-in-a-sustainable-way/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /compare/pole-jack-vs-crane/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /flexible-project-management-how-renting-equipment-boosts-productivity/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /guides/install-light-pole-without-crane/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /team/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /about-us/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "no local asset, document or page HTTP errors",
+      "passed": true
+    },
+    {
+      "name": "ROI inquiry survives service restart",
+      "passed": true
+    },
+    {
+      "name": "source and reference media unchanged during browser validation",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "httpErrors": [],
+  "receipt": "VOL-20261029-6A2D86DD",
+  "testDataOnly": true,
+  "externalEmailSent": false
+}

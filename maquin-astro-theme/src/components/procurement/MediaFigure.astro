@@ -1,0 +1,31 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  label: string;
+  caption: string;
+  variant?: "photo" | "cutout";
+  eager?: boolean;
+  class?: string;
+}
+const {src,alt,label,caption,variant="photo",eager=false,class:className=""}=Astro.props;
+---
+<figure class:list={["media-figure",variant,className]}>
+  <a class="media-figure-image" href={src} data-media-image data-caption={caption} aria-label={`Enlarge image: ${alt}`}>
+    <img src={src} alt={alt} loading={eager?"eager":"lazy"} decoding="async" width="1200" height="800"/>
+    <span class="media-figure-tag">{label}</span>
+    <span class="media-figure-expand" aria-hidden="true">↗</span>
+  </a>
+  <figcaption>{caption}</figcaption>
+</figure>
+<style>
+  .media-figure{margin:0;min-width:0}.media-figure-image{display:block;position:relative;overflow:hidden;isolation:isolate;background:var(--green);aspect-ratio:3/2}
+  .media-figure-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+  .media-figure-image:hover img{transform:scale(1.035)}
+  .media-figure-tag{position:absolute;left:18px;top:18px;max-width:calc(100% - 36px);padding:6px 10px;background:var(--paper);color:var(--ink);font:11px/1.5 'Courier New',monospace;letter-spacing:.04em;text-transform:uppercase}
+  .media-figure-expand{position:absolute;right:16px;bottom:16px;display:grid;place-items:center;width:44px;height:44px;background:var(--yellow);color:var(--ink);font-size:24px;transition:background .2s}
+  figcaption{margin-top:12px;font-size:12px;line-height:1.65;color:var(--muted);max-width:640px}
+  .cutout .media-figure-image{background-image:linear-gradient(#ffffff35 1px,transparent 1px),linear-gradient(90deg,#ffffff35 1px,transparent 1px);background-size:52px 52px}
+  .cutout img{padding:28px;object-fit:contain;filter:drop-shadow(8px 14px 8px #27332230)}
+  @media(max-width:760px){.media-figure-tag{left:12px;top:12px;font-size:10px}.media-figure-expand{right:12px;bottom:12px}}
+</style>

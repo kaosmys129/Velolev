@@ -1,0 +1,49 @@
+{
+  "gates": [
+    {
+      "id": "supplier_identity",
+      "requirement": "真实主体与品牌关系",
+      "ownerRole": "业务负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    },
+    {
+      "id": "privacy_retention",
+      "requirement": "数据保留期、隐私联系与责任主体",
+      "ownerRole": "业务负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    },
+    {
+      "id": "engineering_documents",
+      "requirement": "规格歧义与操作资料工程审核",
+      "ownerRole": "工程负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    },
+    {
+      "id": "application_validation",
+      "requirement": "太阳能装配与停车场场景的项目适配证据",
+      "ownerRole": "工程负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    },
+    {
+      "id": "editorial_review",
+      "requirement": "最终英语内容及适用市场的人工审校",
+      "ownerRole": "内容负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    }
+  ]
+}

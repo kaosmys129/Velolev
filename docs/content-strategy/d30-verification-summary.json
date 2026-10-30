@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-28",
+  "stage": "D15-D30",
+  "passed": true,
+  "environment": "local controlled validation; not a production release",
+  "policyUnitTests": 6,
+  "inquiryIntegrationTests": 12,
+  "publicHtmlChecked": 110,
+  "coreContentChecks": 212,
+  "configuredMetadataChecks": 512,
+  "browserChecks": 80,
+  "controlledInquiries": 7,
+  "sourceEvidenceDigestsVerified": 4,
+  "sourceDigest": "1b6f4ad1013f07c633b2c7b404e236aebef3af357a5599bae5a2dd1a988aa7f4",
+  "testDataOnly": true,
+  "externalEmailSent": false,
+  "productionDeployed": false,
+  "releaseConfiguration": "pending",
+  "reports": [
+    "build-verification.json",
+    "content-d30-verification.json",
+    "configured-metadata-d30-verification.json",
+    "browser-d30-verification.json"
+  ]
+}

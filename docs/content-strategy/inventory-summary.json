@@ -1,0 +1,13 @@
+{
+  "capturedOn": "2026-10-29",
+  "basis": "current_authored_source_and_built_output_not_live_crawl",
+  "fragmentRecords": 0,
+  "renderedCorePages": 119,
+  "reviewedArticlePages": 0,
+  "locales": 7,
+  "migrationRecords": 85,
+  "sourceEvidenceSha256": "5460abd6197005250c826b9211298b9a26ccd95469e4970a78acefa8a2f29ce4",
+  "productionDomain": "pending_configuration",
+  "inquiryEndpoint": "/api/inquiries",
+  "inferredMetrics": false
+}

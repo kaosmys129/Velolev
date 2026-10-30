@@ -1,0 +1,32 @@
+﻿term_id,en,es,fr,pt,id,vi,th,review_status,usage_rule
+brand,volvet,volvet,volvet,volvet,volvet,volvet,volvet,user_confirmed,exact_lowercase
+product,Portable Light Pole Lifter,Elevador portátil de postes de alumbrado,Lève-mât d’éclairage portable,Elevador portátil de postes de iluminação,Alat pendirian tiang lampu portabel,Thiết bị dựng cột đèn di động,อุปกรณ์ตั้งเสาไฟแบบพกพา,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+category,light pole jack,levantador de postes,lève-poteau,equipamento de içamento de postes,alat pendirian tiang PJU,thiết bị dựng cột đèn,เครื่องยกเสาไฟ,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+hydraulic,hydraulic,hidráulico,hydraulique,hidráulico,hidrolik,thủy lực,ไฮดรอลิก,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+light_pole,light pole,poste de alumbrado,mât d’éclairage,poste de iluminação,tiang lampu,cột đèn,เสาไฟ,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+solar_streetlight,solar street light,alumbrado público solar,éclairage public solaire,iluminação pública solar,PJU tenaga surya,đèn đường năng lượng mặt trời,ไฟถนนพลังงานแสงอาทิตย์,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+rated_load,rated load,carga nominal,charge nominale,carga nominal,beban nominal,tải định mức,พิกัดน้ำหนัก,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+pole_height,pole height,altura del poste,hauteur du mât,altura do poste,tinggi tiang,chiều cao cột,ความสูงเสา,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+total_weight,total weight,peso total,poids total,peso total,berat total,tổng khối lượng,น้ำหนักรวม,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+hydraulic_module,hydraulic module,módulo hidráulico,module hydraulique,módulo hidráulico,modul hidrolik,mô-đun thủy lực,ชุดไฮดรอลิก,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+cabinet,electrical cabinet,armario eléctrico,armoire électrique,gabinete elétrico,kabinet listrik,tủ điện,ตู้ไฟฟ้า,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+anchor_bolt,anchor bolt,perno de anclaje,tige d’ancrage,chumbador,baut angkur,bu lông móng,สลักเกลียวยึดฐาน,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+flange,pole flange,brida del poste,bride du mât,flange do poste,flensa tiang,mặt bích cột,หน้าแปลนเสา,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+base_plate,base plate,placa base,platine de base,placa de base,pelat dasar,bản đế,แผ่นฐาน,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+foundation,foundation,cimentación,fondation,fundação,fondasi,móng,ฐานราก,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+hole_span,flange hole span,separación de orificios,entraxe des trous,distância entre furos,jarak lubang flensa,khoảng cách lỗ mặt bích,ระยะรูหน้าแปลน,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+pump,hydraulic pump,bomba hidráulica,pompe hydraulique,bomba hidráulica,pompa hidrolik,bơm thủy lực,ปั๊มไฮดรอลิก,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+cylinder,hydraulic cylinder,cilindro hidráulico,vérin hydraulique,cilindro hidráulico,silinder hidrolik,xi lanh thủy lực,กระบอกไฮดรอลิก,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+gauge,oil pressure gauge,manómetro de aceite,manomètre d’huile,manômetro de óleo,pengukur tekanan oli,đồng hồ áp suất dầu,เกจวัดแรงดันน้ำมัน,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+battery,rechargeable battery,batería recargable,batterie rechargeable,bateria recarregável,baterai isi ulang,pin sạc,แบตเตอรี่แบบชาร์จได้,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+full_charge,full charge,carga completa,charge complète,carga completa,pengisian penuh,sạc đầy,ชาร์จเต็ม,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+lift_cycle,lifting cycle,ciclo de elevación,cycle de levage,ciclo de elevação,siklus pengangkatan,chu kỳ nâng,รอบการยก,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+lift_time,lift time,tiempo de elevación,temps de levage,tempo de elevação,waktu pengangkatan,thời gian nâng,เวลายก,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+operator,operator,operario,opérateur,operador,operator,người vận hành,ผู้ปฏิบัติงาน,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+packaging,packaging dimensions,dimensiones del embalaje,dimensions de l’emballage,dimensões da embalagem,dimensi kemasan,kích thước đóng gói,ขนาดบรรจุภัณฑ์,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+configuration,standard configuration,configuración estándar,configuration standard,configuração padrão,konfigurasi standar,cấu hình tiêu chuẩn,การจัดอุปกรณ์มาตรฐาน,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+destination,shipping destination,destino de envío,destination de livraison,destino de entrega,tujuan pengiriman,nơi giao hàng,ปลายทางการจัดส่ง,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+quote,request a quote,solicitar cotización,demander un devis,solicitar cotação,minta penawaran,yêu cầu báo giá,ขอใบเสนอราคา,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+lead_time,lead time,plazo de entrega,délai de livraison,prazo de entrega,waktu pengiriman,thời gian giao hàng,ระยะเวลาจัดส่ง,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+field_test,field test,prueba de campo,essai sur site,teste em campo,uji lapangan,thử nghiệm thực tế,การทดสอบภาคสนาม,native_technical_review_pending,draft_term_not_legal_or_engineering_approval
+field_pending,field validation pending,validación en campo pendiente,validation sur site en attente,validação em campo pendente,validasi lapangan masih menunggu,đang chờ xác minh thực tế,รอการตรวจสอบภาคสนาม,native_technical_review_pending,draft_term_not_legal_or_engineering_approval

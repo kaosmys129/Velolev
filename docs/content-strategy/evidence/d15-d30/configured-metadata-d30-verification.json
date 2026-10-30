@@ -1,0 +1,2057 @@
+{
+  "date": "2026-10-28",
+  "stage": "D15-D30",
+  "mode": "configured-origin-fixture",
+  "checks": [
+    {
+      "name": "home: built page exists",
+      "passed": true
+    },
+    {
+      "name": "home: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "home: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "home: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "home: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "home: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "home: local link /",
+      "passed": true
+    },
+    {
+      "name": "home: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /",
+      "passed": true
+    },
+    {
+      "name": "home: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /",
+      "passed": true
+    },
+    {
+      "name": "home: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "product: built page exists",
+      "passed": true
+    },
+    {
+      "name": "product: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "product: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "product: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "product: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "product: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "product: local link /",
+      "passed": true
+    },
+    {
+      "name": "product: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /",
+      "passed": true
+    },
+    {
+      "name": "product: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /",
+      "passed": true
+    },
+    {
+      "name": "product: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /es/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /fr/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /pt/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /vi/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /th/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /id/equipment/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: built page exists",
+      "passed": true
+    },
+    {
+      "name": "compatibility: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "compatibility: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "compatibility: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "compatibility: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "compatibility: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "quote: built page exists",
+      "passed": true
+    },
+    {
+      "name": "quote: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "quote: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "quote: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "quote: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "quote: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /es/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /fr/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /pt/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /vi/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /th/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /id/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "contact: built page exists",
+      "passed": true
+    },
+    {
+      "name": "contact: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "contact: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "contact: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "contact: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "contact: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /es/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /fr/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /pt/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /vi/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /th/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /id/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: built page exists",
+      "passed": true
+    },
+    {
+      "name": "privacy: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "privacy: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "privacy: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "privacy: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "privacy: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "terms: built page exists",
+      "passed": true
+    },
+    {
+      "name": "terms: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "terms: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "terms: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "terms: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "terms: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "editorial: built page exists",
+      "passed": true
+    },
+    {
+      "name": "editorial: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "editorial: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "editorial: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "editorial: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "editorial: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "eight distinct core titles",
+      "passed": true
+    },
+    {
+      "name": "home/en: self canonical",
+      "passed": true
+    },
+    {
+      "name": "home/en: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "home/en: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "home/en: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "home/en: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "home/en: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "home/en: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "home/en: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "home/en: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "home/en: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "home/es: self canonical",
+      "passed": true
+    },
+    {
+      "name": "home/es: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "home/es: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "home/es: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "home/es: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "home/es: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "home/es: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "home/es: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "home/es: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "home/es: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "home/fr: self canonical",
+      "passed": true
+    },
+    {
+      "name": "home/fr: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "home/fr: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "home/fr: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "home/fr: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "home/fr: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "home/fr: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "home/fr: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "home/fr: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "home/fr: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "home/pt: self canonical",
+      "passed": true
+    },
+    {
+      "name": "home/pt: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "home/pt: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "home/pt: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "home/pt: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "home/pt: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "home/pt: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "home/pt: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "home/pt: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "home/pt: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "home/vi: self canonical",
+      "passed": true
+    },
+    {
+      "name": "home/vi: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "home/vi: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "home/vi: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "home/vi: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "home/vi: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "home/vi: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "home/vi: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "home/vi: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "home/vi: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "home/th: self canonical",
+      "passed": true
+    },
+    {
+      "name": "home/th: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "home/th: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "home/th: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "home/th: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "home/th: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "home/th: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "home/th: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "home/th: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "home/th: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "home/id: self canonical",
+      "passed": true
+    },
+    {
+      "name": "home/id: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "home/id: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "home/id: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "home/id: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "home/id: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "home/id: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "home/id: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "home/id: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "home/id: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "product/en: self canonical",
+      "passed": true
+    },
+    {
+      "name": "product/en: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "product/en: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "product/en: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "product/en: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "product/en: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "product/en: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "product/en: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "product/en: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "product/en: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "product/es: self canonical",
+      "passed": true
+    },
+    {
+      "name": "product/es: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "product/es: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "product/es: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "product/es: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "product/es: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "product/es: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "product/es: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "product/es: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "product/es: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "product/fr: self canonical",
+      "passed": true
+    },
+    {
+      "name": "product/fr: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "product/fr: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "product/fr: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "product/fr: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "product/fr: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "product/fr: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "product/fr: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "product/fr: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "product/fr: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "product/pt: self canonical",
+      "passed": true
+    },
+    {
+      "name": "product/pt: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "product/pt: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "product/pt: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "product/pt: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "product/pt: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "product/pt: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "product/pt: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "product/pt: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "product/pt: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "product/vi: self canonical",
+      "passed": true
+    },
+    {
+      "name": "product/vi: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "product/vi: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "product/vi: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "product/vi: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "product/vi: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "product/vi: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "product/vi: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "product/vi: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "product/vi: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "product/th: self canonical",
+      "passed": true
+    },
+    {
+      "name": "product/th: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "product/th: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "product/th: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "product/th: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "product/th: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "product/th: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "product/th: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "product/th: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "product/th: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "product/id: self canonical",
+      "passed": true
+    },
+    {
+      "name": "product/id: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "product/id: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "product/id: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "product/id: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "product/id: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "product/id: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "product/id: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "product/id: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "product/id: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "compatibility/en: self canonical",
+      "passed": true
+    },
+    {
+      "name": "compatibility/en: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "compatibility/en: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "compatibility/en: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "quote/en: self canonical",
+      "passed": true
+    },
+    {
+      "name": "quote/en: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "quote/en: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "quote/en: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "quote/en: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "quote/en: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "quote/en: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "quote/en: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "quote/en: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "quote/en: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "quote/es: self canonical",
+      "passed": true
+    },
+    {
+      "name": "quote/es: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "quote/es: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "quote/es: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "quote/es: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "quote/es: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "quote/es: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "quote/es: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "quote/es: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "quote/es: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: self canonical",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "quote/fr: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: self canonical",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "quote/pt: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: self canonical",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "quote/vi: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "quote/th: self canonical",
+      "passed": true
+    },
+    {
+      "name": "quote/th: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "quote/th: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "quote/th: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "quote/th: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "quote/th: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "quote/th: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "quote/th: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "quote/th: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "quote/th: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "quote/id: self canonical",
+      "passed": true
+    },
+    {
+      "name": "quote/id: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "quote/id: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "quote/id: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "quote/id: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "quote/id: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "quote/id: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "quote/id: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "quote/id: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "quote/id: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "contact/en: self canonical",
+      "passed": true
+    },
+    {
+      "name": "contact/en: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "contact/en: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "contact/en: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "contact/en: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "contact/en: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "contact/en: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "contact/en: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "contact/en: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "contact/en: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "contact/es: self canonical",
+      "passed": true
+    },
+    {
+      "name": "contact/es: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "contact/es: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "contact/es: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "contact/es: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "contact/es: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "contact/es: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "contact/es: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "contact/es: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "contact/es: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: self canonical",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "contact/fr: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: self canonical",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "contact/pt: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: self canonical",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "contact/vi: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "contact/th: self canonical",
+      "passed": true
+    },
+    {
+      "name": "contact/th: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "contact/th: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "contact/th: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "contact/th: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "contact/th: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "contact/th: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "contact/th: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "contact/th: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "contact/th: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "contact/id: self canonical",
+      "passed": true
+    },
+    {
+      "name": "contact/id: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "contact/id: reciprocal es",
+      "passed": true
+    },
+    {
+      "name": "contact/id: reciprocal fr",
+      "passed": true
+    },
+    {
+      "name": "contact/id: reciprocal pt",
+      "passed": true
+    },
+    {
+      "name": "contact/id: reciprocal vi",
+      "passed": true
+    },
+    {
+      "name": "contact/id: reciprocal th",
+      "passed": true
+    },
+    {
+      "name": "contact/id: reciprocal id",
+      "passed": true
+    },
+    {
+      "name": "contact/id: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "contact/id: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "privacy/en: self canonical",
+      "passed": true
+    },
+    {
+      "name": "privacy/en: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "privacy/en: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "privacy/en: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "terms/en: self canonical",
+      "passed": true
+    },
+    {
+      "name": "terms/en: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "terms/en: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "terms/en: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "editorial/en: self canonical",
+      "passed": true
+    },
+    {
+      "name": "editorial/en: reciprocal en",
+      "passed": true
+    },
+    {
+      "name": "editorial/en: no alias hreflang",
+      "passed": true
+    },
+    {
+      "name": "editorial/en: sitemap has canonical page",
+      "passed": true
+    },
+    {
+      "name": "/en/: alias excluded from sitemap",
+      "passed": true
+    },
+    {
+      "name": "/equipment/: alias excluded from sitemap",
+      "passed": true
+    },
+    {
+      "name": "/equipment-detail/: alias excluded from sitemap",
+      "passed": true
+    },
+    {
+      "name": "/pricing-plan/: alias excluded from sitemap",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

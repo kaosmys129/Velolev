@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "basis": "13 equally weighted delivery packages; not elapsed effort",
+  "sourceDigest": "681b0b3a928bf03f92924f2c21928c563164c01ac496b57e9c8d31a6ce7cec5b",
+  "totalPackages": 13,
+  "implementedPackages": 11,
+  "unclosedPackages": 2,
+  "completionPercent": 84.6,
+  "plannedStagePageRoutes": 8,
+  "implementedStagePageRoutes": 8,
+  "overallEnglishCorePages": 17,
+  "featurePackages": [
+    {
+      "name": "solar_application_page",
+      "status": "implemented"
+    },
+    {
+      "name": "parking_application_page",
+      "status": "implemented"
+    },
+    {
+      "name": "method_comparison",
+      "status": "implemented"
+    },
+    {
+      "name": "roi_calculator",
+      "status": "implemented"
+    },
+    {
+      "name": "method_limits_guide",
+      "status": "implemented"
+    },
+    {
+      "name": "resource_downloads",
+      "status": "implemented"
+    },
+    {
+      "name": "faq",
+      "status": "implemented"
+    },
+    {
+      "name": "guide_index",
+      "status": "implemented"
+    },
+    {
+      "name": "reviewed_snapshot_workflow",
+      "status": "implemented"
+    },
+    {
+      "name": "local_migration_preparation",
+      "status": "implemented"
+    },
+    {
+      "name": "language_pilot_preparation",
+      "status": "implemented"
+    }
+  ],
+  "unclosed": [
+    {
+      "name": "current_version_integrated_acceptance_and_freeze",
+      "status": "partial",
+      "reason": "mobile product page overflow; configured/snapshot/freeze evidence stale"
+    },
+    {
+      "name": "publishable_content_and_business_engineering_review",
+      "status": "pending",
+      "reason": "unverified corporate and quality claims; source images do not prove factory or unit testing"
+    }
+  ],
+  "browserChecksPassed": 194,
+  "browserChecksTotal": 195,
+  "mobileProduct": {
+    "viewportPx": 390,
+    "documentWidthPx": 409
+  },
+  "publicationGatesApproved": 0,
+  "publicationGatesTotal": 5,
+  "reports": [
+    {
+      "name": "build-verification.json",
+      "sourceMatches": true,
+      "passed": true,
+      "checkCount": null,
+      "passingChecks": null,
+      "failures": []
+    },
+    {
+      "name": "content-d60-verification.json",
+      "sourceMatches": true,
+      "passed": true,
+      "checkCount": 626,
+      "passingChecks": 626,
+      "failures": []
+    },
+    {
+      "name": "browser-d60-verification.json",
+      "sourceMatches": false,
+      "passed": true,
+      "checkCount": 115,
+      "passingChecks": 115,
+      "failures": []
+    },
+    {
+      "name": "browser-d30-verification.json",
+      "sourceMatches": false,
+      "passed": false,
+      "checkCount": 80,
+      "passingChecks": 79,
+      "failures": [
+        "/products/light-pole-jack/: mobile overflow"
+      ]
+    },
+    {
+      "name": "configured-metadata-d60-verification.json",
+      "sourceMatches": false,
+      "passed": true,
+      "checkCount": 1010,
+      "passingChecks": 1010,
+      "failures": []
+    },
+    {
+      "name": "snapshot-d60-verification.json",
+      "sourceMatches": false,
+      "passed": true,
+      "checkCount": 636,
+      "passingChecks": 636,
+      "failures": []
+    },
+    {
+      "name": "workflow-d60-verification.json",
+      "sourceMatches": false,
+      "passed": true,
+      "checkCount": null,
+      "passingChecks": null,
+      "failures": []
+    },
+    {
+      "name": "content-release-d60.json",
+      "sourceMatches": false,
+      "passed": null,
+      "checkCount": null,
+      "passingChecks": null,
+      "failures": []
+    }
+  ],
+  "businessSourceModifiedByAudit": false,
+  "lastBrowserTestSourceDigest": "6eb9ca9efdb4ca95e4fa0f168eb782f2e702eebff6f825c391db293629056595",
+  "browserEvidenceCoversCurrentSnapshot": false,
+  "snapshotNote": "About-page components changed after the recorded browser run; the browser result is scoped to its tested source digest.",
+  "historicalAudit": true,
+  "supersededBy": "d60-remainder-verification.json"
+}

@@ -1,0 +1,356 @@
+{
+  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "mediaReferences": [
+    {
+      "path": "brand/volvet-wordmark.svg",
+      "sha256": "6116904937102e65aa5d4a6d59ce81f38b824072c7ead5d15623eadca77bca0b",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "images/evidence/equipment-engineering-drawing-raw.jpg",
+      "sha256": "bb15cd86a1fd7360db27e8e3a9220e28cebc9efa53797502e4a552ffd1b66bb2",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "images/evidence/equipment-trolley-side-detail.jpg",
+      "sha256": "9f25df1a511092b9814b54e0b1ad68c44fa6b97333e29e0a21cc8f146c41be88",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "images/evidence/factory-crating-export-package.jpg",
+      "sha256": "36e194e2913b919a89c91d7b6fecd1a66c0f080dd85514395cf66d641f2edd6f",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "images/evidence/field-installation-flange-erect.jpg",
+      "sha256": "db831dbf91f006ab3433d7026cd8fb2c00a25d582a135f174fd5e59f26c8faed",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "images/evidence/jobsite-parking-lot-tight-space.jpg",
+      "sha256": "91f3b926f802a3ae2aa1e1071da3baad89318a67ac3fcef851642bd238ce8fe7",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "images/evidence/jobsite-rural-solar-street-light.jpg",
+      "sha256": "936e279f5841e2d978c3003169d91e0ac4c11b97be48fc337c85b22fccf30dc8",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "images/evidence/jobsite-sidewalk-municipal-road.jpg",
+      "sha256": "27aab581af909d80785edbdb084130b54bdd7f96ac827b2a86035c989c8cef93",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "images/evidence/manufacturer-spec-sheet-raw.jpg",
+      "sha256": "5a8c92481455a1b6e8e93bc25a6579be4c5b44e3e41b5214efcfe41eea07a6d6",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/README.md",
+      "sha256": "92d9cea29a0c6f1bf6c2f15288d3f6dc8dc0a408d1f459fed77730ecd57627f0",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/equipment-overview.en.vtt",
+      "sha256": "84029df7847f4c560a7ada176c54d237a9c8f2787ad756e14d52a66b4857c58d",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/equipment-overview.es.vtt",
+      "sha256": "becb2f720546eb336ca8b64830c77f74f3e200393d2afdb309bfd08d9c71622a",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/equipment-overview.fr.vtt",
+      "sha256": "d4f4430ec8495c165a2c12d759fa4714afa54261af5c54930b485163a7e9f8dc",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/equipment-overview.id.vtt",
+      "sha256": "2472b6a6dcf63fa90aabdeffcaa7c253ff44b021cff6da3735c292ebd9132e51",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/equipment-overview.mp4",
+      "sha256": "d3f1f9c7d7ab037975c35a173d1d02a48c2169489f3435f23a3e34388f26e423",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/equipment-overview.pt.vtt",
+      "sha256": "44c75dc7c7cc090a6329ae991ebac198535bc606f93a22271e0c7b7e423cd48c",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/equipment-overview.th.vtt",
+      "sha256": "5ac17fcf2f1fdcbeadf4fb539a0cd279fd5a6797154b4ed17bfa8a16fc57c5e7",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "media/equipment-overview.vi.vtt",
+      "sha256": "eef75bd47190448f15379d503d058dea175ac3828c505629751b235cf8543062",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "wp-content/uploads/sites/3/2025/01/portable-pole-lifter-hero-cutout-300x211.png",
+      "sha256": "cad22169b806db2da522f11ed9d8931305d1430e64f02a00debfc019a83d5817",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    },
+    {
+      "path": "wp-content/uploads/sites/3/2025/01/portable-pole-lifter-hero-cutout.png",
+      "sha256": "b975632de0f2ad1a1e89d8ad5dd32670d61845d36aea88a76ac1b0f173ab0a17",
+      "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
+    }
+  ],
+  "reviewGates": [
+    {
+      "id": "supplier_identity",
+      "requirement": "真实主体与品牌关系",
+      "ownerRole": "业务负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    },
+    {
+      "id": "privacy_retention",
+      "requirement": "数据保留期、隐私联系与责任主体",
+      "ownerRole": "业务负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    },
+    {
+      "id": "engineering_documents",
+      "requirement": "规格歧义与操作资料工程审核",
+      "ownerRole": "工程负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    },
+    {
+      "id": "application_validation",
+      "requirement": "太阳能装配与停车场场景的项目适配证据",
+      "ownerRole": "工程负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    },
+    {
+      "id": "editorial_review",
+      "requirement": "最终英语内容及适用市场的人工审校",
+      "ownerRole": "内容负责人",
+      "status": "pending",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null
+    }
+  ],
+  "sourceDigest": "ebfabf0008405dcee05499ce7c748dd28ddfb50f8e7296017a98841bf69e0fc4",
+  "schemaVersion": 1,
+  "stage": "D31-D60",
+  "date": "2026-10-28",
+  "baselineVersion": "2026-10-28.3",
+  "status": "local_qa_complete_production_review_pending",
+  "origin": null,
+  "publicationSnapshotSha256": "f5184cc3685ee52507db4003cc785c6b3a7bc8bf067cfa2adf2288055e837588",
+  "pages": [
+    {
+      "key": "solar",
+      "path": "/solutions/solar-street-light-installation/",
+      "title": "Solar Street Light Pole Installation Planning | volvet",
+      "description": "Prepare solar pole assembly, flange, foundation and project information for an equipment review. Complete solar assemblies require project-specific validation.",
+      "htmlSha256": "f311ddac3cde4b159271c46bb365555f42320401a1775f3a52c251c401205e31",
+      "businessEvidence": "additional_identity_or_engineering_evidence_pending"
+    },
+    {
+      "key": "parking",
+      "path": "/solutions/parking-lot-lighting/",
+      "title": "Parking Lot & Campus Pole Installation Planning | volvet",
+      "description": "Review pole, foundation, access and work-area information for parking lot and campus lighting projects before selecting lifting equipment.",
+      "htmlSha256": "e7f5c0a72dc7343a2a12fbaa496bec6ba420b3d24db52a62d455ea2a0401de6e",
+      "businessEvidence": "additional_identity_or_engineering_evidence_pending"
+    },
+    {
+      "key": "compare",
+      "path": "/compare/pole-jack-vs-crane/",
+      "title": "Pole Lifter vs Crane: Project Selection Guide | volvet",
+      "description": "Compare scope, compatibility, mobilisation and project cost inputs for a portable pole lifter and a crane without assumed savings.",
+      "htmlSha256": "83de4dc7b6a30e8685adc7537bf70e273c5eb700f29cd4bef700b550f13ad319",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "roi",
+      "path": "/tools/roi-calculator/",
+      "title": "Pole Installation Cost Scenario Calculator | volvet",
+      "description": "Compare project costs using your own inputs. Review transparent formulas, annual costs and conditional payback without a public equipment price.",
+      "htmlSha256": "4429662a6afdb2fecf557142fd9db18ca081ff5ac6afb11d609e2f182778e8dd",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "method",
+      "path": "/guides/install-light-pole-without-crane/",
+      "title": "Installing Light Poles Without a Crane: Methods & Limits | volvet",
+      "description": "A planning guide to equipment selection, complete work scope and engineering review. It is not a field operating procedure.",
+      "htmlSha256": "7f9ba34b1854f590caf8e7af120e2168c748d08be9e7f469755e515277936199",
+      "businessEvidence": "additional_identity_or_engineering_evidence_pending"
+    },
+    {
+      "key": "resources",
+      "path": "/resources/",
+      "title": "Product Specifications & Project Documents | volvet",
+      "description": "Download a source-derived product specification summary and a project information worksheet. Request reviewed project documents through the inquiry form.",
+      "htmlSha256": "5ea5d8ab2053e91b65b6d01f2fe54463967ba30c290e85885f8eda6a2ddddfbc",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "faq",
+      "path": "/faq/",
+      "title": "Portable Light Pole Lifter Questions | volvet",
+      "description": "Answers about rated load, pole height, standard configuration, compatibility, reported performance and the private quotation process.",
+      "htmlSha256": "b8e84a2cfa55587901a290afe8bad29fe8162359ba8f0ec32569999f245a37a0",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "about",
+      "path": "/about-us/",
+      "title": "About volvet: Equipment & Information | volvet",
+      "description": "Learn the confirmed volvet product focus and information policy. Corporate identity, factory details and credentials remain subject to verification.",
+      "htmlSha256": "8e2f180823afe59a4b9934e4fe6ca03d74092520a5a737f2c3cf5bc610689da2",
+      "businessEvidence": "additional_identity_or_engineering_evidence_pending"
+    },
+    {
+      "key": "guides",
+      "path": "/guides/",
+      "title": "Pole Installation Guides & Planning Tools | volvet",
+      "description": "Find pole compatibility guidance, application planning, equipment comparison, cost scenarios and source-derived specifications.",
+      "htmlSha256": "87d9b98b4ac0041c881cb8b5b201cdd27609f41dc9f25c3772533b29fbd5c26e",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "home",
+      "path": "/",
+      "title": "Portable Light Pole Lifter for Street Lighting | volvet",
+      "description": "Plan street light pole installation with volvet. Review the 12 m pole class, 300 kg rated load, foundation requirements and project quotation process.",
+      "htmlSha256": "8afa1c83196c435e4cef4ff99b5658b6f9f10fe331201861e428b142e3f95780",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "product",
+      "path": "/products/light-pole-jack/",
+      "title": "Portable Light Pole Lifter: Specifications & Configuration | volvet",
+      "description": "Review volvet portable light pole lifter specifications, two-module dimensions, included anchor bolts and compatibility requirements. Request a B2B project quotation.",
+      "htmlSha256": "26ba9924f5cc0af7955a3cf1eac980470bfb259e6b654523af46cccf199bcfff",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "compatibility",
+      "path": "/guides/pole-jack-compatibility/",
+      "title": "Pole Lifter Compatibility: Pole, Flange & Foundation | volvet",
+      "description": "Check the information needed to review pole lifter compatibility: pole weight and height, flange drawing, anchor bolts, foundation and site conditions.",
+      "htmlSha256": "37bcc7cb85f255ee9f197a6b2c2b1d87f1573a840fd80323ac1e6ad8601a9429",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "quote",
+      "path": "/quote/",
+      "title": "Request a Project Quotation | volvet",
+      "description": "Send your pole specifications, project quantity and destination for a private B2B configuration review and quotation.",
+      "htmlSha256": "103b3c247a68a3885bc4eb88992f63bbda4254116335cd5c95d02de5de169b51",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "contact",
+      "path": "/contact-us/",
+      "title": "Contact volvet: Project, Distributor & Support Inquiries",
+      "description": "Send a project, distributor, support or privacy request to volvet. Provide an email address or phone number so your inquiry can be reviewed.",
+      "htmlSha256": "7b726add7c3024988e5097ba61d675bc5896bf6a3f7e2cab2476a68ea7f6d6ef",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "privacy",
+      "path": "/privacy/",
+      "title": "Privacy Notice | volvet",
+      "description": "How volvet handles contact details, project specifications and optional attachments submitted through the inquiry service.",
+      "htmlSha256": "8cbe7c3be4bf5f629b6371f4297fffb5feab547321dd8ce3f28cafda2aeabde1",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "terms",
+      "path": "/terms/",
+      "title": "Website & Project Inquiry Terms | volvet",
+      "description": "Understand the purpose of volvet product information, project review and private quotation requests.",
+      "htmlSha256": "50a05d1db240e09adcd1e4ff1e279421288ff7aec4dea5092db1437f89d1535d",
+      "businessEvidence": "current_fact_baseline_applied"
+    },
+    {
+      "key": "editorial",
+      "path": "/editorial-policy/",
+      "title": "Product Information & Editorial Policy | volvet",
+      "description": "How volvet distinguishes specification-sheet facts, manufacturer-reported performance, engineering review and field evidence.",
+      "htmlSha256": "bb5047e3c451e4b025020bd8080d9c6d8545e2cc38de729f8e2a2641f230f2bd",
+      "businessEvidence": "current_fact_baseline_applied"
+    }
+  ],
+  "downloads": [
+    {
+      "path": "/resources/volvet-specifications.csv",
+      "sha256": "8f789cca5b0ee878a1a0e1abf566eb1d4f8bd7db8a4975645cbe27d4371f3c03"
+    },
+    {
+      "path": "/resources/volvet-specifications.json",
+      "sha256": "ab7edc4ca81be3d9d99c370a9be085b96e047f4de376b03117ff155cb288d43b"
+    },
+    {
+      "path": "/resources/project-information-worksheet.csv",
+      "sha256": "a067849ab3d7e0b071289b7a45c1918d214c61fd6270a857d76cae66e088b26e"
+    }
+  ],
+  "aliases": {
+    "/en/": "/",
+    "/equipment/": "/products/light-pole-jack/",
+    "/equipment-detail/": "/products/light-pole-jack/",
+    "/pricing-plan/": "/quote/",
+    "/blog/": "/guides/",
+    "/eco-friendly-heavy-equipment-maintaining-machines-in-a-sustainable-way/": "/compare/pole-jack-vs-crane/",
+    "/flexible-project-management-how-renting-equipment-boosts-productivity/": "/guides/install-light-pole-without-crane/",
+    "/team/": "/about-us/"
+  },
+  "proofs": [
+    {
+      "file": "build-verification.json",
+      "sha256": "6d63cfc896d5cbf9970f7b655c95f226f704bc64a33f88fc5399264c353a0b76"
+    },
+    {
+      "file": "content-d60-verification.json",
+      "sha256": "d5faa87d9c2d3503602e318702e58b3e79ebdd00aab8ed1fffbe1acd7e0bdd8b"
+    },
+    {
+      "file": "configured-metadata-d60-verification.json",
+      "sha256": "bf27c63b632e74ed55b2364a430acc04749294f2af23ebdef8bb6a38869b4daa"
+    },
+    {
+      "file": "snapshot-d60-verification.json",
+      "sha256": "a440afecb0e6b130ee1f36a8469d7a3a1f24e9abc812b9b716a72b11249d8464"
+    },
+    {
+      "file": "browser-d60-verification.json",
+      "sha256": "a78146ad2f3b171b7ccb4cf71055216472286f23d559f0f569649c7a0f197ad1"
+    },
+    {
+      "file": "browser-d30-verification.json",
+      "sha256": "dccde5050df91c40ceee627e147a5122d31bec700b8d25846325318113514e40"
+    }
+  ],
+  "productionGates": [
+    "confirmed domain and contact channels",
+    "corporate identity and retention policy",
+    "reviewed operating documents and project-specific assembly validation",
+    "deployment storage, HTTPS, admin secret and production receiving test"
+  ],
+  "nativeLanguageReview": "pending",
+  "externalPublication": false
+}

@@ -1,0 +1,10 @@
+---
+import baseline from "../../data/content-baseline.json";
+const s=baseline.product.specifications;
+---
+<div class="spec-strip" aria-label="Specification sheet summary" data-source-id="S4">
+  <div><strong class="spec-value">{s.applicablePoleHeightM}<small> m</small></strong><span class="spec-label">Light pole class</span></div>
+  <div><strong class="spec-value">{s.ratedLoadKg}<small> kg</small></strong><span class="spec-label">Rated load</span></div>
+  <div><strong class="spec-value">{s.batteryVoltageV}<small> V</small></strong><span class="spec-label">Rechargeable battery</span></div>
+  <div><strong class="spec-value">{s.totalWeightKg}<small> kg</small></strong><span class="spec-label">Total equipment weight</span></div>
+</div>

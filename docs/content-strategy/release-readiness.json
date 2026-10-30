@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-28",
+  "stage": "D60-remainder",
+  "status": "local_development_verified_production_review_pending",
+  "exitCode": 1,
+  "output": "\n> maquin-astro-theme@1.0.0 release:check\n> node scripts/check-release-readiness.mjs\n\n当前可本地预览，正式上线配置待补充：\n- 已确认的 HTTPS 正式域名（PUBLIC_SITE_URL）\n- 已确认的询盘联系方式\n- 正式部署的私有收件箱管理密钥（INQUIRY_ADMIN_TOKEN）\n- 生产发布审核：真实主体与品牌关系\n- 生产发布审核：数据保留期、隐私联系与责任主体\n- 生产发布审核：规格歧义与操作资料工程审核\n- 生产发布审核：太阳能装配与停车场场景的项目适配证据\n- 生产发布审核：最终英语内容及适用市场的人工审校\n"
+}

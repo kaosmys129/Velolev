@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-29",
+  "status": "complete",
+  "sourceDigest": "ebfabf0008405dcee05499ce7c748dd28ddfb50f8e7296017a98841bf69e0fc4",
+  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "snapshotDigest": null,
+  "origin": null,
+  "coverage": {
+    "corePages": 119,
+    "legacyPublicPages": 6,
+    "languages": [
+      "en",
+      "es",
+      "fr",
+      "pt",
+      "vi",
+      "th",
+      "id"
+    ],
+    "locations": [
+      "header",
+      "footer"
+    ]
+  },
+  "requirements": [
+    {
+      "name": "Header and footer both provide visible language selection",
+      "status": "verified",
+      "evidence": "119 core page matrix plus six legacy landmarks and responsive checks"
+    },
+    {
+      "name": "Switching loads the complete corresponding language document",
+      "status": "verified",
+      "evidence": "84 actual source/target switches with document identities and body/control language checks"
+    },
+    {
+      "name": "Reload, back/forward and saved preferences remain coherent",
+      "status": "verified",
+      "evidence": "Browser reload with conflicting stored language, back/forward and internal-navigation continuity"
+    },
+    {
+      "name": "Query/hash and missing translations have correct destinations",
+      "status": "verified",
+      "evidence": "Same-topic parameter/anchor preservation, fresh history URL, actual 404 and isolated single-language article"
+    },
+    {
+      "name": "Storage failure, no JavaScript and narrow screens remain usable",
+      "status": "verified",
+      "evidence": "Native disclosure/link tests, storage exception and six viewport widths"
+    }
+  ],
+  "tests": {
+    "languageSwitching": 2992,
+    "continuity": 49,
+    "static": 533,
+    "existingCoreBrowser": 1406,
+    "d30Browser": 81,
+    "d60Browser": 142,
+    "unit": 45
+  },
+  "proofs": [
+    {
+      "path": "qa-reports/language-switching-browser.json",
+      "sha256": "629ecc476df5ab8e740f9569f02ec67e61936fbe4d7f0b2ee107166c2f3978fc",
+      "checks": 2992
+    },
+    {
+      "path": "qa-reports/language-continuity.json",
+      "sha256": "c4d960ff9845945375f45e8e45342dd7e3301aa10db69577be846868c829f025",
+      "checks": 49
+    },
+    {
+      "path": "qa-reports/industrial-locales.json",
+      "sha256": "d6842b458bb75fa5adb890b44e3fcebbcbd3aba9729d84fd67b1cc16aaac9a2c",
+      "checks": 533
+    },
+    {
+      "path": "qa-reports/industrial-locales-browser.json",
+      "sha256": "9f4051e7d9a8444f5fdcc8d42a11b6c3c94f271661d1bf2881f792960401b6be",
+      "checks": 1406
+    },
+    {
+      "path": "../docs/content-strategy/build-verification.json",
+      "sha256": "6d63cfc896d5cbf9970f7b655c95f226f704bc64a33f88fc5399264c353a0b76",
+      "checks": null
+    },
+    {
+      "path": "../docs/content-strategy/content-d60-verification.json",
+      "sha256": "d5faa87d9c2d3503602e318702e58b3e79ebdd00aab8ed1fffbe1acd7e0bdd8b",
+      "checks": 910
+    },
+    {
+      "path": "../docs/content-strategy/configured-metadata-d60-verification.json",
+      "sha256": "bf27c63b632e74ed55b2364a430acc04749294f2af23ebdef8bb6a38869b4daa",
+      "checks": 1768
+    },
+    {
+      "path": "../docs/content-strategy/snapshot-d60-verification.json",
+      "sha256": "a440afecb0e6b130ee1f36a8469d7a3a1f24e9abc812b9b716a72b11249d8464",
+      "checks": 914
+    },
+    {
+      "path": "../docs/content-strategy/browser-d30-verification.json",
+      "sha256": "dccde5050df91c40ceee627e147a5122d31bec700b8d25846325318113514e40",
+      "checks": 81
+    },
+    {
+      "path": "../docs/content-strategy/browser-d60-verification.json",
+      "sha256": "a78146ad2f3b171b7ccb4cf71055216472286f23d559f0f569649c7a0f197ad1",
+      "checks": 142
+    }
+  ],
+  "productionDeployed": false,
+  "externalEmailSent": false,
+  "normalOutputIncludesTestArticle": false,
+  "preview": "http://127.0.0.1:8787/products/light-pole-jack/"
+}

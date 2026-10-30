@@ -1,0 +1,857 @@
+{
+  "date": "2026-10-28",
+  "stage": "D15-D30",
+  "mode": "pending-domain-preview",
+  "checks": [
+    {
+      "name": "home: built page exists",
+      "passed": true
+    },
+    {
+      "name": "home: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "home: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "home: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "home: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "home: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "home: local link /",
+      "passed": true
+    },
+    {
+      "name": "home: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /",
+      "passed": true
+    },
+    {
+      "name": "home: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /",
+      "passed": true
+    },
+    {
+      "name": "home: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "product: built page exists",
+      "passed": true
+    },
+    {
+      "name": "product: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "product: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "product: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "product: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "product: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "product: local link /",
+      "passed": true
+    },
+    {
+      "name": "product: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /",
+      "passed": true
+    },
+    {
+      "name": "product: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /",
+      "passed": true
+    },
+    {
+      "name": "product: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /es/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /fr/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /pt/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /vi/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /th/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /id/equipment/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: built page exists",
+      "passed": true
+    },
+    {
+      "name": "compatibility: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "compatibility: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "compatibility: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "compatibility: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "compatibility: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "quote: built page exists",
+      "passed": true
+    },
+    {
+      "name": "quote: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "quote: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "quote: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "quote: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "quote: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /es/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /fr/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /pt/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /vi/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /th/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /id/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "contact: built page exists",
+      "passed": true
+    },
+    {
+      "name": "contact: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "contact: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "contact: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "contact: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "contact: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /es/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /fr/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /pt/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /vi/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /th/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: local link /id/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: built page exists",
+      "passed": true
+    },
+    {
+      "name": "privacy: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "privacy: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "privacy: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "privacy: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "privacy: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "terms: built page exists",
+      "passed": true
+    },
+    {
+      "name": "terms: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "terms: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "terms: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "terms: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "terms: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "terms: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "editorial: built page exists",
+      "passed": true
+    },
+    {
+      "name": "editorial: exact page metadata title",
+      "passed": true
+    },
+    {
+      "name": "editorial: unique main heading",
+      "passed": true
+    },
+    {
+      "name": "editorial: substantive authored content",
+      "passed": true
+    },
+    {
+      "name": "editorial: canonical configuration",
+      "passed": true
+    },
+    {
+      "name": "editorial: no public commercial or invented evidence schema",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /privacy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /terms/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /es/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /fr/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /pt/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /vi/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /th/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /id/",
+      "passed": true
+    },
+    {
+      "name": "eight distinct core titles",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

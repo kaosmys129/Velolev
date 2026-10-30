@@ -1,0 +1,15 @@
+---
+import ProcurementLayout from "../../layouts/ProcurementLayout.astro";
+import HomePage from "../../components/procurement/HomePage.astro";
+import { otherLocales } from "../../i18n/config";
+
+export function getStaticPaths() {
+  return otherLocales.filter(locale=>!["es","fr","pt"].includes(locale)).map((locale) => ({
+    params: { lang: locale },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props;
+---
+<ProcurementLayout page="home" locale={locale}><HomePage locale={locale}/></ProcurementLayout>

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-28",
+  "baseUrl": "http://127.0.0.1:4321",
+  "results": [
+    {
+      "check": "en: visible brand asset",
+      "passed": false
+    },
+    {
+      "check": "en: explicit language preserved",
+      "passed": true
+    }
+  ],
+  "postRequests": [],
+  "failures": [
+    "en: visible brand asset",
+    "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.lang-trigger')\n\n    at /Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/scripts/browser-content-baseline.mjs:31:41"
+  ],
+  "passed": false,
+  "realInquiryDelivered": false,
+  "contactConfiguration": "pending_per_user_confirmation",
+  "screenshots": [
+    "home-desktop.png",
+    "product-desktop.png",
+    "product-mobile.png",
+    "product-facts-mobile.png",
+    "quote-desktop.png",
+    "inquiry-unconfigured.png"
+  ]
+}

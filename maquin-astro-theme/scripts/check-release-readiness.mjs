@@ -1,0 +1,20 @@
+import { readFileSync,existsSync } from "node:fs";
+import {publicOrigin} from "../src/lib/site-config.mjs";
+const baseline = JSON.parse(readFileSync(new URL("../src/data/content-baseline.json", import.meta.url), "utf8"));
+const missing = [];
+const origin = publicOrigin();
+if (!origin || !/^https:\/\/[^/]+\/?$/.test(origin) || /\.(?:invalid|test|example)(?:\/|$)/i.test(origin)) missing.push("已确认的 HTTPS 正式域名（PUBLIC_SITE_URL）");
+if (!baseline.contact.email && !baseline.contact.phone) missing.push("已确认的询盘联系方式");
+if (!baseline.contact.inquiryEndpoint) missing.push("已完成收件验证的询盘服务");
+const proofFile=new URL("../../docs/content-strategy/browser-d30-verification.json",import.meta.url);
+if(!existsSync(proofFile)||!JSON.parse(readFileSync(proofFile,"utf8")).passed)missing.push("通过的D30受控收件与浏览器验收");
+if(!process.env.INQUIRY_ADMIN_TOKEN||process.env.INQUIRY_ADMIN_TOKEN.length<32)missing.push("正式部署的私有收件箱管理密钥（INQUIRY_ADMIN_TOKEN）");
+const d60Proof=new URL("../../docs/content-strategy/browser-d60-verification.json",import.meta.url);
+if(!existsSync(d60Proof)||!JSON.parse(readFileSync(d60Proof,"utf8")).passed)missing.push("通过的D60页面、ROI及询盘验收");
+const publication=JSON.parse(readFileSync(new URL("../src/data/publication-gates.json",import.meta.url),"utf8"));
+for(const gate of publication.gates)if(gate.status!=="approved"||!gate.reviewer||!gate.evidence||!gate.reviewedAt)missing.push("生产发布审核："+gate.requirement);
+if (baseline.commercialPolicy.showPrices || baseline.commercialPolicy.showInventory || baseline.commercialPolicy.publishOffers) missing.push("B2B 价格及库存隐藏策略");
+if (missing.length) {
+  console.error("当前可本地预览，正式上线配置待补充：\n" + missing.map((x) => `- ${x}`).join("\n"));
+  process.exitCode = 1;
+} else console.log("正式上线配置检查通过。仍需执行构建与收件验证。");

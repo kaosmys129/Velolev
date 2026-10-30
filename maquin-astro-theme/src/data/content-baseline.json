@@ -1,0 +1,114 @@
+{
+  "version": "2026-10-28.3",
+  "brand": {
+    "name": "volvet",
+    "status": "confirmed_by_user",
+    "confirmedOn": "2026-10-28"
+  },
+  "deployment": {
+    "publicOrigin": null,
+    "status": "pending_configuration"
+  },
+  "contact": {
+    "email": null,
+    "phone": null,
+    "address": null,
+    "inquiryEndpoint": "/api/inquiries",
+    "status": "direct_contact_pending",
+    "inquiryDelivery": "private_inbox",
+    "emailNotification": "pending_configuration",
+    "inquiryServiceStatus": "controlled_local_e2e_verified"
+  },
+  "commercialPolicy": {
+    "businessModel": "B2B_export_inquiry",
+    "showPrices": false,
+    "showInventory": false,
+    "publishOffers": false,
+    "publishPaybackPromises": false
+  },
+  "product": {
+    "id": "portable-light-pole-lifter",
+    "name": "Portable Light Pole Lifter",
+    "categoryAliases": [
+      "light pole jack",
+      "portable hydraulic street light pole erector"
+    ],
+    "modelNumber": null,
+    "sourceId": "S4",
+    "sourceType": "user_confirmed_specification_sheet",
+    "fieldValidation": "pending",
+    "specifications": {
+      "applicablePoleHeightM": 12,
+      "ratedLoadKg": 300,
+      "batteryVoltageV": 24,
+      "hydraulicModuleWeightKg": 45,
+      "electricalCabinetWeightKg": 40,
+      "totalWeightKg": 85,
+      "hydraulicModuleDimensionsMm": [
+        610,
+        220,
+        220
+      ],
+      "electricalCabinetDimensionsMm": [
+        500,
+        300,
+        250
+      ],
+      "packagingDimensionsMm": [
+        650,
+        350,
+        500
+      ],
+      "operators": "1–2",
+      "listedAnchorBoltSizes": [
+        "M16",
+        "M18",
+        "M20",
+        "M22",
+        "M24"
+      ],
+      "flangeHoleSpanMm": [
+        180,
+        260
+      ]
+    },
+    "standardConfiguration": {
+      "equipmentSets": 1,
+      "anchorBoltSizesIncluded": [
+        "M16",
+        "M18",
+        "M20",
+        "M22"
+      ],
+      "anchorBoltSetsPerSize": 4,
+      "groundStakeSets": 1
+    },
+    "manufacturerReportedPerformance": {
+      "liftTimeSeconds": 20,
+      "liftsPerFullCharge": ">50",
+      "usageCycles": ">3000",
+      "evidenceStatus": "specification_only_field_results_pending"
+    },
+    "engineeringReviewRequired": [
+      "Flange diagram terminology: pole base diameter may refer to hole diameter; retain source without expanding interpretation.",
+      "The flange dimension sentences and diagram are not sufficient for an independently validated compatibility guarantee.",
+      "Anchor embedment depth, operator position and clearance instructions require a reviewed operating manual; do not republish as site instructions.",
+      "One-person operation is conditional in the introduction; the parameter table specifies 1–2 operators.",
+      "M24 is listed in the compatibility table, but is not in the standard included bolt sizes."
+    ],
+    "certifications": [],
+    "customerCases": [],
+    "warranty": null
+  },
+  "evidence": [
+    {
+      "id": "S4",
+      "title": "PORTABLE LIGHT POLE LIFTER — SPECIFICATION SHEET",
+      "file": "docs/content-strategy/evidence/product-specification-source.jpg",
+      "sha256": "5460abd6197005250c826b9211298b9a26ccd95469e4970a78acefa8a2f29ce4",
+      "confirmedOn": "2026-10-28",
+      "authority": "user_confirmed_product_source",
+      "publication": "internal_source_not_public_download"
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+---
+/**
+ * ProductGallery.astro
+ * 多角度设备工程相册组件
+ * 支持主机透明底、推车侧面滚轮实拍、现场法兰立杆实录、出厂木箱封装四视角无缝切换
+ */
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+
+const galleryItems = [
+  {
+    id: "hero",
+    title: "Primary Lifter Overview",
+    label: "01 / Studio Cutout",
+    src: "/images/product/portable-pole-lifter-hero-cutout.png",
+    thumb: "/images/product/portable-pole-lifter-hero-cutout-300x211.png",
+    caption: "Two-module hydraulic lifting jack: hydraulic power assembly & standalone electrical cabinet.",
+    isCutout: true,
+  },
+  {
+    id: "field",
+    title: "Pole-Base Connection Reference",
+    label: "02 / Connection Reference",
+    src: "/images/evidence/field-installation-flange-erect.jpg",
+    thumb: "/images/evidence/field-installation-flange-erect.jpg",
+    caption: "Connection reference only. Actual flange, bolts and foundation require review; this image is not an operating instruction.",
+    isCutout: false,
+  },
+  {
+    id: "trolley",
+    title: "Trolley Cart & Hydraulic Pump",
+    label: "03 / Mobility & Wheels",
+    src: "/images/evidence/equipment-trolley-side-detail.jpg",
+    thumb: "/images/evidence/equipment-trolley-side-detail.jpg",
+    caption: "Equipment detail reference. Confirm the components and handling arrangements for the actual supplied configuration.",
+    isCutout: false,
+  },
+  {
+    id: "crating",
+    title: "Packaging Reference",
+    label: "04 / Package Reference",
+    src: "/images/evidence/factory-crating-export-package.jpg",
+    thumb: "/images/evidence/factory-crating-export-package.jpg",
+    caption: "Packaging reference. Source-sheet dimensions are listed below; packing materials and transport terms require confirmation.",
+    isCutout: false,
+  },
+];
+---
+
+<div class:list={["product-gallery-root", className]} data-product-gallery data-enlarge-template="Enlarge image: {title}">
+  <!-- 主视口大图 -->
+  <div class="gallery-stage" id="gallery-stage" role="tabpanel" aria-labelledby="gallery-tab-hero">
+    <div class="stage-frame" data-stage-frame>
+      <span class="stage-tag" data-stage-label>{galleryItems[0].label}</span>
+      <a class="stage-img-container" data-stage-container data-media-image href={galleryItems[0].src} data-caption={galleryItems[0].caption} aria-label={`Enlarge image: ${galleryItems[0].title}`}>
+        <img
+          id="gallery-main-img"
+          src={galleryItems[0].src}
+          alt={galleryItems[0].title}
+          class="stage-main-image is-cutout"
+          width="800"
+          height="560"
+          fetchpriority="high"
+        />
+        <span class="stage-enlarge" aria-hidden="true">↗</span>
+      </a>
+      <figcaption class="stage-caption" id="gallery-caption">
+        {galleryItems[0].caption}
+      </figcaption>
+    </div>
+  </div>
+
+  <!-- 缩略图选择器 -->
+  <div class="gallery-thumbs" role="tablist" aria-label="Equipment view angles">
+    {galleryItems.map((item, idx) => (
+      <button
+        type="button"
+        role="tab"
+        id={`gallery-tab-${item.id}`}
+        tabindex={idx===0?0:-1}
+        class:list={["thumb-item", { active: idx === 0 }]}
+        aria-selected={idx === 0 ? "true" : "false"}
+        data-src={item.src}
+        data-label={item.label}
+        data-caption={item.caption}
+        data-alt={item.title}
+        data-cutout={item.isCutout ? "true" : "false"}
+        aria-controls="gallery-stage"
+      >
+        <div class="thumb-img-wrap">
+          <img src={item.thumb} alt={item.title} loading="lazy" width="120" height="85" />
+        </div>
+        <span class="thumb-label">{item.title}</span>
+      </button>
+    ))}
+  </div>
+</div>
+
+<style>
+  .product-gallery-root {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .gallery-stage {
+    position: relative;
+    background: var(--green, #c6ceba);
+    border: 1px solid var(--line, #d5d8cd);
+    border-radius: 2px;
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-stage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(#fff3 1px, transparent 1px), linear-gradient(90deg, #fff3 1px, transparent 1px);
+    background-size: 52px 52px;
+    pointer-events: none;
+  }
+  .stage-frame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  .stage-tag {
+    align-self: flex-start;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--ink, #1d201e);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 4px 10px;
+    border-radius: 2px;
+    z-index: 2;
+  }
+  .stage-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 380px;
+    position: relative;
+    z-index: 1;
+  }
+  .stage-enlarge{position:absolute;right:0;bottom:12px;display:grid;place-items:center;width:44px;height:44px;background:var(--yellow);color:var(--ink);font-size:24px}
+  .stage-main-image {
+    max-height: 360px;
+    max-width: 90%;
+    object-fit: contain;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .stage-main-image.is-cutout {
+    filter: drop-shadow(13px 24px 12px rgba(39, 51, 34, 0.25));
+  }
+  .stage-main-image:not(.is-cutout) {
+    border-radius: 2px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    max-height: 350px;
+  }
+  .stage-caption {
+    font-size: 12px;
+    color: var(--ink, #1d201e);
+    background: rgba(243, 242, 236, 0.88);
+    backdrop-filter: blur(4px);
+    padding: 8px 16px;
+    border-radius: 2px;
+    max-width: 90%;
+    text-align: center;
+    border: 1px solid rgba(213, 216, 205, 0.8);
+    z-index: 2;
+  }
+  .gallery-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .thumb-item {
+    min-width: 0;
+    max-width: 100%;
+    background: #ffffff;
+    border: 2px solid var(--line, #d5d8cd);
+    border-radius: 2px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .thumb-item:hover {
+    border-color: #a8b29e;
+  }
+  .thumb-item.active {
+    border-color: var(--yellow, #f4cc3d);
+    background: #fafbf8;
+  }
+  .thumb-img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #e8ebdf;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thumb-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .thumb-label {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink, #1d201e);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @media (max-width: 760px) {
+    .gallery-stage {
+      min-height: 380px;
+    }
+    .stage-img-container {
+      height: 280px;
+    }
+    .stage-main-image {
+      max-height: 260px;
+    }
+    .gallery-thumbs {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>("[data-product-gallery]")) {
+    const mainImg = root.querySelector<HTMLImageElement>("#gallery-main-img")!;
+    const label = root.querySelector<HTMLElement>("[data-stage-label]")!;
+    const caption = root.querySelector<HTMLElement>("#gallery-caption")!;
+    const imageLink = root.querySelector<HTMLAnchorElement>("[data-stage-container]")!;
+    const buttons = root.querySelectorAll<HTMLButtonElement>(".thumb-item");
+    let pending:ReturnType<typeof setTimeout>|undefined;
+
+    buttons.forEach((btn,index) => {
+      btn.addEventListener("keydown",event=>{let next=index;if(event.key==="ArrowRight")next=(index+1)%buttons.length;else if(event.key==="ArrowLeft")next=(index-1+buttons.length)%buttons.length;else if(event.key==="Home")next=0;else if(event.key==="End")next=buttons.length-1;else return;event.preventDefault();buttons[next].focus();buttons[next].click();});
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-selected", "false");
+          b.tabIndex=-1;
+        });
+        btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
+        btn.tabIndex=0;
+        root.querySelector("[role=tabpanel]")?.setAttribute("aria-labelledby",btn.id);
+
+        const src = btn.dataset.src!;
+        const lbl = btn.dataset.label!;
+        const cap = btn.dataset.caption!;
+        const isCutout = btn.dataset.cutout === "true";
+
+        mainImg.style.opacity = "0";
+        mainImg.style.transform = "scale(0.97)";
+
+        clearTimeout(pending);
+        pending=setTimeout(() => {
+          mainImg.src = src;
+          mainImg.alt=btn.dataset.alt??"";
+          imageLink.href=src;
+          imageLink.dataset.caption=cap;
+          imageLink.setAttribute("aria-label",(root.dataset.enlargeTemplate??"Enlarge image: {title}").replace("{title}",mainImg.alt));
+          label.textContent = lbl;
+          caption.textContent = cap;
+
+          if (isCutout) {
+            mainImg.classList.add("is-cutout");
+          } else {
+            mainImg.classList.remove("is-cutout");
+          }
+
+          mainImg.style.opacity = "1";
+          mainImg.style.transform = "none";
+        }, 150);
+      });
+    });
+  }
+</script>

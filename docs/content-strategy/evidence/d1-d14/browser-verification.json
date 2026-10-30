@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-28",
+  "baseUrl": "http://127.0.0.1:4321",
+  "results": [
+    {
+      "check": "en: visible brand asset",
+      "passed": true
+    },
+    {
+      "check": "en: explicit language preserved",
+      "passed": true
+    },
+    {
+      "check": "en: language menu opens",
+      "passed": true
+    },
+    {
+      "check": "en: field evidence boundary visible",
+      "passed": true
+    },
+    {
+      "check": "en: public brand and B2B policy",
+      "passed": true
+    },
+    {
+      "check": "en: mobile has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "en: legacy pricing URL uses B2B quotation",
+      "passed": true
+    },
+    {
+      "check": "en: quotation text has explicit contrasting surface",
+      "passed": true
+    },
+    {
+      "check": "en: inquiry form available for configuration",
+      "passed": true
+    },
+    {
+      "check": "en: no false delivery success",
+      "passed": true
+    },
+    {
+      "check": "en: unconfigured delivery state explicit",
+      "passed": true
+    },
+    {
+      "check": "es: visible brand asset",
+      "passed": true
+    },
+    {
+      "check": "es: explicit language preserved",
+      "passed": true
+    },
+    {
+      "check": "es: language menu opens",
+      "passed": true
+    },
+    {
+      "check": "es: field evidence boundary visible",
+      "passed": true
+    },
+    {
+      "check": "es: public brand and B2B policy",
+      "passed": true
+    },
+    {
+      "check": "es: legacy pricing URL uses B2B quotation",
+      "passed": true
+    },
+    {
+      "check": "es: inquiry form available for configuration",
+      "passed": true
+    },
+    {
+      "check": "es: no false delivery success",
+      "passed": true
+    },
+    {
+      "check": "es: unconfigured delivery state explicit",
+      "passed": true
+    },
+    {
+      "check": "fr: visible brand asset",
+      "passed": true
+    },
+    {
+      "check": "fr: explicit language preserved",
+      "passed": true
+    },
+    {
+      "check": "fr: language menu opens",
+      "passed": true
+    },
+    {
+      "check": "fr: field evidence boundary visible",
+      "passed": true
+    },
+    {
+      "check": "fr: public brand and B2B policy",
+      "passed": true
+    },
+    {
+      "check": "fr: legacy pricing URL uses B2B quotation",
+      "passed": true
+    },
+    {
+      "check": "fr: inquiry form available for configuration",
+      "passed": true
+    },
+    {
+      "check": "fr: no false delivery success",
+      "passed": true
+    },
+    {
+      "check": "fr: unconfigured delivery state explicit",
+      "passed": true
+    },
+    {
+      "check": "pt: visible brand asset",
+      "passed": true
+    },
+    {
+      "check": "pt: explicit language preserved",
+      "passed": true
+    },
+    {
+      "check": "pt: language menu opens",
+      "passed": true
+    },
+    {
+      "check": "pt: field evidence boundary visible",
+      "passed": true
+    },
+    {
+      "check": "pt: public brand and B2B policy",
+      "passed": true
+    },
+    {
+      "check": "pt: legacy pricing URL uses B2B quotation",
+      "passed": true
+    },
+    {
+      "check": "pt: inquiry form available for configuration",
+      "passed": true
+    },
+    {
+      "check": "pt: no false delivery success",
+      "passed": true
+    },
+    {
+      "check": "pt: unconfigured delivery state explicit",
+      "passed": true
+    },
+    {
+      "check": "vi: visible brand asset",
+      "passed": true
+    },
+    {
+      "check": "vi: explicit language preserved",
+      "passed": true
+    },
+    {
+      "check": "vi: language menu opens",
+      "passed": true
+    },
+    {
+      "check": "vi: field evidence boundary visible",
+      "passed": true
+    },
+    {
+      "check": "vi: public brand and B2B policy",
+      "passed": true
+    },
+    {
+      "check": "vi: legacy pricing URL uses B2B quotation",
+      "passed": true
+    },
+    {
+      "check": "vi: inquiry form available for configuration",
+      "passed": true
+    },
+    {
+      "check": "vi: no false delivery success",
+      "passed": true
+    },
+    {
+      "check": "vi: unconfigured delivery state explicit",
+      "passed": true
+    },
+    {
+      "check": "th: visible brand asset",
+      "passed": true
+    },
+    {
+      "check": "th: explicit language preserved",
+      "passed": true
+    },
+    {
+      "check": "th: language menu opens",
+      "passed": true
+    },
+    {
+      "check": "th: field evidence boundary visible",
+      "passed": true
+    },
+    {
+      "check": "th: public brand and B2B policy",
+      "passed": true
+    },
+    {
+      "check": "th: legacy pricing URL uses B2B quotation",
+      "passed": true
+    },
+    {
+      "check": "th: inquiry form available for configuration",
+      "passed": true
+    },
+    {
+      "check": "th: no false delivery success",
+      "passed": true
+    },
+    {
+      "check": "th: unconfigured delivery state explicit",
+      "passed": true
+    },
+    {
+      "check": "id: visible brand asset",
+      "passed": true
+    },
+    {
+      "check": "id: explicit language preserved",
+      "passed": true
+    },
+    {
+      "check": "id: language menu opens",
+      "passed": true
+    },
+    {
+      "check": "id: field evidence boundary visible",
+      "passed": true
+    },
+    {
+      "check": "id: public brand and B2B policy",
+      "passed": true
+    },
+    {
+      "check": "id: legacy pricing URL uses B2B quotation",
+      "passed": true
+    },
+    {
+      "check": "id: inquiry form available for configuration",
+      "passed": true
+    },
+    {
+      "check": "id: no false delivery success",
+      "passed": true
+    },
+    {
+      "check": "id: unconfigured delivery state explicit",
+      "passed": true
+    },
+    {
+      "check": "unconfigured forms send zero POST requests",
+      "passed": true
+    }
+  ],
+  "postRequests": [],
+  "failures": [],
+  "passed": true,
+  "realInquiryDelivered": false,
+  "contactConfiguration": "pending_per_user_confirmation",
+  "screenshots": [
+    "home-desktop.png",
+    "product-desktop.png",
+    "product-mobile.png",
+    "product-facts-mobile.png",
+    "quote-desktop.png",
+    "inquiry-unconfigured.png"
+  ]
+}

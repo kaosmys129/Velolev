@@ -1,0 +1,3667 @@
+{
+  "sourceDigest": "ad798f5033c1de7e090d566e2cb7893db47f39527fc61e885a75947b40391d77",
+  "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
+  "date": "2026-10-28",
+  "stage": "D31-D60",
+  "mode": "offline-snapshot-fixture",
+  "passed": true,
+  "checks": [
+    {
+      "name": "solar: implemented",
+      "passed": true
+    },
+    {
+      "name": "solar: own title",
+      "passed": true
+    },
+    {
+      "name": "solar: unique heading",
+      "passed": true
+    },
+    {
+      "name": "solar: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /es/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /fr/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /pt/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /vi/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /th/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /id/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /images/evidence/jobsite-rural-solar-street-light.jpg",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /images/evidence/equipment-trolley-side-detail.jpg",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /images/evidence/field-installation-flange-erect.jpg",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /es/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /fr/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /pt/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /vi/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /th/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /id/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "solar: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "parking: implemented",
+      "passed": true
+    },
+    {
+      "name": "parking: own title",
+      "passed": true
+    },
+    {
+      "name": "parking: unique heading",
+      "passed": true
+    },
+    {
+      "name": "parking: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /es/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /fr/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /pt/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /vi/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /th/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /id/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /images/evidence/jobsite-parking-lot-tight-space.jpg",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /images/evidence/jobsite-sidewalk-municipal-road.jpg",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /images/evidence/field-installation-flange-erect.jpg",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /es/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /fr/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /pt/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /vi/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /th/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: linked resource /id/solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "parking: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "parking: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "compare: implemented",
+      "passed": true
+    },
+    {
+      "name": "compare: own title",
+      "passed": true
+    },
+    {
+      "name": "compare: unique heading",
+      "passed": true
+    },
+    {
+      "name": "compare: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /es/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /fr/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /pt/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /vi/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /th/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /id/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /es/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /fr/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /pt/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /vi/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /th/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: linked resource /id/compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compare: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "compare: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "roi: implemented",
+      "passed": true
+    },
+    {
+      "name": "roi: own title",
+      "passed": true
+    },
+    {
+      "name": "roi: unique heading",
+      "passed": true
+    },
+    {
+      "name": "roi: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /es/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /fr/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /pt/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /vi/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /th/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /id/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /es/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /fr/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /pt/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /vi/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /th/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /id/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "roi: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "method: implemented",
+      "passed": true
+    },
+    {
+      "name": "method: own title",
+      "passed": true
+    },
+    {
+      "name": "method: unique heading",
+      "passed": true
+    },
+    {
+      "name": "method: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /es/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /fr/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /pt/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /vi/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /th/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /id/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /images/evidence/field-installation-flange-erect.jpg",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /es/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /fr/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /pt/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /vi/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /th/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /id/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "method: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "resources: implemented",
+      "passed": true
+    },
+    {
+      "name": "resources: own title",
+      "passed": true
+    },
+    {
+      "name": "resources: unique heading",
+      "passed": true
+    },
+    {
+      "name": "resources: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /es/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /fr/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /pt/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /vi/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /th/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /id/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /resources/volvet-specifications.csv",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /resources/volvet-specifications.json",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /resources/project-information-worksheet.csv",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /media/equipment-overview.mp4",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /media/equipment-overview.mp4",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /es/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /fr/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /pt/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /vi/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /th/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /id/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "resources: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "faq: implemented",
+      "passed": true
+    },
+    {
+      "name": "faq: own title",
+      "passed": true
+    },
+    {
+      "name": "faq: unique heading",
+      "passed": true
+    },
+    {
+      "name": "faq: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /es/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /fr/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /pt/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /vi/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /th/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /id/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /es/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /fr/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /pt/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /vi/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /th/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /id/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "faq: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "about: implemented",
+      "passed": true
+    },
+    {
+      "name": "about: own title",
+      "passed": true
+    },
+    {
+      "name": "about: unique heading",
+      "passed": true
+    },
+    {
+      "name": "about: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /es/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /fr/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /pt/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /vi/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /th/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /id/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/product/portable-pole-lifter-hero-cutout.png",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/evidence/equipment-trolley-side-detail.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/evidence/field-installation-flange-erect.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/evidence/factory-crating-export-package.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /es/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /fr/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /pt/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /vi/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /th/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /id/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "about: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "guides: implemented",
+      "passed": true
+    },
+    {
+      "name": "guides: own title",
+      "passed": true
+    },
+    {
+      "name": "guides: unique heading",
+      "passed": true
+    },
+    {
+      "name": "guides: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /es/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /fr/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /pt/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /vi/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /th/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /id/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/controlled-review-fixture/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /es/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /fr/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /pt/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /vi/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /th/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /id/blog/",
+      "passed": true
+    },
+    {
+      "name": "guides: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "guides: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "home: implemented",
+      "passed": true
+    },
+    {
+      "name": "home: own title",
+      "passed": true
+    },
+    {
+      "name": "home: unique heading",
+      "passed": true
+    },
+    {
+      "name": "home: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /es/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /fr/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /pt/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /vi/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /th/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /id/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /images/evidence/equipment-trolley-side-detail.jpg",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /images/product/portable-pole-lifter-hero-cutout.png",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /media/equipment-overview.mp4",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /media/equipment-overview.mp4",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /images/evidence/jobsite-sidewalk-municipal-road.jpg",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /images/evidence/jobsite-parking-lot-tight-space.jpg",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /images/evidence/jobsite-rural-solar-street-light.jpg",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /es/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /fr/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /pt/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /vi/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /th/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /id/",
+      "passed": true
+    },
+    {
+      "name": "home: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "home: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "product: implemented",
+      "passed": true
+    },
+    {
+      "name": "product: own title",
+      "passed": true
+    },
+    {
+      "name": "product: unique heading",
+      "passed": true
+    },
+    {
+      "name": "product: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /es/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /fr/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /pt/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /vi/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /th/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /id/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /images/product/portable-pole-lifter-hero-cutout.png",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /media/equipment-overview.mp4",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /media/equipment-overview.mp4",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /es/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /fr/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /pt/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /vi/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /th/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /id/equipment/",
+      "passed": true
+    },
+    {
+      "name": "product: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "product: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "compatibility: implemented",
+      "passed": true
+    },
+    {
+      "name": "compatibility: own title",
+      "passed": true
+    },
+    {
+      "name": "compatibility: unique heading",
+      "passed": true
+    },
+    {
+      "name": "compatibility: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /es/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /fr/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /pt/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /vi/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /th/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /id/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /es/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /fr/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /pt/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /vi/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /th/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /id/guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "compatibility: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "quote: implemented",
+      "passed": true
+    },
+    {
+      "name": "quote: own title",
+      "passed": true
+    },
+    {
+      "name": "quote: unique heading",
+      "passed": true
+    },
+    {
+      "name": "quote: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /es/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /fr/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /pt/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /vi/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /th/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /id/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /es/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /fr/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /pt/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /vi/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /th/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /id/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "quote: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "contact: implemented",
+      "passed": true
+    },
+    {
+      "name": "contact: own title",
+      "passed": true
+    },
+    {
+      "name": "contact: unique heading",
+      "passed": true
+    },
+    {
+      "name": "contact: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /es/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /fr/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /pt/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /vi/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /th/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /id/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /es/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /fr/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /pt/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /vi/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /th/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: linked resource /id/contact-us/",
+      "passed": true
+    },
+    {
+      "name": "contact: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "contact: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "privacy: implemented",
+      "passed": true
+    },
+    {
+      "name": "privacy: own title",
+      "passed": true
+    },
+    {
+      "name": "privacy: unique heading",
+      "passed": true
+    },
+    {
+      "name": "privacy: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /es/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /fr/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /pt/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /vi/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /th/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /id/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /es/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /fr/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /pt/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /vi/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /th/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /id/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "privacy: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "terms: implemented",
+      "passed": true
+    },
+    {
+      "name": "terms: own title",
+      "passed": true
+    },
+    {
+      "name": "terms: unique heading",
+      "passed": true
+    },
+    {
+      "name": "terms: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /es/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /fr/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /pt/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /vi/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /th/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /id/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /es/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /fr/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /pt/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /vi/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /th/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: linked resource /id/terms/",
+      "passed": true
+    },
+    {
+      "name": "terms: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "terms: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "editorial: implemented",
+      "passed": true
+    },
+    {
+      "name": "editorial: own title",
+      "passed": true
+    },
+    {
+      "name": "editorial: unique heading",
+      "passed": true
+    },
+    {
+      "name": "editorial: meaningful authored body",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /es/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /fr/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /pt/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /vi/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /th/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /id/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /guides/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /contact-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /solutions/parking-lot-lighting/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /compare/pole-jack-vs-crane/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /resources/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /faq/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /about-us/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /privacy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /terms/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /es/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /fr/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /pt/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /vi/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /th/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /id/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: canonical mode",
+      "passed": true
+    },
+    {
+      "name": "editorial: commercial and evidence schema boundary",
+      "passed": true
+    },
+    {
+      "name": "seventeen distinct core titles",
+      "passed": true
+    },
+    {
+      "name": "download: actual current source data",
+      "passed": true
+    },
+    {
+      "name": "download: evidence and included configuration boundaries",
+      "passed": true
+    },
+    {
+      "name": "download: volvet-specifications.csv exists and substantive",
+      "passed": true
+    },
+    {
+      "name": "download: project-information-worksheet.csv exists and substantive",
+      "passed": true
+    },
+    {
+      "name": "en: about source and pending evidence explicit",
+      "passed": true
+    },
+    {
+      "name": "en: no unverified capacity, history or test claims",
+      "passed": true
+    },
+    {
+      "name": "en: reference images are not used as factory or testing proof",
+      "passed": true
+    },
+    {
+      "name": "es: about source and pending evidence explicit",
+      "passed": true
+    },
+    {
+      "name": "es: no unverified capacity, history or test claims",
+      "passed": true
+    },
+    {
+      "name": "es: reference images are not used as factory or testing proof",
+      "passed": true
+    },
+    {
+      "name": "fr: about source and pending evidence explicit",
+      "passed": true
+    },
+    {
+      "name": "fr: no unverified capacity, history or test claims",
+      "passed": true
+    },
+    {
+      "name": "fr: reference images are not used as factory or testing proof",
+      "passed": true
+    },
+    {
+      "name": "pt: about source and pending evidence explicit",
+      "passed": true
+    },
+    {
+      "name": "pt: no unverified capacity, history or test claims",
+      "passed": true
+    },
+    {
+      "name": "pt: reference images are not used as factory or testing proof",
+      "passed": true
+    },
+    {
+      "name": "vi: about source and pending evidence explicit",
+      "passed": true
+    },
+    {
+      "name": "vi: no unverified capacity, history or test claims",
+      "passed": true
+    },
+    {
+      "name": "vi: reference images are not used as factory or testing proof",
+      "passed": true
+    },
+    {
+      "name": "th: about source and pending evidence explicit",
+      "passed": true
+    },
+    {
+      "name": "th: no unverified capacity, history or test claims",
+      "passed": true
+    },
+    {
+      "name": "th: reference images are not used as factory or testing proof",
+      "passed": true
+    },
+    {
+      "name": "id: about source and pending evidence explicit",
+      "passed": true
+    },
+    {
+      "name": "id: no unverified capacity, history or test claims",
+      "passed": true
+    },
+    {
+      "name": "id: reference images are not used as factory or testing proof",
+      "passed": true
+    },
+    {
+      "name": "calculator: no default public price",
+      "passed": true
+    },
+    {
+      "name": "calculator: scope and edge conditions visible",
+      "passed": true
+    },
+    {
+      "name": "snapshot: reviewed body statically rendered offline",
+      "passed": true
+    },
+    {
+      "name": "snapshot: no live GEOFlow dependency or placeholder",
+      "passed": true
+    },
+    {
+      "name": "snapshot: article discoverable from index",
+      "passed": true
+    },
+    {
+      "name": "source and media unchanged during verification",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

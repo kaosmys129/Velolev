@@ -4,15 +4,43 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "no_proxy=localhost,127.0.0.1,::1 astro dev",
+    "build": "node scripts/build-site.mjs",
     "preview": "astro preview",
-    "generate": "node scripts/generate-from-static.mjs"
+    "content:inventory": "node scripts/content-foundation.mjs",
+    "content:check": "node --test scripts/contentPolicy.test.mjs && node scripts/verify-content-baseline.mjs",
+    "release:check": "node scripts/check-release-readiness.mjs",
+    "content:browser": "node --experimental-sqlite scripts/browser-d30.mjs",
+    "serve": "node --experimental-sqlite server/inquiry-server.mjs",
+    "inquiry:test": "node --experimental-sqlite --test server/inquiry.test.mjs",
+    "d30:browser": "node --experimental-sqlite scripts/browser-d30.mjs",
+    "d30:check": "node scripts/verify-d30.mjs",
+    "design:export": "node scripts/export-design-system.mjs",
+    "test": "npm run build && npm run content:check && npm run decision:test && npm run inquiry:test && npm run d30:check && npm run d60:check && npm run retirement:test && npm run retirement:check",
+    "decision:test": "node --test scripts/decision-tools.test.mjs scripts/industrial-localization.test.mjs scripts/language-navigation.test.mjs",
+    "locales:check": "node scripts/verify-industrial-locales.mjs",
+    "content:prepare": "node scripts/prepare-geoflow-review.mjs",
+    "content:import": "node scripts/import-reviewed-content.mjs",
+    "d60:check": "node scripts/verify-d60.mjs",
+    "d60:browser": "node --experimental-sqlite scripts/browser-d60.mjs",
+    "content:freeze": "node scripts/freeze-content-release.mjs",
+    "media:generate": "node scripts/generate-equipment-film.mjs",
+    "media:browser": "node --experimental-sqlite scripts/browser-media.mjs",
+    "locales:browser": "node --experimental-sqlite scripts/browser-industrial-locales.mjs",
+    "language:browser": "node --experimental-sqlite scripts/browser-language-switching.mjs",
+    "retirement:test": "node --test scripts/wordpress-retirement.test.mjs",
+    "retirement:check": "node scripts/verify-wordpress-retirement.mjs",
+    "retirement:http": "node --experimental-sqlite scripts/verify-wordpress-retirement.mjs --http"
   },
   "dependencies": {
-    "astro": "^5.13.5"
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^5.13.5",
+    "parse5": "^7.3.0"
   },
   "devDependencies": {
     "playwright": "^1.61.1"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

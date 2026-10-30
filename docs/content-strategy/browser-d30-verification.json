@@ -1,0 +1,375 @@
+{
+  "sourceDigest": "ebfabf0008405dcee05499ce7c748dd28ddfb50f8e7296017a98841bf69e0fc4",
+  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "date": "2026-10-28",
+  "stage": "D15-D30",
+  "passed": true,
+  "checks": [
+    {
+      "name": "/: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "/: one main heading",
+      "passed": true
+    },
+    {
+      "name": "/: brand and B2B policy",
+      "passed": true
+    },
+    {
+      "name": "/: pending-domain preview indexing",
+      "passed": true
+    },
+    {
+      "name": "/: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: one main heading",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: brand and B2B policy",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: pending-domain preview indexing",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "/guides/pole-jack-compatibility/: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "/guides/pole-jack-compatibility/: one main heading",
+      "passed": true
+    },
+    {
+      "name": "/guides/pole-jack-compatibility/: brand and B2B policy",
+      "passed": true
+    },
+    {
+      "name": "/guides/pole-jack-compatibility/: pending-domain preview indexing",
+      "passed": true
+    },
+    {
+      "name": "/guides/pole-jack-compatibility/: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "/quote/: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "/quote/: one main heading",
+      "passed": true
+    },
+    {
+      "name": "/quote/: brand and B2B policy",
+      "passed": true
+    },
+    {
+      "name": "/quote/: pending-domain preview indexing",
+      "passed": true
+    },
+    {
+      "name": "/quote/: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "/contact-us/: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "/contact-us/: one main heading",
+      "passed": true
+    },
+    {
+      "name": "/contact-us/: brand and B2B policy",
+      "passed": true
+    },
+    {
+      "name": "/contact-us/: pending-domain preview indexing",
+      "passed": true
+    },
+    {
+      "name": "/contact-us/: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "/privacy/: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "/privacy/: one main heading",
+      "passed": true
+    },
+    {
+      "name": "/privacy/: brand and B2B policy",
+      "passed": true
+    },
+    {
+      "name": "/privacy/: pending-domain preview indexing",
+      "passed": true
+    },
+    {
+      "name": "/privacy/: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "/terms/: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "/terms/: one main heading",
+      "passed": true
+    },
+    {
+      "name": "/terms/: brand and B2B policy",
+      "passed": true
+    },
+    {
+      "name": "/terms/: pending-domain preview indexing",
+      "passed": true
+    },
+    {
+      "name": "/terms/: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "/editorial-policy/: HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "/editorial-policy/: one main heading",
+      "passed": true
+    },
+    {
+      "name": "/editorial-policy/: brand and B2B policy",
+      "passed": true
+    },
+    {
+      "name": "/editorial-policy/: pending-domain preview indexing",
+      "passed": true
+    },
+    {
+      "name": "/editorial-policy/: desktop overflow",
+      "passed": true
+    },
+    {
+      "name": "funnel: home to product",
+      "passed": true
+    },
+    {
+      "name": "funnel: product to compatibility",
+      "passed": true
+    },
+    {
+      "name": "compatibility: information checklist updates without declaring suitability",
+      "passed": true
+    },
+    {
+      "name": "funnel: compatibility to quote",
+      "passed": true
+    },
+    {
+      "name": "failed/lost response: form values preserved",
+      "passed": true
+    },
+    {
+      "name": "failed/lost response: no false confirmation",
+      "passed": true
+    },
+    {
+      "name": "browser receipt maps to a real SQLite record",
+      "passed": true
+    },
+    {
+      "name": "lost-response retry: no duplicate record",
+      "passed": true
+    },
+    {
+      "name": "attachment persisted with inquiry",
+      "passed": true
+    },
+    {
+      "name": "actual project fields persisted",
+      "passed": true
+    },
+    {
+      "name": "es: real inquiry received with correct language",
+      "passed": true
+    },
+    {
+      "name": "fr: real inquiry received with correct language",
+      "passed": true
+    },
+    {
+      "name": "pt: real inquiry received with correct language",
+      "passed": true
+    },
+    {
+      "name": "vi: real inquiry received with correct language",
+      "passed": true
+    },
+    {
+      "name": "th: real inquiry received with correct language",
+      "passed": true
+    },
+    {
+      "name": "id: real inquiry received with correct language",
+      "passed": true
+    },
+    {
+      "name": "/equipment/: permanent redirect",
+      "passed": true
+    },
+    {
+      "name": "/equipment/: direct final destination",
+      "passed": true
+    },
+    {
+      "name": "/equipment-detail/: permanent redirect",
+      "passed": true
+    },
+    {
+      "name": "/equipment-detail/: direct final destination",
+      "passed": true
+    },
+    {
+      "name": "/pricing-plan/: permanent redirect",
+      "passed": true
+    },
+    {
+      "name": "/pricing-plan/: direct final destination",
+      "passed": true
+    },
+    {
+      "name": "/: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile navigation opens",
+      "passed": true
+    },
+    {
+      "name": "/products/light-pole-jack/: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "/guides/pole-jack-compatibility/: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "/quote/: mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile: form usable",
+      "passed": true
+    },
+    {
+      "name": "private inbox requires access key",
+      "passed": true
+    },
+    {
+      "name": "operator inbox shows the exact received inquiry",
+      "passed": true
+    },
+    {
+      "name": "operator review state saved to database",
+      "passed": true
+    },
+    {
+      "name": "anonymous user cannot read inquiry details",
+      "passed": true
+    },
+    {
+      "name": "all local page, script, font and image requests succeed",
+      "passed": true
+    },
+    {
+      "name": "en: record survives service restart",
+      "passed": true
+    },
+    {
+      "name": "es: record survives service restart",
+      "passed": true
+    },
+    {
+      "name": "fr: record survives service restart",
+      "passed": true
+    },
+    {
+      "name": "pt: record survives service restart",
+      "passed": true
+    },
+    {
+      "name": "vi: record survives service restart",
+      "passed": true
+    },
+    {
+      "name": "th: record survives service restart",
+      "passed": true
+    },
+    {
+      "name": "id: record survives service restart",
+      "passed": true
+    },
+    {
+      "name": "source and reference media unchanged during browser validation",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "httpErrors": [],
+  "receipts": [
+    {
+      "reference": "VOL-20261029-E42C8EAF",
+      "isTest": true,
+      "locale": "en"
+    },
+    {
+      "reference": "VOL-20261029-21FAEAA8",
+      "isTest": true,
+      "locale": "es"
+    },
+    {
+      "reference": "VOL-20261029-7DEC8458",
+      "isTest": true,
+      "locale": "fr"
+    },
+    {
+      "reference": "VOL-20261029-D6C88ABB",
+      "isTest": true,
+      "locale": "pt"
+    },
+    {
+      "reference": "VOL-20261029-DAC873FE",
+      "isTest": true,
+      "locale": "vi"
+    },
+    {
+      "reference": "VOL-20261029-98457A9D",
+      "isTest": true,
+      "locale": "th"
+    },
+    {
+      "reference": "VOL-20261029-6555DDCC",
+      "isTest": true,
+      "locale": "id"
+    }
+  ],
+  "storage": "SQLite private inbox, durable across restart",
+  "testDataOnly": true,
+  "externalEmailSent": false
+}

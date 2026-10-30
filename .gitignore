@@ -16,3 +16,6 @@ dist/
 
 # Logs
 *.log
+
+# Local, verified pre-retirement recovery bundles
+archives/*.tar.gz

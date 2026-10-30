@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-29",
+  "sourceDigest": "ad798f5033c1de7e090d566e2cb7893db47f39527fc61e885a75947b40391d77",
+  "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
+  "snapshotDigest": null,
+  "origin": null,
+  "passed": true,
+  "checks": 35,
+  "rows": [
+    {
+      "from": "/404.html",
+      "landed": "/404.html?context=roi&utm_source=legacy#unused",
+      "finalStatus": 200,
+      "expectedSpanish": "/es/?utm_source=legacy",
+      "actualLinks": {
+        "header": "/es/?utm_source=legacy",
+        "footer": "/es/?utm_source=legacy"
+      },
+      "spanishTargetLoaded": true
+    },
+    {
+      "from": "/project/",
+      "landed": "/solutions/solar-street-light-installation/?context=roi&utm_source=legacy#unused",
+      "finalStatus": 200,
+      "expectedSpanish": "/es/solutions/solar-street-light-installation/?context=roi&utm_source=legacy#unused",
+      "actualLinks": {
+        "header": "/es/solutions/solar-street-light-installation/?context=roi&utm_source=legacy#unused",
+        "footer": "/es/solutions/solar-street-light-installation/?context=roi&utm_source=legacy#unused"
+      },
+      "spanishTargetLoaded": true
+    },
+    {
+      "from": "/essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency/",
+      "landed": "/resources/?context=roi&utm_source=legacy#unused",
+      "finalStatus": 200,
+      "expectedSpanish": "/es/resources/?context=roi&utm_source=legacy#unused",
+      "actualLinks": {
+        "header": "/es/resources/?context=roi&utm_source=legacy#unused",
+        "footer": "/es/resources/?context=roi&utm_source=legacy#unused"
+      },
+      "spanishTargetLoaded": true
+    },
+    {
+      "from": "/essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency-2/",
+      "landed": "/solutions/solar-street-light-installation/?context=roi&utm_source=legacy#unused",
+      "finalStatus": 200,
+      "expectedSpanish": "/es/solutions/solar-street-light-installation/?context=roi&utm_source=legacy#unused",
+      "actualLinks": {
+        "header": "/es/solutions/solar-street-light-installation/?context=roi&utm_source=legacy#unused",
+        "footer": "/es/solutions/solar-street-light-installation/?context=roi&utm_source=legacy#unused"
+      },
+      "spanishTargetLoaded": true
+    },
+    {
+      "from": "/maximizing-roi-through-proper-care-and-rental-management-of-heavy-machines/",
+      "landed": "/tools/roi-calculator/?context=roi&utm_source=legacy#unused",
+      "finalStatus": 200,
+      "expectedSpanish": "/es/tools/roi-calculator/?context=roi&utm_source=legacy#unused",
+      "actualLinks": {
+        "header": "/es/tools/roi-calculator/?context=roi&utm_source=legacy#unused",
+        "footer": "/es/tools/roi-calculator/?context=roi&utm_source=legacy#unused"
+      },
+      "spanishTargetLoaded": true
+    },
+    {
+      "from": "/the-importance-of-regular-inspections-for-heavy-machinery/",
+      "landed": "/resources/?context=roi&utm_source=legacy#unused",
+      "finalStatus": 200,
+      "expectedSpanish": "/es/resources/?context=roi&utm_source=legacy#unused",
+      "actualLinks": {
+        "header": "/es/resources/?context=roi&utm_source=legacy#unused",
+        "footer": "/es/resources/?context=roi&utm_source=legacy#unused"
+      },
+      "spanishTargetLoaded": true
+    },
+    {
+      "from": "/unregistered-page/",
+      "landed": "/unregistered-page/?context=roi&utm_source=legacy#unused",
+      "finalStatus": 404,
+      "expectedSpanish": "/es/?utm_source=legacy",
+      "actualLinks": {
+        "header": "/es/?utm_source=legacy",
+        "footer": "/es/?utm_source=legacy"
+      },
+      "spanishTargetLoaded": true
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "externalEmailSent": false
+}

@@ -1,0 +1,176 @@
+---
+/**
+ * PackagingShowcase.astro
+ * 出厂重型防震木箱封装实录与海运规格展示组件
+ * 专用于消除海外 B2B 买家对国际长途运输、破损与清关尺寸的疑虑
+ */
+import baseline from "../../data/content-baseline.json";
+const s = baseline.product.specifications;
+const c = baseline.product.standardConfiguration;
+---
+
+<section class="packaging-showcase-section">
+  <div class="packaging-box">
+    <div class="packaging-grid">
+      <div class="packaging-photo">
+        <div class="photo-frame">
+          <span class="photo-tag">Packaging reference</span>
+          <img
+            src="/images/evidence/factory-crating-export-package.jpg"
+            alt="Package reference image; materials and shipment arrangements require confirmation"
+            width="600"
+            height="450"
+            loading="lazy"
+          />
+          <figcaption class="photo-caption">
+            Reference image; source-sheet package dimensions: {s.packagingDimensionsMm.join(" × ")} mm
+          </figcaption>
+        </div>
+      </div>
+      <div class="packaging-details">
+        <p class="eyebrow">Export Logistics & Protection</p>
+        <h2>Package dimensions.<br/>Shipment details to confirm.</h2>
+        <p class="muted" style="margin-top:16px">
+          The source sheet lists package dimensions and equipment weight. Packaging material, gross shipment weight, protection, treatment requirements and transport mode must be confirmed for the actual order and destination.
+        </p>
+
+        <div class="packaging-specs">
+          <div class="pack-stat">
+            <span class="pack-num">{s.packagingDimensionsMm.join(" × ")}</span>
+            <span class="pack-unit">mm</span>
+            <span class="pack-label">Source-Sheet Package Dimensions</span>
+          </div>
+          <div class="pack-stat">
+            <span class="pack-num">{s.totalWeightKg}</span>
+            <span class="pack-unit">kg equipment weight</span>
+            <span class="pack-label">Total Equipment Mass</span>
+          </div>
+          <div class="pack-stat">
+            <span class="pack-num">{c.anchorBoltSizesIncluded.length} Sizes</span>
+            <span class="pack-unit">{c.anchorBoltSizesIncluded.join(" / ")}</span>
+            <span class="pack-label">Standard Included Bolts ({c.anchorBoltSetsPerSize} sets each)</span>
+          </div>
+        </div>
+
+        <div class="logistics-tags">
+          <span>Packing material: confirm</span>
+          <span>Gross shipping weight: confirm</span>
+          <span>Shipment documents: confirm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .packaging-showcase-section {
+    margin: 50px 0;
+  }
+  .packaging-box {
+    background: #ffffff;
+    border: 1px solid var(--line, #d5d8cd);
+    border-radius: 2px;
+    padding: 36px;
+  }
+  .packaging-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 45px;
+    align-items: center;
+  }
+  .photo-frame {
+    position: relative;
+    border: 1px solid var(--line, #d5d8cd);
+    background: #202622;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .photo-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--yellow, #f4cc3d);
+    color: var(--ink, #1d201e);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 8px;
+    z-index: 2;
+  }
+  .photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .photo-caption {
+    font-size: 11px;
+    color: #cbd4c6;
+    background: #1d201e;
+    padding: 10px 14px;
+  }
+  .packaging-details h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin-top: 8px;
+  }
+  .packaging-specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 28px 0;
+    border-top: 1px solid var(--line, #d5d8cd);
+    border-bottom: 1px solid var(--line, #d5d8cd);
+    padding: 20px 0;
+  }
+  .pack-stat {
+    display: flex;
+    flex-direction: column;
+  }
+  .pack-num {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink, #1d201e);
+  }
+  .pack-unit {
+    font-size: 12px;
+    color: var(--muted, #626a63);
+    margin: 2px 0 4px;
+  }
+  .pack-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #49544a;
+    font-weight: 600;
+  }
+  .logistics-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 600;
+    color: #27482c;
+  }
+  .logistics-tags span {
+    background: #e6e9de;
+    padding: 6px 12px;
+    border-radius: 2px;
+  }
+  @media (max-width: 900px) {
+    .packaging-box {
+      padding: 24px;
+    }
+    .packaging-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .packaging-specs {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+</style>

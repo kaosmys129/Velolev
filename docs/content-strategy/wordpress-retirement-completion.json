@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-29",
+  "sourceDigest": "ad798f5033c1de7e090d566e2cb7893db47f39527fc61e885a75947b40391d77",
+  "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
+  "snapshotDigest": null,
+  "origin": null,
+  "completed": true,
+  "publicWordpressFiles": 0,
+  "modernCorePages": 119,
+  "modernErrorPages": 1,
+  "redirects": 85,
+  "retiredFiles": 1751,
+  "sizes": {
+    "before": {
+      "publicBytes": 38343778,
+      "distBytes": 44186735,
+      "wordpressBytes": 33903368
+    },
+    "after": {
+      "publicBytes": 6980669,
+      "distBytes": 11847850
+    },
+    "distReductionBytes": 32338885,
+    "distReductionPercent": 73.18686252786046
+  },
+  "tests": {
+    "unitAndIntegration": 49,
+    "failed": 0,
+    "localeStatic": 533,
+    "nativeBrowserRenderCases": 42,
+    "retirementHttpChecks": 1172
+  },
+  "proofs": [
+    {
+      "name": "wordpress-retirement-static-verification.json",
+      "passed": true,
+      "checks": 631
+    },
+    {
+      "name": "wordpress-retirement-http-verification.json",
+      "passed": true,
+      "checks": 1172
+    },
+    {
+      "name": "wordpress-retirement-browser-verification.json",
+      "passed": true,
+      "checks": 42
+    },
+    {
+      "name": "configured-metadata-d30-verification.json",
+      "passed": true,
+      "checks": 971
+    },
+    {
+      "name": "configured-metadata-d60-verification.json",
+      "passed": true,
+      "checks": 1773
+    },
+    {
+      "name": "snapshot-d60-verification.json",
+      "passed": true,
+      "checks": 914
+    }
+  ],
+  "review": {
+    "independentReviewer": "retirement_review",
+    "blockingFindings": 0,
+    "inventoryFindingFixed": true
+  },
+  "deployment": "local_only_not_deployed",
+  "browserScope": "Seven-language home/product/contact desktop/mobile plus gallery/menu/language and modern 404; historical exhaustive browser suites were not rerun."
+}

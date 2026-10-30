@@ -1,0 +1,7 @@
+---
+import Layout from "../../layouts/ProcurementLayout.astro";
+import {loadPublishedSnapshot} from "../../lib/reviewed-snapshot.mjs";
+export function getStaticPaths(){return loadPublishedSnapshot().articles.map(article=>({params:{slug:article.slug},props:{article}}));}
+const {article}=Astro.props;const meta={path:`/guides/${article.slug}/`,title:`${article.title} | volvet`,description:article.description};
+---
+<Layout page="guides" article={meta}><main id="main"><div class="wrap"><p class="breadcrumb"><a href="/guides/">Guides</a> / Reviewed article</p><header class="page-intro"><p class="eyebrow">Source-based content / {article.review.reviewedAt}</p><h1>{article.title}</h1><p class="lead muted">{article.description}</p></header><article class="policy-body snapshot-article">{article.sections.map(s=><section><h2>{s.heading}</h2>{s.paragraphs.map(p=><p>{p}</p>)}</section>)}<p class="note">Reviewed by: {article.review.reviewer}. Fact register references: {article.evidenceRefs.join(", ")}. Baseline: {article.review.baselineVersion}.</p><div class="related-links">{article.relatedPaths.map(path=><a href={path}>{path} ↗</a>)}</div></article></div></main></Layout>

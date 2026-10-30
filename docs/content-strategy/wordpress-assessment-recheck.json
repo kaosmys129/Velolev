@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "sourceDigest": "ebfabf0008405dcee05499ce7c748dd28ddfb50f8e7296017a98841bf69e0fc4",
+  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "snapshotDigest": null,
+  "origin": null,
+  "scope": "WordPress residual assessment recheck; no source or site asset deletion",
+  "buildPassed": true,
+  "inventoryIntegrity": {
+    "passed": true,
+    "assetsChecked": 267,
+    "method": "Every public WordPress asset size and SHA-256 rechecked against generated manifest"
+  },
+  "staticCandidateCheck": {
+    "passed": true,
+    "candidates": 164,
+    "bytes": 21951833,
+    "scope": "No recognized HTML/transitive asset/source reference in the assessment graph; dynamic and external references require browser verification"
+  },
+  "browserRecheck": {
+    "status": "blocked",
+    "reason": "Chromium launch failed: macOS MachPortRendezvousServer bootstrap_check_in Permission denied (1100) under current sandbox; no baseline/pruned comparison ran this turn"
+  },
+  "priorBrowserRecord": {
+    "passed": true,
+    "sourceDigest": "d44b819532e4ec11bec9fce10051a8388d203434e5323e43f5051f2ad1d2fd3a",
+    "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+    "matchesCurrentSource": false,
+    "pagesPerBuild": 127,
+    "candidates": 164
+  },
+  "repositoryAssetsDeleted": false
+}

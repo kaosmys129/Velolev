@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-28",
+  "sourceDigest": "2c95962770eb6cc41988abf1c528ae0d7924e2d868011e3641b99c1a4c31d7e1",
+  "assetDigest": "fa4983ed684fc25d21546778edfc55401a8373c8b5bda5b9c3c4ef7f49b60b8e",
+  "passed": true,
+  "checks": [
+    {
+      "name": "desktop: starts collapsed",
+      "passed": true
+    },
+    {
+      "name": "ROI: parent category indicates current page",
+      "passed": true
+    },
+    {
+      "name": "desktop: click opens panel",
+      "passed": true
+    },
+    {
+      "name": "panel: seven destination links",
+      "passed": true
+    },
+    {
+      "name": "ROI: current destination marked",
+      "passed": true
+    },
+    {
+      "name": "desktop: no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Escape closes panel",
+      "passed": true
+    },
+    {
+      "name": "Escape returns focus to summary",
+      "passed": true
+    },
+    {
+      "name": "ArrowDown opens and focuses first destination",
+      "passed": true
+    },
+    {
+      "name": "outside click closes panel",
+      "passed": true
+    },
+    {
+      "name": "panel: resource centre navigation works",
+      "passed": true
+    },
+    {
+      "name": "panel: application navigation works",
+      "passed": true
+    },
+    {
+      "name": "Tab leaving panel closes disclosure",
+      "passed": true
+    },
+    {
+      "name": "1101px: disclosure usable",
+      "passed": true
+    },
+    {
+      "name": "1101px: expanded navigation fits viewport",
+      "passed": true
+    },
+    {
+      "name": "1100px: disclosure usable",
+      "passed": true
+    },
+    {
+      "name": "1100px: expanded navigation fits viewport",
+      "passed": true
+    },
+    {
+      "name": "768px: disclosure usable",
+      "passed": true
+    },
+    {
+      "name": "768px: expanded navigation fits viewport",
+      "passed": true
+    },
+    {
+      "name": "390px: disclosure usable",
+      "passed": true
+    },
+    {
+      "name": "390px: expanded navigation fits viewport",
+      "passed": true
+    },
+    {
+      "name": "mobile: first Escape keeps main navigation open",
+      "passed": true
+    },
+    {
+      "name": "mobile: second Escape closes main navigation",
+      "passed": true
+    },
+    {
+      "name": "320px: disclosure usable",
+      "passed": true
+    },
+    {
+      "name": "320px: expanded navigation fits viewport",
+      "passed": true
+    },
+    {
+      "name": "es: English-only tool is labelled",
+      "passed": true
+    },
+    {
+      "name": "es: existing local FAQ destination",
+      "passed": true
+    },
+    {
+      "name": "es: mobile expanded navigation fits",
+      "passed": true
+    },
+    {
+      "name": "fr: English-only tool is labelled",
+      "passed": true
+    },
+    {
+      "name": "fr: existing local FAQ destination",
+      "passed": true
+    },
+    {
+      "name": "fr: mobile expanded navigation fits",
+      "passed": true
+    },
+    {
+      "name": "pt: English-only tool is labelled",
+      "passed": true
+    },
+    {
+      "name": "pt: existing local FAQ destination",
+      "passed": true
+    },
+    {
+      "name": "pt: mobile expanded navigation fits",
+      "passed": true
+    },
+    {
+      "name": "vi: English-only tool is labelled",
+      "passed": true
+    },
+    {
+      "name": "vi: existing local FAQ destination",
+      "passed": true
+    },
+    {
+      "name": "vi: mobile expanded navigation fits",
+      "passed": true
+    },
+    {
+      "name": "th: English-only tool is labelled",
+      "passed": true
+    },
+    {
+      "name": "th: existing local FAQ destination",
+      "passed": true
+    },
+    {
+      "name": "th: mobile expanded navigation fits",
+      "passed": true
+    },
+    {
+      "name": "id: English-only tool is labelled",
+      "passed": true
+    },
+    {
+      "name": "id: existing local FAQ destination",
+      "passed": true
+    },
+    {
+      "name": "id: mobile expanded navigation fits",
+      "passed": true
+    },
+    {
+      "name": "navigation does not submit any inquiry or calculator data",
+      "passed": true
+    },
+    {
+      "name": "source and media unchanged during verification",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

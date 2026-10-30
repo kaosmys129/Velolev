@@ -1,0 +1,19 @@
+---
+// Shared English components are the only source of page structure and media.
+import HomePage from "./HomePage.astro";
+import ProductPage from "./ProductPage.astro";
+import CompatibilityPage from "./CompatibilityPage.astro";
+import InquiryPage from "./InquiryPage.astro";
+import AboutUsPage from "./AboutUsPage.astro";
+import GuidesPage from "./GuidesPage.astro";
+import FaqPage from "./FaqPage.astro";
+import ResourcesPage from "./ResourcesPage.astro";
+import DecisionArticle from "./DecisionArticle.astro";
+import PolicyPage from "./PolicyPage.astro";
+import RoiCalculator from "./RoiCalculator.astro";
+const {page="home",locale="en"}=Astro.props;
+const components={home:HomePage,product:ProductPage,compatibility:CompatibilityPage,quote:InquiryPage,contact:InquiryPage,about:AboutUsPage,guides:GuidesPage,faq:FaqPage,resources:ResourcesPage,roi:RoiCalculator,solar:DecisionArticle,parking:DecisionArticle,compare:DecisionArticle,method:DecisionArticle,privacy:PolicyPage,terms:PolicyPage,editorial:PolicyPage};
+const Page=components[page];
+if(!Page)throw new Error(`No industrial page component for ${page}`);
+---
+<Page locale={locale} kind={page} contact={page==="contact"}/>

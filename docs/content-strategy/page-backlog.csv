@@ -1,0 +1,24 @@
+﻿id,phase,priority,page_name,target_url,cluster,keyword_seed,buyer_stage,audience,content_type,discoverability,primary_cta,evidence_dependency,current_content_action,owner,status
+C01,D15-30,P0,首页,/,总览,portable hydraulic light pole jack,问题认知及品牌探索,承包商及EPC,品牌与产品概览,搜索及分享,查看产品,批准品牌及产品事实,保留根路径并重写,内容及产品,本地开发及受控验收完成；生产待配置
+C02,D15-30,P0,产品主页面,/products/light-pole-jack/,C,light pole jack for sale;street light pole erector,供应商选择,工程师及采购,产品页,搜索,提交项目询价,批准规格适配配置；产品参考图；现场实测待完善,equipment及equipment-detail核验后合并,内容产品及开发,本地开发与整改验收完成；320/390/768px及采购回归通过
+C03,D31-45,P1,太阳能路灯施工方案,/solutions/solar-street-light-installation/,D,solar street light installation equipment,方案评估,EPC采购,场景方案,搜索及分享,发送项目参数,太阳能路灯杆适配及现场素材,从project及相关旧文章提取已确认内容,内容及产品,本地方案页及D60验收完成；装配现场证据待审核
+C04,D31-45,P1,停车场与园区方案,/solutions/parking-lot-lighting/,D,parking lot light pole installation equipment,方案评估,电气承包商,场景方案,搜索,申请适配确认,基础尺寸与现场边界,从project提取并补充,内容及产品,本地方案页及D60验收完成；装配现场证据待审核
+C05,D31-45,P0,立杆器与吊车对比,/compare/pole-jack-vs-crane/,B,light pole jack vs crane rental,方案评估,承包商老板,比较指南,搜索及分享,使用ROI计算器,同工序成本样本与适用限制,核验eco-friendly旧文及pricing-plan后决定映射,内容及销售,本地开发及D60验收完成；生产待配置
+C06,D31-45,P0,ROI计算器,/tools/roi-calculator/,B,pole jack ROI calculator,方案评估,承包商老板,交互工具,搜索及分享,携带测算结果询价,批准价格口径可编辑成本与公开公式,访客自行输入；公式与边界可见；结果可选带入实际询盘,开发产品及销售,本地开发及D60验收完成；生产待配置
+C07,D15-30,P0,产品适配判断指南,/guides/pole-jack-compatibility/,C,pole jack sizing;pole jack anchor bolt compatibility,方案评估,工程师及采购,选型指南,搜索,提交尺寸资料,批准载荷及基础法兰螺栓适配条件,从产品页提取并交工程审校,产品及内容,本地开发及受控验收完成；生产待配置
+C08,D31-45,P1,无吊车安装方法指南,/guides/install-light-pole-without-crane/,A,install light pole without crane,方案探索,施工负责人,方法指南,搜索及分享,查看适配指南,已确认方法限制及安全审校,核验flexible-project-management旧文后重写迁移,内容及工程,本地方法边界指南完成；操作规程工程审核待补
+C09,D31-45,P0,规格与资料中心,/resources/,C,light pole jack specifications;pole jack manual,采购核验,工程师及EPC采购,资料中心,搜索,下载真实资料,实际规格文件说明资料保修及有效证明,已提供CSV/JSON规格摘要及CSV空白资料表；其他文件待核验,产品及内容,本地开发及D60验收完成；生产待配置
+C10,D46-60,P1,FAQ,/faq/,C,light pole jack questions,采购核验,采购及施工负责人,问答,搜索,提交问题或询价,批准产品价格交期售后事实,保留原路径并同步全部语言高风险事实,内容及销售,本地开发及D60验收完成；生产待配置
+C11,D15-30,P0,关于我们,/about-us/,D,volvet manufacturer,供应商选择,采购及经销商,供应商介绍,搜索,联系销售,真实主体品牌工厂及团队资料,保留路径并核验team内容,业务负责人及内容,七语已按来源重构并通过自动验收；主体及人工审核仍待资料
+C12,D15-30,P0,报价页,/quote/,转化,light pole jack quote,采购,工程采购及承包商,询价表单,搜索,完成询价,有效收件渠道报价流程及隐私规则,新建并验证真实持久化回执；外部邮件待配,开发及销售,本地开发及受控验收完成；生产待配置
+C13,D15-30,P0,联系页,/contact-us/,转化,contact volvet,采购及售后,全部买家,联系页,搜索,提交分流联系请求,真实邮箱电话地址及服务安排,七语表单已接私有收件；邮箱电话地址待配置,销售及开发,本地开发及受控验收完成；生产待配置
+C14,D46-60,P1,指南索引,/guides/,总览,light pole installation guides,方案探索,全部买家,内容索引,搜索,进入相关指南,已发布指南清单,EN blog本地301至guides；六语blog保留；支持审核快照文章,内容及开发,本地开发及D60验收完成；生产待配置
+C15,D15-30,P0,隐私政策,/privacy/,政策,隐私及数据处理,规则核验,全部访客,政策,辅助,阅读数据处理说明,实际数据处理和第三方收件安排,核验已有政策后补全,业务负责人及开发,本地开发及受控验收完成；生产待配置
+C16,D15-30,P0,网站及商务条款,/terms/,政策,交易及使用条款,规则核验,全部买家,政策,辅助,阅读适用条款,真实交易主体报价保修与责任安排,核验已有条款后补全,业务负责人及销售,本地开发及受控验收完成；生产待配置
+C17,D15-30,P0,编辑政策,/editorial-policy/,政策,内容来源及审核规则,可信度核验,全部买家,政策,辅助,了解内容核验方式,真实编辑审核及更新流程,新建并与实际工作流一致,内容负责人,本地开发及受控验收完成；生产待配置
+C18,D61-90,P1,单杆安装成本指南,/guides/street-light-pole-installation-cost/,B,street light pole installation cost per pole,方案评估,承包商老板及EPC,成本指南,搜索及分享,使用ROI计算器,有来源日期的成本样本及工序范围,核验maximizing-roi旧文后重写迁移,内容及销售,证据就绪后执行
+C19,D61-90,P1,作业前现场资料与检查清单,/guides/pole-installation-site-checklist/,A,pole installation site preparation checklist,方案评估及使用,施工负责人及工程师,检查清单,搜索及分享,提交现场条件,厂家批准检查要求与安全审校,核验regular-inspections旧文后决定映射,工程及内容,证据就绪后执行
+C20,D61-90,P1,维护与备件指南,/guides/pole-jack-maintenance/,C,hydraulic pole jack maintenance,采购后使用,施工队及售后,维护指南,搜索,联系售后或获取备件,实际维护周期备件清单保修政策,核验essential-tips旧文后重写迁移,产品售后及内容,证据就绪后执行
+C21,D61-90,P1,基础类型与设备适配,/guides/anchor-bolt-vs-direct-burial/,C,anchor bolt vs direct burial light pole,方案评估,工程师及采购,技术指南,搜索及分享,查看适配指南,基础适配验证与可引用技术资料,新建且不作国家基础形式的绝对判断,工程及内容,证据就绪后执行
+C22,D61-90,P1,厂家实测记录,/guides/pole-jack-field-test/,D,light pole jack field test,供应商选择,全部买家,测试报告,搜索及分享,提交相似项目参数,原始测试日期条件视频测量与限制,新建且不得把公共项目写成客户案例,工程及内容,证据就绪后执行
+C23,D61-90,P1,经销商合作,/solutions/distributor-program/,D,light pole jack distributor,供应商选择,经销商,合作方案,搜索,提交经销合作需求,经确认的政策售后支持及供应能力,整合pricing-plan中实际经销信息后补全,销售及业务负责人,商务条件就绪后执行

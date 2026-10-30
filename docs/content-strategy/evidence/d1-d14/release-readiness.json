@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-28",
+  "exitCode": 1,
+  "status": "pending_configuration_per_user_confirmation",
+  "output": "当前可本地预览，正式上线配置待补充：\n- 已确认的 HTTPS 正式域名（PUBLIC_SITE_URL）\n- 已确认的询盘联系方式\n- 已完成收件验证的询盘服务\n"
+}

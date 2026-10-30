@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-28",
+  "sourceDigest": "b376a44c2b11f9425e8f4b24af61efdce0c1f03d196842c67153e4f22e019c9c",
+  "assetDigest": "5136a81bca66e27bbf0478b458c602e2e8340912c8b4c00da2071046a06b5d21",
+  "passed": true,
+  "checks": {
+    "prepared": true,
+    "sourceApprovalNotInherited": true,
+    "unreviewedImportRejected": true,
+    "publicationSnapshotUnchanged": true
+  },
+  "externalPublication": false
+}

@@ -1,0 +1,1137 @@
+{
+  "date": "2026-10-29",
+  "status": "development_and_local_QA_complete",
+  "sourceDigest": "d44b819532e4ec11bec9fce10051a8388d203434e5323e43f5051f2ad1d2fd3a",
+  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "snapshotDigest": null,
+  "origin": null,
+  "baselineVersion": "2026-10-28.3",
+  "coverage": {
+    "smallLanguages": [
+      "es",
+      "fr",
+      "pt",
+      "vi",
+      "th",
+      "id"
+    ],
+    "completedPages": 102,
+    "totalPages": 102,
+    "percent": 100,
+    "englishCorePages": 17,
+    "totalCorePages": 119,
+    "definition": "Core page reconstruction coverage; professional native review and production publication are separate."
+  },
+  "tests": {
+    "unit": [
+      {
+        "name": "policy",
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "path": "docs/content-strategy/evidence/multilingual/policy.log"
+      },
+      {
+        "name": "decision",
+        "tests": 21,
+        "pass": 21,
+        "fail": 0,
+        "path": "docs/content-strategy/evidence/multilingual/decision.log"
+      },
+      {
+        "name": "inquiry",
+        "tests": 13,
+        "pass": 13,
+        "fail": 0,
+        "path": "docs/content-strategy/evidence/multilingual/inquiry.log"
+      }
+    ],
+    "totalUnitTests": 40,
+    "staticChecks": 533,
+    "configuredStaticChecks": 533,
+    "multilingualBrowserChecks": 1406,
+    "d30BrowserChecks": 81,
+    "d60BrowserChecks": 142
+  },
+  "accessibilityAttributeAudit": {
+    "englishAttributeValues": 71,
+    "knownUntranslatedValues": 0
+  },
+  "downloads": [
+    {
+      "locale": "en",
+      "path": "/resources/volvet-specifications.csv",
+      "sha256": "8f789cca5b0ee878a1a0e1abf566eb1d4f8bd7db8a4975645cbe27d4371f3c03"
+    },
+    {
+      "locale": "en",
+      "path": "/resources/volvet-specifications.json",
+      "sha256": "ab7edc4ca81be3d9d99c370a9be085b96e047f4de376b03117ff155cb288d43b"
+    },
+    {
+      "locale": "en",
+      "path": "/resources/project-information-worksheet.csv",
+      "sha256": "a067849ab3d7e0b071289b7a45c1918d214c61fd6270a857d76cae66e088b26e"
+    },
+    {
+      "locale": "es",
+      "path": "/es/resources/volvet-specifications.csv",
+      "sha256": "b2b923e6ea569b6d8269cba252cf9f73faaeb82b8726f78f104e4477d879758c"
+    },
+    {
+      "locale": "es",
+      "path": "/es/resources/volvet-specifications.json",
+      "sha256": "8deafcf7f638780dc8a045482eecfe19ba42b373089167da4ff056282bf2a089"
+    },
+    {
+      "locale": "es",
+      "path": "/es/resources/project-information-worksheet.csv",
+      "sha256": "dbd5964666d2554da368b0fb9d04139d185bdb53cc7c858af46afe11e5d63eb8"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/resources/volvet-specifications.csv",
+      "sha256": "d05fa402b877c414bbab82e4ea656bd2ae70258725612377ac6c7d80d63d04f3"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/resources/volvet-specifications.json",
+      "sha256": "96d351d5c3e7881b3a43db3595da3119be24ff3a3f2f9cb93e052ddb49f55210"
+    },
+    {
+      "locale": "fr",
+      "path": "/fr/resources/project-information-worksheet.csv",
+      "sha256": "009fa77b804c90f0baf9d83a488e0d50d508290ce4b6ec965bb63d611dc6f355"
+    },
+    {
+      "locale": "pt",
+      "path": "/pt/resources/volvet-specifications.csv",
+      "sha256": "96432d26281d5c5350d8e6a3225995e54b4395d13fbe7ae966589deee447e728"
+    },
+    {
+      "locale": "pt",
+      "path": "/pt/resources/volvet-specifications.json",
+      "sha256": "00c0868d403010388ffab74b6b4be72f46032e82a68b086a5788b79f9fc26e53"
+    },
+    {
+      "locale": "pt",
+      "path": "/pt/resources/project-information-worksheet.csv",
+      "sha256": "735d96cbe35df81ad0bc5e1d0deaebdfe557004c4d33a343bd05efdb1d627a7d"
+    },
+    {
+      "locale": "vi",
+      "path": "/vi/resources/volvet-specifications.csv",
+      "sha256": "491c551e9aa2936e04a03620d0073628afa40da8cf44f83dfc21af1f1189aef3"
+    },
+    {
+      "locale": "vi",
+      "path": "/vi/resources/volvet-specifications.json",
+      "sha256": "4a5da75b972bf2ddaab678771a9aa8eea9c2ae9d4e4d485066c43df381588ac8"
+    },
+    {
+      "locale": "vi",
+      "path": "/vi/resources/project-information-worksheet.csv",
+      "sha256": "6b7bafcc5e0b582ac0dfc99bd893bad00df7cb37895cc3f8fed5751b7a770153"
+    },
+    {
+      "locale": "th",
+      "path": "/th/resources/volvet-specifications.csv",
+      "sha256": "9da90ecb6ee6dbabb4f90bd34a06a6c9ac6baf0bd0914a7971c362790a21a0d9"
+    },
+    {
+      "locale": "th",
+      "path": "/th/resources/volvet-specifications.json",
+      "sha256": "a8c22dd45f28374748c96e51cd9244ef789989a36c9ad6c8f1ca75fdb2903520"
+    },
+    {
+      "locale": "th",
+      "path": "/th/resources/project-information-worksheet.csv",
+      "sha256": "3d180d5dd6bce92d9db562ed1a2584d2fc400f21998b8a2c86ba2cbed50043ea"
+    },
+    {
+      "locale": "id",
+      "path": "/id/resources/volvet-specifications.csv",
+      "sha256": "1f4404ef673c21ccb0add22b397927a49e11c249c349e3229aac050579a29962"
+    },
+    {
+      "locale": "id",
+      "path": "/id/resources/volvet-specifications.json",
+      "sha256": "42c4b384e29630d0dd2a5cc462828a11a1e6331007f252ca0e05386c91cee27c"
+    },
+    {
+      "locale": "id",
+      "path": "/id/resources/project-information-worksheet.csv",
+      "sha256": "6208e048a5f5ba4803f0f5e0a1060c05b0c2769f468e2c5ca757a0f36c912400"
+    }
+  ],
+  "subtitles": [
+    {
+      "locale": "en",
+      "path": "/media/equipment-overview.en.vtt",
+      "sha256": "84029df7847f4c560a7ada176c54d237a9c8f2787ad756e14d52a66b4857c58d"
+    },
+    {
+      "locale": "es",
+      "path": "/media/equipment-overview.es.vtt",
+      "sha256": "becb2f720546eb336ca8b64830c77f74f3e200393d2afdb309bfd08d9c71622a"
+    },
+    {
+      "locale": "fr",
+      "path": "/media/equipment-overview.fr.vtt",
+      "sha256": "d4f4430ec8495c165a2c12d759fa4714afa54261af5c54930b485163a7e9f8dc"
+    },
+    {
+      "locale": "pt",
+      "path": "/media/equipment-overview.pt.vtt",
+      "sha256": "44c75dc7c7cc090a6329ae991ebac198535bc606f93a22271e0c7b7e423cd48c"
+    },
+    {
+      "locale": "vi",
+      "path": "/media/equipment-overview.vi.vtt",
+      "sha256": "eef75bd47190448f15379d503d058dea175ac3828c505629751b235cf8543062"
+    },
+    {
+      "locale": "th",
+      "path": "/media/equipment-overview.th.vtt",
+      "sha256": "5ac17fcf2f1fdcbeadf4fb539a0cd279fd5a6797154b4ed17bfa8a16fc57c5e7"
+    },
+    {
+      "locale": "id",
+      "path": "/media/equipment-overview.id.vtt",
+      "sha256": "2472b6a6dcf63fa90aabdeffcaa7c253ff44b021cff6da3735c292ebd9132e51"
+    }
+  ],
+  "pages": [
+    {
+      "locale": "en",
+      "key": "solar",
+      "path": "/solutions/solar-street-light-installation/",
+      "htmlSha256": "152eb9792d76f6e99baee8aab41dded1461a5d838574071a6a54f932a85c3add",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "parking",
+      "path": "/solutions/parking-lot-lighting/",
+      "htmlSha256": "9db74d943ba77b2977ae5475f479fc1a42d4a67fbd87d1cbae5a4d47019ff27c",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "compare",
+      "path": "/compare/pole-jack-vs-crane/",
+      "htmlSha256": "ae3d967f4abcd53cdaa4de26701ef56ea293ad291fdc255dda5de2adaa38b232",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "roi",
+      "path": "/tools/roi-calculator/",
+      "htmlSha256": "b524d16141297f21cb77000af25ec9202ba65a7d0d5a238e736725f2df09d3e6",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "method",
+      "path": "/guides/install-light-pole-without-crane/",
+      "htmlSha256": "8c6d628cda0d11adc8403d812871be27f59727b92a0fd962e389ff1dee91ba54",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "resources",
+      "path": "/resources/",
+      "htmlSha256": "7977521f482317617452d0f0c6637314064478fe50707891f5dcc4acf16fcaea",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "faq",
+      "path": "/faq/",
+      "htmlSha256": "23a0e8c624afcb5fef7b79cd72719db0ea0094de32e74d73a74a4755a8115698",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "about",
+      "path": "/about-us/",
+      "htmlSha256": "96831b904e35c8da46ea079d20cdcf29a62d5dcdd3282686c12eafc5db79253f",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "guides",
+      "path": "/guides/",
+      "htmlSha256": "3108caa81b82146af31d1fb304b44c7d556118ef737ec0f9016b4e62e19d82a9",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "home",
+      "path": "/",
+      "htmlSha256": "6bcc1d6e751738c84e1e0a2d5699a62be8c5b8d6c912d258f01322e64397a0e7",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "product",
+      "path": "/products/light-pole-jack/",
+      "htmlSha256": "6f2d68d08f5c70491591640af6f6a2abb52bfd623f71b8548409a83499925127",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "compatibility",
+      "path": "/guides/pole-jack-compatibility/",
+      "htmlSha256": "bc45d5938639962aeed59e640e483774e7f31a54b3d9977e4fef987996d0e222",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "quote",
+      "path": "/quote/",
+      "htmlSha256": "537555afd8a2ee2b68ab3fb14bdd80f0f07e960ad26c52b222e622dd52a22af0",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "contact",
+      "path": "/contact-us/",
+      "htmlSha256": "f8bcd7ed88fb9269eb56421c8ffeeb9ed7804c62f7ea0a82027de8774a58e807",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "privacy",
+      "path": "/privacy/",
+      "htmlSha256": "103a98dd5688671f155440de9f0dfdd5bf5b05bbf0f69242fcaf04a1a76d44b9",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "terms",
+      "path": "/terms/",
+      "htmlSha256": "4334602e15aa0c2df31b30fdc759da50013dc45840e384bd910d3c858af0f37d",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "en",
+      "key": "editorial",
+      "path": "/editorial-policy/",
+      "htmlSha256": "4aebb407a99a998dccdb1220e475b99f01474ae4f794dabc00cfccdfe5084fbe",
+      "translationReview": "editorial_review_pending"
+    },
+    {
+      "locale": "es",
+      "key": "solar",
+      "path": "/es/solutions/solar-street-light-installation/",
+      "htmlSha256": "74026f3203448b9f7e4c91638d6246c3576ae83a9c1e0e333781d855b33a417c",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "parking",
+      "path": "/es/solutions/parking-lot-lighting/",
+      "htmlSha256": "de90c19b591a291cca379a681210846f678fb8049644d2fb0623470af57c68c3",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "compare",
+      "path": "/es/compare/pole-jack-vs-crane/",
+      "htmlSha256": "c84d32c4b70b930bd4f9744b9cf2b91815d01ffbd7e71b178cf21f20981b8223",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "roi",
+      "path": "/es/tools/roi-calculator/",
+      "htmlSha256": "5c0107bdc7607a52751f2d21931fd7583ae7971257ad3926effa4f8bb41bf289",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "method",
+      "path": "/es/guides/install-light-pole-without-crane/",
+      "htmlSha256": "b409ca4cb3014ad17daafd458fa689b78da911b8f5f9e2d6ceea92c20f05db56",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "resources",
+      "path": "/es/resources/",
+      "htmlSha256": "924f22ed983375fa9885f1a1e01563af27e85a1e3d3fe12866525b4e8817798d",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "faq",
+      "path": "/es/faq/",
+      "htmlSha256": "f53a1a419797fb6fe7d11afb45cc3c1ee4a13672fa79ab25747dfae73e666a8e",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "about",
+      "path": "/es/about-us/",
+      "htmlSha256": "e4a166dbc70efa774e8b4c0bf41f82b843f6db991835e0d747abf0cab5756c3e",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "guides",
+      "path": "/es/blog/",
+      "htmlSha256": "4cd71a0649d30a48c9f1c29394f237a77f864db53989c213edbd1392ee61e9fa",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "home",
+      "path": "/es/",
+      "htmlSha256": "e60d7278964436a0f06d84e9178353e3a8eb20b62b13e877c9775b15f32654dd",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "product",
+      "path": "/es/equipment/",
+      "htmlSha256": "834d35bc53ab5a0a45f232c9ef54df956a1fff0c8f6febbecd336d9a6e3b7a89",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "compatibility",
+      "path": "/es/guides/pole-jack-compatibility/",
+      "htmlSha256": "dc90557a77400aef20763ddcebff5988832f8fbf0ec377d097c29099524424f9",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "quote",
+      "path": "/es/pricing-plan/",
+      "htmlSha256": "b85f100462f2a4f64026c55c8ea8fd3294cc3cb149d66c7189d29dfd6d225f67",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "contact",
+      "path": "/es/contact-us/",
+      "htmlSha256": "c677d3ab188911f1e98abd2667142a7bbc9ebeb4df91f269cc76a581a7b7b74c",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "privacy",
+      "path": "/es/privacy/",
+      "htmlSha256": "f0c8a93911f87485aa60494f111a70762e90be089cc7e9b26ff1327d9c1d3a6d",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "terms",
+      "path": "/es/terms/",
+      "htmlSha256": "669bd4570fee0f6784d90807c73b87351f9a95ff172c801c82dbad815d8143e2",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "es",
+      "key": "editorial",
+      "path": "/es/editorial-policy/",
+      "htmlSha256": "371b19ff47ba52004b6a18a2bb6b52cab0048146523c7dbe063f7aa1019e0b5d",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "solar",
+      "path": "/fr/solutions/solar-street-light-installation/",
+      "htmlSha256": "2bfab6d142350fa4a4faf47c710003bbf973c1f10e613f0f30ae4ab5d7826b13",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "parking",
+      "path": "/fr/solutions/parking-lot-lighting/",
+      "htmlSha256": "94793a2b224f79f4f0ae24f377b4be904921ccf03b3f618b15aabaddd4b32e68",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "compare",
+      "path": "/fr/compare/pole-jack-vs-crane/",
+      "htmlSha256": "60bd542da737ced47244913340b329183b433923c36b6af0618f43e01f0d316e",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "roi",
+      "path": "/fr/tools/roi-calculator/",
+      "htmlSha256": "f83ce6ff41446a1c22552a8b1bd60240cac20af9178481d6475cb64484e35ddf",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "method",
+      "path": "/fr/guides/install-light-pole-without-crane/",
+      "htmlSha256": "ce5c84356e78b5d0c2e407a866a8f3d4f1147f2a686406adaacf1ad339c1396b",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "resources",
+      "path": "/fr/resources/",
+      "htmlSha256": "bb8ea0f92c207481f8808c437c05af288fb6ea5f6e19ffafe2df5f5d1d662346",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "faq",
+      "path": "/fr/faq/",
+      "htmlSha256": "0a5bab3b80561c70d080f0d1da1eeb2fb60e6e17895a36ba160eaf5c7acb1061",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "about",
+      "path": "/fr/about-us/",
+      "htmlSha256": "409b15a252d825adbe78676c7f827afcddc50674e2d6e13da220539dd0439a40",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "guides",
+      "path": "/fr/blog/",
+      "htmlSha256": "101392ef29c8241bc08900e829c2d4c59026c6a1f2981b109a2351d1a0791291",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "home",
+      "path": "/fr/",
+      "htmlSha256": "3672e3d72a80f080f2f31fb786ea32d240b06840db525e73bb20f2705c8c8ff3",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "product",
+      "path": "/fr/equipment/",
+      "htmlSha256": "076b54e98758f89865f523ee51b619f652e2d3b2328f627631ca2117cc96cf6e",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "compatibility",
+      "path": "/fr/guides/pole-jack-compatibility/",
+      "htmlSha256": "f56ce3b975029dea7366918b71f7c6b28542928958bc1578765782e123e7b164",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "quote",
+      "path": "/fr/pricing-plan/",
+      "htmlSha256": "0dce95cd195b44a1f2d4dc2c63a6b7e108ebbbc531aeaadf9fc182a229546669",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "contact",
+      "path": "/fr/contact-us/",
+      "htmlSha256": "531213e5fbb80c81d738d1a04c32260d0b2597df38906ebc2070881bf879b4fd",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "privacy",
+      "path": "/fr/privacy/",
+      "htmlSha256": "1c02a2929538b25858b1174b9e2e73b013f805f894276ca688d51f3f9b573074",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "terms",
+      "path": "/fr/terms/",
+      "htmlSha256": "5a28620394797f2aa288b433a0a8868c2cdbcd6e2562ea7a9592adc2b99ad258",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "fr",
+      "key": "editorial",
+      "path": "/fr/editorial-policy/",
+      "htmlSha256": "176f73077f03d2cb6ecd6ecbfa0df6a3587a55eaa28976e34a80c828b62a68a9",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "solar",
+      "path": "/pt/solutions/solar-street-light-installation/",
+      "htmlSha256": "17710d0795fce8276ab4d0e400dec95ee3d558d54c1e276cf4362b1851a0974f",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "parking",
+      "path": "/pt/solutions/parking-lot-lighting/",
+      "htmlSha256": "21586c7a26ad7a54f8c14d94023ac11b7c35a4c0fea72be1db7893dd19dfd2ca",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "compare",
+      "path": "/pt/compare/pole-jack-vs-crane/",
+      "htmlSha256": "beb7a2111f03739c2c390d082ce05f24a29dd13f5151a619056920f36e34bc90",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "roi",
+      "path": "/pt/tools/roi-calculator/",
+      "htmlSha256": "6c569b83ca6940f0efeb51de3ef0840b2f21c48a552bd0c7e5afb5b2f2799e85",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "method",
+      "path": "/pt/guides/install-light-pole-without-crane/",
+      "htmlSha256": "a2eec195ca15ae707c75c0d1003a3f71645217d3a198d4f5ae439bd8bb060eb8",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "resources",
+      "path": "/pt/resources/",
+      "htmlSha256": "f00c5bdebafbd392013dcde515b4e0d82c94f790cd9439d666310760b6f6aaf5",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "faq",
+      "path": "/pt/faq/",
+      "htmlSha256": "97f5e407307915cfb0ee7adac9f8bf5fdf261b7daf0333ea763f8c0155eaa2ac",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "about",
+      "path": "/pt/about-us/",
+      "htmlSha256": "4915ada5bfbb62349fdc5a72b353dd51c3910aa7c7a8f29cd9566ab950b4807b",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "guides",
+      "path": "/pt/blog/",
+      "htmlSha256": "a89ec9650d0142b65aa211898b8f97d8c053135b1128029ec9bafe03bf7c48fd",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "home",
+      "path": "/pt/",
+      "htmlSha256": "8a004bbfbaceed97d21edf1514a5338db0fe6c922aa9100e6adcbcb564acb823",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "product",
+      "path": "/pt/equipment/",
+      "htmlSha256": "af9004e6e0e2b2610e8e2b3ce176e6a716a9385797f187f19bd859e3537263be",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "compatibility",
+      "path": "/pt/guides/pole-jack-compatibility/",
+      "htmlSha256": "9fa8b3236a943f472b326faafdeb837c25f89febcbb0617a5824845ea6035002",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "quote",
+      "path": "/pt/pricing-plan/",
+      "htmlSha256": "9f8fbcb9a9ef46e00e24377a75cb709afd17581eb0235ebfd50eb1816b71138c",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "contact",
+      "path": "/pt/contact-us/",
+      "htmlSha256": "ce77a935db5f74dfbed6e9d3ef3d357e4e00ddba43eb203fe48ed659493b612b",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "privacy",
+      "path": "/pt/privacy/",
+      "htmlSha256": "95cda86c452a6549de527aaac2b43c818821eccdd014e6e68818aaaddb3f20c6",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "terms",
+      "path": "/pt/terms/",
+      "htmlSha256": "e2efd659c82793947fbd7b18d8e3fb1b061f8f55ee767ac08a75a1b597832a9e",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "pt",
+      "key": "editorial",
+      "path": "/pt/editorial-policy/",
+      "htmlSha256": "9bf31d39379351b40bb5d95ed4d77b9376d79efdd68534ef776dfcbae9d45e81",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "solar",
+      "path": "/vi/solutions/solar-street-light-installation/",
+      "htmlSha256": "990e859787d5f58b7b9c1b0b84675b4e10c8061839c0478571ded5745b74cdde",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "parking",
+      "path": "/vi/solutions/parking-lot-lighting/",
+      "htmlSha256": "c64354f345d0c2f6c7504625a0aac51390ac7a5853c7b1df8f92e1e01e1340c2",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "compare",
+      "path": "/vi/compare/pole-jack-vs-crane/",
+      "htmlSha256": "128aa084d78678c2dcb4312877158549656f290083cc4ef430977c37f8a2603c",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "roi",
+      "path": "/vi/tools/roi-calculator/",
+      "htmlSha256": "e997bceac49cb3b37ef6dea08b3a2906b90a98fd5e67e850b69056ed3a2710c9",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "method",
+      "path": "/vi/guides/install-light-pole-without-crane/",
+      "htmlSha256": "ac9c7e567021ec3f4cbc5aea431080f4f8ab21007adb415e73256822d5f59adc",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "resources",
+      "path": "/vi/resources/",
+      "htmlSha256": "60da4a7cf18ce7d27deb2303a78964239f53a8e14d44dcb9f46fb3f631b19d05",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "faq",
+      "path": "/vi/faq/",
+      "htmlSha256": "9eea24e482c96fafe31a9dbdba624344991e7a30d8b1d66f1a69948b85a9d71d",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "about",
+      "path": "/vi/about-us/",
+      "htmlSha256": "ce0a9040b737ea307d790d7bf057cc0718d24e01e3a4d1d3d1128d0aea1de74b",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "guides",
+      "path": "/vi/blog/",
+      "htmlSha256": "cecf7d3c92c37e92bc73ff8f39e91aef004d6fd2e6975d4812d3eb4f0e822a81",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "home",
+      "path": "/vi/",
+      "htmlSha256": "8225e43cbedac79e2832eb612c931f2029e5daf04c0295c34909648f24c62266",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "product",
+      "path": "/vi/equipment/",
+      "htmlSha256": "8f4114cdaa67d151e9dc45fd247465de99454bebbb22a6bd822ad370e9c999ca",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "compatibility",
+      "path": "/vi/guides/pole-jack-compatibility/",
+      "htmlSha256": "f37f4f077f8decd9b1810bedd9a6f17f0de0a9a43d8953afec375f41673d19da",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "quote",
+      "path": "/vi/pricing-plan/",
+      "htmlSha256": "c43cb21f8ae102a62068bb8165ccebd7dffc109384d8c7a0132e014a35d2388f",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "contact",
+      "path": "/vi/contact-us/",
+      "htmlSha256": "bfbb1752ab5433718d01fad373b49571279f015cace46d75c7eb8daa50812c06",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "privacy",
+      "path": "/vi/privacy/",
+      "htmlSha256": "0d9a92f0ef2e571f837d7653a0d8c3392a1b03567ef18398e85617007fd53a24",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "terms",
+      "path": "/vi/terms/",
+      "htmlSha256": "d3ed70fba11696f86af9ef89aa86bab60cabd982dc0921e6d9177b85f1699d13",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "vi",
+      "key": "editorial",
+      "path": "/vi/editorial-policy/",
+      "htmlSha256": "442025af873c0c973bbd5704e73ad7fde5ba5d3c692d146ce48a53a224cbad6f",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "solar",
+      "path": "/th/solutions/solar-street-light-installation/",
+      "htmlSha256": "e4a51b90f148d2f35a772a6ce6ae90df2d77696a3f9fb37ecd29196bdab46810",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "parking",
+      "path": "/th/solutions/parking-lot-lighting/",
+      "htmlSha256": "bd8d4d6d148d81c2191096356efef88b5a1b96f71961bee1654880f152dd0bc8",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "compare",
+      "path": "/th/compare/pole-jack-vs-crane/",
+      "htmlSha256": "34445cddf52b28a80d626407b7378f706bb71142c0456fd68984f7b14c685b67",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "roi",
+      "path": "/th/tools/roi-calculator/",
+      "htmlSha256": "28c640210c190bcddfc6c2d41e499f9ff3109069233fe1e4ba8f442e974fc45e",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "method",
+      "path": "/th/guides/install-light-pole-without-crane/",
+      "htmlSha256": "f067c4e99e0101029706a1dc4122cdb71b5b788d85c70f4efbaabf67c532ab6f",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "resources",
+      "path": "/th/resources/",
+      "htmlSha256": "12c2b17f0a18c05accf0a8350c04ab54a1b05120ded33cbbeda563427cdac1ce",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "faq",
+      "path": "/th/faq/",
+      "htmlSha256": "b24ae27c82296a88369a37a788532dece37261925832eff4ca89e5d77b845ea0",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "about",
+      "path": "/th/about-us/",
+      "htmlSha256": "d0bbbe9aac8230a2c7be589ea1329e1df689d477a9e7926a828a86d4fc393df8",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "guides",
+      "path": "/th/blog/",
+      "htmlSha256": "dc7cf36243d7266d5b6342336353c5e7a40cbb5fda5de7ea45c1e233a5b42937",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "home",
+      "path": "/th/",
+      "htmlSha256": "7e8e1a039f6f067305fee8c2f0c4c41a1abd41585fef1beb541b46b897e39cd5",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "product",
+      "path": "/th/equipment/",
+      "htmlSha256": "7228eac58eed66e4f4a1706658adddd5d24dcc16a637cb5ec2c222f3fc846437",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "compatibility",
+      "path": "/th/guides/pole-jack-compatibility/",
+      "htmlSha256": "cbd79d981c38d82e661afeeeab1e0e14ce18c25af74a1be603d88c2f70546ed7",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "quote",
+      "path": "/th/pricing-plan/",
+      "htmlSha256": "47816d08ca781ea4fe15588770fc425d201982e3c285110432224861c2062f21",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "contact",
+      "path": "/th/contact-us/",
+      "htmlSha256": "5a22517049eaea037a95b4bfe1b9157e238ddd612b025a0cdaca31363027ca7d",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "privacy",
+      "path": "/th/privacy/",
+      "htmlSha256": "a4c3f39f30ec20c3190dcd35f072ad5213e8507b58041a21ca36f2c0a914fde1",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "terms",
+      "path": "/th/terms/",
+      "htmlSha256": "78c125a37e614bc38a159e63b992046b5c15cd5377594760e088bb5a9fa35218",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "th",
+      "key": "editorial",
+      "path": "/th/editorial-policy/",
+      "htmlSha256": "b0a6e3da11541668e6b92b92e5454414a37b64a4e5cbabd524128b09ed484dd8",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "solar",
+      "path": "/id/solutions/solar-street-light-installation/",
+      "htmlSha256": "9f2757bbb2c697225db3ba4c213e1eee7c4a01380af4eb8bc95ad664f2bb01eb",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "parking",
+      "path": "/id/solutions/parking-lot-lighting/",
+      "htmlSha256": "a29e58cc64b14e0671a2b83c14cd0c4c07c0ad71c31d73e5c6c54c57d785ab01",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "compare",
+      "path": "/id/compare/pole-jack-vs-crane/",
+      "htmlSha256": "6c3f272b4a217da82f9e7c217ce95232d63aac07a6b6fb182280eb69cfdfc253",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "roi",
+      "path": "/id/tools/roi-calculator/",
+      "htmlSha256": "0bef02143db927307f4729540abab0d238f4b1973d86953f13c18a01d28c2a68",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "method",
+      "path": "/id/guides/install-light-pole-without-crane/",
+      "htmlSha256": "40eb76f9bcdd266fde6d1823bad1add0249a41d127c9973d3fba24e98ae73934",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "resources",
+      "path": "/id/resources/",
+      "htmlSha256": "afb35186b7e8aac1b0ceb47cad0fd24939001e659eccdd9047f30c24d72b5924",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "faq",
+      "path": "/id/faq/",
+      "htmlSha256": "3f67a85ce06782a76018b75b61b342d018a191fc66a0f00977bfd63fa5014c52",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "about",
+      "path": "/id/about-us/",
+      "htmlSha256": "9b18b78a5475a4c4919ac7d49b67342aabe4f8d04ce1619ac13e9cf08f00a816",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "guides",
+      "path": "/id/blog/",
+      "htmlSha256": "22c1d4e0fae95e613d28f73486471825ff60877f9c59ca719436ab323c5efc11",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "home",
+      "path": "/id/",
+      "htmlSha256": "3c073894c6a4a69a2a67c8f72d287b62e870aed33260a02be2fdec669c59844b",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "product",
+      "path": "/id/equipment/",
+      "htmlSha256": "6bb502462dfd832f268b7b6f1e47171e78aeffa6092913c769cad45e5bc4d0f3",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "compatibility",
+      "path": "/id/guides/pole-jack-compatibility/",
+      "htmlSha256": "f033d704bd254f0cce4c113b70376ba8b225c5802a0be5c393d3ae165dfcf277",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "quote",
+      "path": "/id/pricing-plan/",
+      "htmlSha256": "ed5ea7c92d6b8f1ccdc569e76ed084a5c8a21841d9e9038a6921af972def8c2e",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "contact",
+      "path": "/id/contact-us/",
+      "htmlSha256": "a5dfc106f9bb0faf0a1e7a1232cfc4075b90c33a76295ff29d817fd94ed0c848",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "privacy",
+      "path": "/id/privacy/",
+      "htmlSha256": "f24464c84f2d3437fc7fb075c2b40c8bafa4574b8c165f30bbabea284838d646",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "terms",
+      "path": "/id/terms/",
+      "htmlSha256": "09903949d558a62a6e02f1e0b90d3fc3c924f207249b30cb8a5751e332469949",
+      "translationReview": "pending_native_review"
+    },
+    {
+      "locale": "id",
+      "key": "editorial",
+      "path": "/id/editorial-policy/",
+      "htmlSha256": "eccd9b2167e255fd591b10c38f039ecd400f8c8b7be0bdc075d49f1ed7de3909",
+      "translationReview": "pending_native_review"
+    }
+  ],
+  "proofs": [
+    {
+      "path": "maquin-astro-theme/qa-reports/industrial-locales.json",
+      "sha256": "35dfaf551e78f15a81c7e235538415d32b2b25307b375961920bef488a810bde",
+      "checks": 533
+    },
+    {
+      "path": "maquin-astro-theme/qa-reports/industrial-locales-configured.json",
+      "sha256": "b52cc54806456ff7250d644dde202f83627cbb3069b5d5ce4a7502dbce2f6001",
+      "checks": 533
+    },
+    {
+      "path": "maquin-astro-theme/qa-reports/industrial-locales-browser.json",
+      "sha256": "cf4186d45c968794e7484abbc8eaea04d56181853d16761c3327500f7a3bf5bc",
+      "checks": 1406
+    },
+    {
+      "path": "docs/content-strategy/build-verification.json",
+      "sha256": "d27fd499ae001c5fe12d7b1cc17885cc633e204733e533c2aabc6985d790f06e",
+      "checks": null
+    },
+    {
+      "path": "docs/content-strategy/content-d60-verification.json",
+      "sha256": "64f38d26f34f3512d490359befab60706326dab101c8c5e54f9038772eb49f0b",
+      "checks": 791
+    },
+    {
+      "path": "docs/content-strategy/configured-metadata-d60-verification.json",
+      "sha256": "51f4b0d17f1185ca9817436eedead00274897382d5d2575648403ca64fcd65e8",
+      "checks": 1649
+    },
+    {
+      "path": "docs/content-strategy/snapshot-d60-verification.json",
+      "sha256": "f3c64cf7d153705c6318eb650aea87df7360667a268a3511ba955c1f3d4575c1",
+      "checks": 795
+    },
+    {
+      "path": "docs/content-strategy/browser-d30-verification.json",
+      "sha256": "1e5b7f17821b73f8fdee93ca5d874c283a4f5d6c4934cee155ccb9100c63fc7b",
+      "checks": 81
+    },
+    {
+      "path": "docs/content-strategy/browser-d60-verification.json",
+      "sha256": "039dc07e386392810687ed114ca53ae6357a5c301387afeb838f148a8a6fd656",
+      "checks": 142
+    },
+    {
+      "path": "docs/content-strategy/wordpress-pruning-verification.json",
+      "sha256": "9a973b85ffda2dc04db3887dd302cb577eaf68b85f08ad878d3fc530cecbf61b",
+      "checks": null
+    }
+  ],
+  "legacyAssessment": {
+    "assets": {
+      "files": 267,
+      "bytes": 33903368
+    },
+    "candidates": {
+      "files": 164,
+      "bytes": 21951833
+    },
+    "temporaryPruningPassed": true,
+    "repositoryFilesDeleted": false,
+    "assessmentSha256": "47d6406446cd5020a0c6208fb2c927155d7575a4f18dae5e6e891c6e804b9739",
+    "dependencyCsvSha256": "1101d47a6679e4d2d69917ba8d199ed6b9bc9dd972c008e9269835f3771a7154",
+    "proof": "docs/content-strategy/wordpress-pruning-verification.json"
+  },
+  "publication": {
+    "productionDeployed": false,
+    "publicOrigin": null,
+    "directEmail": null,
+    "directPhone": null,
+    "nativeReview": "pending",
+    "businessAndEngineeringGates": [
+      {
+        "id": "supplier_identity",
+        "status": "pending"
+      },
+      {
+        "id": "privacy_retention",
+        "status": "pending"
+      },
+      {
+        "id": "engineering_documents",
+        "status": "pending"
+      },
+      {
+        "id": "application_validation",
+        "status": "pending"
+      },
+      {
+        "id": "editorial_review",
+        "status": "pending"
+      }
+    ],
+    "externalEmailSent": false
+  },
+  "localPreview": "http://127.0.0.1:8787/"
+}

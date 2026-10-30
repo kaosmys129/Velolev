@@ -1,0 +1,74 @@
+---
+interface Props { id?: string; locale?: string; }
+const {id="equipment-film",locale="en"}=Astro.props;
+const languageNames={en:"English",es:"Español",fr:"Français",pt:"Português",vi:"Tiếng Việt",th:"ไทย",id:"Indonesia"};
+const current=Object.hasOwn(languageNames,locale)?locale:"en";
+const chapters=[{time:0,stamp:"00:00",title:"Equipment overview"},{time:6,stamp:"00:06",title:"Hydraulic detail"},{time:12,stamp:"00:12",title:"Connection reference"},{time:18,stamp:"00:18",title:"Packing reference"}];
+---
+<div class="equipment-film" id={id} data-equipment-film>
+  <div class="film-player">
+    <video controls playsinline preload="none" tabindex="0" poster="/images/product/portable-pole-lifter-hero-cutout.png" aria-label="24-second equipment overview made from reference images" aria-describedby={`${id}-caption`}>
+      <source src="/media/equipment-overview.mp4" type="video/mp4"/>
+      <track kind="captions" src={`/media/equipment-overview.${current}.vtt`} srclang={current} label={languageNames[current]} default/>
+      <p><a href="/media/equipment-overview.mp4">Open the equipment overview film</a>.</p>
+    </video>
+    <button type="button" class="film-cover" data-film-play hidden aria-label="Play the 24-second equipment overview">
+      <span class="film-topline"><span>volvet / In focus</span><span>01—04</span></span>
+      <span class="film-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M8 4.5 20 12 8 19.5Z" fill="currentColor"/></svg></span>
+      <span class="film-bottomline"><span>Play equipment overview</span><span>00:24 <span aria-hidden="true">↗</span></span></span>
+    </button>
+  </div>
+  <div class="film-chapters" aria-label="Video chapters">
+    {chapters.map((chapter,index)=><button type="button" data-film-chapter={chapter.time} aria-current={index===0?"true":undefined} disabled><span class="chapter-number">0{index+1}</span><span>{chapter.title}<small>{chapter.stamp}</small></span></button>)}
+  </div>
+  <p class="film-caption" id={`${id}-caption`}>Animated reference images · 24 seconds · No audio. A visual introduction to the equipment, connection and packing; field-operation footage remains pending.</p>
+  <p class="film-error" data-film-error role="status" hidden>Playback could not start. <a href="/media/equipment-overview.mp4">Open the video file ↗</a></p>
+</div>
+
+<style>
+  .equipment-film{min-width:0;scroll-margin-top:30px}.film-player{position:relative;isolation:isolate;background:var(--green);aspect-ratio:16/9;overflow:hidden}
+  .film-player::before{content:'';position:absolute;inset:0;background-image:linear-gradient(#ffffff30 1px,transparent 1px),linear-gradient(90deg,#ffffff30 1px,transparent 1px);background-size:52px 52px;pointer-events:none}
+  video{display:block;position:relative;width:100%;height:100%;object-fit:contain}
+  video::cue{font-family:Geologica,'Trebuchet MS',sans-serif;font-size:15px;line-height:1.5;background:#202622e8;color:#f3f2ec}
+  .film-cover{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;align-items:center;width:100%;border:0;padding:24px;background-color:var(--green);background-image:url('/images/product/portable-pole-lifter-hero-cutout.png'),linear-gradient(#ffffff30 1px,transparent 1px),linear-gradient(90deg,#ffffff30 1px,transparent 1px);background-size:auto 78%,52px 52px,52px 52px;background-repeat:no-repeat,repeat,repeat;background-position:center 42%,0 0,0 0;color:var(--ink);cursor:pointer;text-align:left}
+  .film-cover[hidden],.film-error[hidden]{display:none}
+  .film-topline,.film-bottomline{display:flex;justify-content:space-between;align-items:center;gap:20px;width:100%}
+  .film-topline{font:11px/1.5 'Courier New',monospace;text-transform:uppercase;letter-spacing:.08em}
+  .film-bottomline{padding:14px 16px;background:var(--dark);color:var(--paper);font-size:12px;font-weight:500}.film-bottomline>span:last-child{display:flex;align-items:center;gap:20px;font:12px 'Courier New',monospace}
+  .film-play-icon{display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 10px #f4cc3d28;transition:transform .25s,box-shadow .25s}
+  .film-cover:hover .film-play-icon{transform:scale(1.08);box-shadow:0 0 0 16px #f4cc3d28}.film-play-icon svg{margin-left:4px}
+  .film-chapters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
+  .film-chapters button{position:relative;display:flex;gap:12px;align-items:start;min-width:0;padding:20px 12px 18px 0;text-align:left;border:0;border-top:3px solid transparent;background:transparent;color:inherit;font-size:11px;line-height:1.5;cursor:pointer}
+  .film-chapters button+button{padding-left:14px;border-left:1px solid var(--line)}.film-chapters button:hover,.film-chapters button[aria-current=true]{border-top-color:var(--yellow)}.film-chapters button:disabled{cursor:default}.film-chapters button:disabled:hover{border-top-color:transparent}
+  .chapter-number{font:11px/1.5 'Courier New',monospace;color:var(--muted)}.film-chapters small{display:block;font:10px/1.5 'Courier New',monospace;color:var(--muted);margin-top:6px}
+  .film-caption,.film-error{font-size:11px;line-height:1.7;color:var(--muted);margin-top:14px;max-width:760px}.film-error a{text-decoration:underline}
+  @media(max-width:760px){.film-cover{padding:14px}.film-topline{font-size:9px}.film-bottomline{padding:10px;font-size:10px}.film-play-icon{width:52px;height:52px;box-shadow:0 0 0 7px #f4cc3d28}.film-chapters{grid-template-columns:repeat(2,minmax(0,1fr))}.film-chapters button{padding:14px 8px 12px 0}.film-chapters button:nth-child(3){border-left:0;padding-left:0}.film-chapters button:nth-child(n+3){border-top-color:var(--line)}.film-chapters button[aria-current=true]{border-top-color:var(--yellow)}}
+  @media(max-width:760px){video::cue{font-size:11px}}
+</style>
+
+<script>
+  for(const root of document.querySelectorAll<HTMLElement>("[data-equipment-film]")){
+    const video=root.querySelector<HTMLVideoElement>("video")!;
+    const cover=root.querySelector<HTMLButtonElement>("[data-film-play]")!;
+    const error=root.querySelector<HTMLElement>("[data-film-error]")!;
+    const chapters=[...root.querySelectorAll<HTMLButtonElement>("[data-film-chapter]")];
+    cover.hidden=false;video.controls=false;chapters.forEach(button=>button.disabled=false);
+    let requestedTime:number|null=null;
+    const showError=()=>{error.hidden=false;cover.hidden=false;video.controls=false;};
+    const updateChapter=(time:number)=>chapters.forEach((button,index)=>{const active=time>=Number(button.dataset.filmChapter)&&(!chapters[index+1]||time<Number(chapters[index+1].dataset.filmChapter));if(active)button.setAttribute("aria-current","true");else button.removeAttribute("aria-current");});
+    const play=async(time?:number)=>{
+      error.hidden=true;cover.hidden=true;video.controls=true;
+      if(video.networkState===HTMLMediaElement.NETWORK_NO_SOURCE)video.load();
+      if(time!==undefined){updateChapter(time);if(video.readyState>=1)video.currentTime=time;else requestedTime=time;}
+      try{await video.play();}catch{showError();}
+    };
+    cover.addEventListener("click",()=>{void play(video.ended?0:undefined);video.focus();});
+    chapters.forEach(button=>button.addEventListener("click",()=>{void play(Number(button.dataset.filmChapter));}));
+    video.addEventListener("loadedmetadata",()=>{if(requestedTime!==null){video.currentTime=requestedTime;requestedTime=null;}});
+    video.addEventListener("timeupdate",()=>updateChapter(video.currentTime));
+    video.addEventListener("ended",()=>{cover.hidden=false;video.controls=false;});
+    video.addEventListener("error",showError);
+    video.querySelector("source")?.addEventListener("error",showError);
+    document.addEventListener("visibilitychange",()=>{if(document.hidden)video.pause();});
+  }
+</script>

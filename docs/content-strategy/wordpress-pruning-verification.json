@@ -1,0 +1,2333 @@
+{
+  "date": "2026-10-29",
+  "sourceDigest": "d44b819532e4ec11bec9fce10051a8388d203434e5323e43f5051f2ad1d2fd3a",
+  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "snapshotDigest": null,
+  "origin": null,
+  "passed": true,
+  "removedInTemporaryCopy": 164,
+  "removedBytesInTemporaryCopy": 21951833,
+  "repositoryFilesDeleted": false,
+  "externalRequestsBlocked": true,
+  "scope": "Cold rendering of every non-redirect HTML page at 390px, comparing status/title/headings/document width and new missing-resource or script errors. Legacy widget interactions and externally hosted content are not certified by this experiment.",
+  "results": {
+    "baseline": {
+      "pages": 127,
+      "missing": [
+        "/admin/content/: 404",
+        "/wp-content/plugins/elementor-pro/assets/js/form.5fb35271b8ba3fb1e7d6.bundle.min.js: 404",
+        "/wp-content/plugins/elementor-pro/assets/js/nav-menu.a23fbd67486c5bedf26c.bundle.min.js: 404",
+        "/wp-content/plugins/elementor-pro/assets/js/popup.f7b15b2ca565b152bf98.bundle.min.js: 404",
+        "/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js: 404"
+      ],
+      "scriptErrors": [
+        "Loading chunk 325 failed.\n(error: http://local.test/wp-content/plugins/elementor-pro/assets/js/form.5fb35271b8ba3fb1e7d6.bundle.min.js)",
+        "Loading chunk 334 failed.\n(error: http://local.test/wp-content/plugins/elementor-pro/assets/js/nav-menu.a23fbd67486c5bedf26c.bundle.min.js)",
+        "Loading chunk 557 failed.\n(error: http://local.test/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js)",
+        "Loading chunk 887 failed.\n(error: http://local.test/wp-content/plugins/elementor-pro/assets/js/popup.f7b15b2ca565b152bf98.bundle.min.js)"
+      ],
+      "snapshots": [
+        {
+          "path": "/404.html",
+          "status": 200,
+          "title": "Page Not Found | volvet",
+          "headings": [
+            "404"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/about-us/",
+          "status": 200,
+          "title": "About volvet: Equipment & Information | volvet",
+          "headings": [
+            "Equipment facts. Project questions."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/admin/content/",
+          "status": 404,
+          "title": "",
+          "headings": [],
+          "width": 390
+        },
+        {
+          "path": "/admin/inquiries/",
+          "status": 200,
+          "title": "volvet 询盘收件箱",
+          "headings": [
+            "项目询盘收件箱"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Pole Lifter vs Crane: Project Selection Guide | volvet",
+          "headings": [
+            "Compare the work.\nThen compare the cost."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/contact-us/",
+          "status": 200,
+          "title": "Contact volvet: Project, Distributor & Support Inquiries",
+          "headings": [
+            "A conversation starts\nwith your project."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/editorial-policy/",
+          "status": 200,
+          "title": "Product Information & Editorial Policy | volvet",
+          "headings": [
+            "Know what\nthe information supports."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/about-us/",
+          "status": 200,
+          "title": "Acerca de volvet: equipo e información | volvet",
+          "headings": [
+            "Datos del equipo. Preguntas del proyecto."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/blog/",
+          "status": 200,
+          "title": "Guías de instalación de postes y herramientas de planificación | volvet",
+          "headings": [
+            "Elija la siguientedecisión por resolver."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Elevador de postes vs. grúa: guía de selección para proyectos | volvet",
+          "headings": [
+            "Compare el trabajo. Después, compare el costo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/contact-us/",
+          "status": 200,
+          "title": "Contactar con volvet: consultas de proyectos, distribución y soporte",
+          "headings": [
+            "Una conversación comienza con su proyecto."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/editorial-policy/",
+          "status": 200,
+          "title": "Información del producto y política editorial | volvet",
+          "headings": [
+            "Conozca qué respalda la información."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/equipment/",
+          "status": 200,
+          "title": "Elevador portátil de postes de alumbrado: especificaciones y configuración | volvet",
+          "headings": [
+            "Elevador portátil depostes de alumbrado."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/faq/",
+          "status": 200,
+          "title": "Preguntas sobre el elevador portátil de postes de alumbrado | volvet",
+          "headings": [
+            "Antes de la cotización.Antes de la elevación."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Instalación de postes de alumbrado sin grúa: métodos y límites | volvet",
+          "headings": [
+            "Trabajar sin grúa comienza con una revisión."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Compatibilidad del elevador de postes: poste, brida y cimentación | volvet",
+          "headings": [
+            "Una altura coincidenteno lo define todo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/",
+          "status": 200,
+          "title": "Elevador portátil de postes de alumbrado público | volvet",
+          "headings": [
+            "Elevación de postes.Ahora portátil."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/pricing-plan/",
+          "status": 200,
+          "title": "Solicitar una cotización de proyecto | volvet",
+          "headings": [
+            "Cuéntenos qué necesita elevar."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/privacy/",
+          "status": 200,
+          "title": "Aviso de privacidad | volvet",
+          "headings": [
+            "Privacidad, en términos claros."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/resources/",
+          "status": 200,
+          "title": "Especificaciones del producto y documentos del proyecto | volvet",
+          "headings": [
+            "Especificaciones para consultar.Cuestiones por resolver."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Planificación de la instalación de postes en estacionamientos y campus | volvet",
+          "headings": [
+            "Planifique en función del sitio y del poste."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Planificación de la instalación de postes de alumbrado solar | volvet",
+          "headings": [
+            "Comience por el conjunto completo del poste solar."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/terms/",
+          "status": 200,
+          "title": "Términos del sitio web y de las consultas de proyectos | volvet",
+          "headings": [
+            "Primero, la información. Las condiciones del proyecto, por separado."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/tools/roi-calculator/",
+          "status": 200,
+          "title": "Calculadora de escenarios de costos de instalación de postes | volvet",
+          "headings": [
+            "Calcule un escenario.Conserve los supuestos."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency/",
+          "status": 200,
+          "title": "Portable Light Pole Lifter Maintenance Planning | volvet",
+          "headings": [
+            "Portable Light Pole Lifter Maintenance Planning"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency-2/",
+          "status": 200,
+          "title": "Solar Street Light Pole Installation Planning | volvet",
+          "headings": [
+            "Solar Street Light Pole Installation Planning"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/faq/",
+          "status": 200,
+          "title": "Portable Light Pole Lifter Questions | volvet",
+          "headings": [
+            "Before the quote.Before the lift."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/about-us/",
+          "status": 200,
+          "title": "À propos de volvet : équipement et informations | volvet",
+          "headings": [
+            "Les données de l’équipement. Les questions du projet."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/blog/",
+          "status": 200,
+          "title": "Guides d’installation de mâts et outils de préparation | volvet",
+          "headings": [
+            "Choisissez la prochainedécision à prendre."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Lève-mât ou grue : guide de choix pour le projet | volvet",
+          "headings": [
+            "Comparez les travaux. Puis comparez les coûts."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/contact-us/",
+          "status": 200,
+          "title": "Contacter volvet : demandes de projet, de distribution et d’assistance",
+          "headings": [
+            "L’échange commence par votre projet."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/editorial-policy/",
+          "status": 200,
+          "title": "Informations produit et politique éditoriale | volvet",
+          "headings": [
+            "Comprenez la portée des informations."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/equipment/",
+          "status": 200,
+          "title": "Lève-mât d’éclairage portatif : caractéristiques et configuration | volvet",
+          "headings": [
+            "Lève-mâtd’éclairage portatif."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/faq/",
+          "status": 200,
+          "title": "Questions sur le lève-mât d’éclairage portatif | volvet",
+          "headings": [
+            "Avant le devis.Avant le levage."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Installer des mâts d’éclairage sans grue : méthodes et limites | volvet",
+          "headings": [
+            "Installer sans grue commence par un examen."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Compatibilité du lève-mât : mât, bride et fondation | volvet",
+          "headings": [
+            "Une hauteur correspondantene suffit pas."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/",
+          "status": 200,
+          "title": "Lève-mât portatif pour l’éclairage public | volvet",
+          "headings": [
+            "Levage de mâts.En version portable."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/pricing-plan/",
+          "status": 200,
+          "title": "Demander un devis de projet | volvet",
+          "headings": [
+            "Dites-nous ce que vous devez lever."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/privacy/",
+          "status": 200,
+          "title": "Notice de confidentialité | volvet",
+          "headings": [
+            "La confidentialité, en termes simples."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/resources/",
+          "status": 200,
+          "title": "Caractéristiques du produit et documents du projet | volvet",
+          "headings": [
+            "Des caractéristiques à lire.Des questions à résoudre."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Préparer l’installation de mâts pour parkings et campus | volvet",
+          "headings": [
+            "Préparez l’intervention autour du site, au-delà du seul mât."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Préparer l’installation de mâts d’éclairage public solaire | volvet",
+          "headings": [
+            "Commencez par le mât solaire complet."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/terms/",
+          "status": 200,
+          "title": "Conditions du site et des demandes de projet | volvet",
+          "headings": [
+            "D’abord l’information. Les conditions du projet, séparément."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/tools/roi-calculator/",
+          "status": 200,
+          "title": "Calculateur de scénarios de coûts d’installation de mâts | volvet",
+          "headings": [
+            "Calculez un scénario.Conservez les hypothèses."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/guides/",
+          "status": 200,
+          "title": "Pole Installation Guides & Planning Tools | volvet",
+          "headings": [
+            "Choose the nextdecision to resolve."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Installing Light Poles Without a Crane: Methods & Limits | volvet",
+          "headings": [
+            "Without a crane\nstarts with a review."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Pole Lifter Compatibility: Pole, Flange & Foundation | volvet",
+          "headings": [
+            "A matching heightisn't the whole picture."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/about-us/",
+          "status": 200,
+          "title": "Tentang volvet: peralatan dan informasi | volvet",
+          "headings": [
+            "Fakta peralatan. Pertanyaan proyek."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/blog/",
+          "status": 200,
+          "title": "Panduan pemasangan tiang dan alat perencanaan | volvet",
+          "headings": [
+            "Pilih keputusan berikutnyayang perlu diselesaikan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Alat pengangkat tiang dibandingkan derek: panduan pemilihan proyek | volvet",
+          "headings": [
+            "Bandingkan pekerjaannya. Lalu bandingkan biayanya."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/contact-us/",
+          "status": 200,
+          "title": "Hubungi volvet: proyek, distributor, dan dukungan",
+          "headings": [
+            "Percakapan dimulai dari proyek Anda."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/editorial-policy/",
+          "status": 200,
+          "title": "Kebijakan informasi produk dan editorial | volvet",
+          "headings": [
+            "Pahami apa yang didukung informasi."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/equipment/",
+          "status": 200,
+          "title": "Alat pengangkat tiang lampu portabel: spesifikasi dan konfigurasi | volvet",
+          "headings": [
+            "Pengangkattiang lampu portabel."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/faq/",
+          "status": 200,
+          "title": "Pertanyaan alat pengangkat tiang lampu portabel | volvet",
+          "headings": [
+            "Sebelum penawaran.Sebelum pengangkatan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Memasang tiang lampu tanpa derek: metode dan batasan | volvet",
+          "headings": [
+            "Tanpa derek dimulai dengan peninjauan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Kesesuaian alat pengangkat tiang: tiang, flensa, dan fondasi | volvet",
+          "headings": [
+            "Tinggi yang cocokbukan keseluruhan gambaran."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/",
+          "status": 200,
+          "title": "Alat pengangkat tiang lampu portabel untuk penerangan jalan | volvet",
+          "headings": [
+            "Pengangkatan tiang lampu.Kini portabel."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/pricing-plan/",
+          "status": 200,
+          "title": "Minta penawaran proyek | volvet",
+          "headings": [
+            "Jelaskan apa yang perlu diangkat."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/privacy/",
+          "status": 200,
+          "title": "Pemberitahuan privasi | volvet",
+          "headings": [
+            "Privasi dalam bahasa sederhana."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/resources/",
+          "status": 200,
+          "title": "Spesifikasi produk dan dokumen proyek | volvet",
+          "headings": [
+            "Spesifikasi untuk dibaca.Pertanyaan untuk diselesaikan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Perencanaan pemasangan tiang lampu area parkir dan kampus | volvet",
+          "headings": [
+            "Rencanakan berdasarkan lokasi serta tiangnya."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Perencanaan pemasangan tiang lampu tenaga surya | volvet",
+          "headings": [
+            "Mulai dari rakitan tiang surya secara keseluruhan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/terms/",
+          "status": 200,
+          "title": "Ketentuan situs dan permintaan proyek | volvet",
+          "headings": [
+            "Informasi dahulu. Ketentuan proyek dibahas terpisah."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/tools/roi-calculator/",
+          "status": 200,
+          "title": "Kalkulator skenario biaya pemasangan tiang | volvet",
+          "headings": [
+            "Hitung sebuah skenario.Catat asumsi yang digunakan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/",
+          "status": 200,
+          "title": "Portable Light Pole Lifter for Street Lighting | volvet",
+          "headings": [
+            "Light pole lifting.Made portable."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/maximizing-roi-through-proper-care-and-rental-management-of-heavy-machines/",
+          "status": 200,
+          "title": "Pole Installation Cost Planning | volvet",
+          "headings": [
+            "Pole Installation Cost Planning"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/privacy/",
+          "status": 200,
+          "title": "Privacy Notice | volvet",
+          "headings": [
+            "Privacy, in plain terms."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/products/light-pole-jack/",
+          "status": 200,
+          "title": "Portable Light Pole Lifter: Specifications & Configuration | volvet",
+          "headings": [
+            "Portable lightpole lifter."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/project/",
+          "status": 200,
+          "title": "Street Light Pole Installation Applications | volvet",
+          "headings": [
+            "Street Light Pole Installation Applications"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/about-us/",
+          "status": 200,
+          "title": "Sobre a volvet: equipamento e informações | volvet",
+          "headings": [
+            "Dados do equipamento. Questões do projeto."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/blog/",
+          "status": 200,
+          "title": "Guias e ferramentas para planejamento da instalação de postes | volvet",
+          "headings": [
+            "Escolha a próximadecisão a resolver."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Elevador de postes ou guindaste: guia de seleção para projetos | volvet",
+          "headings": [
+            "Compare o trabalho. Depois, compare o custo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/contact-us/",
+          "status": 200,
+          "title": "Contato volvet: consultas de projetos, distribuição e suporte",
+          "headings": [
+            "A conversa começa com seu projeto."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/editorial-policy/",
+          "status": 200,
+          "title": "Informações do produto e política editorial | volvet",
+          "headings": [
+            "Entenda o que as informações permitem concluir."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/equipment/",
+          "status": 200,
+          "title": "Elevador portátil de postes de iluminação: especificações e configuração | volvet",
+          "headings": [
+            "Elevador portátilde postes de iluminação."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/faq/",
+          "status": 200,
+          "title": "Perguntas sobre o elevador portátil de postes de iluminação | volvet",
+          "headings": [
+            "Antes da cotação.Antes da elevação."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Instalação de postes de iluminação sem guindaste: métodos e limites | volvet",
+          "headings": [
+            "Trabalhar sem guindaste começa com uma análise."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Compatibilidade do elevador de postes: poste, flange e fundação | volvet",
+          "headings": [
+            "Uma altura correspondentenão é tudo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/",
+          "status": 200,
+          "title": "Elevador portátil de postes de iluminação pública | volvet",
+          "headings": [
+            "Elevação de postes.Agora portátil."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/pricing-plan/",
+          "status": 200,
+          "title": "Solicitar cotação de projeto | volvet",
+          "headings": [
+            "Conte o que você precisa elevar."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/privacy/",
+          "status": 200,
+          "title": "Aviso de privacidade | volvet",
+          "headings": [
+            "Privacidade, em termos claros."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/resources/",
+          "status": 200,
+          "title": "Especificações do produto e documentos do projeto | volvet",
+          "headings": [
+            "Especificações para consultar.Questões para resolver."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Planejamento da instalação de postes em estacionamentos e campi | volvet",
+          "headings": [
+            "Planeje considerando o local e o poste."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Planejamento da instalação de postes de iluminação pública solar | volvet",
+          "headings": [
+            "Comece pelo poste solar completo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/terms/",
+          "status": 200,
+          "title": "Termos do site e das consultas de projeto | volvet",
+          "headings": [
+            "Informações primeiro. Condições do projeto à parte."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/tools/roi-calculator/",
+          "status": 200,
+          "title": "Calculadora de cenários de custo para instalação de postes | volvet",
+          "headings": [
+            "Calcule um cenário.Registre as premissas."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/quote/",
+          "status": 200,
+          "title": "Request a Project Quotation | volvet",
+          "headings": [
+            "Tell us what\nyou need to lift."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/resources/",
+          "status": 200,
+          "title": "Product Specifications & Project Documents | volvet",
+          "headings": [
+            "Specifications to read.Questions to resolve."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Parking Lot & Campus Pole Installation Planning | volvet",
+          "headings": [
+            "Plan around the site,\nnot just the pole."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Solar Street Light Pole Installation Planning | volvet",
+          "headings": [
+            "Start with the\ncomplete solar pole."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/terms/",
+          "status": 200,
+          "title": "Website & Project Inquiry Terms | volvet",
+          "headings": [
+            "Information first.\nProject terms, separately."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/about-us/",
+          "status": 200,
+          "title": "เกี่ยวกับ volvet: อุปกรณ์และข้อมูล | volvet",
+          "headings": [
+            "ข้อมูลอุปกรณ์ และคำถามของโครงการ"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/blog/",
+          "status": 200,
+          "title": "คู่มือติดตั้งเสาและเครื่องมือวางแผน | volvet",
+          "headings": [
+            "เลือกประเด็นถัดไปที่ต้องตัดสินใจ"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "เครื่องยกเสาเทียบกับเครน: แนวทางเลือกสำหรับโครงการ | volvet",
+          "headings": [
+            "เปรียบเทียบงาน แล้วจึงเปรียบเทียบต้นทุน"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/contact-us/",
+          "status": 200,
+          "title": "ติดต่อ volvet: โครงการ ผู้จัดจำหน่าย และการสนับสนุน",
+          "headings": [
+            "เริ่มพูดคุยจากโครงการของคุณ"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/editorial-policy/",
+          "status": 200,
+          "title": "นโยบายข้อมูลผลิตภัณฑ์และบรรณาธิการ | volvet",
+          "headings": [
+            "รู้ว่าข้อมูลรองรับอะไร"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/equipment/",
+          "status": 200,
+          "title": "เครื่องยกเสาไฟแบบพกพา: ข้อมูลจำเพาะและรูปแบบอุปกรณ์ | volvet",
+          "headings": [
+            "เครื่องยกเสาไฟแบบพกพา"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/faq/",
+          "status": 200,
+          "title": "คำถามเกี่ยวกับเครื่องยกเสาไฟแบบพกพา | volvet",
+          "headings": [
+            "ก่อนเสนอราคาก่อนยก"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "ติดตั้งเสาไฟโดยไม่ใช้เครน: วิธีและข้อจำกัด | volvet",
+          "headings": [
+            "เริ่มติดตั้งโดยไม่ใช้เครนด้วยการประเมิน"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "ความเข้ากันได้ของเครื่องยกเสา: เสา หน้าแปลน และฐานราก | volvet",
+          "headings": [
+            "ความสูงตรงกันยังไม่ใช่ทั้งหมด"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/",
+          "status": 200,
+          "title": "เครื่องยกเสาไฟแบบพกพาสำหรับไฟถนน | volvet",
+          "headings": [
+            "ยกเสาไฟเคลื่อนย้ายได้สะดวก"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/pricing-plan/",
+          "status": 200,
+          "title": "ขอใบเสนอราคาโครงการ | volvet",
+          "headings": [
+            "แจ้งสิ่งที่คุณต้องยก"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/privacy/",
+          "status": 200,
+          "title": "ประกาศความเป็นส่วนตัว | volvet",
+          "headings": [
+            "ความเป็นส่วนตัว อธิบายตรงไปตรงมา"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/resources/",
+          "status": 200,
+          "title": "ข้อมูลจำเพาะผลิตภัณฑ์และเอกสารโครงการ | volvet",
+          "headings": [
+            "อ่านข้อมูลจำเพาะคำถามที่ต้องตอบ"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "การวางแผนติดตั้งเสาไฟลานจอดรถและพื้นที่อาคาร | volvet",
+          "headings": [
+            "วางแผนตามหน้างานร่วมกับข้อมูลเสา"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "การวางแผนติดตั้งเสาไฟพลังงานแสงอาทิตย์ | volvet",
+          "headings": [
+            "เริ่มจากชุดเสาไฟพลังงานแสงอาทิตย์ทั้งหมด"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/terms/",
+          "status": 200,
+          "title": "ข้อกำหนดเว็บไซต์และคำขอโครงการ | volvet",
+          "headings": [
+            "ข้อมูลก่อน เงื่อนไขโครงการแยกต่างหาก"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/tools/roi-calculator/",
+          "status": 200,
+          "title": "เครื่องคำนวณสถานการณ์ต้นทุนการติดตั้งเสา | volvet",
+          "headings": [
+            "คำนวณสถานการณ์เก็บสมมติฐานไว้"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/the-importance-of-regular-inspections-for-heavy-machinery/",
+          "status": 200,
+          "title": "Pole Installation Site Review Checklist | volvet",
+          "headings": [
+            "Pole Installation Site Review Checklist"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/tools/roi-calculator/",
+          "status": 200,
+          "title": "Pole Installation Cost Scenario Calculator | volvet",
+          "headings": [
+            "Calculate a scenario.Keep the assumptions."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/about-us/",
+          "status": 200,
+          "title": "Về volvet: thiết bị và thông tin | volvet",
+          "headings": [
+            "Dữ liệu thiết bị. Câu hỏi dự án."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/blog/",
+          "status": 200,
+          "title": "Hướng dẫn lắp cột và công cụ lập kế hoạch | volvet",
+          "headings": [
+            "Chọn vấn đề tiếp theocần giải quyết."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Máy nâng cột và cần cẩu: hướng dẫn lựa chọn cho dự án | volvet",
+          "headings": [
+            "So sánh công việc. Sau đó so sánh chi phí."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/contact-us/",
+          "status": 200,
+          "title": "Liên hệ volvet: dự án, phân phối và hỗ trợ",
+          "headings": [
+            "Cuộc trao đổi bắt đầu từ dự án của bạn."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/editorial-policy/",
+          "status": 200,
+          "title": "Chính sách thông tin sản phẩm và biên tập | volvet",
+          "headings": [
+            "Hiểu thông tin chứng minh điều gì."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/equipment/",
+          "status": 200,
+          "title": "Máy nâng cột đèn di động: thông số và cấu hình | volvet",
+          "headings": [
+            "Máy nângcột đèn di động."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/faq/",
+          "status": 200,
+          "title": "Câu hỏi về máy nâng cột đèn di động | volvet",
+          "headings": [
+            "Trước báo giá.Trước khi nâng."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Lắp cột đèn không dùng cần cẩu: phương pháp và giới hạn | volvet",
+          "headings": [
+            "Không dùng cần cẩu bắt đầu từ đánh giá."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Độ phù hợp máy nâng cột: cột, mặt bích và móng | volvet",
+          "headings": [
+            "Trùng chiều caochưa nói lên tất cả."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/",
+          "status": 200,
+          "title": "Máy nâng cột đèn di động cho chiếu sáng đường | volvet",
+          "headings": [
+            "Nâng cột đèn.Nay có thể di động."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/pricing-plan/",
+          "status": 200,
+          "title": "Yêu cầu báo giá dự án | volvet",
+          "headings": [
+            "Cho biết bạn cần nâng gì."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/privacy/",
+          "status": 200,
+          "title": "Thông báo quyền riêng tư | volvet",
+          "headings": [
+            "Quyền riêng tư, trình bày rõ ràng."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/resources/",
+          "status": 200,
+          "title": "Thông số sản phẩm và tài liệu dự án | volvet",
+          "headings": [
+            "Thông số để tham khảo.Câu hỏi cần giải quyết."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Lập kế hoạch lắp đặt cột đèn bãi đỗ xe và khuôn viên | volvet",
+          "headings": [
+            "Lập kế hoạch theo hiện trường, không chỉ theo cột."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Lập kế hoạch lắp đặt cột đèn năng lượng mặt trời | volvet",
+          "headings": [
+            "Bắt đầu từ toàn bộ cụm cột năng lượng mặt trời."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/terms/",
+          "status": 200,
+          "title": "Điều khoản trang web và yêu cầu dự án | volvet",
+          "headings": [
+            "Thông tin trước. Điều kiện dự án trao đổi riêng."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/tools/roi-calculator/",
+          "status": 200,
+          "title": "Công cụ tính kịch bản chi phí lắp đặt cột | volvet",
+          "headings": [
+            "Tính một kịch bản.Giữ rõ các giả định."
+          ],
+          "width": 390
+        }
+      ]
+    },
+    "pruned": {
+      "pages": 127,
+      "missing": [
+        "/admin/content/: 404",
+        "/wp-content/plugins/elementor-pro/assets/js/form.5fb35271b8ba3fb1e7d6.bundle.min.js: 404",
+        "/wp-content/plugins/elementor-pro/assets/js/nav-menu.a23fbd67486c5bedf26c.bundle.min.js: 404",
+        "/wp-content/plugins/elementor-pro/assets/js/popup.f7b15b2ca565b152bf98.bundle.min.js: 404",
+        "/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js: 404"
+      ],
+      "scriptErrors": [
+        "Loading chunk 325 failed.\n(error: http://local.test/wp-content/plugins/elementor-pro/assets/js/form.5fb35271b8ba3fb1e7d6.bundle.min.js)",
+        "Loading chunk 334 failed.\n(error: http://local.test/wp-content/plugins/elementor-pro/assets/js/nav-menu.a23fbd67486c5bedf26c.bundle.min.js)",
+        "Loading chunk 557 failed.\n(error: http://local.test/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js)",
+        "Loading chunk 887 failed.\n(error: http://local.test/wp-content/plugins/elementor-pro/assets/js/popup.f7b15b2ca565b152bf98.bundle.min.js)"
+      ],
+      "snapshots": [
+        {
+          "path": "/404.html",
+          "status": 200,
+          "title": "Page Not Found | volvet",
+          "headings": [
+            "404"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/about-us/",
+          "status": 200,
+          "title": "About volvet: Equipment & Information | volvet",
+          "headings": [
+            "Equipment facts. Project questions."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/admin/content/",
+          "status": 404,
+          "title": "",
+          "headings": [],
+          "width": 390
+        },
+        {
+          "path": "/admin/inquiries/",
+          "status": 200,
+          "title": "volvet 询盘收件箱",
+          "headings": [
+            "项目询盘收件箱"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Pole Lifter vs Crane: Project Selection Guide | volvet",
+          "headings": [
+            "Compare the work.\nThen compare the cost."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/contact-us/",
+          "status": 200,
+          "title": "Contact volvet: Project, Distributor & Support Inquiries",
+          "headings": [
+            "A conversation starts\nwith your project."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/editorial-policy/",
+          "status": 200,
+          "title": "Product Information & Editorial Policy | volvet",
+          "headings": [
+            "Know what\nthe information supports."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/about-us/",
+          "status": 200,
+          "title": "Acerca de volvet: equipo e información | volvet",
+          "headings": [
+            "Datos del equipo. Preguntas del proyecto."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/blog/",
+          "status": 200,
+          "title": "Guías de instalación de postes y herramientas de planificación | volvet",
+          "headings": [
+            "Elija la siguientedecisión por resolver."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Elevador de postes vs. grúa: guía de selección para proyectos | volvet",
+          "headings": [
+            "Compare el trabajo. Después, compare el costo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/contact-us/",
+          "status": 200,
+          "title": "Contactar con volvet: consultas de proyectos, distribución y soporte",
+          "headings": [
+            "Una conversación comienza con su proyecto."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/editorial-policy/",
+          "status": 200,
+          "title": "Información del producto y política editorial | volvet",
+          "headings": [
+            "Conozca qué respalda la información."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/equipment/",
+          "status": 200,
+          "title": "Elevador portátil de postes de alumbrado: especificaciones y configuración | volvet",
+          "headings": [
+            "Elevador portátil depostes de alumbrado."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/faq/",
+          "status": 200,
+          "title": "Preguntas sobre el elevador portátil de postes de alumbrado | volvet",
+          "headings": [
+            "Antes de la cotización.Antes de la elevación."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Instalación de postes de alumbrado sin grúa: métodos y límites | volvet",
+          "headings": [
+            "Trabajar sin grúa comienza con una revisión."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Compatibilidad del elevador de postes: poste, brida y cimentación | volvet",
+          "headings": [
+            "Una altura coincidenteno lo define todo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/",
+          "status": 200,
+          "title": "Elevador portátil de postes de alumbrado público | volvet",
+          "headings": [
+            "Elevación de postes.Ahora portátil."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/pricing-plan/",
+          "status": 200,
+          "title": "Solicitar una cotización de proyecto | volvet",
+          "headings": [
+            "Cuéntenos qué necesita elevar."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/privacy/",
+          "status": 200,
+          "title": "Aviso de privacidad | volvet",
+          "headings": [
+            "Privacidad, en términos claros."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/resources/",
+          "status": 200,
+          "title": "Especificaciones del producto y documentos del proyecto | volvet",
+          "headings": [
+            "Especificaciones para consultar.Cuestiones por resolver."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Planificación de la instalación de postes en estacionamientos y campus | volvet",
+          "headings": [
+            "Planifique en función del sitio y del poste."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Planificación de la instalación de postes de alumbrado solar | volvet",
+          "headings": [
+            "Comience por el conjunto completo del poste solar."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/terms/",
+          "status": 200,
+          "title": "Términos del sitio web y de las consultas de proyectos | volvet",
+          "headings": [
+            "Primero, la información. Las condiciones del proyecto, por separado."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/es/tools/roi-calculator/",
+          "status": 200,
+          "title": "Calculadora de escenarios de costos de instalación de postes | volvet",
+          "headings": [
+            "Calcule un escenario.Conserve los supuestos."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency/",
+          "status": 200,
+          "title": "Portable Light Pole Lifter Maintenance Planning | volvet",
+          "headings": [
+            "Portable Light Pole Lifter Maintenance Planning"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency-2/",
+          "status": 200,
+          "title": "Solar Street Light Pole Installation Planning | volvet",
+          "headings": [
+            "Solar Street Light Pole Installation Planning"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/faq/",
+          "status": 200,
+          "title": "Portable Light Pole Lifter Questions | volvet",
+          "headings": [
+            "Before the quote.Before the lift."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/about-us/",
+          "status": 200,
+          "title": "À propos de volvet : équipement et informations | volvet",
+          "headings": [
+            "Les données de l’équipement. Les questions du projet."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/blog/",
+          "status": 200,
+          "title": "Guides d’installation de mâts et outils de préparation | volvet",
+          "headings": [
+            "Choisissez la prochainedécision à prendre."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Lève-mât ou grue : guide de choix pour le projet | volvet",
+          "headings": [
+            "Comparez les travaux. Puis comparez les coûts."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/contact-us/",
+          "status": 200,
+          "title": "Contacter volvet : demandes de projet, de distribution et d’assistance",
+          "headings": [
+            "L’échange commence par votre projet."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/editorial-policy/",
+          "status": 200,
+          "title": "Informations produit et politique éditoriale | volvet",
+          "headings": [
+            "Comprenez la portée des informations."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/equipment/",
+          "status": 200,
+          "title": "Lève-mât d’éclairage portatif : caractéristiques et configuration | volvet",
+          "headings": [
+            "Lève-mâtd’éclairage portatif."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/faq/",
+          "status": 200,
+          "title": "Questions sur le lève-mât d’éclairage portatif | volvet",
+          "headings": [
+            "Avant le devis.Avant le levage."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Installer des mâts d’éclairage sans grue : méthodes et limites | volvet",
+          "headings": [
+            "Installer sans grue commence par un examen."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Compatibilité du lève-mât : mât, bride et fondation | volvet",
+          "headings": [
+            "Une hauteur correspondantene suffit pas."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/",
+          "status": 200,
+          "title": "Lève-mât portatif pour l’éclairage public | volvet",
+          "headings": [
+            "Levage de mâts.En version portable."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/pricing-plan/",
+          "status": 200,
+          "title": "Demander un devis de projet | volvet",
+          "headings": [
+            "Dites-nous ce que vous devez lever."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/privacy/",
+          "status": 200,
+          "title": "Notice de confidentialité | volvet",
+          "headings": [
+            "La confidentialité, en termes simples."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/resources/",
+          "status": 200,
+          "title": "Caractéristiques du produit et documents du projet | volvet",
+          "headings": [
+            "Des caractéristiques à lire.Des questions à résoudre."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Préparer l’installation de mâts pour parkings et campus | volvet",
+          "headings": [
+            "Préparez l’intervention autour du site, au-delà du seul mât."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Préparer l’installation de mâts d’éclairage public solaire | volvet",
+          "headings": [
+            "Commencez par le mât solaire complet."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/terms/",
+          "status": 200,
+          "title": "Conditions du site et des demandes de projet | volvet",
+          "headings": [
+            "D’abord l’information. Les conditions du projet, séparément."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/fr/tools/roi-calculator/",
+          "status": 200,
+          "title": "Calculateur de scénarios de coûts d’installation de mâts | volvet",
+          "headings": [
+            "Calculez un scénario.Conservez les hypothèses."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/guides/",
+          "status": 200,
+          "title": "Pole Installation Guides & Planning Tools | volvet",
+          "headings": [
+            "Choose the nextdecision to resolve."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Installing Light Poles Without a Crane: Methods & Limits | volvet",
+          "headings": [
+            "Without a crane\nstarts with a review."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Pole Lifter Compatibility: Pole, Flange & Foundation | volvet",
+          "headings": [
+            "A matching heightisn't the whole picture."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/about-us/",
+          "status": 200,
+          "title": "Tentang volvet: peralatan dan informasi | volvet",
+          "headings": [
+            "Fakta peralatan. Pertanyaan proyek."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/blog/",
+          "status": 200,
+          "title": "Panduan pemasangan tiang dan alat perencanaan | volvet",
+          "headings": [
+            "Pilih keputusan berikutnyayang perlu diselesaikan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Alat pengangkat tiang dibandingkan derek: panduan pemilihan proyek | volvet",
+          "headings": [
+            "Bandingkan pekerjaannya. Lalu bandingkan biayanya."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/contact-us/",
+          "status": 200,
+          "title": "Hubungi volvet: proyek, distributor, dan dukungan",
+          "headings": [
+            "Percakapan dimulai dari proyek Anda."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/editorial-policy/",
+          "status": 200,
+          "title": "Kebijakan informasi produk dan editorial | volvet",
+          "headings": [
+            "Pahami apa yang didukung informasi."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/equipment/",
+          "status": 200,
+          "title": "Alat pengangkat tiang lampu portabel: spesifikasi dan konfigurasi | volvet",
+          "headings": [
+            "Pengangkattiang lampu portabel."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/faq/",
+          "status": 200,
+          "title": "Pertanyaan alat pengangkat tiang lampu portabel | volvet",
+          "headings": [
+            "Sebelum penawaran.Sebelum pengangkatan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Memasang tiang lampu tanpa derek: metode dan batasan | volvet",
+          "headings": [
+            "Tanpa derek dimulai dengan peninjauan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Kesesuaian alat pengangkat tiang: tiang, flensa, dan fondasi | volvet",
+          "headings": [
+            "Tinggi yang cocokbukan keseluruhan gambaran."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/",
+          "status": 200,
+          "title": "Alat pengangkat tiang lampu portabel untuk penerangan jalan | volvet",
+          "headings": [
+            "Pengangkatan tiang lampu.Kini portabel."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/pricing-plan/",
+          "status": 200,
+          "title": "Minta penawaran proyek | volvet",
+          "headings": [
+            "Jelaskan apa yang perlu diangkat."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/privacy/",
+          "status": 200,
+          "title": "Pemberitahuan privasi | volvet",
+          "headings": [
+            "Privasi dalam bahasa sederhana."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/resources/",
+          "status": 200,
+          "title": "Spesifikasi produk dan dokumen proyek | volvet",
+          "headings": [
+            "Spesifikasi untuk dibaca.Pertanyaan untuk diselesaikan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Perencanaan pemasangan tiang lampu area parkir dan kampus | volvet",
+          "headings": [
+            "Rencanakan berdasarkan lokasi serta tiangnya."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Perencanaan pemasangan tiang lampu tenaga surya | volvet",
+          "headings": [
+            "Mulai dari rakitan tiang surya secara keseluruhan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/terms/",
+          "status": 200,
+          "title": "Ketentuan situs dan permintaan proyek | volvet",
+          "headings": [
+            "Informasi dahulu. Ketentuan proyek dibahas terpisah."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/id/tools/roi-calculator/",
+          "status": 200,
+          "title": "Kalkulator skenario biaya pemasangan tiang | volvet",
+          "headings": [
+            "Hitung sebuah skenario.Catat asumsi yang digunakan."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/",
+          "status": 200,
+          "title": "Portable Light Pole Lifter for Street Lighting | volvet",
+          "headings": [
+            "Light pole lifting.Made portable."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/maximizing-roi-through-proper-care-and-rental-management-of-heavy-machines/",
+          "status": 200,
+          "title": "Pole Installation Cost Planning | volvet",
+          "headings": [
+            "Pole Installation Cost Planning"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/privacy/",
+          "status": 200,
+          "title": "Privacy Notice | volvet",
+          "headings": [
+            "Privacy, in plain terms."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/products/light-pole-jack/",
+          "status": 200,
+          "title": "Portable Light Pole Lifter: Specifications & Configuration | volvet",
+          "headings": [
+            "Portable lightpole lifter."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/project/",
+          "status": 200,
+          "title": "Street Light Pole Installation Applications | volvet",
+          "headings": [
+            "Street Light Pole Installation Applications"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/about-us/",
+          "status": 200,
+          "title": "Sobre a volvet: equipamento e informações | volvet",
+          "headings": [
+            "Dados do equipamento. Questões do projeto."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/blog/",
+          "status": 200,
+          "title": "Guias e ferramentas para planejamento da instalação de postes | volvet",
+          "headings": [
+            "Escolha a próximadecisão a resolver."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Elevador de postes ou guindaste: guia de seleção para projetos | volvet",
+          "headings": [
+            "Compare o trabalho. Depois, compare o custo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/contact-us/",
+          "status": 200,
+          "title": "Contato volvet: consultas de projetos, distribuição e suporte",
+          "headings": [
+            "A conversa começa com seu projeto."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/editorial-policy/",
+          "status": 200,
+          "title": "Informações do produto e política editorial | volvet",
+          "headings": [
+            "Entenda o que as informações permitem concluir."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/equipment/",
+          "status": 200,
+          "title": "Elevador portátil de postes de iluminação: especificações e configuração | volvet",
+          "headings": [
+            "Elevador portátilde postes de iluminação."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/faq/",
+          "status": 200,
+          "title": "Perguntas sobre o elevador portátil de postes de iluminação | volvet",
+          "headings": [
+            "Antes da cotação.Antes da elevação."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Instalação de postes de iluminação sem guindaste: métodos e limites | volvet",
+          "headings": [
+            "Trabalhar sem guindaste começa com uma análise."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Compatibilidade do elevador de postes: poste, flange e fundação | volvet",
+          "headings": [
+            "Uma altura correspondentenão é tudo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/",
+          "status": 200,
+          "title": "Elevador portátil de postes de iluminação pública | volvet",
+          "headings": [
+            "Elevação de postes.Agora portátil."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/pricing-plan/",
+          "status": 200,
+          "title": "Solicitar cotação de projeto | volvet",
+          "headings": [
+            "Conte o que você precisa elevar."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/privacy/",
+          "status": 200,
+          "title": "Aviso de privacidade | volvet",
+          "headings": [
+            "Privacidade, em termos claros."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/resources/",
+          "status": 200,
+          "title": "Especificações do produto e documentos do projeto | volvet",
+          "headings": [
+            "Especificações para consultar.Questões para resolver."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Planejamento da instalação de postes em estacionamentos e campi | volvet",
+          "headings": [
+            "Planeje considerando o local e o poste."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Planejamento da instalação de postes de iluminação pública solar | volvet",
+          "headings": [
+            "Comece pelo poste solar completo."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/terms/",
+          "status": 200,
+          "title": "Termos do site e das consultas de projeto | volvet",
+          "headings": [
+            "Informações primeiro. Condições do projeto à parte."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/pt/tools/roi-calculator/",
+          "status": 200,
+          "title": "Calculadora de cenários de custo para instalação de postes | volvet",
+          "headings": [
+            "Calcule um cenário.Registre as premissas."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/quote/",
+          "status": 200,
+          "title": "Request a Project Quotation | volvet",
+          "headings": [
+            "Tell us what\nyou need to lift."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/resources/",
+          "status": 200,
+          "title": "Product Specifications & Project Documents | volvet",
+          "headings": [
+            "Specifications to read.Questions to resolve."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Parking Lot & Campus Pole Installation Planning | volvet",
+          "headings": [
+            "Plan around the site,\nnot just the pole."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Solar Street Light Pole Installation Planning | volvet",
+          "headings": [
+            "Start with the\ncomplete solar pole."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/terms/",
+          "status": 200,
+          "title": "Website & Project Inquiry Terms | volvet",
+          "headings": [
+            "Information first.\nProject terms, separately."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/about-us/",
+          "status": 200,
+          "title": "เกี่ยวกับ volvet: อุปกรณ์และข้อมูล | volvet",
+          "headings": [
+            "ข้อมูลอุปกรณ์ และคำถามของโครงการ"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/blog/",
+          "status": 200,
+          "title": "คู่มือติดตั้งเสาและเครื่องมือวางแผน | volvet",
+          "headings": [
+            "เลือกประเด็นถัดไปที่ต้องตัดสินใจ"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "เครื่องยกเสาเทียบกับเครน: แนวทางเลือกสำหรับโครงการ | volvet",
+          "headings": [
+            "เปรียบเทียบงาน แล้วจึงเปรียบเทียบต้นทุน"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/contact-us/",
+          "status": 200,
+          "title": "ติดต่อ volvet: โครงการ ผู้จัดจำหน่าย และการสนับสนุน",
+          "headings": [
+            "เริ่มพูดคุยจากโครงการของคุณ"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/editorial-policy/",
+          "status": 200,
+          "title": "นโยบายข้อมูลผลิตภัณฑ์และบรรณาธิการ | volvet",
+          "headings": [
+            "รู้ว่าข้อมูลรองรับอะไร"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/equipment/",
+          "status": 200,
+          "title": "เครื่องยกเสาไฟแบบพกพา: ข้อมูลจำเพาะและรูปแบบอุปกรณ์ | volvet",
+          "headings": [
+            "เครื่องยกเสาไฟแบบพกพา"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/faq/",
+          "status": 200,
+          "title": "คำถามเกี่ยวกับเครื่องยกเสาไฟแบบพกพา | volvet",
+          "headings": [
+            "ก่อนเสนอราคาก่อนยก"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "ติดตั้งเสาไฟโดยไม่ใช้เครน: วิธีและข้อจำกัด | volvet",
+          "headings": [
+            "เริ่มติดตั้งโดยไม่ใช้เครนด้วยการประเมิน"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "ความเข้ากันได้ของเครื่องยกเสา: เสา หน้าแปลน และฐานราก | volvet",
+          "headings": [
+            "ความสูงตรงกันยังไม่ใช่ทั้งหมด"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/",
+          "status": 200,
+          "title": "เครื่องยกเสาไฟแบบพกพาสำหรับไฟถนน | volvet",
+          "headings": [
+            "ยกเสาไฟเคลื่อนย้ายได้สะดวก"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/pricing-plan/",
+          "status": 200,
+          "title": "ขอใบเสนอราคาโครงการ | volvet",
+          "headings": [
+            "แจ้งสิ่งที่คุณต้องยก"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/privacy/",
+          "status": 200,
+          "title": "ประกาศความเป็นส่วนตัว | volvet",
+          "headings": [
+            "ความเป็นส่วนตัว อธิบายตรงไปตรงมา"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/resources/",
+          "status": 200,
+          "title": "ข้อมูลจำเพาะผลิตภัณฑ์และเอกสารโครงการ | volvet",
+          "headings": [
+            "อ่านข้อมูลจำเพาะคำถามที่ต้องตอบ"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "การวางแผนติดตั้งเสาไฟลานจอดรถและพื้นที่อาคาร | volvet",
+          "headings": [
+            "วางแผนตามหน้างานร่วมกับข้อมูลเสา"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "การวางแผนติดตั้งเสาไฟพลังงานแสงอาทิตย์ | volvet",
+          "headings": [
+            "เริ่มจากชุดเสาไฟพลังงานแสงอาทิตย์ทั้งหมด"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/terms/",
+          "status": 200,
+          "title": "ข้อกำหนดเว็บไซต์และคำขอโครงการ | volvet",
+          "headings": [
+            "ข้อมูลก่อน เงื่อนไขโครงการแยกต่างหาก"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/th/tools/roi-calculator/",
+          "status": 200,
+          "title": "เครื่องคำนวณสถานการณ์ต้นทุนการติดตั้งเสา | volvet",
+          "headings": [
+            "คำนวณสถานการณ์เก็บสมมติฐานไว้"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/the-importance-of-regular-inspections-for-heavy-machinery/",
+          "status": 200,
+          "title": "Pole Installation Site Review Checklist | volvet",
+          "headings": [
+            "Pole Installation Site Review Checklist"
+          ],
+          "width": 390
+        },
+        {
+          "path": "/tools/roi-calculator/",
+          "status": 200,
+          "title": "Pole Installation Cost Scenario Calculator | volvet",
+          "headings": [
+            "Calculate a scenario.Keep the assumptions."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/about-us/",
+          "status": 200,
+          "title": "Về volvet: thiết bị và thông tin | volvet",
+          "headings": [
+            "Dữ liệu thiết bị. Câu hỏi dự án."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/blog/",
+          "status": 200,
+          "title": "Hướng dẫn lắp cột và công cụ lập kế hoạch | volvet",
+          "headings": [
+            "Chọn vấn đề tiếp theocần giải quyết."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/compare/pole-jack-vs-crane/",
+          "status": 200,
+          "title": "Máy nâng cột và cần cẩu: hướng dẫn lựa chọn cho dự án | volvet",
+          "headings": [
+            "So sánh công việc. Sau đó so sánh chi phí."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/contact-us/",
+          "status": 200,
+          "title": "Liên hệ volvet: dự án, phân phối và hỗ trợ",
+          "headings": [
+            "Cuộc trao đổi bắt đầu từ dự án của bạn."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/editorial-policy/",
+          "status": 200,
+          "title": "Chính sách thông tin sản phẩm và biên tập | volvet",
+          "headings": [
+            "Hiểu thông tin chứng minh điều gì."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/equipment/",
+          "status": 200,
+          "title": "Máy nâng cột đèn di động: thông số và cấu hình | volvet",
+          "headings": [
+            "Máy nângcột đèn di động."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/faq/",
+          "status": 200,
+          "title": "Câu hỏi về máy nâng cột đèn di động | volvet",
+          "headings": [
+            "Trước báo giá.Trước khi nâng."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/guides/install-light-pole-without-crane/",
+          "status": 200,
+          "title": "Lắp cột đèn không dùng cần cẩu: phương pháp và giới hạn | volvet",
+          "headings": [
+            "Không dùng cần cẩu bắt đầu từ đánh giá."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/guides/pole-jack-compatibility/",
+          "status": 200,
+          "title": "Độ phù hợp máy nâng cột: cột, mặt bích và móng | volvet",
+          "headings": [
+            "Trùng chiều caochưa nói lên tất cả."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/",
+          "status": 200,
+          "title": "Máy nâng cột đèn di động cho chiếu sáng đường | volvet",
+          "headings": [
+            "Nâng cột đèn.Nay có thể di động."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/pricing-plan/",
+          "status": 200,
+          "title": "Yêu cầu báo giá dự án | volvet",
+          "headings": [
+            "Cho biết bạn cần nâng gì."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/privacy/",
+          "status": 200,
+          "title": "Thông báo quyền riêng tư | volvet",
+          "headings": [
+            "Quyền riêng tư, trình bày rõ ràng."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/resources/",
+          "status": 200,
+          "title": "Thông số sản phẩm và tài liệu dự án | volvet",
+          "headings": [
+            "Thông số để tham khảo.Câu hỏi cần giải quyết."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/solutions/parking-lot-lighting/",
+          "status": 200,
+          "title": "Lập kế hoạch lắp đặt cột đèn bãi đỗ xe và khuôn viên | volvet",
+          "headings": [
+            "Lập kế hoạch theo hiện trường, không chỉ theo cột."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/solutions/solar-street-light-installation/",
+          "status": 200,
+          "title": "Lập kế hoạch lắp đặt cột đèn năng lượng mặt trời | volvet",
+          "headings": [
+            "Bắt đầu từ toàn bộ cụm cột năng lượng mặt trời."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/terms/",
+          "status": 200,
+          "title": "Điều khoản trang web và yêu cầu dự án | volvet",
+          "headings": [
+            "Thông tin trước. Điều kiện dự án trao đổi riêng."
+          ],
+          "width": 390
+        },
+        {
+          "path": "/vi/tools/roi-calculator/",
+          "status": 200,
+          "title": "Công cụ tính kịch bản chi phí lắp đặt cột | volvet",
+          "headings": [
+            "Tính một kịch bản.Giữ rõ các giả định."
+          ],
+          "width": 390
+        }
+      ]
+    }
+  }
+}
