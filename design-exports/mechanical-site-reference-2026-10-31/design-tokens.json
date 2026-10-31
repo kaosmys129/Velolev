@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "name": "机械类 B2B 网站设计参考",
+    "version": "2026.10.31",
+    "sourceCommit": "4fe60c7",
+    "sourceState": "包含 2026-10-31 导出时本地未提交的组件更新；不是仅从 Git 提交重建",
+    "scope": "当前代码实值与可迁移的实现建议分别记录",
+    "language": "zh-CN"
+  },
+  "colors": {
+    "ink": {
+      "value": "#1d201e",
+      "label": "碳墨黑",
+      "usage": "正文、标题、数据",
+      "source": "src/styles/procurement.css :root"
+    },
+    "dark": {
+      "value": "#202622",
+      "label": "工业深黑",
+      "usage": "页脚、工具结果面板",
+      "source": "src/styles/procurement.css :root"
+    },
+    "muted": {
+      "value": "#626a63",
+      "label": "灰绿辅助色",
+      "usage": "说明、图注、标签",
+      "source": "src/styles/procurement.css :root"
+    },
+    "paper": {
+      "value": "#f3f2ec",
+      "label": "暖米底色",
+      "usage": "页面主背景",
+      "source": "src/styles/procurement.css :root"
+    },
+    "white": {
+      "value": "#fff",
+      "label": "纯白",
+      "usage": "输入框、局部卡片",
+      "source": "src/styles/procurement.css :root"
+    },
+    "yellow": {
+      "value": "#f4cc3d",
+      "label": "工业明黄",
+      "usage": "主要按钮、选中项",
+      "source": "src/styles/procurement.css :root"
+    },
+    "line": {
+      "value": "#d5d8cd",
+      "label": "结构线",
+      "usage": "边框、参数表、网格",
+      "source": "src/styles/procurement.css :root"
+    },
+    "green": {
+      "value": "#c6ceba",
+      "label": "灰绿展台",
+      "usage": "产品主视觉与图片底板",
+      "source": "src/styles/procurement.css :root"
+    }
+  },
+  "interactionColors": {
+    "button-hover": {
+      "value": "#ffdb59",
+      "usage": "主按钮悬停"
+    },
+    "focus": {
+      "value": "#947500",
+      "usage": "全局键盘焦点"
+    },
+    "input-border": {
+      "value": "#c8cec3",
+      "usage": "询盘表单边框"
+    },
+    "error": {
+      "value": "#a52a20",
+      "usage": "输入错误"
+    },
+    "panel": {
+      "value": "#e6e9de",
+      "usage": "浅色证据面板"
+    },
+    "scope": {
+      "value": "#e5e8dd",
+      "usage": "范围说明底色"
+    }
+  },
+  "typography": {
+    "primary": "Geologica, 'Trebuchet MS', sans-serif",
+    "technical": "'Courier New', monospace",
+    "cjkGuidance": "中文页面应自行配置中文字体；本站 Geologica 文件是 Latin 子集，不是完整中文字体。",
+    "actual": {
+      "hero": {
+        "size": "clamp(40px, 5.7vw, 82px)",
+        "weight": 650,
+        "lineHeight": 1.08,
+        "tracking": "-0.045em"
+      },
+      "pageH1": {
+        "size": "clamp(36px, 5vw, 64px)",
+        "weight": 650,
+        "lineHeight": 1.08,
+        "tracking": "-0.045em"
+      },
+      "sectionH2": {
+        "size": "clamp(30px, 3.6vw, 50px)",
+        "weight": 650,
+        "lineHeight": 1.08,
+        "tracking": "-0.045em"
+      },
+      "cardH3": {
+        "size": "23px",
+        "weight": 650,
+        "lineHeight": 1.08,
+        "tracking": "-0.025em"
+      },
+      "body": {
+        "size": "15px",
+        "lineHeight": 1.65
+      },
+      "lead": {
+        "size": "18px",
+        "mobileSize": "16px",
+        "lineHeight": 1.7
+      },
+      "eyebrow": {
+        "size": "11px",
+        "weight": 650,
+        "tracking": "0.16em",
+        "ruleWidth": "24px"
+      },
+      "specValue": {
+        "size": "36px",
+        "mobileSize": "30px",
+        "lineHeight": 1.2,
+        "tracking": "-0.05em"
+      }
+    },
+    "overrides": {
+      "aboutHero": {
+        "size": "clamp(34px, 4.8vw, 62px)",
+        "lineHeight": 1.12,
+        "tracking": "-0.035em"
+      },
+      "qualityTitle": {
+        "size": "19px",
+        "lineHeight": 1.3
+      },
+      "componentCardTitles": "通常 1.25 行高，独立组件覆盖全局标题。"
+    },
+    "adaptation": {
+      "cjkTracking": "中文/泰文/越南文标题不机械复制拉丁字符负字距，按实际字形测试",
+      "bodyForReading": "内容密集或中文站可采用 16px 正文、1.7-1.8 行高，这是复用建议，非本站原始值"
+    }
+  },
+  "layout": {
+    "maxWidth": "1240px",
+    "headerMaxWidth": "1440px",
+    "wrap": {
+      "above1050": "min(1240px, calc(100% - 96px))",
+      "atOrBelow1050": "calc(100% - 60px)",
+      "atOrBelow760": "calc(100% - 36px)"
+    },
+    "sectionPadding": {
+      "desktop": "90px 0",
+      "mobile": "55px 0"
+    },
+    "standardTwoColumnGap": {
+      "desktop": "70px",
+      "compact": "40px",
+      "mobile": "30px"
+    },
+    "header": {
+      "desktopPadding": "23px 36px",
+      "collapsedAt": "1280px",
+      "collapsedPadding": "20px 24px",
+      "atOrBelow600": "18px"
+    },
+    "breakpoints": {
+      "1280": "导航折叠",
+      "1050": "容器与部分组件收紧",
+      "800": "FAQ/ROI 转单列",
+      "760": "主内容转单列",
+      "600": "页头与询盘表单收紧",
+      "480": "部分表单/质检转单列",
+      "360": "法兰按钮及 KPI 特小屏调整"
+    },
+    "qaViewports": [
+      1440,
+      820,
+      390,
+      320
+    ]
+  },
+  "components": {
+    "button": {
+      "radius": "2px",
+      "padding": "17px 23px",
+      "weight": 600,
+      "border": "1px solid transparent",
+      "height": "auto；15px × 1.65 行高 + 垂直 padding + border，单行约 60.75px；不是固定 54px",
+      "hoverTranslate": "translateY(-2px)",
+      "transition": "background .15s, transform .15s"
+    },
+    "input": {
+      "minHeight": "48px",
+      "radius": "2px",
+      "inquiryBorder": "1px solid #c8cec3",
+      "padding": "13px 14px",
+      "scope": "询盘表单；ROI 输入框边框为 #aeb7a6"
+    },
+    "globalFocus": {
+      "outline": "3px solid #947500",
+      "offset": "5px"
+    },
+    "specStrip": {
+      "columnsDesktop": 4,
+      "columnsMobile": 2,
+      "paddingDesktop": "26px 32px",
+      "paddingMobile": "20px",
+      "divider": "1px solid var(--line)"
+    },
+    "hero": {
+      "grid": "1.05fr / 0.95fr",
+      "gap": "50px",
+      "visualMinHeight": "515px",
+      "blueprintGrid": "52px",
+      "productFit": "contain"
+    },
+    "mediaFigure": {
+      "photoRatio": "3 / 2",
+      "fit": "cover",
+      "caption": "12px / 1.65",
+      "zoomControl": "44px"
+    },
+    "qualityImages": {
+      "ratio": "16 / 10",
+      "columns": "4 → 2 → 1"
+    },
+    "tool": {
+      "layout": "输入 / 结果双列，窄屏单列",
+      "semantics": "状态文字、aria-live、可编辑输入，当前语言的动态结果"
+    },
+    "comparison": {
+      "minTableWidth": "560px",
+      "behavior": "只允许表格容器横向滚动，页面不溢出"
+    },
+    "shadowPolicy": "常规内容以细线为主；主图投影、图片灯箱与语言下拉等功能性浮层可保留阴影。"
+  },
+  "portableRecommendations": {
+    "semanticTokens": "更换 --yellow / --accent 时同步检查对比度，不把原站黄色视为其他品牌的硬要求",
+    "pageSequence": [
+      "产品身份与主要用途",
+      "产品图片与关键参数",
+      "场景收益",
+      "结构与选型",
+      "证据与工厂",
+      "比较或工具",
+      "资料 / 图纸审核 / 询价"
+    ],
+    "responsive": "断点由真实内容长度与语言测试决定，不是按设备名称机械套用"
+  },
+  "i18n": {
+    "locales": [
+      "en",
+      "es",
+      "fr",
+      "pt",
+      "vi",
+      "th",
+      "id"
+    ],
+    "contract": [
+      "同一组件结构，不同语言数据",
+      "正文与 alt/aria-label/图注一致翻译",
+      "浏览器交互文案从当前语言词典读取",
+      "子组件显式接收 locale",
+      "资料下载与询盘路径保留语言",
+      "缺译与占位符异常阻断构建"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-31",
+  "commitBase": "4fe60c7",
+  "workingTree": "includes local uncommitted changes at export time",
+  "sources": [
+    {
+      "path": "maquin-astro-theme/src/styles/procurement.css",
+      "sha256": "110c8777e65658ba508b17c80e5e2c0edc41515fdf2e491623111f25c63fee73"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/LanguageSwitcher.astro",
+      "sha256": "9428baaf7562ccb36090a04d49418c58bb2027abb820144af75276840841a0ee"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/HomePage.astro",
+      "sha256": "06f615fc39f1318f7d94f9d4c0e1bf905c29fa8ac57d2b1e3b4ad9797748df9d"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/ProductPage.astro",
+      "sha256": "55d190ffc952375a918ad5787474db1f9556fb54489d2ee4cbacbafa8fb4bb32"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/AboutUsPage.astro",
+      "sha256": "2cc7ce8610c1371eee82bb8d497d9b93373517ee8aa6957d451943761835000f"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/QualityTestingStrip.astro",
+      "sha256": "0780671904073f44d4cbc2598494d4aeee1ab26b569293153fb3f2649f7ccd42"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/FactoryTourGallery.astro",
+      "sha256": "abc1bdd835205cad18e079d91cf57c39c87a3537ef48253be04aa2004a4607d0"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/TeamGrid.astro",
+      "sha256": "f021a533dc1ab87b33436f067e1d01e359c1222e0790bccb68d31bcd44c399aa"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/FlangeChecker.astro",
+      "sha256": "c938c1898dd33dff7c98dfca499d2f37059c6ea3fbedd121955655a94642fa85"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/ProcurementCtaTier.astro",
+      "sha256": "29482a06891a4b4c650781548ab9f71a25edf332fd7a4692cc7f5939f54adbd5"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/RoiCalculator.astro",
+      "sha256": "4df5dd08f2e30a1ffa3a8606d03d1a7aecad02d9af00ddf4b33fade0988ff207"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/InquiryForm.astro",
+      "sha256": "cc19e606749c2a6f4ed440916875d6755aef2ca18c493390434774e91dd71c11"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/MediaFigure.astro",
+      "sha256": "874b06b8f316dab1df102a1fc3c5ab4c19796e166114e720ad0db6e9ea350d23"
+    },
+    {
+      "path": "maquin-astro-theme/src/components/procurement/EquipmentFilm.astro",
+      "sha256": "0ad33e453d201c4d716b606b7cde2275658623a226bb26b7ab4f816202aa23ef"
+    },
+    {
+      "path": "maquin-astro-theme/src/lib/industrial-localization.mjs",
+      "sha256": "4a28062492a80d64147ec5ce1b652ebb97d103ce5b9489009a563fdab26c738f"
+    }
+  ],
+  "legacyReference": "design-exports/tokens/design-system-spec.md (2026-10-28); current CSS takes precedence",
+  "screenshots": "captured from current Astro dev server on localhost; design examples, not verified product claims"
+}

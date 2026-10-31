@@ -1,0 +1,62 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "h1": {
+    "fontFamily": "Geologica, \"Trebuchet MS\", sans-serif",
+    "fontSize": "82px",
+    "fontWeight": "650",
+    "lineHeight": "88.56px",
+    "letterSpacing": "-3.69px",
+    "padding": "0px",
+    "gap": "normal",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px"
+  },
+  "h2": {
+    "fontFamily": "Geologica, \"Trebuchet MS\", sans-serif",
+    "fontSize": "50px",
+    "fontWeight": "650",
+    "lineHeight": "54px",
+    "letterSpacing": "-2.25px",
+    "padding": "0px",
+    "gap": "normal",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px"
+  },
+  "body": {
+    "fontFamily": "Geologica, \"Trebuchet MS\", sans-serif",
+    "fontSize": "15px",
+    "fontWeight": "400",
+    "lineHeight": "24.75px",
+    "letterSpacing": "normal",
+    "padding": "0px",
+    "gap": "normal",
+    "backgroundColor": "rgb(243, 242, 236)",
+    "borderRadius": "0px"
+  },
+  "button": {
+    "fontFamily": "Geologica, \"Trebuchet MS\", sans-serif",
+    "fontSize": "15px",
+    "fontWeight": "600",
+    "lineHeight": "24.75px",
+    "letterSpacing": "normal",
+    "padding": "17px 23px",
+    "gap": "28px",
+    "backgroundColor": "rgb(244, 204, 61)",
+    "borderRadius": "2px"
+  },
+  "header": {
+    "fontFamily": "Geologica, \"Trebuchet MS\", sans-serif",
+    "fontSize": "15px",
+    "fontWeight": "400",
+    "lineHeight": "24.75px",
+    "letterSpacing": "normal",
+    "padding": "23px 36px",
+    "gap": "35px 22px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px"
+  },
+  "containerWidth": 1240
+}

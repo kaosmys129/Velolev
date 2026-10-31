@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-31",
+  "passed": true,
+  "pages": 9,
+  "printBounds": [
+    {
+      "page": 1,
+      "contentBottom": 882,
+      "footerTop": 1061,
+      "clearance": 179,
+      "scrollHeight": 1123,
+      "height": 1123
+    },
+    {
+      "page": 2,
+      "contentBottom": 845,
+      "footerTop": 1061,
+      "clearance": 216,
+      "scrollHeight": 1123,
+      "height": 1123
+    },
+    {
+      "page": 3,
+      "contentBottom": 839,
+      "footerTop": 1061,
+      "clearance": 221,
+      "scrollHeight": 1123,
+      "height": 1123
+    },
+    {
+      "page": 4,
+      "contentBottom": 874,
+      "footerTop": 1061,
+      "clearance": 186,
+      "scrollHeight": 1123,
+      "height": 1123
+    },
+    {
+      "page": 5,
+      "contentBottom": 994,
+      "footerTop": 1061,
+      "clearance": 66,
+      "scrollHeight": 1123,
+      "height": 1123
+    },
+    {
+      "page": 6,
+      "contentBottom": 1001,
+      "footerTop": 1061,
+      "clearance": 60,
+      "scrollHeight": 1123,
+      "height": 1123
+    },
+    {
+      "page": 7,
+      "contentBottom": 868,
+      "footerTop": 1061,
+      "clearance": 192,
+      "scrollHeight": 1123,
+      "height": 1123
+    },
+    {
+      "page": 8,
+      "contentBottom": 668,
+      "footerTop": 1061,
+      "clearance": 393,
+      "scrollHeight": 1123,
+      "height": 1123
+    },
+    {
+      "page": 9,
+      "contentBottom": 931,
+      "footerTop": 1061,
+      "clearance": 129,
+      "scrollHeight": 1123,
+      "height": 1123
+    }
+  ],
+  "screenChecks": [
+    {
+      "width": 1440,
+      "noOverflow": true
+    },
+    {
+      "width": 820,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "noOverflow": true
+    },
+    {
+      "width": 320,
+      "noOverflow": true
+    }
+  ],
+  "imagesLoaded": true,
+  "pdfPagesVerified": 9,
+  "visualReview": "All 9 final rendered PDF pages inspected; no clipping, missing glyphs, or overlaps.",
+  "sourceWebsiteModified": false
+}
