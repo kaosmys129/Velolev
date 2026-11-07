@@ -169,12 +169,10 @@
   └────────────────────────────────────────────────────────────────────────┘
 ```
 
-1. **Root Directory (根目录设定 - 极其关键)**：
+1. **Root Directory (根目录设定)**：
    - 界面默认可能指向仓库根目录 `./`。
-   - 点击 **Root Directory** 右侧的 **"Edit"** 按钮；
-   - 在选择框中显式选定子目录：**`maquin-astro-theme`**；
-   - 点击 **"Continue"** 保存。
-   - *说明*：核心 Astro 工程位于 `maquin-astro-theme`，将 Root Directory 定位于此可确保构建钩子、依赖锁定与门禁脚本 100% 按照设计执行。
+   - **推荐方案**：点击 **Root Directory** 右侧的 **"Edit"** 按钮，在选择框中选定子目录：**`maquin-astro-theme`**，点击 **"Continue"** 保存。核心 Astro 工程直接就地构建。
+   - **双保容错方案**：若未修改 Root Directory 保持默认根目录 `./`，根目录 `vercel.json` 与 `package.json` 已内建 `"installCommand": "npm --prefix maquin-astro-theme install"` 与 `postinstall` 自动安装钩子，构建完成后自动同步至根目录 `dist/`，双向保证云端 100% 顺畅构建上线。
 2. **Framework Preset (框架预设)**：
    - 确认识别为 **Astro**。
 3. **Node.js Version (运行时版本约束)**：

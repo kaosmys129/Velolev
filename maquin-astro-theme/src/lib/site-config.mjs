@@ -5,7 +5,10 @@ import localizedArticles from "../data/published-content-locales.json" with {typ
 const registeredArticles = new Set(Object.values(localizedArticles).flatMap(o => Object.keys(o)));
 export function publicOrigin(value = process.env.PUBLIC_SITE_URL || baseline.deployment.publicOrigin) {
   if(!value)return null;
-  const url=new URL(value);
+  const raw = String(value).trim();
+  const normalized = raw ? raw.replace(/\/+$/, '') : '';
+  if(!normalized)return null;
+  const url=new URL(normalized);
   if(url.protocol!=="https:"||url.username||url.password||url.pathname!=="/"||url.search||url.hash)throw new Error("Configure an HTTPS origin without credentials, path, query or hash.");
   return url.origin;
 }
