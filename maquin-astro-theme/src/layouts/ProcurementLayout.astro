@@ -2,30 +2,75 @@
 import baseline from "../data/content-baseline.json";
 import {publicOrigin,canonicalUrl,corePages,coreAlternates,industrialLocales,localizePath,localizedPagePath} from "../lib/site-config.mjs";
 import {localizeMarkup,translateText} from "../lib/industrial-localization.mjs";
-import {productSchema, organizationSchema, faqSchema} from "../utils/contentPolicy.mjs";
-import {procurementFaq} from "../data/decision-content.mjs";
+import {productSchema, organizationSchema} from "../utils/contentPolicy.mjs";
 import copies from "../data/inquiry-copy.json";
 import HeaderDiscovery from "../components/procurement/HeaderDiscovery.astro";
 import LanguageSwitcher from "../components/LanguageSwitcher.astro";
 import "../styles/procurement.css";
 import MediaLightbox from "../components/procurement/MediaLightbox.astro";
-const {page="home",locale="en",article=null,errorPage=false,title: customTitle,description: customDescription}=Astro.props;
+const {page="home",locale="en",article=null,errorPage=false,title: customTitle,description: customDescription,extraSchemas=[]}=Astro.props;
 const current=Object.hasOwn(copies,locale)?locale:"en";
 const formCopy=copies[current];
 const unified=industrialLocales.includes(current),t=(value)=>translateText(value,current);
 const content=localizeMarkup(await Astro.slots.render("default"),current);
 const meta=article??corePages[page];
-const alternates=errorPage?[]:article?[{lang:"en",path:article.path}]:coreAlternates(page);
+const alternates=errorPage?[]:article?(article.alternates??[{lang:"en",path:article.path}]):coreAlternates(page);
 const path=alternates.find(a=>a.lang===current)?.path??meta.path;
 const origin=publicOrigin(),canonical=errorPage?null:canonicalUrl(path,origin);
 const title=customTitle??(current==="en"||unified?t(meta.title):`${formCopy.title} | volvet`);
 const description=customDescription??(current==="en"||unified?t(meta.description):formCopy.contactPending);
-const image="/images/product/portable-pole-lifter-hero-cutout.png";
+const image=article?.heroCoverImage||"/images/product/portable-pole-lifter-hero-cutout.png";
 const ui={en:["The equipment","Check compatibility","Contact","Request a quote","Menu"],es:["El equipo","Compatibilidad","Contacto","Solicitar cotización","Menú"],fr:["L’équipement","Compatibilité","Contact","Demander un devis","Menu"],pt:["O equipamento","Compatibilidade","Contato","Solicitar cotação","Menu"],vi:["Thiết bị","Độ phù hợp","Liên hệ","Yêu cầu báo giá","Menu"],th:["อุปกรณ์","ความเข้ากันได้","ติดต่อ","ขอใบเสนอราคา","เมนู"],id:["Peralatan","Kesesuaian","Kontak","Minta penawaran","Menu"]}[current];
 const homePath=localizedPagePath("home",current),productPath=localizedPagePath("product",current),contactPath=localizedPagePath("contact",current),quotePath=localizedPagePath("quote",current);
 const aboutPath=current==="en"?"/about-us/":`/${current}/about-us/`;
 const aboutLabel={en:"About us",es:"Nosotros",fr:"À propos",pt:"Sobre nós",vi:"Giới thiệu",th:"เกี่ยวกับเรา",id:"Tentang kami"}[current];
-const organization=organizationSchema(origin);
+const organization=organizationSchema(origin,current);
+
+const websiteSchema = page === "home" ? {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "volvet",
+  url: origin || "/",
+  inLanguage: current
+} : null;
+
+const breadcrumbItems = [
+  {
+    "@type": "ListItem",
+    position: 1,
+    name: current === "en" ? "Home" : t("Home"),
+    item: origin ? `${origin}${homePath}` : homePath
+  }
+];
+if ((page === "guides" || page === "guide-article") && article) {
+  const guidesPath = localizedPagePath("guides", current) || "/guides/";
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    position: 2,
+    name: current === "en" ? "Guides" : t("Guides"),
+    item: origin ? `${origin}${guidesPath}` : guidesPath
+  });
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    position: 3,
+    name: title.replace(/\s*\|\s*volvet.*$/i, "").trim(),
+    item: origin ? (canonical || `${origin}${path}`) : path
+  });
+} else if (page !== "home" && !errorPage) {
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    position: 2,
+    name: title.replace(/\s*\|\s*volvet.*$/i, "").trim(),
+    item: origin ? (canonical || `${origin}${path}`) : path
+  });
+}
+const breadcrumbSchema = (page !== "home" && !errorPage) ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbItems
+} : null;
+
+const lcpImage = article?.heroCoverImage || (page === "home" || page === "product" ? image : null);
 ---
 <!doctype html>
 <html lang={current}>
@@ -38,12 +83,23 @@ const organization=organizationSchema(origin);
     {origin&&!errorPage&&<link rel="alternate" hreflang="x-default" href={canonicalUrl(meta.path,origin)}/>}
     <link rel="icon" href="/brand/volvet-wordmark.svg" type="image/svg+xml"/>
     <link rel="preload" href="/fonts/geologica-latin.woff2" as="font" type="font/woff2" crossorigin/>
-    <meta property="og:site_name" content="volvet"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/>
+    {lcpImage&&<link rel="preload" as="image" href={lcpImage} fetchpriority="high"/>}
+    <meta property="og:site_name" content="volvet"/>
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:type" content={page==="guides"||article?"article":"website"}/>
+    <meta property="og:locale" content={current}/>
     {canonical&&<meta property="og:url" content={canonical}/>}
     <meta property="og:image" content={origin?new URL(image,origin).href:image}/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content={title}/>
+    <meta name="twitter:description" content={description}/>
+    <meta name="twitter:image" content={origin?new URL(image,origin).href:image}/>
     <script type="application/ld+json" set:html={JSON.stringify(organization)}/>
-    {page==="product"&&<script type="application/ld+json" set:html={JSON.stringify(productSchema(origin,origin?new URL(image,origin).href:image,path))}/>}
-    {page==="faq"&&<script type="application/ld+json" set:html={JSON.stringify(faqSchema(procurementFaq,t))}/>}
+    {websiteSchema&&<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}/>}
+    {breadcrumbSchema&&<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}/>}
+    {page==="product"&&<script type="application/ld+json" set:html={JSON.stringify(productSchema(origin,origin?new URL(image,origin).href:image,path,current))}/>}
+    {extraSchemas.map(s=><script type="application/ld+json" set:html={JSON.stringify(s)}/>)}
   </head>
   <body class={`procurement page-${page}`}>
     <a href="#main" class="skip-link">{t("Skip to content")}</a>

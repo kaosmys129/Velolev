@@ -1,0 +1,222 @@
+---
+/**
+ * volvet 工业机械 - 邮件订阅组件
+ * 支持 7 种语言切换，完全适配采购设计系统 (Procurement Industrial Design System)
+ */
+import { translateText } from "../../lib/industrial-localization.mjs";
+
+interface Props {
+  locale?: string;
+  sourcePage?: string;
+}
+
+const { locale = "en", sourcePage = "/resources/" } = Astro.props;
+const t = (val: string) => translateText(val, locale);
+
+const copy = {
+  eyebrow: t("Engineering updates"),
+  title: t("Technical Digest & Equipment Bulletins"),
+  desc: t("Subscribe to periodic engineering reports on flange compatibility, lifting mechanics, and zero-crane cost scenario data."),
+  placeholder: t("Enter your business email"),
+  button: t("Subscribe"),
+  sending: t("Subscribing..."),
+  successTitle: t("Subscription Confirmed"),
+  successMsg: t("Thank you. You will receive technical updates and equipment whitepapers at your email address."),
+  errorMsg: t("Could not complete subscription. Please enter a valid email address and try again."),
+  privacyNote: t("No marketing spam. Unsubscribe anytime with one click.")
+};
+---
+
+<section class="newsletter-subscription" data-newsletter-module>
+  <div class="newsletter-inner">
+    <div class="newsletter-header">
+      <span class="kicker"><span>04 / </span><span>{copy.eyebrow}</span></span>
+      <h2>{copy.title}</h2>
+      <p class="muted">{copy.desc}</p>
+    </div>
+
+    <form class="newsletter-form" data-newsletter-form action="/api/subscribe" method="post">
+      <div class="trap" aria-hidden="true">
+        <label for="newsletter-website">Website</label>
+        <input id="newsletter-website" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <div class="input-row">
+        <input
+          type="email"
+          name="email"
+          class="newsletter-input"
+          placeholder={copy.placeholder}
+          required
+          maxlength="254"
+          autocomplete="email"
+          aria-label={copy.placeholder}
+        />
+        <button type="submit" class="button newsletter-button">
+          <span>{copy.button}</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <p class="newsletter-status" data-newsletter-status role="status" aria-live="polite"></p>
+      <p class="note" style="margin-top:12px;">{copy.privacyNote}</p>
+    </form>
+
+    <div class="newsletter-success" data-newsletter-success hidden aria-live="polite">
+      <span class="success-icon" aria-hidden="true">✓</span>
+      <h3>{copy.successTitle}</h3>
+      <p class="muted">{copy.successMsg}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .newsletter-subscription {
+    background: #e8ebdf;
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--yellow);
+    padding: 48px;
+    margin: 60px 0 20px;
+    border-radius: 2px;
+  }
+  .newsletter-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .newsletter-header h2 {
+    font-size: clamp(24px, 2.5vw, 34px);
+    margin: 12px 0 16px;
+    color: var(--ink);
+  }
+  .input-row {
+    display: flex;
+    gap: 12px;
+  }
+  .newsletter-input {
+    flex: 1;
+    min-height: 48px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #b5bfae;
+    border-radius: 2px;
+    color: var(--ink);
+    font: inherit;
+  }
+  .newsletter-input:focus {
+    outline: 2px solid #a08216;
+    outline-offset: 2px;
+  }
+  .newsletter-button {
+    white-space: nowrap;
+    padding: 12px 24px;
+    min-height: 48px;
+  }
+  .newsletter-status {
+    font-size: 13px;
+    color: #a52a20;
+    margin-top: 10px;
+  }
+  .newsletter-status.is-success {
+    color: #2e6930;
+  }
+  .trap {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .newsletter-success {
+    background: #f7f9f3;
+    border: 1px solid #ced5c6;
+    padding: 24px;
+    border-radius: 2px;
+  }
+  .newsletter-success[hidden] {
+    display: none;
+  }
+  .success-icon {
+    font-size: 28px;
+    color: #2e6930;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .newsletter-success h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  @media (max-width: 800px) {
+    .newsletter-subscription {
+      padding: 30px 20px;
+    }
+    .newsletter-inner {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .input-row {
+      flex-direction: column;
+    }
+    .newsletter-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  for (const module of document.querySelectorAll<HTMLElement>("[data-newsletter-module]")) {
+    const form = module.querySelector<HTMLFormElement>("[data-newsletter-form]")!;
+    const input = form.querySelector<HTMLInputElement>('input[name="email"]')!;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const status = module.querySelector<HTMLElement>("[data-newsletter-status]")!;
+    const success = module.querySelector<HTMLElement>("[data-newsletter-success]")!;
+    const locale = document.documentElement.lang || "en";
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = input.value.trim();
+      if (!email) return;
+
+      const websiteTrap = (form.elements.namedItem("website") as HTMLInputElement)?.value;
+      if (websiteTrap) return;
+
+      button.disabled = true;
+      status.textContent = "";
+      status.className = "newsletter-status";
+
+      try {
+        const res = await fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            locale,
+            sourcePage: location.pathname
+          })
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          status.textContent = data.error?.message || "Subscription failed. Please check your email.";
+          return;
+        }
+
+        form.hidden = true;
+        success.hidden = false;
+        document.dispatchEvent(new CustomEvent("volvet:subscription-submitted", {
+          detail: { email, locale, page: location.pathname }
+        }));
+      } catch (err) {
+        status.textContent = "Network error. Please try again later.";
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+</script>

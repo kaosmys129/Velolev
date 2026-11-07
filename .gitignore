@@ -19,3 +19,20 @@ dist/
 
 # Local, verified pre-retirement recovery bundles
 archives/*.tar.gz
+ops/geoflow/private/
+.env.geoflow
+
+# Local agent, IDE and testing temporary artifacts
+.agents/
+.trae/
+.workbuddy/
+tmp/
+qa-screenshots/
+output/playwright/
+*.zip
+!design-exports/*.zip
+
+# Standalone services / sub-repositories
+geoflow/
+
+

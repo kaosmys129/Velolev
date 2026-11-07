@@ -1,0 +1,12 @@
+---
+import GuideArticlePage from "../../../components/procurement/GuideArticlePage.astro";
+import {loadPublishedSnapshot} from "../../../lib/reviewed-snapshot.mjs";
+
+export function getStaticPaths(){
+  const articles=loadPublishedSnapshot().articles;
+  return ["vi","th","id"].flatMap(lang=>articles.map(article=>({params:{lang,slug:article.slug},props:{article,locale:lang}})));
+}
+
+const {article,locale}=Astro.props;
+---
+<GuideArticlePage article={article} locale={locale}/>

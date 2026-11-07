@@ -1,0 +1,26 @@
+{
+  "article": "geo-drafts/articles/portable-light-pole-lifter-explainer-es.md",
+  "slug": "portable-light-pole-lifter-explainer-es",
+  "locale": "es",
+  "title": "Elevador Hidráulico Portátil para Postes de Luz: Arquitectura Técnica, Compatibilidad de Bridas y Guía de Selección",
+  "theme": "nordic-light-industrial",
+  "context_type": "highway",
+  "coordinates": "32°03'18.2\"N 118°47'39.1\"E",
+  "project_tag": "HIGHWAY CORRIDOR · ZERO-CRANE ACCESS",
+  "specific_context": "intercity highway road shoulder with protective guardrails and crash cushions, eliminating 16-ton crane lane blockage",
+  "google_flow_mcp": {
+    "tool": "flow_generate_image",
+    "server": "google-flow",
+    "parameters": {
+      "prompt": "Cinematic, bright daylight, Scandinavian architectural documentary engineering photography of the volvet portable light pole lifter rig operating on site. Subject: A heavy-duty, compact industrial fluid-power pole lifter machine with a telescoping hydraulic lift column (finished in industrial safety orange and graphite grey), firmly bolted to a concrete foundation base with heavy galvanized anchor bolts. A secondary mechanical safety lock pin is clearly visible on the hydraulic mast. Action & Crew: Two professional utility electricians wearing clean fluorescent high-visibility safety vests (EN ISO 20471 compliant) and hard hats are working collaboratively. One technician operates the handheld ergonomic remote control pendant, while the second technician observes at a 45-degree vantage angle to ensure clearance. A standard 10-meter octagonal galvanized steel street lighting pole is tilting steadily upward from 0 to 45 degrees towards the vertical position. Setting & Environment: intercity highway road shoulder with protective guardrails and crash cushions, eliminating 16-ton crane lane blockage. Bright morning natural sunlight, clear blue sky, clean pale concrete pavement and curb alignment. Clean site logistics. Noticeably NO large mobile cranes, NO 16-ton boom trucks, NO extended outriggers blocking traffic, leaving the street lane completely open and unobstructed. Style & Lighting: Clean Scandinavian light industrial aesthetic, high-key photography, shot on Hasselblad H6D-100c medium format camera with 50mm f/4 prime lens. Warm morning daylight casting soft, realistic shadows on light-toned pavement. Crisp engineering details, authentic mechanical textures, shallow depth of field, 8K resolution, ultra-detailed, photorealistic editorial style, award-winning industrial design showcase, zero AI cartoonish artifacts, no dark gritty shadows, no text watermark.",
+      "reference_images": [
+        "/Users/peterpc/Documents/liftpolemachine-web/portable-pole-lifter-side-master.png"
+      ],
+      "model": "Nano Banana 2",
+      "ratio": "16:9",
+      "auto_confirm": true,
+      "output_folder": "/Users/peterpc/Documents/liftpolemachine-web/geo-drafts/articles/images/portable-light-pole-lifter-explainer-es"
+    }
+  },
+  "generated_at": "2026-11-02T13:35:46.436Z"
+}

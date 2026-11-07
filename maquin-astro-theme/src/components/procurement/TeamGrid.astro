@@ -42,142 +42,27 @@ const teamCopy={reviewStatus:data.reviewStatus,footerNote:data.footerNote};
 </section>
 
 <style>
-  .team-grid-section {
-    padding: 90px 0;
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .section-head {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: end;
-    margin-bottom: 50px;
-  }
-
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-  }
-
-  .team-card {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 2px;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    max-width: 100%;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .team-card:hover {
-    border-color: var(--yellow);
-    transform: translateY(-2px);
-  }
-
-  .card-header {
-    background: #eef0ea;
-    border-bottom: 1px solid var(--line);
-    padding: 12px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .role-code {
-    font-family: 'Courier New', SFMono-Regular, monospace;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: 0.05em;
-  }
-
-  .review-status {
-    font-family: 'Courier New', SFMono-Regular, monospace;
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-  }
-
-  .card-content {
-    padding: 24px 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-
-  .role-title {
-    font-size: 19px;
-    font-weight: 650;
-    line-height: 1.35;
-    margin-bottom: 14px;
-    color: var(--ink);
-    overflow-wrap: anywhere;
-  }
-
-  .role-scope {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
-    flex-grow: 1;
-    overflow-wrap: anywhere;
-  }
-
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: auto;
-  }
-
-  .skill-tag {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--ink);
-    padding: 4px 8px;
-    border-radius: 2px;
-    white-space: nowrap;
-  }
-
-  .card-footer {
-    background: #fafaf8;
-    border-top: 1px solid var(--line);
-    padding: 12px 20px;
-  }
-
-  .footer-note {
-    font-size: 11px;
-    color: var(--muted);
-    line-height: 1.4;
-    display: block;
-  }
-
-  @media (max-width: 1050px) {
-    .section-head {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .team-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-  }
-
-  @media (max-width: 760px) {
-    .team-grid-section {
-      padding: 55px 0;
-    }
-
-    .team-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-  }
+.team-grid-section{padding:90px 0;background:var(--paper);border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:50px}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.team-card{background:var(--white);border:1px solid var(--line);border-radius:2px;display:flex;flex-direction:column;min-width:0;max-width:100%;transition:transform .2s ease,border-color .2s ease}
+.team-card:hover{border-color:var(--yellow);transform:translateY(-2px)}
+.card-header{background:#eef0ea;border-bottom:1px solid var(--line);padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+.role-code{font:700 13px 'Courier New',monospace;color:var(--ink);letter-spacing:.05em}
+.review-status{font:600 10px 'Courier New',monospace;color:var(--muted);letter-spacing:.06em}
+.card-content{padding:24px 20px;display:flex;flex-direction:column;flex-grow:1}
+.role-title{font-size:19px;font-weight:650;line-height:1.35;margin-bottom:14px;color:var(--ink);overflow-wrap:anywhere}
+.role-scope{font-size:14px;line-height:1.6;margin:0 0 20px;flex-grow:1;overflow-wrap:anywhere}
+.skills-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.skill-tag{background:var(--paper);border:1px solid var(--line);font-size:12px;font-weight:500;color:var(--ink);padding:4px 8px;border-radius:2px;white-space:nowrap}
+.card-footer{background:#fafaf8;border-top:1px solid var(--line);padding:12px 20px}
+.footer-note{font-size:11px;color:var(--muted);line-height:1.4;display:block}
+@media(max-width:1050px){
+.section-head{grid-template-columns:1fr;gap:20px}
+.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+}
+@media(max-width:760px){
+.team-grid-section{padding:55px 0}
+.team-grid{grid-template-columns:1fr;gap:16px}
+}
 </style>

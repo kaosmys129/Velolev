@@ -1,9 +1,9 @@
 {
-  "sourceDigest": "ad798f5033c1de7e090d566e2cb7893db47f39527fc61e885a75947b40391d77",
+  "sourceDigest": "8d6666de0e1fc942df68aadec30e1ba99cc2eb996a5033fca7e0e12224efdfa1",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "date": "2026-10-28",
   "stage": "D31-D60",
-  "mode": "configured-origin-fixture",
+  "mode": "configured-origin-production",
   "passed": true,
   "checks": [
     {
@@ -2983,19 +2983,71 @@
       "passed": true
     },
     {
-      "name": "about: linked resource /images/product/portable-pole-lifter-hero-cutout.png",
+      "name": "about: linked resource /images/factory/cnc-machining-center.jpg",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/evidence/equipment-trolley-side-detail.jpg",
+      "name": "about: linked resource /images/factory/hydraulic-cylinder-assembly.jpg",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/evidence/field-installation-flange-erect.jpg",
+      "name": "about: linked resource /images/factory/welding-robot-rig.jpg",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/evidence/factory-crating-export-package.jpg",
+      "name": "about: linked resource /images/factory/flange-base-machining.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/factory/electrical-cabinet-assembly.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/quality/ultrasonic-flaw-detector.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/quality/hydraulic-pressure-test-bench.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/quality/vertical-proof-load-test-rig.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/packaging/export-wooden-crating-rig.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/quality/metal-hardness-tester.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/quality/digital-calipers-alignment.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/quality/coating-thickness-gauge.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/quality/battery-charge-discharge-tester.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/quality/electrical-safety-test-station.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/packaging/industrial-vacuum-sealer.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/packaging/strapping-tensioner-rig.jpg",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /images/packaging/eva-foam-cnc-router.jpg",
       "passed": true
     },
     {
@@ -3419,6 +3471,10 @@
       "passed": true
     },
     {
+      "name": "guides: linked resource /guides/install-12m-street-light-poles-without-crane/",
+      "passed": true
+    },
+    {
       "name": "guides: linked resource /quote/",
       "passed": true
     },
@@ -3807,7 +3863,7 @@
       "passed": true
     },
     {
-      "name": "home: linked resource /guides/pole-jack-compatibility/",
+      "name": "home: linked resource /tools/roi-calculator/",
       "passed": true
     },
     {
@@ -3840,6 +3896,14 @@
     },
     {
       "name": "home: linked resource /images/evidence/jobsite-rural-solar-street-light.jpg",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /resources/volvet-specifications.csv",
       "passed": true
     },
     {
@@ -4251,6 +4315,14 @@
       "passed": true
     },
     {
+      "name": "product: linked resource /resources/volvet-specifications.csv",
+      "passed": true
+    },
+    {
+      "name": "product: linked resource /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
       "name": "product: linked resource /quote/",
       "passed": true
     },
@@ -4636,6 +4708,22 @@
     },
     {
       "name": "compatibility: linked resource /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /resources/volvet-specifications.csv",
+      "passed": true
+    },
+    {
+      "name": "compatibility: linked resource /guides/pole-jack-compatibility/",
       "passed": true
     },
     {

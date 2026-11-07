@@ -1,0 +1,80 @@
+{
+  "report_id": "polelift-execution-roadmap-20260710",
+  "skill": "yao-geo-execution-roadmap",
+  "generated_at": "2026-07-10",
+  "diagnosis_basis": ["yao-geo-panorama-audit", "yao-geo-page-audit"],
+  "target_site": "PoleLift (polelift.com)",
+  "scope": "30/60/90 day execution roadmap",
+  "artifacts": {
+    "markdown": {"exists": true, "path": "polelift-execution-roadmap.md", "status": "passed"},
+    "html": {"exists": true, "path": "polelift-execution-roadmap.html", "status": "passed"},
+    "docx": {"exists": true, "path": "polelift-execution-roadmap.docx", "status": "passed"},
+    "pdf": {"exists": true, "path": "polelift-execution-roadmap.pdf", "status": "passed"}
+  },
+  "layout_checks": {
+    "html_kami_style": {
+      "warm_paper_background": true,
+      "ink_blue_accent_1B365D": true,
+      "serif_headings": true,
+      "sans_body": true,
+      "compact_line_height_1.55": true,
+      "no_dark_header_background": true,
+      "status": "passed"
+    },
+    "html_sticky_menu": {
+      "exists": true,
+      "position_sticky": true,
+      "follows_scroll": true,
+      "covers_all_sections": true,
+      "print_hidden": true,
+      "mobile_scrollable": true,
+      "status": "passed"
+    },
+    "word_table_no_overflow": {
+      "max_columns": 5,
+      "total_width_controlled": true,
+      "status": "passed"
+    },
+    "pdf_format": {
+      "format": "A4",
+      "margins": "15mm",
+      "status": "passed"
+    }
+  },
+  "completeness_checks": {
+    "diagnosis_handover": true,
+    "real_data_capability_plan": true,
+    "ten_dimension_matrix": true,
+    "evidence_maturity_abcde": true,
+    "north_star_metrics": true,
+    "six_project_packages": true,
+    "90_day_timeline": true,
+    "five_platform_adaptation": true,
+    "role_acceptance_metrics": true,
+    "resource_budget_priority": true,
+    "monitoring_governance": true,
+    "risk_mitigation_7items": true,
+    "source_ledger": true,
+    "self_check_record": true,
+    "total_modules": 15
+  },
+  "checklist": [
+    {"item": "四件套存在且可打开", "status": "pass"},
+    {"item": "承接两轮诊断数据（全部P0/P1）", "status": "pass"},
+    {"item": "十维分析完整性矩阵", "status": "pass"},
+    {"item": "证据成熟度A/B/C/D/E分级", "status": "pass"},
+    {"item": "六个项目包含目标+任务+步骤+交付+验收+依赖+时程", "status": "pass"},
+    {"item": "30/60/90天路线图", "status": "pass"},
+    {"item": "DeepSeek/豆包/千问/Kimi/元宝五平台差异", "status": "pass"},
+    {"item": "角色分工+验收指标+预估投入", "status": "pass"},
+    {"item": "资源预算+优先级取舍", "status": "pass"},
+    {"item": "监测闭环+治理决策机制", "status": "pass"},
+    {"item": "7项风险预案含触发信号", "status": "pass"},
+    {"item": "来源台账10条", "status": "pass"},
+    {"item": "HTML Kami风格（暖纸+油墨蓝+serif标题+紧凑行距）", "status": "pass"},
+    {"item": "HTML sticky菜单覆盖全部章节", "status": "pass"},
+    {"item": "Word表格式固定宽度", "status": "pass"},
+    {"item": "四格式内容一致性", "status": "pass"},
+    {"item": "中文简体输出", "status": "pass"}
+  ]
+}

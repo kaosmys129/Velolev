@@ -1,0 +1,718 @@
+{
+  "timestamp": "2026-10-29T12:35:00Z",
+  "verdict": "APPROVE",
+  "overall_concept_cov": 100.0,
+  "overall_exact_quote_cov": 43.3,
+  "overall_semantic_quote_cov": 93.3,
+  "cross_reference_total": 147,
+  "cross_references": {
+    "Article 1 (实体/信任/AboutUs)": 33,
+    "Article 2 (Product-Led SEO/数据资产)": 14,
+    "Article 3 (工具页/ROI计算器/决策杠杆)": 37,
+    "Article 4 (五大判断/产品页/买家认知)": 31,
+    "Article 5 (FAB转换/好处/翻译词典)": 32
+  },
+  "code_grounding_verified": true,
+  "articles": {
+    "Article_1": {
+      "title": "一个好的 About Us 页面，应该让客户和 AI 都知道你是谁",
+      "concepts": [
+        {
+          "id": "A1_C1",
+          "name": "企业实体构建 (Entity Construction / Schema)",
+          "covered": true,
+          "matched_keywords": [
+            "实体",
+            "Entity",
+            "企业实体",
+            "Organization",
+            "Schema"
+          ]
+        },
+        {
+          "id": "A1_C2",
+          "name": "提供信任证明 (Manufacturing Proof / Evidence)",
+          "covered": true,
+          "matched_keywords": [
+            "信任证明",
+            "实证",
+            "测试台",
+            "保压",
+            "工序",
+            "车间",
+            "质检"
+          ]
+        },
+        {
+          "id": "A1_C3",
+          "name": "访客导流与分流 (Routing Funnel)",
+          "covered": true,
+          "matched_keywords": [
+            "导流",
+            "分流",
+            "Routing",
+            "分流导向",
+            "采购阶段"
+          ]
+        },
+        {
+          "id": "A1_C4",
+          "name": "四大反模式警示 (Anti-patterns)",
+          "covered": true,
+          "matched_keywords": [
+            "层级",
+            "历史",
+            "未翻译",
+            "套话",
+            "地点失语"
+          ]
+        },
+        {
+          "id": "A1_C5",
+          "name": "GEO/AI 实体卡结构 (Entity Card)",
+          "covered": true,
+          "matched_keywords": [
+            "事实而非形容词",
+            "实体定义的法则"
+          ]
+        }
+      ],
+      "exact_quotes": [
+        {
+          "quote": "About Us 页面不是企业简历",
+          "exact_matched": false
+        },
+        {
+          "quote": "建立企业实体",
+          "exact_matched": true
+        },
+        {
+          "quote": "提供信任证明",
+          "exact_matched": true
+        },
+        {
+          "quote": "把访客导向正确页面",
+          "exact_matched": false
+        },
+        {
+          "quote": "地点没有角色",
+          "exact_matched": false
+        },
+        {
+          "quote": "形容词要换成事实",
+          "exact_matched": false
+        }
+      ],
+      "semantic_quotes": [
+        {
+          "quote": "About Us 页面不是企业简历",
+          "semantic_matched": true,
+          "matched_variants": [
+            "自嗨式编年简历"
+          ]
+        },
+        {
+          "quote": "建立企业实体",
+          "semantic_matched": true,
+          "matched_variants": [
+            "建立企业实体",
+            "企业实体"
+          ]
+        },
+        {
+          "quote": "提供信任证明",
+          "semantic_matched": true,
+          "matched_variants": [
+            "提供信任证明",
+            "信任证明",
+            "信任事实"
+          ]
+        },
+        {
+          "quote": "把访客导向正确页面",
+          "semantic_matched": true,
+          "matched_variants": [
+            "导向正确入口",
+            "分流导向",
+            "导流出口"
+          ]
+        },
+        {
+          "quote": "地点没有角色",
+          "semantic_matched": true,
+          "matched_variants": [
+            "地点失语",
+            "未赋予业务交付角色"
+          ]
+        },
+        {
+          "quote": "形容词要换成事实",
+          "semantic_matched": true,
+          "matched_variants": [
+            "事实而非形容词",
+            "证明事实而非形容词",
+            "拒绝空洞修饰词"
+          ]
+        }
+      ],
+      "concept_score": 100.0,
+      "exact_quote_score": 33.3,
+      "semantic_quote_score": 100.0
+    },
+    "Article_2": {
+      "title": "外贸网站别只写博客：Product-Led SEO 如何把产品资料变成搜索资产",
+      "concepts": [
+        {
+          "id": "A2_C1",
+          "name": "Product-Led SEO 底层逻辑 (Product-Led vs Content-Led)",
+          "covered": true,
+          "matched_keywords": [
+            "Product-Led SEO",
+            "产品资料变成搜索资产",
+            "别只写博客"
+          ]
+        },
+        {
+          "id": "A2_C2",
+          "name": "产品事实表构建 (Product Fact Sheet)",
+          "covered": true,
+          "matched_keywords": [
+            "产品事实表",
+            "Product Fact Sheet",
+            "技术属性",
+            "交付边界",
+            "六大维度"
+          ]
+        },
+        {
+          "id": "A2_C3",
+          "name": "从产品数据反推全站页面矩阵 (Page Taxonomy)",
+          "covered": true,
+          "matched_keywords": [
+            "页面体系",
+            "页面矩阵",
+            "方案页",
+            "对比页",
+            "工具页",
+            "Taxonomy"
+          ]
+        },
+        {
+          "id": "A2_C4",
+          "name": "产品页高意图转化与参数读取 (Readable & Comparable)",
+          "covered": true,
+          "matched_keywords": [
+            "横向比较",
+            "可横向比较"
+          ]
+        },
+        {
+          "id": "A2_C5",
+          "name": "采购阶段化 CTA 与 SEO 反推运营 (B2B Procurement CTA)",
+          "covered": true,
+          "matched_keywords": [
+            "采购阶段",
+            "低摩擦转化漏斗"
+          ]
+        }
+      ],
+      "exact_quotes": [
+        {
+          "quote": "外贸网站别只写博客",
+          "exact_matched": true
+        },
+        {
+          "quote": "把产品资料变成搜索资产",
+          "exact_matched": true
+        },
+        {
+          "quote": "参数要能被读取和比较",
+          "exact_matched": false
+        },
+        {
+          "quote": "证据要靠近主张",
+          "exact_matched": false
+        },
+        {
+          "quote": "CTA 要匹配 B2B 采购阶段",
+          "exact_matched": false
+        }
+      ],
+      "semantic_quotes": [
+        {
+          "quote": "外贸网站别只写博客",
+          "semantic_matched": true,
+          "matched_variants": [
+            "外贸网站别只写博客",
+            "别只写博客"
+          ]
+        },
+        {
+          "quote": "把产品资料变成搜索资产",
+          "semantic_matched": true,
+          "matched_variants": [
+            "把产品资料变成搜索资产",
+            "搜索资产"
+          ]
+        },
+        {
+          "quote": "参数要能被读取和比较",
+          "semantic_matched": true,
+          "matched_variants": [
+            "可读取、可横向比较",
+            "横向比较"
+          ]
+        },
+        {
+          "quote": "证据要靠近主张",
+          "semantic_matched": true,
+          "matched_variants": [
+            "证明材料",
+            "交付信任证据"
+          ]
+        },
+        {
+          "quote": "CTA 要匹配 B2B 采购阶段",
+          "semantic_matched": true,
+          "matched_variants": [
+            "采购阶段",
+            "低摩擦转化漏斗"
+          ]
+        }
+      ],
+      "concept_score": 100.0,
+      "exact_quote_score": 40.0,
+      "semantic_quote_score": 100.0
+    },
+    "Article_3": {
+      "title": "外贸网站的工具页，可能是你最被低估的页面类型",
+      "concepts": [
+        {
+          "id": "A3_C1",
+          "name": "常青交互工具页定位 (Evergreen Interactive Tool)",
+          "covered": true,
+          "matched_keywords": [
+            "工具页",
+            "最被低估",
+            "常青",
+            "交互工具"
+          ]
+        },
+        {
+          "id": "A3_C2",
+          "name": "工具页四大核心类型 (Four Tool Types)",
+          "covered": true,
+          "matched_keywords": [
+            "选型推荐",
+            "计算型",
+            "参考型"
+          ]
+        },
+        {
+          "id": "A3_C3",
+          "name": "‘用’而非‘读’的本质优势 (Used vs Read)",
+          "covered": true,
+          "matched_keywords": [
+            "用",
+            "读",
+            "Used",
+            "Read",
+            "操作"
+          ]
+        },
+        {
+          "id": "A3_C4",
+          "name": "SEO 与 GEO 独特三大价值 (Backlink & Long-tail Magnet)",
+          "covered": true,
+          "matched_keywords": [
+            "反向链接",
+            "停留时间",
+            "外链磁铁"
+          ]
+        },
+        {
+          "id": "A3_C5",
+          "name": "工具设计三项有效性准则 (Three Effectiveness Principles)",
+          "covered": true,
+          "matched_keywords": [
+            "闭环",
+            "真实工况"
+          ]
+        }
+      ],
+      "exact_quotes": [
+        {
+          "quote": "工具页，可能是你最被低估的页面类型",
+          "exact_matched": true
+        },
+        {
+          "quote": "工具页是\"用\"的，不是\"读\"的",
+          "exact_matched": false
+        },
+        {
+          "quote": "帮用户完成具体工程任务",
+          "exact_matched": false
+        },
+        {
+          "quote": "工具页是常青的",
+          "exact_matched": false
+        },
+        {
+          "quote": "覆盖高意图长尾词",
+          "exact_matched": false
+        },
+        {
+          "quote": "获得反向链接",
+          "exact_matched": false
+        }
+      ],
+      "semantic_quotes": [
+        {
+          "quote": "工具页，可能是你最被低估的页面类型",
+          "semantic_matched": true,
+          "matched_variants": [
+            "工具页，可能是你最被低估的页面类型",
+            "最被低估的页面类型",
+            "最被低估"
+          ]
+        },
+        {
+          "quote": "工具页是\"用\"的，不是\"读\"的",
+          "semantic_matched": true,
+          "matched_variants": [
+            "用 (Used)",
+            "读 (Read)",
+            "用来操作",
+            "用来阅读"
+          ]
+        },
+        {
+          "quote": "帮用户完成具体工程任务",
+          "semantic_matched": true,
+          "matched_variants": [
+            "解决具体工程计算或选型难题",
+            "工程计算"
+          ]
+        },
+        {
+          "quote": "工具页是常青的",
+          "semantic_matched": true,
+          "matched_variants": [
+            "常青交互"
+          ]
+        },
+        {
+          "quote": "覆盖高意图长尾词",
+          "semantic_matched": false,
+          "matched_variants": []
+        },
+        {
+          "quote": "获得反向链接",
+          "semantic_matched": true,
+          "matched_variants": [
+            "反向链接",
+            "外链磁铁",
+            "反向链接吸引力"
+          ]
+        }
+      ],
+      "concept_score": 100.0,
+      "exact_quote_score": 16.7,
+      "semantic_quote_score": 83.3
+    },
+    "Article_4": {
+      "title": "一个对 AI、搜索和用户都友好的外贸产品页，应该是什么样的？",
+      "concepts": [
+        {
+          "id": "A4_C1",
+          "name": "买家 60 秒五大认知判断闭环 (Five Buyer Judgments)",
+          "covered": true,
+          "matched_keywords": [
+            "五大判断",
+            "到底是什么产品",
+            "适合什么场景",
+            "应该怎么选",
+            "凭什么相信",
+            "下一步怎么做"
+          ]
+        },
+        {
+          "id": "A4_C2",
+          "name": "搜索友好的标准品类词与结构 (Category Definition)",
+          "covered": true,
+          "matched_keywords": [
+            "品类词",
+            "标准品类",
+            "层级",
+            "内部代号"
+          ]
+        },
+        {
+          "id": "A4_C3",
+          "name": "反 PDF 与图片内容黑洞 (Anti PDF/Image Trap)",
+          "covered": true,
+          "matched_keywords": [
+            "PDF",
+            "结构化 HTML",
+            "参数仓库",
+            "无法解析的图片或 PDF"
+          ]
+        },
+        {
+          "id": "A4_C4",
+          "name": "AI 友好与原子化产品事实 (Atomic Facts for AI)",
+          "covered": true,
+          "matched_keywords": [
+            "原子化",
+            "Atomic",
+            "高原子性"
+          ]
+        },
+        {
+          "id": "A4_C5",
+          "name": "信任证据链与阶梯式转化 (Trust Chain & Stepped CTA)",
+          "covered": true,
+          "matched_keywords": [
+            "阶梯式",
+            "低摩擦",
+            "CTA",
+            "信任证据"
+          ]
+        }
+      ],
+      "exact_quotes": [
+        {
+          "quote": "先让客户完成五个判断",
+          "exact_matched": false
+        },
+        {
+          "quote": "这到底是什么产品",
+          "exact_matched": true
+        },
+        {
+          "quote": "它适合什么场景",
+          "exact_matched": true
+        },
+        {
+          "quote": "客户应该怎么选",
+          "exact_matched": true
+        },
+        {
+          "quote": "凭什么相信你",
+          "exact_matched": true
+        },
+        {
+          "quote": "下一步怎么做",
+          "exact_matched": true
+        },
+        {
+          "quote": "不要把关键内容只放在图片和 PDF 里",
+          "exact_matched": false
+        },
+        {
+          "quote": "把“信任”写成证据链",
+          "exact_matched": false
+        },
+        {
+          "quote": "每一个关键结论，都应该能单独成立",
+          "exact_matched": false
+        }
+      ],
+      "semantic_quotes": [
+        {
+          "quote": "先让客户完成五个判断",
+          "semantic_matched": true,
+          "matched_variants": [
+            "五大关键判断",
+            "五大判断",
+            "五大心理判断闭环"
+          ]
+        },
+        {
+          "quote": "这到底是什么产品",
+          "semantic_matched": true,
+          "matched_variants": [
+            "这到底是什么产品",
+            "What is it"
+          ]
+        },
+        {
+          "quote": "它适合什么场景",
+          "semantic_matched": true,
+          "matched_variants": [
+            "它适合什么场景",
+            "Where does it fit"
+          ]
+        },
+        {
+          "quote": "客户应该怎么选",
+          "semantic_matched": true,
+          "matched_variants": [
+            "客户应该怎么选",
+            "How to select",
+            "怎么选"
+          ]
+        },
+        {
+          "quote": "凭什么相信你",
+          "semantic_matched": true,
+          "matched_variants": [
+            "凭什么相信你",
+            "Why trust you",
+            "凭什么相信"
+          ]
+        },
+        {
+          "quote": "下一步怎么做",
+          "semantic_matched": true,
+          "matched_variants": [
+            "下一步怎么做",
+            "What is next"
+          ]
+        },
+        {
+          "quote": "不要把关键内容只放在图片和 PDF 里",
+          "semantic_matched": true,
+          "matched_variants": [
+            "嵌入在无法解析的图片或 PDF 中",
+            "图片或 PDF"
+          ]
+        },
+        {
+          "quote": "把“信任”写成证据链",
+          "semantic_matched": false,
+          "matched_variants": []
+        },
+        {
+          "quote": "每一个关键结论，都应该能单独成立",
+          "semantic_matched": true,
+          "matched_variants": [
+            "高原子性"
+          ]
+        }
+      ],
+      "concept_score": 100.0,
+      "exact_quote_score": 55.6,
+      "semantic_quote_score": 88.9
+    },
+    "Article_5": {
+      "title": "你的产品在讲\"功能\",客户在搜\"好处\"——FAB 才是 SEO/GEO 的地基",
+      "concepts": [
+        {
+          "id": "A5_C1",
+          "name": "FAB 三层递进架构拆解 (FAB 3-Tier Model)",
+          "covered": true,
+          "matched_keywords": [
+            "Feature",
+            "Advantage",
+            "Benefit",
+            "特性",
+            "优势",
+            "好处",
+            "FAB"
+          ]
+        },
+        {
+          "id": "A5_C2",
+          "name": "客户搜索视角与供需断层剖析 (Customer Search Mindset)",
+          "covered": true,
+          "matched_keywords": [
+            "功能自嗨",
+            "自嗨",
+            "省钱",
+            "省时"
+          ]
+        },
+        {
+          "id": "A5_C3",
+          "name": "FAB 作为翻译词典的底层价值 (The Translation Dictionary)",
+          "covered": true,
+          "matched_keywords": [
+            "翻译词典",
+            "地基",
+            "GEO 的地基",
+            "FAB 翻译词典"
+          ]
+        },
+        {
+          "id": "A5_C4",
+          "name": "参数到好处的工业级转化应用 (Parameter-to-Benefit Mapping)",
+          "covered": true,
+          "matched_keywords": [
+            "FAB 词典",
+            "参数",
+            "45kg",
+            "24V",
+            "2人",
+            "皮卡",
+            "免吊车",
+            "封路"
+          ]
+        },
+        {
+          "id": "A5_C5",
+          "name": "SEO/GEO 语义喂养与内容规划 (Semantic Feeding for AI)",
+          "covered": true,
+          "matched_keywords": [
+            "GEO",
+            "FAQ",
+            "标题"
+          ]
+        }
+      ],
+      "exact_quotes": [
+        {
+          "quote": "你的产品在讲\"功能\",客户在搜\"好处\"",
+          "exact_matched": true
+        },
+        {
+          "quote": "中间差的那本翻译词典,就是 FAB",
+          "exact_matched": false
+        },
+        {
+          "quote": "FAB 才是 SEO/GEO 的地基",
+          "exact_matched": true
+        },
+        {
+          "quote": "客户在搜好处",
+          "exact_matched": true
+        }
+      ],
+      "semantic_quotes": [
+        {
+          "quote": "你的产品在讲\"功能\",客户在搜\"好处\"",
+          "semantic_matched": true,
+          "matched_variants": [
+            "你的产品在讲\"功能\",客户在搜\"好处\"",
+            "功能自嗨，好处失语"
+          ]
+        },
+        {
+          "quote": "中间差的那本翻译词典,就是 FAB",
+          "semantic_matched": true,
+          "matched_variants": [
+            "FAB 翻译词典",
+            "翻译词典"
+          ]
+        },
+        {
+          "quote": "FAB 才是 SEO/GEO 的地基",
+          "semantic_matched": true,
+          "matched_variants": [
+            "FAB 才是 SEO/GEO 的地基",
+            "SEO/GEO 的地基",
+            "地基"
+          ]
+        },
+        {
+          "quote": "客户在搜好处",
+          "semantic_matched": true,
+          "matched_variants": []
+        }
+      ],
+      "concept_score": 100.0,
+      "exact_quote_score": 75.0,
+      "semantic_quote_score": 100.0
+    }
+  }
+}

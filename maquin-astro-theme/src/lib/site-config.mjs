@@ -1,6 +1,8 @@
 import {supportedLocales as languages} from "./languages.mjs";
 import baseline from "../data/content-baseline.json" with {type:"json"};
 import englishAliases from "../data/route-aliases.json" with {type:"json"};
+import localizedArticles from "../data/published-content-locales.json" with {type:"json"};
+const registeredArticles = new Set(Object.values(localizedArticles).flatMap(o => Object.keys(o)));
 export function publicOrigin(value = process.env.PUBLIC_SITE_URL || baseline.deployment.publicOrigin) {
   if(!value)return null;
   const url=new URL(value);
@@ -20,7 +22,7 @@ export const corePages={
   method:{path:"/guides/install-light-pole-without-crane/",title:"Installing Light Poles Without a Crane: Methods & Limits | volvet",description:"A planning guide to equipment selection, complete work scope and engineering review. It is not a field operating procedure."},
   resources:{path:"/resources/",title:"Product Specifications & Project Documents | volvet",description:"Download a source-derived product specification summary and a project information worksheet. Request reviewed project documents through the inquiry form."},
   faq:{path:"/faq/",title:"Portable Light Pole Lifter Questions | volvet",description:"Answers about rated load, pole height, standard configuration, compatibility, reported performance and the private quotation process."},
-  about:{path:"/about-us/",title:"About volvet: Equipment & Information | volvet",description:"Learn the confirmed volvet product focus and information policy. Corporate identity, factory details and credentials remain subject to verification."},
+  about:{path:"/about-us/",title:"About volvet: Equipment & Information | volvet",description:"Learn volvet's confirmed portable hydraulic pole lifter focus, 300 kg WLL specifications, and transparent B2B engineering procurement workflow."},
   guides:{path:"/guides/",title:"Pole Installation Guides & Planning Tools | volvet",description:"Find pole compatibility guidance, application planning, equipment comparison, cost scenarios and source-derived specifications."},
   home:{path:"/",title:"Portable Light Pole Lifter for Street Lighting | volvet",description:"Plan street light pole installation with volvet. Review the 12 m pole class, 300 kg rated load, foundation requirements and project quotation process."},
   product:{path:"/products/light-pole-jack/",title:"Portable Light Pole Lifter: Specifications & Configuration | volvet",description:"Review volvet portable light pole lifter specifications, two-module dimensions, included anchor bolts and compatibility requirements. Request a B2B project quotation."},
@@ -59,7 +61,13 @@ export function pageKeyForPath(path) {
 export function localizePath(href,locale="en") {
   if(typeof href!=="string"||!href.startsWith("/")||href.startsWith("//"))return href;
   const match=href.match(/^([^?#]*)([\s\S]*)$/),key=pageKeyForPath(match[1]);
-  return key?(localizedPagePath(key,locale)??corePages[key].path)+match[2]:href;
+  if(key)return (localizedPagePath(key,locale)??corePages[key].path)+match[2];
+  const articleMatch=match[1].match(/^\/(?:(?:es|fr|pt|vi|th|id)\/)?guides\/([a-z0-9-]+)\/?$/);
+  if(articleMatch&&registeredArticles.has(articleMatch[1])&&!["pole-jack-compatibility","install-light-pole-without-crane"].includes(articleMatch[1])){
+    const prefix=locale==="en"?"":`/${locale}`;
+    return `${prefix}/guides/${articleMatch[1]}/`+match[2];
+  }
+  return href;
 }
 export function coreAlternates(key) {
   return languages.map(lang=>({lang,path:localizedPagePath(key,lang)})).filter(a=>a.path!==null);

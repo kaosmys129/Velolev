@@ -1,7 +1,13 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { defaultLocale, locales } from "./src/i18n/config";
-import { publicOrigin as resolvePublicOrigin,siteRedirects as aliases } from "./src/lib/site-config.mjs";
+import {
+  publicOrigin as resolvePublicOrigin,
+  siteRedirects as aliases,
+  pageKeyForPath,
+  coreAlternates,
+  industrialLocales,
+} from "./src/lib/site-config.mjs";
 
 const publicOrigin = resolvePublicOrigin();
 
@@ -28,6 +34,35 @@ export default defineConfig({
         !page.includes("/equipment-detail/") &&
         !Object.hasOwn(aliases,new URL(page).pathname) &&
         !page.includes("/en/"),
+      serialize(item) {
+        const urlObj = new URL(item.url);
+        const pathname = urlObj.pathname;
+        const origin = urlObj.origin;
+        const key = pageKeyForPath(pathname);
+        let links = [];
+        if (key) {
+          const alts = coreAlternates(key);
+          const enAlt = alts.find((a) => a.lang === "en");
+          links = [
+            ...alts.map((a) => ({ lang: a.lang, url: `${origin}${a.path}` })),
+            ...(enAlt ? [{ lang: "x-default", url: `${origin}${enAlt.path}` }] : []),
+          ];
+        } else if (pathname.includes("/guides/")) {
+          const slug = pathname.split("/guides/")[1]?.replace(/\/$/, "");
+          if (slug) {
+            links = [
+              { lang: "en", url: `${origin}/guides/${slug}/` },
+              ...industrialLocales.map((l) => ({ lang: l, url: `${origin}/${l}/guides/${slug}/` })),
+              { lang: "x-default", url: `${origin}/guides/${slug}/` },
+            ];
+          }
+        }
+        return {
+          ...item,
+          lastmod: new Date("2026-10-28T00:00:00.000Z").toISOString(),
+          ...(links.length ? { links } : {}),
+        };
+      },
     })] : []),
   ],
   server: {

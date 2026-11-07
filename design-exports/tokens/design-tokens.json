@@ -1,0 +1,191 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-28",
+  "brand": "volvet",
+  "colors": {
+    "primary": {
+      "yellow": {
+        "value": "#f4cc3d",
+        "hex": "#f4cc3d",
+        "role": "Primary Accent & CTA Button",
+        "usage": "Main action buttons, brand badge accent, highlighted borders"
+      },
+      "yellowHover": {
+        "value": "#ffdc57",
+        "hex": "#ffdc57",
+        "role": "CTA Hover State"
+      },
+      "yellowDeep": {
+        "value": "#a08216",
+        "hex": "#a08216",
+        "role": "Focus Outline Accent"
+      }
+    },
+    "neutral": {
+      "ink": {
+        "value": "#1d201e",
+        "hex": "#1d201e",
+        "role": "Primary Body & Headings Text"
+      },
+      "dark": {
+        "value": "#202622",
+        "hex": "#202622",
+        "role": "Footer Background & Dark Badges"
+      },
+      "muted": {
+        "value": "#626a63",
+        "hex": "#626a63",
+        "role": "Secondary & Helper Text"
+      },
+      "line": {
+        "value": "#d5d8cd",
+        "hex": "#d5d8cd",
+        "role": "Dividers, Borders & Table Lines"
+      },
+      "paper": {
+        "value": "#f3f2ec",
+        "hex": "#f3f2ec",
+        "role": "Page Main Background (Warm Sand/Off-white)"
+      },
+      "white": {
+        "value": "#ffffff",
+        "hex": "#ffffff",
+        "role": "Card Panels & Form Inputs Background"
+      },
+      "greenBackdrop": {
+        "value": "#c6ceba",
+        "hex": "#c6ceba",
+        "role": "Hero Visual Blueprint Canvas"
+      },
+      "panelLight": {
+        "value": "#e6e9de",
+        "hex": "#e6e9de",
+        "role": "Evidence Strip & Note Panels"
+      }
+    },
+    "semantic": {
+      "error": {
+        "value": "#a52a20",
+        "hex": "#a52a20",
+        "role": "Validation Error & Warning Borders"
+      },
+      "success": {
+        "value": "#2e683a",
+        "hex": "#2e683a",
+        "role": "Receipt Confirmation Green"
+      },
+      "focusRing": {
+        "value": "#947500",
+        "hex": "#947500",
+        "role": "Keyboard Focus-Visible Ring"
+      }
+    }
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Geologica, 'Trebuchet MS', system-ui, sans-serif",
+      "monospace": "'Courier New', SFMono-Regular, monospace"
+    },
+    "fontWeights": {
+      "regular": 400,
+      "medium": 500,
+      "semiBold": 600,
+      "bold": 650,
+      "extraBold": 800
+    },
+    "typeScale": {
+      "heroTitle": {
+        "size": "clamp(40px, 5.7vw, 82px)",
+        "lineHeight": "1.08",
+        "letterSpacing": "-0.045em",
+        "weight": 650
+      },
+      "h1": {
+        "size": "clamp(36px, 5vw, 64px)",
+        "lineHeight": "1.12",
+        "letterSpacing": "-0.035em",
+        "weight": 650
+      },
+      "h2": {
+        "size": "clamp(30px, 3.6vw, 50px)",
+        "lineHeight": "1.15",
+        "letterSpacing": "-0.03em",
+        "weight": 650
+      },
+      "h3": {
+        "size": "23px",
+        "lineHeight": "1.25",
+        "letterSpacing": "-0.025em",
+        "weight": 650
+      },
+      "lead": {
+        "size": "18px",
+        "lineHeight": "1.7",
+        "weight": 400
+      },
+      "body": {
+        "size": "15px",
+        "lineHeight": "1.65",
+        "weight": 400
+      },
+      "small": {
+        "size": "13px",
+        "lineHeight": "1.5",
+        "weight": 400
+      },
+      "caption": {
+        "size": "11px",
+        "lineHeight": "1.4",
+        "letterSpacing": "0.16em",
+        "weight": 650,
+        "textTransform": "uppercase"
+      },
+      "specNumber": {
+        "size": "36px",
+        "lineHeight": "1.2",
+        "letterSpacing": "-0.05em",
+        "weight": 650
+      }
+    }
+  },
+  "layout": {
+    "maxWidth": "1240px",
+    "headerMaxWidth": "1440px",
+    "gutterDesktop": "48px",
+    "gutterMobile": "18px",
+    "sectionPaddingDesktop": "90px 0",
+    "sectionPaddingMobile": "55px 0",
+    "breakpoints": {
+      "desktopLarge": "1440px",
+      "desktop": "1050px",
+      "tablet": "768px",
+      "mobile": "390px"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "#f4cc3d",
+        "color": "#1d201e",
+        "padding": "17px 23px",
+        "radius": "2px",
+        "fontWeight": 600
+      },
+      "small": {
+        "padding": "12px 17px",
+        "fontSize": "13px"
+      },
+      "outline": {
+        "border": "1px solid currentColor",
+        "background": "transparent"
+      }
+    },
+    "inputs": {
+      "height": "48px",
+      "padding": "13px 14px",
+      "border": "1px solid #c8cec3",
+      "background": "#ffffff",
+      "borderRadius": "2px"
+    }
+  }
+}

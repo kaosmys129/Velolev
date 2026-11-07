@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "no_proxy=localhost,127.0.0.1,::1 astro dev",
-    "build": "node scripts/build-site.mjs",
+    "build": "node -e \"if(process.env.PUBLIC_SITE_URL)process.env.PUBLIC_SITE_URL=process.env.PUBLIC_SITE_URL.trim().replace(/\\/+$/,'');import('./scripts/build-site.mjs');\"",
     "preview": "astro preview",
     "content:inventory": "node scripts/content-foundation.mjs",
     "content:check": "node --test scripts/contentPolicy.test.mjs && node scripts/verify-content-baseline.mjs",
@@ -13,11 +13,14 @@
     "content:browser": "node --experimental-sqlite scripts/browser-d30.mjs",
     "serve": "node --experimental-sqlite server/inquiry-server.mjs",
     "inquiry:test": "node --experimental-sqlite --test server/inquiry.test.mjs",
+    "email:test": "node --experimental-sqlite --test server/email.test.mjs",
+    "edm:send": "node scripts/send-edm.mjs",
+    "edm:preview": "node scripts/send-edm.mjs --dry-run",
     "d30:browser": "node --experimental-sqlite scripts/browser-d30.mjs",
     "d30:check": "node scripts/verify-d30.mjs",
     "design:export": "node scripts/export-design-system.mjs",
-    "test": "npm run build && npm run content:check && npm run decision:test && npm run inquiry:test && npm run d30:check && npm run d60:check && npm run retirement:test && npm run retirement:check",
-    "decision:test": "node --test scripts/decision-tools.test.mjs scripts/industrial-localization.test.mjs scripts/language-navigation.test.mjs",
+    "test": "npm run build && npm run content:check && npm run decision:test && npm run inquiry:test && npm run email:test && npm run d30:check && npm run d60:check && npm run retirement:test && npm run retirement:check",
+    "decision:test": "node --test scripts/decision-tools.test.mjs scripts/industrial-localization.test.mjs scripts/language-navigation.test.mjs scripts/prepare-geoflow-review.test.mjs",
     "locales:check": "node scripts/verify-industrial-locales.mjs",
     "content:prepare": "node scripts/prepare-geoflow-review.mjs",
     "content:import": "node scripts/import-reviewed-content.mjs",
@@ -36,7 +39,8 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^5.13.5",
-    "parse5": "^7.3.0"
+    "parse5": "^7.3.0",
+    "resend": "^6.35.0"
   },
   "devDependencies": {
     "playwright": "^1.61.1"

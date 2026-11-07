@@ -1,7 +1,7 @@
 {
   "date": "2026-10-28",
   "stage": "D15-D30",
-  "mode": "configured-origin-fixture",
+  "mode": "configured-origin-production",
   "checks": [
     {
       "name": "home: built page exists",
@@ -112,7 +112,7 @@
       "passed": true
     },
     {
-      "name": "home: local link /guides/pole-jack-compatibility/",
+      "name": "home: local link /tools/roi-calculator/",
       "passed": true
     },
     {
@@ -145,6 +145,14 @@
     },
     {
       "name": "home: local link /images/evidence/jobsite-rural-solar-street-light.jpg",
+      "passed": true
+    },
+    {
+      "name": "home: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
+      "name": "home: local link /resources/volvet-specifications.csv",
       "passed": true
     },
     {
@@ -360,6 +368,14 @@
       "passed": true
     },
     {
+      "name": "product: local link /resources/volvet-specifications.csv",
+      "passed": true
+    },
+    {
+      "name": "product: local link /guides/pole-jack-compatibility/",
+      "passed": true
+    },
+    {
       "name": "product: local link /quote/",
       "passed": true
     },
@@ -549,6 +565,22 @@
     },
     {
       "name": "compatibility: local link /products/light-pole-jack/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /quote/",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /resources/volvet-specifications.csv",
+      "passed": true
+    },
+    {
+      "name": "compatibility: local link /guides/pole-jack-compatibility/",
       "passed": true
     },
     {

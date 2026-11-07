@@ -6,8 +6,17 @@
   "scripts": {
     "test": "npm --prefix maquin-astro-theme test",
     "dev": "npm --prefix maquin-astro-theme run dev",
-    "build": "npm --prefix maquin-astro-theme run build",
-    "start": "npm --prefix maquin-astro-theme run serve"
+    "build": "npm --prefix maquin-astro-theme run build && node -e \"const fs=require('fs');fs.cpSync('maquin-astro-theme/dist','dist',{recursive:true})\"",
+    "start": "npm --prefix maquin-astro-theme run serve",
+    "email:test": "npm --prefix maquin-astro-theme run email:test",
+    "edm:send": "npm --prefix maquin-astro-theme run edm:send",
+    "edm:preview": "npm --prefix maquin-astro-theme run edm:preview",
+    "visuals:generate": "node geoflow-b2b-seo-blog-pipeline/scripts/generate_article_visuals.mjs",
+    "visuals:all": "node geoflow-b2b-seo-blog-pipeline/scripts/generate_article_visuals.mjs --all --insert-markdown",
+    "visuals:cover": "node geoflow-b2b-seo-blog-pipeline/scripts/generate_flow_cover.mjs",
+    "visuals:cover:all": "node geoflow-b2b-seo-blog-pipeline/scripts/generate_flow_cover.mjs --all --insert-markdown",
+    "matrix:generate": "node geoflow-b2b-seo-blog-pipeline/scripts/matrix_content_pipeline.mjs",
+    "geoflow:sync": "node geoflow-b2b-seo-blog-pipeline/scripts/sync_articles_to_geoflow.mjs --all"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "baselineVersion": "2026-10-28.3",
+  "articles": [
+    {
+      "slug": "portable-pole-jack-vs-crane-narrow-alley-erection",
+      "locale": "en",
+      "status": "draft",
+      "title": "Portable Pole Jack vs Crane: Narrow Alley Erection Field Guide",
+      "description": "Field evaluation of 300kg portable hydraulic pole lifters compared to 16-ton boom truck rentals in tight municipal alleys.",
+      "sections": [
+        {
+          "heading": "Jobsite Logistics in Tight Municipal Alleys",
+          "paragraphs": [
+            "Contractors aiming for crane rental cost savings face severe logistical roadblocks when deploying 16-ton mobile boom trucks into tight pedestrian alleys.",
+            "Under OSHA 1926 Subpart CC, minimum approach distances to overhead electrical conductors introduce extensive setup delays."
+          ]
+        },
+        {
+          "heading": "Two-Person Hydraulic Workflow: 300kg Tested Load",
+          "paragraphs": [
+            "The portable system features a verified 300kg vertical load rating calibrated on dedicated factory test rigs, accommodating street light poles up to 12m in height.",
+            "Tired of high rental bills? Calculate your project savings with the Crane ROI Calculator."
+          ]
+        },
+        {
+          "heading": "Universal Base Plate & Flange Bolt Compatibility",
+          "paragraphs": [
+            "The universal base plate accommodates 180-260mm P.C.D. bolt circle patterns using M16 to M24 studs conforming to ASTM F1554 standards.",
+            "Contractors can submit their project drawings for a free base flange engineering drawing review before fabrication."
+          ]
+        }
+      ],
+      "relatedPaths": [
+        "/tools/roi-calculator/",
+        "/guides/pole-jack-compatibility/",
+        "/quote/"
+      ],
+      "evidenceRefs": [
+        "F001",
+        "F002",
+        "F003",
+        "F008",
+        "F010",
+        "F015",
+        "F016"
+      ],
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "baselineVersion": "2026-10-28.3",
+        "contentSha256": ""
+      },
+      "source": {
+        "system": "GEOFlow",
+        "originalStatus": "draft",
+        "originalReviewStatus": "pending"
+      }
+    }
+  ]
+}

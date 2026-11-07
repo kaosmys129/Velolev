@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PoleLift GEO 综合实施方案 — 30/60/90 天执行路线图</title>
+<style>
+:root {
+  --ink: #1a1a2e; --paper: #faf9f5; --surface: #ffffff;
+  --border: #e8e5da; --accent: #1B365D; --muted: #6b6560;
+  --highlight: #fef3c7; --danger: #dc2626; --warning: #d97706;
+  --success: #059669; --info: #2563eb; --max-width: 1000px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Serif SC","Source Han Serif SC",STSong,Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:15px}
+#report-menu{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:2px solid var(--accent);box-shadow:0 2px 12px rgba(0,0,0,0.06);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+#report-menu .nav-inner{max-width:calc(var(--max-width)+40px);margin:0 auto;display:flex;gap:0;padding:0 18px}
+#report-menu a{display:inline-block;padding:7px 10px;font-size:11.5px;color:var(--muted);text-decoration:none;font-family:Inter,sans-serif;border-bottom:2px solid transparent;transition:all .15s;flex-shrink:0}
+#report-menu a:hover,#report-menu a.active{color:var(--accent);border-bottom-color:var(--accent)}
+.cover{padding:80px 20px 60px;text-align:center;border-bottom:3px solid var(--accent);margin-bottom:40px}
+.cover h1{font-size:30px;font-weight:700;margin-bottom:12px;color:var(--accent)}
+.cover .meta{color:var(--muted);font-size:14px}
+.cover .meta span{margin:0 8px}
+main{max-width:var(--max-width);margin:0 auto;padding:40px 20px 80px}
+section{margin-bottom:40px}
+h2{font-size:20px;font-weight:700;margin-bottom:14px;padding-bottom:7px;border-bottom:1px solid var(--border);color:var(--accent);font-family:"Noto Serif SC",serif}
+h3{font-size:16px;font-weight:600;margin:18px 0 9px}
+p{margin:7px 0}
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin:14px 0 22px;font-size:12px;line-height:1.45}
+thead{background:var(--accent);color:#fff}
+th{padding:7px 8px;text-align:left;font-weight:600;font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.03em;word-break:break-word}
+td{padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top;word-break:break-word;overflow-wrap:anywhere}
+tr:nth-child(even) td{background:#fdfcf8}
+.badge{display:inline-block;padding:1px 7px;border-radius:3px;font-size:10px;font-weight:600;font-family:Inter,sans-serif}
+.badge-p0{background:#fef2f2;color:var(--danger)}.badge-p1{background:var(--highlight);color:var(--warning)}
+.badge-p2{background:#dbeafe;color:var(--info)}.badge-ok{background:#ecfdf5;color:var(--success)}
+.badge-warn{background:var(--highlight);color:var(--warning)}.badge-fail{background:#fef2f2;color:var(--danger)}
+.summary-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0}
+.summary-card{background:var(--surface);border:1px solid var(--border);padding:14px;border-radius:4px}
+.summary-card .sc-num{font-size:24px;font-weight:800;color:var(--accent);font-family:Inter,sans-serif}
+.summary-card .sc-label{font-size:11px;color:var(--muted);margin-top:2px}
+.timeline-bar{display:flex;gap:0;margin:20px 0;border-radius:4px;overflow:hidden;font-size:11px}
+.timeline-bar div{padding:10px 6px;text-align:center;color:#fff;font-family:Inter,sans-serif;font-weight:600}
+.t-bar-30{flex:0 0 33.3%;background:var(--warning)}
+.t-bar-60{flex:0 0 33.3%;background:var(--info)}
+.t-bar-90{flex:0 0 33.4%;background:var(--success)}
+@media print{
+  #report-menu{display:none!important}
+  body{background:#fff;font-size:11px}
+  main{max-width:100%;padding:20px 0}
+  section{page-break-inside:avoid}
+  .summary-cards{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .summary-cards{grid-template-columns:1fr 1fr}
+  table{font-size:10px}
+  th,td{padding:4px 5px}
+}
+</style>
+</head>
+<body>
+
+<nav id="report-menu"><div class="nav-inner">
+  <a href="#summary">摘要</a><a href="#diagnosis">诊断承接</a><a href="#data">真实数据</a>
+  <a href="#matrix">十维矩阵</a><a href="#evidence">证据成熟度</a><a href="#northstar">北极星</a>
+  <a href="#packages">六项目包</a><a href="#timeline">路线图</a><a href="#platforms">五平台</a>
+  <a href="#roles">角色验收</a><a href="#budget">预算</a><a href="#monitoring">监测</a>
+  <a href="#governance">治理</a><a href="#risks">风险</a><a href="#sources">来源台账</a>
+</div></nav>
+
+<main>
+<div class="cover">
+  <h1>PoleLift GEO 综合实施方案<br>30/60/90 天执行路线图</h1>
+  <p class="meta">
+    <span>技能：yao-geo-execution-roadmap</span>
+    <span>编制日期：2026-07-10</span>
+    <span>周期：90天（至 2026-10-08）</span>
+    <span>平台：DeepSeek/豆包/千问/Kimi/元宝</span>
+  </p>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<section id="summary">
+<h2>执行摘要</h2>
+<p>PoleLift 官网在 GEO 全景诊断（<strong>评分 2.1/5</strong>）和全站页面技术审计（<strong>评分 4.2/10</strong>）中暴露出品牌实体矛盾、内容质量缺陷、技术基础薄弱三类根本性问题。本路线图将 13 项 P0/P1 诊断发现转化为 <strong>六个项目包</strong>，分 30 天快赢、60 天资产建设、90 天闭环优化三阶段落地。</p>
+
+<div class="summary-cards">
+  <div class="summary-card"><div class="sc-num">2.5<span style="font-size:12px;color:var(--muted);"> FTE</span></div><div class="sc-label">最小可行团队</div></div>
+  <div class="summary-card"><div class="sc-num" style="color:var(--warning);">30天</div><div class="sc-label">快赢阶段 · 品牌修复</div></div>
+  <div class="summary-card"><div class="sc-num" style="color:var(--info);">60天</div><div class="sc-label">资产阶段 · 内容矩阵</div></div>
+  <div class="summary-card"><div class="sc-num" style="color:var(--success);">90天</div><div class="sc-label">闭环阶段 · 复迭代</div></div>
+</div>
+
+<div class="timeline-bar">
+  <div class="t-bar-30">D+1~30<br>快赢<br>品牌修复+Schema</div>
+  <div class="t-bar-60">D+31~60<br>资产建设<br>内容矩阵+中文站</div>
+  <div class="t-bar-90">D+61~90<br>闭环优化<br>采样+复盘</div>
+</div>
+
+<h3>核心里程碑</h3>
+<table>
+<thead><tr><th style="width:20%">节点</th><th style="width:40%">里程碑</th><th style="width:40%">北极星验证</th></tr></thead>
+<tbody>
+<tr><td>D+30（8月10日）</td><td>品牌事实底座修复 + Schema全量 + 问题清零</td><td>团队=100%一致；零值=0；Latin=0</td></tr>
+<tr><td>D+60（9月9日）</td><td>内容矩阵批量上线 + 外部证据启动</td><td>问题覆盖率≥70%；≥3个客户案例</td></tr>
+<tr><td>D+90（10月8日）</td><td>监测闭环运行 + 第一轮采样 + 复盘</td><td>品牌推荐率/被引用率/准确率基线建立</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- DIAGNOSIS HANDOVER -->
+<section id="diagnosis">
+<h2>1. 诊断承接</h2>
+<p>以下发现直接驱动本路线图（详参 yao-geo-panorama-audit + yao-geo-page-audit 两份前序报告）。两轮审计共计 <strong>9 项 P0、12 项 P1、8 项 P2</strong>。</p>
+<table>
+<thead><tr><th style="width:8%">来源</th><th style="width:60%">核心发现</th><th style="width:12%">对应项目包</th><th style="width:8%">优先级</th><th style="width:12%">阶段</th></tr></thead>
+<tbody>
+<tr><td>全景</td><td>团队实体不一致（关于页 vs 团队页）</td><td>知识库+页面</td><td><span class="badge badge-p0">P0</span></td><td>D+1-5</td></tr>
+<tr><td>全景</td><td>Lorem Ipsum 占位文本</td><td>内容矩阵</td><td><span class="badge badge-p0">P0</span></td><td>D+1-5</td></tr>
+<tr><td>全景</td><td>客户证言为推土机服务</td><td>内容+外部</td><td><span class="badge badge-p0">P0</span></td><td>D+1-3</td></tr>
+<tr><td>全景+技术</td><td>全站无 Schema（0% 覆盖率）</td><td>页面技术</td><td><span class="badge badge-p0">P0</span></td><td>D+1-5</td></tr>
+<tr><td>技术</td><td>14 个表单 action 缺失</td><td>页面技术</td><td><span class="badge badge-p0">P0</span></td><td>D+3-7</td></tr>
+<tr><td>全景</td><td>认证声明无证书</td><td>知识库+外部</td><td><span class="badge badge-p1">P1</span></td><td>D+5-20</td></tr>
+<tr><td>全景</td><td>问题覆盖评分 4/10</td><td>内容矩阵</td><td><span class="badge badge-p1">P1</span></td><td>D+14-40</td></tr>
+<tr><td>技术</td><td>博客 meta 描述模板化（6篇）</td><td>标题+内容</td><td><span class="badge badge-p1">P1</span></td><td>D+5-10</td></tr>
+<tr><td>技术</td><td>32 张图片 alt 为空（23%）</td><td>页面技术</td><td><span class="badge badge-p1">P1</span></td><td>D+7-12</td></tr>
+<tr><td>技术</td><td>sitemap.xml 缺失</td><td>页面技术</td><td><span class="badge badge-p1">P1</span></td><td>D+5-7</td></tr>
+<tr><td>技术</td><td>&lt;main&gt; 标签缺失 89%</td><td>页面技术</td><td><span class="badge badge-p2">P2</span></td><td>D+25-28</td></tr>
+<tr><td>技术</td><td>CSS/JS 冗余（50+文件/页）</td><td>页面技术</td><td><span class="badge badge-p2">P2</span></td><td>D+45-55</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- DATA -->
+<section id="data">
+<h2>2. 真实数据能力与采集计划</h2>
+<table>
+<thead><tr><th style="width:25%">数据类型</th><th style="width:15%">获取方式</th><th style="width:10%">证据等级</th><th style="width:15%">采集窗口</th><th style="width:35%">备注</th></tr></thead>
+<tbody>
+<tr><td>品牌家事（工商/证书/团队）</td><td>用户提供</td><td>待确认</td><td>D+1-5</td><td>创始人确认</td></tr>
+<tr><td>产品参数</td><td>官网公开</td><td>A</td><td>执行日</td><td>无独立测试数据</td></tr>
+<tr><td>客户案例</td><td>用户授权</td><td>D</td><td>D+5-30</td><td>需客户授权书</td></tr>
+<tr><td>平台 AI 答案基线</td><td>手动采样</td><td>输入缺口</td><td>D+55-65</td><td>需用户授权启动</td></tr>
+<tr><td>网站性能数据</td><td>用户提供</td><td>输入缺口</td><td>D+30-45</td><td>Lighthouse/PSI</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- MATRIX -->
+<section id="matrix">
+<h2>3. 分析完整性矩阵（十维摘要）</h2>
+<table>
+<thead><tr><th style="width:12%">维度</th><th style="width:18%">当前状态</th><th style="width:25%">30天动作</th><th style="width:25%">60天动作</th><th style="width:20%">90天动作</th></tr></thead>
+<tbody>
+<tr><td>业务目标</td><td>品牌曝光+线索</td><td>北极星指标基线</td><td>—</td><td>复盘目标达成</td></tr>
+<tr><td>问题覆盖</td><td>4/10</td><td>补齐比较/风险/教程</td><td>推荐+真实性页面</td><td>采样验证覆盖度</td></tr>
+<tr><td>品牌实体</td><td>团队冲突</td><td>统一全页品牌信息</td><td>事实卡+术语表</td><td>知识库维护</td></tr>
+<tr><td>页面技术</td><td>4.2/10</td><td>Schema全量+表单修复</td><td>sitemap+语义标签</td><td>CSS/JS优化</td></tr>
+<tr><td>内容资产</td><td>6篇模板博客</td><td>meta去模板+3篇核心</td><td>批量矩阵上线</td><td>中文站迁移</td></tr>
+<tr><td>标题体系</td><td>异常title</td><td>title+meta重写</td><td>标题库≥30条</td><td>平台微调</td></tr>
+<tr><td>知识库</td><td>0 事实底座</td><td>事实卡初版15条</td><td>扩展至30条</td><td>准确性验证</td></tr>
+<tr><td>外部证据</td><td>0 信源</td><td>社媒+证书</td><td>1案例+1媒体</td><td>≥3三方引用</td></tr>
+<tr><td>平台适配</td><td>0 动作</td><td>英文站修复优先</td><td>中文站MVP上线</td><td>五平台差异化</td></tr>
+<tr><td>监测治理</td><td>0 基础</td><td>周报+问题库</td><td>平台采样启动</td><td>首轮正式复盘</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- EVIDENCE -->
+<section id="evidence">
+<h2>4. 证据成熟度与事实底座</h2>
+<table>
+<thead><tr><th style="width:30%">断言</th><th style="width:12%">等级</th><th style="width:38%">动作</th><th style="width:20%">时程</th></tr></thead>
+<tbody>
+<tr><td>品牌名 PoleLift</td><td><strong>A</strong> 官方已证实</td><td>可直接使用</td><td>—</td></tr>
+<tr><td>举升300kg / 价格$1,500</td><td><strong>A</strong> 官方已证实</td><td>可直接使用</td><td>—</td></tr>
+<tr><td>CE / ISO 认证</td><td><strong>D</strong> 需要补证</td><td>30天内上传证书文件</td><td>D+5-10</td></tr>
+<tr><td>公司注册主体 + 地址 + 电话</td><td><strong>D</strong> 需要补证</td><td>5天内确认并修正</td><td>D+1-5</td></tr>
+<tr><td>客户案例 / 证言</td><td><strong>E</strong> 禁止使用</td><td>删除假证言 → 补真实案例</td><td>D+1-3 / D+25-40</td></tr>
+<tr><td>团队信息</td><td><strong>E</strong> 禁止使用</td><td>统一后重新上线</td><td>D+1-5</td></tr>
+<tr><td>零值数据 (0+ clients)</td><td><strong>E</strong> 禁止使用</td><td>删除模块或补真实数据</td><td>D+1-3</td></tr>
+<tr><td>Latin 占位文本</td><td><strong>E</strong> 禁止使用</td><td>立即删除 → 补真实文案</td><td>D+1-5</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- NORTH STAR -->
+<section id="northstar">
+<h2>5. 北极星指标</h2>
+<table>
+<thead><tr><th style="width:22%">指标</th><th style="width:26%">D+30 目标</th><th style="width:26%">D+60 目标</th><th style="width:26%">D+90 目标</th></tr></thead>
+<tbody>
+<tr><td><strong>品牌信息准确率</strong></td><td>冲突=0</td><td>0 冲突维持</td><td>0 冲突维持</td></tr>
+<tr><td><strong>核心问题覆盖率</strong></td><td>55%</td><td>70%</td><td>85%</td></tr>
+<tr><td><strong>证据支持率（A/B级%）</strong></td><td>50%</td><td>65%</td><td>80%</td></tr>
+<tr><td><strong>品牌被提及率</strong></td><td>基线建立</td><td>基线+20%</td><td>基线+40%</td></tr>
+<tr><td><strong>页面技术合规率</strong></td><td>80%</td><td>90%</td><td>95%</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- 6 PACKAGES -->
+<section id="packages">
+<h2>6. 六个项目包</h2>
+
+<h3>📦 项目包 1：页面技术</h3>
+<table>
+<thead><tr><th>任务</th><th>交付物</th><th>时程</th><th>验收</th></tr></thead>
+<tbody>
+<tr><td>Schema 全量部署</td><td>JSON-LD ×6类</td><td>D+1-5</td><td>Rich Results Test 通过</td></tr>
+<tr><td>14 表单 action 修复</td><td>表单可提交</td><td>D+3-7</td><td>测试提交成功</td></tr>
+<tr><td>首页 title 修复</td><td>完整标题</td><td>D+1</td><td>含3+关键词</td></tr>
+<tr><td>sitemap.xml 生成</td><td>XML Sitemap</td><td>D+5-7</td><td>含全部17条路由</td></tr>
+<tr><td>32 图 alt 补全</td><td>更新后HTML</td><td>D+7-12</td><td>alt 缺陷率=0%</td></tr>
+<tr><td>&lt;main&gt; 语义标签</td><td>17页改造</td><td>D+25-28</td><td>覆盖率=100%</td></tr>
+<tr><td>CSS/JS 按需加载</td><td>优化清单</td><td>D+45-55</td><td>≤30文件/页</td></tr>
+</tbody>
+</table>
+
+<h3>📦 项目包 2：内容矩阵</h3>
+<table>
+<thead><tr><th>任务</th><th>交付物</th><th>时程</th></tr></thead>
+<tbody>
+<tr><td>Latin清除 + 假证言删除 + 零数据处理</td><td>三页清理</td><td>D+1-5</td></tr>
+<tr><td>博客meta重写 + 更新时间标注</td><td>6+15页</td><td>D+5-12</td></tr>
+<tr><td>新建：对比页 / 安装教程 / 安全认证</td><td>3个新页面</td><td>D+14-20</td></tr>
+<tr><td>新建：客户案例页（≥2例）</td><td>案例页面</td><td>D+25-40</td></tr>
+<tr><td>深度博文 ×3 + URL slug修正 ×6</td><td>3+6篇</td><td>D+30-45</td></tr>
+</tbody>
+</table>
+
+<h3>📦 项目包 3：标题体系</h3>
+<table>
+<thead><tr><th>任务</th><th>时程</th></tr></thead>
+<tbody>
+<tr><td>首页title统一 + H1/H2规范建立</td><td>D+1-14</td></tr>
+<tr><td>标题库建立（≥30条英+中）</td><td>D+14-21</td></tr>
+<tr><td>页面级标题逐页优化</td><td>D+21-30</td></tr>
+<tr><td>中文标题方案（≥20条）</td><td>D+40-50</td></tr>
+</tbody>
+</table>
+
+<h3>📦 项目包 4：知识库</h3>
+<table>
+<thead><tr><th>任务</th><th>时程</th></tr></thead>
+<tbody>
+<tr><td>品牌实体统一（团队/地址/电话）</td><td>D+1-5</td></tr>
+<tr><td>事实卡库建立（≥15条）</td><td>D+5-15</td></tr>
+<tr><td>术语表+禁用表达清单建立</td><td>D+5-20</td></tr>
+<tr><td>CE/ISO 证书归档+公司历史时间线</td><td>D+5-15</td></tr>
+<tr><td>知识库 CMS 上线</td><td>D+45-60</td></tr>
+</tbody>
+</table>
+
+<h3>📦 项目包 5：外部证据</h3>
+<table>
+<thead><tr><th>任务</th><th>时程</th></tr></thead>
+<tbody>
+<tr><td>社媒链接+认证证书公示</td><td>D+10-20</td></tr>
+<tr><td>首个真实客户案例</td><td>D+25-40</td></tr>
+<tr><td>行业媒体投稿（≥1篇）</td><td>D+40-65</td></tr>
+<tr><td>行业目录注册（≥3个）</td><td>D+50-70</td></tr>
+<tr><td>Wikipedia/Wikidata</td><td>D+65-90</td></tr>
+</tbody>
+</table>
+
+<h3>📦 项目包 6：监测闭环</h3>
+<table>
+<thead><tr><th>任务</th><th>时程</th></tr></thead>
+<tbody>
+<tr><td>监测Prompt库（≥27条）</td><td>D+50-55</td></tr>
+<tr><td>首轮五平台基线采样（≥50条）</td><td>D+55-65</td></tr>
+<tr><td>六维看板搭建</td><td>D+60-70</td></tr>
+<tr><td>第2-5轮采样（每两周）</td><td>D+65-90</td></tr>
+<tr><td>90天复盘报告</td><td>D+85-90</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+<h2>7. 90 天执行路线图</h2>
+
+<div class="timeline-bar">
+  <div class="t-bar-30">D+1~30<br>品牌修复+技术基础<br>快赢阶段</div>
+  <div class="t-bar-60">D+31~60<br>知识资产+内容批量<br>资产建设</div>
+  <div class="t-bar-90">D+61~90<br>监测复测+闭环优化<br>迭代阶段</div>
+</div>
+
+<table>
+<thead><tr><th style="width:10%">阶段</th><th style="width:8%">周</th><th style="width:42%">关键交付</th><th style="width:40%">里程碑</th></tr></thead>
+<tbody>
+<tr><td rowspan="4" style="text-align:center;background:#FEF3C7;font-weight:800;font-size:13px;">快赢<br>D+1-30</td><td>W1</td><td>团队统一；Latin清除；假证言删除；零数据处理；Schema(Org+Product+FAQ+Breadcrumb)；title修复；sitemap；robots</td><td>✅ 品牌冲突=0；假内容=0</td></tr>
+<tr><td>W2</td><td>32张alt补全；更新时间标注；author meta；博客meta去模板</td><td>✅ 技术审计P0/P1清零</td></tr>
+<tr><td>W3</td><td>事实卡库(≥15条)；术语表初版；公司历史；认证证书上传</td><td>✅ 知识库初版上线</td></tr>
+<tr><td>W4</td><td>对比页+教程页+安全页上线；标题库(≥30条)；社媒链接</td><td>✅ GEO基线评分目标3.5+</td></tr>
+<tr><td rowspan="2" style="text-align:center;background:#DBEAFE;font-weight:800;font-size:13px;">建设<br>D+31-60</td><td>W5-6</td><td>客户案例(≥2个)；3篇新博文；URL slug修正；CSS/JS优化</td><td>✅ 问题覆盖率目标55%</td></tr>
+<tr><td>W7-9</td><td>中文站MVP上线(首页+FAQ+产品)；媒体投稿≥1篇；知识库CMS；标题库中文版</td><td>✅ GEO基线评分目标4.0+</td></tr>
+<tr><td rowspan="2" style="text-align:center;background:#ECFDF5;font-weight:800;font-size:13px;">迭代<br>D+61-90</td><td>W10-12</td><td>首轮五平台基线采样；六维看板；行业目录注册；事实准确率校准</td><td>✅ 采样基线建立</td></tr>
+<tr><td>W13</td><td>90天复盘报告；外部证据(≥3个)；下一轮路线图</td><td>✅ 闭环完成</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- PLATFORMS -->
+<section id="platforms">
+<h2>8. 国内 AI 平台差异化执行动作</h2>
+<table>
+<thead><tr><th style="width:10%">平台</th><th style="width:12%">侧重</th><th style="width:26%">需改造资产</th><th style="width:26%">具体动作</th><th style="width:26%">验收指标</th></tr></thead>
+<tbody>
+<tr><td><strong>DeepSeek</strong></td><td>逻辑·证据链</td><td>对比页(TCO公式)；参数页(技术原理)；认证页(测试数据)</td><td>对比页加推理链；FAQ加条件回答；关键数据加引用标注</td><td>对比页≥5维证据链；核心数据有计算口径</td></tr>
+<tr><td><strong>豆包</strong></td><td>口语·创作式</td><td>FAQ口语版；安装教程；案例故事</td><td>FAQ第二版+10条口语问答；教程含"新手错误"模块；案例写成叙事</td><td>口语FAQ≥15条；教程含避坑指南</td></tr>
+<tr><td><strong>千问</strong></td><td>可追溯·结构化</td><td>参数表Schema；FAQPage Schema；来源台账页</td><td>产品页加键值对Schema；FAQ全加QAPage；案例加ReviewedBy</td><td>Schema与内容一致率=100%</td></tr>
+<tr><td><strong>Kimi</strong></td><td>长文本·深度</td><td>行业长文(1500-2000字)；选型指南PDF；术语表</td><td>撰写Buyer's Guide长文；5G部署白皮书；中文选型指南</td><td>长文≥1500字/篇；含结构化目录</td></tr>
+<tr><td><strong>元宝</strong></td><td>微信·视频号</td><td>公众号文章(3-5篇)；视频号摘要；中文FAQ</td><td>中文站→同步公众号；文章嵌官网回链；发布产品演示视频</td><td>公众号≥3篇；视频号≥2个</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ROLES -->
+<section id="roles">
+<h2>9. 角色分工与验收指标</h2>
+<table>
+<thead><tr><th style="width:18%">角色</th><th style="width:34%">关键任务</th><th style="width:28%">核心验收指标</th><th style="width:20%">投入</th></tr></thead>
+<tbody>
+<tr><td>创始人/CEO</td><td>事实确认、资源审批、客户授权</td><td>品牌事实确认率100%；P0关闭率≥90%</td><td>10h/月</td></tr>
+<tr><td>内容负责人</td><td>内容矩阵+标题+知识库</td><td>新增内容≥8页；事实卡≥30条</td><td>100% FTE</td></tr>
+<tr><td>技术负责人</td><td>页面技术包（Schema/表单/meta）</td><td>Schema覆盖率100%；技术审计≥7.0</td><td>60% FTE</td></tr>
+<tr><td>增长负责人</td><td>监测闭环+采样+看板</td><td>采样≥5轮；复盘按时交付</td><td>50% FTE</td></tr>
+<tr><td>销售负责人</td><td>客户案例素材+竞品信息</td><td>案例≥2个；竞品≥3家</td><td>15h/月</td></tr>
+<tr><td>PR/市场</td><td>外部证据（媒体+目录）</td><td>第三方引用≥3个</td><td>20h/月</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- BUDGET -->
+<section id="budget">
+<h2>10. 资源预算与优先级</h2>
+<table>
+<thead><tr><th style="width:18%">资源</th><th style="width:22%">月预算</th><th style="width:30%">说明</th><th style="width:30%">取舍逻辑</th></tr></thead>
+<tbody>
+<tr><td><strong>人力</strong></td><td>2.5 FTE</td><td>1内容(100%)+1开发(60%)+0.5增长(50%)+0.4其他</td><td>不可削减</td></tr>
+<tr><td><strong>工具/软件</strong></td><td>¥2-5K</td><td>监测+采样+CMS</td><td>可用免费替代</td></tr>
+<tr><td><strong>外部媒体</strong></td><td>¥5-15K（D+30起）</td><td>媒体投放+目录+推广</td><td>有内容和案例后再投</td></tr>
+<tr><td><strong>合计</strong></td><td>¥15-25K/月</td><td colspan="2">不含人员薪资；<strong>不启动广告投放</strong></td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- MONITORING -->
+<section id="monitoring">
+<h2>11. 监测闭环计划</h2>
+<table>
+<thead><tr><th style="width:12%">周期</th><th style="width:23%">活动</th><th style="width:25%">负责人</th><th style="width:40%">看板六维度</th></tr></thead>
+<tbody>
+<tr><td>每周</td><td>内容+技术进度检查</td><td>内容+技术</td><td>品牌事实 / 内容覆盖 / 业务转化</td></tr>
+<tr><td>每两周</td><td>六维指标 review；看板更新</td><td>增长负责人</td><td>全六维</td></tr>
+<tr><td>每月</td><td>平台采样（1轮/月）；月度复盘</td><td>增长+内容</td><td>平台表现 / 外部证据</td></tr>
+<tr><td>D+30/60/90</td><td>里程碑正式验收</td><td>全员</td><td>全六维基线对比</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- GOVERNANCE -->
+<section id="governance">
+<h2>12. 治理节奏与决策机制</h2>
+<table>
+<thead><tr><th style="width:22%">决策类型</th><th style="width:18%">决策人</th><th style="width:32%">触发条件</th><th style="width:28%">决策窗口</th></tr></thead>
+<tbody>
+<tr><td>P0 执行决策</td><td>技术/内容负责人</td><td>日常执行</td><td>即时</td></tr>
+<tr><td>资源调配</td><td>创始人</td><td>预算超支>20%或人力短缺</td><td>3 个工作日</td></tr>
+<tr><td>品牌事实变更</td><td>创始人</td><td>品牌定义/产品边界/价格更改</td><td>即时（签字）</td></tr>
+<tr><td>平台策略调整</td><td>增长+创始人</td><td>采样发现重大偏差</td><td>5 个工作日</td></tr>
+</tbody>
+</table>
+
+<h3>沟通机制</h3>
+<table>
+<thead><tr><th style="width:14%">渠道</th><th style="width:14%">频率</th><th style="width:22%">参与者</th><th style="width:50%">内容</th></tr></thead>
+<tbody>
+<tr><td>异步更新</td><td>每日</td><td>全员</td><td>进度更新、阻塞标记</td></tr>
+<tr><td>技术站会</td><td>每周一</td><td>技术负责人</td><td>本周任务、上周阻塞</td></tr>
+<tr><td>内容站会</td><td>每周二</td><td>内容负责人</td><td>内容排期、审核进度</td></tr>
+<tr><td>增长看板 review</td><td>每两周</td><td>增长+创始人</td><td>指标变化、调整决策</td></tr>
+<tr><td>月度复盘</td><td>每月</td><td>全员</td><td>里程碑完成度、下月规划</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- RISKS -->
+<section id="risks">
+<h2>13. 风险预案</h2>
+<table>
+<thead><tr><th style="width:24%">风险</th><th style="width:10%">概率</th><th style="width:10%">影响</th><th style="width:35%">预案</th><th style="width:21%">触发信号</th></tr></thead>
+<tbody>
+<tr><td>客户案例授权延迟</td><td>中</td><td>高</td><td>先上线非案例的可验证事实；案例后台待发布</td><td>D+30 无授权案例</td></tr>
+<tr><td>认证证书无法获取</td><td>中</td><td>中</td><td>降级为"声称合规"标注；不展示虚假证书</td><td>D+30 无证书</td></tr>
+<tr><td>平台采样效果不达预期</td><td>高</td><td>中</td><td>关注内容可抽取性和事实准确率提升</td><td>D+75 无趋势改善</td></tr>
+<tr><td>内容产能不足</td><td>中</td><td>高</td><td>委托外部写手；P2降级为"骨架上线"</td><td>D+30 产出<计划50%</td></tr>
+<tr><td>创始人时间不足</td><td>高</td><td>高</td><td>品牌事实确认不可跳过；其他审批可授权</td><td>D+5 事实未确认</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- SOURCES -->
+<section id="sources">
+<h2>14. 来源台账</h2>
+<table>
+<thead><tr><th style="width:8%">ID</th><th style="width:30%">来源</th><th style="width:12%">类型</th><th style="width:10%">等级</th><th style="width:40%">用途</th></tr></thead>
+<tbody>
+<tr><td>S01</td><td>yao-geo-panorama-audit报告</td><td>诊断</td><td>观察</td><td>全景基线 + 品牌事实缺口</td></tr>
+<tr><td>S02</td><td>yao-geo-page-audit报告</td><td>诊断</td><td>观察</td><td>页面技术基线 + 修复清单</td></tr>
+<tr><td>S03</td><td>PoleLift 官网 dist/</td><td>官方</td><td>A</td><td>页面结构、内容、meta 审计</td></tr>
+<tr><td>S04</td><td>PoleLift /faq/</td><td>官方</td><td>A</td><td>产品参数（举升/电源/速度）</td></tr>
+<tr><td>S05</td><td>PoleLift /pricing-plan/</td><td>官方</td><td>A</td><td>价格信息确认</td></tr>
+<tr><td>S06</td><td>Schema.org</td><td>标准</td><td>标准</td><td>结构化数据类型规范</td></tr>
+<tr><td>S07</td><td>Google Search Central</td><td>标准</td><td>标准</td><td>sitemap/canonical/robots</td></tr>
+<tr><td>S08</td><td>W3C WCAG 2.2</td><td>标准</td><td>标准</td><td>可访问性基准</td></tr>
+<tr><td>S09</td><td>GEO: arXiv:2311.09735</td><td>研究</td><td>研究</td><td>GEO 不等于传统 SEO</td></tr>
+<tr><td>S10</td><td>SourceBench: arXiv:2602.16942</td><td>研究</td><td>研究</td><td>引用源质量六维评估</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- FOOTER -->
+<p style="text-align:center;color:var(--muted);margin-top:44px;font-size:12px">
+报告生成时间：2026-07-10 · 技能版本：yao-geo-execution-roadmap<br>
+诊断基础：yao-geo-panorama-audit + yao-geo-page-audit<br>
+下一轮复查：2026-08-10（D+30 里程碑）
+</p>
+</main>
+
+<script>
+const nav=document.getElementById('report-menu'),links=nav.querySelectorAll('a'),secs=[...document.querySelectorAll('section[id]')];
+window.addEventListener('scroll',()=>{let c='';for(const s of secs){if(window.scrollY>=s.offsetTop-80)c=s.id;}links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+c));});
+</script>
+</body>
+</html>

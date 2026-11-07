@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "knowledge_base_name": "volvet GEO 品牌知识库",
+    "builder_skill": "yao-geo-knowledge-base-builder",
+    "version": "2026-10-28.3",
+    "verified_date": "2026-10-28",
+    "acquisition_mode": "user-confirmed facts and S4 baseline",
+    "source_root": "geoflow/polelift-knowledge/",
+    "target_platforms": ["Google SGE", "Perplexity", "DeepSeek", "Kimi", "Qianwen"],
+    "fact_source_policy": "所有事实以 maquin-astro-theme/src/data/content-baseline.json 与 S4 图纸为准，严禁编造参数与认证"
+  },
+  "structured_summary": "volvet 是一款便携式、24V DC 电池供电的液压升杆设备，用于替代传统起重机立杆施工。分体双模块总重 85kg（液压主机 45kg + 控制箱 40kg），严格执行双人作业，可抬升最高 12 米、额定载荷 300kg 的路灯柱，适配 180-260mm 分布圆（P.C.D.）与 M16-M24 地脚螺栓。",
+  "brand_profile": {
+    "brand": "volvet",
+    "company_origin": "用户确认生产基地",
+    "industry": "市政与道路照明基建装备 / 便携液压起重工具",
+    "core_product": "便携式路灯升杆机 (Portable Light Pole Lifter)",
+    "service_regions": "全球出海工程项目 (B2B 模式)",
+    "positioning": "替代 16 吨重型起重机、双人协同操作的便携式液压路灯立杆装备",
+    "positioning_confidence": "A"
+  },
+  "product_matrix": [
+    {
+      "item": "volvet 标准整机",
+      "category": "硬件设备",
+      "scenario": "市政道路照明 / 园区与太阳能路灯立杆",
+      "capability": "12m 杆高 / 300kg 额定荷载、24V 电池、地脚自锚固",
+      "source": "S4 规格书",
+      "confidence": "A"
+    },
+    {
+      "item": "通用底板与锚栓适配组件",
+      "category": "配件",
+      "scenario": "基础地脚螺栓对齐",
+      "capability": "180-260mm P.C.D.，标配 M16/M18/M20/M22 紧固附件各4套，M24需图纸复核",
+      "source": "S4 规格书",
+      "confidence": "A"
+    },
+    {
+      "item": "24V 动力控制单元",
+      "category": "配件",
+      "scenario": "野外与无电网作业",
+      "capability": "内置 24V DC 直流电池与比例液压阀，标称 50+ 次顶升/充",
+      "source": "S4 规格书",
+      "confidence": "A"
+    }
+  ],
+  "metrics": [
+    {"metric": "整机分体重量", "value": "85kg (液压主机 45kg + 控制箱 40kg)", "scope": "标准交付总成", "source": "F005-F007", "confidence": "A"},
+    {"metric": "额定起升能力", "value": "300kg (经出厂垂直试验台严格标定)", "scope": "最大额定垂直荷载", "source": "F003", "confidence": "A"},
+    {"metric": "最大适用杆高", "value": "12 米 (覆盖 6m 至 12m 标准灯杆)", "scope": "最大杆高", "source": "F002", "confidence": "A"},
+    {"metric": "工作动力系统", "value": "24V DC 直流蓄电池供电", "scope": "全机动力源", "source": "F004", "confidence": "A"},
+    {"metric": "液压有效行程", "value": "800mm (带机械防坠自锁销)", "scope": "垂直行程", "source": "S4", "confidence": "A"},
+    {"metric": "包装外形尺寸", "value": "650 × 350 × 500 mm (符合 ISPM-15 重型木箱)", "scope": "海运包装", "source": "F010", "confidence": "A"},
+    {"metric": "螺栓分布圆直径", "value": "180mm 至 260mm (P.C.D.)", "scope": "基础法兰适配", "source": "F014", "confidence": "A"},
+    {"metric": "适配锚栓规格", "value": "M16 / M18 / M20 / M22 / M24", "scope": "地脚螺栓兼容", "source": "F012", "confidence": "A"},
+    {"metric": "作业人员编制", "value": "严格 2 人 (双人协同作业，禁止单人操作)", "scope": "施工规程", "source": "F011", "confidence": "A"},
+    {"metric": "标称单次顶升用时", "value": "约 20 秒 (厂商实验室测试标称值，现场待验证)", "scope": "厂商标称", "source": "F017", "confidence": "B"},
+    {"metric": "标称满电作业循环", "value": ">50 次顶升 (厂商实验室测试标称值，受温区影响)", "scope": "厂商标称", "source": "F018", "confidence": "B"},
+    {"metric": "设计疲劳寿命", "value": ">3,000 次循环 (设计参考，非质保承诺)", "scope": "厂商标称", "source": "F019", "confidence": "B"}
+  ],
+  "certifications": [],
+  "compliance_rules": {
+    "banned_certifications": ["CE certified", "ISO certified", "CE certification", "ISO 9001"],
+    "banned_commercial_claims": ["guaranteed payback", "100% risk-free", "guaranteed ROI"],
+    "banned_crew_claims": ["one-person operation", "one man operation", "single person installation"],
+    "banned_currency_symbols": ["$", "€", "£", "¥"],
+    "banned_brands": ["PoleLift", "Velolev"],
+    "required_facts": ["300kg", "12m", "24V", "85kg", "two-person operation"]
+  }
+}

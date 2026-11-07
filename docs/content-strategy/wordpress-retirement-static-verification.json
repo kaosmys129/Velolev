@@ -1,15 +1,15 @@
 {
   "date": "2026-10-29",
-  "sourceDigest": "27fba3415c6f7405a897caea15193335bcc885826d89e6a4a56f6ac6be3355fb",
+  "sourceDigest": "8d6666de0e1fc942df68aadec30e1ba99cc2eb996a5033fca7e0e12224efdfa1",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "snapshotDigest": null,
   "origin": null,
   "passed": true,
   "transport": "static",
-  "modernPublicHtml": 120,
+  "modernPublicHtml": 127,
   "redirects": 85,
   "wordpressFiles": 0,
-  "buildBytes": 12808013,
-  "checks": 633,
+  "buildBytes": 30725708,
+  "checks": 656,
   "failures": []
 }

@@ -1,0 +1,25 @@
+{
+  "archive": "wordpress-retired-tools.tar.gz",
+  "files": [
+    {
+      "path": "analyze_images.py",
+      "bytes": 843,
+      "sha256": "0171f764b24b819c9bf7a5bc7c634e10550f2195598f38fa3d13ddea5dc746b9"
+    },
+    {
+      "path": "find_all_images.py",
+      "bytes": 876,
+      "sha256": "804b57522cf2dd10dc04720a69e32e3b32a8fc3d901cc5e999328d9764409a7c"
+    },
+    {
+      "path": "group_images.py",
+      "bytes": 1216,
+      "sha256": "253d158157096c7e58f70dd5d131ac09c67712ad727331dff32b5ee93dd354c1"
+    },
+    {
+      "path": "tmp_scan_images.py",
+      "bytes": 1144,
+      "sha256": "a4816204870401b77c49ce216519ac69e5e89a04dc2f830e21253e97d3672bcd"
+    }
+  ]
+}

@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>volvet 全站设计稿导出画廊 & UI 设计规范交付看板</title>
+  <style>
+    :root {
+      --bg: #141715;
+      --card-bg: #1d221f;
+      --card-border: #2c332e;
+      --text: #e7ece5;
+      --text-muted: #8e9b8f;
+      --yellow: #f4cc3d;
+      --yellow-hover: #ffdc57;
+      --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(20, 23, 21, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 18px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-badge {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      background: var(--yellow);
+      color: #141715;
+      font-weight: 800;
+      font-size: 20px;
+      border-radius: 3px;
+    }
+    .brand-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .brand-sub {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+    .meta-badges {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: #252d27;
+      color: var(--yellow);
+      border: 1px solid #3d4a40;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 1560px;
+      margin: 0 auto;
+      padding: 30px 36px;
+    }
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 14px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: #1d221f;
+      color: var(--text-muted);
+      border: 1px solid var(--card-border);
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .tab-btn:hover {
+      color: #fff;
+      background: #272f2a;
+    }
+    .tab-btn.active {
+      background: var(--yellow);
+      color: #141715;
+      border-color: var(--yellow);
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 30px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 18px;
+      background: var(--yellow);
+      border-radius: 2px;
+    }
+    .artboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 26px;
+      margin-bottom: 45px;
+    }
+    .artboard-grid.mobile-grid {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    .artboard-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, border-color .2s;
+    }
+    .artboard-card:hover {
+      transform: translateY(-4px);
+      border-color: #4a574e;
+    }
+    .artboard-preview {
+      background: #0f1210;
+      height: 290px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .artboard-grid.mobile-grid .artboard-preview {
+      height: 400px;
+    }
+    .artboard-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform .3s ease;
+    }
+    .artboard-card:hover .artboard-preview img {
+      transform: scale(1.02);
+    }
+    .artboard-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .2s;
+      color: #fff;
+      font-weight: 600;
+      gap: 8px;
+    }
+    .artboard-preview:hover .artboard-overlay {
+      opacity: 1;
+    }
+    .artboard-info {
+      padding: 16px;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .artboard-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: #fff;
+    }
+    .artboard-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+    .artboard-actions a {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #28332b;
+      color: var(--yellow);
+      border: 1px solid #3d4a40;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+    .artboard-actions a:hover {
+      background: var(--yellow);
+      color: #141715;
+    }
+    .tokens-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 28px;
+      margin-bottom: 40px;
+    }
+    .swatches-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .swatch-card {
+      background: #141715;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .swatch-color {
+      height: 70px;
+    }
+    .swatch-details {
+      padding: 12px;
+      font-size: 12px;
+    }
+    .swatch-name {
+      font-weight: 700;
+      color: #fff;
+    }
+    .swatch-hex {
+      font-family: monospace;
+      color: var(--yellow);
+      margin: 2px 0;
+    }
+    .swatch-role {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+    .modal.open {
+      display: flex;
+    }
+    .modal-content {
+      max-width: 92vw;
+      max-height: 92vh;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #171b18;
+    }
+    .modal-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .modal-img-container {
+      padding: 24px;
+      text-align: center;
+      background: #0d0f0e;
+      overflow: auto;
+    }
+    .modal-img-container img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand-group">
+      <span class="logo-badge">v</span>
+      <div>
+        <div class="brand-title">volvet · 全站设计稿导出与设计系统规范</div>
+        <div class="brand-sub">Portable Light Pole Lifter Global Independent Site · High-Fidelity Design Review</div>
+      </div>
+    </div>
+    <div class="meta-badges">
+      <span class="pill">2x Retina High-DPI</span>
+      <span class="pill">1440px / 768px / 390px</span>
+      <span class="pill">Tokens v1.0</span>
+      <span class="pill">41 Artboards</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="filterCategory('all')">全部画板 (41)</button>
+      <button class="tab-btn" onclick="filterCategory('Core Procurement')">核心采购链路</button>
+      <button class="tab-btn" onclick="filterCategory('Interactive States')">核心交互与状态</button>
+      <button class="tab-btn" onclick="filterCategory('Tablet')">平板端画板</button>
+      <button class="tab-btn" onclick="filterCategory('Mobile')">移动端画板</button>
+      <button class="tab-btn" onclick="filterCategory('Multilingual Matrix')">多语言矩阵</button>
+      <button class="tab-btn" onclick="filterCategory('tokens')">设计规范 Tokens</button>
+    </div>
+
+    <!-- Design Tokens Panel -->
+    <section id="tokens-section" class="tokens-panel">
+      <div class="section-title">核心色彩设计规范 (Design Color Tokens)</div>
+      <p style="color:var(--text-muted); margin-bottom:15px">提取自生产级 CSS 系统规范，专为严谨工业美学定制的主色、辅色与对比度配置。</p>
+      <div class="swatches-row">
+        <div class="swatch-card"><div class="swatch-color" style="background:#f4cc3d"></div><div class="swatch-details"><div class="swatch-name">Brand Yellow</div><div class="swatch-hex">#f4cc3d</div><div class="swatch-role">Primary Action / CTA</div></div></div>
+        <div class="swatch-card"><div class="swatch-color" style="background:#ffdc57"></div><div class="swatch-details"><div class="swatch-name">Yellow Hover</div><div class="swatch-hex">#ffdc57</div><div class="swatch-role">Interactive Hover</div></div></div>
+        <div class="swatch-card"><div class="swatch-color" style="background:#1d201e"></div><div class="swatch-details"><div class="swatch-name">Carbon Ink</div><div class="swatch-hex">#1d201e</div><div class="swatch-role">Headings & Primary Text</div></div></div>
+        <div class="swatch-card"><div class="swatch-color" style="background:#202622"></div><div class="swatch-details"><div class="swatch-name">Industrial Dark</div><div class="swatch-hex">#202622</div><div class="swatch-role">Footer & Contrast Blocks</div></div></div>
+        <div class="swatch-card"><div class="swatch-color" style="background:#f3f2ec"></div><div class="swatch-details"><div class="swatch-name">Paper Canvas</div><div class="swatch-hex">#f3f2ec</div><div class="swatch-role">Warm Sand Page Canvas</div></div></div>
+        <div class="swatch-card"><div class="swatch-color" style="background:#c6ceba"></div><div class="swatch-details"><div class="swatch-name">Blueprint Green</div><div class="swatch-hex">#c6ceba</div><div class="swatch-role">Hero Visual Blueprint</div></div></div>
+        <div class="swatch-card"><div class="swatch-color" style="background:#d5d8cd"></div><div class="swatch-details"><div class="swatch-name">Grid Border Line</div><div class="swatch-hex">#d5d8cd</div><div class="swatch-role">Borders & Table Lines</div></div></div>
+        <div class="swatch-card"><div class="swatch-color" style="background:#a52a20"></div><div class="swatch-details"><div class="swatch-name">Semantic Alert</div><div class="swatch-hex">#a52a20</div><div class="swatch-role">Validation Error State</div></div></div>
+      </div>
+    </section>
+
+    <!-- Artboards Showcase Grid -->
+    <div id="artboard-container">
+      <div class="section-title" id="grid-header">设计画板精选清单</div>
+      <div class="artboard-grid" id="main-grid">
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/01-home.png', 'Homepage (Core Landing) (Desktop)')">
+              <img src="artboards/desktop/01-home.png" alt="Homepage (Core Landing)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Homepage (Core Landing)</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/01-home.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/02-product-detail.png', 'Product Detail (Specifications & Modularity) (Desktop)')">
+              <img src="artboards/desktop/02-product-detail.png" alt="Product Detail (Specifications & Modularity)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Product Detail (Specifications & Modularity)</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /products/light-pole-jack/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/02-product-detail.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Engineering Guide" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/03-compatibility-guide.png', 'Compatibility Guide (Flange & Foundation) (Desktop)')">
+              <img src="artboards/desktop/03-compatibility-guide.png" alt="Compatibility Guide (Flange & Foundation)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Compatibility Guide (Flange & Foundation)</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /guides/pole-jack-compatibility/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/03-compatibility-guide.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/03b-about-us.png', 'About Us (Factory & Engineering Verification) (Desktop)')">
+              <img src="artboards/desktop/03b-about-us.png" alt="About Us (Factory & Engineering Verification)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">About Us (Factory & Engineering Verification)</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /about-us/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/03b-about-us.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Conversion Flow" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/04-quote-inquiry.png', 'Project Quotation & RFQ Form (Desktop)')">
+              <img src="artboards/desktop/04-quote-inquiry.png" alt="Project Quotation & RFQ Form" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Project Quotation & RFQ Form</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /quote/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/04-quote-inquiry.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Conversion Flow" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/05-contact-us.png', 'Contact Us & Business Inquiries (Desktop)')">
+              <img src="artboards/desktop/05-contact-us.png" alt="Contact Us & Business Inquiries" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Contact Us & Business Inquiries</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /contact-us/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/05-contact-us.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Policy & Trust" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/06-privacy-policy.png', 'Privacy Notice (Desktop)')">
+              <img src="artboards/desktop/06-privacy-policy.png" alt="Privacy Notice" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Privacy Notice</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /privacy/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/06-privacy-policy.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Policy & Trust" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/07-terms-of-service.png', 'Terms of Service (Desktop)')">
+              <img src="artboards/desktop/07-terms-of-service.png" alt="Terms of Service" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Terms of Service</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /terms/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/07-terms-of-service.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Policy & Trust" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/08-editorial-policy.png', 'Editorial & Fact Policy (Desktop)')">
+              <img src="artboards/desktop/08-editorial-policy.png" alt="Editorial & Fact Policy" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Editorial & Fact Policy</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /editorial-policy/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/08-editorial-policy.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Content Hub" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/09-blog-archive.png', 'Blog & Knowledge Archive (Desktop)')">
+              <img src="artboards/desktop/09-blog-archive.png" alt="Blog & Knowledge Archive" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Blog & Knowledge Archive</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /blog/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/09-blog-archive.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Content Hub" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/10-article-detail.png', 'Technical Article Detail (Desktop)')">
+              <img src="artboards/desktop/10-article-detail.png" alt="Technical Article Detail" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Technical Article Detail</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /the-importance-of-regular-inspections-for-heavy-machinery/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/10-article-detail.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Operations & Admin" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/11-admin-inquiries-login.png', 'Private Inbox (Login State) (Desktop)')">
+              <img src="artboards/desktop/11-admin-inquiries-login.png" alt="Private Inbox (Login State)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Private Inbox (Login State)</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /admin/inquiries/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/11-admin-inquiries-login.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="System States" data-device="Desktop">
+            <div class="artboard-preview" onclick="openModal('artboards/desktop/12-404-error.png', '404 Error Fallback (Desktop)')">
+              <img src="artboards/desktop/12-404-error.png" alt="404 Error Fallback" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">404 Error Fallback</div>
+                <div class="artboard-meta">Desktop · 1440px @ 2x · /404.html</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/desktop/12-404-error.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Tablet">
+            <div class="artboard-preview" onclick="openModal('artboards/tablet/01-home.png', 'Homepage (Tablet) (Tablet)')">
+              <img src="artboards/tablet/01-home.png" alt="Homepage (Tablet)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Homepage (Tablet)</div>
+                <div class="artboard-meta">Tablet · 768px @ 2x · /</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/tablet/01-home.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Tablet">
+            <div class="artboard-preview" onclick="openModal('artboards/tablet/02-product-detail.png', 'Product Detail (Tablet) (Tablet)')">
+              <img src="artboards/tablet/02-product-detail.png" alt="Product Detail (Tablet)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Product Detail (Tablet)</div>
+                <div class="artboard-meta">Tablet · 768px @ 2x · /products/light-pole-jack/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/tablet/02-product-detail.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Engineering Guide" data-device="Tablet">
+            <div class="artboard-preview" onclick="openModal('artboards/tablet/03-compatibility-guide.png', 'Compatibility Guide (Tablet) (Tablet)')">
+              <img src="artboards/tablet/03-compatibility-guide.png" alt="Compatibility Guide (Tablet)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Compatibility Guide (Tablet)</div>
+                <div class="artboard-meta">Tablet · 768px @ 2x · /guides/pole-jack-compatibility/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/tablet/03-compatibility-guide.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Tablet">
+            <div class="artboard-preview" onclick="openModal('artboards/tablet/03b-about-us.png', 'About Us (Tablet) (Tablet)')">
+              <img src="artboards/tablet/03b-about-us.png" alt="About Us (Tablet)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">About Us (Tablet)</div>
+                <div class="artboard-meta">Tablet · 768px @ 2x · /about-us/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/tablet/03b-about-us.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Conversion Flow" data-device="Tablet">
+            <div class="artboard-preview" onclick="openModal('artboards/tablet/04-quote-inquiry.png', 'Project Quotation (Tablet) (Tablet)')">
+              <img src="artboards/tablet/04-quote-inquiry.png" alt="Project Quotation (Tablet)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Project Quotation (Tablet)</div>
+                <div class="artboard-meta">Tablet · 768px @ 2x · /quote/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/tablet/04-quote-inquiry.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Conversion Flow" data-device="Tablet">
+            <div class="artboard-preview" onclick="openModal('artboards/tablet/05-contact-us.png', 'Contact Us (Tablet) (Tablet)')">
+              <img src="artboards/tablet/05-contact-us.png" alt="Contact Us (Tablet)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Contact Us (Tablet)</div>
+                <div class="artboard-meta">Tablet · 768px @ 2x · /contact-us/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/tablet/05-contact-us.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Mobile">
+            <div class="artboard-preview" onclick="openModal('artboards/mobile/01-home.png', 'Homepage (Mobile) (Mobile)')">
+              <img src="artboards/mobile/01-home.png" alt="Homepage (Mobile)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Homepage (Mobile)</div>
+                <div class="artboard-meta">Mobile · 390px @ 2x · /</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/mobile/01-home.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Mobile">
+            <div class="artboard-preview" onclick="openModal('artboards/mobile/02-product-detail.png', 'Product Detail (Mobile) (Mobile)')">
+              <img src="artboards/mobile/02-product-detail.png" alt="Product Detail (Mobile)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Product Detail (Mobile)</div>
+                <div class="artboard-meta">Mobile · 390px @ 2x · /products/light-pole-jack/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/mobile/02-product-detail.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Engineering Guide" data-device="Mobile">
+            <div class="artboard-preview" onclick="openModal('artboards/mobile/03-compatibility-guide.png', 'Compatibility Guide (Mobile) (Mobile)')">
+              <img src="artboards/mobile/03-compatibility-guide.png" alt="Compatibility Guide (Mobile)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Compatibility Guide (Mobile)</div>
+                <div class="artboard-meta">Mobile · 390px @ 2x · /guides/pole-jack-compatibility/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/mobile/03-compatibility-guide.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Core Procurement" data-device="Mobile">
+            <div class="artboard-preview" onclick="openModal('artboards/mobile/03b-about-us.png', 'About Us (Mobile) (Mobile)')">
+              <img src="artboards/mobile/03b-about-us.png" alt="About Us (Mobile)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">About Us (Mobile)</div>
+                <div class="artboard-meta">Mobile · 390px @ 2x · /about-us/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/mobile/03b-about-us.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Conversion Flow" data-device="Mobile">
+            <div class="artboard-preview" onclick="openModal('artboards/mobile/04-quote-inquiry.png', 'Project Quotation (Mobile) (Mobile)')">
+              <img src="artboards/mobile/04-quote-inquiry.png" alt="Project Quotation (Mobile)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Project Quotation (Mobile)</div>
+                <div class="artboard-meta">Mobile · 390px @ 2x · /quote/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/mobile/04-quote-inquiry.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Conversion Flow" data-device="Mobile">
+            <div class="artboard-preview" onclick="openModal('artboards/mobile/05-contact-us.png', 'Contact Us (Mobile) (Mobile)')">
+              <img src="artboards/mobile/05-contact-us.png" alt="Contact Us (Mobile)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Contact Us (Mobile)</div>
+                <div class="artboard-meta">Mobile · 390px @ 2x · /contact-us/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/mobile/05-contact-us.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Policy & Trust" data-device="Mobile">
+            <div class="artboard-preview" onclick="openModal('artboards/mobile/06-privacy-policy.png', 'Privacy Notice (Mobile) (Mobile)')">
+              <img src="artboards/mobile/06-privacy-policy.png" alt="Privacy Notice (Mobile)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Privacy Notice (Mobile)</div>
+                <div class="artboard-meta">Mobile · 390px @ 2x · /privacy/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/mobile/06-privacy-policy.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Content Hub" data-device="Mobile">
+            <div class="artboard-preview" onclick="openModal('artboards/mobile/07-blog-archive.png', 'Blog Archive (Mobile) (Mobile)')">
+              <img src="artboards/mobile/07-blog-archive.png" alt="Blog Archive (Mobile)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Blog Archive (Mobile)</div>
+                <div class="artboard-meta">Mobile · 390px @ 2x · /blog/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/mobile/07-blog-archive.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Interactive States" data-device="Mobile (State)">
+            <div class="artboard-preview" onclick="openModal('artboards/states/01-mobile-menu-open.png', 'Mobile Navigation Drawer Open (Mobile (State))')">
+              <img src="artboards/states/01-mobile-menu-open.png" alt="Mobile Navigation Drawer Open" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Mobile Navigation Drawer Open</div>
+                <div class="artboard-meta">Mobile (State) · 390px @ 2x · / [menu-open]</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/states/01-mobile-menu-open.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Interactive States" data-device="Desktop (State)">
+            <div class="artboard-preview" onclick="openModal('artboards/states/02-language-switcher-expanded.png', 'Multilingual Dropdown Expanded (Desktop (State))')">
+              <img src="artboards/states/02-language-switcher-expanded.png" alt="Multilingual Dropdown Expanded" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Multilingual Dropdown Expanded</div>
+                <div class="artboard-meta">Desktop (State) · 1440px @ 2x · / [lang-open]</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/states/02-language-switcher-expanded.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Interactive States" data-device="Desktop (State)">
+            <div class="artboard-preview" onclick="openModal('artboards/states/03-compatibility-checklist-active.png', 'Compatibility Checklist Interaction (3 of 5 confirmed) (Desktop (State))')">
+              <img src="artboards/states/03-compatibility-checklist-active.png" alt="Compatibility Checklist Interaction (3 of 5 confirmed)" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Compatibility Checklist Interaction (3 of 5 confirmed)</div>
+                <div class="artboard-meta">Desktop (State) · 1440px @ 2x · /guides/pole-jack-compatibility/ [active]</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/states/03-compatibility-checklist-active.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Interactive States" data-device="Desktop (State)">
+            <div class="artboard-preview" onclick="openModal('artboards/states/04-quote-form-expanded-params.png', 'Inquiry Form Technical Details Drawer Open (Desktop (State))')">
+              <img src="artboards/states/04-quote-form-expanded-params.png" alt="Inquiry Form Technical Details Drawer Open" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Inquiry Form Technical Details Drawer Open</div>
+                <div class="artboard-meta">Desktop (State) · 1440px @ 2x · /quote/ [details-open]</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/states/04-quote-form-expanded-params.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Interactive States" data-device="Desktop (State)">
+            <div class="artboard-preview" onclick="openModal('artboards/states/05-quote-form-validation-error.png', 'Inquiry Form Inline Validation Errors (Desktop (State))')">
+              <img src="artboards/states/05-quote-form-validation-error.png" alt="Inquiry Form Inline Validation Errors" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Inquiry Form Inline Validation Errors</div>
+                <div class="artboard-meta">Desktop (State) · 1440px @ 2x · /quote/ [validation-failed]</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/states/05-quote-form-validation-error.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Interactive States" data-device="Desktop (State)">
+            <div class="artboard-preview" onclick="openModal('artboards/states/06-quote-form-success-receipt.png', 'Inquiry Official Reference Confirmation Receipt (Desktop (State))')">
+              <img src="artboards/states/06-quote-form-success-receipt.png" alt="Inquiry Official Reference Confirmation Receipt" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Inquiry Official Reference Confirmation Receipt</div>
+                <div class="artboard-meta">Desktop (State) · 1440px @ 2x · /quote/ [success-receipt]</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/states/06-quote-form-success-receipt.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Operations & Admin" data-device="Desktop (State)">
+            <div class="artboard-preview" onclick="openModal('artboards/states/07-admin-inquiry-detail-expanded.png', 'Operator Private Inbox & Inquiry Detail Drawer (Desktop (State))')">
+              <img src="artboards/states/07-admin-inquiry-detail-expanded.png" alt="Operator Private Inbox & Inquiry Detail Drawer" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Operator Private Inbox & Inquiry Detail Drawer</div>
+                <div class="artboard-meta">Desktop (State) · 1440px @ 2x · /admin/inquiries/ [authenticated]</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/states/07-admin-inquiry-detail-expanded.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Multilingual Matrix" data-device="Desktop (ES)">
+            <div class="artboard-preview" onclick="openModal('artboards/multilingual/es-home.png', 'Spanish (Español) - Homepage (Desktop (ES))')">
+              <img src="artboards/multilingual/es-home.png" alt="Spanish (Español) - Homepage" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Spanish (Español) - Homepage</div>
+                <div class="artboard-meta">Desktop (ES) · 1440px @ 2x · /es/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/multilingual/es-home.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Multilingual Matrix" data-device="Desktop (ES)">
+            <div class="artboard-preview" onclick="openModal('artboards/multilingual/es-about-us.png', 'Spanish (Español) - About Us (Desktop (ES))')">
+              <img src="artboards/multilingual/es-about-us.png" alt="Spanish (Español) - About Us" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Spanish (Español) - About Us</div>
+                <div class="artboard-meta">Desktop (ES) · 1440px @ 2x · /es/about-us/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/multilingual/es-about-us.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Multilingual Matrix" data-device="Desktop (FR)">
+            <div class="artboard-preview" onclick="openModal('artboards/multilingual/fr-equipment.png', 'French (Français) - Equipment Page (Desktop (FR))')">
+              <img src="artboards/multilingual/fr-equipment.png" alt="French (Français) - Equipment Page" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">French (Français) - Equipment Page</div>
+                <div class="artboard-meta">Desktop (FR) · 1440px @ 2x · /fr/equipment/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/multilingual/fr-equipment.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Multilingual Matrix" data-device="Desktop (PT)">
+            <div class="artboard-preview" onclick="openModal('artboards/multilingual/pt-contact.png', 'Portuguese (Português) - Contact Page (Desktop (PT))')">
+              <img src="artboards/multilingual/pt-contact.png" alt="Portuguese (Português) - Contact Page" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Portuguese (Português) - Contact Page</div>
+                <div class="artboard-meta">Desktop (PT) · 1440px @ 2x · /pt/contact-us/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/multilingual/pt-contact.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Multilingual Matrix" data-device="Desktop (ID)">
+            <div class="artboard-preview" onclick="openModal('artboards/multilingual/id-home.png', 'Indonesian (Bahasa) - Homepage (Desktop (ID))')">
+              <img src="artboards/multilingual/id-home.png" alt="Indonesian (Bahasa) - Homepage" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Indonesian (Bahasa) - Homepage</div>
+                <div class="artboard-meta">Desktop (ID) · 1440px @ 2x · /id/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/multilingual/id-home.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Multilingual Matrix" data-device="Desktop (TH)">
+            <div class="artboard-preview" onclick="openModal('artboards/multilingual/th-home.png', 'Thai (ภาษาไทย) - Homepage (Desktop (TH))')">
+              <img src="artboards/multilingual/th-home.png" alt="Thai (ภาษาไทย) - Homepage" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Thai (ภาษาไทย) - Homepage</div>
+                <div class="artboard-meta">Desktop (TH) · 1440px @ 2x · /th/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/multilingual/th-home.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="artboard-card" data-category="Multilingual Matrix" data-device="Desktop (VI)">
+            <div class="artboard-preview" onclick="openModal('artboards/multilingual/vi-equipment.png', 'Vietnamese (Tiếng Việt) - Equipment Page (Desktop (VI))')">
+              <img src="artboards/multilingual/vi-equipment.png" alt="Vietnamese (Tiếng Việt) - Equipment Page" loading="lazy"/>
+              <div class="artboard-overlay">
+                <span>🔍 查看高清设计图</span>
+              </div>
+            </div>
+            <div class="artboard-info">
+              <div>
+                <div class="artboard-title">Vietnamese (Tiếng Việt) - Equipment Page</div>
+                <div class="artboard-meta">Desktop (VI) · 1440px @ 2x · /vi/equipment/</div>
+              </div>
+              <div class="artboard-actions">
+                <a href="artboards/multilingual/vi-equipment.png" target="_blank" download>原图下载</a>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Preview -->
+  <div class="modal" id="image-modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title">设计稿预览</div>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-img-container">
+        <img id="modal-img" src="" alt="Design Preview"/>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, title) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('image-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(event) {
+      document.getElementById('image-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    function filterCategory(cat) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.artboard-card');
+      const tokensSection = document.getElementById('tokens-section');
+      const mainGrid = document.getElementById('main-grid');
+
+      if (cat === 'tokens') {
+        tokensSection.style.display = 'block';
+        document.getElementById('artboard-container').style.display = 'none';
+        return;
+      }
+      tokensSection.style.display = 'block';
+      document.getElementById('artboard-container').style.display = 'block';
+
+      if (cat === 'Mobile') {
+        mainGrid.classList.add('mobile-grid');
+      } else {
+        mainGrid.classList.remove('mobile-grid');
+      }
+
+      cards.forEach(card => {
+        const itemCat = card.dataset.category;
+        const itemDev = card.dataset.device;
+        if (cat === 'all') {
+          card.style.display = 'flex';
+        } else if (cat === 'Mobile' && itemDev.includes('Mobile')) {
+          card.style.display = 'flex';
+        } else if (cat === 'Tablet' && itemDev.includes('Tablet')) {
+          card.style.display = 'flex';
+        } else if (itemCat === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

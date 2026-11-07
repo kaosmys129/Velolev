@@ -70,3 +70,18 @@ export function validateIdempotencyKey(key) {
   if (typeof key !== "string" || !/^[a-zA-Z0-9_-]{16,100}$/.test(key)) throw new InquiryError(400,"invalid_idempotency_key","A request identifier is required.");
   return key;
 }
+
+export function validateSubscription(input) {
+  if (!input || typeof input !== "object" || Array.isArray(input)) throw new InquiryError(400, "invalid_payload", "Invalid request.");
+  if (field(input.website)) throw new InquiryError(422, "invalid_submission", "Please review your submission.");
+  const email = field(input.email, 254).toLowerCase();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    throw new InquiryError(422, "validation_failed", "Please enter a valid email address.", { email: "Enter a valid email address." });
+  }
+  const locale = LOCALES.includes(input.locale) ? input.locale : "en";
+  const country = field(input.country, 80) || null;
+  let sourcePage = field(input.sourcePage, 300) || "/";
+  if (!sourcePage.startsWith("/") || sourcePage.startsWith("//")) sourcePage = "/";
+  sourcePage = sourcePage.split(/[?#]/)[0];
+  return { email, locale, country, sourcePage };
+}

@@ -1,0 +1,299 @@
+{
+  "timestamp": "2026-11-06T21:14:56.308Z",
+  "artifactContract": {
+    "index.html": {
+      "exists": true,
+      "isDirectory": false,
+      "sizeBytes": 50625,
+      "octalPermissions": "644",
+      "checks": {
+        "hasDoctype": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasViewport": true,
+        "canonicalHref": "https://www.velolev.org/",
+        "canonicalValid": true
+      }
+    },
+    "404.html": {
+      "exists": true,
+      "isDirectory": false,
+      "sizeBytes": 22399,
+      "octalPermissions": "644",
+      "checks": {
+        "has404Text": true,
+        "hasDoctype": true
+      }
+    },
+    "robots.txt": {
+      "exists": true,
+      "isDirectory": false,
+      "sizeBytes": 112,
+      "octalPermissions": "644",
+      "checks": {
+        "hasUserAgent": true,
+        "hasAllow": true,
+        "hasSitemap": true,
+        "isDisallowAll": false
+      }
+    },
+    "sitemap-index.xml": {
+      "exists": true,
+      "isDirectory": false,
+      "sizeBytes": 229,
+      "octalPermissions": "644",
+      "checks": {
+        "isXml": true,
+        "hasSitemapLoc": true
+      }
+    },
+    "sitemap-0.xml": {
+      "exists": true,
+      "isDirectory": false,
+      "sizeBytes": 112003,
+      "octalPermissions": "644",
+      "checks": {
+        "isXml": true,
+        "urlCount": 126,
+        "invalidOrigins": []
+      }
+    },
+    "favicon.ico": {
+      "exists": true,
+      "isDirectory": false,
+      "sizeBytes": 5816,
+      "octalPermissions": "644",
+      "checks": {
+        "isIcoHeader": true
+      }
+    },
+    "_astro": {
+      "exists": true,
+      "isDirectory": true,
+      "sizeBytes": 320,
+      "octalPermissions": "755",
+      "checks": {
+        "fileCount": 8,
+        "files": [
+          "RoiCalculator.astro_astro_type_script_index_0_lang.BEqvzT93.js",
+          "_slug_.BMIpS8SG.css",
+          "_slug_.BhcuPBQz.css",
+          "_slug_.CXuqJzSM.css",
+          "_slug_.CcKfsPas.css",
+          "_slug_.Db4kORuc.css",
+          "_slug_.DyMfSj3f.css",
+          "_slug_.OkytqR8K.css"
+        ],
+        "allHashed": true
+      }
+    }
+  },
+  "dualConfigAnalysis": {
+    "rootVercelExists": true,
+    "subVercelExists": true,
+    "configsIdentical": true,
+    "rootConfig": {
+      "$schema": "https://openapi.vercel.sh/vercel.json",
+      "framework": "astro",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist",
+      "cleanUrls": false,
+      "trailingSlash": true,
+      "headers": [
+        {
+          "source": "/_astro/(.*)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=31536000, immutable"
+            }
+          ]
+        },
+        {
+          "source": "/(.*)",
+          "headers": [
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubDomains; preload"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "camera=(), microphone=(), geolocation=()"
+            }
+          ]
+        }
+      ]
+    },
+    "subConfig": {
+      "$schema": "https://openapi.vercel.sh/vercel.json",
+      "framework": "astro",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist",
+      "cleanUrls": false,
+      "trailingSlash": true,
+      "headers": [
+        {
+          "source": "/_astro/(.*)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=31536000, immutable"
+            }
+          ]
+        },
+        {
+          "source": "/(.*)",
+          "headers": [
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubDomains; preload"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "camera=(), microphone=(), geolocation=()"
+            }
+          ]
+        }
+      ]
+    },
+    "subfolderImportAnalysis": {
+      "status": "OPTIMAL",
+      "rationale": "当 Vercel Root Directory 设置为 maquin-astro-theme 时，工作目录与 npm 依赖、astro.config.mjs 及 dist 产物目录完全重合，构建与分发完全吻合 Vercel 规范。"
+    },
+    "rootImportAnalysis": {
+      "status": "RISK_DETECTED",
+      "findings": [
+        {
+          "severity": "HIGH",
+          "issue": "Missing root dist directory upon root-level import",
+          "detail": "根目录不存在 dist/ 目录。因为 npm --prefix maquin-astro-theme run build 输出至 maquin-astro-theme/dist/，而根目录 vercel.json 声明 \"outputDirectory\": \"dist\"。若在 Vercel 控制台未将 Root Directory 切换为 maquin-astro-theme，Vercel 构建引擎将在根目录查找 dist 失败并报错！"
+        },
+        {
+          "severity": "MEDIUM",
+          "issue": "Root package.json lacks npm workspaces declaration",
+          "detail": "根目录 package.json 未配置 npm workspaces，也没有声明依赖。在全新 Vercel 容器中以根目录导入时，默认 npm install 只会执行根目录的空依赖安装，除非 buildCommand 或 CI 触发子目录 npm install，否则存在依赖缺失风险。"
+        }
+      ]
+    }
+  },
+  "headerSimulation": {
+    "/_astro/RoiCalculator.BEqvzT93.js": {
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      },
+      "isAstroAsset": true,
+      "immutableCacheMatch": true,
+      "securityHeadersMatch": true,
+      "pass": true
+    },
+    "/_astro/main.hash123.css": {
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      },
+      "isAstroAsset": true,
+      "immutableCacheMatch": true,
+      "securityHeadersMatch": true,
+      "pass": true
+    },
+    "/": {
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      },
+      "isAstroAsset": false,
+      "immutableCacheMatch": false,
+      "securityHeadersMatch": true,
+      "pass": true
+    },
+    "/about-us/": {
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      },
+      "isAstroAsset": false,
+      "immutableCacheMatch": false,
+      "securityHeadersMatch": true,
+      "pass": true
+    },
+    "/404.html": {
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      },
+      "isAstroAsset": false,
+      "immutableCacheMatch": false,
+      "securityHeadersMatch": true,
+      "pass": true
+    },
+    "/robots.txt": {
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      },
+      "isAstroAsset": false,
+      "immutableCacheMatch": false,
+      "securityHeadersMatch": true,
+      "pass": true
+    },
+    "/sitemap-index.xml": {
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      },
+      "isAstroAsset": false,
+      "immutableCacheMatch": false,
+      "securityHeadersMatch": true,
+      "pass": true
+    }
+  },
+  "overallVerdict": "APPROVE_WITH_ADVERSARIAL_CAVEATS"
+}

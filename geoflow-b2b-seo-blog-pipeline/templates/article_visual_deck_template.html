@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="{{HTML_LANG}}" data-accent="safety-orange">
+<head>
+  <meta charset="utf-8">
+  <title>{{ARTICLE_TITLE}} · Engineering Visual Deck</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    /* =========================================================
+       GEOFlow × Guizang Style: Swiss Industrial Visual Deck
+       ---------------------------------------------------------
+       Design System: Swiss International Style
+       Palette: Safety Orange (Industrial Safety & Civil Machinery)
+       Ratios:
+         .poster.w-16x9  1920×1080 (Hero Header, Tech Spec, SOP, ROI)
+         .poster.w-3x4   1080×1440 (Mobile, LinkedIn, Rednote Deck)
+         .poster.w-1x1   1080×1080 (Square Thumbnail, Social Feed)
+       ========================================================= */
+
+    :root,
+    [data-accent="safety-orange"] {
+      --paper: #fafaf8;
+      --paper-card: #ffffff;
+      --ink: #0d0f12;
+      --grey-1: #f3f3f0;
+      --grey-2: #d8d8d3;
+      --grey-3: #6b7280;
+      --accent: #FF6B35;
+      --accent-on: #ffffff;
+      --accent-soft: rgba(255, 107, 53, 0.08);
+      --accent-border: rgba(255, 107, 53, 0.35);
+      --dark-plate: #111317;
+      --dark-card: #181b20;
+      --dark-card-2: #22262d;
+      --dark-ink: #f3f4f6;
+      --dark-muted: #9ca3af;
+      --dark-border: rgba(255, 255, 255, 0.12);
+      
+      --sans: "Inter", -apple-system, "Noto Sans SC", "Helvetica Neue", sans-serif;
+      --mono: "IBM Plex Mono", "SF Mono", Consolas, monospace;
+      
+      --sp-1: 4px;
+      --sp-2: 8px;
+      --sp-3: 12px;
+      --sp-4: 16px;
+      --sp-5: 24px;
+      --sp-6: 32px;
+      --sp-7: 40px;
+      --sp-8: 48px;
+      --sp-9: 64px;
+      --sp-10: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: #090a0c;
+      font-family: var(--sans);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      padding: 60px 20px;
+    }
+
+    .sheet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+
+    /* Base Poster Canvas */
+    .poster {
+      position: relative;
+      background: var(--paper);
+      color: var(--ink);
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.45);
+    }
+
+    .poster.w-16x9 { width: 1920px; height: 1080px; }
+    .poster.w-3x4  { width: 1080px; height: 1440px; }
+    .poster.w-1x1  { width: 1080px; height: 1080px; }
+
+    /* Engineering Background Grid Pattern */
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .bg-grid-dark {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      padding: 56px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Top Chrome Header */
+    .chrome-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--grey-2);
+      padding-bottom: 20px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      height: 38px;
+      display: block;
+    }
+
+    .chrome-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--grey-1);
+      border: 1px solid var(--grey-2);
+      padding: 6px 14px;
+      font-family: var(--mono);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .chrome-badge.accent {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+      color: var(--accent);
+    }
+
+    .chrome-meta {
+      font-family: var(--mono);
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+    }
+
+    /* Typography */
+    .kicker {
+      font-family: var(--mono);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 12px 0;
+    }
+
+    .h-hero {
+      font-size: 64px;
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px 0;
+      color: var(--ink);
+    }
+
+    .h-sub {
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.45;
+      color: var(--grey-3);
+      max-width: 980px;
+      margin: 0 0 32px 0;
+    }
+
+    .h-section {
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 12px 0;
+      color: var(--ink);
+    }
+
+    /* KPI Bar & Stats Grid */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      background: var(--paper-card);
+      border: 1px solid var(--grey-2);
+      padding: 24px 32px;
+    }
+
+    .kpi-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border-left: 2px solid var(--accent);
+      padding-left: 16px;
+    }
+
+    .kpi-item:first-child { border-left-color: var(--accent); }
+
+    .kpi-num {
+      font-family: var(--mono);
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .kpi-num span {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--grey-3);
+      margin-left: 4px;
+    }
+
+    .kpi-lbl {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--grey-3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .kpi-code {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+
+    /* Bottom Standards Strip */
+    .footer-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--grey-2);
+      padding-top: 18px;
+      font-family: var(--mono);
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+    }
+
+    .standards-list {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .std-tag {
+      background: var(--grey-1);
+      border: 1px solid var(--grey-2);
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* Technical Card Modules */
+    .module-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      height: 100%;
+    }
+
+    .tech-card {
+      background: var(--paper-card);
+      border: 1px solid var(--grey-2);
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .tech-card.highlight {
+      border-top: 4px solid var(--accent);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+      margin: 0 0 8px 0;
+    }
+
+    .card-spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+      background: var(--grey-1);
+      padding: 16px 20px;
+      border: 1px solid var(--grey-2);
+    }
+
+    .card-spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .spec-k {
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--grey-3);
+    }
+
+    .spec-v {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* Pipeline Workflow 3 Steps */
+    .pipeline-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 24px;
+    }
+
+    .step-card {
+      background: var(--paper-card);
+      border: 1px solid var(--grey-2);
+      border-top: 3px solid var(--accent);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-num {
+      font-family: var(--mono);
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .step-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .step-desc {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--grey-3);
+      margin: 0;
+    }
+
+    /* Comparison Table / Matrix */
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: var(--paper-card);
+      border: 1px solid var(--grey-2);
+    }
+
+    .matrix-table th, .matrix-table td {
+      padding: 18px 24px;
+      text-align: left;
+      border-bottom: 1px solid var(--grey-2);
+      font-size: 16px;
+    }
+
+    .matrix-table th {
+      background: var(--grey-1);
+      font-family: var(--mono);
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .matrix-table tr.accent-row td {
+      background: var(--accent-soft);
+      font-weight: 500;
+    }
+
+    .tag-pass {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #e6f4ea;
+      color: #137333;
+      border: 1px solid #ceead6;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .tag-warn {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #fce8e6;
+      color: #c5221f;
+      border: 1px solid #fad2cf;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* 3:4 Social Cards Styling */
+    .poster.w-3x4 .content {
+      padding: 56px 56px;
+    }
+
+    .social-cover-title {
+      font-size: 58px;
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 20px 0;
+    }
+
+    .social-hero-img-box {
+      width: 100%;
+      height: 480px;
+      background: #f4f4f2;
+      border: 1px solid var(--grey-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .social-hero-img-box img {
+      max-height: 90%;
+      max-width: 90%;
+      object-fit: contain;
+    }
+
+    /* 1:1 Square Styling */
+    .poster.w-1x1 .content {
+      padding: 56px 56px;
+    }
+
+    .square-title {
+      font-size: 54px;
+      font-weight: 500;
+      line-height: 1.15;
+      text-align: center;
+      margin: 0 0 24px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- ========================================================
+       BOARD 1: 16:9 Article Hero / OpenGraph Banner
+       File: 01-feature-hero-cover-16x9.png
+       ======================================================== -->
+  <section class="poster w-16x9" id="card-01-hero-cover">
+    <div class="bg-grid"></div>
+    <div class="content">
+      
+      <!-- Top Chrome Bar -->
+      <div class="chrome-bar">
+        <div class="brand-wrap">
+          <img src="{{ASSET_BRAND_LOGO}}" alt="volvet" class="brand-logo">
+          <div class="chrome-badge accent">{{CARD1_BADGE_CATEGORY}}</div>
+          <div class="chrome-badge">{{CARD1_BADGE_FACTS}}</div>
+        </div>
+        <div class="chrome-meta">{{CARD1_SERP}}</div>
+      </div>
+
+      <!-- Main Two-Column Hero Zone -->
+      <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; flex: 1; margin: 32px 0;">
+        
+        <!-- Left: Textual Proposition & Headline -->
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+          <p class="kicker">{{CARD1_KICKER}}</p>
+          <h1 class="h-hero">{{HERO_TITLE}}</h1>
+          <p class="h-sub">{{HERO_SUBTITLE}}</p>
+          
+          <!-- Embedded KPI Row -->
+          <div class="kpi-row">
+            <div class="kpi-item">
+              <div class="kpi-num">300<span>kg</span></div>
+              <div class="kpi-lbl">{{CARD1_KPI1_LBL}}</div>
+              <div class="kpi-code">{{CARD1_KPI1_CODE}}</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num">12<span>m</span></div>
+              <div class="kpi-lbl">{{CARD1_KPI2_LBL}}</div>
+              <div class="kpi-code">{{CARD1_KPI2_CODE}}</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num">85<span>kg</span></div>
+              <div class="kpi-lbl">{{CARD1_KPI3_LBL}}</div>
+              <div class="kpi-code">{{CARD1_KPI3_CODE}}</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num">24<span>V</span></div>
+              <div class="kpi-lbl">{{CARD1_KPI4_LBL}}</div>
+              <div class="kpi-code">{{CARD1_KPI4_CODE}}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Authentic Equipment Visual Box -->
+        <div style="background: #ffffff; border: 1px solid var(--grey-2); height: 560px; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; position: relative;">
+          <div style="display: flex; justify-content: space-between; font-family: var(--mono); font-size: 13px; color: var(--grey-3);">
+            <span>{{CARD1_RIG_TITLE}}</span>
+            <span>{{CARD1_RIG_MODEL}}</span>
+          </div>
+          
+          <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 12px;">
+            <img src="{{ASSET_PRODUCT_HERO}}" alt="volvet portable light pole lifter" style="max-height: 440px; max-width: 100%; object-fit: contain; filter: drop-shadow(0 16px 24px rgba(0,0,0,0.12));">
+          </div>
+
+          <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--grey-2); padding-top: 12px; font-family: var(--mono); font-size: 13px; color: var(--ink);">
+            <span>{{CARD1_RIG_PCD}}</span>
+            <span style="color: var(--accent); font-weight: 600;">{{CARD1_RIG_SOP}}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Compliance Standards -->
+      <div class="footer-strip">
+        <div class="standards-list">
+          <span style="font-weight: 600; color: var(--ink);">{{CARD1_STD_LBL}}</span>
+          <span class="std-tag">OSHA 1926 SUBPART CC</span>
+          <span class="std-tag">IEEE 516 LIVE-LINE CLEARANCE</span>
+          <span class="std-tag">EN 40-3 OVERTURNING MOMENT</span>
+          <span class="std-tag">ASTM F1554 / A325 FASTENERS</span>
+        </div>
+        <div>{{CARD1_FOOTER_NOTE}}</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       BOARD 2: 16:9 Two-Module Architecture Spec Card
+       File: 02-two-module-architecture-16x9.png
+       ======================================================== -->
+  <section class="poster w-16x9" id="card-02-architecture">
+    <div class="bg-grid"></div>
+    <div class="content">
+      
+      <div class="chrome-bar">
+        <div class="brand-wrap">
+          <img src="{{ASSET_BRAND_LOGO}}" alt="volvet" class="brand-logo">
+          <div class="chrome-badge accent">{{CARD2_SECTION_BADGE}}</div>
+        </div>
+        <div class="chrome-meta">{{CARD2_WEIGHT_BADGE}}</div>
+      </div>
+
+      <div style="margin: 28px 0 16px 0;">
+        <p class="kicker">{{CARD2_KICKER}}</p>
+        <h2 class="h-section">{{CARD2_TITLE}}</h2>
+        <p style="font-size: 20px; color: var(--grey-3); margin: 0; max-width: 1200px;">
+          {{CARD2_DESC}}
+        </p>
+      </div>
+
+      <!-- Two Modules Split Cards -->
+      <div class="module-split" style="flex: 1; margin: 20px 0;">
+        
+        <!-- Module 1 -->
+        <div class="tech-card highlight">
+          <div>
+            <div class="card-top">
+              <span class="chrome-badge accent">{{CARD2_MOD1_BADGE}}</span>
+              <span class="chrome-meta">{{CARD2_MOD1_META}}</span>
+            </div>
+            <h3 class="card-title">{{CARD2_MOD1_TITLE}}</h3>
+            <p style="font-size: 16px; color: var(--grey-3); line-height: 1.5; margin: 0;">
+              {{CARD2_MOD1_DESC}}
+            </p>
+            
+            <div class="card-spec-grid">
+              <div class="card-spec-item">
+                <span class="spec-k">{{CARD2_MOD1_K1}}</span>
+                <span class="spec-v">{{CARD2_MOD1_V1}}</span>
+              </div>
+              <div class="card-spec-item">
+                <span class="spec-k">{{CARD2_MOD1_K2}}</span>
+                <span class="spec-v">{{CARD2_MOD1_V2}}</span>
+              </div>
+              <div class="card-spec-item">
+                <span class="spec-k">{{CARD2_MOD1_K3}}</span>
+                <span class="spec-v">{{CARD2_MOD1_V3}}</span>
+              </div>
+              <div class="card-spec-item">
+                <span class="spec-k">{{CARD2_MOD1_K4}}</span>
+                <span class="spec-v">{{CARD2_MOD1_V4}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--grey-1); padding: 14px 18px; border: 1px solid var(--grey-2); font-family: var(--mono); font-size: 14px; color: var(--ink);">
+            {{CARD2_MOD1_NOTE}}
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="tech-card highlight">
+          <div>
+            <div class="card-top">
+              <span class="chrome-badge accent">{{CARD2_MOD2_BADGE}}</span>
+              <span class="chrome-meta">{{CARD2_MOD2_META}}</span>
+            </div>
+            <h3 class="card-title">{{CARD2_MOD2_TITLE}}</h3>
+            <p style="font-size: 16px; color: var(--grey-3); line-height: 1.5; margin: 0;">
+              {{CARD2_MOD2_DESC}}
+            </p>
+            
+            <div class="card-spec-grid">
+              <div class="card-spec-item">
+                <span class="spec-k">{{CARD2_MOD2_K1}}</span>
+                <span class="spec-v">{{CARD2_MOD2_V1}}</span>
+              </div>
+              <div class="card-spec-item">
+                <span class="spec-k">{{CARD2_MOD2_K2}}</span>
+                <span class="spec-v">{{CARD2_MOD2_V2}}</span>
+              </div>
+              <div class="card-spec-item">
+                <span class="spec-k">{{CARD2_MOD2_K3}}</span>
+                <span class="spec-v">{{CARD2_MOD2_V3}}</span>
+              </div>
+              <div class="card-spec-item">
+                <span class="spec-k">{{CARD2_MOD2_K4}}</span>
+                <span class="spec-v">{{CARD2_MOD2_V4}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--grey-1); padding: 14px 18px; border: 1px solid var(--grey-2); font-family: var(--mono); font-size: 14px; color: var(--ink);">
+            {{CARD2_MOD2_NOTE}}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-strip">
+        <span>{{CARD2_FOOTER1}}</span>
+        <span>{{CARD2_FOOTER2}}</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       BOARD 3: 16:9 Base Flange Compatibility Diagram
+       File: 03-flange-pcd-compatibility-16x9.png
+       ======================================================== -->
+  <section class="poster w-16x9" id="card-03-flange">
+    <div class="bg-grid"></div>
+    <div class="content">
+      
+      <div class="chrome-bar">
+        <div class="brand-wrap">
+          <img src="{{ASSET_BRAND_LOGO}}" alt="volvet" class="brand-logo">
+          <div class="chrome-badge accent">{{CARD3_SECTION_BADGE}}</div>
+        </div>
+        <div class="chrome-meta">{{CARD3_META}}</div>
+      </div>
+
+      <div style="margin: 28px 0 16px 0;">
+        <p class="kicker">{{CARD3_KICKER}}</p>
+        <h2 class="h-section">{{CARD3_TITLE}}</h2>
+        <p style="font-size: 20px; color: var(--grey-3); margin: 0; max-width: 1200px;">
+          {{CARD3_DESC}}
+        </p>
+      </div>
+
+      <!-- Grid Analysis -->
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 36px; flex: 1; margin: 20px 0;">
+        
+        <!-- Table & Matrix -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>{{CARD3_TH1}}</th>
+                <th>{{CARD3_TH2}}</th>
+                <th>{{CARD3_TH3}}</th>
+                <th>{{CARD3_TH4}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>M16 Anchor Studs</strong></td>
+                <td>{{CARD3_ROW1_KIT}}</td>
+                <td>ASTM F1554 / A325</td>
+                <td><span class="tag-pass">{{CARD3_TAG_PASS}}</span></td>
+              </tr>
+              <tr>
+                <td><strong>M18 Anchor Studs</strong></td>
+                <td>{{CARD3_ROW1_KIT}}</td>
+                <td>ASTM F1554 / A325</td>
+                <td><span class="tag-pass">{{CARD3_TAG_PASS}}</span></td>
+              </tr>
+              <tr>
+                <td><strong>M20 Anchor Studs</strong></td>
+                <td>{{CARD3_ROW1_KIT}}</td>
+                <td>ASTM F1554 / A325</td>
+                <td><span class="tag-pass">{{CARD3_TAG_PASS}}</span></td>
+              </tr>
+              <tr>
+                <td><strong>M22 Anchor Studs</strong></td>
+                <td>{{CARD3_ROW1_KIT}}</td>
+                <td>ASTM F1554 / A325</td>
+                <td><span class="tag-pass">{{CARD3_TAG_PASS}}</span></td>
+              </tr>
+              <tr class="accent-row">
+                <td><strong>M24 Anchor Studs</strong></td>
+                <td>{{CARD3_ROW5_KIT}}</td>
+                <td>ASTM F1554 / A325</td>
+                <td><span class="tag-warn">{{CARD3_TAG_WARN}}</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="background: var(--grey-1); border: 1px solid var(--grey-2); padding: 18px 24px; font-family: var(--mono); font-size: 14px; color: var(--ink);">
+            {{CARD3_TABLE_FOOTER}}
+          </div>
+        </div>
+
+        <!-- Flange Blueprint Detail Box -->
+        <div style="background: var(--dark-plate); border: 1px solid var(--dark-border); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; color: #ffffff;">
+          <div>
+            <div style="display: flex; justify-content: space-between; font-family: var(--mono); font-size: 13px; color: var(--accent); margin-bottom: 12px;">
+              <span>{{CARD3_BOX_BADGE}}</span>
+              <span>ASTM F1554</span>
+            </div>
+            <h3 style="font-size: 24px; font-weight: 500; margin: 0 0 16px 0;">{{CARD3_BOX_TITLE}}</h3>
+            <p style="font-size: 15px; color: var(--dark-muted); line-height: 1.6; margin: 0 0 20px 0;">
+              {{CARD3_BOX_DESC}}
+            </p>
+          </div>
+
+          <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 20px; font-family: var(--mono);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="color: var(--dark-muted);">{{CARD3_BOX_MIN_LBL}}</span>
+              <span style="color: #ffffff; font-weight: 600;">180 mm</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="color: var(--dark-muted);">{{CARD3_BOX_MAX_LBL}}</span>
+              <span style="color: #ffffff; font-weight: 600;">260 mm</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--dark-muted);">{{CARD3_BOX_LEVEL_LBL}}</span>
+              <span style="color: var(--accent); font-weight: 600;">{{CARD3_BOX_LEVEL_VAL}}</span>
+            </div>
+          </div>
+
+          <div style="font-family: var(--mono); font-size: 12px; color: var(--dark-muted); border-top: 1px solid var(--dark-border); padding-top: 12px;">
+            {{CARD3_BOX_AUDIT}}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-strip">
+        <span>{{CARD3_FOOTER1}}</span>
+        <span>{{CARD3_FOOTER2}}</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       BOARD 4: 16:9 Standard 3-Phase SOP Installation Workflow
+       File: 04-sop-field-workflow-16x9.png
+       ======================================================== -->
+  <section class="poster w-16x9" id="card-04-sop">
+    <div class="bg-grid"></div>
+    <div class="content">
+      
+      <div class="chrome-bar">
+        <div class="brand-wrap">
+          <img src="{{ASSET_BRAND_LOGO}}" alt="volvet" class="brand-logo">
+          <div class="chrome-badge accent">{{CARD4_SECTION_BADGE}}</div>
+        </div>
+        <div class="chrome-meta">{{CARD4_META}}</div>
+      </div>
+
+      <div style="margin: 28px 0 16px 0;">
+        <p class="kicker">{{CARD4_KICKER}}</p>
+        <h2 class="h-section">{{CARD4_TITLE}}</h2>
+        <p style="font-size: 20px; color: var(--grey-3); margin: 0; max-width: 1200px;">
+          {{CARD4_DESC}}
+        </p>
+      </div>
+
+      <!-- 3 Steps Pipeline Cards -->
+      <div class="pipeline-grid" style="flex: 1; margin: 20px 0;">
+        
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-num">{{CARD4_STEP1_NUM}}</div>
+          <h3 class="step-title">{{CARD4_STEP1_TITLE}}</h3>
+          <p class="step-desc">
+            {{CARD4_STEP1_DESC}}
+          </p>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--grey-2); font-family: var(--mono); font-size: 13px; color: var(--accent);">
+            {{CARD4_STEP1_NOTE}}
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-num">{{CARD4_STEP2_NUM}}</div>
+          <h3 class="step-title">{{CARD4_STEP2_TITLE}}</h3>
+          <p class="step-desc">
+            {{CARD4_STEP2_DESC}}
+          </p>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--grey-2); font-family: var(--mono); font-size: 13px; color: var(--accent);">
+            {{CARD4_STEP2_NOTE}}
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-num">{{CARD4_STEP3_NUM}}</div>
+          <h3 class="step-title">{{CARD4_STEP3_TITLE}}</h3>
+          <p class="step-desc">
+            {{CARD4_STEP3_DESC}}
+          </p>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--grey-2); font-family: var(--mono); font-size: 13px; color: var(--accent);">
+            {{CARD4_STEP3_NOTE}}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-strip">
+        <span>{{CARD4_FOOTER1}}</span>
+        <span>{{CARD4_FOOTER2}}</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       BOARD 5: 16:9 Equipment Comparison Matrix (Crane vs Lifter)
+       File: 05-crane-vs-lifter-comparison-16x9.png
+       ======================================================== -->
+  <section class="poster w-16x9" id="card-05-comparison">
+    <div class="bg-grid"></div>
+    <div class="content">
+      
+      <div class="chrome-bar">
+        <div class="brand-wrap">
+          <img src="{{ASSET_BRAND_LOGO}}" alt="volvet" class="brand-logo">
+          <div class="chrome-badge accent">{{CARD5_SECTION_BADGE}}</div>
+        </div>
+        <div class="chrome-meta">{{CARD5_META}}</div>
+      </div>
+
+      <div style="margin: 28px 0 16px 0;">
+        <p class="kicker">{{CARD5_KICKER}}</p>
+        <h2 class="h-section">{{CARD5_TITLE}}</h2>
+        <p style="font-size: 20px; color: var(--grey-3); margin: 0; max-width: 1200px;">
+          {{CARD5_DESC}}
+        </p>
+      </div>
+
+      <!-- Full Comparison Table -->
+      <table class="matrix-table" style="flex: 1; margin: 20px 0;">
+        <thead>
+          <tr>
+            <th style="width: 22%;">{{CARD5_TH1}}</th>
+            <th style="width: 39%;">{{CARD5_TH2}}</th>
+            <th style="width: 39%; background: var(--accent); color: #ffffff;">{{CARD5_TH3}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>{{CARD5_R1_P}}</strong></td>
+            <td>{{CARD5_R1_C}}</td>
+            <td style="background: var(--accent-soft);"><strong>{{CARD5_R1_L}}</strong></td>
+          </tr>
+          <tr>
+            <td><strong>{{CARD5_R2_P}}</strong></td>
+            <td>{{CARD5_R2_C}}</td>
+            <td style="background: var(--accent-soft);"><strong>{{CARD5_R2_L}}</strong></td>
+          </tr>
+          <tr>
+            <td><strong>{{CARD5_R3_P}}</strong></td>
+            <td>{{CARD5_R3_C}}</td>
+            <td style="background: var(--accent-soft);"><strong>{{CARD5_R3_L}}</strong></td>
+          </tr>
+          <tr>
+            <td><strong>{{CARD5_R4_P}}</strong></td>
+            <td>{{CARD5_R4_C}}</td>
+            <td style="background: var(--accent-soft);"><strong>{{CARD5_R4_L}}</strong></td>
+          </tr>
+          <tr>
+            <td><strong>{{CARD5_R5_P}}</strong></td>
+            <td>{{CARD5_R5_C}}</td>
+            <td style="background: var(--accent-soft);"><strong>{{CARD5_R5_L}}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footer-strip">
+        <span>{{CARD5_FOOTER1}}</span>
+        <span>{{CARD5_FOOTER2}}</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       BOARD 6: 3:4 Social Media / LinkedIn Carousel Card (Cover)
+       File: social-3x4-01-cover.png
+       ======================================================== -->
+  <section class="poster w-3x4" id="card-06-social-cover">
+    <div class="bg-grid"></div>
+    <div class="content">
+      
+      <div class="chrome-bar">
+        <img src="{{ASSET_BRAND_LOGO}}" alt="volvet" style="height: 32px;">
+        <span class="chrome-badge accent">{{CARD6_BADGE}}</span>
+      </div>
+
+      <div style="margin-top: 36px;">
+        <p class="kicker">{{CARD6_KICKER}}</p>
+        <h1 class="social-cover-title">{{CARD6_TITLE}}</h1>
+        <p style="font-size: 22px; color: var(--grey-3); line-height: 1.45; margin: 0;">
+          {{CARD6_DESC}}
+        </p>
+      </div>
+
+      <!-- Equipment Visual -->
+      <div class="social-hero-img-box">
+        <img src="{{ASSET_PRODUCT_HERO}}" alt="volvet lifter">
+      </div>
+
+      <!-- KPI 4 Blocks -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0;">
+        <div style="background: #ffffff; border: 1px solid var(--grey-2); padding: 16px 20px; border-left: 3px solid var(--accent);">
+          <div style="font-family: var(--mono); font-size: 32px; font-weight: 600;">300 kg</div>
+          <div style="font-size: 13px; color: var(--grey-3); text-transform: uppercase;">{{CARD6_KPI1_LBL}}</div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid var(--grey-2); padding: 16px 20px; border-left: 3px solid var(--accent);">
+          <div style="font-family: var(--mono); font-size: 32px; font-weight: 600;">12 m</div>
+          <div style="font-size: 13px; color: var(--grey-3); text-transform: uppercase;">{{CARD6_KPI2_LBL}}</div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid var(--grey-2); padding: 16px 20px; border-left: 3px solid var(--accent);">
+          <div style="font-family: var(--mono); font-size: 32px; font-weight: 600;">85 kg</div>
+          <div style="font-size: 13px; color: var(--grey-3); text-transform: uppercase;">{{CARD6_KPI3_LBL}}</div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid var(--grey-2); padding: 16px 20px; border-left: 3px solid var(--accent);">
+          <div style="font-family: var(--mono); font-size: 32px; font-weight: 600;">24V DC</div>
+          <div style="font-size: 13px; color: var(--grey-3); text-transform: uppercase;">{{CARD6_KPI4_LBL}}</div>
+        </div>
+      </div>
+
+      <div class="footer-strip" style="font-size: 12px;">
+        <span>{{CARD6_FOOTER1}}</span>
+        <span>{{CARD6_FOOTER2}}</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       BOARD 7: 1:1 Square Card (Avatar & Blog Thumbnail)
+       File: square-1x1-thumb.png
+       ======================================================== -->
+  <section class="poster w-1x1" id="card-07-square">
+    <div class="bg-grid"></div>
+    <div class="content" style="text-align: center; align-items: center; justify-content: space-between;">
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; border-bottom: 1px solid var(--grey-2); padding-bottom: 16px;">
+        <img src="{{ASSET_BRAND_LOGO}}" alt="volvet" style="height: 32px;">
+        <span class="chrome-badge accent">{{CARD7_BADGE}}</span>
+      </div>
+
+      <div style="margin: 20px 0;">
+        <p class="kicker">{{CARD7_KICKER}}</p>
+        <h2 class="square-title">{{HERO_TITLE}}</h2>
+        <div style="display: inline-flex; gap: 12px; margin-bottom: 16px;">
+          <span class="std-tag">{{CARD7_TAG1}}</span>
+          <span class="std-tag">{{CARD7_TAG2}}</span>
+          <span class="std-tag">{{CARD7_TAG3}}</span>
+        </div>
+      </div>
+
+      <div style="width: 100%; height: 420px; background: #ffffff; border: 1px solid var(--grey-2); display: flex; align-items: center; justify-content: center; position: relative;">
+        <img src="{{ASSET_PRODUCT_HERO}}" alt="volvet lifter" style="max-height: 360px; max-width: 90%; object-fit: contain;">
+      </div>
+
+      <div class="footer-strip" style="width: 100%; font-size: 12px;">
+        <span>{{CARD7_FOOTER1}}</span>
+        <span>{{CARD7_FOOTER2}}</span>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

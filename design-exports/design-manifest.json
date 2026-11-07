@@ -1,0 +1,376 @@
+{
+  "exportDate": "2026-10-28T14:16:51.655Z",
+  "brand": "volvet",
+  "scaleFactor": 2,
+  "artboards": [
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "Homepage (Core Landing)",
+      "route": "/",
+      "file": "artboards/desktop/01-home.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "Product Detail (Specifications & Modularity)",
+      "route": "/products/light-pole-jack/",
+      "file": "artboards/desktop/02-product-detail.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Engineering Guide",
+      "title": "Compatibility Guide (Flange & Foundation)",
+      "route": "/guides/pole-jack-compatibility/",
+      "file": "artboards/desktop/03-compatibility-guide.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "About Us (Factory & Engineering Verification)",
+      "route": "/about-us/",
+      "file": "artboards/desktop/03b-about-us.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Conversion Flow",
+      "title": "Project Quotation & RFQ Form",
+      "route": "/quote/",
+      "file": "artboards/desktop/04-quote-inquiry.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Conversion Flow",
+      "title": "Contact Us & Business Inquiries",
+      "route": "/contact-us/",
+      "file": "artboards/desktop/05-contact-us.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Policy & Trust",
+      "title": "Privacy Notice",
+      "route": "/privacy/",
+      "file": "artboards/desktop/06-privacy-policy.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Policy & Trust",
+      "title": "Terms of Service",
+      "route": "/terms/",
+      "file": "artboards/desktop/07-terms-of-service.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Policy & Trust",
+      "title": "Editorial & Fact Policy",
+      "route": "/editorial-policy/",
+      "file": "artboards/desktop/08-editorial-policy.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Content Hub",
+      "title": "Blog & Knowledge Archive",
+      "route": "/blog/",
+      "file": "artboards/desktop/09-blog-archive.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Content Hub",
+      "title": "Technical Article Detail",
+      "route": "/the-importance-of-regular-inspections-for-heavy-machinery/",
+      "file": "artboards/desktop/10-article-detail.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "Operations & Admin",
+      "title": "Private Inbox (Login State)",
+      "route": "/admin/inquiries/",
+      "file": "artboards/desktop/11-admin-inquiries-login.png"
+    },
+    {
+      "device": "Desktop",
+      "width": 1440,
+      "scale": 2,
+      "category": "System States",
+      "title": "404 Error Fallback",
+      "route": "/404.html",
+      "file": "artboards/desktop/12-404-error.png"
+    },
+    {
+      "device": "Tablet",
+      "width": 768,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "Homepage (Tablet)",
+      "route": "/",
+      "file": "artboards/tablet/01-home.png"
+    },
+    {
+      "device": "Tablet",
+      "width": 768,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "Product Detail (Tablet)",
+      "route": "/products/light-pole-jack/",
+      "file": "artboards/tablet/02-product-detail.png"
+    },
+    {
+      "device": "Tablet",
+      "width": 768,
+      "scale": 2,
+      "category": "Engineering Guide",
+      "title": "Compatibility Guide (Tablet)",
+      "route": "/guides/pole-jack-compatibility/",
+      "file": "artboards/tablet/03-compatibility-guide.png"
+    },
+    {
+      "device": "Tablet",
+      "width": 768,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "About Us (Tablet)",
+      "route": "/about-us/",
+      "file": "artboards/tablet/03b-about-us.png"
+    },
+    {
+      "device": "Tablet",
+      "width": 768,
+      "scale": 2,
+      "category": "Conversion Flow",
+      "title": "Project Quotation (Tablet)",
+      "route": "/quote/",
+      "file": "artboards/tablet/04-quote-inquiry.png"
+    },
+    {
+      "device": "Tablet",
+      "width": 768,
+      "scale": 2,
+      "category": "Conversion Flow",
+      "title": "Contact Us (Tablet)",
+      "route": "/contact-us/",
+      "file": "artboards/tablet/05-contact-us.png"
+    },
+    {
+      "device": "Mobile",
+      "width": 390,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "Homepage (Mobile)",
+      "route": "/",
+      "file": "artboards/mobile/01-home.png"
+    },
+    {
+      "device": "Mobile",
+      "width": 390,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "Product Detail (Mobile)",
+      "route": "/products/light-pole-jack/",
+      "file": "artboards/mobile/02-product-detail.png"
+    },
+    {
+      "device": "Mobile",
+      "width": 390,
+      "scale": 2,
+      "category": "Engineering Guide",
+      "title": "Compatibility Guide (Mobile)",
+      "route": "/guides/pole-jack-compatibility/",
+      "file": "artboards/mobile/03-compatibility-guide.png"
+    },
+    {
+      "device": "Mobile",
+      "width": 390,
+      "scale": 2,
+      "category": "Core Procurement",
+      "title": "About Us (Mobile)",
+      "route": "/about-us/",
+      "file": "artboards/mobile/03b-about-us.png"
+    },
+    {
+      "device": "Mobile",
+      "width": 390,
+      "scale": 2,
+      "category": "Conversion Flow",
+      "title": "Project Quotation (Mobile)",
+      "route": "/quote/",
+      "file": "artboards/mobile/04-quote-inquiry.png"
+    },
+    {
+      "device": "Mobile",
+      "width": 390,
+      "scale": 2,
+      "category": "Conversion Flow",
+      "title": "Contact Us (Mobile)",
+      "route": "/contact-us/",
+      "file": "artboards/mobile/05-contact-us.png"
+    },
+    {
+      "device": "Mobile",
+      "width": 390,
+      "scale": 2,
+      "category": "Policy & Trust",
+      "title": "Privacy Notice (Mobile)",
+      "route": "/privacy/",
+      "file": "artboards/mobile/06-privacy-policy.png"
+    },
+    {
+      "device": "Mobile",
+      "width": 390,
+      "scale": 2,
+      "category": "Content Hub",
+      "title": "Blog Archive (Mobile)",
+      "route": "/blog/",
+      "file": "artboards/mobile/07-blog-archive.png"
+    },
+    {
+      "device": "Mobile (State)",
+      "width": 390,
+      "scale": 2,
+      "category": "Interactive States",
+      "title": "Mobile Navigation Drawer Open",
+      "route": "/ [menu-open]",
+      "file": "artboards/states/01-mobile-menu-open.png"
+    },
+    {
+      "device": "Desktop (State)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Interactive States",
+      "title": "Multilingual Dropdown Expanded",
+      "route": "/ [lang-open]",
+      "file": "artboards/states/02-language-switcher-expanded.png"
+    },
+    {
+      "device": "Desktop (State)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Interactive States",
+      "title": "Compatibility Checklist Interaction (3 of 5 confirmed)",
+      "route": "/guides/pole-jack-compatibility/ [active]",
+      "file": "artboards/states/03-compatibility-checklist-active.png"
+    },
+    {
+      "device": "Desktop (State)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Interactive States",
+      "title": "Inquiry Form Technical Details Drawer Open",
+      "route": "/quote/ [details-open]",
+      "file": "artboards/states/04-quote-form-expanded-params.png"
+    },
+    {
+      "device": "Desktop (State)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Interactive States",
+      "title": "Inquiry Form Inline Validation Errors",
+      "route": "/quote/ [validation-failed]",
+      "file": "artboards/states/05-quote-form-validation-error.png"
+    },
+    {
+      "device": "Desktop (State)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Interactive States",
+      "title": "Inquiry Official Reference Confirmation Receipt",
+      "route": "/quote/ [success-receipt]",
+      "file": "artboards/states/06-quote-form-success-receipt.png"
+    },
+    {
+      "device": "Desktop (State)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Operations & Admin",
+      "title": "Operator Private Inbox & Inquiry Detail Drawer",
+      "route": "/admin/inquiries/ [authenticated]",
+      "file": "artboards/states/07-admin-inquiry-detail-expanded.png"
+    },
+    {
+      "device": "Desktop (ES)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Multilingual Matrix",
+      "title": "Spanish (Español) - Homepage",
+      "route": "/es/",
+      "file": "artboards/multilingual/es-home.png"
+    },
+    {
+      "device": "Desktop (ES)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Multilingual Matrix",
+      "title": "Spanish (Español) - About Us",
+      "route": "/es/about-us/",
+      "file": "artboards/multilingual/es-about-us.png"
+    },
+    {
+      "device": "Desktop (FR)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Multilingual Matrix",
+      "title": "French (Français) - Equipment Page",
+      "route": "/fr/equipment/",
+      "file": "artboards/multilingual/fr-equipment.png"
+    },
+    {
+      "device": "Desktop (PT)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Multilingual Matrix",
+      "title": "Portuguese (Português) - Contact Page",
+      "route": "/pt/contact-us/",
+      "file": "artboards/multilingual/pt-contact.png"
+    },
+    {
+      "device": "Desktop (ID)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Multilingual Matrix",
+      "title": "Indonesian (Bahasa) - Homepage",
+      "route": "/id/",
+      "file": "artboards/multilingual/id-home.png"
+    },
+    {
+      "device": "Desktop (TH)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Multilingual Matrix",
+      "title": "Thai (ภาษาไทย) - Homepage",
+      "route": "/th/",
+      "file": "artboards/multilingual/th-home.png"
+    },
+    {
+      "device": "Desktop (VI)",
+      "width": 1440,
+      "scale": 2,
+      "category": "Multilingual Matrix",
+      "title": "Vietnamese (Tiếng Việt) - Equipment Page",
+      "route": "/vi/equipment/",
+      "file": "artboards/multilingual/vi-equipment.png"
+    }
+  ]
+}

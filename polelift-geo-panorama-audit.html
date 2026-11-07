@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PoleLift GEO 全景诊断报告</title>
+<style>
+:root {
+  --ink: #1a1a2e;
+  --paper: #faf8f2;
+  --surface: #ffffff;
+  --border: #e0dcd0;
+  --accent: #b8860b;
+  --muted: #6b6560;
+  --highlight: #fef3c7;
+  --danger: #dc2626;
+  --warning: #d97706;
+  --success: #059669;
+  --info: #2563eb;
+  --max-width: 960px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", Georgia, serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.75;
+  font-size: 15px;
+}
+/* Sticky Nav */
+#geo-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: #fff; border-bottom: 2px solid var(--accent);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;
+}
+#geo-nav .nav-inner {
+  max-width: calc(var(--max-width) + 40px); margin: 0 auto;
+  display: flex; gap: 2px; padding: 0 20px;
+}
+#geo-nav a {
+  display: inline-block; padding: 8px 12px; font-size: 13px;
+  color: var(--muted); text-decoration: none; font-family: "Inter", sans-serif;
+  border-bottom: 2px solid transparent; transition: all 0.15s;
+  flex-shrink: 0;
+}
+#geo-nav a:hover, #geo-nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+#geo-nav a.danger { color: var(--danger); }
+#geo-nav a.danger:hover { border-bottom-color: var(--danger); }
+/* Cover */
+.cover {
+  padding: 80px 20px 60px; text-align: center;
+  border-bottom: 3px solid var(--accent);
+  margin-bottom: 40px;
+}
+.cover h1 { font-size: 36px; font-weight: 700; margin-bottom: 12px; }
+.cover .meta { color: var(--muted); font-size: 14px; }
+.cover .meta span { margin: 0 8px; }
+/* Layout */
+main { max-width: var(--max-width); margin: 0 auto; padding: 40px 20px 80px; }
+section { margin-bottom: 48px; }
+h2 {
+  font-size: 22px; font-weight: 700; margin-bottom: 16px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--border);
+  color: var(--accent);
+}
+h3 { font-size: 17px; font-weight: 600; margin: 20px 0 10px; }
+p { margin: 8px 0; }
+/* Tables */
+table {
+  width: 100%; border-collapse: collapse; margin: 16px 0 24px;
+  font-size: 13px; line-height: 1.55;
+}
+thead { background: var(--ink); color: #fff; }
+th { padding: 8px 10px; text-align: left; font-weight: 600; font-family: "Inter", sans-serif; font-size: 12px; letter-spacing: 0.03em; }
+td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:nth-child(even) td { background: #fdfcf8; }
+/* Badges */
+.badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; font-family: "Inter", sans-serif; }
+.badge-p0 { background: #fef2f2; color: var(--danger); }
+.badge-p1 { background: var(--highlight); color: var(--warning); }
+.badge-p2 { background: #dbeafe; color: var(--info); }
+.badge-ok { background: #ecfdf5; color: var(--success); }
+.badge-warn { background: var(--highlight); color: var(--warning); }
+.badge-fail { background: #fef2f2; color: var(--danger); }
+/* Score */
+.score-bar { height: 8px; border-radius: 4px; background: #e5e0d5; margin-top: 4px; overflow: hidden; }
+.score-fill { height: 100%; border-radius: 4px; }
+.score-label { font-family: "Inter", sans-serif; font-size: 13px; font-weight: 600; }
+/* Summary card */
+.summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+.summary-card { background: var(--surface); border: 1px solid var(--border); padding: 16px; border-radius: 4px; }
+.summary-card .sc-num { font-size: 28px; font-weight: 800; color: var(--accent); font-family: "Inter", sans-serif; }
+.summary-card .sc-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+/* Print */
+@media print {
+  #geo-nav { display: none !important; }
+  body { background: #fff; font-size: 12px; }
+  main { max-width: 100%; padding: 20px 0; }
+  section { page-break-inside: avoid; }
+  .cover { padding-top: 20px; }
+}
+@media (max-width: 768px) {
+  .summary-cards { grid-template-columns: 1fr 1fr; }
+  table { font-size: 11px; }
+  th, td { padding: 5px 6px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="geo-nav"><div class="nav-inner">
+  <a href="#summary">摘要</a>
+  <a href="#method">方法</a>
+  <a href="#coverage">抓取覆盖</a>
+  <a href="#entity">实体档案</a>
+  <a href="#product">产品地图</a>
+  <a href="#questions">问题覆盖</a>
+  <a href="#tech">技术诊断</a>
+  <a href="#scoring">GEO评分</a>
+  <a href="#opportunity">机会地图</a>
+  <a href="#onsite">站内方案</a>
+  <a href="#offsite">站外方案</a>
+  <a href="#risks">风险</a>
+  <a href="#appendix">附录</a>
+</div></nav>
+
+<main>
+<div class="cover">
+  <h1>PoleLift GEO 全景诊断报告</h1>
+  <p class="meta">
+    <span>诊断对象：<strong>PoleLift</strong></span>
+    <span>技能：yao-geo-panorama-audit</span>
+    <span>日期：2026-07-10</span>
+  </p>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<section id="summary">
+<h2>执行摘要</h2>
+<p>PoleLift 官网当前处于"模板化静态网站"阶段——站点结构完整，产品概念清晰，<strong>FAQ 页有较高的断言质量</strong>，但在品牌实体一致性、页面可引用性、结构化数据、外部信源建设和内容真实性方面存在较多根本性问题。本次诊断发现 <span class="badge badge-p0">5 项 P0 紧急问题</span>，必须在任何推广前修复。</p>
+
+<div class="summary-cards">
+  <div class="summary-card">
+    <div class="sc-num">2.1<span style="font-size:16px;color:var(--muted);">/5</span></div>
+    <div class="sc-label">GEO 综合评分</div>
+  </div>
+  <div class="summary-card">
+    <div class="sc-num" style="color:var(--danger);">5</div>
+    <div class="sc-label">P0 紧急问题</div>
+  </div>
+  <div class="summary-card">
+    <div class="sc-num" style="color:var(--warning);">7</div>
+    <div class="sc-label">P1 短期修复</div>
+  </div>
+  <div class="summary-card">
+    <div class="sc-num" style="color:var(--info);">5</div>
+    <div class="sc-label">P2 中期建设</div>
+  </div>
+</div>
+</section>
+
+<!-- KEY FINDINGS -->
+<section>
+<h3>5 项 P0 紧急问题</h3>
+<table>
+<thead><tr><th>#</th><th>发现</th><th>严重程度</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>团队实体不一致</strong>：关于页 CEO 为"Alex Chen"，团队页 CEO 为"James Anderson"，团队成员姓名在两个页面完全不一致</td><td><span class="badge badge-p0">P0-事实错误</span></td></tr>
+<tr><td>2</td><td><strong>大量占位符/Latin 文本</strong>：首页"为什么选择我们"、联系我们 FAQ、团队页 FAQ 等使用 Lorem ipsum 占位内容</td><td><span class="badge badge-p0">P0-内容欺诈风险</span></td></tr>
+<tr><td>3</td><td><strong>证言与产品无关</strong>：应用页客户评价描述的是"推土机服务"(bulldozer services)，与举杆机产品无关</td><td><span class="badge badge-p0">P0-信任危机</span></td></tr>
+<tr><td>4</td><td><strong>关键数据为零值</strong>：首页、应用页、价格页显示"Happy Client 0+""Project Done 0+"等零值</td><td><span class="badge badge-p0">P0-信誉受损</span></td></tr>
+<tr><td>5</td><td><strong>缺乏 Schema 结构化数据</strong>：全站无 JSON-LD Organization/Product/FAQ 标记</td><td><span class="badge badge-p0">P0-技术结构</span></td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- METHOD -->
+<section id="method">
+<h2>1. 方法依据与评分口径</h2>
+<p>本次诊断基于 <code>yao-geo-panorama-audit</code> 标准化方法论，从官网事实源出发建立 GEO 诊断基线。</p>
+<table>
+<thead><tr><th>维度</th><th>口径说明</th></tr></thead>
+<tbody>
+<tr><td>官网抓取</td><td>从首页、导航、页脚和源码建立页面清单，记录抓取状态和可抽取事实</td></tr>
+<tr><td>实体消歧</td><td>统一品牌名、别名、产品名、主体和外部条目</td></tr>
+<tr><td>断言可引用性</td><td>每页关键事实是否可抽取为短句、表格或 FAQ</td></tr>
+<tr><td>来源透明度</td><td>事实是否有来源、日期和核验路径（三级核验制）</td></tr>
+<tr><td>事实准确</td><td>品牌、产品、客户、价格、资质是否正确且跨页一致</td></tr>
+<tr><td>问题覆盖</td><td>九类用户意图是否有站内答案或明确说明待补</td></tr>
+<tr><td>外部背书</td><td>媒体、百科、社区、报告是否支撑关键断言</td></tr>
+</tbody>
+</table>
+
+<h3>权威参考映射</h3>
+<table>
+<thead><tr><th>来源</th><th>本次诊断采用结论</th></tr></thead>
+<tbody>
+<tr><td>GEO: arXiv:2311.09735</td><td>AI 引擎综合多源信息生成答案，需优化内容与证据可引用性</td></tr>
+<tr><td>Evaluating Verifiability (arXiv:2304.09848)</td><td>可信度取决于引用召回与精度——每项断言必须有来源+核验状态</td></tr>
+<tr><td>Google Search Central: Helpful Content</td><td>原创信息、完整说明、可信来源、明确受众</td></tr>
+<tr><td>Schema.org / Structured Data Guidelines</td><td>JSON-LD 必须与页面可见内容一致</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- COVERAGE -->
+<section id="coverage">
+<h2>2. 官网抓取覆盖清单</h2>
+<p>本次诊断覆盖 PoleLift 官网全部 17 条路由（19 个生成 HTML 文件）：</p>
+<table>
+<thead><tr><th>URL</th><th>页面类型</th><th>可抓取</th><th>可抽取事实</th><th>关键问题</th></tr></thead>
+<tbody>
+<tr><td><code>/</code></td><td>首页</td><td><span class="badge badge-ok">✅</span></td><td>产品介绍、5大应用、价格</td><td>Latin 占位、零值数据</td></tr>
+<tr><td><code>/equipment/</code></td><td>产品页</td><td><span class="badge badge-ok">✅</span></td><td>定制样式丰富</td><td>无标准规格数据表</td></tr>
+<tr><td><code>/pricing-plan/</code></td><td>价格页</td><td><span class="badge badge-ok">✅</span></td><td>三级定价清晰</td><td>零值数据</td></tr>
+<tr><td><code>/faq/</code></td><td>FAQ</td><td><span class="badge badge-ok">✅</span></td><td>10条高质量问答</td><td><span class="badge badge-ok">✅ 最佳资产</span></td></tr>
+<tr><td><code>/project/</code></td><td>应用页</td><td><span class="badge badge-ok">✅</span></td><td>5大应用场景</td><td>证言为推土机服务</td></tr>
+<tr><td><code>/about-us/</code></td><td>关于页</td><td><span class="badge badge-ok">✅</span></td><td>认证、愿景</td><td>团队名与团队页冲突</td></tr>
+<tr><td><code>/team/</code></td><td>团队页</td><td><span class="badge badge-ok">✅</span></td><td>8位成员</td><td>姓名冲突、FAQ Latin</td></tr>
+<tr><td><code>/contact-us/</code></td><td>联系页</td><td><span class="badge badge-ok">✅</span></td><td>表单、地址</td><td>FAQ全Latin、伦敦地图</td></tr>
+<tr><td><code>/blog/</code></td><td>博客列表+6篇博文</td><td><span class="badge badge-ok">✅</span></td><td>博文内容</td><td>meta模板、slug错配</td></tr>
+<tr><td>sitemap.xml</td><td>站点地图</td><td><span class="badge badge-fail">❌</span></td><td>-</td><td>缺失</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ENTITY -->
+<section id="entity">
+<h2>3. 品牌实体与事实档案</h2>
+<table>
+<thead><tr><th>属性</th><th>官网声称值</th><th>核验状态</th></tr></thead>
+<tbody>
+<tr><td>品牌名</td><td>PoleLift</td><td><span class="badge badge-ok">一致</span></td></tr>
+<tr><td>产品名</td><td>PoleLift / Portable Pole Lifter / Portable Light Pole Lifter</td><td><span class="badge badge-warn">多个变体</span></td></tr>
+<tr><td>公司主体</td><td>未明确注册主体名称</td><td><span class="badge badge-fail">缺失</span></td></tr>
+<tr><td>地址</td><td>Shanghai Pilot Free Trade Zone, China</td><td><span class="badge badge-warn">待核实</span></td></tr>
+<tr><td>邮箱</td><td>sales@polelift.com</td><td><span class="badge badge-ok">一致</span></td></tr>
+<tr><td>电话</td><td>+86 21 1234 5678</td><td><span class="badge badge-warn">疑似占位</span></td></tr>
+<tr><td style="color:var(--danger);font-weight:700;">CEO</td><td style="color:var(--danger);font-weight:700;">关于页：Alex Chen<br>团队页：James Anderson</td><td><span class="badge badge-fail">冲突！</span></td></tr>
+<tr><td style="color:var(--danger);">工程负责人</td><td style="color:var(--danger);">关于页：Maria Santos<br>团队页：Maria Garcia</td><td><span class="badge badge-fail">冲突！</span></td></tr>
+<tr><td style="color:var(--danger);">销售负责人</td><td style="color:var(--danger);">关于页：James Okafor<br>团队页：David Chen</td><td><span class="badge badge-fail">冲突！</span></td></tr>
+<tr><td>认证</td><td>CE, ISO 9001:2015, ROHS</td><td><span class="badge badge-warn">未见证书</span></td></tr>
+<tr><td>成立/历史</td><td>"25+ Years of Experience"</td><td><span class="badge badge-warn">无时间线</span></td></tr>
+</tbody>
+</table>
+<p style="color:var(--danger);font-weight:600;">⚠ 关于页和团队页展示了两个完全不同的团队，AI 引擎引用时会产生严重的实体混乱。</p>
+</section>
+
+<!-- PRODUCT -->
+<section id="product">
+<h2>4. 产品服务与商业信息地图</h2>
+<table>
+<thead><tr><th>维度</th><th>详情</th><th>核验</th></tr></thead>
+<tbody>
+<tr><td>产品形态</td><td>液压单元(45kg) + 控制箱(40kg)，总重85kg</td><td><span class="badge badge-ok">清晰</span></td></tr>
+<tr><td>举升能力</td><td>300kg / 600lbs</td><td><span class="badge badge-ok">一致</span></td></tr>
+<tr><td>最大高度</td><td>12m / 39ft</td><td><span class="badge badge-ok">一致</span></td></tr>
+<tr><td>电源</td><td>24V DC 电池，单次充电50+次</td><td><span class="badge badge-ok">FAQ清晰</span></td></tr>
+<tr><td>举升速度</td><td>约20秒/次，完整安装10分钟内</td><td><span class="badge badge-ok">FAQ清晰</span></td></tr>
+<tr><td>机械寿命</td><td>3,000+次循环</td><td><span class="badge badge-ok">FAQ清晰</span></td></tr>
+<tr><td>适用螺栓</td><td>M16/M18/M20/M22/M24</td><td><span class="badge badge-ok">FAQ清晰</span></td></tr>
+<tr><td>价格</td><td>Standard $1,500/Unit (FOB)</td><td><span class="badge badge-ok">价格页一致</span></td></tr>
+<tr><td>场景</td><td>路灯、5G、配电、CCTV、光伏</td><td><span class="badge badge-ok">应用页清晰</span></td></tr>
+</tbody>
+</table>
+<p><strong>评分：7/10</strong> — FAQ 页提供详细操作参数，但缺乏尺寸图、视频教程、配件清单。</p>
+</section>
+
+<!-- QUESTION COVERAGE -->
+<section id="questions">
+<h2>5. 用户问题覆盖矩阵</h2>
+<table>
+<thead><tr><th>意图类型</th><th>代表性问题</th><th>覆盖</th><th>缺口</th></tr></thead>
+<tbody>
+<tr><td>推荐型</td><td>"有哪些便携举杆设备"</td><td><span class="badge badge-warn">部分</span></td><td>无行业对比</td></tr>
+<tr><td>比较型</td><td>"PoleLift vs 起重机"</td><td><span class="badge badge-warn">薄弱</span></td><td>仅1篇博文</td></tr>
+<tr><td>替代型</td><td>"有没有起重机的替代方案"</td><td><span class="badge badge-ok">覆盖</span></td><td>-</td></tr>
+<tr><td>教程型</td><td>"如何操作/维护"</td><td><span class="badge badge-warn">薄弱</span></td><td>1篇维护博文，无视频</td></tr>
+<tr><td>价格型</td><td>"PoleLift 多少钱"</td><td><span class="badge badge-ok">覆盖</span></td><td>-</td></tr>
+<tr><td>风险型</td><td>"PoleLift 安全吗"</td><td><span class="badge badge-warn">薄弱</span></td><td>认证未核实</td></tr>
+<tr><td style="color:var(--danger);">真实性</td><td style="color:var(--danger);">"PoleLift 是真公司吗"</td><td><span class="badge badge-fail">严重缺失</span></td><td>团队冲突、Latin、零数据</td></tr>
+<tr><td>购买决策</td><td>"如何购买/运输"</td><td><span class="badge badge-warn">部分</span></td><td>无经销商案例</td></tr>
+<tr><td>场景解决</td><td>"如何装路灯/5G"</td><td><span class="badge badge-ok">覆盖</span></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>评分：4/10</strong> — 真实性问题直接影响所有维度的可信度。</p>
+</section>
+
+<!-- TECH -->
+<section id="tech">
+<h2>6. 技术可抓取与结构化数据诊断</h2>
+<table>
+<thead><tr><th>检查项</th><th>状态</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>robots.txt</td><td><span class="badge badge-ok">✅</span></td><td>Allow: /</td></tr>
+<tr><td>sitemap.xml</td><td><span class="badge badge-fail">❌</span></td><td>缺失</td></tr>
+<tr><td>Canonical URL</td><td><span class="badge badge-ok">✅</span></td><td>首页存在</td></tr>
+<tr><td>页面语言</td><td><span class="badge badge-ok">✅</span></td><td>lang="en-US"</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th>Schema 类型</th><th>状态</th><th>优先级</th></tr></thead>
+<tbody>
+<tr><td>Organization</td><td><span class="badge badge-fail">缺失</span></td><td><span class="badge badge-p0">P0</span></td></tr>
+<tr><td>Product</td><td><span class="badge badge-fail">缺失</span></td><td><span class="badge badge-p0">P0</span></td></tr>
+<tr><td>FAQPage</td><td><span class="badge badge-fail">缺失</span></td><td><span class="badge badge-p1">P1</span></td></tr>
+<tr><td>BreadcrumbList</td><td><span class="badge badge-fail">缺失</span></td><td><span class="badge badge-p1">P1</span></td></tr>
+<tr><td>Article</td><td><span class="badge badge-fail">缺失</span></td><td><span class="badge badge-p1">P1</span></td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- SCORING -->
+<section id="scoring">
+<h2>7. GEO 特征评分</h2>
+<p>按 8 维度 + 完整性评分，1-5 分制：</p>
+<table>
+<thead><tr><th>维度</th><th>得分</th><th>得分条</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>语义密度</td><td>2.5</td><td><div class="score-bar"><div class="score-fill" style="width:50%;background:var(--warning);"></div></div></td><td>FAQ 可抽取，但大量 Latin/模板语义空白</td></tr>
+<tr><td>结构规范性</td><td>2.0</td><td><div class="score-bar"><div class="score-fill" style="width:40%;background:var(--danger);"></div></div></td><td>无答案优先摘要、无 Schema</td></tr>
+<tr><td>可引用性</td><td>2.0</td><td><div class="score-bar"><div class="score-fill" style="width:40%;background:var(--danger);"></div></div></td><td>无来源、无日期、Latin 不可引用</td></tr>
+<tr><td>权威信号</td><td>1.5</td><td><div class="score-bar"><div class="score-fill" style="width:30%;background:var(--danger);"></div></div></td><td>团队矛盾、零数据、认证无法核验</td></tr>
+<tr><td>可读性</td><td>3.0</td><td><div class="score-bar"><div class="score-fill" style="width:60%;background:var(--warning);"></div></div></td><td>英文流畅，FAQ 问答自然</td></tr>
+<tr><td>鲁棒性</td><td>2.0</td><td><div class="score-bar"><div class="score-fill" style="width:40%;background:var(--danger);"></div></div></td><td>仅英文，同义问法覆盖不足</td></tr>
+<tr><td>新颖性</td><td>2.5</td><td><div class="score-bar"><div class="score-fill" style="width:50%;background:var(--warning);"></div></div></td><td>产品概念有差异化，内容深度不足</td></tr>
+<tr><td>跨域贡献</td><td>1.5</td><td><div class="score-bar"><div class="score-fill" style="width:30%;background:var(--danger);"></div></div></td><td>无外部引用、无行业联系</td></tr>
+<tr style="font-weight:700;border-top:2px solid var(--accent);"><td>加权平均</td><td>2.1</td><td><div class="score-bar"><div class="score-fill" style="width:42%;background:var(--danger);"></div></div></td><td>—</td></tr>
+</tbody>
+</table>
+<p style="color:var(--danger);font-weight:700;">⚠ 总体评分 2.1/5 — 不推荐进行任何投放或大规模内容扩张。6 个维度低于 3 分需要优先修复。</p>
+</section>
+
+<!-- OPPORTUNITY MAP -->
+<section id="opportunity">
+<h2>8. GEO 机会地图与优先级矩阵</h2>
+
+<h3><span class="badge badge-p0">P0</span> 立即修复（影响真实性和可信度）</h3>
+<table>
+<thead><tr><th>问题</th><th>动作</th><th>工作量</th><th>验收口径</th></tr></thead>
+<tbody>
+<tr><td>团队姓名字段不一致</td><td>统一两份页面为真实团队</td><td>0.5天</td><td>关于页=团队页，有真人照片</td></tr>
+<tr><td>Latin 占位文本</td><td>清除所有 Lorem ipsum 并补充真实内容</td><td>1天</td><td>首页/联系/团队页无占位</td></tr>
+<tr><td>客户证言与产品无关</td><td>替换为真实客户案例（≥2个）</td><td>1天</td><td>客户名、行业、使用场景可核验</td></tr>
+<tr><td>零值业务数据</td><td>补充真实数据或删除模块</td><td>0.5天</td><td>所有数字&gt;0或删除对应模块</td></tr>
+<tr><td>缺乏 Schema</td><td>添加 JSON-LD: Organization, Product, FAQ</td><td>0.5天</td><td>Rich Results Test 通过</td></tr>
+</tbody>
+</table>
+
+<h3><span class="badge badge-p1">P1</span> 短期修复（1-2周）</h3>
+<table>
+<thead><tr><th>问题</th><th>动作</th><th>工作量</th></tr></thead>
+<tbody>
+<tr><td>无 Sitemap</td><td>生成 sitemap.xml</td><td>0.5天</td></tr>
+<tr><td>联系方式真实性</td><td>确认真实电话/地址/地图</td><td>0.5天</td></tr>
+<tr><td>认证证书展示</td><td>上传 CE/ISO 证书文件</td><td>0.5天</td></tr>
+<tr><td>Meta 描述优化</td><td>每页独立 meta description</td><td>0.5天</td></tr>
+<tr><td>产品规格表</td><td>制作标准 Datasheet 页</td><td>1天</td></tr>
+<tr><td>URL Slug 优化</td><td>博文 URL 改为英文语义化</td><td>1天</td></tr>
+<tr><td>社媒链接</td><td>添加真实社媒主页链接</td><td>0.5天</td></tr>
+</tbody>
+</table>
+
+<h3><span class="badge badge-p2">P2</span> 中期建设（1-3个月）</h3>
+<table>
+<thead><tr><th>问题</th><th>动作</th><th>工作量</th></tr></thead>
+<tbody>
+<tr><td>中文版官网</td><td>建立中文语言版本</td><td>5天</td></tr>
+<tr><td>客户案例页</td><td>建立客户案例库（≥5个）</td><td>3天</td></tr>
+<tr><td>视频内容</td><td>产品操作/安装/维护视频</td><td>5天</td></tr>
+<tr><td>外部信源</td><td>提交 Wikipedia、行业目录</td><td>2天</td></tr>
+<tr><td>Blog 内容深化</td><td>按9类意图补齐文章</td><td>10天</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ONSITE PLAN -->
+<section id="onsite">
+<h2>9. 站内系统方案</h2>
+<h3>品牌实体统一</h3>
+<p>创建统一的品牌实体档案，由 CMS 统一管理所有页面的品牌名、产品名、团队、地址、电话、邮箱。所有页面引用同一份数据源。</p>
+<h3>Organization Schema 示例</h3>
+<pre style="background:#1a1a2e;color:#e8e1d5;padding:16px;border-radius:4px;overflow-x:auto;font-size:12px;line-height:1.6;"><code>{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PoleLift",
+  "url": "https://polelift.com",
+  "logo": "https://polelift.com/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Shanghai",
+    "addressCountry": "CN"
+  },
+  "sameAs": [
+    "https://facebook.com/polelift",
+    "https://linkedin.com/company/polelift"
+  ]
+}</code></pre>
+<h3>页面结构重构</h3>
+<table>
+<thead><tr><th>页面</th><th>当前问题</th><th>修复方案</th></tr></thead>
+<tbody>
+<tr><td>首页</td><td>Latin、零数据</td><td>真实价值主张+优势</td></tr>
+<tr><td>产品页</td><td>无数据表</td><td>标准规格表+尺寸图</td></tr>
+<tr><td>FAQ</td><td>质量好✅</td><td>添加FAQPage Schema；扩展至20条</td></tr>
+<tr><td>关于/团队</td><td>不一致</td><td>统一为真实团队+故事</td></tr>
+<tr><td>联系页</td><td>Latin FAQ+伦敦地图</td><td>真实FAQ+上海地图</td></tr>
+<tr><td>博客</td><td>meta模板、slug错配</td><td>优化meta+slug</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- OFFSITE PLAN -->
+<section id="offsite">
+<h2>10. 站外证据建设方案</h2>
+<table>
+<thead><tr><th>信源类型</th><th>建设动作</th><th>优先级</th><th>时间</th></tr></thead>
+<tbody>
+<tr><td>客户案例</td><td>收集并公开至少3个真实客户案例</td><td><span class="badge badge-p0">P0</span></td><td>2周</td></tr>
+<tr><td>认证公示</td><td>在认证机构官网确认后公开展示证书</td><td><span class="badge badge-p1">P1</span></td><td>1周</td></tr>
+<tr><td>视频平台</td><td>YouTube 发布产品演示+安装视频</td><td><span class="badge badge-p1">P1</span></td><td>2周</td></tr>
+<tr><td>行业媒体</td><td>向至少2家行业媒体投稿</td><td><span class="badge badge-p2">P2</span></td><td>1月</td></tr>
+<tr><td>百科</td><td>撰写 Wikipedia/Wikidata 条目</td><td><span class="badge badge-p2">P2</span></td><td>2月</td></tr>
+<tr><td>社区</td><td>在 Reddit/Quora 回答相关问题</td><td><span class="badge badge-p2">P2</span></td><td>持续</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- RISKS -->
+<section id="risks">
+<h2>11. 风险、假设与待确认项</h2>
+<h3>事实冲突</h3>
+<table>
+<thead><tr><th>冲突项</th><th>关于页</th><th>团队页</th></tr></thead>
+<tbody>
+<tr><td>CEO</td><td>Alex Chen</td><td>James Anderson</td></tr>
+<tr><td>工程负责人</td><td>Maria Santos</td><td>Maria Garcia</td></tr>
+<tr><td>销售负责人</td><td>James Okafor</td><td>David Chen</td></tr>
+<tr><td>运营负责人</td><td>Sarah Mueller</td><td>Sarah Mitchell</td></tr>
+</tbody>
+</table>
+<h3>待确认项</h3>
+<table>
+<thead><tr><th>项目</th><th>风险</th></tr></thead>
+<tbody>
+<tr><td>公司注册主体</td><td>未写明公司全称</td></tr>
+<tr><td>电话真实性</td><td>+86 21 1234 5678 疑似占位</td></tr>
+<tr><td>CE/ISO 证书</td><td>声明有但未见文件</td></tr>
+<tr><td>"25+ Years"</td><td>无时间证据</td></tr>
+<tr><td>联系页地图</td><td>指向伦敦，非上海</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- APPENDIX -->
+<section id="appendix">
+<h2>12. 附录</h2>
+<h3>附录A：官网完整页面清单（19文件）</h3>
+<table>
+<thead><tr><th>#</th><th>URL路径</th><th>类型</th><th>关键问题</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><code>/</code></td><td>首页</td><td>Latin、零数据</td></tr>
+<tr><td>2</td><td><code>/about-us/</code></td><td>页面</td><td>团队名不一致</td></tr>
+<tr><td>3</td><td><code>/blog/</code></td><td>模板</td><td>-</td></tr>
+<tr><td>4</td><td><code>/contact-us/</code></td><td>页面</td><td>Latin FAQ、伦敦地图</td></tr>
+<tr><td>5</td><td><code>/equipment/</code></td><td>页面</td><td>无规格表</td></tr>
+<tr><td>6</td><td><code>/faq/</code></td><td>页面</td><td><span class="badge badge-ok">✅</span></td></tr>
+<tr><td>7</td><td><code>/pricing-plan/</code></td><td>页面</td><td>零数据</td></tr>
+<tr><td>8</td><td><code>/project/</code></td><td>页面</td><td>假证言</td></tr>
+<tr><td>9</td><td><code>/team/</code></td><td>页面</td><td>团队冲突、Latin FAQ</td></tr>
+<tr><td>10-15</td><td><code>/blog/*</code></td><td>6文章</td><td>Meta模板</td></tr>
+<tr><td>16-17</td><td><code>/en/</code>, <code>/equipment-detail/</code></td><td>重定向</td><td>-</td></tr>
+<tr><td>18</td><td><code>/404.html</code></td><td>404</td><td>-</td></tr>
+<tr><td>19</td><td><code>/admin/content/</code></td><td>后台</td><td>noindex</td></tr>
+</tbody>
+</table>
+
+<h3>附录B：来源台账（示例）</h3>
+<table>
+<thead><tr><th>ID</th><th>来源</th><th>断言</th><th>核验状态</th></tr></thead>
+<tbody>
+<tr><td>S001</td><td>/faq/</td><td>举升300kg</td><td><span class="badge badge-ok">一级核验</span></td></tr>
+<tr><td>S002</td><td>/faq/</td><td>电池50+次</td><td><span class="badge badge-warn">待二级核验</span></td></tr>
+<tr><td>S003</td><td>/about-us/</td><td>CE认证</td><td><span class="badge badge-warn">未见证书</span></td></tr>
+<tr><td>S004</td><td>/about-us/</td><td>ISO 9001</td><td><span class="badge badge-warn">未见证书</span></td></tr>
+<tr><td>S005</td><td>/about-us/</td><td>CEO Alex Chen</td><td><span class="badge badge-fail">冲突</span></td></tr>
+<tr><td>S006</td><td>/project/</td><td>客户评价</td><td><span class="badge badge-fail">虚假</span></td></tr>
+<tr><td>S007</td><td>/contact-us/</td><td>电话</td><td><span class="badge badge-fail">疑占位</span></td></tr>
+</tbody>
+</table>
+
+<p style="text-align:center;color:var(--muted);margin-top:48px;font-size:13px;">
+报告生成时间：2026-07-10 · 技能版本：yao-geo-panorama-audit<br>
+数据有效期：诊断日期起 3 个月内有效，建议每季度复查
+</p>
+</section>
+
+</main>
+
+<script>
+// Sticky nav active tracking
+const nav = document.getElementById('geo-nav');
+const links = nav.querySelectorAll('a');
+const sections = [...document.querySelectorAll('section[id]')];
+window.addEventListener('scroll', () => {
+  let current = '';
+  for (const s of sections) {
+    if (window.scrollY >= s.offsetTop - 80) current = s.id;
+  }
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+});
+</script>
+</body>
+</html>

@@ -5,12 +5,12 @@ const copy=aboutFor(locale),current=copy.locale;
 const data=copy.quality;
 const benchStandard=data.note,stagePrefix=data.stagePrefix;
 
-// Share the existing reference images and use native step copy for captions and alt text.
+// Real high-definition photography for outbound 4-stage quality verification
 const stepImages=[
- "/images/evidence/equipment-trolley-side-detail.jpg",
- "/images/product/portable-pole-lifter-hero-cutout.png",
- "/images/evidence/field-installation-flange-erect.jpg",
- "/images/evidence/factory-crating-export-package.jpg"
+  "/images/quality/ultrasonic-flaw-detector.jpg",
+  "/images/quality/hydraulic-pressure-test-bench.jpg",
+  "/images/quality/vertical-proof-load-test-rig.jpg",
+  "/images/packaging/export-wooden-crating-rig.jpg"
 ];
 ---
 
@@ -30,6 +30,7 @@ const stepImages=[
       </div>
     </div>
 
+    <!-- 4-Stage Outbound Quality Verification Grid -->
     <div class="steps-grid">
       {data.steps.map((step, idx) => (
         <article class="quality-card">
@@ -39,7 +40,10 @@ const stepImages=[
               <span class="step-tag">{stagePrefix} 0{idx + 1}</span>
             </div>
             <div class="card-media">
-              <img src={stepImages[idx]} width="600" height="400" alt={step.title} loading="lazy" class="step-image" />
+              <a class="step-media-link" href={stepImages[idx]} data-media-image data-caption={step.desc} aria-label={step.title}>
+                <img src={stepImages[idx]} width="600" height="400" alt={step.title} loading="lazy" class="step-image" />
+                <span class="step-expand" aria-hidden="true">↗</span>
+              </a>
               <span class="media-caption">{step.badge}</span>
             </div>
             <h3 class="step-title">{step.title}</h3>
@@ -48,10 +52,83 @@ const stepImages=[
         </article>
       ))}
     </div>
+
+    <!-- Comprehensive Testing & Packaging Equipment Roster -->
+    {data.metrologyItems && data.metrologyItems.length > 0 && (
+      <div class="metrology-head">
+        <div>
+          <p class="eyebrow">{data.metrologyHead[0]}</p>
+          <h3>{data.metrologyHead[1]}</h3>
+        </div>
+        <p class="muted metrology-lead">{data.metrologyHead[2]}</p>
+      </div>
+
+      <div class="steps-grid metrology-grid">
+        {data.metrologyItems.map((item, idx) => (
+          <article class="quality-card metrology-card">
+            <div class="card-inner">
+              <div class="step-header">
+                <span class="step-num">0{idx + 1}</span>
+                <span class="step-tag">{item.tag}</span>
+              </div>
+              <div class="card-media">
+                <a class="step-media-link" href={item.image} data-media-image data-caption={item.desc} aria-label={item.title}>
+                  <img src={item.image} width="600" height="400" alt={item.title} loading="lazy" class="step-image" />
+                  <span class="step-expand" aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <h3 class="step-title">{item.title}</h3>
+              <p class="step-desc muted">{item.desc}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    )}
   </div>
 </section>
 
 <style>
-.quality-testing-section{padding:90px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.quality-testing-section .section-head{align-items:start}.head-right{max-width:500px}.head-right .scope-note{margin:24px 0 0;padding:16px 20px;font-size:12px}.note-tag{display:block;font:11px 'Courier New',monospace;margin-bottom:8px}.steps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.quality-card{min-width:0;border-right:1px solid var(--line);padding:26px 20px}.quality-card:first-child{padding-left:0}.quality-card:last-child{padding-right:0;border-right:0}.step-header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:22px;font:11px 'Courier New',monospace;color:var(--muted)}.step-tag{font-size:10px;text-align:right}.step-num{font-size:18px;color:var(--ink)}.card-media{margin-bottom:24px}.step-image{width:100%;height:155px;object-fit:cover;background:var(--white);filter:saturate(.75)}.media-caption{display:block;font:10px/1.5 'Courier New',monospace;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--line)}.step-title{font-size:20px;line-height:1.25;margin-bottom:16px;overflow-wrap:anywhere}.step-desc{font-size:13px;line-height:1.7}
-@media(max-width:1050px){.steps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quality-card{padding:26px 24px!important;border-bottom:1px solid var(--line)}.quality-card:nth-child(2n){border-right:0}.quality-card:nth-last-child(-n+2){border-bottom:0}.head-right{max-width:none}}@media(max-width:760px){.quality-testing-section{padding:55px 0}.head-right{margin-top:22px}.step-image{height:180px}}@media(max-width:480px){.steps-grid{grid-template-columns:1fr}.quality-card{padding:28px 0!important;border-right:0}.quality-card:nth-last-child(2){border-bottom:1px solid var(--line)}.step-image{height:200px}}
+.quality-testing-section{padding:90px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:50px}
+.head-right{max-width:500px}
+.scope-note{margin-top:24px;padding:16px 20px;font-size:12px;background:var(--white);border-left:3px solid var(--yellow);border-radius:2px}
+.note-tag{display:block;font:700 11px 'Courier New',monospace;margin-bottom:8px;letter-spacing:.06em}
+.steps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.quality-card{min-width:0;border-right:1px solid var(--line);padding:26px 20px;transition:background .2s}
+.quality-card:last-child{border-right:0}
+.quality-card:hover{background:#fafbf9}
+.step-header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:22px;font:11px 'Courier New',monospace;color:var(--muted)}
+.step-tag{font-size:10px;letter-spacing:.05em;font-weight:600}
+.step-num{font-size:18px;font-weight:700;color:var(--ink)}
+.card-media{margin-bottom:20px}
+.step-media-link{display:block;position:relative;background:var(--green);aspect-ratio:16/10;overflow:hidden;border:1px solid var(--line);border-radius:2px}
+.step-image{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.step-media-link:hover .step-image{transform:scale(1.03)}
+.step-expand{position:absolute;right:8px;bottom:8px;width:28px;height:28px;display:grid;place-items:center;background:var(--yellow);color:var(--ink);font-size:16px;z-index:2;border-radius:2px}
+.media-caption{display:block;font:600 10px/1.5 'Courier New',monospace;color:var(--muted);padding-top:10px;letter-spacing:.04em}
+.step-title{font-size:19px;line-height:1.3;margin-bottom:12px;overflow-wrap:anywhere;color:var(--ink);font-weight:650}
+.step-desc{font-size:13px;line-height:1.65;margin:0}
+.metrology-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin:60px 0 36px;padding-top:50px;border-top:1px solid var(--line)}
+.metrology-head h3{font-size:clamp(22px,2.2vw,30px);font-weight:650;line-height:1.2;margin-top:8px;color:var(--ink)}
+.metrology-lead{font-size:14px;line-height:1.6;margin:0}
+.metrology-grid{gap:1px;background:var(--line);border:1px solid var(--line)}
+.metrology-grid .quality-card{background:var(--white);border-right:0}
+@media(max-width:1050px){
+.section-head,.metrology-head{grid-template-columns:1fr;gap:20px}
+.steps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.quality-card{padding:26px 20px!important;border-bottom:1px solid var(--line)}
+.quality-card:nth-child(2n){border-right:0}
+.quality-card:nth-last-child(-n+2){border-bottom:0}
+.metrology-grid .quality-card{border-bottom:0}
+}
+@media(max-width:760px){
+.quality-testing-section{padding:55px 0}
+.metrology-head{margin-top:40px;padding-top:35px}
+}
+@media(max-width:480px){
+.steps-grid{grid-template-columns:1fr}
+.quality-card{padding:24px 16px!important;border-right:0}
+.quality-card:nth-last-child(2){border-bottom:1px solid var(--line)}
+.metrology-grid .quality-card{border-bottom:0}
+}
 </style>

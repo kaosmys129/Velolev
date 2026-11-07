@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PoleLift 全站页面 GEO 技术审计报告</title>
+<style>
+:root {
+  --ink: #1a1a2e;
+  --paper: #faf8f2;
+  --surface: #ffffff;
+  --border: #e0dcd0;
+  --accent: #b8860b;
+  --muted: #6b6560;
+  --highlight: #fef3c7;
+  --danger: #dc2626;
+  --warning: #d97706;
+  --success: #059669;
+  --info: #2563eb;
+  --max-width: 980px;
+}
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family: "Noto Serif SC", "Source Han Serif SC", STSong, Georgia, serif;
+  background: var(--paper); color: var(--ink);
+  line-height: 1.75; font-size: 15px;
+}
+#geo-nav {
+  position: fixed; top:0; left:0; right:0; z-index:1000;
+  background: #fff; border-bottom: 2px solid var(--accent);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;
+}
+#geo-nav .nav-inner { max-width: calc(var(--max-width) + 40px); margin:0 auto; display:flex; gap:0; padding:0 20px; }
+#geo-nav a {
+  display: inline-block; padding: 8px 11px; font-size: 12px;
+  color: var(--muted); text-decoration: none; font-family: Inter, sans-serif;
+  border-bottom: 2px solid transparent; transition: all 0.15s; flex-shrink: 0;
+}
+#geo-nav a:hover, #geo-nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.cover { padding: 80px 20px 60px; text-align: center; border-bottom: 3px solid var(--accent); margin-bottom: 40px; }
+.cover h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+.cover .meta { color: var(--muted); font-size: 14px; }
+.cover .meta span { margin: 0 8px; }
+main { max-width: var(--max-width); margin: 0 auto; padding: 40px 20px 80px; }
+section { margin-bottom: 44px; }
+h2 { font-size: 21px; font-weight: 700; margin-bottom: 14px; padding-bottom: 7px; border-bottom: 1px solid var(--border); color: var(--accent); }
+h3 { font-size: 16px; font-weight: 600; margin: 18px 0 9px; }
+p { margin: 7px 0; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 12.5px; line-height: 1.5; }
+thead { background: var(--ink); color: #fff; }
+th { padding: 7px 9px; text-align: left; font-weight: 600; font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.03em; }
+td { padding: 6px 9px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:nth-child(even) td { background: #fdfcf8; }
+
+.badge { display: inline-block; padding: 1px 7px; border-radius: 3px; font-size: 10.5px; font-weight: 600; font-family: Inter, sans-serif; }
+.badge-p0 { background: #fef2f2; color: var(--danger); }
+.badge-p1 { background: var(--highlight); color: var(--warning); }
+.badge-p2 { background: #dbeafe; color: var(--info); }
+.badge-ok { background: #ecfdf5; color: var(--success); }
+.badge-warn { background: var(--highlight); color: var(--warning); }
+.badge-fail { background: #fef2f2; color: var(--danger); }
+.score-bar { height: 6px; border-radius: 3px; background: #e5e0d5; margin-top: 3px; overflow: hidden; }
+.score-fill { height: 100%; border-radius: 3px; }
+.summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 18px 0; }
+.summary-card { background: var(--surface); border: 1px solid var(--border); padding: 15px; border-radius: 4px; }
+.summary-card .sc-num { font-size: 26px; font-weight: 800; color: var(--accent); font-family: Inter, sans-serif; }
+.summary-card .sc-label { font-size: 11px; color: var(--muted); margin-top: 3px; }
+pre { background: #1a1a2e; color: #e8e1d5; padding: 14px; border-radius: 4px; overflow-x: auto; font-size: 11px; line-height: 1.55; }
+code { font-family: "SF Mono", "Fira Code", monospace; font-size: 11px; }
+.inline-code { background: #f0ece0; padding: 1px 5px; border-radius: 2px; font-family: monospace; font-size: 12px; }
+
+@media print {
+  #geo-nav { display: none !important; }
+  body { background: #fff; font-size: 11px; }
+  main { max-width: 100%; padding: 20px 0; }
+  section { page-break-inside: avoid; }
+}
+@media (max-width: 768px) {
+  .summary-cards { grid-template-columns: 1fr 1fr; }
+  table { font-size: 10px; }
+  th, td { padding: 4px 5px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="geo-nav"><div class="nav-inner">
+  <a href="#summary">摘要</a><a href="#model">诊断模型</a><a href="#evidence">证据台账</a>
+  <a href="#crawl">抓取渲染</a><a href="#structure">结构规范</a><a href="#content">内容证据</a>
+  <a href="#ai">AI可抽取</a><a href="#schema">Schema</a><a href="#mobile">移动性能</a>
+  <a href="#fixes">修复清单</a><a href="#scorecard">评分卡</a><a href="#roadmap">路线图</a>
+  <a href="#appendix">附录</a>
+</div></nav>
+
+<main>
+<div class="cover">
+  <h1>PoleLift 全站页面 GEO 技术审计报告</h1>
+  <p class="meta">
+    <span>技能：yao-geo-page-audit</span>
+    <span>诊断日期：2026-07-10</span>
+    <span>范围：全站 19 页面</span>
+  </p>
+</div>
+
+<section id="summary">
+<h2>执行摘要</h2>
+<p>PoleLift 官网为 <strong>Elementor + Template Kit Export 导出</strong> 的 WordPress 静态站点，共 19 个 HTML 页面。本次技术审计从五段链路对每页执行 16 项技术指标检查。</p>
+
+<div class="summary-cards">
+  <div class="summary-card"><div class="sc-num" style="color:var(--danger);">4</div><div class="sc-label">P0 紧急问题</div></div>
+  <div class="summary-card"><div class="sc-num" style="color:var(--warning);">8</div><div class="sc-label">P1 短期修复</div></div>
+  <div class="summary-card"><div class="sc-num" style="color:var(--info);">6</div><div class="sc-label">P2 中期改进</div></div>
+  <div class="summary-card"><div class="sc-num">4.2<span style="font-size:14px;color:var(--muted);">/10</span></div><div class="sc-label">全站技术评分</div></div>
+</div>
+
+<table>
+<thead><tr><th>#</th><th>关键发现</th><th>严重程度</th><th>范围</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>全站无 Schema JSON-LD</strong></td><td><span class="badge badge-p0">P0</span></td><td>19/19页</td></tr>
+<tr><td>2</td><td><strong>14 个表单 action 属性缺失</strong></td><td><span class="badge badge-p0">P0</span></td><td>14个表单</td></tr>
+<tr><td>3</td><td><strong>首页 title 仅 "PoleLift"</strong>，与全站 "- PoleLift" 格式不统一</td><td><span class="badge badge-p1">P1</span></td><td>1/19页</td></tr>
+<tr><td>4</td><td><strong>6 篇博客 meta description 模板化</strong></td><td><span class="badge badge-p1">P1</span></td><td>6/19页</td></tr>
+<tr><td>5</td><td><strong>sitemap.xml 缺失</strong></td><td><span class="badge badge-p1">P1</span></td><td>全局</td></tr>
+<tr><td>6</td><td><strong>32 张图片 alt 为空</strong>（23%缺陷率，团队页83%）</td><td><span class="badge badge-p1">P1</span></td><td>7页</td></tr>
+<tr><td>7</td><td><strong>17页缺少 &lt;main&gt; 语义标签</strong></td><td><span class="badge badge-p2">P2</span></td><td>17/19页</td></tr>
+<tr><td>8</td><td><strong>每页加载 50+ CSS/JS 文件</strong>（Elementor 全量依赖）</td><td><span class="badge badge-p2">P2</span></td><td>15/19页</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="model">
+<h2>1. 诊断模型：五段链路</h2>
+<p>按照 <code>yao-geo-page-audit</code> 核心模型，将页面 GEO 表现拆成五段链路：</p>
+<table>
+<thead><tr><th>阶段</th><th>含义</th><th>对应检查项</th></tr></thead>
+<tbody>
+<tr><td>1. 发现入口</td><td>页面是否可通过链接、sitemap、搜索引擎被发现</td><td>robots.txt、sitemap、内链、canonical</td></tr>
+<tr><td>2. 检索候选</td><td>页面是否具备成为搜索/AI 检索候选的技术条件</td><td>meta robots、状态码、JS 渲染、初始 HTML</td></tr>
+<tr><td>3. 主内容抽取</td><td>系统能否从 HTML 抽取正文</td><td>&lt;main&gt;、&lt;article&gt;、标题层级、表格</td></tr>
+<tr><td>4. 证据质量</td><td>被抽取片段是否相关、准确、可追责</td><td>meta description、alt、更新时间、作者</td></tr>
+<tr><td>5. 生成引用</td><td>生成式引擎能否用于回答/引用/推荐</td><td>Schema、事实原子性、chunk 引用准备度</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="evidence">
+<h2>2. 权威证据台账</h2>
+<table>
+<thead><tr><th>结论</th><th>来源层级</th><th>影响</th><th>可信度</th></tr></thead>
+<tbody>
+<tr><td>站点为 Elementor 静态导出</td><td>观察</td><td>低代码复用但资源冗余</td><td>高</td></tr>
+<tr><td>全站无 Schema JSON-LD</td><td>观察+标准</td><td>无富媒体搜索、AI 可引用性低</td><td>高</td></tr>
+<tr><td>博客描述为模板格式</td><td>观察</td><td>搜索引擎可能判定低质量</td><td>高</td></tr>
+<tr><td>sitemap.xml 缺失</td><td>观察+标准</td><td>影响爬虫发现效率</td><td>高</td></tr>
+<tr><td>表单 action 缺失</td><td>观察</td><td>表单无法工作</td><td>高</td></tr>
+<tr><td>32 张图片 alt 为空</td><td>观察+标准</td><td>WCAG 违规、降低图片搜索</td><td>高</td></tr>
+<tr><td>更新时间不可见</td><td>观察</td><td>缺乏内容新鲜度信号</td><td>中</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="crawl">
+<h2>3. 抓取与渲染诊断</h2>
+<table>
+<thead><tr><th>检查项</th><th>状态</th><th>详情</th></tr></thead>
+<tbody>
+<tr><td>robots.txt</td><td><span class="badge badge-warn">⚠ 过于简单</span></td><td><code>User-agent: * / Allow: /</code>；无 Sitemap 引用</td></tr>
+<tr><td>sitemap.xml</td><td><span class="badge badge-fail">❌ 缺失</span></td><td>dist/ 无 sitemap 文件</td></tr>
+<tr><td>Canonical URL</td><td><span class="badge badge-ok">✅</span></td><td>17/19 页正确设置</td></tr>
+<tr><td>/404.html 状态码</td><td><span class="badge badge-fail">❌ HTTP 200</span></td><td>搜索引擎可能当正常页索引</td></tr>
+<tr><td>/en/ 重定向</td><td><span class="badge badge-warn">⚠ 2秒延迟</span></td><td>meta refresh 延迟2秒；应改为0秒或301</td></tr>
+<tr><td>JS 渲染</td><td><span class="badge badge-ok">✅ 静态导出</span></td><td>主内容在初始 HTML 中；JS 用于交互动效</td></tr>
+<tr><td>移动端 viewport</td><td><span class="badge badge-ok">✅</span></td><td>全部页面含 viewport meta；Elementor 响应式</td></tr>
+<tr><td>CSS 文件数</td><td><span class="badge badge-warn">⚠ 23-31个/页</span></td><td>加载 Elementor + ElementsKit 全套 CSS</td></tr>
+<tr><td>JS 文件数</td><td><span class="badge badge-warn">⚠ 23-28个/页</span></td><td>加载 jQuery + Elementor + WP 依赖</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="structure">
+<h2>4. 结构规范性诊断</h2>
+<h3>4.1 标题层级</h3>
+<table>
+<thead><tr><th>页面</th><th>H1</th><th>H2</th><th>H3</th><th>评价</th></tr></thead>
+<tbody>
+<tr><td>首页</td><td>1</td><td>7</td><td>1</td><td><span class="badge badge-warn">⚠ H2过多</span></td></tr>
+<tr><td>博客列表</td><td>1</td><td>8</td><td>0</td><td><span class="badge badge-warn">⚠ 缺H3</span></td></tr>
+<tr><td>产品页</td><td>1</td><td>8</td><td>14</td><td><span class="badge badge-warn">⚠ H3过多</span></td></tr>
+<tr><td>博客文章×6</td><td>1</td><td>1</td><td>1</td><td><span class="badge badge-warn">⚠ 层级过浅</span></td></tr>
+<tr><td>关于/联系/FAQ/价格/应用/团队</td><td>1</td><td>3</td><td>1</td><td><span class="badge badge-ok">✅</span></td></tr>
+</tbody>
+</table>
+
+<h3>4.2 语义标签覆盖率</h3>
+<table>
+<thead><tr><th>标签</th><th>存在页面数</th><th>缺失率</th></tr></thead>
+<tbody>
+<tr><td>&lt;main&gt;</td><td>2/19</td><td><span class="badge badge-fail">89%</span></td></tr>
+<tr><td>&lt;article&gt;</td><td>3/19</td><td><span class="badge badge-fail">84%</span></td></tr>
+<tr><td>&lt;nav&gt;</td><td>17/19</td><td><span class="badge badge-ok">11%</span></td></tr>
+<tr><td>&lt;header&gt;</td><td>0/19</td><td><span class="badge badge-fail">100%</span></td></tr>
+<tr><td>&lt;footer&gt;</td><td>0/19</td><td><span class="badge badge-fail">100%</span></td></tr>
+<tr><td>&lt;section&gt;</td><td>0/19</td><td><span class="badge badge-fail">100%</span></td></tr>
+</tbody>
+</table>
+<p>Elementor 使用 <code class="inline-code">&lt;div data-elementor-type="header"&gt;</code> 替代标准语义标签。</p>
+
+<h3>4.3 其他结构要素</h3>
+<table>
+<thead><tr><th>要素</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>&lt;table&gt; 表格</td><td>仅 /equipment/ 页有 3 个规格表</td></tr>
+<tr><td>面包屑导航</td><td><span class="badge badge-fail">全站缺失</span></td></tr>
+<tr><td>内链</td><td><span class="badge badge-ok">每页 56-84 个，密度良好</span></td></tr>
+<tr><td>&lt;noscript&gt;</td><td><span class="badge badge-fail">全站缺失</span></td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="content">
+<h2>5. 内容证据诊断</h2>
+<h3>5.1 Meta Description</h3>
+<table>
+<thead><tr><th>页面组</th><th>状态</th><th>评价</th></tr></thead>
+<tbody>
+<tr><td>首页</td><td><span class="badge badge-ok">269字符</span></td><td>✅ 关键词覆盖全</td></tr>
+<tr><td>标准页面(7个)</td><td><span class="badge badge-ok">100-170字符</span></td><td>✅ 适当</td></tr>
+<tr><td>6篇博客</td><td><span class="badge badge-fail">模板化</span></td><td>❌ "Read PoleLift information about {title}."</td></tr>
+</tbody>
+</table>
+
+<h3>5.2 更新/作者/来源</h3>
+<table>
+<thead><tr><th>要素</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>更新时间</td><td>仅博客含 <code>datePublished</code>；产品/FAQ/关于页无</td></tr>
+<tr><td>作者 meta</td><td><span class="badge badge-fail">全站无 <code>&lt;meta name="author"&gt;</code></span></td></tr>
+<tr><td>sameAs 链接</td><td><span class="badge badge-fail">全站无社媒/百科 sameAs</span></td></tr>
+</tbody>
+</table>
+
+<h3>5.3 页面标题格式异常</h3>
+<table>
+<thead><tr><th>异常</th><th>详情</th></tr></thead>
+<tbody>
+<tr><td>首页 title</td><td><code class="inline-code">&lt;title&gt;PoleLift&lt;/title&gt;</code> — 仅 1 词，其他页均为 "XXX - PoleLift" 格式</td></tr>
+<tr><td>/project/ 标题</td><td>URL 为 <code>/project/</code>，title 为 "Applications - PoleLift"，不一致</td></tr>
+<tr><td>/equipment/ 标题</td><td>URL 为 <code>/equipment/</code>，title 为 "Products - PoleLift"，不一致</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="ai">
+<h2>6. AI 可抽取性诊断</h2>
+<table>
+<thead><tr><th>维度</th><th>评估</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>原子事实</td><td>FAQ 页 10 条 Q&A 可抽取</td><td><span class="badge badge-ok">✅</span></td></tr>
+<tr><td>键值对标记</td><td>无规格表 Schema，无键值对</td><td><span class="badge badge-fail">❌</span></td></tr>
+<tr><td>对比表</td><td>/equipment/ 有参数表但无对比维度</td><td><span class="badge badge-warn">⚠</span></td></tr>
+<tr><td>HowTo 步骤</td><td>无 HowTo Schema，无结构化步骤</td><td><span class="badge badge-fail">❌</span></td></tr>
+<tr><td>段落独立性</td><td>Elementor 容器嵌套深，依赖上下文</td><td><span class="badge badge-fail">❌</span></td></tr>
+<tr><td>Chunk 引用准备度</td><td>低——仅 FAQ Q&A 可被独立引用</td><td><span class="badge badge-warn">⚠</span></td></tr>
+</tbody>
+</table>
+
+<h3>公开答案素材覆盖</h3>
+<table>
+<thead><tr><th>用户意图</th><th>代表问题</th><th>素材状态</th></tr></thead>
+<tbody>
+<tr><td>产品参数</td><td>PoleLift 能举多重</td><td><span class="badge badge-ok">✅ FAQ</span></td></tr>
+<tr><td>价格</td><td>PoleLift 多少钱</td><td><span class="badge badge-ok">✅ $1,500</span></td></tr>
+<tr><td>兼容性</td><td>支持哪些螺栓</td><td><span class="badge badge-ok">✅ M16-M24</span></td></tr>
+<tr><td>认证</td><td>有 CE 吗</td><td><span class="badge badge-warn">⚠ 声明无文件</span></td></tr>
+<tr><td>安装教程</td><td>怎么安装</td><td><span class="badge badge-fail">❌ 无</span></td></tr>
+<tr><td>对比</td><td>vs 起重机</td><td><span class="badge badge-warn">⚠ 仅1博文</span></td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="schema">
+<h2>7. Schema 诊断与建议</h2>
+<p><strong>全站 Schema 覆盖率：0%</strong></p>
+
+<table>
+<thead><tr><th>Schema 类型</th><th>推荐页面</th><th>优先级</th></tr></thead>
+<tbody>
+<tr><td>Organization</td><td>首页</td><td><span class="badge badge-p0">P0</span></td></tr>
+<tr><td>Product</td><td>/equipment/</td><td><span class="badge badge-p0">P0</span></td></tr>
+<tr><td>FAQPage</td><td>/faq/</td><td><span class="badge badge-p0">P0</span></td></tr>
+<tr><td>BreadcrumbList</td><td>全部内容页</td><td><span class="badge badge-p0">P0</span></td></tr>
+<tr><td>Article</td><td>6 篇博客</td><td><span class="badge badge-p1">P1</span></td></tr>
+<tr><td>WebPage</td><td>全部</td><td><span class="badge badge-p1">P1</span></td></tr>
+<tr><td>Offer</td><td>/pricing-plan/</td><td><span class="badge badge-p1">P1</span></td></tr>
+</tbody>
+</table>
+
+<h3>Organization Schema 示例</h3>
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PoleLift",
+  "url": "https://polelift.com",
+  "logo": "https://polelift.com/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Shanghai",
+    "addressCountry": "CN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "sales@polelift.com",
+    "contactType": "sales"
+  }
+}</code></pre>
+
+<h3>FAQPage Schema 示例</h3>
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is the PoleLift and how does it work?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The PoleLift is a portable, modular pole lifting system weighing just 85kg..."
+    }
+  }]
+}</code></pre>
+</section>
+
+<section id="mobile">
+<h2>8. 移动端与性能诊断</h2>
+<table>
+<thead><tr><th>指标</th><th>当前值</th><th>评估</th></tr></thead>
+<tbody>
+<tr><td>CSS 文件数</td><td>23-31 个/页</td><td><span class="badge badge-warn">⚠ 冗余</span></td></tr>
+<tr><td>JS 文件数</td><td>23-28 个/页</td><td><span class="badge badge-warn">⚠ 冗余</span></td></tr>
+<tr><td>最大页面</td><td>首页 168KB</td><td><span class="badge badge-warn">⚠ 较大</span></td></tr>
+<tr><td>最小页面</td><td>管理后台 2.7KB</td><td><span class="badge badge-ok">✅</span></td></tr>
+<tr><td>Viewport Meta</td><td>全部存在</td><td><span class="badge badge-ok">✅</span></td></tr>
+<tr><td>响应式容器</td><td>Elementor e-con/e-flex</td><td><span class="badge badge-ok">✅</span></td></tr>
+<tr><td>Lighthouse 数据</td><td>—</td><td><span class="badge badge-warn">输入缺口</span></td></tr>
+</tbody>
+</table>
+<p style="color:var(--muted);">注：静态文件无法判断实际加载性能、CLS、LCP 等指标，需用户提供 Lighthouse 或 Web Vitals 数据。</p>
+</section>
+
+<section id="fixes">
+<h2>9. 代码层修复清单</h2>
+
+<h3><span class="badge badge-p0">P0</span> 立即修复</h3>
+<table>
+<thead><tr><th>#</th><th>问题</th><th>修复</th><th>成本</th></tr></thead>
+<tbody>
+<tr><td>P0-1</td><td>全站无 Schema</td><td>首页 Organization；产品页 Product；FAQ 页 FAQPage；全局 BreadcrumbList</td><td>S (1天)</td></tr>
+<tr><td>P0-2</td><td>14个表单 action 缺失</td><td>&lt;form action=""&gt; 指向处理端点或 # + JS</td><td>S (0.5天)</td></tr>
+<tr><td>P0-3</td><td>首页 title 不完整</td><td>改为 "PoleLift - Portable Pole Lifting Equipment | Street Lights &amp; 5G"</td><td>S (0.1天)</td></tr>
+<tr><td>P0-4</td><td>/404.html 返回200</td><td>服务器层配置 404，或 Astro 中间件</td><td>S (0.2天)</td></tr>
+<tr><td>P0-5</td><td>/en/ 2秒重定向</td><td>改为 0 秒或服务器 301</td><td>S (0.1天)</td></tr>
+</tbody>
+</table>
+
+<h3><span class="badge badge-p1">P1</span> 短期修复</h3>
+<table>
+<thead><tr><th>#</th><th>问题</th><th>修复</th><th>成本</th></tr></thead>
+<tbody>
+<tr><td>P1-1</td><td>博客 meta 模板化</td><td>每篇 120-160 字符原创描述</td><td>S (0.5天)</td></tr>
+<tr><td>P1-2</td><td>sitemap.xml 缺失</td><td>生成含 17 条路由的 sitemap</td><td>S (0.2天)</td></tr>
+<tr><td>P1-3</td><td>robots.txt 无 Sitemap</td><td>添加 <code>Sitemap: https://polelift.com/sitemap.xml</code></td><td>S (0.05天)</td></tr>
+<tr><td>P1-4</td><td>团队页 10 张图 alt 空</td><td>每张添加描述性 alt</td><td>S (0.3天)</td></tr>
+<tr><td>P1-5</td><td>其他页 alt 为空(17张)</td><td>信息图加描述 alt；装饰图用 role="presentation"</td><td>S (0.3天)</td></tr>
+<tr><td>P1-6</td><td>无更新时间</td><td>产品/FAQ/关于页加 lastModified 或可见日期</td><td>S (0.3天)</td></tr>
+<tr><td>P1-7</td><td>无 author meta</td><td>博客加 &lt;meta name="author"&gt;</td><td>S (0.1天)</td></tr>
+<tr><td>P1-8</td><td>博客 slug 不匹配</td><td>更新为语义化 URL</td><td>M (1天)</td></tr>
+</tbody>
+</table>
+
+<h3><span class="badge badge-p2">P2</span> 中期改进</h3>
+<table>
+<thead><tr><th>#</th><th>问题</th><th>修复</th><th>成本</th></tr></thead>
+<tbody>
+<tr><td>P2-1</td><td>&lt;main&gt; 缺失(17页)</td><td>内容区包裹 &lt;main&gt;</td><td>M (2天)</td></tr>
+<tr><td>P2-2</td><td>无面包屑</td><td>加面包屑 + BreadcrumbList Schema</td><td>M (2天)</td></tr>
+<tr><td>P2-3</td><td>CSS/JS 冗余</td><td>按需加载，去未用 widget 资源</td><td>M (3天)</td></tr>
+<tr><td>P2-4</td><td>&lt;noscript&gt; 缺失</td><td>加基础降级提示</td><td>S (0.3天)</td></tr>
+<tr><td>P2-5</td><td>无 RSS</td><td>生成 RSS feed</td><td>S (0.5天)</td></tr>
+<tr><td>P2-6</td><td>URL/标题不一致</td><td>/project/ → /applications/ 或更新标题</td><td>S (0.3天)</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="scorecard">
+<h2>10. 逐页技术评分卡</h2>
+<table>
+<thead><tr><th>页面</th><th>title</th><th>meta</th><th>结构</th><th>语义</th><th>Schema</th><th>alt</th><th>表单</th><th>总分</th></tr></thead>
+<tbody>
+<tr><td>首页 /</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>❌</td><td>❌</td><td>⚠️42%</td><td>❌</td><td>3.5</td></tr>
+<tr><td>关于我们</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>⚠️27%</td><td>❌</td><td>4.5</td></tr>
+<tr><td>博客列表</td><td>✅</td><td>✅</td><td>⚠️</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>5.0</td></tr>
+<tr><td>联系我们</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>❌×2</td><td>4.5</td></tr>
+<tr><td>产品页</td><td>✅</td><td>✅</td><td>⚠️</td><td>⚠️</td><td>❌</td><td>✅</td><td>❌</td><td><strong>5.5</strong></td></tr>
+<tr><td>FAQ</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>⚠️33%</td><td>❌</td><td>4.5</td></tr>
+<tr><td>价格页</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>⚠️67%</td><td>❌</td><td>4.0</td></tr>
+<tr><td>应用页</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>⚠️50%</td><td>❌</td><td>4.0</td></tr>
+<tr><td>团队页</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td><span style="color:var(--danger)">❌83%</span></td><td>❌</td><td><strong style="color:var(--danger)">3.0</strong></td></tr>
+<tr><td>404</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td><strong>5.5</strong></td></tr>
+<tr><td>博客×6</td><td>✅</td><td>❌模板</td><td>⚠️</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>3.5</td></tr>
+</tbody>
+</table>
+<p><strong>全站加权平均：4.2/10</strong></p>
+</section>
+
+<section id="roadmap">
+<h2>11. 执行路线图</h2>
+<table>
+<thead><tr><th>阶段</th><th>时长</th><th>任务</th></tr></thead>
+<tbody>
+<tr><td><strong>第 1 周</strong></td><td>P0</td><td>Schema部署(Org+Product+FAQ+Breadcrumb)；表单action；首页title；404状态码；/en/重定向</td></tr>
+<tr><td><strong>第 2 周</strong></td><td>P1</td><td>Sitemap生成；博客描述去模板；图片alt补全；更新时间标注；author meta</td></tr>
+<tr><td><strong>3-4 周</strong></td><td>P1</td><td>博客URL slug修正</td></tr>
+<tr><td><strong>2-3 月</strong></td><td>P2</td><td>&lt;main&gt;语义化；面包屑导航；CSS/JS按需加载；RSS feed；URL语义统一</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="appendix">
+<h2>附录：全站技术审计总表</h2>
+<table>
+<thead><tr><th>#</th><th>URL</th><th>title</th><th>desc</th><th>robots</th><th>H1/H2/H3</th><th>语义</th><th>Schema</th><th>alt</th><th>表单</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>/</td><td>⚠</td><td>✅</td><td>❌</td><td>1/7/1</td><td>❌</td><td>❌</td><td>8/19</td><td>❌</td></tr>
+<tr><td>2</td><td>/about-us/</td><td>✅</td><td>✅</td><td>❌</td><td>1/3/1</td><td>❌</td><td>❌</td><td>4/15</td><td>❌</td></tr>
+<tr><td>3</td><td>/blog/</td><td>✅</td><td>✅</td><td>❌</td><td>1/8/0</td><td>✅</td><td>❌</td><td>0/8</td><td>❌</td></tr>
+<tr><td>4</td><td>/contact-us/</td><td>✅</td><td>✅</td><td>❌</td><td>1/3/1</td><td>❌</td><td>❌</td><td>0/2</td><td>❌×2</td></tr>
+<tr><td>5</td><td>/equipment/</td><td>✅</td><td>✅</td><td>❌</td><td>1/8/14</td><td>⚠</td><td>❌</td><td>0/3</td><td>❌</td></tr>
+<tr><td>6</td><td>/faq/</td><td>✅</td><td>✅</td><td>❌</td><td>1/3/1</td><td>❌</td><td>❌</td><td>1/3</td><td>❌</td></tr>
+<tr><td>7</td><td>/pricing-plan/</td><td>✅</td><td>✅</td><td>❌</td><td>1/3/1</td><td>❌</td><td>❌</td><td>4/6</td><td>❌</td></tr>
+<tr><td>8</td><td>/project/</td><td>✅</td><td>✅</td><td>❌</td><td>1/3/1</td><td>❌</td><td>❌</td><td>5/10</td><td>❌</td></tr>
+<tr><td>9</td><td>/team/</td><td>✅</td><td>✅</td><td>❌</td><td>1/3/1</td><td>❌</td><td>❌</td><td>10/12</td><td>❌</td></tr>
+<tr><td>10</td><td>/404.html</td><td>✅</td><td>✅</td><td>✅</td><td>1/1/0</td><td>❌</td><td>❌</td><td>0/2</td><td>❌</td></tr>
+<tr><td>16</td><td>博客×6</td><td>✅</td><td>❌模</td><td>❌</td><td>1/1/1</td><td>✅</td><td>❌</td><td>0/60</td><td>❌</td></tr>
+</tbody>
+</table>
+
+<p style="text-align:center;color:var(--muted);margin-top:44px;font-size:12px;">
+报告生成时间：2026-07-10 · 技能版本：yao-geo-page-audit<br>
+数据有效期：诊断日期起 3 个月有效 · 建议每季度复查
+</p>
+</section>
+</main>
+
+<script>
+const nav = document.getElementById('geo-nav');
+const links = nav.querySelectorAll('a');
+const sections = [...document.querySelectorAll('section[id]')];
+window.addEventListener('scroll', () => {
+  let current = '';
+  for (const s of sections) {
+    if (window.scrollY >= s.offsetTop - 80) current = s.id;
+  }
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+});
+</script>
+</body>
+</html>

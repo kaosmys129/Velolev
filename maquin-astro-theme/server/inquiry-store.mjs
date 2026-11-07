@@ -5,8 +5,9 @@ import { createHash, randomUUID } from "node:crypto";
 import { InquiryError } from "./inquiry-validation.mjs";
 
 export class InquiryStore {
-  constructor(directory, {testMode = false} = {}) {
+  constructor(directory, {testMode = false, emailNotificationStatus = "not_configured"} = {}) {
     this.directory = resolve(directory); this.testMode = testMode;
+    this.emailNotificationStatus = emailNotificationStatus;
     mkdirSync(this.directory,{recursive:true,mode:0o700});
     if (lstatSync(this.directory).isSymbolicLink()) throw new Error("Inquiry directory must not be a symbolic link.");
     chmodSync(this.directory,0o700);
@@ -23,7 +24,7 @@ export class InquiryStore {
       CREATE INDEX IF NOT EXISTS inquiries_created ON inquiries(created_at DESC);`);
   }
   existing(key) { return this.db.prepare("SELECT id,reference,digest,created_at,is_test FROM inquiries WHERE idempotency_key=?").get(key); }
-  receipt(row, duplicate = false) { return {id:row.id,reference:row.reference,receivedAt:row.created_at,status:"received",isTest:Boolean(row.is_test),duplicate,emailNotification:"not_configured"}; }
+  receipt(row, duplicate = false) { return {id:row.id,reference:row.reference,receivedAt:row.created_at,status:"received",isTest:Boolean(row.is_test),duplicate,emailNotification:this.emailNotificationStatus||"not_configured"}; }
   save(payload, attachment, key) {
     const digest = createHash("sha256").update(JSON.stringify(payload)).update(attachment?.sha256 ?? "").update(attachment?.name ?? "").digest("hex");
     const existing = this.existing(key);

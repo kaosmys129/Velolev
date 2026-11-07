@@ -1,0 +1,108 @@
+{
+  "report_id": "polelift-page-audit-20260710",
+  "skill": "yao-geo-page-audit",
+  "generated_at": "2026-07-10",
+  "target_site": "PoleLift (polelift.com)",
+  "total_pages_audited": 19,
+  "overall_score": 4.2,
+  "artifacts": {
+    "markdown": {
+      "exists": true,
+      "path": "polelift-page-audit.md",
+      "size_bytes": 23580,
+      "status": "passed"
+    },
+    "html": {
+      "exists": true,
+      "path": "polelift-page-audit.html",
+      "size_bytes": 29210,
+      "status": "passed"
+    },
+    "docx": {
+      "exists": true,
+      "path": "polelift-page-audit.docx",
+      "size_bytes": 22450,
+      "status": "passed"
+    },
+    "pdf": {
+      "exists": true,
+      "path": "polelift-page-audit.pdf",
+      "size_bytes": 2150000,
+      "status": "passed"
+    }
+  },
+  "layout_checks": {
+    "html_kami_style": {
+      "warm_paper_background": true,
+      "ink_blue_accent": true,
+      "warm_gray_borders": true,
+      "compact_line_height": true,
+      "no_rgba_overuse": true,
+      "status": "passed"
+    },
+    "html_sticky_toc": {
+      "exists": true,
+      "follows_scroll": true,
+      "mobile_scrollable": true,
+      "print_hidden": true,
+      "status": "passed"
+    },
+    "word_table_no_overflow": {
+      "max_columns": 4,
+      "total_width_controlled": true,
+      "column_widths_explicit": true,
+      "status": "passed"
+    },
+    "pdf_no_cut_tables": {
+      "format": "A4",
+      "print_background": true,
+      "margins": "15mm",
+      "status": "passed"
+    },
+    "four_format_consistency": {
+      "same_content_source": true,
+      "same_metrics": true,
+      "same_conclusions": true,
+      "all_chinese_fields": true,
+      "status": "passed"
+    }
+  },
+  "diagnosis_completeness": {
+    "crawlability": true,
+    "renderability": true,
+    "structural_quality": true,
+    "content_evidence": true,
+    "ai_extractability": true,
+    "schema_consistency": true,
+    "mobile_performance": true,
+    "authority_evidence_ledger": true,
+    "code_fixes": true,
+    "content_fixes": true,
+    "p0_p1_p2_priority": true,
+    "roadmap": true,
+    "total_domains_covered": 12
+  },
+  "key_metrics": {
+    "total_css_files_per_page": "23-31",
+    "total_js_files_per_page": "23-28",
+    "schema_coverage": "0%",
+    "img_alt_defect_rate": "23%",
+    "forms_without_action": 14,
+    "pages_without_main_tag": 17,
+    "pages_without_update_time": 15
+  },
+  "checklist": [
+    {"item": "四件套存在且可打开", "status": "pass"},
+    {"item": "HTML Kami 风格白底暖纸面", "status": "pass"},
+    {"item": "HTML 固定跟随目录菜单", "status": "pass"},
+    {"item": "Word 表格不溢出页面", "status": "pass"},
+    {"item": "PDF 无裁切表格和代码块", "status": "pass"},
+    {"item": "全四件套中文简体表头、字段", "status": "pass"},
+    {"item": "权威证据台账完整", "status": "pass"},
+    {"item": "P0/P1 每项问题+证据+动作+成本+验收", "status": "pass"},
+    {"item": "公开答案素材问题集存在", "status": "pass"},
+    {"item": "无法验证项标记为输入缺口", "status": "pass"},
+    {"item": "逐页评分卡完整", "status": "pass"},
+    {"item": "全站技术审计总表（附录）完整", "status": "pass"}
+  ]
+}

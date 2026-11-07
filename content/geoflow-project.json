@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "projectId": "liftpolemachine-web",
+  "brand": "volvet",
+  "baseUrl": "http://127.0.0.1:18082",
+  "namePrefix": "[liftpolemachine-web] ",
+  "markerKnowledgeBaseId": 10,
+  "authorId": 1,
+  "channelId": 1,
+  "markerHash": "2dfbbb283da884920c1bdd96388bdda7fd7aeb9b9b4a460a8fb9fdc3f21d7ec2",
+  "pillars": {
+    "selection": {
+      "categoryId": 1,
+      "promptId": 11,
+      "masterKnowledgeBaseId": 11,
+      "masterKnowledgeHash": "d0a7d882eaf5588135e94e4f758a6da0af19690cc7dcd4e8a74c34be59cbf253"
+    },
+    "compatibility": {
+      "categoryId": 2,
+      "promptId": 12,
+      "masterKnowledgeBaseId": 12,
+      "masterKnowledgeHash": "d96cdf44d94b0750105bc7636384d78ac6629f99d0d8bff86301d16a380c518d"
+    },
+    "project": {
+      "categoryId": 3,
+      "promptId": 13,
+      "masterKnowledgeBaseId": 13,
+      "masterKnowledgeHash": "96e26322e8972832727ade0a2baf16cbf0fa0d2de26aae345a52267c9aa46f44"
+    },
+    "verification": {
+      "categoryId": 4,
+      "promptId": 14,
+      "masterKnowledgeBaseId": 14,
+      "masterKnowledgeHash": "102ab597526a26b00795f29c5380dbe30371ac2bd4652eb4211afb65526fe629"
+    }
+  },
+  "strategyKnowledgeBaseId": 15,
+  "locales": [
+    "en",
+    "es",
+    "fr",
+    "pt",
+    "vi",
+    "th",
+    "id"
+  ]
+}
