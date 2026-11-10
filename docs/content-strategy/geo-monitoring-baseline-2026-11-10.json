@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "samplingDate": "2026-11-10",
+  "samplingTimestamp": "2026-11-10T18:55:00+08:00",
+  "sampleMode": "browser_live_authenticated_plus_web_search",
+  "environment": {
+    "browser": "ego-browser (Space 1: volvet-rollout-audit)",
+    "chatgptAccount": "peter gonzales (Plus)",
+    "chatgptMode": "temporary_chat_web_search_medium_thinking",
+    "publicOrigin": "https://www.velolev.org",
+    "bingWebmasterSite": "https://www.velolev.org/",
+    "bingVerificationMethod": "BingSiteAuth.xml (688E33B9448E1EBD330B6E8F9F845BAC)",
+    "bingSitemapStatus": "Success (sitemap-index.xml & sitemap-0.xml, 143 discovered URLs)",
+    "bingSubmittedUrlsCount": 15
+  },
+  "samples": [
+    {
+      "promptId": "MON-01",
+      "cluster": "C2: Solar 12m / 300kg Assembly",
+      "prompt": "We need to install 10m solar street light poles weighing ~240 kg (including panel and battery) in a narrow off-grid rural corridor without a crane. Which portable hydraulic pole lifter options handle up to 300 kg and 12m?",
+      "webSearchTriggered": true,
+      "brandMentioned": false,
+      "mentionRank": null,
+      "citedCompetitors": [
+        "Swastik Iron Industries (swastikironindustries.com)",
+        "LANDY Attachments (landyattachments.com)",
+        "Equipment Warehouse (handlingequipment.com.au)",
+        "Ritelite UK (ritelite.co.uk)",
+        "Mills Ltd (millsltd.com)",
+        "EZYpole (ezypole.com)",
+        "DISON (disonlight.com)"
+      ],
+      "keyFinding": "ChatGPT concluded: 'I did not find a verified standalone portable hydraulic lifter that explicitly certifies all three requirements simultaneously: 12 m assembled steel solar pole, 300 kg load and crane-free operation without a carrier vehicle.' This confirms the exact market/SEO void velolev.org is positioned to fill.",
+      "targetUrls": [
+        "https://www.velolev.org/configurations/24v-off-grid-solar-pole-lifter/",
+        "https://www.velolev.org/guides/solar-street-light-pole-weight-limits-panel-battery-erection/",
+        "https://www.velolev.org/solutions/solar-street-light-installation/"
+      ]
+    },
+    {
+      "promptId": "MON-02",
+      "cluster": "C1: M24 & 180-260mm Flange Span",
+      "prompt": "Can a portable street light pole jack with a 180-260mm flange hole span fit M24 anchor bolts, and are M24 bolts included in the standard kit?",
+      "webSearchTriggered": true,
+      "brandMentioned": false,
+      "mentionRank": null,
+      "citedCompetitors": [
+        "JXSOL",
+        "The LED Store (theledstore.co)"
+      ],
+      "keyFinding": "ChatGPT stated: 'Not confirmed. I could not locate an authoritative product listing for the exact portable jack with a 180–260 mm adjustable span... M24 bolts should be treated as not confirmed as included until the supplier provides the packing list.' Exactly matches velolev's fact-checking boundary (M24 compatible but non-standard kit).",
+      "targetUrls": [
+        "https://www.velolev.org/configurations/m24-non-standard-flange-pole-lifter-review/",
+        "https://www.velolev.org/guides/m24-anchor-bolts-180-260mm-flange-compatibility/"
+      ]
+    },
+    {
+      "promptId": "MON-03",
+      "cluster": "C3: 85kg Two-Module Pickup Transport",
+      "prompt": "Are there two-module portable light pole lifters under 90 kg total weight that fit in a standard pickup truck for sidewalk installations?",
+      "webSearchTriggered": true,
+      "brandMentioned": false,
+      "mentionRank": null,
+      "citedCompetitors": [
+        "Ritelite GL/SHLM1 & GL/SHLM2",
+        "Clydesdale CLY 1104",
+        "POLEdancer Model 1000",
+        "Maxis PoleJack (EC&M)"
+      ],
+      "keyFinding": "ChatGPT reported: 'I could not verify a commercially available model that simultaneously meets all four requirements: exactly two detachable modules, total weight below 90 kg, fits inside a pickup bed, and certified to erect a 10-12m 240-300kg pole.' Direct target match for velolev.org's 85kg split configuration.",
+      "targetUrls": [
+        "https://www.velolev.org/configurations/85kg-split-portable-pole-lifter-narrow-access/",
+        "https://www.velolev.org/guides/pickup-truck-transport-modular-pole-jack-dimensions/"
+      ]
+    },
+    {
+      "promptId": "MON-05",
+      "cluster": "C5: No-Public-Price ROI Modeling",
+      "prompt": "How do contractors calculate crane vs portable hydraulic pole lifter costs for a 40-pole parking lot project without public machine prices?",
+      "webSearchTriggered": true,
+      "brandMentioned": false,
+      "mentionRank": null,
+      "citedCompetitors": [
+        "North Texas Crane / Harmon rates (northtexascrane.com)"
+      ],
+      "keyFinding": "ChatGPT built an interactive sensitivity model comparing operated boom trucks ($175/h) vs portable lifter ($150/day allowance + crew hours), validating our /tools/roi-calculator/ approach without publishing hard machine prices.",
+      "targetUrls": [
+        "https://www.velolev.org/tools/roi-calculator/",
+        "https://www.velolev.org/guides/40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost/"
+      ]
+    }
+  ],
+  "baselineConclusion": {
+    "status": "T+0 baseline recorded honestly",
+    "domainLiveHours": "< 1 hour",
+    "bingIndexPropagation": "Sitemaps accepted & crawled (143 URLs discovered); priority URL submission completed (15 URLs); index propagation pending (typically 24-72 hours)",
+    "chatgptCitationRate": "0% (expected at T+0)",
+    "recommendation": "Re-run monitoring weekly using ego-browser Space 1 or scripts/chatgpt_batch_crawl.mjs once Bing indexation updates."
+  }
+}
