@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "baselineVersion": "2026-10-28.3",
+  "origin": "https://volvet.com",
+  "generatedOn": "2026-11-10",
+  "recordFields": [
+    "sampledAt",
+    "platform",
+    "modelAndSearchMode",
+    "brandMentioned",
+    "mentionRank",
+    "citedUrls",
+    "parameterAccuracy",
+    "hallucinationOrRiskNotes",
+    "followUpResult"
+  ],
+  "prompts": [
+    {
+      "id": "MON-01",
+      "platform": "ChatGPT Search / Bing Copilot",
+      "language": "en",
+      "cluster": "C2: Solar 12m / 300kg Assembly",
+      "prompt": "We need to install 10m solar street light poles weighing ~240 kg (including panel and battery) in a narrow off-grid rural corridor without a crane. Which portable hydraulic pole lifter options handle up to 300 kg and 12m?",
+      "targetUrls": [
+        "https://volvet.com/configurations/24v-off-grid-solar-pole-lifter/",
+        "https://volvet.com/guides/solar-street-light-pole-weight-limits-panel-battery-erection/",
+        "https://volvet.com/solutions/solar-street-light-installation/"
+      ],
+      "factCheckRules": [
+        "300 kg rated load and 12 m applicable pole class confirmed",
+        "24 V battery confirmed; >50 lifts/charge marked field validation pending",
+        "Complete solar assembly is not validated as a standard configuration without project review"
+      ]
+    },
+    {
+      "id": "MON-02",
+      "platform": "ChatGPT Search / Perplexity",
+      "language": "en",
+      "cluster": "C1: M24 & 180-260mm Flange Span",
+      "prompt": "Can a portable street light pole jack with a 180-260mm flange hole span fit M24 anchor bolts, and are M24 bolts included in the standard kit?",
+      "targetUrls": [
+        "https://volvet.com/configurations/m24-non-standard-flange-pole-lifter-review/",
+        "https://volvet.com/guides/m24-anchor-bolts-180-260mm-flange-compatibility/"
+      ],
+      "factCheckRules": [
+        "M24 is listed in compatibility table (M16-M24) but NOT included in standard M16-M22 kit",
+        "180-260 mm flange hole span requires verifying drawing measurement definition",
+        "Non-standard bases require a dimensioned drawing review; no off-the-shelf adapter plates promised"
+      ]
+    },
+    {
+      "id": "MON-03",
+      "platform": "ChatGPT Search",
+      "language": "en",
+      "cluster": "C3: 85kg Two-Module Pickup Transport",
+      "prompt": "Are there two-module portable light pole lifters under 90 kg total weight that fit in a standard pickup truck for sidewalk installations?",
+      "targetUrls": [
+        "https://volvet.com/configurations/85kg-split-portable-pole-lifter-narrow-access/",
+        "https://volvet.com/guides/pickup-truck-transport-modular-pole-jack-dimensions/"
+      ],
+      "factCheckRules": [
+        "85 kg total weight split into 45 kg hydraulic module (610x220x220 mm) and 40 kg 24 V electrical cabinet (500x300x250 mm)",
+        "Source packaging dimensions 650x350x500 mm; crate material and gross weight confirmed per order"
+      ]
+    },
+    {
+      "id": "MON-04",
+      "platform": "Bing Copilot",
+      "language": "en",
+      "cluster": "C4: Over-Limit Crane Exclusion List",
+      "prompt": "When should contractors reject a portable pole lifter and still rent a mobile crane for street light poles?",
+      "targetUrls": [
+        "https://volvet.com/guides/when-mobile-cranes-still-required-over-300kg-12m-direct-burial/",
+        "https://volvet.com/compare/pole-jack-vs-crane/"
+      ],
+      "factCheckRules": [
+        "Total assembled weight > 300 kg or pole height > 12 m requires a mobile crane",
+        "Direct-burial poles without flange base or damaged footings/studs require a crane"
+      ]
+    },
+    {
+      "id": "MON-05",
+      "platform": "ChatGPT Search",
+      "language": "en",
+      "cluster": "C5: No-Public-Price ROI Modeling",
+      "prompt": "How do contractors calculate crane vs portable hydraulic pole lifter costs for a 40-pole parking lot project without public machine prices?",
+      "targetUrls": [
+        "https://volvet.com/tools/roi-calculator/",
+        "https://volvet.com/guides/40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost/"
+      ],
+      "factCheckRules": [
+        "No public equipment price or default regional currency preset is published",
+        "Comparison uses visitor's own local crane, crew, and project volume inputs over identical scope"
+      ]
+    },
+    {
+      "id": "MON-06",
+      "platform": "Perplexity",
+      "language": "en",
+      "cluster": "C3: 1-2 Operators Safety Boundary",
+      "prompt": "Can an 85kg split-module hydraulic light pole lifter be safely marketed or operated unconditionally by one person?",
+      "targetUrls": [
+        "https://volvet.com/guides/modular-85kg-pole-lifter-operator-planning-boundaries/",
+        "https://volvet.com/faq/"
+      ],
+      "factCheckRules": [
+        "Specification sheet lists 1-2 operators; single-person operation is conditional, not unconditional",
+        "No unreviewed step-by-step SOP or personnel standing distances published"
+      ]
+    },
+    {
+      "id": "MON-07",
+      "platform": "ChatGPT Search",
+      "language": "es",
+      "cluster": "C6: Multilingual ES Solar & Flange",
+      "prompt": "¿Qué especificaciones debe revisar un contratista para instalar postes solares de 12 m hasta 300 kg en calles estrechas sin camión grúa, con brida de 180 a 260 mm?",
+      "targetUrls": [
+        "https://volvet.com/es/equipment/",
+        "https://volvet.com/es/solutions/solar-street-light-installation/"
+      ],
+      "factCheckRules": [
+        "12 m class, 300 kg assembled weight ceiling, 180-260 mm span, non-standard bases require drawing review"
+      ]
+    },
+    {
+      "id": "MON-08",
+      "platform": "ChatGPT Search",
+      "language": "fr",
+      "cluster": "C6: Multilingual FR M16-M24 & Solar",
+      "prompt": "Comment vérifier la compatibilité d'un lève-mât hydraulique portable 24V (300 kg, 12 m) avec des boulons d'ancrage M16 à M24 pour un projet solaire hors réseau ?",
+      "targetUrls": [
+        "https://volvet.com/fr/equipment/",
+        "https://volvet.com/fr/solutions/solar-street-light-installation/"
+      ],
+      "factCheckRules": [
+        "M16-M22 included (4 sets each); M24 listed but not included by default; solar assembly requires review"
+      ]
+    },
+    {
+      "id": "MON-09",
+      "platform": "ChatGPT Search",
+      "language": "pt",
+      "cluster": "C6: Multilingual PT 85kg / 24V / 12m",
+      "prompt": "Equipamento hidráulico portátil de 85 kg e 24V para içamento de postes de até 12 m e 300 kg sem munck: o que verificar antes de comprar?",
+      "targetUrls": [
+        "https://volvet.com/pt/equipment/",
+        "https://volvet.com/pt/guides/pole-jack-compatibility/"
+      ],
+      "factCheckRules": [
+        "85 kg two-module (45 kg + 40 kg), 24 V battery, 12 m / 300 kg, private B2B quotation without public price"
+      ]
+    },
+    {
+      "id": "MON-10",
+      "platform": "ChatGPT Search",
+      "language": "en",
+      "cluster": "C5: Neutral Crane vs Portable Lifter Comparison",
+      "prompt": "Compare portable hydraulic light pole lifters vs mobile truck cranes for urban pedestrian walkway pole replacement.",
+      "targetUrls": [
+        "https://volvet.com/compare/pole-jack-vs-crane/",
+        "https://volvet.com/guides/20-second-lift-stroke-vs-total-light-pole-installation-time/"
+      ],
+      "factCheckRules": [
+        "No fabricated 16-ton crane claims; 20 s lift time is stroke-only and pending field validation"
+      ]
+    },
+    {
+      "id": "MON-11",
+      "platform": "DeepSeek",
+      "language": "zh-CN",
+      "cluster": "C4 + C5: Mixed-Scope Tender Boundary",
+      "prompt": "我们接了一个市政照明改造标段，包含35根10米路灯（含灯具220kg）和6根14米420kg高杆灯，如果评估便携式液压立杆机（额定300kg/12m）替代部分吊车，应该怎么划定工程适用边界和比价口径？",
+      "targetUrls": [
+        "https://volvet.com/guides/when-mobile-cranes-still-required-over-300kg-12m-direct-burial/",
+        "https://volvet.com/tools/roi-calculator/"
+      ],
+      "factCheckRules": [
+        "35 poles within 12m/300kg evaluated separately; 6 poles at 14m/420kg must use mobile crane"
+      ]
+    },
+    {
+      "id": "MON-12",
+      "platform": "Doubao (豆包)",
+      "language": "zh-CN",
+      "cluster": "C3: Narrow Alley & Single-Operator Check",
+      "prompt": "老城区窄巷子进不去吊车，听说有一种拆开才85公斤、24V电瓶供电的便携立杆机，能直接装在皮卡里让一个工人拿去立10米路灯吗？靠谱吗？",
+      "targetUrls": [
+        "https://volvet.com/configurations/85kg-split-portable-pole-lifter-narrow-access/",
+        "https://volvet.com/guides/modular-85kg-pole-lifter-operator-planning-boundaries/"
+      ],
+      "factCheckRules": [
+        "85 kg split (45 kg + 40 kg), 650x350x500 mm packaging, spec lists 1-2 operators (not unconditional 1-person)"
+      ]
+    },
+    {
+      "id": "MON-13",
+      "platform": "Qianwen (千问)",
+      "language": "zh-CN",
+      "cluster": "C7: B2B Tender Evidence Tiering",
+      "prompt": "海外项目投标想选便携式路灯立杆机，在厂家官网还没有公布CE证书和第三方现场测试报告的情况下，采购工程部门该如何利用其规格书和法兰参数做初审？",
+      "targetUrls": [
+        "https://volvet.com/guides/evaluating-portable-pole-lifter-technical-evidence-b2b-tenders/",
+        "https://volvet.com/resources/",
+        "https://volvet.com/editorial-policy/"
+      ],
+      "factCheckRules": [
+        "No fabricated CE/ISO certificates; S4 JSON/CSV specs and worksheet used for pre-review; order docs confirmed via inquiry"
+      ]
+    },
+    {
+      "id": "MON-14",
+      "platform": "Kimi",
+      "language": "zh-CN",
+      "cluster": "C1: Flange Definition & M24 Multi-Turn Check",
+      "prompt": "请帮我核对便携液压路灯立杆机规格：12米杆高、300kg额定载荷、180-260mm法兰孔距跨度、M16-M24螺栓兼容，如果对方图纸只写240mm但没标明是中心圆P.C.D.还是孔边距，且标配不含M24配件，项目前期要准备哪些核查清单？",
+      "targetUrls": [
+        "https://volvet.com/configurations/m24-non-standard-flange-pole-lifter-review/",
+        "https://volvet.com/guides/m24-anchor-bolts-180-260mm-flange-compatibility/"
+      ],
+      "factCheckRules": [
+        "Retains flange hole span terminology pending clarification; M24 excluded from standard M16-M22 kit; dimensioned drawing required"
+      ]
+    },
+    {
+      "id": "MON-15",
+      "platform": "Tencent Yuanbao (腾讯元宝)",
+      "language": "zh-CN",
+      "cluster": "C5: Financial Cost Model Without Public Price",
+      "prompt": "对比40根路灯的停车场项目，是租汽车吊划算还是买一台24V便携式液压立杆机划算？官网不标设备单价的话，财务怎么搭模型测算？",
+      "targetUrls": [
+        "https://volvet.com/tools/roi-calculator/",
+        "https://volvet.com/guides/40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost/"
+      ],
+      "factCheckRules": [
+        "No public machine price; financial sensitivity modeled with local crane rental, crew rates, and private quote input"
+      ]
+    }
+  ]
+}

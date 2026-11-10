@@ -1,5 +1,5 @@
 {
-  "sourceDigest": "5c2e01a89a23ebb2b7593e335725530be6768f0a549af2c14ac967fadba0bd14",
+  "sourceDigest": "d8062c63f3537b7b5ec5106584caef658f862f89681386c50cb214b09f0e75ac",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "date": "2026-10-28",
   "stage": "D31-D60",
@@ -3452,6 +3452,38 @@
     },
     {
       "name": "guides: linked resource /guides/when-mobile-cranes-still-required-over-300kg-12m-direct-burial/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/24v-battery-off-grid-rural-road-pole-lifting-planning/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/pickup-truck-transport-modular-pole-jack-dimensions/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/overhead-power-lines-narrow-alley-pole-erection-planning/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/20-second-lift-stroke-vs-total-light-pole-installation-time/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/foundation-inspection-before-self-anchoring-pole-erection/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/evaluating-portable-pole-lifter-technical-evidence-b2b-tenders/",
+      "passed": true
+    },
+    {
+      "name": "guides: linked resource /guides/solar-wind-sail-area-site-assessment-pole-lifting/",
       "passed": true
     },
     {
