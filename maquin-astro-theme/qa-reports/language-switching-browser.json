@@ -1,9 +1,9 @@
 {
   "date": "2026-10-29",
-  "sourceDigest": "18ff4b4ebf9cc38c8425e67e050c16768f00d19f8843f2da35c310893bf23ff3",
+  "sourceDigest": "80d2784f414560cd3c89da0c2f065c8f50d5524821611e4e6f11a16a6baed7c6",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "snapshotDigest": null,
-  "origin": "https://volvet.com",
+  "origin": "https://www.velolev.org",
   "passed": true,
   "checks": [
     "en/solar: header and footer selectors",

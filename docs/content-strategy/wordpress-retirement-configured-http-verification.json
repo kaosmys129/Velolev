@@ -1,15 +1,15 @@
 {
   "date": "2026-10-29",
-  "sourceDigest": "d8062c63f3537b7b5ec5106584caef658f862f89681386c50cb214b09f0e75ac",
+  "sourceDigest": "80d2784f414560cd3c89da0c2f065c8f50d5524821611e4e6f11a16a6baed7c6",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "snapshotDigest": null,
-  "origin": "https://volvet.com",
+  "origin": "https://www.velolev.org",
   "passed": true,
   "transport": "local HTTP",
   "modernPublicHtml": 144,
   "redirects": 85,
   "wordpressFiles": 0,
-  "buildBytes": 31469428,
+  "buildBytes": 31487558,
   "checks": 1309,
   "failures": []
 }

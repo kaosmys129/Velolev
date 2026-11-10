@@ -26,7 +26,7 @@ const configuredArg = process.argv.find((a) => a.startsWith("--configured=") || 
 const paramOrigin = configuredArg ? configuredArg.split("=")[1] : null;
 const buildMetaPath = join(dist, ".volvet-build.json");
 const buildMeta = existsSync(buildMetaPath) ? JSON.parse(readFileSync(buildMetaPath, "utf8")) : null;
-const rawEffectiveOrigin = process.env.PUBLIC_SITE_URL || paramOrigin || (process.argv.includes("--configured") || process.argv.includes("--production") ? (buildMeta?.origin || baseline.deployment?.publicOrigin || "https://volvet.com") : null) || (buildMeta?.origin && !/\.invalid$/.test(buildMeta.origin) ? buildMeta.origin : null);
+const rawEffectiveOrigin = process.env.PUBLIC_SITE_URL || paramOrigin || (process.argv.includes("--configured") || process.argv.includes("--production") ? (buildMeta?.origin || baseline.deployment?.publicOrigin || "https://www.velolev.org") : null) || (buildMeta?.origin && !/\.invalid$/.test(buildMeta.origin) ? buildMeta.origin : null);
 const effectiveOrigin = sanitizeOrigin(rawEffectiveOrigin);
 const isConfigured = Boolean(effectiveOrigin);
 const pages = all(dist).filter((p) => p.endsWith(".html") && !p.includes("/admin/"));

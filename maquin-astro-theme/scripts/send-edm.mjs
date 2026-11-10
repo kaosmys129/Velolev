@@ -52,7 +52,7 @@ const defaultCampaign = {
     <p>The specification summary and interactive cost scenario calculator are available on the volvet procurement engineering portal.</p>
   `,
   ctaText: "Open Interactive Cost Calculator →",
-  ctaUrl: `${process.env.PUBLIC_ORIGIN || "https://volvet.com"}/tools/roi-calculator/`,
+  ctaUrl: `${process.env.PUBLIC_ORIGIN || "https://www.velolev.org"}/tools/roi-calculator/`,
   secondaryHighlights: [
     "Compare full-scope crane and portable lifter costs using your own project rates",
     "Listed for 1–2 operators; complete installation workflow requires reviewed instructions",
@@ -82,7 +82,7 @@ async function main() {
   const emailService = new EmailService({
     apiKey: process.env.RESEND_API_KEY,
     fromEmail: process.env.RESEND_FROM_EMAIL,
-    publicOrigin: process.env.PUBLIC_ORIGIN || "https://volvet.com",
+    publicOrigin: process.env.PUBLIC_ORIGIN || "https://www.velolev.org",
     testMode: isDryRun
   });
 

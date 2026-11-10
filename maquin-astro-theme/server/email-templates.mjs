@@ -178,7 +178,7 @@ function baseLayout({ title, previewText, content, unsubscribeUrl = null }) {
         <table role="presentation" class="container">
           <tr>
             <td class="header-bar">
-              <a href="https://volvet.com" class="logo-text">volvet</a>
+              <a href="https://www.velolev.org" class="logo-text">volvet</a>
               <span class="logo-badge">Engineering & Procurement</span>
             </td>
           </tr>
@@ -191,7 +191,7 @@ function baseLayout({ title, previewText, content, unsubscribeUrl = null }) {
             <td class="footer-cell">
               <p style="margin:0 0 8px 0;color:#e1e5dc;font-weight:600;">volvet | Portable Pole Lifter & Heavy Jacking Systems</p>
               <p style="margin:0 0 8px 0;">This email was sent by the volvet B2B project notification system.</p>
-              ${unsubscribeUrl ? `<p style="margin:8px 0 0 0;"><a href="${escapeHtml(unsubscribeUrl)}">Unsubscribe from these emails</a> | <a href="https://volvet.com/privacy/">Privacy Policy</a></p>` : `<p style="margin:8px 0 0 0;"><a href="https://volvet.com/privacy/">Privacy Policy</a> | <a href="https://volvet.com/terms/">Terms of Service</a></p>`}
+              ${unsubscribeUrl ? `<p style="margin:8px 0 0 0;"><a href="${escapeHtml(unsubscribeUrl)}">Unsubscribe from these emails</a> | <a href="https://www.velolev.org/privacy/">Privacy Policy</a></p>` : `<p style="margin:8px 0 0 0;"><a href="https://www.velolev.org/privacy/">Privacy Policy</a> | <a href="https://www.velolev.org/terms/">Terms of Service</a></p>`}
             </td>
           </tr>
         </table>
@@ -205,7 +205,7 @@ function baseLayout({ title, previewText, content, unsubscribeUrl = null }) {
 /**
  * 1. 询盘管理员通知邮件模板 (Inquiry Admin Notification)
  */
-export function renderInquiryAdminEmail(inquiry, { publicOrigin = "https://volvet.com" } = {}) {
+export function renderInquiryAdminEmail(inquiry, { publicOrigin = "https://www.velolev.org" } = {}) {
   const isTest = Boolean(inquiry.isTest);
   const title = `${isTest ? "[TEST] " : ""}[New Inquiry] ${inquiry.reference} - ${inquiry.company || inquiry.name} (${inquiry.country || "Global"})`;
   const previewText = `New project inquiry received from ${inquiry.name} (${inquiry.company || "Independent"}). Reference: ${inquiry.reference}`;
@@ -301,7 +301,7 @@ Admin Inbox: ${adminUrl}
 /**
  * 2. 客户询盘确认回执邮件模板 (Inquiry Customer Confirmation)
  */
-export function renderInquiryCustomerEmail(inquiry, { publicOrigin = "https://volvet.com" } = {}) {
+export function renderInquiryCustomerEmail(inquiry, { publicOrigin = "https://www.velolev.org" } = {}) {
   const reference = inquiry.reference;
   const isTest = Boolean(inquiry.isTest);
   const title = `Inquiry Receipt Confirmation: ${reference} | volvet`;
@@ -371,7 +371,7 @@ What happens next:
 3. If you have site drawings or foundation photos, you can reply directly to this email.
 
 volvet | Engineering & Procurement Support
-https://volvet.com
+https://www.velolev.org
 `;
 
   return { subject: title, html, text };
@@ -380,7 +380,7 @@ https://volvet.com
 /**
  * 3. 订阅欢迎与确认邮件模板 (Subscription Welcome / Double Opt-in)
  */
-export function renderSubscriptionWelcomeEmail(subscriber, { unsubscribeUrl = null, publicOrigin = "https://volvet.com" } = {}) {
+export function renderSubscriptionWelcomeEmail(subscriber, { unsubscribeUrl = null, publicOrigin = "https://www.velolev.org" } = {}) {
   const title = "Welcome to volvet Engineering & Equipment Digest";
   const previewText = "You are now subscribed to volvet technical bulletins, equipment benchmarks, and installation guides.";
 
@@ -443,7 +443,7 @@ export function renderEdmEmail({
   lead,
   bodyHtml,
   ctaText = "Read Technical Whitepaper →",
-  ctaUrl = "https://volvet.com",
+  ctaUrl = "https://www.velolev.org",
   secondaryHighlights = []
 }, recipient, { unsubscribeUrl = null } = {}) {
   const content = `
@@ -492,7 +492,7 @@ ${bodyHtml.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim()}
 
 ${ctaText}: ${ctaUrl}
 
-Unsubscribe: ${unsubscribeUrl || "https://volvet.com"}
+Unsubscribe: ${unsubscribeUrl || "https://www.velolev.org"}
 `;
 
   return { subject: title, html, text };

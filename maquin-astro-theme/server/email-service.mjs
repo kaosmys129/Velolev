@@ -14,11 +14,11 @@ import {
 export class EmailService {
   constructor(options = {}) {
     this.apiKey = options.apiKey || process.env.RESEND_API_KEY || null;
-    this.fromEmail = options.fromEmail || process.env.RESEND_FROM_EMAIL || "volvet <notifications@volvet.com>";
-    this.adminEmail = options.adminEmail || process.env.ADMIN_NOTIFICATION_EMAIL || "sales@volvet.com";
+    this.fromEmail = options.fromEmail || process.env.RESEND_FROM_EMAIL || "volvet <notifications@velolev.org>";
+    this.adminEmail = options.adminEmail || process.env.ADMIN_NOTIFICATION_EMAIL || "sales@velolev.org";
     this.audienceId = options.audienceId || process.env.RESEND_AUDIENCE_ID || null;
-    this.replyTo = options.replyTo || process.env.RESEND_REPLY_TO || "support@volvet.com";
-    this.publicOrigin = options.publicOrigin || process.env.PUBLIC_ORIGIN || "https://volvet.com";
+    this.replyTo = options.replyTo || process.env.RESEND_REPLY_TO || "support@velolev.org";
+    this.publicOrigin = options.publicOrigin || process.env.PUBLIC_ORIGIN || "https://www.velolev.org";
     this.logger = options.logger || console;
     this.isTestMode = options.testMode ?? (process.env.NODE_ENV === "test" || !this.apiKey);
 

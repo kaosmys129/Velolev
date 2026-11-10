@@ -56,7 +56,7 @@ test("email templates render valid industrial layout with escaped parameters", (
   // 3. 订阅欢迎邮件
   const welcomeMail = renderSubscriptionWelcomeEmail(
     { email: "contractor@example.com" },
-    { unsubscribeUrl: "https://volvet.com/api/unsubscribe?email=contractor@example.com" }
+    { unsubscribeUrl: "https://www.velolev.org/api/unsubscribe?email=contractor@example.com" }
   );
   assert.match(welcomeMail.subject, /Welcome to volvet/);
   assert.match(welcomeMail.html, /contractor@example\.com/);
@@ -69,10 +69,10 @@ test("email templates render valid industrial layout with escaped parameters", (
       lead: "Key benchmarks for municipal street lighting.",
       bodyHtml: "<p>Comprehensive test telemetry.</p>",
       ctaText: "Download Whitepaper",
-      ctaUrl: "https://volvet.com/guides/"
+      ctaUrl: "https://www.velolev.org/guides/"
     },
     { email: "buyer@example.com" },
-    { unsubscribeUrl: "https://volvet.com/api/unsubscribe" }
+    { unsubscribeUrl: "https://www.velolev.org/api/unsubscribe" }
   );
   assert.equal(edmMail.subject, "Zero-Crane Lifting Bulletin");
   assert.match(edmMail.html, /Zero-Crane Lifting Bulletin/);
@@ -178,15 +178,15 @@ test("inquiry server handles subscribe, unsubscribe and admin subscriber queries
   const subRes = await fetch(`${base}/api/subscribe`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: "test-user@volvet.com", locale: "en", country: "US" })
+    body: JSON.stringify({ email: "test-user@example.com", locale: "en", country: "US" })
   });
   assert.equal(subRes.status, 200);
   const subJson = await subRes.json();
   assert.equal(subJson.status, "subscribed");
-  assert.equal(subJson.email, "test-user@volvet.com");
+  assert.equal(subJson.email, "test-user@example.com");
 
   // 2. 检查订阅状态已写入
-  assert.equal(subscriptionStore.isSubscribed("test-user@volvet.com"), true);
+  assert.equal(subscriptionStore.isSubscribed("test-user@example.com"), true);
 
   // 3. 管理员读取订阅列表
   const adminRes = await fetch(`${base}/api/admin/subscribers`, {
@@ -195,7 +195,7 @@ test("inquiry server handles subscribe, unsubscribe and admin subscriber queries
   assert.equal(adminRes.status, 200);
   const adminData = await adminRes.json();
   assert.equal(adminData.total, 1);
-  assert.equal(adminData.items[0].email, "test-user@volvet.com");
+  assert.equal(adminData.items[0].email, "test-user@example.com");
 
   // 4. 管理员导出订阅 CSV
   const csvRes = await fetch(`${base}/api/admin/subscribers.csv`, {
@@ -203,19 +203,19 @@ test("inquiry server handles subscribe, unsubscribe and admin subscriber queries
   });
   assert.equal(csvRes.status, 200);
   const csvText = await csvRes.text();
-  assert.match(csvText, /test-user@volvet\.com/);
+  assert.match(csvText, /test-user@example\.com/);
 
   // 5. 退订 API (POST)
   const unsubRes = await fetch(`${base}/api/unsubscribe`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: "test-user@volvet.com" })
+    body: JSON.stringify({ email: "test-user@example.com" })
   });
   assert.equal(unsubRes.status, 200);
-  assert.equal(subscriptionStore.isSubscribed("test-user@volvet.com"), false);
+  assert.equal(subscriptionStore.isSubscribed("test-user@example.com"), false);
 
   // 6. 退订页面 (GET)
-  const unsubPageRes = await fetch(`${base}/api/unsubscribe?email=test-user@volvet.com`, {
+  const unsubPageRes = await fetch(`${base}/api/unsubscribe?email=test-user@example.com`, {
     headers: { Accept: "text/html" }
   });
   assert.equal(unsubPageRes.status, 200);

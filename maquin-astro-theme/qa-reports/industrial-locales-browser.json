@@ -1,8 +1,8 @@
 {
-  "sourceDigest": "d8062c63f3537b7b5ec5106584caef658f862f89681386c50cb214b09f0e75ac",
+  "sourceDigest": "80d2784f414560cd3c89da0c2f065c8f50d5524821611e4e6f11a16a6baed7c6",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "snapshotDigest": null,
-  "origin": "https://volvet.com",
+  "origin": "https://www.velolev.org",
   "date": "2026-10-29",
   "passed": true,
   "languages": [
@@ -1429,31 +1429,31 @@
   "controlledInquiries": [
     {
       "locale": "en",
-      "reference": "VOL-20261110-370E1043"
+      "reference": "VOL-20261110-D7EE67A6"
     },
     {
       "locale": "es",
-      "reference": "VOL-20261110-AF6E752E"
+      "reference": "VOL-20261110-76C877A4"
     },
     {
       "locale": "fr",
-      "reference": "VOL-20261110-28650424"
+      "reference": "VOL-20261110-23567BBA"
     },
     {
       "locale": "pt",
-      "reference": "VOL-20261110-8D005B2E"
+      "reference": "VOL-20261110-3D1606C3"
     },
     {
       "locale": "vi",
-      "reference": "VOL-20261110-4B284654"
+      "reference": "VOL-20261110-1ADA3294"
     },
     {
       "locale": "th",
-      "reference": "VOL-20261110-7F2A6CAC"
+      "reference": "VOL-20261110-F1E07381"
     },
     {
       "locale": "id",
-      "reference": "VOL-20261110-A25053B2"
+      "reference": "VOL-20261110-C8CC77FF"
     }
   ],
   "testDataOnly": true,

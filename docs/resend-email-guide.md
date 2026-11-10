@@ -58,11 +58,11 @@ cp .env.example .env
 | 环境变量名 | 说明 | 示例值 |
 |---|---|---|
 | `RESEND_API_KEY` | Resend API 密钥 (在 resend.com 获取) | `re_123456789_abcdef` |
-| `RESEND_FROM_EMAIL` | 默认发件人地址 (生产环境须在 Resend 验证域名) | `volvet <notifications@volvet.com>` |
-| `ADMIN_NOTIFICATION_EMAIL` | 业务/销售团队接收询盘通知的邮箱 | `sales@volvet.com` |
-| `RESEND_REPLY_TO` | 客户回复邮件时的目标邮箱 | `support@volvet.com` |
+| `RESEND_FROM_EMAIL` | 默认发件人地址 (生产环境须在 Resend 验证域名) | `volvet <notifications@velolev.org>` |
+| `ADMIN_NOTIFICATION_EMAIL` | 业务/销售团队接收询盘通知的邮箱 | `sales@velolev.org` |
+| `RESEND_REPLY_TO` | 客户回复邮件时的目标邮箱 | `support@velolev.org` |
 | `RESEND_AUDIENCE_ID` | (可选) Resend 受众 Audience ID | `78261eea-8f8b-4381-83c6-79fa7120f1cf` |
-| `PUBLIC_ORIGIN` | 站点公网域名 (用于生成退订与回跳链接) | `https://volvet.com` |
+| `PUBLIC_ORIGIN` | 站点公网域名 (用于生成退订与回跳链接) | `https://www.velolev.org` |
 | `INQUIRY_ADMIN_TOKEN` | 管理员访问收件箱与订阅者名单的私钥 | 32+ 位随机安全字符串 |
 
 > [!NOTE]
@@ -75,7 +75,7 @@ cp .env.example .env
 当采购方或工程客户在网站提交询盘（如 `/quote` 或 `/contact-us`）时，后端服务将自动触发双向邮件流：
 
 ### 3.1 销售团队通知邮件 (Admin Notification)
-- **收件人**：`ADMIN_NOTIFICATION_EMAIL` (例如 `sales@volvet.com`)
+- **收件人**：`ADMIN_NOTIFICATION_EMAIL` (例如 `sales@velolev.org`)
 - **主题**：`[New Inquiry] {reference} - {company/name} ({country})`
 - **邮件内容**：
   - 专属询盘唯一追踪号（如 `VOL-20261030-ABCD1234`）
@@ -129,7 +129,7 @@ npm run edm:preview
 volvet Industrial EDM Campaign Dispatch Tool
 ====================================================
 Service Provider : RESEND (API Key Present)
-Sender Address   : volvet Procurement <notifications@volvet.com>
+Sender Address   : volvet Procurement <notifications@velolev.org>
 Campaign ID      : tech-brief-zero-crane-2026
 Subject Line     : "Field Engineering Report: Zero-Crane Light Pole Installation"
 Execution Mode   : DRY-RUN (No emails will actually be dispatched)
@@ -155,7 +155,7 @@ node scripts/send-edm.mjs --test-email=your-email@example.com
   "lead": "Analysis of two-module hydraulic lifter efficiency across 50-pole utility projects.",
   "bodyHtml": "<p>Dear Procurement Team,</p><p>We have updated the technical field study...</p>",
   "ctaText": "Download Specification Summary →",
-  "ctaUrl": "https://volvet.com/resources/",
+  "ctaUrl": "https://www.velolev.org/resources/",
   "secondaryHighlights": [
     "Battery-powered 24V DC hydraulic operation with no grid requirement",
     "Flange bolt pattern standardization for M16–M24 foundation circles"
@@ -199,9 +199,9 @@ node scripts/send-edm.mjs --campaign=my-campaign.json
    v=spf1 include:resend.com ~all
    ```
 3. **DMARC 记录** (TXT):
-   在 `_dmarc.volvet.com` 添加：
+   在 `_dmarc.velolev.org` 添加：
    ```
-   v=DMARC1; p=none; rua=mailto:dmarc-reports@volvet.com;
+   v=DMARC1; p=none; rua=mailto:dmarc-reports@velolev.org;
    ```
 配置完成后在 Resend 控制台点击 **Verify Domain** 即可激活生产发送权限。
 
