@@ -368,6 +368,26 @@
       "passed": true
     },
     {
+      "name": "product: local link /configurations/m16-m22-anchor-bolt-pole-lifter/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /configurations/m24-non-standard-flange-pole-lifter-review/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /configurations/12m-300kg-street-light-pole-lifter/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /configurations/85kg-split-portable-pole-lifter-narrow-access/",
+      "passed": true
+    },
+    {
+      "name": "product: local link /configurations/24v-off-grid-solar-pole-lifter/",
+      "passed": true
+    },
+    {
       "name": "product: local link /resources/volvet-specifications.csv",
       "passed": true
     },

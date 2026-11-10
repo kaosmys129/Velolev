@@ -3,10 +3,12 @@ import baseline from '../../data/content-baseline.json';
 import {translateText} from '../../lib/industrial-localization.mjs';
 import {localizedPagePath} from '../../lib/site-config.mjs';
 import {flangeMessages,checkFlange} from '../../lib/flange-checker.mjs';
-const {locale='en',id='flange-instant-checker'}=Astro.props;
+const {locale='en',id='flange-instant-checker',defaultSpan=220,defaultBolt='M20',defaultHoles='4'}=Astro.props;
 const t=value=>translateText(value,locale);
 const messages=Object.fromEntries(flangeMessages.map(key=>[key,t(key)]));
-const initial=checkFlange({span:220,bolt:'M20',holes:'4'});
+const spanStr=String(defaultSpan);
+const holesStr=String(defaultHoles);
+const initial=checkFlange({span:defaultSpan,bolt:defaultBolt,holes:holesStr});
 const bolts=[...baseline.product.specifications.listedAnchorBoltSizes,'M27','M30','Other'];
 ---
 <section class="flange-checker" id={id} data-flange-checker data-copy={JSON.stringify(messages)} data-quote-path={localizedPagePath('quote',locale)}>
@@ -17,13 +19,13 @@ const bolts=[...baseline.product.specifications.listedAnchorBoltSizes,'M27','M30
   <div class="checker-grid">
     <div class="checker-controls">
       <div class="checker-presets" role="group" aria-label="Example base dimensions">
-        {[['200','M18'],['220','M20'],['240','M24'],['300','M30']].map(([span,bolt])=><button type="button" class="checker-preset" aria-pressed={span==='220'?'true':'false'} data-span={span} data-bolt={bolt}>{span} mm / {bolt}</button>)}
+        {[['200','M18'],['220','M20'],['240','M24'],['300','M30']].map(([span,bolt])=><button type="button" class="checker-preset" aria-pressed={span===spanStr&&bolt===defaultBolt&&holesStr==='4'?'true':'false'} data-span={span} data-bolt={bolt}>{span} mm / {bolt}</button>)}
       </div>
-      <div class="checker-input-row"><label for={`${id}-span`}>Flange hole span</label><div><input id={`${id}-span`} data-span-input type="number" min="100" max="400" step="any" value="220" aria-describedby={`${id}-help`}/><span>mm</span></div></div>
-      <input class="checker-range" data-span-slider type="range" min="100" max="400" step="1" value="220" aria-label="Flange hole span"/>
+      <div class="checker-input-row"><label for={`${id}-span`}>Flange hole span</label><div><input id={`${id}-span`} data-span-input type="number" min="100" max="400" step="any" value={spanStr} aria-describedby={`${id}-help`}/><span>mm</span></div></div>
+      <input class="checker-range" data-span-slider type="range" min="100" max="400" step="1" value={spanStr} aria-label="Flange hole span"/>
       <p class="note" id={`${id}-help`}>Listed span: 180–260 mm. Confirm how your drawing defines the measurement.</p>
-      <fieldset class="checker-bolts"><legend>Anchor bolt size</legend><div>{bolts.map(size=><label><input type="radio" name={`${id}-bolt`} value={size} checked={size==='M20'}/><span>{size==='Other'?'Other bolt size':size}</span></label>)}</div></fieldset>
-      <label class="checker-pattern">Hole pattern<select data-hole-pattern><option value="4">4 holes</option><option value="6">6 holes</option><option value="8">8 holes</option></select></label>
+      <fieldset class="checker-bolts"><legend>Anchor bolt size</legend><div>{bolts.map(size=><label><input type="radio" name={`${id}-bolt`} value={size} checked={size===defaultBolt}/><span>{size==='Other'?'Other bolt size':size}</span></label>)}</div></fieldset>
+      <label class="checker-pattern">Hole pattern<select data-hole-pattern><option value="4" selected={holesStr==='4'}>4 holes</option><option value="6" selected={holesStr==='6'}>6 holes</option><option value="8" selected={holesStr==='8'}>8 holes</option></select></label>
     </div>
     <div class="checker-result" data-status={initial.status}>
       <div class="checker-drawing" aria-hidden="true">
@@ -32,9 +34,9 @@ const bolts=[...baseline.product.specifications.listedAnchorBoltSizes,'M27','M30
       </div>
       <div class="checker-verdict" aria-live="polite" aria-atomic="true">
         <p class="eyebrow">Specification comparison</p><h3 data-verdict>{t(initial.title)}</h3><p class="muted" data-explanation>{t(initial.description)}</p>
-        <dl><div><dt>Flange hole span</dt><dd data-span-result>220 mm</dd></div><div><dt>Anchor bolt size</dt><dd data-bolt-result>M20</dd></div><div><dt>Hardware</dt><dd data-hardware>{t(initial.hardware)}</dd></div></dl>
+        <dl><div><dt>Flange hole span</dt><dd data-span-result>{spanStr} mm</dd></div><div><dt>Anchor bolt size</dt><dd data-bolt-result>{defaultBolt==='Other'?t('Base drawing required'):defaultBolt}</dd></div><div><dt>Hardware</dt><dd data-hardware>{t(initial.hardware)}</dd></div></dl>
       </div>
-      <a class="button" data-flange-inquiry href={`${localizedPagePath('quote',locale)}?context=flange&span=220&bolt=M20&holes=4`}>Request a connection review <span aria-hidden="true">↗</span></a>
+      <a class="button" data-flange-inquiry href={`${localizedPagePath('quote',locale)}?context=flange&span=${spanStr}&bolt=${encodeURIComponent(defaultBolt)}&holes=${holesStr}`}>Request a connection review <span aria-hidden="true">↗</span></a>
       <p class="note">A dimension check supports project preparation. The assembled load, foundation and site also need review.</p>
     </div>
   </div>

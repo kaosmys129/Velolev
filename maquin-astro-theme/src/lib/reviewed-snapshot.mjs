@@ -4,8 +4,12 @@ import {fileURLToPath} from "node:url";
 import baseline from "../data/content-baseline.json" with {type:"json"};
 import publishedSnapshot from "../data/published-content.json" with {type:"json"};
 import {corePages} from "./site-config.mjs";
+import {configurationVariants} from "../data/configurations-content.mjs";
 const defaultFile=fileURLToPath(new URL("../data/published-content.json",import.meta.url));
-const allowedPaths=new Set(Object.values(corePages).map(p=>p.path));
+const allowedPaths=new Set([
+  ...Object.values(corePages).map(p=>p.path),
+  ...configurationVariants.map(c=>c.path)
+]);
 const reserved=new Set(["index","pole-jack-compatibility","install-light-pole-without-crane","admin","quote","resources"]);
 const plain=(s,min,max)=>typeof s==="string"&&s.trim().length>=min&&s.length<=max&&!/[<>\u0000-\u0008]/.test(s);
 export function articleContentHash(a){return createHash("sha256").update(JSON.stringify({slug:a.slug,title:a.title,description:a.description,sections:a.sections,relatedPaths:a.relatedPaths,evidenceRefs:a.evidenceRefs})).digest("hex");}

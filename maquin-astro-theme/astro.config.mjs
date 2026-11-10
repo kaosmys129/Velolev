@@ -56,6 +56,11 @@ export default defineConfig({
               ...(enAlt ? [{ lang: "x-default", url: `${origin}${enAlt.path}` }] : []),
             ];
           }
+        } else if (pathname.startsWith("/configurations/")) {
+          links = [
+            { lang: "en", url: `${origin}${pathname}` },
+            { lang: "x-default", url: `${origin}${pathname}` },
+          ];
         }
         return {
           ...item,

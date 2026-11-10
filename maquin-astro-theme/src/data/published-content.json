@@ -133,6 +133,286 @@
         "baselineVersion": "2026-10-28.3",
         "contentSha256": "06b1baaa765e760258171db44e072bf1a8cc4cb836cf5c78ae38afbba98112b9"
       }
+    },
+    {
+      "locale": "en",
+      "status": "published",
+      "slug": "m24-anchor-bolts-180-260mm-flange-compatibility",
+      "title": "M24 Anchor Bolts and 180–260 mm Flange Span Compatibility on a Portable Pole Lifter",
+      "seoTitle": "M24 Anchor Bolts & 180–260 mm Flange Span Compatibility | volvet",
+      "description": "Engineering compatibility guide for M24 anchor studs, 180–260 mm flange hole spans, standard M16–M22 included bolts, and drawing review rules for non-standard pole bases.",
+      "sections": [
+        {
+          "heading": "Direct Compatibility Answer",
+          "paragraphs": [
+            "The volvet Portable Light Pole Lifter specification sheet lists M16, M18, M20, M22, and M24 anchor bolt sizes alongside a 180–260 mm flange hole span. However, listed compatibility and default included hardware are separate items: standard delivery includes 4 sets each of M16, M18, M20, and M22 anchor bolts, while M24 hardware is not included by default.",
+            "In addition, because the source flange diagram contains dimension terminology that still requires engineering clarification, teams must verify how their drawing defines the span and submit a dimensioned base-plate drawing whenever M24 studs, 6-hole or 8-hole patterns, or spans outside 180–260 mm are specified."
+          ]
+        },
+        {
+          "heading": "1. Standard Included Bolts (M16–M22) vs M24 and Non-Standard Flanges",
+          "paragraphs": [
+            "Procurement and site teams frequently assume that every bolt diameter printed in a specification table ships in the standard crate. Separating standard delivery hardware from project-reviewed items prevents last-minute site delays.",
+            "| Flange or Bolt Parameter | Source Sheet Listing | Standard Delivery Scope | Engineering Review Requirement |\n| :--- | :--- | :--- | :--- |\n| M16, M18, M20, M22 anchor bolts | Listed in M16–M24 compatibility table | Included (4 sets per size) | Confirm thread projection and drawing span definition |\n| M24 anchor bolts | Listed in M16–M24 compatibility table | Not included in standard delivery | Flag M24 in inquiry; confirm hardware scope and drawing |\n| 4-hole base within 180–260 mm span | Listed in quick-check envelope | Standard 4-bolt pattern reference | Verify whether drawing measures hole span or bolt circle |\n| 6-hole or 8-hole base pattern | Outside default 4-hole check | Not covered by default kit | Non-standard bases require a dimensioned drawing review |\n| Span below 180 mm or above 260 mm | Outside listed 180–260 mm range | Not covered by default kit | Non-standard bases require a dimensioned drawing review |"
+          ]
+        },
+        {
+          "heading": "2. Why Flange Hole Span Terminology Must Be Checked Against Drawings",
+          "paragraphs": [
+            "On street lighting foundation drawings, engineers may dimension a base plate by opposite-hole span, adjacent-hole spacing, or pitch circle diameter. On the current source specification sheet, the flange diagram includes dimension terminology that still requires engineering clarification before it can be treated as a standalone fitment guarantee.",
+            "Rather than assuming that a 240 mm or 250 mm callout on a tender sheet matches automatically, attach the dimensioned pole-base drawing showing bolt diameter, hole count, hole-to-hole geometry, and stud projection above the concrete footing. Non-standard bases require a dimensioned drawing review, and custom transition hardware is never promised without engineering evaluation."
+          ]
+        },
+        {
+          "heading": "3. Pre-Inquiry Base Plate Checklist for M24 and Custom Projects",
+          "paragraphs": [
+            "Before submitting a quotation request for a project using M24 anchor studs or non-standard base plates, compile the following four items so the connection can be reviewed accurately:\n1. **Dimensioned Flange Drawing:** Provide hole count (4, 6, or 8 holes), exact hole diameter, and clearly labeled hole-to-hole dimensions.\n2. **Anchor Bolt Specification:** State thread diameter (for example, M24), exposed thread length above the foundation, and nut/washer arrangement.\n3. **Assembled Column Envelope:** Confirm total assembled pole weight (up to 300 kg rated load) and pole height (12 m class).\n4. **Foundation Inspection Status:** Confirm that the concrete footing and embedded studs have been inspected and approved by the responsible site engineer."
+          ]
+        },
+        {
+          "heading": "Frequently Asked Questions on M24 and 180–260 mm Flanges",
+          "paragraphs": [
+            "**Are M24 anchor bolts included in the standard volvet kit?** No. Standard delivery includes 1 equipment set, 1 set of ground stakes, and 4 sets each of M16, M18, M20, and M22 anchor bolts. M24 appears in the compatibility table but must be confirmed separately.",
+            "**Can a 6-hole flange with a 220 mm span use the standard 4-bolt setup?** No. Any 6-hole or 8-hole base plate, as well as any span below 180 mm or above 260 mm, is classified as a non-standard base and requires a dimensioned drawing review before confirming fitment."
+          ]
+        }
+      ],
+      "relatedPaths": [
+        "/configurations/m24-non-standard-flange-pole-lifter-review/",
+        "/configurations/m16-m22-anchor-bolt-pole-lifter/",
+        "/guides/pole-jack-compatibility/",
+        "/products/light-pole-jack/",
+        "/quote/"
+      ],
+      "evidenceRefs": [
+        "F001",
+        "F002",
+        "F003",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F020"
+      ],
+      "review": {
+        "status": "approved",
+        "reviewer": "volvet Engineering Review",
+        "reviewedAt": "2026-11-10",
+        "baselineVersion": "2026-10-28.3",
+        "contentSha256": "ab1d8f867d2e3dab808d5c434802616a19069de5fd293bda10a5eda9f797c296"
+      }
+    },
+    {
+      "locale": "en",
+      "status": "published",
+      "slug": "solar-street-light-pole-weight-limits-panel-battery-erection",
+      "title": "Solar Street Light Pole Weight Limits: Checking Panel, Bracket, and Battery Loads Under 300 kg",
+      "seoTitle": "Solar Street Light Pole Weight Limits Under 300 kg | volvet",
+      "description": "How to calculate total assembled solar street light weight (pole, solar panel, mounting bracket, battery box, and luminaire) against the 300 kg rated load and 12 m class limit.",
+      "sections": [
+        {
+          "heading": "Why Bare-Pole Weight Is Insufficient for Solar Lighting Projects",
+          "paragraphs": [
+            "Off-grid solar street light columns carry significantly more top-mounted mass than standard grid-connected roadway poles. When contractors check only the bare steel pole weight against the volvet Portable Light Pole Lifter 300 kg rated load and 12 m applicable pole class, they risk overlooking solar panels, mounting frames, battery enclosures, and outreach brackets.",
+            "While the equipment is powered by an onboard 24 V rechargeable battery and requires no grid electricity on rural corridors, lifting a complete solar assembly has not yet been validated as a standard configuration. Every solar street light project must therefore undergo an assembled weight, geometry, and base-drawing review before selecting crane-free installation."
+          ]
+        },
+        {
+          "heading": "1. Assembled Solar Pole Weight Audit Table",
+          "paragraphs": [
+            "Before submitting a solar lighting brief, add every component that will be attached to the column during the lift. If the combined total exceeds 300 kg or the overall height exceeds the 12 m class, a mobile crane is required.",
+            "| Solar Pole Sub-Assembly | What to Measure for the Lift Audit | Impact on 300 kg / 12 m Boundary |\n| :--- | :--- | :--- |\n| Tapered or octagonal pole shaft | Bare structural column mass and overall length | Must remain within 12 m class and leave margin for top hardware |\n| Solar photovoltaic module(s) | Panel mass, frame weight, and mounting elevation | Adds top-end mass and shifts the center of gravity upward |\n| Top mounting frame and outreach arm | Steel bracket, tilt frame, and luminaire arm mass | Must be summed into the 300 kg rated load ceiling |\n| Battery enclosure and controller | Pole-mounted battery box and charge controller weight | Often the single heaviest accessory on off-grid columns |\n| LED luminaire(s) and internal cabling | Single or twin luminaires, harnesses, and fasteners | Include all pre-wired components lifted together |"
+          ]
+        },
+        {
+          "heading": "2. 24 V Battery Power vs Pending Solar Assembly Validation",
+          "paragraphs": [
+            "On remote highway and rural electrification corridors, the 24 V rechargeable battery inside the 40 kg electrical cabinet eliminates the need for site mains power or a separate generator during lifting. The specification sheet lists a manufacturer-reported figure of over 50 lifts per full charge and a 20 s lift time, with field validation still pending.",
+            "Because top-heavy solar panels and battery boxes alter load distribution and wind exposure compared with a conventional luminaire-only pole, the current specification sheet treats complete solar assemblies as pending project-specific validation rather than an automatic standard configuration."
+          ]
+        },
+        {
+          "heading": "3. Required Engineering Submittal for Solar Pole Projects",
+          "paragraphs": [
+            "To evaluate whether your off-grid solar lighting package fits within equipment limits, include four items in your project inquiry:\n- **Complete Assembly Weight Sheet:** Itemized weights for the pole shaft, solar panel(s), bracket, battery box, and luminaire, plus the verified total assembled weight.\n- **Elevation and Mounting Drawing:** Dimensional sketch showing overall height (up to 12 m) and where the panel and battery box sit along the pole.\n- **Dimensioned Flange and Bolt Drawing:** Base-plate hole span (180–260 mm listed range), hole pattern, and anchor bolt size (M16–M22 included; M24 and non-standard bases require review).\n- **Site and Foundation Context:** Confirmation of concrete foundation approval and corridor access conditions."
+          ]
+        },
+        {
+          "heading": "Frequently Asked Questions on Solar Street Light Erection",
+          "paragraphs": [
+            "**Can a 10 m or 12 m solar street light pole be lifted if the bare pole weighs 210 kg and the panel plus battery weigh 110 kg?** No. The combined assembled weight is 320 kg, which exceeds the 300 kg rated load. A mobile crane or alternative approved method must be used.",
+            "**Is a complete solar street light pole approved as a standard configuration?** No. Lifting a complete solar assembly has not been validated as a standard configuration on the source specification sheet, so each solar project requires an assembly weight and drawing review."
+          ]
+        }
+      ],
+      "relatedPaths": [
+        "/configurations/24v-off-grid-solar-pole-lifter/",
+        "/solutions/solar-street-light-installation/",
+        "/configurations/12m-300kg-street-light-pole-lifter/",
+        "/resources/",
+        "/quote/"
+      ],
+      "evidenceRefs": [
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F006",
+        "F012",
+        "F013",
+        "F014",
+        "F018",
+        "F020"
+      ],
+      "review": {
+        "status": "approved",
+        "reviewer": "volvet Engineering Review",
+        "reviewedAt": "2026-11-10",
+        "baselineVersion": "2026-10-28.3",
+        "contentSha256": "f165a6199f6018096d2a3ee75ca9b2714d9a4fdbeffc444e187623542fc5b315"
+      }
+    },
+    {
+      "locale": "en",
+      "status": "published",
+      "slug": "modular-85kg-pole-lifter-operator-planning-boundaries",
+      "title": "85 kg Split Two-Module Pole Lifter: Transport Dimensions and 1–2 Operator Planning Boundaries",
+      "seoTitle": "85 kg Split Pole Lifter & 1–2 Operator Planning Limits | volvet",
+      "description": "Detailed breakdown of the 85 kg two-module portable light pole lifter (45 kg hydraulic unit and 40 kg 24 V electrical cabinet) and 1–2 operator site planning boundaries.",
+      "sections": [
+        {
+          "heading": "Two-Module Architecture for Narrow-Access Lighting Sites",
+          "paragraphs": [
+            "Urban sidewalks, pedestrian promenades, landscaped road medians, and multi-level parking decks often block truck-mounted cranes due to width limits, low overhead clearances, or paved surface load restrictions. The volvet Portable Light Pole Lifter addresses physical transport into these corridors through an 85 kg two-module architecture rather than a single heavy chassis.",
+            "According to the confirmed S4 specification sheet, the system separates into a 45 kg hydraulic lifting module and a 40 kg electrical cabinet, with source-sheet packaging dimensions of 650 × 350 × 500 mm. Planning crew allocation and site logistics accurately requires understanding both the module weights and the operator boundary stated in the specification table."
+          ]
+        },
+        {
+          "heading": "1. Module Mass, Dimensions, and Component Breakdown",
+          "paragraphs": [
+            "Each module has distinct physical dimensions and functional responsibilities on site:",
+            "| Equipment Module | S4 Dimensions | S4 Weight | Listed Sub-Components |\n| :--- | :--- | :--- | :--- |\n| Hydraulic lifting module | 610 × 220 × 220 mm | 45 kg | Hydraulic cylinder, hydraulic valve, oil pump, oil pressure gauge |\n| Electrical cabinet | 500 × 300 × 250 mm | 40 kg | Control system, hydraulic pump, 24 V rechargeable battery, current and voltage meters, lift buttons |\n| Combined equipment total | Two separate modules | 85 kg | Connected on site at the pole base |\n| Source-sheet packaging | 650 × 350 × 500 mm | 85 kg net equipment | Packaging material and gross shipping weight confirmed per order |"
+          ]
+        },
+        {
+          "heading": "2. Why 1–2 Operators Is Listed Instead of Unconditional Single-Person Operation",
+          "paragraphs": [
+            "In the S4 specification sheet, single-person operation appears only as a conditional introductory note, whereas the authoritative parameter table specifies 1–2 operators. From an engineering and occupational safety standpoint, the equipment should never be marketed or planned as an unconditional one-person job.",
+            "Moving a 45 kg hydraulic module and a 40 kg electrical cabinet across curbs, unpaved verges, or slopes, aligning a 12 m class column (up to 300 kg) onto foundation anchor studs, and monitoring overhead airspace clearances generally warrants coordinated two-person handling under site manual-handling and lifting rules. Detailed step-by-step operating sequences and personnel positioning rules remain subject to reviewed operating manuals and site safety plans."
+          ]
+        },
+        {
+          "heading": "3. Site Access and Logistics Verification Checklist",
+          "paragraphs": [
+            "When planning a narrow-access installation in a pedestrian corridor, park, or campus, verify four practical logistics points prior to mobilization:\n1. **Transfer Route and Surface Bearing:** Confirm footpath width, gate openings, steps, and paving load limits between vehicle unloading and each pole footing.\n2. **Manual-Handling Equipment:** Provide suitable carts, trolleys, or two-person lifting straps for the 45 kg and 40 kg modules in accordance with local safety regulations.\n3. **Swing-Arc Clearance:** Even when ground corridors are narrow, confirm that the full 12 m elevation arc clears overhead power lines, tree canopies, and building facades.\n4. **Base and Load Envelope:** Verify that each pole stays at or below 300 kg total assembled weight and matches the 180–260 mm flange hole span (or has passed a dimensioned drawing review)."
+          ]
+        },
+        {
+          "heading": "Frequently Asked Questions on 85 kg Modular Transport and Crew Size",
+          "paragraphs": [
+            "**What is the heaviest single module of the volvet portable light pole lifter?** The hydraulic lifting module weighs 45 kg (610 × 220 × 220 mm) and the 24 V electrical cabinet weighs 40 kg (500 × 300 × 250 mm), totaling 85 kg.",
+            "**How many operators are required on site?** The specification sheet parameter table lists 1–2 operators. Actual crew size must follow your project safety assessment, manual-handling thresholds, and local lifting supervision rules."
+          ]
+        }
+      ],
+      "relatedPaths": [
+        "/configurations/85kg-split-portable-pole-lifter-narrow-access/",
+        "/products/light-pole-jack/",
+        "/solutions/parking-lot-lighting/",
+        "/faq/",
+        "/quote/"
+      ],
+      "evidenceRefs": [
+        "F001",
+        "F002",
+        "F003",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F021"
+      ],
+      "review": {
+        "status": "approved",
+        "reviewer": "volvet Engineering Review",
+        "reviewedAt": "2026-11-10",
+        "baselineVersion": "2026-10-28.3",
+        "contentSha256": "bdceeaf9d9b8db6449587693aa4ff8e318bd8a533f433d0a6ecf8e18ce94b6a6"
+      }
+    },
+    {
+      "locale": "en",
+      "status": "published",
+      "slug": "when-mobile-cranes-still-required-over-300kg-12m-direct-burial",
+      "title": "When Mobile Cranes Are Still Required: Pole Height Over 12 m, Weight Over 300 kg, and Direct-Burial Limits",
+      "seoTitle": "When Mobile Cranes Are Still Required Over 300 kg or 12 m | volvet",
+      "description": "Clear engineering exclusion matrix defining when a portable hydraulic light pole lifter cannot be used and a mobile crane or alternative lifting method is mandatory.",
+      "sections": [
+        {
+          "heading": "Defining Clear Equipment Boundaries Before Mobilization",
+          "paragraphs": [
+            "A portable hydraulic light pole lifter is engineered for a defined operating envelope: 12 m class roadway and area lighting columns with a total assembled weight at or below 300 kg and a reviewed anchor-bolt flange base. Treating a portable lifter as a universal replacement for a mobile truck crane creates serious structural, safety, and schedule risks.",
+            "Establishing explicit exclusion rules early in tender review ensures that standard 12 m lighting poles benefit from compact two-module access while heavier, taller, or non-flanged structures remain assigned to appropriately rated crane equipment."
+          ]
+        },
+        {
+          "heading": "1. Five Conditions Where a Mobile Crane Is Mandatory",
+          "paragraphs": [
+            "Reject crane-free portable lifting and retain a mobile crane or alternative approved lifting system whenever any of the following conditions exist on your project:",
+            "| Exclusion Condition | Portable Lifter Boundary (S4) | Required Action on Site |\n| :--- | :--- | :--- |\n| Total assembled weight over 300 kg | 300 kg maximum rated load | Use a mobile crane; include pole, bracket, luminaire, and solar battery in weight |\n| Pole height over 12 m | 12 m applicable pole class | Use a mobile crane for high-mast, stadium, or tall highway columns |\n| Direct-burial (embedment) poles without flange base | Designed for anchor-bolt flange base connection | Use a mobile crane or auger-derrick capable of suspending the shaft in the bore |\n| Damaged concrete footing or corroded anchor studs | Requires sound foundation and intact M16–M24 studs | Halt lifting until civil repair and structural inspection are completed |\n| Unreviewed non-standard bases or multi-utility poles | 180–260 mm span listed; non-standard bases require drawing review | Do not lift without dimensioned drawing approval or crane assignment |"
+          ]
+        },
+        {
+          "heading": "2. Mixed-Scope Tenders: Combining Portable Lifters and Cranes",
+          "paragraphs": [
+            "Many municipal lighting upgrades and industrial park packages include a mix of standard 8 m to 12 m street light columns alongside a smaller number of 14 m to 18 m intersection poles or heavy multi-arm structures. Separating the bill of quantities into two work packages avoids forcing either tool outside its safe envelope.",
+            "Assign the 12 m class columns (at or below 300 kg with verified flange geometry) to portable hydraulic lifting evaluation, and schedule a mobile crane exclusively for the over-height, over-weight, or direct-burial items. When comparing costs across the portable-eligible subset, enter your own local crane rental and crew rates in the volvet Cost Scenario Calculator without assumed price presets."
+          ]
+        },
+        {
+          "heading": "3. Pre-Selection Verification Steps for Project Engineers",
+          "paragraphs": [
+            "Before finalizing equipment selection on a mixed or borderline project, complete four verification checks:\n- **Verify Total Lifted Mass:** Confirm structural drawings for every pole type and sum all attachments to ensure each candidate column is at or below 300 kg.\n- **Confirm Base-Plate Interface:** Verify that poles use a bolted flange plate rather than direct earth embedment, and check span (180–260 mm) and bolt size (M16–M24).\n- **Submit Non-Standard Drawings:** Non-standard bases require a dimensioned drawing review prior to equipment commitment.\n- **Audit Overhead and Ground Safety:** Confirm overhead utility clearances and local lifting governance for every pole location."
+          ]
+        },
+        {
+          "heading": "Frequently Asked Questions on Crane vs Portable Lifter Limits",
+          "paragraphs": [
+            "**Can the volvet portable lifter install direct-burial poles that go into an excavated hole without a flange plate?** No. The equipment connects to a bolted pole base and foundation anchor studs. Direct-burial poles require a crane or suspended lifting method.",
+            "**What happens if a project has 35 poles under 300 kg and 5 poles weighing 380 kg?** Only the 35 poles at or below 300 kg and within the 12 m class can be evaluated for the portable lifter; the five 380 kg poles must be erected with a mobile crane."
+          ]
+        }
+      ],
+      "relatedPaths": [
+        "/compare/pole-jack-vs-crane/",
+        "/configurations/12m-300kg-street-light-pole-lifter/",
+        "/guides/install-12m-street-light-poles-without-crane/",
+        "/products/light-pole-jack/",
+        "/quote/"
+      ],
+      "evidenceRefs": [
+        "F001",
+        "F002",
+        "F003",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F020",
+        "F021"
+      ],
+      "review": {
+        "status": "approved",
+        "reviewer": "volvet Engineering Review",
+        "reviewedAt": "2026-11-10",
+        "baselineVersion": "2026-10-28.3",
+        "contentSha256": "f217707eede0724cf1e5a6eabc3bcc359630df61cee8312d37f4a453a6712906"
+      }
     }
   ]
 }
