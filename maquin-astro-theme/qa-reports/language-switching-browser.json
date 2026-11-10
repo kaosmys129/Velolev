@@ -1,10 +1,10 @@
 {
   "date": "2026-10-29",
-  "sourceDigest": "ad798f5033c1de7e090d566e2cb7893db47f39527fc61e885a75947b40391d77",
+  "sourceDigest": "18ff4b4ebf9cc38c8425e67e050c16768f00d19f8843f2da35c310893bf23ff3",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "snapshotDigest": null,
-  "origin": null,
-  "passed": false,
+  "origin": "https://volvet.com",
+  "passed": true,
   "checks": [
     "en/solar: header and footer selectors",
     "en/solar: selectors inside page landmarks",
@@ -2980,11 +2980,14 @@
     "/404.html: both legacy landmarks have language selection",
     "/404.html: untranslated content falls back to real homepage without page state",
     "/404.html: homepage fallback loads correctly",
-    "/project/: both legacy landmarks have language selection"
+    "/unregistered-legacy-path/: both legacy landmarks have language selection",
+    "/unregistered-legacy-path/: untranslated content falls back to real homepage without page state",
+    "/unregistered-legacy-path/: homepage fallback loads correctly",
+    "Switching languages never submits forms",
+    "No JavaScript errors in core language-switching flows",
+    "No missing core documents or assets"
   ],
-  "failures": [
-    "AssertionError [ERR_ASSERTION]: /project/: untranslated content falls back to real homepage without page state\n    at check (file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/scripts/browser-language-switching.mjs:25:36)\n    at file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/scripts/browser-language-switching.mjs:79:487"
-  ],
+  "failures": [],
   "errors": [],
   "httpErrors": [],
   "scope": "119 core pages, both page landmarks, 84 actual source/target switches, reload/history/query/hash/storage/no-JS and six legacy entries",
