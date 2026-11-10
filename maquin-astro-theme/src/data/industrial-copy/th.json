@@ -58,7 +58,7 @@
   "Enlarge image: Reference image showing the lifting frame alongside the pole base": "ขยายภาพ: ภาพอ้างอิงโครงยกข้างฐานเสา",
   "Reference image showing the lifting frame alongside the pole base": "ภาพอ้างอิงโครงยกข้างฐานเสา",
   "03 / Connection detail": "03 / รายละเอียดจุดเชื่อมต่อ",
-  "Include the base-plate drawing, flange dimensions, anchor-bolt arrangement and foundation information. The specification sheet lists bolt sizes, but a matching size does not approve a foundation or establish that a special adapter is supplied.": "แนบแบบแผ่นฐาน ขนาดหน้าแปลน ตำแหน่งสลักเกลียวยึด และข้อมูลฐานราก เอกสารข้อมูลจำเพาะระบุขนาดสลักเกลียว แต่ขนาดที่ตรงกันไม่ได้รับรองฐานรากหรือยืนยันว่ามีอะแดปเตอร์พิเศษให้",
+  "Include the base-plate drawing, flange dimensions, anchor-bolt arrangement and foundation information. The specification sheet lists bolt sizes, but a matching size does not approve a foundation or establish that a non-standard flange fits without a dimensioned drawing review.": "แนบแบบแผ่นฐาน ขนาดหน้าแปลน ตำแหน่งสลักเกลียวยึด และข้อมูลฐานราก เอกสารระบุขนาดสลักเกลียว แต่ขนาดที่ตรงกันไม่ได้รับรองฐานรากหรือยืนยันว่าหน้าแปลนนอกมาตรฐานใช้ได้โดยไม่ตรวจสอบแบบระบุขนาด",
   "Dimensioned pole-base and anchor-bolt drawing": "แบบฐานเสาและสลักเกลียวยึดพร้อมมิติ",
   "Foundation detail and project location": "รายละเอียดฐานรากและสถานที่โครงการ",
   "Photographs that support the drawings": "ภาพถ่ายประกอบแบบ",

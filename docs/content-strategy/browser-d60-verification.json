@@ -1,6 +1,6 @@
 {
-  "sourceDigest": "ebfabf0008405dcee05499ce7c748dd28ddfb50f8e7296017a98841bf69e0fc4",
-  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "sourceDigest": "3ff1e7832afb9dcb218c56739cef1212b604909654f933e8eca45b7cc9e53bdc",
+  "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "date": "2026-10-28",
   "stage": "D31-D60",
   "passed": true,
@@ -562,6 +562,46 @@
       "passed": true
     },
     {
+      "name": "migration: /project/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /solutions/solar-street-light-installation/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /resources/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /essential-tips-for-maintaining-heavy-machinery-prolonging-lifespan-and-efficiency-2/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /solutions/solar-street-light-installation/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /maximizing-roi-through-proper-care-and-rental-management-of-heavy-machines/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /tools/roi-calculator/ final page 200",
+      "passed": true
+    },
+    {
+      "name": "migration: /the-importance-of-regular-inspections-for-heavy-machinery/ one 301 to final page",
+      "passed": true
+    },
+    {
+      "name": "migration: /resources/ final page 200",
+      "passed": true
+    },
+    {
       "name": "no local asset, document or page HTTP errors",
       "passed": true
     },
@@ -576,7 +616,7 @@
   ],
   "failures": [],
   "httpErrors": [],
-  "receipt": "VOL-20261029-6A2D86DD",
+  "receipt": "VOL-20261110-96C0214B",
   "testDataOnly": true,
   "externalEmailSent": false
 }

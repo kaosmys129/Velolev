@@ -2,11 +2,11 @@
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "date": "2026-10-28",
   "baselineVersion": "2026-10-28.3",
-  "sourceDigest": "733ba91d67f53e74cf0010619589354d1e9c49e169207441aed0dbc76e6ffe32",
-  "sourceFiles": 147,
+  "sourceDigest": "3ff1e7832afb9dcb218c56739cef1212b604909654f933e8eca45b7cc9e53bdc",
+  "sourceFiles": 148,
   "publicHtmlChecked": 127,
   "locales": 7,
   "failures": [],
   "passed": true,
-  "scope": "built HTML, metadata, JSON-LD, source-derived facts, B2B commercial policy, preview configuration"
+  "scope": "built HTML, metadata, JSON-LD, source-derived facts, B2B commercial policy, production configuration"
 }

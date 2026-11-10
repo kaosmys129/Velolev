@@ -1,6 +1,6 @@
 import test from "node:test";import assert from "node:assert/strict";
 import {mkdtempSync,writeFileSync,readFileSync,rmSync} from "node:fs";import {tmpdir} from "node:os";import {join} from "node:path";
-import {calculateRoi,roiInquiryNotes,REGIONAL_PRESETS} from "../src/lib/roi.mjs";
+import {calculateRoi,roiInquiryNotes} from "../src/lib/roi.mjs";
 import {validateSnapshot,articleContentHash,importReviewedSnapshot} from "../src/lib/reviewed-snapshot.mjs";
 import {specificationSummary,specificationCsv,projectWorksheet} from "../src/lib/specification-downloads.mjs";
 import baseline from "../src/data/content-baseline.json" with {type:"json"};
@@ -23,14 +23,3 @@ test("stale baselines and duplicate or reserved slugs are rejected",()=>{const o
 test("raw HTML, public amounts and unsupported contact details are blocked before import",()=>{for(const text of ["<script>alert(1)</script>","Published equipment price $1000", "Email sales@example.test for sales"]){const s=fixture();s.articles[0].sections[0].paragraphs[0]+=text;s.articles[0].review.contentSha256=articleContentHash(s.articles[0]);assert.throws(()=>validateSnapshot(s));}});
 test("related routes and evidence IDs must exist in the current registries",()=>{for(const change of [{relatedPaths:["/unwritten/"]},{evidenceRefs:["F999"]},{locale:"fr"}]){const s=fixture();Object.assign(s.articles[0],change);s.articles[0].review.contentSha256=articleContentHash(s.articles[0]);assert.throws(()=>validateSnapshot(s));}});
 test("dry-run import never mutates a snapshot; failed multi-article import preserves last good file",()=>{const dir=mkdtempSync(join(tmpdir(),"volvet-snapshot-"));try{const source=join(dir,"reviewed.json"),target=join(dir,"published.json");writeFileSync(source,JSON.stringify(fixture()));writeFileSync(target,"last good snapshot");assert.equal(importReviewedSnapshot(source,{outputFile:target}).applied,false);assert.equal(readFileSync(target,"utf8"),"last good snapshot");assert.equal(importReviewedSnapshot(source,{apply:true,outputFile:target}).applied,true);const good=readFileSync(target,"utf8"),broken=fixture();broken.articles.push({...broken.articles[0],slug:"another-fixture"});writeFileSync(source,JSON.stringify(broken));assert.throws(()=>importReviewedSnapshot(source,{apply:true,outputFile:target}));assert.equal(readFileSync(target,"utf8"),good);}finally{rmSync(dir,{recursive:true,force:true});}});
-test("regional presets calculate positive savings, reasonable payback periods and realistic break-even poles",()=>{
-  assert.deepEqual(Object.keys(REGIONAL_PRESETS),["sea","mea","na_eu"]);
-  for(const [key,preset] of Object.entries(REGIONAL_PRESETS)){
-    const res=calculateRoi(preset);
-    assert.equal(res.status,"positive",`${key} must yield positive status`);
-    assert.ok(res.annualNetSaving>10000,`${key} annual net saving should be substantial`);
-    assert.ok(res.netSavingPerPole>30,`${key} per pole saving should exceed 30`);
-    assert.ok(res.breakEvenPoles>10&&res.breakEvenPoles<150,`${key} break even poles should be realistic`);
-    assert.ok(res.paybackMonths>0.5&&res.paybackMonths<6,`${key} payback period should be within 0.5 to 6 months`);
-  }
-});

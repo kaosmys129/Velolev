@@ -1,11 +1,11 @@
 {
   "en": {
     "metaTitle": "About volvet: Equipment & Information | volvet",
-    "metaDescription": "Learn volvet's confirmed portable hydraulic pole lifter focus, 300 kg WLL specifications, and transparent B2B engineering procurement workflow.",
+    "metaDescription": "volvet is the confirmed brand for a portable hydraulic light pole lifter listed for 12 m poles, 300 kg rated load, 24 V battery and 85 kg total weight.",
     "hero": [
       "volvet / Equipment & information",
-      "Specialized OEM Manufacturer for Crane-Free Lifting Systems.",
-      "volvet is a specialized original equipment manufacturer of portable hydraulic light pole lifters. Engineered to resolve crane accessibility bottlenecks, reduce installation overhead, and protect work crews across global infrastructure projects."
+      "Equipment information.\nProject-specific decisions.",
+      "volvet is the confirmed public brand for the portable light pole lifter described on this website. Current product data is grounded in specification sheet S4, while corporate entity, facility and field-validation records remain pending."
     ],
     "facts": [
       "Light pole class",
@@ -16,33 +16,28 @@
     "library": [
       "Product reference library",
       "See the equipment. Check the context.",
-      "Explore our specialized fabrication facilities and modular hardware, where high-pressure hydraulic cylinders and reinforced chassis are assembled to exacting standards."
+      "These four reference images show the lifting assembly, electrical cabinet, connection geometry and export crate. They are product references, not proof of manufacturing scale or field validation."
     ],
     "images": [
       [
-        "5-Axis Precision CNC Machining Center",
-        "High-precision multi-axis CNC machining center dedicated to manufacturing hydraulic manifold blocks, valve bodies, and structural pivot brackets.",
-        "CNC Machining"
+        "Two-Module System Overview",
+        "Reference view of the yellow hydraulic lifting assembly alongside its separate electrical control cabinet.",
+        "System Overview"
       ],
       [
-        "Hydraulic Cylinder Dedicated Assembly Station",
-        "Clean-room assembly workstation equipped with precision seal installers, cylinder bore alignment guides, and hydraulic oil pre-filling fixtures.",
-        "Cylinder Assembly"
+        "Hydraulic Pump & Wheeled Frame",
+        "Close reference view of the hydraulic cylinder, pump unit, valve assembly and wheeled transport frame.",
+        "Hydraulic Detail"
       ],
       [
-        "Robotic Structural Chassis Welding Cell",
-        "Automated multi-axis robotic welding rig executing continuous, full-penetration seam welding on high-strength alloy steel chassis and brackets.",
-        "Robotic Welding"
+        "Pole-Base Connection Reference",
+        "Reference view showing the lifting frame positioned beside a pole base. Actual flange and anchor connections require drawing review.",
+        "Connection Reference"
       ],
       [
-        "Flange & Base Precision Turning Station",
-        "Large-diameter horizontal CNC lathe station executing precision facing, circular bolt-hole pattern drilling, and anchor docking surface finishing.",
-        "Flange Machining"
-      ],
-      [
-        "24V Powertrain & Control Cabinet Assembly Line",
-        "Integrated assembly and wiring line for modular 40 kg IP54 electrical control enclosures, brushless drive units, and waterproof quick-disconnect harnesses.",
-        "Powertrain Assembly"
+        "Export Crate Packaging Reference",
+        "Reference view of crated equipment. Source sheet S4 lists packaging dimensions of 650 × 350 × 500 mm; packing materials and gross weight require confirmation.",
+        "Packaging Reference"
       ]
     ],
     "massLabels": [
@@ -53,58 +48,58 @@
     "evidence": [
       "Evidence status",
       "Know what each statement supports.",
-      "Every published specification represents verified mechanical baselines and rigorous factory quality control standards, ensuring predictable performance on your job site."
+      "We separate source-sheet specifications, manufacturer-reported performance figures and project-specific engineering reviews so procurement teams can verify every claim."
     ],
     "levels": [
       [
         "Source",
-        "Specification sheet",
-        "Dimensions, weights, rated load and included components come from the supplied sheet. They do not approve every pole or site."
+        "Specification sheet S4",
+        "Dimensions, module weights, 300 kg rated load and standard included parts come from specification sheet S4. They do not approve every pole or site."
       ],
       [
         "Reported",
         "Manufacturer performance",
-        "Reported lifting time and usage counts remain manufacturer statements. Field conditions and results are still being documented."
+        "The 20 s lift stroke, >50 lifts per full charge and >3000 usage cycles remain manufacturer-reported statements with field validation pending."
       ],
       [
         "Project",
         "Connection and site review",
-        "Provide the actual assembly, flange, anchor bolts, foundation and site. Unresolved diagram terminology is not expanded into an operating procedure."
+        "Provide the assembled pole weight, flange drawing, anchor bolts, foundation and site plan. Non-standard bases require a dimensioned drawing review."
       ],
       [
-        "Export Assurance",
-        "Direct Manufacturer Support",
-        "Every shipment includes comprehensive technical documentation, verified factory inspection records, and 24-hour engineering support."
+        "Pending",
+        "Corporate & facility records",
+        "Registered company entity, factory audit records, certifications and direct email/phone channels remain pending confirmation for publication."
       ]
     ],
     "review": [
-      "Factory Quality Assurance",
-      "4-Stage Export Inspection Benchmark.",
-      "Every production unit undergoes multi-stage structural, hydraulic, and vertical proof-load verification before dispatch.",
-      "FACTORY VERIFICATION",
-      "Rigorous individual testing on dedicated vertical test rigs to ensure turnkey jobsite deployment.",
-      "STAGE"
+      "Pre-project review",
+      "4-Step Specification & Fit Check.",
+      "Before selecting equipment or issuing a quotation, each inquiry is checked against four source-sheet boundaries.",
+      "EVIDENCE BOUNDARY",
+      "Specification sheet S4 establishes reference dimensions only; field validation and project engineering approval remain separate steps.",
+      "STEP"
     ],
     "checks": [
       [
-        "Raw Material & Weld Ultrasonic Inspection",
-        "High-strength alloy steel structural inspection with ultrasonic flaw detection on critical welds and pivot brackets.",
-        "WELD INTEGRITY"
+        "Pole Height & Assembled Weight",
+        "Check total pole height against the 12 m pole class and confirm total assembled weight with luminaire, bracket and attachments within 300 kg.",
+        "LOAD & HEIGHT"
       ],
       [
-        "Hydraulic Hold & Seal Integrity Testing",
-        "Hydraulic cylinder pressure-drop hold inspection under rated working load, ensuring leak-free dual-direction check valve locking.",
-        "PRESSURE HOLD"
+        "Flange Span & Anchor Bolt Fit",
+        "Compare flange hole span against 180–260 mm and anchor bolts against M16–M24 (M16–M22 included; non-standard bases require a dimensioned drawing review).",
+        "BASE CONNECTION"
       ],
       [
-        "300 kg Proof-Load Vertical Calibration",
-        "Every production unit undergoes vertical full-stroke calibration with 300 kg proof load on dedicated test rigs to ensure 20 s lift stability.",
-        "LOAD CALIBRATION"
+        "Module Split & 24 V Power Scope",
+        "Confirm site transport for the 45 kg hydraulic module (610 × 220 × 220 mm) and 40 kg electrical cabinet (500 × 300 × 250 mm) with 24 V battery.",
+        "MODULARITY"
       ],
       [
-        "Shockproof Export Wooden Crate Packaging",
-        "Pre-delivery packing inside a reinforced 650 × 350 × 500 mm export composite crate with vapor-barrier seal and multi-axis drop cushioning.",
-        "EXPORT CRATING"
+        "Packaging & Delivery Terms",
+        "Review the listed 650 × 350 × 500 mm package dimensions and confirm packing materials, gross shipping weight and destination documents privately.",
+        "SHIPMENT SCOPE"
       ]
     ],
     "brief": [
@@ -126,7 +121,7 @@
       ],
       [
         "Foundation and connection",
-        "Provide base flange dimensions or drawings. Our team verifies bolt alignment (M16–M24) and foundational moment balance at zero cost.",
+        "Provide base flange dimensions or drawings. Non-standard bases require a dimensioned drawing review to confirm bolt and flange compatibility.",
         [
           "Flange drawing",
           "Anchor bolts",
@@ -152,7 +147,7 @@
       "POINTS TO CONFIRM",
       "Discuss the actual arrangement",
       "Inquiry follow-up",
-      "Our export logistics team coordinates direct factory shipments to major international hubs, providing complete commercial invoices, packing lists, and export documentation."
+      "Export packing materials, gross shipping weight, required procurement documents and commercial terms are confirmed privately once your project scope and destination are reviewed."
     ],
     "destinations": [
       [
@@ -176,62 +171,15 @@
       "Send your destination, pole assembly and available drawings for a configuration discussion and private B2B quotation request.",
       "Send project information",
       "Share only relevant information and drawings you are authorised to provide."
-    ],
-    "metrologyHead": [
-      "Comprehensive Testing & Packaging Equipment",
-      "Factory Inspection Roster & Packaging Verification.",
-      "Specialized metrology instruments, endurance test benches, and heavy-duty export packaging equipment ensuring verified field performance."
-    ],
-    "metrology": [
-      [
-        "Benchtop Rockwell & Vickers Hardness Tester",
-        "Precision testing of raw steel tensile strength, heat treatment penetration, and surface hardness on critical load-bearing components.",
-        "HARDNESS TEST"
-      ],
-      [
-        "Digital Metrology Calipers & Laser Alignment Tool",
-        "Laser coaxiality verification, digital micrometer hole-spacing measurement, and flange pitch-circle diameter tolerance checking.",
-        "DIMENSIONAL TOLERANCE"
-      ],
-      [
-        "Digital Coating & Paint Thickness Gauge",
-        "Non-destructive dry film thickness testing across epoxy primer and polyurethane finish layers for marine corrosion protection.",
-        "COATING INSPECTION"
-      ],
-      [
-        "24V Battery Pack Automated Charge/Discharge Cycler",
-        "Automated multi-channel load testing verifying battery capacity retention, internal impedance, discharge voltage stability, and thermal control.",
-        "BATTERY CYCLING"
-      ],
-      [
-        "Electrical Insulation & Emergency Stop Safety Test Station",
-        "High-voltage dielectric withstand testing, ground continuity verification, and emergency power-cut latching response testing.",
-        "SAFETY HIPOT"
-      ],
-      [
-        "Industrial Chamber Vacuum & Moisture-Barrier Sealer",
-        "High-vacuum nitrogen purge and heat sealing inside heavy aluminum vapor-barrier pouches, preventing maritime transit corrosion.",
-        "VACUUM SEALING"
-      ],
-      [
-        "Pneumatic Heavy-Duty Steel & PET Strapping Tensioner",
-        "Pneumatic high-tension banding tool securing crated lifting machinery onto heat-treated export pallets with uniform holding tension.",
-        "EXPORT STRAPPING"
-      ],
-      [
-        "High-Density EVA Foam CNC Routing Workstation",
-        "Precision CNC carving of custom multi-axis closed-cell EVA foam protective liners matching module geometries to absorb road transit shocks.",
-        "FOAM MACHINING"
-      ]
     ]
   },
   "es": {
     "metaTitle": "Acerca de volvet: equipo e información | volvet",
-    "metaDescription": "volvet es un fabricante de equipo original (OEM) especializado en elevadores hidráulicos portátiles de postes de luz, diseñados para eliminar la dependencia de grúas en proyectos globales de iluminación vial.",
+    "metaDescription": "volvet es la marca confirmada para el elevador hidráulico portátil de postes de 12 m, carga nominal de 300 kg, batería de 24 V y peso total de 85 kg.",
     "hero": [
       "volvet / Equipo e información",
-      "Fabricante OEM especializado en elevadores sin grúa.",
-      "volvet es un fabricante de equipo original especializado en elevadores hidráulicos portátiles de postes de luz. Diseñado para resolver los cuellos de botella de acceso de grúas, reducir los costos de instalación y proteger a los operarios en proyectos de infraestructura globales."
+      "Información del equipo.\nDecisiones según el proyecto.",
+      "volvet es la marca pública confirmada del elevador portátil de postes descrito en este sitio. Los datos actuales proceden de la ficha S4; los registros societarios, de planta y validación en campo siguen pendientes."
     ],
     "facts": [
       "Clase de poste de alumbrado",
@@ -242,33 +190,28 @@
     "library": [
       "Imágenes de referencia",
       "Observe el equipo y su contexto.",
-      "Conozca nuestras instalaciones de fabricación especializada y componentes modulares, donde los cilindros hidráulicos de alta presión y chasis reforzados se ensamblan bajo estrictas normas de ingeniería."
+      "Estas cuatro imágenes muestran el conjunto elevador, el armario eléctrico, la geometría de conexión y el embalaje. Son referencias del producto, no prueba de capacidad fabril ni validación en obra."
     ],
     "images": [
       [
-        "Centro de mecanizado CNC de 5 ejes",
-        "Centro de mecanizado CNC multieje de alta precisión dedicado a la fabricación de bloques colectores hidráulicos, cuerpos de válvulas y soportes de pivote.",
-        "Mecanizado CNC"
+        "Vista general del sistema de dos módulos",
+        "Imagen de referencia del conjunto elevador hidráulico amarillo junto a su armario eléctrico independiente.",
+        "Vista general"
       ],
       [
-        "Estación de montaje de cilindros hidráulicos",
-        "Puesto de ensamblaje en sala limpia equipado con instaladores de sellos de precisión, guías de alineación de vástagos y precarga de aceite hidráulico.",
-        "Montaje de cilindros"
+        "Bomba hidráulica y bastidor con ruedas",
+        "Vista cercana de referencia del cilindro hidráulico, la bomba, las válvulas y el bastidor de transporte con ruedas.",
+        "Detalle hidráulico"
       ],
       [
-        "Célula robótica de soldadura de chasis estructural",
-        "Equipo robotizado multieje de soldadura que ejecuta cordones continuos de penetración completa en chasis y articulaciones de acero de alta resistencia.",
-        "Soldadura robótica"
+        "Referencia de conexión a base de poste",
+        "Imagen de referencia del bastidor junto a la base de un poste. La conexión real requiere revisar el plano de brida y anclajes.",
+        "Referencia de conexión"
       ],
       [
-        "Estación de mecanizado y torneado de bridas y bases",
-        "Torno CNC horizontal de gran diámetro para refrentado de precisión, mecanizado de patrones de pernos y acabado de acoplamiento de anclaje.",
-        "Mecanizado de brida"
-      ],
-      [
-        "Línea de ensamblaje de armario eléctrico y tracción 24V",
-        "Línea de montaje y cableado para armarios de control IP54 modulares de 40 kg, motores sin escobillas y conectores estancos de desconexión rápida.",
-        "Montaje de tracción"
+        "Referencia de embalaje en caja",
+        "Imagen de referencia del equipo embalado. La ficha S4 indica dimensiones de 650 × 350 × 500 mm; materiales y peso bruto deben confirmarse.",
+        "Referencia de embalaje"
       ]
     ],
     "massLabels": [
@@ -279,58 +222,58 @@
     "evidence": [
       "Estado de la evidencia",
       "Identifique qué respalda cada dato.",
-      "Cada especificación publicada representa líneas base mecánicas verificadas y rigurosos estándares de control de calidad en fábrica, garantizando un rendimiento predecible en obra."
+      "Separamos los datos de la ficha técnica, los valores declarados por el fabricante y la revisión de cada proyecto para facilitar la verificación."
     ],
     "levels": [
       [
         "Fuente",
-        "Ficha de especificaciones",
-        "Las dimensiones, los pesos, la carga nominal y los componentes incluidos proceden de la ficha. No aprueban cualquier poste o emplazamiento."
+        "Ficha de especificaciones S4",
+        "Las dimensiones, pesos de módulos, carga nominal de 300 kg y piezas incluidas proceden de la ficha S4. No aprueban cualquier poste o emplazamiento."
       ],
       [
         "Declarado",
         "Rendimiento del fabricante",
-        "El tiempo de elevación y los ciclos indicados son declaraciones del fabricante. Las condiciones y los resultados de campo siguen documentándose."
+        "El tiempo de elevación de 20 s, >50 elevaciones por carga y >3000 ciclos siguen siendo declaraciones del fabricante con validación en campo pendiente."
       ],
       [
         "Proyecto",
         "Revisión de conexión y emplazamiento",
-        "Aporte el conjunto real, la brida, los pernos, la cimentación y el emplazamiento. La terminología pendiente no se convierte en un procedimiento operativo."
+        "Aporte el peso montado, plano de brida, pernos, cimentación y plano del sitio. Las bases no estándar requieren revisión de plano acotado."
       ],
       [
-        "Garantía de Exportación",
-        "Soporte Directo de Fábrica",
-        "Cada envío incluye documentación técnica completa, registros verificados de inspección en fábrica y soporte de ingeniería 24 horas."
+        "Pendiente",
+        "Registros societarios y de planta",
+        "La razón social registrada, auditorías de fábrica, certificaciones y canales directos de correo o teléfono siguen pendientes de confirmación."
       ]
     ],
     "review": [
-      "Garantía de calidad de fábrica",
-      "Evaluación de inspección de exportación en 4 etapas.",
-      "Cada unidad producida se somete a verificación estructural, hidráulica y de carga vertical antes del despacho.",
-      "VERIFICACIÓN DE FÁBRICA",
-      "Pruebas individuales rigurosas en bancos de ensayo verticales para garantizar un despliegue perfecto en obra.",
-      "ETAPA"
+      "Revisión previa al proyecto",
+      "Verificación de especificaciones en 4 pasos.",
+      "Antes de seleccionar el equipo o emitir una cotización, cada consulta se contrasta con cuatro límites de la ficha técnica.",
+      "LÍMITE DE EVIDENCIA",
+      "La ficha S4 establece únicamente dimensiones de referencia; la validación en campo y la aprobación de ingeniería son pasos separados.",
+      "PASO"
     ],
     "checks": [
       [
-        "Inspección ultrasónica de soldaduras",
-        "Inspección estructural de acero aleado de alta resistencia con detección ultrasónica de defectos en soldaduras críticas.",
-        "INTEGRIDAD SOLDADURA"
+        "Altura del poste y peso montado",
+        "Verifique la altura respecto a la clase de 12 m y confirme que el peso total con luminaria y accesorios no supere 300 kg.",
+        "CARGA Y ALTURA"
       ],
       [
-        "Prueba de estanqueidad hidráulica",
-        "Inspección de retención de presión bajo carga nominal, asegurando bloqueo estanco de válvulas de retención bidireccionales.",
-        "RETENCIÓN PRESIÓN"
+        "Distancia de brida y pernos de anclaje",
+        "Compare la separación entre orificios con 180–260 mm y los pernos con M16–M24 (M16–M22 incluidos; las bases no estándar requieren revisión de plano acotado).",
+        "CONEXIÓN DE BASE"
       ],
       [
-        "Calibración vertical con carga de 300 kg",
-        "Cada unidad producida se somete a calibración vertical de carrera completa con 300 kg en bancos de prueba dedicados.",
-        "CALIBRACIÓN CARGA"
+        "Módulos divididos y alimentación de 24 V",
+        "Confirme el traslado del módulo hidráulico de 45 kg (610 × 220 × 220 mm) y el armario eléctrico de 40 kg (500 × 300 × 250 mm) con batería de 24 V.",
+        "MODULARIDAD"
       ],
       [
-        "Embalaje en caja de madera de exportación",
-        "Embalaje previo a entrega en caja compuesta reforzada de 650 × 350 × 500 mm con barrera de vapor y amortiguación anticaída.",
-        "EMBALAJE EXPORTACIÓN"
+        "Embalaje y condiciones de entrega",
+        "Revise las dimensiones de embalaje de 650 × 350 × 500 mm y confirme materiales, peso bruto y documentos según el destino.",
+        "ALCANCE DE ENVÍO"
       ]
     ],
     "brief": [
@@ -352,7 +295,7 @@
       ],
       [
         "Cimentación y conexión",
-        "Proporcione las dimensiones o planos de la brida base. Nuestro equipo verifica la alineación de pernos (M16–M24) y el equilibrio de momentos de la cimentación sin costo.",
+        "Proporcione dimensiones o planos de la brida. Las bases no estándar requieren revisión de plano acotado para confirmar compatibilidad.",
         [
           "Plano de brida",
           "Pernos de anclaje",
@@ -378,7 +321,7 @@
       "PUNTOS POR CONFIRMAR",
       "Acuerde la solución real",
       "Seguimiento de la consulta",
-      "Nuestro equipo de logística de exportación coordina envíos directos de fábrica a los principales puertos internacionales, proporcionando facturas comerciales, listas de empaque y documentación de exportación."
+      "Los materiales de embalaje, peso bruto de envío, documentos requeridos y condiciones comerciales se confirman en privado tras revisar el alcance y destino."
     ],
     "destinations": [
       [
@@ -402,62 +345,15 @@
       "Envíe el destino, el conjunto del poste y los planos disponibles para una consulta de configuración y cotización B2B privada.",
       "Enviar información",
       "Comparta solo datos pertinentes y planos que esté autorizado a proporcionar."
-    ],
-    "metrologyHead": [
-      "Equipos integrales de ensayo y embalaje",
-      "Catálogo de inspección en fábrica y verificación de embalaje.",
-      "Instrumentos de metrología especializada, bancos de prueba de resistencia y equipos de embalaje de exportación pesada."
-    ],
-    "metrology": [
-      [
-        "Durómetro de banco Rockwell y Vickers",
-        "Ensayo de precisión de resistencia a la tracción del acero, penetración de tratamiento térmico y dureza superficial en piezas de carga crítica.",
-        "DUREZA"
-      ],
-      [
-        "Calibres digitales de metrología y alineador láser",
-        "Verificación de coaxialidad láser, medición digital de distancia entre orificios y control de tolerancia en círculo de pernos de brida.",
-        "TOLERANCIA DIMENSIONAL"
-      ],
-      [
-        "Medidor digital de espesor de recubrimiento y pintura",
-        "Ensayo no destructivo de espesor de película seca en imprimación epoxi y acabado de poliuretano para protección anticorrosiva marina.",
-        "ESPESOR PINTURA"
-      ],
-      [
-        "Ciclador automático de carga y descarga de batería 24V",
-        "Ensayo automatizado de carga multicanal que verifica retención de capacidad, impedancia interna, estabilidad de voltaje y control térmico.",
-        "CICLADO BATERÍA"
-      ],
-      [
-        "Estación de ensayo dieléctrico y parada de emergencia",
-        "Prueba de rigidez dieléctrica de alta tensión, continuidad de puesta a tierra y verificación de respuesta de desconexión de emergencia.",
-        "ENSAYO DIELÉCTRICO"
-      ],
-      [
-        "Envasadora al vacío de cámara industrial con termosellado",
-        "Evacuación de aire de alto vacío y termosellado en bolsas de barrera de aluminio para evitar corrosión durante el transporte marítimo.",
-        "SELLADO AL VACÍO"
-      ],
-      [
-        "Flejadora neumática de alta tensión para fleje de acero y PET",
-        "Herramienta neumática de flejado de alta tensión que asegura la maquinaria embalada sobre palés de exportación tratados térmicamente.",
-        "FLEJADO DE EXPORTACIÓN"
-      ],
-      [
-        "Estación CNC de mecanizado de espuma EVA de alta densidad",
-        "Tallado CNC de precisión de inserciones de espuma EVA de celda cerrada personalizadas que absorben impactos durante el transporte.",
-        "MECANIZADO ESPUMA"
-      ]
     ]
   },
   "fr": {
     "metaTitle": "À propos de volvet : équipement et informations | volvet",
-    "metaDescription": "volvet est un fabricant d'équipement d'origine (OEM) spécialisé dans les lève-mâts hydrauliques portables, conçus pour éliminer la dépendance aux grues sur les projets d'éclairage public mondiaux.",
+    "metaDescription": "volvet est la marque confirmée du lève-mât hydraulique portable répertorié pour mâts de 12 m, charge nominale de 300 kg, batterie 24 V et masse totale de 85 kg.",
     "hero": [
       "volvet / Équipement et informations",
-      "Fabricant OEM spécialisé dans les équipements de levage sans grue.",
-      "volvet est un fabricant d'équipement d'origine spécialisé dans les lève-mâts hydrauliques portables. Conçu pour résoudre les contraintes d'accès des grues, réduire les coûts d'installation et protéger les équipes sur les projets d'infrastructure mondiaux."
+      "Informations sur l’équipement.\nDécisions liées au projet.",
+      "volvet est la marque publique confirmée du lève-mât portable décrit sur ce site. Les données proviennent de la fiche S4 ; les justificatifs d’entreprise, d’usine et d’essais terrain restent en attente."
     ],
     "facts": [
       "Catégorie de mât d’éclairage",
@@ -468,33 +364,28 @@
     "library": [
       "Images de référence",
       "Voir l’équipement dans son contexte.",
-      "Découvrez nos installations de fabrication spécialisée et notre matériel modulaire, où vérins hydrauliques haute pression et châssis renforcés sont assemblés selon des normes rigoureuses."
+      "Ces quatre images présentent l’ensemble de levage, l’armoire électrique, la géométrie de liaison et la caisse. Ce sont des références produit, non une preuve de capacité industrielle ou de validation terrain."
     ],
     "images": [
       [
-        "Centre d'usinage CNC 5 axes de précision",
-        "Centre d'usinage CNC multi-axes de haute précision dédié à la fabrication des blocs forés hydrauliques, corps de vannes et supports d'articulation.",
-        "Usinage CNC"
+        "Vue d’ensemble du système bimodule",
+        "Vue de référence du dispositif de levage hydraulique jaune et de son armoire électrique séparée.",
+        "Vue d’ensemble"
       ],
       [
-        "Poste d'assemblage dédié pour vérins hydrauliques",
-        "Poste d'assemblage en environnement contrôlé équipé d'outils de pose de joints haute pression, guidages d'alignement et remplissage d'huile propre.",
-        "Assemblage vérin"
+        "Pompe hydraulique et châssis roulant",
+        "Vue rapprochée de référence du vérin hydraulique, de la pompe, des vannes et du châssis de transport sur roues.",
+        "Détail hydraulique"
       ],
       [
-        "Cellule robotisée de soudage de châssis structural",
-        "Dispositif robotisé multi-axes exécutant des cordons continus à pleine pénétration sur châssis et chapes en acier allié à haute résistance.",
-        "Soudage robotisé"
+        "Référence de liaison au pied de mât",
+        "Image de référence montrant le châssis près d’une embase de mât. La liaison réelle nécessite l’examen d’un plan coté.",
+        "Référence de liaison"
       ],
       [
-        "Poste d'usinage et tournage de bride et socle",
-        "Tour CNC horizontal de grand diamètre réalisant le surfaçage de précision, le perçage des cercles de boulonnage et la finition d'ancrage.",
-        "Usinage de bride"
-      ],
-      [
-        "Ligne d'assemblage coffret électrique et motorisation 24V",
-        "Ligne d'intégration et câblage pour coffrets de commande IP54 modulaires de 40 kg, variateurs brushless et faisceaux étanches à raccord rapide.",
-        "Assemblage commande"
+        "Référence d’emballage en caisse",
+        "Image de référence de l’équipement en caisse. La fiche S4 indique 650 × 350 × 500 mm ; matériaux et masse brute restent à confirmer.",
+        "Référence emballage"
       ]
     ],
     "massLabels": [
@@ -505,58 +396,58 @@
     "evidence": [
       "État des justificatifs",
       "Identifier ce que chaque donnée établit.",
-      "Chaque spécification publiée repose sur des bases mécaniques vérifiées et des contrôles qualité rigoureux en usine, assurant des performances fiables sur vos chantiers."
+      "Nous distinguons les valeurs de la fiche technique, les performances déclarées par le fabricant et l’examen spécifique à chaque projet."
     ],
     "levels": [
       [
         "Source",
-        "Fiche de spécifications",
-        "Dimensions, masses, charge nominale et éléments inclus proviennent de la fiche. Ils ne valident pas tous les mâts ou sites."
+        "Fiche de spécifications S4",
+        "Dimensions, masses des modules, charge nominale de 300 kg et pièces incluses proviennent de la fiche S4. Ils ne valident pas tous les mâts ou sites."
       ],
       [
         "Déclaré",
         "Performances du fabricant",
-        "Le temps de levage et les nombres de cycles restent des déclarations du fabricant. Conditions et résultats terrain sont encore à documenter."
+        "La course de 20 s, >50 levages par charge et >3000 cycles restent des déclarations du fabricant avec validation terrain en attente."
       ],
       [
         "Projet",
         "Examen des liaisons et du site",
-        "Fournissez l’ensemble réel, la bride, les boulons, la fondation et le site. Les termes ambigus du schéma ne constituent pas une procédure."
+        "Fournissez la masse assemblée, le plan de bride, les ancrages, la fondation et le plan du site. Les bases non standard exigent l’examen d’un plan coté."
       ],
       [
-        "Assurance Export",
-        "Support Direct Fabricant",
-        "Chaque expédition comprend une documentation technique complète, des procès-verbaux d'inspection en usine vérifiés et un support technique sous 24 heures."
+        "En attente",
+        "Justificatifs société et usine",
+        "L’entité juridique enregistrée, les audits d’usine, certificats et canaux directs e-mail ou téléphone restent en attente de confirmation."
       ]
     ],
     "review": [
-      "Assurance qualité d'usine",
-      "Protocole d'inspection à l'exportation en 4 étapes.",
-      "Chaque unité produite est soumise à des vérifications structurelles, hydrauliques et d'épreuve de charge avant expédition.",
-      "VÉRIFICATION D'USINE",
-      "Tests individuels rigoureux sur bancs d'essai verticaux pour garantir un déploiement sans faille sur chantier.",
+      "Examen préalable au projet",
+      "Vérification technique en 4 étapes.",
+      "Avant le choix d’équipement ou l’établissement d’un devis, chaque demande est vérifiée selon quatre limites de la fiche technique.",
+      "LIMITE DE PREUVE",
+      "La fiche S4 fournit uniquement des cotes de référence ; la validation terrain et l’approbation technique du projet demeurent distinctes.",
       "ÉTAPE"
     ],
     "checks": [
       [
-        "Contrôle par ultrasons des soudures",
-        "Inspection structurelle de l'acier allié haute résistance avec détection ultrasonore sur les soudures critiques et platines pivotantes.",
-        "INTÉGRITÉ SOUDURE"
+        "Hauteur du mât et masse assemblée",
+        "Vérifiez la hauteur par rapport à la classe 12 m et confirmez que la masse totale avec luminaire et accessoires ne dépasse pas 300 kg.",
+        "CHARGE ET HAUTEUR"
       ],
       [
-        "Test de maintien de pression hydraulique",
-        "Contrôle de maintien de pression sous charge nominale garantissant le verrouillage étanche du clapet anti-retour bidirectionnel.",
-        "MAINTIEN PRESSION"
+        "Entraxe de bride et tiges d’ancrage",
+        "Comparez l’écartement des trous à 180–260 mm et les tiges à M16–M24 (M16–M22 fournis ; les bases non standard exigent l’examen d’un plan coté).",
+        "LIAISON D’EMBASE"
       ],
       [
-        "Étalonnage vertical sous charge 300 kg",
-        "Chaque unité subit un étalonnage vertical sur banc dédié avec charge d'essai de 300 kg garantissant la stabilité de levage en 20 s.",
-        "ÉTALONNAGE CHARGE"
+        "Modules séparés et alimentation 24 V",
+        "Vérifiez l’acheminement du module hydraulique de 45 kg (610 × 220 × 220 mm) et de l’armoire de 40 kg (500 × 300 × 250 mm) avec batterie 24 V.",
+        "MODULARITÉ"
       ],
       [
-        "Conditionnement en caisse bois export",
-        "Conditionnement en caisse composite renforcée de 650 × 350 × 500 mm avec film pare-vapeur et amortissement antichoc multi-axes.",
-        "EMBALLAGE EXPORT"
+        "Emballage et modalités d’expédition",
+        "Consultez les dimensions d’emballage de 650 × 350 × 500 mm et confirmez matériaux, masse brute et documents selon la destination.",
+        "PÉRIMÈTRE ENVOI"
       ]
     ],
     "brief": [
@@ -578,7 +469,7 @@
       ],
       [
         "Fondation et liaison",
-        "Fournissez les cotes ou plans de la bride d'embase. Notre équipe vérifie gratuitement l'alignement des tiges (M16–M24) et l'équilibre des moments de la fondation.",
+        "Fournissez les cotes ou plans de bride. Les bases non standard exigent l’examen d’un plan coté pour confirmer la compatibilité.",
         [
           "Plan de bride",
           "Boulons d’ancrage",
@@ -604,7 +495,7 @@
       "POINTS À CONFIRMER",
       "Définir l’arrangement réel",
       "Suivi de la demande",
-      "Notre équipe logistique export coordonne les expéditions directes depuis l'usine vers les principaux hubs internationaux, avec factures commerciales complètes, listes de colisage et documents d'exportation."
+      "Matériaux d’emballage, masse brute d’expédition, documents requis et conditions commerciales sont confirmés en privé après examen du projet et de la destination."
     ],
     "destinations": [
       [
@@ -628,62 +519,15 @@
       "Envoyez destination, ensemble du mât et plans disponibles pour discuter de la configuration et demander un devis B2B privé.",
       "Envoyer les informations",
       "Ne partagez que les données pertinentes et les plans que vous êtes autorisé à fournir."
-    ],
-    "metrologyHead": [
-      "Équipements complets d'essais et d'emballage",
-      "Inventaire d'inspection en usine et validation du conditionnement.",
-      "Instruments de métrologie spécialisée, bancs d'essais d'endurance et outillage d'emballage lourd pour l'exportation."
-    ],
-    "metrology": [
-      [
-        "Duromètre d'établi Rockwell et Vickers",
-        "Contrôle de précision de la résistance à la traction de l'acier, de la trempe thermique et de la dureté superficielle des composants d'effort.",
-        "DURETÉ"
-      ],
-      [
-        "Pieds à coulisse numériques et alignement laser",
-        "Contrôle de coaxialité laser, mesure micrométrique numérique de l'entraxe des trous et vérification des tolérances de cercle de perçage.",
-        "TOLÉRANCE DIMENSIONNELLE"
-      ],
-      [
-        "Jauge numérique d'épaisseur de revêtement et peinture",
-        "Contrôle non destructif de l'épaisseur de film sec sur primaire époxy et finition polyuréthane pour la protection anticorrosion marine.",
-        "ÉPAISSEUR PEINTURE"
-      ],
-      [
-        "Banc de cyclage charge/décharge automatisé batterie 24V",
-        "Essais de charge multivoies automatisés validant la rétention de capacité, l'impédance interne, la stabilité de tension et le comportement thermique.",
-        "CYCLAGE BATTERIE"
-      ],
-      [
-        "Poste d'essai diélectrique et coupure d'urgence",
-        "Essais de tenue diélectrique haute tension, continuité de masse et validation du temps de réponse du verrouillage d'arrêt d'urgence.",
-        "RIGIDITÉ DIÉLECTRIQUE"
-      ],
-      [
-        "Machine sous vide industrielle à cloche et thermoscellage",
-        "Mise sous vide poussée et thermoscellage sous film barrière aluminium pour prévenir l'oxydation pendant le fret maritime.",
-        "SCELLAGE SOUS VIDE"
-      ],
-      [
-        "Cercleuse pneumatique haute tension pour feuillard acier et PET",
-        "Outil pneumatique de cerclage haute tension arrimant l'équipement emballé sur palettes d'exportation traitées thermiquement.",
-        "CERCLAGE EXPORT"
-      ],
-      [
-        "Poste de fraisage CNC de mousse EVA haute densité",
-        "Usinage CNC de précision d'inserts protecteurs en mousse EVA à cellules fermées épousant les formes du matériel contre les chocs de transport.",
-        "FRAISAGE MOUSSE"
-      ]
     ]
   },
   "pt": {
     "metaTitle": "Sobre a volvet: equipamento e informações | volvet",
-    "metaDescription": "volvet é um fabricante de equipamento original (OEM) especializado em elevadores hidráulicos portáteis de postes de luz, projetados para eliminar a dependência de guindastes em projetos globais de iluminação pública.",
+    "metaDescription": "volvet é a marca confirmada do elevador hidráulico portátil de postes listado para 12 m, carga nominal de 300 kg, bateria de 24 V e peso total de 85 kg.",
     "hero": [
       "volvet / Equipamento e informações",
-      "Fabricante OEM especializado em equipamentos de içamento sem guindaste.",
-      "volvet é um fabricante de equipamento original especializado em elevadores hidráulicos portáteis de postes de luz. Projetado para superar restrições de acesso de guindastes, reduzir custos de instalação e proteger as equipes em projetos globais de infraestrutura."
+      "Informações do equipamento.\nDecisões específicas do projeto.",
+      "volvet é a marca pública confirmada do elevador portátil de postes descrito neste site. Os dados atuais seguem a ficha S4; registros societários, fabris e de validação em campo permanecem pendentes."
     ],
     "facts": [
       "Classe de poste de iluminação",
@@ -694,33 +538,28 @@
     "library": [
       "Imagens de referência",
       "Veja o equipamento no contexto.",
-      "Conheça nossas instalações fabris especializadas e componentes modulares, onde cilindros hidráulicos de alta pressão e chassis reforçados são montados sob rigorosos padrões de engenharia."
+      "Estas quatro imagens mostram o conjunto de elevação, o gabinete elétrico, a geometria de conexão e a embalagem. São referências do produto, não prova de escala fabril ou validação em campo."
     ],
     "images": [
       [
-        "Centro de usinagem CNC de precisão de 5 eixos",
-        "Centro de usinagem CNC multieixo de alta precisão dedicado à fabricação de blocos manifold hidráulicos, corpos de válvulas e suportes de articulação.",
-        "Usinagem CNC"
+        "Visão geral do sistema de dois módulos",
+        "Imagem de referência do conjunto elevador hidráulico amarelo junto ao seu gabinete elétrico separado.",
+        "Visão geral"
       ],
       [
-        "Estação dedicada de montagem de cilindros hidráulicos",
-        "Bancada de montagem em ambiente controlado equipada com instaladores de vedações de precisão, guias de alinhamento e pré-abastecimento de óleo.",
-        "Montagem de cilindro"
+        "Bomba hidráulica e estrutura com rodas",
+        "Vista aproximada de referência do cilindro hidráulico, bomba, válvulas e estrutura de transporte com rodas.",
+        "Detalhe hidráulico"
       ],
       [
-        "Célula robotizada de soldagem de chassi estrutural",
-        "Equipamento robotizado multieixo executando soldagem contínua de penetração total em chassis e suportes de aço de alta resistência.",
-        "Soldagem robótica"
+        "Referência de conexão na base do poste",
+        "Imagem de referência da estrutura junto à base de um poste. A conexão real exige revisão do desenho da flange e chumbadores.",
+        "Referência de conexão"
       ],
       [
-        "Estação de usinagem e torneamento de flanges e base",
-        "Torno CNC horizontal de grande diâmetro para faceamento de precisão, furação de padrão de parafusos e acabamento da base de ancoragem.",
-        "Usinagem de flange"
-      ],
-      [
-        "Linha de montagem do gabinete elétrico e tração 24V",
-        "Linha de montagem e cabeamento para gabinetes de controle IP54 modulares de 40 kg, motores brushless e chicotes estanques de desconexão rápida.",
-        "Montagem de tração"
+        "Referência de embalagem em caixa",
+        "Imagem de referência do equipamento embalado. A ficha S4 lista 650 × 350 × 500 mm; materiais e peso bruto exigem confirmação.",
+        "Referência embalagem"
       ]
     ],
     "massLabels": [
@@ -731,58 +570,58 @@
     "evidence": [
       "Estado das evidências",
       "Saiba o que cada informação sustenta.",
-      "Cada especificação publicada representa linhas de base mecânicas verificadas e rigorosos padrões de controle de qualidade na fábrica, garantindo desempenho previsível em campo."
+      "Separamos especificações da ficha técnica, valores informados pelo fabricante e análises específicas de projeto para facilitar a verificação."
     ],
     "levels": [
       [
         "Fonte",
-        "Ficha de especificações",
-        "Dimensões, pesos, carga nominal e componentes incluídos vêm da ficha. Não aprovam qualquer poste ou local."
+        "Ficha de especificações S4",
+        "Dimensões, pesos dos módulos, carga nominal de 300 kg e peças incluídas vêm da ficha S4. Não aprovam qualquer poste ou local."
       ],
       [
         "Declarado",
         "Desempenho do fabricante",
-        "Tempo de elevação e contagem de ciclos são declarações do fabricante. Condições e resultados de campo ainda estão sendo documentados."
+        "O tempo de elevação de 20 s, >50 elevações por carga e >3000 ciclos são declarações do fabricante com validação em campo pendente."
       ],
       [
         "Projeto",
         "Análise de conexão e local",
-        "Forneça conjunto real, flange, parafusos, fundação e local. Termos ambíguos do desenho não se tornam procedimento operacional."
+        "Forneça peso montado, desenho da flange, chumbadores, fundação e planta do local. Bases não padronizadas exigem revisão de desenho cotado."
       ],
       [
-        "Garantia de Exportação",
-        "Suporte Direto do Fabricante",
-        "Cada remessa inclui documentação técnica completa, registros verificados de inspeção na fábrica e suporte de engenharia 24 horas."
+        "Pendente",
+        "Registros societários e fabris",
+        "Razão social registrada, auditorias de fábrica, certificações e canais diretos de e-mail ou telefone aguardam confirmação para publicação."
       ]
     ],
     "review": [
-      "Garantia de qualidade da fábrica",
-      "Referência de inspeção para exportação em 4 etapas.",
-      "Cada unidade produzida passa por verificação estrutural, hidráulica e de carga vertical antes do envio.",
-      "VERIFICAÇÃO DE FÁBRICA",
-      "Testes individuais rigorosos em bancadas verticais dedicadas para garantir compatibilidade total no canteiro.",
+      "Análise pré-projeto",
+      "Verificação técnica em 4 etapas.",
+      "Antes de selecionar o equipamento ou emitir cotação, cada solicitação é conferida segundo quatro limites da ficha técnica.",
+      "LIMITE DE EVIDÊNCIA",
+      "A ficha S4 fornece apenas dimensões de referência; validação em campo e aprovação de engenharia do projeto são etapas separadas.",
       "ETAPA"
     ],
     "checks": [
       [
-        "Inspeção ultrassônica de soldas",
-        "Inspeção estrutural de aço de alta resistência com detecção ultrassônica de falhas em soldas críticas e suportes de articulação.",
-        "INTEGRIDADE SOLDA"
+        "Altura do poste e peso montado",
+        "Verifique a altura em relação à classe de 12 m e confirme se o peso total com luminária e acessórios está dentro de 300 kg.",
+        "CARGA E ALTURA"
       ],
       [
-        "Teste de retenção de pressão hidráulica",
-        "Inspeção de queda de pressão sob carga de trabalho nominal, garantindo travamento sem vazamentos da válvula de retenção bidirecional.",
-        "RETENÇÃO PRESSÃO"
+        "Distância da flange e chumbadores",
+        "Compare a distância entre furos com 180–260 mm e os chumbadores com M16–M24 (M16–M22 incluídos; bases não padronizadas exigem revisão de desenho cotado).",
+        "CONEXÃO DE BASE"
       ],
       [
-        "Calibração vertical com carga de 300 kg",
-        "Cada unidade passa por calibração vertical de curso completo com carga de prova de 300 kg em bancadas dedicadas.",
-        "CALIBRAÇÃO CARGA"
+        "Módulos separados e alimentação 24 V",
+        "Confirme o transporte do módulo hidráulico de 45 kg (610 × 220 × 220 mm) e do gabinete de 40 kg (500 × 300 × 250 mm) com bateria 24 V.",
+        "MODULARIDADE"
       ],
       [
-        "Embalagem em caixa de madeira exportação",
-        "Embalagem pré-embarque em caixa de madeira reforçada de 650 × 350 × 500 mm com vedação contra umidade e amortecimento antichoque.",
-        "EMBALAGEM EXPORTAÇÃO"
+        "Embalagem e condições de entrega",
+        "Revise as dimensões de embalagem de 650 × 350 × 500 mm e confirme materiais, peso bruto e documentos conforme o destino.",
+        "ESCOPO DE ENVIO"
       ]
     ],
     "brief": [
@@ -804,7 +643,7 @@
       ],
       [
         "Fundação e conexão",
-        "Forneça as dimensões ou desenhos da flange base. Nossa equipe verifica o alinhamento dos chumbadores (M16–M24) e o equilíbrio de momentos da fundação sem custo.",
+        "Forneça dimensões ou desenhos da flange. Bases não padronizadas exigem revisão de desenho cotado para confirmar compatibilidade.",
         [
           "Desenho de flange",
           "Chumbadores",
@@ -830,7 +669,7 @@
       "PONTOS A CONFIRMAR",
       "Defina o acordo real",
       "Acompanhamento da consulta",
-      "Nossa equipe de logística de exportação coordena envios diretos da fábrica para os principais portos internacionais, fornecendo faturas comerciais, listas de embalagem e documentação de exportação."
+      "Materiais de embalagem, peso bruto de embarque, documentos exigidos e condições comerciais são confirmados em particular após análise do escopo e destino."
     ],
     "destinations": [
       [
@@ -854,288 +693,15 @@
       "Envie destino, conjunto do poste e desenhos disponíveis para discutir configuração e solicitar uma cotação B2B privada.",
       "Enviar informações",
       "Compartilhe somente dados pertinentes e desenhos que está autorizado a fornecer."
-    ],
-    "metrologyHead": [
-      "Equipamentos integrados de teste e embalagem",
-      "Relação de inspeção em fábrica e verificação de embalagem.",
-      "Instrumentos de metrologia especializada, bancadas de teste de resistência e equipamentos para embalagem pesada de exportação."
-    ],
-    "metrology": [
-      [
-        "Durômetro de bancada Rockwell e Vickers",
-        "Ensaio de precisão da resistência à tração do aço, penetração de tratamento térmico e dureza superficial em peças estruturais críticas.",
-        "DUREZA"
-      ],
-      [
-        "Paquímetros digitais de metrologia e alinhador a laser",
-        "Verificação de coaxialidade a laser, medição micrométrica de distância entre furos e tolerância do diâmetro do círculo de parafusos da flange.",
-        "TOLERÂNCIA DIMENSIONAL"
-      ],
-      [
-        "Medidor digital de espessura de revestimento e pintura",
-        "Ensaio não destrutivo de espessura de película seca sobre primer epóxi e poliuretano para proteção contra corrosão marítima.",
-        "ESPESSURA PINTURA"
-      ],
-      [
-        "Ciclador automático de carga e descarga de bateria 24V",
-        "Testes automatizados sob carga multicanal verificando retenção de capacidade, impedância interna, estabilidade de tensão e controle térmico.",
-        "CICLAGEM BATERIA"
-      ],
-      [
-        "Bancada de ensaio dielétrico e parada de emergência",
-        "Teste de rigidez dielétrica de alta tensão, continuidade de aterramento e resposta de desarme do botão de emergência.",
-        "ENSAIO DIELÉTRICO"
-      ],
-      [
-        "Seladora a vácuo de câmara industrial com barreira de vapor",
-        "Evacuação de alto vácuo e selagem térmica em bolsas aluminizadas de barreira contra umidade, evitando corrosão no transporte marítimo.",
-        "SELAGEM A VÁCUO"
-      ],
-      [
-        "Cintadora pneumática de alta tensão para fita de aço e PET",
-        "Ferramenta pneumática de cintagem de alta tensão fixando a máquina embalada sobre paletes de exportação tratados termicamente.",
-        "CINTAGEM EXPORTAÇÃO"
-      ],
-      [
-        "Estação de fresagem CNC de espuma EVA de alta densidade",
-        "Usinagem CNC de precisão de berços protetores de espuma EVA de célula fechada sob medida para absorver impactos de transporte.",
-        "FRESAGEM ESPUMA"
-      ]
-    ]
-  },
-  "id": {
-    "metaTitle": "Tentang volvet: peralatan dan informasi | volvet",
-    "metaDescription": "volvet adalah produsen peralatan asli (OEM) khusus alat pendiri tiang lampu hidrolik portabel, dirancang untuk menghilangkan ketergantungan derek di seluruh proyek penerangan jalan global.",
-    "hero": [
-      "volvet / Peralatan dan informasi",
-      "Produsen Peralatan Asli (OEM) khusus untuk peralatan pendiri tiang tanpa derek.",
-      "volvet adalah produsen peralatan asli khusus alat pendiri tiang lampu hidrolik portabel. Dirancang untuk mengatasi kendala akses derek, mengurangi biaya pemasangan, dan melindungi keselamatan pekerja di proyek infrastruktur global."
-    ],
-    "facts": [
-      "Kelas tiang penerangan",
-      "Beban nominal pada spesifikasi",
-      "Baterai isi ulang",
-      "Berat total peralatan"
-    ],
-    "library": [
-      "Gambar referensi produk",
-      "Lihat peralatan dan konteksnya.",
-      "Jelajahi fasilitas manufaktur khusus dan perangkat keras modular kami, tempat silinder hidrolik bertekanan tinggi dan sasis yang diperkuat dirakit dengan standar presisi tinggi."
-    ],
-    "images": [
-      [
-        "Pusat Pemesinan CNC Presisi 5-Sumbu",
-        "Pusat pemesinan CNC multi-sumbu presisi tinggi khusus untuk memproduksi blok manifold hidrolik, badan katup, dan braket pivot struktural.",
-        "Pemesinan CNC"
-      ],
-      [
-        "Stasiun Perakitan Khusus Silinder Hidrolik",
-        "Stasiun kerja perakitan ruang bersih yang dilengkapi instalatur segel presisi, panduan kelurusan silinder, dan pengisian awal oli hidrolik.",
-        "Perakitan Silinder"
-      ],
-      [
-        "Sel Pengelasan Robotik Sasis Struktural",
-        "Instalasi pengelasan robotik multi-sumbu otomatis yang melakukan pengelasan penetrasi penuh kontinu pada sasis baja paduan berkekuatan tinggi.",
-        "Pengelasan Robotik"
-      ],
-      [
-        "Stasiun Pembubutan Presisi Flens & Dudukan Dasar",
-        "Mesin bubut CNC horizontal diameter besar untuk perataan permukaan presisi, pengeboran pola lingkaran baut, dan penyelesaian dudukan angkur.",
-        "Pemesinan Flens"
-      ],
-      [
-        "Jalur Perakitan Kabinet Kontrol & Penggerak 24V",
-        "Jalur perakitan dan pengkabelan terpadu untuk kabinet kontrol IP54 modular 40 kg, unit penggerak brushless, dan kabel tahan air lepas-cepat.",
-        "Perakitan Penggerak"
-      ]
-    ],
-    "massLabels": [
-      "Modul hidraulis / spesifikasi",
-      "Kabinet listrik / spesifikasi",
-      "Total peralatan / spesifikasi"
-    ],
-    "evidence": [
-      "Status bukti",
-      "Pahami dukungan setiap pernyataan.",
-      "Setiap spesifikasi yang dipublikasikan mewakili tolok ukur mekanis terverifikasi dan standar kendali mutu pabrik yang ketat, memastikan performa andal di lokasi kerja."
-    ],
-    "levels": [
-      [
-        "Sumber",
-        "Lembar spesifikasi",
-        "Dimensi, berat, beban nominal, dan komponen bawaan berasal dari lembar spesifikasi. Informasi ini tidak menyetujui semua tiang atau lokasi."
-      ],
-      [
-        "Dilaporkan",
-        "Kinerja dari produsen",
-        "Waktu angkat dan jumlah siklus adalah pernyataan produsen. Kondisi dan hasil lapangan masih didokumentasikan."
-      ],
-      [
-        "Proyek",
-        "Tinjauan sambungan dan lokasi",
-        "Berikan rakitan aktual, flensa, baut, fondasi, dan lokasi. Istilah gambar yang belum jelas tidak dijadikan prosedur operasi."
-      ],
-      [
-        "Jaminan Ekspor",
-        "Dukungan Langsung Produsen",
-        "Setiap pengiriman mencakup dokumentasi teknis lengkap, catatan inspeksi pabrik terverifikasi, dan dukungan teknis 24 jam."
-      ]
-    ],
-    "review": [
-      "Jaminan Kualitas Pabrik",
-      "Tolok Ukur Inspeksi Ekspor 4 Tahap.",
-      "Setiap unit produksi melalui verifikasi struktural, hidrolik, dan uji beban vertikal sebelum pengiriman.",
-      "VERIFIKASI PABRIK",
-      "Pengujian individu yang ketat pada rig uji vertikal khusus untuk memastikan pengoperasian andal di lapangan.",
-      "TAHAP"
-    ],
-    "checks": [
-      [
-        "Inspeksi Ultrasonik Bahan & Pengelasan",
-        "Inspeksi struktural baja paduan berkekuatan tinggi dengan deteksi cacat ultrasonik pada las kritis dan braket poros.",
-        "INTEGRITAS LAS"
-      ],
-      [
-        "Uji Ketahanan Tekanan & Segel Hidrolik",
-        "Pemeriksaan penurunan tekanan silinder hidrolik di bawah beban kerja nominal, memastikan penguncian katup periksa dua arah bebas bocor.",
-        "TAHAN TEKANAN"
-      ],
-      [
-        "Kalibrasi Vertikal Beban Uji 300 kg",
-        "Setiap unit produksi menjalani kalibrasi langkah penuh vertikal dengan beban uji 300 kg pada rig uji khusus.",
-        "KALIBRASI BEBAN"
-      ],
-      [
-        "Kemasan Peti Kayu Ekspor Tahan Guncangan",
-        "Pengemasan pra-pengiriman di dalam peti komposit ekspor 650 × 350 × 500 mm dengan segel penghalang uap dan bantalan multi-sumbu.",
-        "KEMASAN EKSPOR"
-      ]
-    ],
-    "brief": [
-      "Ringkasan proyek",
-      "Siapkan tiga kelompok informasi.",
-      "Jelaskan rakitan, sambungan, dan proyek. Kirim hanya gambar yang boleh Anda bagikan.",
-      "INFORMASI PROYEK",
-      "Tandai informasi yang belum diketahui untuk tindak lanjut."
-    ],
-    "cards": [
-      [
-        "Tiang dan rakitan",
-        "Jelaskan tiang dan semua komponen yang terpasang pada rakitan yang direncanakan.",
-        [
-          "Dimensi",
-          "Berat rakitan",
-          "Referensi gambar"
-        ]
-      ],
-      [
-        "Fondasi dan sambungan",
-        "Sertakan dimensi atau gambar flensa dasar. Tim kami memverifikasi keselarasan baut (M16–M24) dan keseimbangan momen fondasi tanpa biaya.",
-        [
-          "Gambar flensa",
-          "Baut angkur",
-          "Fondasi"
-        ]
-      ],
-      [
-        "Lingkup dan tujuan",
-        "Jelaskan lingkup pekerjaan, jumlah, dan tujuan untuk pembahasan persyaratan secara pribadi.",
-        [
-          "Lingkup kerja",
-          "Jumlah",
-          "Tujuan"
-        ]
-      ]
-    ],
-    "global": [
-      "Dokumen dan pembahasan komersial",
-      "Konfirmasikan kebutuhan proyek aktual.",
-      "Konfigurasi, transportasi, dokumen, dan ketentuan dibahas untuk proyek aktual. Jaringan pengiriman atau opsi penyerahan tidak diasumsikan.",
-      "TUJUAN PROYEK",
-      "Di mana peralatan dibutuhkan?",
-      "HAL YANG DIKONFIRMASI",
-      "Bahas pengaturan aktual",
-      "Tindak lanjut permintaan",
-      "Tim logistik ekspor kami mengoordinasikan pengiriman langsung pabrik ke pusat internasional utama, menyediakan faktur komersial lengkap, daftar kemasan, dan dokumentasi ekspor."
-    ],
-    "destinations": [
-      [
-        "Tujuan pengiriman",
-        "Berikan negara dan lokasi pengiriman agar kebutuhan dapat dijelaskan."
-      ],
-      [
-        "Dokumen yang diperlukan",
-        "Daftarkan gambar, instruksi, atau dokumen pengadaan; ketersediaannya perlu diperiksa."
-      ]
-    ],
-    "terms": [
-      "Konfigurasi",
-      "Transportasi",
-      "Ketersediaan dokumen",
-      "Kesepakatan komersial"
-    ],
-    "cta": [
-      "INFORMASI PROYEK",
-      "Mulai dengan rincian proyek.",
-      "Kirim tujuan, rakitan tiang, dan gambar yang tersedia untuk diskusi konfigurasi serta permintaan penawaran B2B privat.",
-      "Kirim informasi proyek",
-      "Bagikan hanya informasi terkait dan gambar yang boleh Anda berikan."
-    ],
-    "metrologyHead": [
-      "Peralatan Pengujian & Pengemasan Komprehensif",
-      "Daftar Inspeksi Pabrik & Verifikasi Pengemasan.",
-      "Instrumen metrologi khusus, meja uji ketahanan, dan peralatan pengemasan ekspor tugas berat untuk memastikan keandalan lapangan."
-    ],
-    "metrology": [
-      [
-        "Penguji Kekerasan Benchtop Rockwell & Vickers",
-        "Pengujian presisi kekuatan tarik baja, kedalaman perlakuan panas, dan kekerasan permukaan pada komponen penahan beban kritis.",
-        "KEKERASAN"
-      ],
-      [
-        "Jangka Sorong Digital & Alat Penyelaras Laser",
-        "Verifikasi koaksialitas laser, pengukuran jarak antar lubang digital, dan pemeriksaan toleransi lingkaran baut flens.",
-        "TOLERANSI DIMENSI"
-      ],
-      [
-        "Alat Ukur Ketebalan Lapisan & Cat Digital",
-        "Pengujian tak merusak ketebalan lapisan kering pada primer epoksi dan poliuretan untuk ketahanan korosi maritim.",
-        "KETEBALAN CAT"
-      ],
-      [
-        "Penguji Siklus Pengisian/Pengosongan Baterai 24V",
-        "Pengujian beban multi-saluran otomatis untuk memverifikasi retensi kapasitas, impedansi internal, stabilitas voltase, dan kontrol termal.",
-        "SIKLUS BATERAI"
-      ],
-      [
-        "Stasiun Uji Isolasi Listrik & Penghentian Darurat",
-        "Pengujian ketahanan dielektrik tegangan tinggi, kontinuitas pentanahan, dan respons pemutusan daya darurat.",
-        "UJI DIELEKTRIK"
-      ],
-      [
-        "Mesin Pengemas Hampa Udara Industri & Segel Uap",
-        "Pembuangan udara bertekanan tinggi dan penyegelan panas dalam kantong aluminium penghalang uap air untuk mencegah korosi laut.",
-        "SEGEL VAKUM"
-      ],
-      [
-        "Alat Pengikat Tali Baja & PET Pneumatik Tugas Berat",
-        "Alat penegang tali pengikat pneumatik bertekanan tinggi untuk mengamankan peti mesin ke palet ekspor dengan tegangan seragam.",
-        "PENGIKAT PETI"
-      ],
-      [
-        "Stasiun Pemotongan CNC Busa EVA Kepadatan Tinggi",
-        "Pemesinan CNC presisi untuk bantalan pelindung busa EVA sel tertutup yang menyerap guncangan selama transportasi darat dan laut.",
-        "PEMESINAN BUSA"
-      ]
     ]
   },
   "vi": {
     "metaTitle": "Về volvet: thiết bị và thông tin | volvet",
-    "metaDescription": "volvet là nhà sản xuất thiết bị gốc (OEM) chuyên biệt về thiết bị dựng cột đèn thủy lực di động, được thiết kế để loại bỏ sự phụ thuộc vào cần cẩu trên các dự án chiếu sáng đường bộ toàn cầu.",
+    "metaDescription": "volvet là thương hiệu đã xác nhận cho thiết bị nâng cột đèn thủy lực di động theo thông số 12 m, tải định mức 300 kg, pin 24 V và tổng khối lượng 85 kg.",
     "hero": [
       "volvet / Thiết bị và thông tin",
-      "Nhà sản xuất thiết bị gốc (OEM) chuyên dụng cho thiết bị dựng cột không cần cẩu.",
-      "volvet là nhà sản xuất thiết bị gốc chuyên biệt về thiết bị dựng cột đèn thủy lực di động. Được thiết kế để giải quyết điểm nghẽn tiếp cận của cần cẩu, giảm chi phí lắp đặt và bảo vệ công nhân trên các dự án cơ sở hạ tầng toàn cầu."
+      "Thông tin thiết bị.\nQuyết định theo từng dự án.",
+      "volvet là thương hiệu công khai đã xác nhận của thiết bị dựng cột đèn di động trên trang web này. Dữ liệu hiện tại dựa trên bảng thông số S4; hồ sơ pháp nhân, nhà máy và thử nghiệm thực địa đang chờ xác nhận."
     ],
     "facts": [
       "Nhóm cột chiếu sáng",
@@ -1146,33 +712,28 @@
     "library": [
       "Ảnh tham khảo sản phẩm",
       "Xem thiết bị và bối cảnh.",
-      "Khám phá các cơ sở sản xuất chuyên dụng và phần cứng mô-đun của chúng tôi, nơi xi lanh thủy lực áp suất cao và khung gầm gia cố được lắp ráp theo tiêu chuẩn chính xác."
+      "Bốn hình ảnh tham khảo này cho thấy cụm nâng, tủ điện, liên kết chân cột và kiện đóng gói. Đây là ảnh tham khảo sản phẩm, không phải bằng chứng năng lực nhà máy hay kiểm chứng hiện trường."
     ],
     "images": [
       [
-        "Trung tâm gia công CNC chính xác 5 trục",
-        "Trung tâm gia công CNC đa trục độ chính xác cao chuyên dụng chế tạo khối van thủy lực manifold, thân van và giá đỡ xoay kết cấu.",
-        "Gia công CNC"
+        "Tổng quan hệ thống hai mô-đun",
+        "Ảnh tham khảo cụm nâng thủy lực màu vàng đặt cạnh tủ điều khiển điện tách rời.",
+        "Tổng quan hệ thống"
       ],
       [
-        "Trạm lắp ráp chuyên dụng xy lanh thủy lực",
-        "Khu vực lắp ráp phòng sạch trang bị đồ gá lắp phớt làm kín độ chính xác cao, dẫn hướng căn chỉnh nòng xy lanh và nạp dầu sơ bộ.",
-        "Lắp ráp xy lanh"
+        "Bơm thủy lực và khung có bánh xe",
+        "Ảnh tham khảo cận cảnh xi lanh thủy lực, cụm bơm, van và khung di chuyển có bánh xe.",
+        "Chi tiết thủy lực"
       ],
       [
-        "Trạm hàn robot kết cấu khung gầm",
-        "Hệ thống robot hàn đa trục tự động thực hiện các đường hàn ngấu liên tục trên khung gầm thép hợp kim cường độ cao và giá đỡ khớp nối.",
-        "Hàn robot"
+        "Tham khảo liên kết chân cột",
+        "Ảnh tham khảo khung nâng đặt cạnh chân cột. Liên kết thực tế cần kiểm tra bản vẽ mặt bích và bu lông neo.",
+        "Tham khảo liên kết"
       ],
       [
-        "Trạm tiện chính xác mặt bích và đế tự neo",
-        "Máy tiện CNC ngang đường kính lớn gia công phay mặt đầu chính xác, khoan vòng lỗ bu lông và gia công hoàn thiện bề mặt neo ngàm.",
-        "Gia công mặt bích"
-      ],
-      [
-        "Dây chuyền lắp ráp tủ điều khiển và động lực 24V",
-        "Dây chuyền lắp ráp và đấu dây tích hợp cho tủ điều khiển IP54 dạng mô-đun 40 kg, bộ truyền động không chổi than và cụm giắc nối chống nước.",
-        "Lắp ráp động lực"
+        "Tham khảo đóng gói xuất khẩu",
+        "Ảnh tham khảo thiết bị trong kiện. Bảng S4 ghi kích thước đóng gói 650 × 350 × 500 mm; vật liệu và trọng lượng cả bì cần xác nhận.",
+        "Tham khảo đóng gói"
       ]
     ],
     "massLabels": [
@@ -1183,58 +744,58 @@
     "evidence": [
       "Trạng thái bằng chứng",
       "Hiểu cơ sở của từng thông tin.",
-      "Mỗi thông số được công bố đều đại diện cho các mốc cơ khí đã được xác minh và tiêu chuẩn kiểm soát chất lượng nhà máy nghiêm ngặt, đảm bảo hiệu suất đáng tin cậy tại công trường."
+      "Chúng tôi tách bạch thông số từ bảng kỹ thuật, chỉ số do nhà sản xuất công bố và đánh giá riêng cho từng dự án để dễ kiểm chứng."
     ],
     "levels": [
       [
         "Nguồn",
-        "Bảng thông số",
-        "Kích thước, khối lượng, tải định mức và cấu hình kèm theo lấy từ bảng được cung cấp. Không có nghĩa mọi cột hoặc địa điểm đều phù hợp."
+        "Bảng thông số S4",
+        "Kích thước, khối lượng mô-đun, tải định mức 300 kg và linh kiện kèm theo lấy từ bảng S4. Không mặc nhiên phù hợp cho mọi cột hoặc địa điểm."
       ],
       [
         "Công bố",
         "Hiệu năng do nhà sản xuất nêu",
-        "Thời gian nâng và số chu kỳ là thông tin của nhà sản xuất. Điều kiện và kết quả thực địa vẫn đang được ghi nhận."
+        "Thời gian nâng 20 s, >50 lần nâng mỗi sạc đầy và >3000 chu kỳ là thông tin nhà sản xuất công bố, đang chờ kiểm chứng thực địa."
       ],
       [
         "Dự án",
         "Xem xét liên kết và địa điểm",
-        "Cung cấp tổ hợp cột, mặt bích, bu lông, móng và địa điểm thực tế. Thuật ngữ chưa rõ trong sơ đồ không được biến thành quy trình vận hành."
+        "Cung cấp khối lượng tổ hợp cột, bản vẽ mặt bích, bu lông neo, móng và sơ đồ mặt bằng. Mặt bích không tiêu chuẩn cần kiểm tra bản vẽ có kích thước."
       ],
       [
-        "Đảm bảo xuất khẩu",
-        "Hỗ trợ trực tiếp từ nhà sản xuất",
-        "Mỗi lô hàng bao gồm tài liệu kỹ thuật toàn diện, biên bản kiểm tra nhà máy đã được xác minh và hỗ trợ kỹ thuật 24 giờ."
+        "Chờ xác nhận",
+        "Hồ sơ doanh nghiệp và nhà máy",
+        "Pháp nhân đăng ký, hồ sơ kiểm tra nhà máy, chứng nhận và kênh email/điện thoại trực tiếp đang chờ xác nhận trước khi công bố."
       ]
     ],
     "review": [
-      "Đảm bảo chất lượng xuất xưởng",
-      "Tiêu chuẩn kiểm tra xuất khẩu 4 công đoạn.",
-      "Mỗi thiết bị sản xuất đều trải qua quy trình kiểm định kết cấu, thủy lực và thử tải nâng thẳng đứng trước khi xuất xưởng.",
-      "KIỂM ĐỊNH NHÀ MÁY",
-      "Thử nghiệm nghiêm ngặt trên giàn thử đứng chuyên dụng để bảo đảm lắp đặt an toàn tại công trường.",
-      "CÔNG ĐOẠN"
+      "Đánh giá trước dự án",
+      "Kiểm tra thông số và độ phù hợp 4 bước.",
+      "Trước khi chọn thiết bị hoặc báo giá, mỗi yêu cầu được đối chiếu theo bốn giới hạn của bảng thông số.",
+      "GIỚI HẠN BẰNG CHỨNG",
+      "Bảng thông số S4 chỉ cung cấp kích thước tham khảo; kiểm chứng thực địa và phê duyệt kỹ thuật dự án là các bước riêng biệt.",
+      "BƯỚC"
     ],
     "checks": [
       [
-        "Kiểm tra siêu âm mối hàn & vật liệu",
-        "Kiểm tra kết cấu thép hợp kim cường độ cao với phát hiện khuyết tật siêu âm trên các mối hàn chịu lực và giá xoay.",
-        "ĐỘ BỀN HÀN"
+        "Chiều cao cột và khối lượng tổ hợp",
+        "Đối chiếu chiều cao với nhóm cột 12 m và xác nhận tổng khối lượng gồm đèn, tay đèn và phụ kiện nằm trong mức 300 kg.",
+        "TẢI VÀ CHIỀU CAO"
       ],
       [
-        "Thử nghiệm duy trì áp suất thủy lực",
-        "Kiểm tra độ sụt áp của xi lanh thủy lực dưới tải làm việc định mức, đảm bảo khóa van một chiều hai chiều không rò rỉ.",
-        "GIỮ ÁP SUẤT"
+        "Khoảng cách lỗ mặt bích và bu lông neo",
+        "So sánh khoảng cách lỗ với mức 180–260 mm và bu lông với M16–M24 (kèm sẵn M16–M22; mặt bích không tiêu chuẩn cần kiểm tra bản vẽ có kích thước).",
+        "LIÊN KẾT ĐẾ"
       ],
       [
-        "Hiệu chuẩn nâng thẳng đứng tải thử 300 kg",
-        "Mỗi tổ máy sản xuất đều trải qua quá trình hiệu chuẩn thẳng đứng toàn hành trình với tải thử 300 kg trên giá thử chuyên dụng.",
-        "HIỆU CHUẨN TẢI"
+        "Tách mô-đun và nguồn pin 24 V",
+        "Xác nhận vận chuyển tại công trường cho mô-đun thủy lực 45 kg (610 × 220 × 220 mm) và tủ điện 40 kg (500 × 300 × 250 mm) dùng pin 24 V.",
+        "TÍNH MÔ-ĐUN"
       ],
       [
-        "Đóng thùng gỗ xuất khẩu chống sốc",
-        "Đóng gói xuất xưởng trong thùng gỗ gia cố 650 × 350 × 500 mm có màng chống ẩm và đệm giảm chấn đa trục.",
-        "ĐÓNG GÓI XUẤT KHẨU"
+        "Đóng gói và điều kiện giao hàng",
+        "Xem kích thước kiện 650 × 350 × 500 mm và xác nhận riêng vật liệu đóng gói, trọng lượng cả bì cùng chứng từ theo điểm đến.",
+        "PHẠM VI GIAO HÀNG"
       ]
     ],
     "brief": [
@@ -1256,7 +817,7 @@
       ],
       [
         "Móng và liên kết",
-        "Cung cấp kích thước hoặc bản vẽ mặt bích đế. Đội ngũ của chúng tôi sẽ kiểm tra độ thẳng hàng của bu lông (M16–M24) và cân bằng mô-men móng hoàn toàn miễn phí.",
+        "Cung cấp kích thước hoặc bản vẽ mặt bích đế. Mặt bích không tiêu chuẩn cần kiểm tra bản vẽ có kích thước để xác nhận độ phù hợp.",
         [
           "Bản vẽ mặt bích",
           "Bu lông neo",
@@ -1282,7 +843,7 @@
       "NỘI DUNG CẦN XÁC NHẬN",
       "Trao đổi phương án thực tế",
       "Theo dõi yêu cầu",
-      "Đội ngũ logistics xuất khẩu của chúng tôi điều phối các chuyến hàng trực tiếp từ nhà máy đến các trung tâm quốc tế lớn, cung cấp hóa đơn thương mại, bảng kê đóng gói và chứng từ xuất khẩu đầy đủ."
+      "Vật liệu đóng gói, trọng lượng cả bì, hồ sơ mua hàng cần thiết và điều khoản thương mại được xác nhận riêng sau khi xem xét phạm vi và điểm đến."
     ],
     "destinations": [
       [
@@ -1306,62 +867,15 @@
       "Gửi điểm đến, tổ hợp cột và bản vẽ hiện có để trao đổi cấu hình và yêu cầu báo giá B2B riêng.",
       "Gửi thông tin dự án",
       "Chỉ chia sẻ thông tin liên quan và bản vẽ bạn được phép cung cấp."
-    ],
-    "metrologyHead": [
-      "Trang thiết bị kiểm định và đóng gói toàn diện",
-      "Danh mục thiết bị kiểm tra xuất xưởng và đóng gói xuất khẩu.",
-      "Dụng cụ đo lường chuyên dụng, bệ thử tải độ bền và thiết bị đóng gói chịu lực xuất khẩu đảm bảo vận hành tin cậy."
-    ],
-    "metrology": [
-      [
-        "Máy đo độ cứng để bàn Rockwell và Vickers",
-        "Kiểm tra chính xác độ bền kéo của phôi thép, chiều sâu xử lý nhiệt và độ cứng bề mặt trên các chi tiết chịu lực trọng yếu.",
-        "ĐỘ CỨNG"
-      ],
-      [
-        "Thước kẹp đo lường kỹ thuật số và dụng cụ căn laser",
-        "Kiểm định độ đồng tâm bằng tia laser, đo khoảng cách lỗ bu lông kỹ thuật số và kiểm tra dung sai đường kính vòng bu lông mặt bích.",
-        "DUNG SAI KÍCH THƯỚC"
-      ],
-      [
-        "Thiết bị đo độ dày lớp phủ và sơn kỹ thuật số",
-        "Kiểm tra không phá hủy độ dày màng sơn khô trên lớp lót epoxy và lớp phủ polyurethane chống ăn mòn môi trường biển.",
-        "ĐỘ DÀY SƠN"
-      ],
-      [
-        "Máy đo chu kỳ sạc xả tự động bộ pin 24V",
-        "Hệ thống kiểm tra tải đa kênh tự động xác nhận dung lượng duy trì, trở kháng trong, độ ổn định điện áp và kiểm soát nhiệt độ.",
-        "CHU KỲ PIN"
-      ],
-      [
-        "Trạm thử nghiệm an toàn điện cách ly và dừng khẩn cấp",
-        "Kiểm tra độ bền điện môi điện áp cao, thông mạch nối đất và thời gian đáp ứng ngắt nguồn nút dừng khẩn cấp.",
-        "CÁCH ĐIỆN AN TOÀN"
-      ],
-      [
-        "Máy hút chân không công nghiệp buồng đôi và ép nhiệt",
-        "Hút chân không áp suất cao và ép nhiệt kín túi màng nhôm ngăn ẩm, ngăn ngừa hoàn toàn hiện tượng oxy hóa ăn mòn trong hành trình biển.",
-        "HÚT CHÂN KHÔNG"
-      ],
-      [
-        "Dụng cụ siết đai khí nén hạng nặng cho đai thép và đai PET",
-        "Thiết bị siết đai khí nén lực căng cao cố định kiện máy đóng thùng vào pallet xuất khẩu đã xử lý nhiệt với lực kẹp đồng đều.",
-        "SIẾT ĐAI XUẤT KHẨU"
-      ],
-      [
-        "Trạm phay định hình CNC mút xốp EVA mật độ cao",
-        "Phay CNC chính xác đệm bảo vệ bọt xốp EVA ô kín theo biên dạng mô-đun thiết bị nhằm triệt tiêu hoàn toàn rung chấn vận chuyển.",
-        "GIA CÔNG ĐỆM MÚT"
-      ]
     ]
   },
   "th": {
     "metaTitle": "เกี่ยวกับ volvet: อุปกรณ์และข้อมูล | volvet",
-    "metaDescription": "volvet เป็นผู้ผลิตอุปกรณ์ดั้งเดิม (OEM) ที่เชี่ยวชาญด้านอุปกรณ์ตั้งเสาไฟไฮดรอลิกแบบพกพา ออกแบบมาเพื่อลดการพึ่งพารถเครนในโครงการติดตั้งไฟส่องสว่างถนนทั่วโลก",
+    "metaDescription": "volvet เป็นแบรนด์ที่ยืนยันแล้วสำหรับเครื่องยกเสาไฟไฮดรอลิกแบบพกพาตามเอกสารสเปกเสา 12 ม. พิกัดน้ำหนัก 300 กก. แบตเตอรี่ 24 V และน้ำหนักรวม 85 กก.",
     "hero": [
       "volvet / อุปกรณ์และข้อมูล",
-      "ผู้ผลิตอุปกรณ์ดั้งเดิม (OEM) ที่เชี่ยวชาญด้านเครื่องจักรติดตั้งเสาไฟแบบไม่ต้องใช้เครน",
-      "volvet เป็นผู้ผลิตอุปกรณ์ดั้งเดิมที่เชี่ยวชาญด้านอุปกรณ์ตั้งเสาไฟไฮดรอลิกแบบพกพา ออกแบบมาเพื่อแก้ปัญหาพื้นที่เข้าถึงของรถเครน ลดต้นทุนการติดตั้ง และปกป้องความปลอดภัยของทีมงานในโครงการโครงสร้างพื้นฐานทั่วโลก"
+      "ข้อมูลอุปกรณ์\nการตัดสินใจตามแต่ละโครงการ",
+      "volvet เป็นแบรนด์สาธารณะที่ยืนยันแล้วของเครื่องยกเสาไฟแบบพกพาบนเว็บไซต์นี้ ข้อมูลปัจจุบันอ้างอิงเอกสารสเปก S4 ส่วนข้อมูลนิติบุคคล โรงงาน และผลทดสอบภาคสนามยังอยู่ระหว่างการยืนยัน"
     ],
     "facts": [
       "กลุ่มเสาไฟส่องสว่าง",
@@ -1372,33 +886,28 @@
     "library": [
       "ภาพอ้างอิงผลิตภัณฑ์",
       "ดูอุปกรณ์พร้อมบริบท",
-      "สำรวจโรงงานผลิตเฉพาะทางและฮาร์ดแวร์แบบแยกส่วนของเรา ที่ซึ่งกระบอกไฮดรอลิกแรงดันสูงและแชสซีเสริมแรงได้รับการประกอบขึ้นตามมาตรฐานทางวิศวกรรมที่เข้มงวด"
+      "ภาพอ้างอิงทั้งสี่ภาพแสดงชุดยก ตู้ไฟฟ้า รูปแบบการเชื่อมต่อฐานเสา และบรรจุภัณฑ์ เป็นภาพอ้างอิงผลิตภัณฑ์ ไม่ใช่หลักฐานกำลังการผลิตหรือผลทดสอบภาคสนาม"
     ],
     "images": [
       [
-        "ศูนย์เครื่องจักรกลซีเอ็นซีความแม่นยำสูง 5 แกน",
-        "ศูนย์เครื่องจักรกลซีเอ็นซีหลายแกนความแม่นยำสูงสำหรับผลิตบล็อกแมนิโฟลด์ไฮดรอลิก ตัววาล์ว และขายึดจุดหมุนโครงสร้าง",
-        "งานกลึงกัดซีเอ็นซี"
+        "ภาพรวมระบบสองชุดแยกส่วน",
+        "ภาพอ้างอิงชุดยกไฮดรอลิกสีเหลืองพร้อมตู้ควบคุมไฟฟ้าแบบแยกส่วน",
+        "ภาพรวมระบบ"
       ],
       [
-        "แท่นประกอบกระบอกสูบไฮดรอลิกเฉพาะทาง",
-        "แท่นปฏิบัติงานประกอบในห้องควบคุมความสะอาดพร้อมอุปกรณ์ติดตั้งซีลความแม่นยำสูง รางปรับแนวแกนกระบอกสูบ และระบบเติมน้ำมันไฮดรอลิกบริสุทธิ์",
-        "การประกอบกระบอกสูบ"
+        "ปั๊มไฮดรอลิกและโครงล้อเลื่อน",
+        "ภาพอ้างอิงระยะใกล้ของกระบอกไฮดรอลิก ชุดปั๊ม วาล์ว และโครงเคลื่อนย้ายแบบมีล้อ",
+        "รายละเอียดไฮดรอลิก"
       ],
       [
-        "เซลล์เชื่อมอัตโนมัติด้วยหุ่นยนต์สำหรับแชสซีโครงสร้าง",
-        "แท่นเชื่อมหุ่นยนต์หลายแกนอัตโนมัติสำหรับการเชื่อมแนวรอยต่อลึกต่อเนื่องบนโครงแชสซีและขายึดเหล็กกล้าผสมความแข็งแรงสูง",
-        "การเชื่อมหุ่นยนต์"
+        "ภาพอ้างอิงการเชื่อมต่อฐานเสา",
+        "ภาพอ้างอิงโครงยกวางข้างฐานเสา การเชื่อมต่อจริงต้องตรวจสอบแบบหน้าแปลนและสลักเกลียวที่ระบุขนาด",
+        "อ้างอิงจุดเชื่อมต่อ"
       ],
       [
-        "แท่นกลึงความแม่นยำสูงสำหรับหน้าแปลนและฐานยึด",
-        "เครื่องกลึงซีเอ็นซีแนวนอนขนาดเส้นผ่านศูนย์กลางใหญ่สำหรับปาดหน้าผิวเรียบ เจาะลวดลายวงรูกลอน และเก็บผิวสัมผัสฐานยึดพุก",
-        "งานกลึงหน้าแปลน"
-      ],
-      [
-        "สายประกอบตู้ควบคุมไฟฟ้าและระบบขับเคลื่อน 24V",
-        "สายงานประกอบและเดินสายไฟครบวงจรสำหรับตู้ควบคุมไฟฟ้า IP54 แบบแยกส่วน 40 กก. ชุดขับเคลื่อนไร้แปรงถ่าน และชุดสายไฟกันน้ำถอดเร็ว",
-        "การประกอบระบบขับเคลื่อน"
+        "ภาพอ้างอิงบรรจุภัณฑ์ลังส่งออก",
+        "ภาพอ้างอิงอุปกรณ์ในลัง เอกสาร S4 ระบุขนาดบรรจุภัณฑ์ 650 × 350 × 500 มม. ต้องยืนยันวัสดุและน้ำหนักรวมขนส่ง",
+        "อ้างอิงบรรจุภัณฑ์"
       ]
     ],
     "massLabels": [
@@ -1409,58 +918,58 @@
     "evidence": [
       "สถานะหลักฐาน",
       "เข้าใจว่าข้อมูลแต่ละรายการยืนยันอะไร",
-      "ทุกข้อมูลจำเพาะที่เผยแพร่แสดงถึงเกณฑ์มาตรฐานทางกลที่ได้รับการตรวจสอบและการควบคุมคุณภาพที่เข้มงวดของโรงงาน เพื่อให้มั่นใจในประสิทธิภาพที่เชื่อถือได้หน้างาน"
+      "เราแยกข้อมูลจากเอกสารสเปก ค่าสมรรถนะที่ผู้ผลิตรายงาน และการตรวจสอบเฉพาะโครงการออกจากกันเพื่อความชัดเจนในการพิจารณา"
     ],
     "levels": [
       [
         "แหล่งข้อมูล",
-        "เอกสารสเปก",
-        "ขนาด น้ำหนัก พิกัดน้ำหนัก และอุปกรณ์ที่รวมอยู่ อ้างอิงเอกสารที่ได้รับ ไม่ได้ยืนยันว่าเหมาะกับทุกเสาหรือทุกพื้นที่"
+        "เอกสารสเปก S4",
+        "ขนาด น้ำหนักแต่ละชุด พิกัดน้ำหนัก 300 กก. และอุปกรณ์มาตรฐานมาจากเอกสาร S4 ไม่ได้ยืนยันว่าเหมาะกับทุกเสาหรือทุกพื้นที่"
       ],
       [
         "ค่าที่ระบุ",
-        "ประสิทธิภาพจากผู้ผลิต",
-        "เวลายกและจำนวนรอบเป็นค่าที่ผู้ผลิตระบุ เงื่อนไขและผลทดสอบภาคสนามยังอยู่ระหว่างจัดทำ"
+        "สมรรถนะจากผู้ผลิต",
+        "เวลายก 20 วินาที จำนวน >50 ครั้งต่อการชาร์จเต็ม และ >3000 รอบใช้งาน ยังเป็นข้อมูลที่ผู้ผลิตรายงานและรอการตรวจสอบภาคสนาม"
       ],
       [
         "โครงการ",
         "ตรวจสอบจุดต่อและพื้นที่",
-        "ส่งข้อมูลชุดเสาจริง หน้าแปลน สลักเกลียว ฐานราก และพื้นที่ คำศัพท์ในแบบที่ยังไม่ชัดเจนไม่ถือเป็นขั้นตอนปฏิบัติงาน"
+        "ส่งน้ำหนักชุดประกอบรวม แบบหน้าแปลน สลักเกลียว ฐานราก และผังหน้างาน ฐานนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ"
       ],
       [
-        "การรับรองการส่งออก",
-        "การสนับสนุนโดยตรงจากโรงงาน",
-        "การส่งมอบทุกครั้งมาพร้อมกับเอกสารทางเทคนิคที่ครบถ้วน บันทึกการตรวจสอบจากโรงงาน และการสนับสนุนทางวิศวกรรมตลอด 24 ชั่วโมง"
+        "รอการยืนยัน",
+        "ข้อมูลนิติบุคคลและโรงงาน",
+        "ชื่อนิติบุคคลที่จดทะเบียน บันทึกตรวจโรงงาน ใบรับรอง และช่องทางอีเมลหรือโทรศัพท์โดยตรงยังรอการยืนยันก่อนเผยแพร่"
       ]
     ],
     "review": [
-      "การรับประกันคุณภาพจากโรงงาน",
-      "เกณฑ์มาตรฐานการตรวจสอบเพื่อการส่งออก 4 ขั้นตอน",
-      "เครื่องจักรทุกชุดผ่านการตรวจสอบโครงสร้าง ระบบไฮดรอลิก และการทดสอบรับน้ำหนักแนวตั้งก่อนการจัดส่ง",
-      "การตรวจสอบจากโรงงาน",
-      "การทดสอบอย่างเข้มงวดบนแท่นทดสอบแนวตั้งโดยเฉพาะ เพื่อให้มั่นใจในการใช้งานที่ไซต์งาน",
+      "การตรวจสอบก่อนเริ่มโครงการ",
+      "การตรวจสเปกและความเข้ากันได้ 4 ขั้นตอน",
+      "ก่อนเลือกอุปกรณ์หรือออกใบเสนอราคา คำขอแต่ละรายการจะถูกตรวจสอบตามขอบเขตข้อมูลสี่ข้อจากเอกสารสเปก",
+      "ขอบเขตหลักฐาน",
+      "เอกสารสเปก S4 ระบุขนาดอ้างอิงเท่านั้น การทดสอบภาคสนามและการอนุมัติทางวิศวกรรมของโครงการเป็นขั้นตอนแยกต่างหาก",
       "ขั้นตอน"
     ],
     "checks": [
       [
-        "การตรวจสอบรอยเชื่อมและวัสดุด้วยอัลตราโซนิก",
-        "การตรวจสอบโครงสร้างเหล็กกล้าผสมความแข็งแรงสูงด้วยการตรวจหาข้อบกพร่องด้วยคลื่นอัลตราโซนิกในจุดเชื่อมต่อสำคัญ",
-        "ความสมบูรณ์รอยเชื่อม"
+        "ความสูงเสาและน้ำหนักชุดประกอบ",
+        "ตรวจสอบความสูงเทียบกับกลุ่มเสา 12 ม. และยืนยันน้ำหนักรวมโคมไฟ ขายึด และอุปกรณ์เสริมไม่เกิน 300 กก.",
+        "น้ำหนักและความสูง"
       ],
       [
-        "การทดสอบการคงแรงดันและการซีลไฮดรอลิก",
-        "การตรวจสอบการคงแรงดันกระบอกไฮดรอลิกภายใต้พิกัดน้ำหนักทำงาน มั่นใจระบบล็อกวาล์วสองทิศทางปราศจากการรั่วซึม",
-        "การคงแรงดัน"
+        "ระยะรูหน้าแปลนและสลักเกลียวยึดฐาน",
+        "เทียบระยะรูหน้าแปลนกับช่วง 180–260 มม. และสลักเกลียว M16–M24 (มี M16–M22 ในชุด ฐานนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ)",
+        "การเชื่อมต่อฐาน"
       ],
       [
-        "การสอบเทียบการยกแนวดิ่งน้ำหนักทดสอบ 300 กก.",
-        "ทุกยูนิตผ่านการสอบเทียบการยกเต็มระยะในแนวดิ่งด้วยน้ำหนักทดสอบ 300 กก. บนแท่นทดสอบเฉพาะทาง",
-        "การสอบเทียบพิกัดยก"
+        "การแยกชุดอุปกรณ์และแบตเตอรี่ 24 V",
+        "ยืนยันการขนย้ายหน้างานสำหรับชุดไฮดรอลิก 45 กก. (610 × 220 × 220 มม.) และตู้ไฟฟ้า 40 กก. (500 × 300 × 250 มม.) พร้อมแบตเตอรี่ 24 V",
+        "โครงสร้างแยกส่วน"
       ],
       [
-        "บรรจุภัณฑ์กล่องไม้ส่งออกกันกระแทก",
-        "การบรรจุหีบห่อก่อนส่งมอบในกล่องไม้อัดประกอบส่งออกเสริมแรงขนาด 650 × 350 × 500 มม. พร้อมซีลกันความชื้น",
-        "บรรจุภัณฑ์ส่งออก"
+        "บรรจุภัณฑ์และเงื่อนไขการจัดส่ง",
+        "ตรวจสอบขนาดบรรจุภัณฑ์ 650 × 350 × 500 มม. และยืนยันวัสดุบรรจุ น้ำหนักรวมขนส่ง และเอกสารตามปลายทาง",
+        "ขอบเขตการจัดส่ง"
       ]
     ],
     "brief": [
@@ -1482,7 +991,7 @@
       ],
       [
         "ฐานรากและจุดต่อ",
-        "ระบุขนาดหรือส่งแบบแปลนหน้าแปลนฐาน ทีมงานของเราพร้อมตรวจสอบแนวสลักเกลียว (M16–M24) และความสมดุลของฐานรากโดยไม่มีค่าใช้จ่าย",
+        "ระบุขนาดหรือส่งแบบหน้าแปลนฐาน ฐานนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบความเข้ากันได้ของหน้าแปลนและสลักเกลียว",
         [
           "แบบหน้าแปลน",
           "สลักเกลียวยึดฐาน",
@@ -1508,7 +1017,7 @@
       "รายการที่ต้องยืนยัน",
       "หารือข้อตกลงจริง",
       "การติดตามคำถาม",
-      "ทีมงานโลจิสติกส์ส่งออกของเราประสานงานการจัดส่งตรงจากโรงงานไปยังศูนย์กลางการขนส่งระหว่างประเทศหลัก พร้อมจัดเตรียมใบกำกับสินค้า รายการบรรจุหีบห่อ และเอกสารการส่งออกที่ครบถ้วน"
+      "วัสดุบรรจุภัณฑ์ น้ำหนักรวมขนส่ง เอกสารจัดซื้อที่ต้องใช้ และเงื่อนไขการค้าจะยืนยันเป็นรายโครงการหลังจากตรวจสอบขอบเขตงานและปลายทาง"
     ],
     "destinations": [
       [
@@ -1532,53 +1041,180 @@
       "ส่งปลายทาง ชุดประกอบเสา และแบบที่มี เพื่อหารือชุดอุปกรณ์และขอใบเสนอราคา B2B แบบส่วนตัว",
       "ส่งข้อมูลโครงการ",
       "แบ่งปันเฉพาะข้อมูลที่เกี่ยวข้องและแบบที่คุณมีสิทธิ์ส่ง"
+    ]
+  },
+  "id": {
+    "metaTitle": "Tentang volvet: peralatan dan informasi | volvet",
+    "metaDescription": "volvet adalah merek terkonfirmasi untuk alat pendiri tiang lampu hidrolik portabel yang tercantum untuk tiang 12 m, beban nominal 300 kg, baterai 24 V dan berat total 85 kg.",
+    "hero": [
+      "volvet / Peralatan dan informasi",
+      "Informasi peralatan.\nKeputusan sesuai proyek.",
+      "volvet adalah merek publik terkonfirmasi untuk alat pendiri tiang lampu portabel di situs ini. Data saat ini bersumber dari lembar spesifikasi S4, sedangkan catatan badan usaha, pabrik, dan validasi lapangan masih menunggu konfirmasi."
     ],
-    "metrologyHead": [
-      "อุปกรณ์การทดสอบและบรรจุภัณฑ์ครบวงจร",
-      "บัญชีอุปกรณ์ตรวจสอบในโรงงานและการควบคุมคุณภาพบรรจุภัณฑ์",
-      "เครื่องมือมาตรวิทยาเฉพาะทาง แท่นทดสอบความทนทาน และเครื่องมือบรรจุหีบห่อส่งออกอย่างหนาเพื่อความน่าเชื่อถือหน้างาน"
+    "facts": [
+      "Kelas tiang penerangan",
+      "Beban nominal pada spesifikasi",
+      "Baterai isi ulang",
+      "Berat total peralatan"
     ],
-    "metrology": [
+    "library": [
+      "Gambar referensi produk",
+      "Lihat peralatan dan konteksnya.",
+      "Keempat gambar referensi ini menampilkan rakitan pengangkat, kabinet listrik, geometri sambungan dasar, dan kemasan peti. Ini adalah referensi produk, bukan bukti skala pabrik atau validasi lapangan."
+    ],
+    "images": [
       [
-        "เครื่องทดสอบความแข็งแบบตั้งโต๊ะ Rockwell & Vickers",
-        "การทดสอบความแม่นยำของความทนแรงดึงของเหล็กกล้า ความลึกของการอบชุบความร้อน และความแข็งผิวบนชิ้นส่วนรับน้ำหนักหลัก",
-        "ความแข็ง"
+        "Gambaran Sistem Dua Modul",
+        "Gambar referensi rakitan pengangkat hidrolik kuning bersama kabinet kontrol listrik terpisah.",
+        "Gambaran Sistem"
       ],
       [
-        "เวอร์เนียร์ดิจิทัลและเครื่องมือปรับแนวเลเซอร์",
-        "การตรวจวัดแนวแกนร่วมด้วยเลเซอร์ การวัดระยะห่างรูดิจิทัล และการตรวจสอบค่าพิกัดความเผื่อของวงสลักเกลียวหน้าแปลน",
-        "พิกัดความเผื่อขนาด"
+        "Pompa Hidrolik & Rangka Beroda",
+        "Tampilan dekat referensi silinder hidrolik, unit pompa, katup, dan rangka angkut beroda.",
+        "Detail Hidrolik"
       ],
       [
-        "เครื่องวัดความหนาของสารเคลือบและชั้นสีดิจิทัล",
-        "การทดสอบความหนาของชั้นฟิล์มแห้งแบบไม่ทำลายบนชั้นสีรองพื้นอีพ็อกซี่และโพลียูรีเทนสำหรับต้านทานการกัดกร่อน",
-        "ความหนาชั้นสี"
+        "Referensi Sambungan Dasar Tiang",
+        "Gambar referensi rangka pengangkat di samping dasar tiang. Sambungan aktual memerlukan tinjauan gambar flensa dan baut angkur.",
+        "Referensi Sambungan"
       ],
       [
-        "เครื่องทดสอบการประจุและคายประจุชุดแบตเตอรี่ 24V อัตโนมัติ",
-        "การทดสอบภาระโหลดอัตโนมัติหลายช่องทางเพื่อตรวจสอบความจุคงเหลือ ความต้านทานภายใน ความเสถียรของแรงดันไฟฟ้า และการควบคุมอุณหภูมิ",
-        "รอบการทำงานแบตเตอรี่"
-      ],
-      [
-        "แท่นทดสอบความเป็นฉนวนไฟฟ้าและระบบหยุดฉุกเฉิน",
-        "การทดสอบความทนทานต่อแรงดันไฟฟ้าสูง การตรวจสอบความต่อเนื่องของสายดิน และการตอบสนองตัดไฟของปุ่มหยุดฉุกเฉิน",
-        "ความปลอดภัยทางไฟฟ้า"
-      ],
-      [
-        "เครื่องซีลสุญญากาศห้องคู่ระดับอุตสาหกรรม",
-        "การดูดอากาศสุญญากาศระดับสูงและการซีลปิดผนึกด้วยความร้อนในซองฟอยล์อะลูมิเนียมกันความชื้น ป้องกันการกัดกร่อนจากไอทะเล",
-        "การซีลสุญญากาศ"
-      ],
-      [
-        "เครื่องรัดสายรัดเหล็กและสายรัด PET แบบใช้ลมแรงดึงสูง",
-        "เครื่องมือรัดแถบรัดแรงดึงสูงด้วยระบบลม ยึดตรึงกล่องเครื่องจักรเข้ากับพาเลทส่งออกอย่างแน่นหนาด้วยแรงตึงที่สม่ำเสมอ",
-        "การรัดแถบส่งออก"
-      ],
-      [
-        "แท่นตัดโฟม EVA ความหนาแน่นสูงด้วยเครื่องซีเอ็นซี",
-        "การแกะสลักซีเอ็นซีความแม่นยำสูงสำหรับแผ่นโฟมกันกระแทก EVA ชนิดเซลล์ปิดเข้ารูปทรงเครื่องจักรเพื่อซับแรงกระแทกระหว่างการเดินทาง",
-        "การกลึงขึ้นรูปโฟม"
+        "Referensi Kemasan Peti Ekspor",
+        "Gambar referensi peralatan dalam peti. Lembar S4 mencantumkan dimensi kemasan 650 × 350 × 500 mm; bahan kemasan dan berat kotor perlu dikonfirmasi.",
+        "Referensi Kemasan"
       ]
+    ],
+    "massLabels": [
+      "Modul hidraulis / spesifikasi",
+      "Kabinet listrik / spesifikasi",
+      "Total peralatan / spesifikasi"
+    ],
+    "evidence": [
+      "Status bukti",
+      "Pahami dukungan setiap pernyataan.",
+      "Kami memisahkan spesifikasi lembar sumber, angka kinerja yang dilaporkan pabrikan, dan tinjauan teknis proyek agar setiap klaim dapat diverifikasi."
+    ],
+    "levels": [
+      [
+        "Sumber",
+        "Lembar spesifikasi S4",
+        "Dimensi, berat modul, beban nominal 300 kg, dan komponen standar berasal dari lembar S4. Data ini tidak menyetujui semua tiang atau lokasi."
+      ],
+      [
+        "Dilaporkan",
+        "Kinerja dari produsen",
+        "Waktu angkat 20 dtk, >50 pengangkatan per pengisian penuh, dan >3000 siklus tetap merupakan pernyataan pabrikan dengan validasi lapangan tertunda."
+      ],
+      [
+        "Proyek",
+        "Tinjauan sambungan dan lokasi",
+        "Berikan berat rakitan, gambar flensa, baut angkur, fondasi, dan denah lokasi. Dasar nonstandar memerlukan tinjauan gambar berdimensi."
+      ],
+      [
+        "Tertunda",
+        "Catatan perusahaan & pabrik",
+        "Badan hukum terdaftar, catatan audit pabrik, sertifikasi, dan saluran email/telepon langsung masih menunggu konfirmasi publikasi."
+      ]
+    ],
+    "review": [
+      "Tinjauan pra-proyek",
+      "Pemeriksaan Spesifikasi & Kesesuaian 4 Langkah.",
+      "Sebelum memilih peralatan atau menerbitkan penawaran, setiap permintaan diperiksa terhadap empat batasan lembar spesifikasi.",
+      "BATAS BUKTI",
+      "Lembar spesifikasi S4 hanya menetapkan dimensi referensi; validasi lapangan dan persetujuan teknik proyek merupakan tahapan terpisah.",
+      "LANGKAH"
+    ],
+    "checks": [
+      [
+        "Tinggi Tiang & Berat Rakitan",
+        "Periksa tinggi total terhadap kelas tiang 12 m dan pastikan berat total rakitan dengan lampu serta aksesori berada dalam batas 300 kg.",
+        "BEBAN & TINGGI"
+      ],
+      [
+        "Rentang Flensa & Baut Angkur",
+        "Bandingkan jarak lubang flensa dengan 180–260 mm dan baut dengan M16–M24 (M16–M22 disertakan; dasar nonstandar memerlukan tinjauan gambar berdimensi).",
+        "SAMBUNGAN DASAR"
+      ],
+      [
+        "Pemisahan Modul & Daya 24 V",
+        "Konfirmasikan pengangkutan lokasi untuk modul hidrolik 45 kg (610 × 220 × 220 mm) dan kabinet listrik 40 kg (500 × 300 × 250 mm) dengan baterai 24 V.",
+        "MODULARITAS"
+      ],
+      [
+        "Kemasan & Ketentuan Pengiriman",
+        "Tinjau dimensi kemasan 650 × 350 × 500 mm dan konfirmasikan bahan kemasan, berat kotor pengiriman, serta dokumen tujuan secara privat.",
+        "LINGKUP KIRIM"
+      ]
+    ],
+    "brief": [
+      "Ringkasan proyek",
+      "Siapkan tiga kelompok informasi.",
+      "Jelaskan rakitan, sambungan, dan proyek. Kirim hanya gambar yang boleh Anda bagikan.",
+      "INFORMASI PROYEK",
+      "Tandai informasi yang belum diketahui untuk tindak lanjut."
+    ],
+    "cards": [
+      [
+        "Tiang dan rakitan",
+        "Jelaskan tiang dan semua komponen yang terpasang pada rakitan yang direncanakan.",
+        [
+          "Dimensi",
+          "Berat rakitan",
+          "Referensi gambar"
+        ]
+      ],
+      [
+        "Fondasi dan sambungan",
+        "Sertakan dimensi atau gambar flensa dasar. Dasar nonstandar memerlukan tinjauan gambar berdimensi untuk memastikan kesesuaian baut dan flensa.",
+        [
+          "Gambar flensa",
+          "Baut angkur",
+          "Fondasi"
+        ]
+      ],
+      [
+        "Lingkup dan tujuan",
+        "Jelaskan lingkup pekerjaan, jumlah, dan tujuan untuk pembahasan persyaratan secara pribadi.",
+        [
+          "Lingkup kerja",
+          "Jumlah",
+          "Tujuan"
+        ]
+      ]
+    ],
+    "global": [
+      "Dokumen dan pembahasan komersial",
+      "Konfirmasikan kebutuhan proyek aktual.",
+      "Konfigurasi, transportasi, dokumen, dan ketentuan dibahas untuk proyek aktual. Jaringan pengiriman atau opsi penyerahan tidak diasumsikan.",
+      "TUJUAN PROYEK",
+      "Di mana peralatan dibutuhkan?",
+      "HAL YANG DIKONFIRMASI",
+      "Bahas pengaturan aktual",
+      "Tindak lanjut permintaan",
+      "Bahan kemasan ekspor, berat kotor pengiriman, dokumen pengadaan yang diperlukan, dan ketentuan komersial dikonfirmasikan secara privat setelah lingkup dan tujuan proyek ditinjau."
+    ],
+    "destinations": [
+      [
+        "Tujuan pengiriman",
+        "Berikan negara dan lokasi pengiriman agar kebutuhan dapat dijelaskan."
+      ],
+      [
+        "Dokumen yang diperlukan",
+        "Daftarkan gambar, instruksi, atau dokumen pengadaan; ketersediaannya perlu diperiksa."
+      ]
+    ],
+    "terms": [
+      "Konfigurasi",
+      "Transportasi",
+      "Ketersediaan dokumen",
+      "Kesepakatan komersial"
+    ],
+    "cta": [
+      "INFORMASI PROYEK",
+      "Mulai dengan rincian proyek.",
+      "Kirim tujuan, rakitan tiang, dan gambar yang tersedia untuk diskusi konfigurasi serta permintaan penawaran B2B privat.",
+      "Kirim informasi proyek",
+      "Bagikan hanya informasi terkait dan gambar yang boleh Anda berikan."
     ]
   }
 }

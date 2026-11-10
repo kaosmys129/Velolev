@@ -58,7 +58,7 @@
   "Enlarge image: Reference image showing the lifting frame alongside the pole base": "Agrandir l’image : image de référence montrant le châssis de levage à côté du pied du mât",
   "Reference image showing the lifting frame alongside the pole base": "Image de référence montrant le châssis de levage à côté du pied du mât",
   "03 / Connection detail": "03 / Détail de la liaison",
-  "Include the base-plate drawing, flange dimensions, anchor-bolt arrangement and foundation information. The specification sheet lists bolt sizes, but a matching size does not approve a foundation or establish that a special adapter is supplied.": "Joignez le plan de la platine, les dimensions de la bride, la disposition des tiges d’ancrage et les données de fondation. La fiche technique indique des tailles de tiges, mais une taille correspondante ne valide pas une fondation et ne garantit pas la fourniture d’un adaptateur spécial.",
+  "Include the base-plate drawing, flange dimensions, anchor-bolt arrangement and foundation information. The specification sheet lists bolt sizes, but a matching size does not approve a foundation or establish that a non-standard flange fits without a dimensioned drawing review.": "Joignez le plan de platine, les cotes de bride, la disposition des tiges d’ancrage et les données de fondation. La fiche indique des tailles de boulons, mais une correspondance ne valide pas la fondation ni l’adaptation d’une bride non standard sans examen d’un plan coté.",
   "Dimensioned pole-base and anchor-bolt drawing": "Plan coté du pied du mât et des tiges d’ancrage",
   "Foundation detail and project location": "Détail de la fondation et localisation du projet",
   "Photographs that support the drawings": "Photographies complétant les plans",

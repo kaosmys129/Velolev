@@ -36,27 +36,27 @@ const subjectArg = args.find(a => a.startsWith("--subject="))?.split("=")[1]?.tr
 
 // 默认技术通报样例 (工程严谨风格)
 const defaultCampaign = {
-  id: "tech-brief-zero-crane-2026",
-  title: "Field Engineering Report: Zero-Crane Light Pole Installation",
-  headline: "Evaluating Two-Man Crew Mobilization for 6m–12m Municipal Poles",
-  lead: "A comparative technical assessment on foundation bolt shear, 24V hydraulic pressure retention, and crane rental substitution.",
+  id: "tech-brief-portable-lifter-2026",
+  title: "Technical Engineering Note: Portable Light Pole Lifter Planning",
+  headline: "Evaluating Two-Module Handling for 12 m Class Street Light Poles",
+  lead: "A technical planning summary covering 180–260 mm flange compatibility, 45 kg + 40 kg modular transport, and full-scope method comparison.",
   bodyHtml: `
     <p>Dear Engineering Partner,</p>
-    <p>Crane availability and transit permits frequently introduce unpredictable delays and substantial expense into municipal lighting and solar installation schedules. Our engineering department has published the updated <strong>Technical Field Assessment: Portable Hydraulic Lifters vs. Mobile Boom Cranes</strong>.</p>
+    <p>Crane availability and site access constraints frequently introduce scheduling and cost variables into municipal lighting and solar installation projects. Our engineering team has prepared an updated <strong>Project Planning Note: Portable Hydraulic Pole Lifter vs. Mobile Crane</strong>.</p>
     <div style="background-color:#f6f8f2;border:1px solid #dbe1d4;padding:16px 20px;border-radius:2px;margin:20px 0;">
-      <h3 style="margin:0 0 10px 0;font-size:15px;color:#1d201e;">Report Highlights:</h3>
-      <p style="margin:0 0 8px 0;font-size:13px;line-height:1.6;">• <strong>Base Flange Bolt Circle Analysis</strong>: Standardized compatibility for 180mm to 260mm bolt patterns, M16–M24 anchor bolts.</p>
-      <p style="margin:0 0 8px 0;font-size:13px;line-height:1.6;">• <strong>Transport Logistics</strong>: Split two-module configuration (45kg + 40kg) fitting inside utility vans without commercial transport licenses.</p>
-      <p style="margin:0;font-size:13px;line-height:1.6;">• <strong>Hydraulic Holding Capacity</strong>: 300kg rated vertical lift with 24-hour hydraulic lock safety valves.</p>
+      <h3 style="margin:0 0 10px 0;font-size:15px;color:#1d201e;">Specification Sheet Highlights (S4):</h3>
+      <p style="margin:0 0 8px 0;font-size:13px;line-height:1.6;">• <strong>Base Flange Bolt Compatibility</strong>: Listed for 180–260 mm flange hole spans and M16–M24 anchor bolts (M16–M22 included; non-standard bases require a dimensioned drawing review).</p>
+      <p style="margin:0 0 8px 0;font-size:13px;line-height:1.6;">• <strong>Transport Logistics</strong>: Split two-module configuration (45 kg hydraulic module + 40 kg electrical cabinet, 85 kg total).</p>
+      <p style="margin:0;font-size:13px;line-height:1.6;">• <strong>Listed Rating & Power</strong>: 12 m pole class, 300 kg rated load, and 24 V rechargeable battery (field validation pending).</p>
     </div>
-    <p>The full technical paper and interactive ROI scenario builder are available on the volvet procurement engineering portal.</p>
+    <p>The specification summary and interactive cost scenario calculator are available on the volvet procurement engineering portal.</p>
   `,
-  ctaText: "Open Interactive ROI Scenario Builder →",
+  ctaText: "Open Interactive Cost Calculator →",
   ctaUrl: `${process.env.PUBLIC_ORIGIN || "https://volvet.com"}/tools/roi-calculator/`,
   secondaryHighlights: [
-    "Eliminate \$800–\$1,500 daily crane dispatch minimum charges on sub-50 pole deployments",
-    "Single-operator hydraulic valve positioning with mechanical fall-arrest latch",
-    "Full compatibility with round, octagonal, and solar-integrated steel poles"
+    "Compare full-scope crane and portable lifter costs using your own project rates",
+    "Listed for 1–2 operators; complete installation workflow requires reviewed instructions",
+    "Submit assembled weight, pole drawing, and dimensioned flange drawing for project review"
   ]
 };
 

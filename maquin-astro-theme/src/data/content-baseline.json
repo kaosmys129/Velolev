@@ -6,8 +6,8 @@
     "confirmedOn": "2026-10-28"
   },
   "deployment": {
-    "publicOrigin": null,
-    "status": "pending_configuration"
+    "publicOrigin": "https://volvet.com",
+    "status": "configured"
   },
   "contact": {
     "email": null,

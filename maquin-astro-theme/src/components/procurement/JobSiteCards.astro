@@ -18,8 +18,10 @@ const scenes = [
     subtitle: "Municipal Lighting Maintenance",
     image: "/images/evidence/jobsite-sidewalk-municipal-road.jpg",
     tag: "Tight Urban Space",
-    desc: "Ultra-compact 220 mm profile easily navigates pedestrian walkways and bike paths without heavy equipment access permits or surface weight restrictions.",
-    benefit: "Protects finished pavement slabs from damage"
+    caption: "Narrow Sidewalks & Roadways. Application reference illustration; actual site and assembly require review.",
+    alt: "Narrow Sidewalks & Roadways - project reference image; validation pending",
+    desc: "Share the pole assembly, foundation drawing, access plan and road-management constraints. A narrow footpath does not establish equipment suitability or permission to work.",
+    benefit: "Access and work-area review required"
   },
   {
     id: "parking",
@@ -27,8 +29,10 @@ const scenes = [
     subtitle: "Campus & Retail Light Poles",
     image: "/images/evidence/jobsite-parking-lot-tight-space.jpg",
     tag: "Confined Access",
-    desc: "Operates within standard marked parking stalls and landscaped medians, allowing 2 workers to safely erect replacement poles without blocking traffic lanes.",
-    benefit: "2-man compact maneuverability between parking bays & obstacles"
+    caption: "Dense Commercial Parking Lots. Application reference illustration; actual site and assembly require review.",
+    alt: "Dense Commercial Parking Lots - project reference image; validation pending",
+    desc: "Record the pole, foundation, access and occupied work area. Equipment dimensions alone do not confirm a suitable arrangement between vehicles or landscaping.",
+    benefit: "Project-specific site assessment required"
   },
   {
     id: "rural",
@@ -36,8 +40,10 @@ const scenes = [
     subtitle: "Rural & Remote Roadways",
     image: "/images/evidence/jobsite-rural-solar-street-light.jpg",
     tag: "Off-Grid & Remote",
-    desc: "Self-contained 24 V battery power package allows rapid pole raising on unpaved mountain roads and remote off-grid highways without field generators.",
-    benefit: "Autonomous 24 V battery power for remote off-grid installation"
+    caption: "Off-Grid Solar Light Deployments. Application reference illustration; actual site and assembly require review.",
+    alt: "Off-Grid Solar Light Deployments - project reference image; validation pending",
+    desc: "Identify the panel, battery and other attached components. Complete solar assemblies and site conditions need validation before equipment selection.",
+    benefit: "Assembly and site validation pending"
   }
 ];
 
@@ -48,11 +54,11 @@ const items = scenes.slice(0, limit);
   <div class="jobsite-grid">
     {items.map((item) => (
       <article class="jobsite-card" id={`scene-${item.id}`}>
-        <a class="jobsite-image-wrap" href={item.image} data-media-image data-caption={item.title} aria-label={`Enlarge image: ${item.title}`}>
+        <a class="jobsite-image-wrap" href={item.image} data-media-image data-caption={item.caption} aria-label={`Enlarge image: ${item.title}`}>
           <span class="jobsite-badge">{item.tag}</span>
           <img
             src={item.image}
-            alt={item.title}
+            alt={item.alt}
             loading="lazy"
             width="680"
             height="380"

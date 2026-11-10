@@ -74,7 +74,7 @@ const sampleInquiry = store.save(
     poleHeight: "12",
     poleWeight: "280",
     foundation: "M20 anchor bolts, square flange 220mm bolt circle, concrete pier",
-    message: "Requesting quotation for 4 units of volvet 12m pole lifters with M20 adapters for municipal roadway lighting replacement program. Tight sidewalks with bike lanes.",
+    message: "Requesting quotation for 4 units of volvet 12m pole lifters with M20 anchor bolts for municipal roadway lighting replacement program. Tight sidewalks with bike lanes.",
     sourcePage: "/quote/",
     locale: "en",
     consent: true,

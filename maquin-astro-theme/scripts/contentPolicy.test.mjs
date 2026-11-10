@@ -52,7 +52,7 @@ test("Product schema has grounded specs and no commercial or invented evidence f
   for (const k of ["offers", "price", "availability", "aggregateRating", "review", "sku"]) assert.equal(k in schema, false);
   assert.equal(schema.url, undefined);
   assert.equal(baseline.contact.email, null);
-  assert.equal(baseline.deployment.publicOrigin, null);
+  assert.equal(baseline.deployment.publicOrigin, "https://volvet.com");
 });
 
 test("Organization and FAQ schemas contain valid structured data without commercial traps", () => {

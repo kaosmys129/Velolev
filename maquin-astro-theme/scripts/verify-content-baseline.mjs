@@ -26,7 +26,7 @@ const configuredArg = process.argv.find((a) => a.startsWith("--configured=") || 
 const paramOrigin = configuredArg ? configuredArg.split("=")[1] : null;
 const buildMetaPath = join(dist, ".volvet-build.json");
 const buildMeta = existsSync(buildMetaPath) ? JSON.parse(readFileSync(buildMetaPath, "utf8")) : null;
-const rawEffectiveOrigin = process.env.PUBLIC_SITE_URL || paramOrigin || (process.argv.includes("--configured") || process.argv.includes("--production") ? (buildMeta?.origin || "https://www.velolev.org") : null) || (buildMeta?.origin && !/\.invalid$/.test(buildMeta.origin) ? buildMeta.origin : null);
+const rawEffectiveOrigin = process.env.PUBLIC_SITE_URL || paramOrigin || (process.argv.includes("--configured") || process.argv.includes("--production") ? (buildMeta?.origin || baseline.deployment?.publicOrigin || "https://volvet.com") : null) || (buildMeta?.origin && !/\.invalid$/.test(buildMeta.origin) ? buildMeta.origin : null);
 const effectiveOrigin = sanitizeOrigin(rawEffectiveOrigin);
 const isConfigured = Boolean(effectiveOrigin);
 const pages = all(dist).filter((p) => p.endsWith(".html") && !p.includes("/admin/"));
@@ -48,6 +48,8 @@ for (const file of pages) {
   check(!/sales@(?:polelift|velolev)|\+86\s*21\s*1234|Shanghai Pilot Free Trade Zone/i.test(visible), `${name}: unconfigured legacy contact`);
   check(!/~?98\s*kg|ISPM[ -]?15|fumigated|Zero heavy crane permits|Zero pavement cracking|50\+ lifts per charge/i.test(visible), `${name}: unregistered logistics, permission or unqualified performance claim`);
   check(!/500\s*\+|2015\s*[–-]\s*2018|±\s*0[.,]5|24h\s*(?:Zero|Pressure)|100%\s*(?:Full Stroke|bench-tested)/i.test(visible), `${name}: unregistered corporate history, capacity or completed-testing claim`);
+  // 校验清理后的 S4 基线边界：禁止未经证实的规范标准、吨位、定制过渡板、零成本与未核实金额声明
+  check(!/ASTM\s+F|OSHA\s+1926|IEEE\s+516|ANSI\/IES|EN\s+40-3|16-ton|custom transition plate|tailored adapter plate|adapter ring|at zero cost|24-hour hydraulic lock|\$800/i.test(visible), `${name}: ungrounded standard, tonnage, custom adapter or cost claim`);
   if (!isConfigured) {
     check(find(dom,"meta").some((n)=>attr(n,"name")==="robots" && attr(n,"content").includes("noindex")),`${name}: missing preview noindex`);
     check(!find(dom,"link").some((n)=>attr(n,"rel")==="canonical"),`${name}: unapproved public domain canonical`);
@@ -67,7 +69,7 @@ for (const file of pages) {
       const value = JSON.parse((n.childNodes ?? []).map((x)=>x.value ?? "").join(""));
       const serialized = JSON.stringify(value);
       check(!/"(?:offers|price|priceCurrency|availability|aggregateRating|review)"/.test(serialized), `${name}: forbidden commercial/evidence schema`);
-      check(!/VideoObject|velolev\.com|polelift\.com/i.test(serialized),`${name}: unapproved media/domain schema`);
+      check(!/VideoObject|velolev\.com|polelift\.com|"legalName"/i.test(serialized),`${name}: unapproved media/domain/legalName schema`);
     } catch (e) { failures.push(`${name}: invalid JSON-LD: ${e.message}`); }
   }
 }
@@ -77,6 +79,11 @@ for (const locale of ["en","es","fr","pt","vi","th","id"]) {
   const dom = parse(product);
   const sections = find(dom,"section").filter((n)=>attr(n,"data-source-id")==="S4");
   check(sections.length===1,`${locale}: missing source-derived product facts`);
+  const productSchemas = find(dom, "script").filter((n)=>attr(n,"type")==="application/ld+json").map((n)=>JSON.parse((n.childNodes ?? []).map((x)=>x.value ?? "").join("")));
+  check(productSchemas.some((s)=>s["@type"]==="FAQPage" && Array.isArray(s.mainEntity) && s.mainEntity.length>=4), `${locale}: product page missing FAQPage JSON-LD`);
+  const faqHtml = readFileSync(join(dist,prefix,"faq/index.html"),"utf8");
+  const faqSchemas = find(parse(faqHtml), "script").filter((n)=>attr(n,"type")==="application/ld+json").map((n)=>JSON.parse((n.childNodes ?? []).map((x)=>x.value ?? "").join("")));
+  check(faqSchemas.some((s)=>s["@type"]==="FAQPage" && Array.isArray(s.mainEntity) && s.mainEntity.length>=4), `${locale}: faq page missing FAQPage JSON-LD`);
   const unified=locale==="en"||industrialLocales.includes(locale);
   const facts = unified?text(dom):text(sections[0] ?? {childNodes:[]});
   for (const v of ["12 m","300 kg","24 V","85 kg","610 × 220 × 220 mm","500 × 300 × 250 mm","650 × 350 × 500 mm","M24","20 s",">50",">3000"]) check(facts.includes(v),`${locale}: missing source fact ${v}`);
@@ -93,6 +100,11 @@ if (!isConfigured) {
   check(!all(dist).some((f)=>/sitemap.*\.xml$/.test(f)),"unapproved sitemap exists");
 } else {
   check(robots.includes("Allow: /"), "production robots.txt missing Allow: /");
+  for (const bot of ["Bingbot", "OAI-SearchBot", "ChatGPT-User", "GPTBot"]) {
+    check(robots.includes(`User-agent: ${bot}`), `production robots.txt missing AI/search crawler rule for ${bot}`);
+  }
+  const indexNowFile = join(dist, "5e672439aa59958dfc91438cbfa2b00c.txt");
+  check(existsSync(indexNowFile) && readFileSync(indexNowFile, "utf8").trim() === "5e672439aa59958dfc91438cbfa2b00c", "production IndexNow key file missing or invalid");
   check(robots.includes(`Sitemap: ${effectiveOrigin}/sitemap-index.xml`), "production robots.txt missing sitemap index reference");
   check(robots.includes("Disallow: /admin/"), "production robots.txt missing Disallow: /admin/");
   check(robots.includes("Disallow: /404.html"), "production robots.txt missing Disallow: /404.html");

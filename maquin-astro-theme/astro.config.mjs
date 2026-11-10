@@ -6,15 +6,14 @@ import {
   siteRedirects as aliases,
   pageKeyForPath,
   coreAlternates,
-  industrialLocales,
+  articleAlternates,
 } from "./src/lib/site-config.mjs";
 
 const publicOrigin = resolvePublicOrigin();
 
 export default defineConfig({
   output: "static",
-  // The real volvet domain is pending confirmation. .invalid is preview-only;
-  // no sitemap/canonical is published until an approved origin is configured.
+  // 优先使用已配置的正式域名；若在预览环境显式清空 PUBLIC_SITE_URL，则回落到 .invalid 仅预览模式
   site: publicOrigin || "https://volvet.invalid",
   trailingSlash: "always",
   // i18n: 英文默认站位于根路径（无前缀），其余语言使用 /es/ /fr/ ... 前缀。
@@ -50,10 +49,11 @@ export default defineConfig({
         } else if (pathname.includes("/guides/")) {
           const slug = pathname.split("/guides/")[1]?.replace(/\/$/, "");
           if (slug) {
+            const alts = articleAlternates(slug);
+            const enAlt = alts.find((a) => a.lang === "en");
             links = [
-              { lang: "en", url: `${origin}/guides/${slug}/` },
-              ...industrialLocales.map((l) => ({ lang: l, url: `${origin}/${l}/guides/${slug}/` })),
-              { lang: "x-default", url: `${origin}/guides/${slug}/` },
+              ...alts.map((a) => ({ lang: a.lang, url: `${origin}${a.path}` })),
+              ...(enAlt ? [{ lang: "x-default", url: `${origin}${enAlt.path}` }] : []),
             ];
           }
         }

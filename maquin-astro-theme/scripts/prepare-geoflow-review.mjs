@@ -11,24 +11,41 @@ if(!input||!output){console.error("Usage: npm run content:prepare -- --input=/pr
  const text=n=>["script","style","iframe"].includes(n.tagName)?"":n.nodeName==="#text"?n.value:(n.childNodes??[]).map(text).join(" ");
  const allowedPaths=new Set(Object.values(corePages).map(p=>p.path));
 
+ const reservedGuides=new Set(["index","pole-jack-compatibility","install-light-pole-without-crane","admin","quote","resources","article"]);
+
  function extractEvidenceRefs(rawText) {
   const refs=new Set();
-  if(/\b300\s*kg\b/i.test(rawText)) refs.add("F002");
-  if(/\b12\s*m(?:eters?)?\b/i.test(rawText)) refs.add("F003");
+  // 按 docs/content-strategy/fact-register.csv 的 F001–F031 口径映射事实编号
+  if(/\b12\s*m(?:eters?)?\b/i.test(rawText)) refs.add("F002");
+  if(/\b300\s*kg\b/i.test(rawText)) refs.add("F003");
   if(/\b24\s*V\b/i.test(rawText)) refs.add("F004");
-  if(/\b85\s*kg\b/i.test(rawText)) refs.add("F008");
-  if(/(?:180\s*(?:mm)?\s*(?:[-–—]|to)\s*260\s*mm|\bp\.?c\.?d\.?)/i.test(rawText)) refs.add("F015");
-  if(/\bM16|M18|M20|M22|M24\b/i.test(rawText)) refs.add("F016");
-  if(/\b(?:two-module|split module|two-person|two workers)\b/i.test(rawText)) refs.add("F001");
-  if(/\b(?:vertical test rig|pre-shipment|hydraulic pressure hold)\b/i.test(rawText)) refs.add("F020");
-  if(/\b(?:crane access permits?|overhead power|narrow access)\b/i.test(rawText)) refs.add("F010");
+  if(/\b85\s*kg\b/i.test(rawText)) refs.add("F005");
+  if(/\b45\s*kg\b/i.test(rawText)) refs.add("F006");
+  if(/\b40\s*kg\b/i.test(rawText)) refs.add("F007");
+  if(/\b610\s*[×x]\s*220\s*[×x]\s*220\b/i.test(rawText)) refs.add("F008");
+  if(/\b500\s*[×x]\s*300\s*[×x]\s*250\b/i.test(rawText)) refs.add("F009");
+  if(/\b650\s*[×x]\s*350\s*[×x]\s*500\b/i.test(rawText)) refs.add("F010");
+  if(/\b(?:1\s*[-–—]\s*2\s*(?:operators?|workers?|persons?)|two-module|split module|two-person|two workers)\b/i.test(rawText)) refs.add("F011");
+  if(/\bM24\b|\bM16\s*(?:[-–—]|to|\/)\s*M24\b/i.test(rawText)) refs.add("F012");
+  if(/\bM16\s*(?:[-–—]|to|\/)\s*M22\b|\bM16\b/i.test(rawText)) refs.add("F013");
+  if(/(?:180\s*(?:mm)?\s*(?:[-–—]|to)\s*260\s*mm|\bp\.?c\.?d\.?)/i.test(rawText)) refs.add("F014");
+  if(/\b20\s*s(?:econds?)?\b/i.test(rawText)) refs.add("F017");
+  if(/(?:>|over|more than)\s*50\s*(?:lifts?|cycles?)\b/i.test(rawText)) refs.add("F018");
+  if(/(?:>|over|more than)\s*3000\s*cycles?\b/i.test(rawText)) refs.add("F019");
+  if(/\b(?:dimensioned drawing review|non-standard bases?|flange diagram)\b/i.test(rawText)) refs.add("F020");
+  if(/\b(?:field validation pending|operating instructions?|site compatibility)\b/i.test(rawText)) refs.add("F021");
   return Array.from(refs).sort();
  }
 
- function extractRelatedPaths(rawText) {
+ function extractRelatedPaths(rawText, currentSlug) {
   const paths=new Set();
   for(const p of allowedPaths){
    if(rawText.includes(p)) paths.add(p);
+  }
+  // 同时提取指向同批文章的 /guides/<slug>/ 站内互链，跳过当前文章自身与占位路径
+  for(const m of rawText.matchAll(/\/guides\/([a-z0-9]+(?:-[a-z0-9]+)*)\//g)){
+   const slug=m[1];
+   if(slug&&slug!==currentSlug&&!reservedGuides.has(slug)) paths.add(`/guides/${slug}/`);
   }
   if(paths.size===0) paths.add("/guides/pole-jack-compatibility/");
   return Array.from(paths);
@@ -79,12 +96,34 @@ if(!input||!output){console.error("Usage: npm run content:prepare -- --input=/pr
    };
 
    const cleanContent = htmlContent.replace(/<script[\s\S]*?<\/script>/gi, "");
+   // 保留连续 Markdown 表格行并入同一段落块，不再丢弃表格
+   let curTable = [];
+   const flushTableBlock = () => {
+    if (curTable.length > 0) {
+     const t = curTable.join("\n").replace(/[<>\u0000-\u0008]/g, "").trim();
+     if (t.length >= 30) {
+      if (!current) current = { heading: "Overview", paragraphs: [] };
+      current.paragraphs.push(t);
+     }
+     curTable = [];
+    }
+   };
+   const flushAllBlocks = () => {
+    flushPara();
+    flushTableBlock();
+   };
    for (const rawLine of cleanContent.split("\n")) {
     const line = rawLine.trim();
-    if (!line || line.startsWith("---") || line.startsWith("```") || line.startsWith("|")) {
-     flushPara();
+    if (!line || line.startsWith("---") || line.startsWith("```")) {
+     flushAllBlocks();
      continue;
     }
+    if (line.startsWith("|")) {
+     flushPara();
+     curTable.push(line);
+     continue;
+    }
+    flushTableBlock();
     if (line.startsWith("## ") || line.startsWith("### ")) {
      flushSection();
      const heading = line.replace(/^#+\s*/, "").replace(/[<>\u0000-\u0008]/g, "").trim();
@@ -107,11 +146,12 @@ if(!input||!output){console.error("Usage: npm run content:prepare -- --input=/pr
     }
     curPara.push(line);
    }
+   flushTableBlock();
    flushSection();
   }
 
   const fullText = [item.title, item.meta_description ?? "", htmlContent].join(" ");
-  const relatedPaths = extractRelatedPaths(fullText);
+  const relatedPaths = extractRelatedPaths(fullText, item.slug);
   const evidenceRefs = extractEvidenceRefs(fullText);
 
   const a={

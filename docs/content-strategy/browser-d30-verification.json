@@ -1,6 +1,6 @@
 {
-  "sourceDigest": "ebfabf0008405dcee05499ce7c748dd28ddfb50f8e7296017a98841bf69e0fc4",
-  "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
+  "sourceDigest": "3ff1e7832afb9dcb218c56739cef1212b604909654f933e8eca45b7cc9e53bdc",
+  "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "date": "2026-10-28",
   "stage": "D15-D30",
   "passed": true,
@@ -18,7 +18,7 @@
       "passed": true
     },
     {
-      "name": "/: pending-domain preview indexing",
+      "name": "/: robots and canonical directive matches origin configuration",
       "passed": true
     },
     {
@@ -38,7 +38,7 @@
       "passed": true
     },
     {
-      "name": "/products/light-pole-jack/: pending-domain preview indexing",
+      "name": "/products/light-pole-jack/: robots and canonical directive matches origin configuration",
       "passed": true
     },
     {
@@ -58,7 +58,7 @@
       "passed": true
     },
     {
-      "name": "/guides/pole-jack-compatibility/: pending-domain preview indexing",
+      "name": "/guides/pole-jack-compatibility/: robots and canonical directive matches origin configuration",
       "passed": true
     },
     {
@@ -78,7 +78,7 @@
       "passed": true
     },
     {
-      "name": "/quote/: pending-domain preview indexing",
+      "name": "/quote/: robots and canonical directive matches origin configuration",
       "passed": true
     },
     {
@@ -98,7 +98,7 @@
       "passed": true
     },
     {
-      "name": "/contact-us/: pending-domain preview indexing",
+      "name": "/contact-us/: robots and canonical directive matches origin configuration",
       "passed": true
     },
     {
@@ -118,7 +118,7 @@
       "passed": true
     },
     {
-      "name": "/privacy/: pending-domain preview indexing",
+      "name": "/privacy/: robots and canonical directive matches origin configuration",
       "passed": true
     },
     {
@@ -138,7 +138,7 @@
       "passed": true
     },
     {
-      "name": "/terms/: pending-domain preview indexing",
+      "name": "/terms/: robots and canonical directive matches origin configuration",
       "passed": true
     },
     {
@@ -158,7 +158,7 @@
       "passed": true
     },
     {
-      "name": "/editorial-policy/: pending-domain preview indexing",
+      "name": "/editorial-policy/: robots and canonical directive matches origin configuration",
       "passed": true
     },
     {
@@ -334,37 +334,37 @@
   "httpErrors": [],
   "receipts": [
     {
-      "reference": "VOL-20261029-E42C8EAF",
+      "reference": "VOL-20261110-FF785E13",
       "isTest": true,
       "locale": "en"
     },
     {
-      "reference": "VOL-20261029-21FAEAA8",
+      "reference": "VOL-20261110-352A9AA6",
       "isTest": true,
       "locale": "es"
     },
     {
-      "reference": "VOL-20261029-7DEC8458",
+      "reference": "VOL-20261110-05A41A93",
       "isTest": true,
       "locale": "fr"
     },
     {
-      "reference": "VOL-20261029-D6C88ABB",
+      "reference": "VOL-20261110-268B2CB2",
       "isTest": true,
       "locale": "pt"
     },
     {
-      "reference": "VOL-20261029-DAC873FE",
+      "reference": "VOL-20261110-935738DF",
       "isTest": true,
       "locale": "vi"
     },
     {
-      "reference": "VOL-20261029-98457A9D",
+      "reference": "VOL-20261110-16F94DB5",
       "isTest": true,
       "locale": "th"
     },
     {
-      "reference": "VOL-20261029-6555DDCC",
+      "reference": "VOL-20261110-5AAFDFAD",
       "isTest": true,
       "locale": "id"
     }

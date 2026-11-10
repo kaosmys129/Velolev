@@ -19,6 +19,7 @@
     "d30:browser": "node --experimental-sqlite scripts/browser-d30.mjs",
     "d30:check": "node scripts/verify-d30.mjs",
     "design:export": "node scripts/export-design-system.mjs",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "test": "npm run build && npm run content:check && npm run decision:test && npm run inquiry:test && npm run email:test && npm run d30:check && npm run d60:check && npm run retirement:test && npm run retirement:check",
     "decision:test": "node --test scripts/decision-tools.test.mjs scripts/industrial-localization.test.mjs scripts/language-navigation.test.mjs scripts/prepare-geoflow-review.test.mjs",
     "locales:check": "node scripts/verify-industrial-locales.mjs",

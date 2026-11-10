@@ -1,9 +1,11 @@
 import {supportedLocales as languages} from "./languages.mjs";
 import baseline from "../data/content-baseline.json" with {type:"json"};
 import englishAliases from "../data/route-aliases.json" with {type:"json"};
+import publishedSnapshot from "../data/published-content.json" with {type:"json"};
 import localizedArticles from "../data/published-content-locales.json" with {type:"json"};
-const registeredArticles = new Set(Object.values(localizedArticles).flatMap(o => Object.keys(o)));
-export function publicOrigin(value = process.env.PUBLIC_SITE_URL || baseline.deployment.publicOrigin) {
+// 仅对快照中实际存在的英文指南及各自语言已翻译的文章放行多语言路由
+const englishArticleSlugs = new Set((publishedSnapshot.articles ?? []).map(a => a.slug));
+export function publicOrigin(value = process.env.PUBLIC_SITE_URL !== undefined ? process.env.PUBLIC_SITE_URL : baseline.deployment.publicOrigin) {
   if(!value)return null;
   const raw = String(value).trim();
   const normalized = raw ? raw.replace(/\/+$/, '') : '';
@@ -25,7 +27,7 @@ export const corePages={
   method:{path:"/guides/install-light-pole-without-crane/",title:"Installing Light Poles Without a Crane: Methods & Limits | volvet",description:"A planning guide to equipment selection, complete work scope and engineering review. It is not a field operating procedure."},
   resources:{path:"/resources/",title:"Product Specifications & Project Documents | volvet",description:"Download a source-derived product specification summary and a project information worksheet. Request reviewed project documents through the inquiry form."},
   faq:{path:"/faq/",title:"Portable Light Pole Lifter Questions | volvet",description:"Answers about rated load, pole height, standard configuration, compatibility, reported performance and the private quotation process."},
-  about:{path:"/about-us/",title:"About volvet: Equipment & Information | volvet",description:"Learn volvet's confirmed portable hydraulic pole lifter focus, 300 kg WLL specifications, and transparent B2B engineering procurement workflow."},
+  about:{path:"/about-us/",title:"About volvet: Equipment & Information | volvet",description:"Review volvet's portable light pole lifter focus, specification sources, 300 kg rated load, and private B2B project review workflow."},
   guides:{path:"/guides/",title:"Pole Installation Guides & Planning Tools | volvet",description:"Find pole compatibility guidance, application planning, equipment comparison, cost scenarios and source-derived specifications."},
   home:{path:"/",title:"Portable Light Pole Lifter for Street Lighting | volvet",description:"Plan street light pole installation with volvet. Review the 12 m pole class, 300 kg rated load, foundation requirements and project quotation process."},
   product:{path:"/products/light-pole-jack/",title:"Portable Light Pole Lifter: Specifications & Configuration | volvet",description:"Review volvet portable light pole lifter specifications, two-module dimensions, included anchor bolts and compatibility requirements. Request a B2B project quotation."},
@@ -66,11 +68,23 @@ export function localizePath(href,locale="en") {
   const match=href.match(/^([^?#]*)([\s\S]*)$/),key=pageKeyForPath(match[1]);
   if(key)return (localizedPagePath(key,locale)??corePages[key].path)+match[2];
   const articleMatch=match[1].match(/^\/(?:(?:es|fr|pt|vi|th|id)\/)?guides\/([a-z0-9-]+)\/?$/);
-  if(articleMatch&&registeredArticles.has(articleMatch[1])&&!["pole-jack-compatibility","install-light-pole-without-crane"].includes(articleMatch[1])){
-    const prefix=locale==="en"?"":`/${locale}`;
-    return `${prefix}/guides/${articleMatch[1]}/`+match[2];
+  const slug=articleMatch?.[1];
+  if(slug&&!["pole-jack-compatibility","install-light-pole-without-crane"].includes(slug)){
+    if(locale==="en"&&englishArticleSlugs.has(slug))return `/guides/${slug}/`+match[2];
+    if(industrialLocales.includes(locale)&&Boolean(localizedArticles[locale]?.[slug]))return `/${locale}/guides/${slug}/`+match[2];
   }
   return href;
+}
+/**
+ * 返回指定指南文章实际已发布的语言版本路径列表，避免为未翻译语种生成 404 hreflang 链接。
+ */
+export function articleAlternates(slug,{articles=publishedSnapshot.articles,localesMap=localizedArticles}={}) {
+  const alts=[];
+  if((articles??[]).some(a=>a.slug===slug))alts.push({lang:"en",path:`/guides/${slug}/`});
+  for(const lang of industrialLocales){
+    if(localesMap?.[lang]?.[slug])alts.push({lang,path:`/${lang}/guides/${slug}/`});
+  }
+  return alts;
 }
 export function coreAlternates(key) {
   return languages.map(lang=>({lang,path:localizedPagePath(key,lang)})).filter(a=>a.path!==null);

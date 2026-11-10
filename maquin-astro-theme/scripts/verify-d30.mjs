@@ -27,7 +27,7 @@ if (argVal && (existsSync(argVal) || argVal.startsWith("/") || argVal.startsWith
 } else {
   const rawOrigin = process.env.PUBLIC_SITE_URL ||
     (argVal && /^https?:\/\//.test(argVal) ? argVal : null) ||
-    (process.argv.includes("--configured") || process.argv.includes("--production") ? (buildMeta?.origin || "https://www.velolev.org") : null) ||
+    (process.argv.includes("--configured") || process.argv.includes("--production") ? (buildMeta?.origin || "https://volvet.com") : null) ||
     (buildMeta?.origin && !/\.invalid$/.test(buildMeta.origin) ? buildMeta.origin : null);
   origin = sanitizeOrigin(rawOrigin);
 }

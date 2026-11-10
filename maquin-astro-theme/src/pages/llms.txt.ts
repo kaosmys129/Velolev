@@ -1,50 +1,70 @@
-import { publicOrigin } from "../lib/site-config.mjs";
+import baseline from "../data/content-baseline.json" with { type: "json" };
+import { publicOrigin, corePages } from "../lib/site-config.mjs";
+import { loadPublishedSnapshot } from "../lib/reviewed-snapshot.mjs";
 
+/**
+ * 基于已确认的 S4 规格基线与已审核指南快照动态生成 llms.txt，杜绝超出 S4 的未验证工程与商业承诺。
+ */
 export function GET() {
   const origin = publicOrigin() ? publicOrigin().replace(/\/$/, "") : "";
+  const urlFor = (path) => (origin ? `${origin}${path}` : path);
 
-  const content = `# volvet / Portable Light Pole Lifter
+  const p = baseline.product;
+  const s = p.specifications;
+  const c = p.standardConfiguration;
+  const m = p.manufacturerReportedPerformance;
+  const snapshot = loadPublishedSnapshot();
+  const guidesList = (snapshot.articles ?? [])
+    .map((a) => `- [${a.title}](${urlFor(`/guides/${a.slug}/`)}): ${a.description}`)
+    .join("\n");
 
-> volvet is an industrial equipment manufacturer specializing in ground-level mechanical rigging equipment, notably the portable hydraulic light pole lifter engineered to erect 6m to 12m municipal street light columns without mobile cranes.
+  const content = `# ${baseline.brand.name} / ${p.name}
 
-## Core Technical Specifications & Engineering Boundaries
+> ${baseline.brand.name} publishes source-derived specification summaries and private B2B project review tools for its portable battery-powered light pole lifter. No public pricing, stock availability, warranties, certifications, or completed third-party field validation records are published on this site.
 
-- **Rated Vertical Lifting Capacity**: Strictly 300kg rated load capacity (field validation pending).
-- **Maximum Erection Pole Height**: Strictly 12m, covering 6m, 8m, 10m, and 12m standard roadway and solar lighting shafts.
-- **Modular Packaging Architecture**: Split two-module transport package totaling 85kg (45kg hydraulic lifter assembly + 40kg 24V DC battery power unit).
-- **Transport Crate Outer Dimensions**: 650 × 350 × 500 mm in heavy-duty export packaging.
-- **Power System**: Integrated 24V DC rechargeable battery system; operates off-grid without utility power or gasoline generators; >50 lifting cycles per charge.
-- **Universal Base Plate Compatibility**: Heavy-duty slotted base plate accommodating Pitch Circle Diameters (P.C.D.) between 180mm and 260mm.
-- **Foundation Anchor Stud Sizing**: Accommodates M16, M18, M20, M22, and M24 anchor studs; standard package includes hardened clamping hardware for M16–M22.
-- **Jobsite Crew Requirement**: Strictly mandates a 2-person operation crew for alignment guidance and hydraulic control (never single-person operation).
-- **Governing Engineering Standards**:
-  - Electrical overhead line clearances: OSHA 1926 Subpart CC & IEEE 516 live-line working envelopes.
-  - Structural overturning & wind moment resistance: EN 40-3.
-  - Structural foundation anchor bolts: ASTM F1554 (Grades 36, 55, and 105).
-  - Roadway photometric alignment: ANSI/IES RP-8-18.
+## Core Technical Specifications (Source: ${p.sourceId} v${baseline.version})
 
-## Essential Product & Decision Guides
+- **Applicable Pole Height**: Up to ${s.applicablePoleHeightM} m (project-specific pole, flange, foundation, and site conditions require review).
+- **Rated Load**: ${s.ratedLoadKg} kg.
+- **Battery Voltage**: ${s.batteryVoltageV} V battery-powered hydraulic system.
+- **Two-Module Weight**: ${s.totalWeightKg} kg total (${s.hydraulicModuleWeightKg} kg hydraulic module + ${s.electricalCabinetWeightKg} kg electrical cabinet).
+- **Dimensions**: Hydraulic module ${s.hydraulicModuleDimensionsMm.join(" × ")} mm; electrical cabinet ${s.electricalCabinetDimensionsMm.join(" × ")} mm; packaging ${s.packagingDimensionsMm.join(" × ")} mm.
+- **Operators (Specification Table)**: ${s.operators} operators (single-person operation in the introductory summary is conditional; detailed field operating procedures remain pending engineering review).
+- **Listed Anchor Bolt Compatibility**: ${s.listedAnchorBoltSizes.join(", ")}.
+- **Standard Configuration Included**: ${c.equipmentSets} equipment set, ${c.groundStakeSets} ground stake set, and ${c.anchorBoltSizesIncluded.join(", ")} anchor bolts (${c.anchorBoltSetsPerSize} sets per size). M24 is listed on the compatibility table but is not included in the standard anchor bolt set.
+- **Flange Hole Span**: ${s.flangeHoleSpanMm[0]}–${s.flangeHoleSpanMm[1]} mm listed span. Non-standard bases require a dimensioned drawing review.
 
-- [Portable Light Pole Lifter Product Specifications](${origin}/products/light-pole-jack/): Complete dimensional drawings, hydraulic stroke specs, and load curves.
-- [Crane Alternative for Tight Spaces](${origin}/compare/pole-jack-vs-crane/): Engineering and jobsite analysis comparing portable hydraulic lifters against 16-ton mobile cranes.
-- [Crane ROI Calculator](${origin}/tools/roi-calculator/): Project-specific savings calculator comparing crane rental logistics against self-owned ground rigging.
-- [Flange & Anchor Bolt Compatibility Guide](${origin}/guides/pole-jack-compatibility/): Engineering clearance charts for P.C.D. 180mm–260mm and M16–M24 foundation cages.
-- [Engineering Resources & CAD Drawings](${origin}/resources/): Technical specification sheets, dimensional tables, and field SOP documentation.
-- [Factory Engineering Drawing Review & Quote](${origin}/quote/): Submit pole base drawings for free 24-hour factory engineering audit.
+## Manufacturer-Reported Figures (Field Validation Pending)
 
+- **Field Validation Status**: ${p.fieldValidation} (${m.evidenceStatus}).
+- **Lift Time**: ${m.liftTimeSeconds} s (manufacturer-reported).
+- **Lifts per Full Charge**: ${m.liftsPerFullCharge} (manufacturer-reported).
+- **Usage Cycles**: ${m.usageCycles} (manufacturer-reported).
+- **Disclosures Not Published**: No public unit price, rental benchmark, stock count, warranty period, laboratory/certification report, or customer field case study is currently published.
+
+## Key Decision & Specification Pages
+
+- [${corePages.product.title}](${urlFor(corePages.product.path)}): Full specification table, standard configuration, flange span limits, and Product FAQ.
+- [${corePages.compatibility.title}](${urlFor(corePages.compatibility.path)}): Bolt compatibility checker (${s.flangeHoleSpanMm[0]}–${s.flangeHoleSpanMm[1]} mm span, M16–M24 studs) and drawing-review checklist.
+- [${corePages.compare.title}](${urlFor(corePages.compare.path)}): Scope comparison framework between portable lifting equipment and crane mobilization.
+- [${corePages.roi.title}](${urlFor(corePages.roi.path)}): Neutral cost-scenario calculator using user-supplied project and local rate inputs.
+- [${corePages.resources.title}](${urlFor(corePages.resources.path)}): Machine-readable specification downloads (JSON/CSV) and project worksheet.
+- [${corePages.faq.title}](${urlFor(corePages.faq.path)}): Grounded answers on limits, included hardware, compatibility, and private B2B quotation.
+- [${corePages.quote.title}](${urlFor(corePages.quote.path)}): Submit pole parameters and flange drawings for a private B2B review.
+${guidesList ? `\n## Published Planning Guides\n\n${guidesList}\n` : ""}
 ## Frequently Asked Questions
 
-### Can the portable pole lifter be operated by a single technician?
-No. Jobsite safety protocols strictly mandate a two-person operation crew. One technician operates the 24V hydraulic controls while the second technician guides base plate alignment onto foundation anchor studs.
+### What are the rated pole height and load limits?
+Source ${p.sourceId} lists up to ${s.applicablePoleHeightM} m applicable pole height and ${s.ratedLoadKg} kg rated load. Compatibility also depends on foundation, base flange geometry, and complete assembled load including arms and luminaires.
 
-### What is the maximum pole height and load limit?
-The machine is strictly rated for 300kg maximum vertical load and 12m maximum pole height. Columns exceeding 300kg or 12m require mobile crane dispatch.
+### How many operators are required?
+The ${p.sourceId} specification table lists ${s.operators} operators. Any single-person reference is conditional, and site-specific safety and handling procedures remain subject to project review.
 
-### Does the base plate support diverse foundation bolt circle diameters?
-Yes. The heavy-duty universal slotted plate accommodates Pitch Circle Diameters (P.C.D.) between 180mm and 260mm across M16, M18, M20, M22, and M24 anchor studs.
+### Which anchor bolt sizes and flange spans are supported?
+Listed anchor bolt sizes are ${s.listedAnchorBoltSizes.join(", ")} across a listed flange hole span of ${s.flangeHoleSpanMm[0]}–${s.flangeHoleSpanMm[1]} mm. The standard configuration includes ${c.anchorBoltSizesIncluded.join(", ")} (${c.anchorBoltSetsPerSize} sets per size), while M24 is not included by default. Non-standard bases require a dimensioned drawing review.
 
-### How is the lifter powered on off-grid jobsites?
-The unit operates entirely on an integrated 24V DC rechargeable battery pack, requiring no external fuel generators or three-phase utility electricity.
+### Are prices, lead times, or field test reports published online?
+No. Equipment pricing, freight, and configuration quotations are handled privately through the B2B inquiry workflow (${urlFor(corePages.quote.path)}). Performance metrics (${m.liftTimeSeconds} s lift time, ${m.liftsPerFullCharge} lifts per charge, ${m.usageCycles} cycles) are manufacturer-reported only, with independent field validation marked pending.
 `;
 
   return new Response(content, {

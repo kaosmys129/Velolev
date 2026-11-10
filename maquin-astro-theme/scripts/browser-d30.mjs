@@ -6,7 +6,9 @@ import {randomBytes} from "node:crypto";
 import {mkdirSync,writeFileSync,readFileSync,existsSync} from "node:fs";
 import {fileURLToPath} from "node:url";
 import {join} from "node:path";
+import {publicOrigin} from "../src/lib/site-config.mjs";
 const root=fileURLToPath(new URL("../",import.meta.url)),out=join(root,"../docs/content-strategy/qa-d30");mkdirSync(out,{recursive:true});
+const isConfiguredOrigin=Boolean(publicOrigin());
 const builtVersion=verifyBuiltVersion(root);
 const token=randomBytes(36).toString("base64url"),directory=join(root,".local/d30-controlled-inbox");
 const {server,store}=createInquiryServer({directory,adminToken:token,testMode:true,rateLimit:100,logger:{error(){}}});server.listen(0,"127.0.0.1");await once(server,"listening");
@@ -21,7 +23,7 @@ async function fill(form,locale="en"){
 }
 try{
  for(const path of ["/","/products/light-pole-jack/","/guides/pole-jack-compatibility/","/quote/","/contact-us/","/privacy/","/terms/","/editorial-policy/"]){
-  const response=await page.goto(base+path,{waitUntil:"networkidle"});check(response.status()===200,`${path}: HTTP 200`);check(await page.locator("h1").count()===1,`${path}: one main heading`);const text=await page.locator("body").innerText();check(!/\$|\bUSD\b|\b(?:Velolev|PoleLift)\b|in stock|inventory/i.test(text),`${path}: brand and B2B policy`);check(await page.locator('meta[name="robots"]').getAttribute("content").then(x=>x.includes("noindex")),`${path}: pending-domain preview indexing`);
+  const response=await page.goto(base+path,{waitUntil:"networkidle"});check(response.status()===200,`${path}: HTTP 200`);check(await page.locator("h1").count()===1,`${path}: one main heading`);const text=await page.locator("body").innerText();check(!/\$|\bUSD\b|\b(?:Velolev|PoleLift)\b|in stock|inventory/i.test(text),`${path}: brand and B2B policy`);check(isConfiguredOrigin?(await page.locator('meta[name="robots"]').count()===0 && await page.locator('link[rel="canonical"]').getAttribute("href").then(x=>x.startsWith("https://volvet.com/"))):await page.locator('meta[name="robots"]').getAttribute("content").then(x=>x.includes("noindex")),`${path}: robots and canonical directive matches origin configuration`);
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${path}: desktop overflow`);
   if(["/","/products/light-pole-jack/","/quote/"].includes(path))await page.screenshot({path:join(out,path==="/"?"home-desktop.png":path.includes("products")?"product-desktop.png":"quote-desktop.png"),fullPage:true});
  }

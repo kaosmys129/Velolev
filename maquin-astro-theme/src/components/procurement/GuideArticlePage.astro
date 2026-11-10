@@ -4,12 +4,14 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import Layout from "../../layouts/ProcurementLayout.astro";
 import MediaFigure from "./MediaFigure.astro";
-import { industrialLocales, localizedPagePath, publicOrigin, canonicalUrl, corePages, pageKeyForPath, localizePath } from "../../lib/site-config.mjs";
+import { industrialLocales, localizedPagePath, publicOrigin, canonicalUrl, corePages, pageKeyForPath, localizePath, articleAlternates } from "../../lib/site-config.mjs";
 import { translateText } from "../../lib/industrial-localization.mjs";
 import localizedContent from "../../data/published-content-locales.json";
+import { loadPublishedSnapshot } from "../../lib/reviewed-snapshot.mjs";
 import { renderMarkdownBlock } from "../../lib/render-markdown.mjs";
 
 const { article: rawArticle, locale = "en" } = Astro.props;
+const isCraneExplainer = rawArticle.slug === "install-12m-street-light-poles-without-crane";
 
 // 读取本地化文章数据（若存在）
 const locArticle = locale !== "en" && localizedContent[locale]?.[rawArticle.slug]
@@ -32,23 +34,20 @@ const meta = {
   path: currentPath,
   title: article.title.includes("|") ? article.title : `${article.title} | volvet`,
   description: article.description,
-  alternates: [
-    { lang: "en", path: `/guides/${article.slug}/` },
-    ...industrialLocales.map(l => ({ lang: l, path: `/${l}/guides/${article.slug}/` }))
-  ]
+  alternates: articleAlternates(article.slug, { articles: [rawArticle], localesMap: localizedContent })
 };
 
-// 检测瑞士工商业信息图卡片资源
+// 检测信息图资源（仅首篇 12 m 指南回退历史文件夹，避免后续文章误挂载）
 const repoPublicImages = path.resolve(process.cwd(), "public/images");
 const publicBase = fs.existsSync(repoPublicImages)
   ? repoPublicImages
   : path.resolve(process.cwd(), "maquin-astro-theme/public/images");
 const candidates = [
   locArticle?.imageFolder,
-  `portable-light-pole-lifter-explainer-${locale}`,
+  ...(isCraneExplainer ? [`portable-light-pole-lifter-explainer-${locale}`] : []),
   article.slug,
   `volvet-lifter-${article.slug}`,
-  "volvet-lifter-task-based-deepseek-article"
+  ...(isCraneExplainer ? ["volvet-lifter-task-based-deepseek-article"] : [])
 ].filter(Boolean);
 
 let imageFolder = null;
@@ -59,131 +58,132 @@ for (const c of candidates) {
   }
 }
 
-// 检查浅色系高定工业风封面大图 (cover-flow-hero-16x9.png)
+// 检查封面大图 (cover-flow-hero-16x9.png)
 let heroCoverImage = null;
 if (imageFolder && fs.existsSync(path.join(publicBase, imageFolder, "cover-flow-hero-16x9.png"))) {
   heroCoverImage = `/images/${imageFolder}/cover-flow-hero-16x9.png`;
 }
 
+// 严格遵循 S4 规格基线的图注文本（移除未经证实的标准、吨位、现场实测与免费 24h 承诺）
 const figureMap = {
   en: {
-    heroCoverAlt: "Installing 12m Street Light Poles Without Crane - Engineering Guide Cover",
-    heroCoverLabel: "01 / FIELD PROCEDURE SPECIFICATION",
-    heroCoverCaption: "Figure 1: volvet portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.",
-    fig5Alt: "Jobsite feasibility comparison: 16-ton mobile crane vs volvet portable hydraulic pole lifter",
-    fig5Label: "02 / FEASIBILITY & COMPARISON",
-    fig5Caption: "Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus volvet portable pole lifter across narrow access, crew size, and powerline clearances.",
-    fig2Alt: "Portable light pole lifter two-module mechanical engineering architecture",
-    fig2Label: "03 / MECHANICAL ARCHITECTURE",
-    fig2Caption: "Figure 2: Two-module hydraulic architecture comprising 45kg lifting cylinder mast and 40kg 24V electric power cabinet designed for two-worker field maneuverability.",
-    fig3Alt: "Base flange compatibility and P.C.D. 180mm to 260mm radial slotted geometry",
-    fig3Label: "04 / BASE & FLANGE COMPATIBILITY",
-    fig3Caption: "Figure 3: Universal base plate geometry accommodating 180mm to 260mm bolt circle diameters (P.C.D.) and M16-M24 anchor studs with ASTM F1554 compliance.",
-    fig4Alt: "Standard two-worker ground-level erection SOP workflow",
-    fig4Label: "05 / FIELD EXECUTION SOP",
-    fig4Caption: "Figure 4: Standard three-stage SOP workflow: Stage 1 ground preparation, Stage 2 hydraulic erection stroke, and Stage 3 foundation leveling and torque lock."
+    heroCoverAlt: "Installing 12 m Street Light Poles Without Crane - Specification Overview Cover",
+    heroCoverLabel: "01 / SPECIFICATION OVERVIEW",
+    heroCoverCaption: "Figure 1: volvet portable hydraulic pole lifter specification overview. 300 kg rated load and 85 kg two-module layout for 12 m class lighting poles subject to project review.",
+    fig5Alt: "Project planning comparison: mobile crane vs volvet portable hydraulic pole lifter",
+    fig5Label: "02 / PROJECT PLANNING COMPARISON",
+    fig5Caption: "Figure 5: Site access and project planning comparison between a conventional mobile crane and the volvet portable pole lifter across narrow paths, crew allocation, and overhead clearances.",
+    fig2Alt: "Portable light pole lifter two-module mechanical architecture",
+    fig2Label: "03 / TWO-MODULE ARCHITECTURE",
+    fig2Caption: "Figure 2: Two-module hydraulic architecture comprising a 45 kg hydraulic lifting module and a 40 kg 24 V electrical cabinet (85 kg total equipment weight; 1–2 operators listed).",
+    fig3Alt: "Base flange span and anchor bolt compatibility (180–260 mm span, M16–M24 listed)",
+    fig3Label: "04 / FLANGE & ANCHOR BOLTS",
+    fig3Caption: "Figure 3: Base plate geometry showing 180–260 mm flange hole span and M16–M24 listed anchor bolts (M16–M22 included; non-standard bases require a dimensioned drawing review).",
+    fig4Alt: "Pre-installation engineering review and lifting boundary checks",
+    fig4Label: "05 / PRE-LIFT REVIEW CHECKS",
+    fig4Caption: "Figure 4: Pre-installation project checks covering foundation survey, ground-level equipment connection, controlled lift boundaries, and final structural nut tightening."
   },
   es: {
-    heroCoverAlt: "Cómo instalar postes de luz de 12 m sin grúa - Portada de Guía Técnica",
-    heroCoverLabel: "01 / ESPECIFICACIÓN DE PROCEDIMIENTO EN CAMPO",
-    heroCoverCaption: "Figura 1: Guía de procedimiento de ingeniería para elevador portátil volvet. Capacidad verificada de 300 kg y arquitectura dividida de 85 kg para eliminar grúas pesadas en accesos difíciles.",
-    fig5Alt: "Comparativa de viabilidad en obra: camión grúa de 16t frente a elevador hidráulico portátil volvet",
-    fig5Label: "02 / VIABILIDAD Y COMPARATIVA TÉCNICA",
-    fig5Caption: "Figura 5: Comparativa de viabilidad operativa y acceso a obra: camión grúa convencional de 16t frente a elevador portátil volvet en pasillos estrechos, cuadrilla y líneas eléctricas.",
-    fig2Alt: "Arquitectura mecánica modular de dos submódulos del elevador portátil para postes de luz",
-    fig2Label: "03 / ARQUITECTURA MECÁNICA",
-    fig2Caption: "Figura 2: Arquitectura hidráulica de dos módulos compuesta por cilindro de 45 kg y gabinete de potencia 24V de 40 kg diseñada para maniobrabilidad de dos técnicos.",
-    fig3Alt: "Compatibilidad de brida base y geometría de ranuras radiales P.C.D. de 180 mm a 260 mm",
-    fig3Label: "04 / COMPATIBILIDAD DE BASE Y BRIDA",
-    fig3Caption: "Figura 3: Geometría de placa base universal compatible con círculos de pernos (P.C.D.) de 180 mm a 260 mm y espárragos M16-M24 conforme a norma ASTM F1554.",
-    fig4Alt: "Flujo de trabajo SOP estándar para erección a nivel de suelo por dos operarios",
-    fig4Label: "05 / PROCEDIMIENTO OPERATIVO (SOP)",
-    fig4Caption: "Figura 4: Flujo operativo estándar en tres fases: Fase 1 preparación de cimentación, Fase 2 carrera de elevación hidráulica y Fase 3 nivelación y apriete de torque."
+    heroCoverAlt: "Cómo instalar postes de luz de 12 m sin grúa - Portada de especificaciones",
+    heroCoverLabel: "01 / RESUMEN DE ESPECIFICACIONES",
+    heroCoverCaption: "Figura 1: Resumen de especificaciones del elevador hidráulico portátil volvet. Carga nominal de 300 kg y diseño de dos módulos de 85 kg para postes de clase 12 m sujeto a revisión de proyecto.",
+    fig5Alt: "Comparativa de planificación: camión grúa frente a elevador hidráulico portátil volvet",
+    fig5Label: "02 / COMPARATIVA DE PLANIFICACIÓN",
+    fig5Caption: "Figura 5: Comparativa de acceso y planificación entre un camión grúa convencional y el elevador portátil volvet en accesos estrechos, cuadrilla y espacio aéreo.",
+    fig2Alt: "Arquitectura mecánica de dos módulos del elevador portátil para postes de luz",
+    fig2Label: "03 / ARQUITECTURA DE DOS MÓDULOS",
+    fig2Caption: "Figura 2: Arquitectura hidráulica de dos módulos compuesta por módulo de elevación de 45 kg y gabinete eléctrico de 24 V de 40 kg (85 kg totales; 1–2 operarios indicados).",
+    fig3Alt: "Rango de brida base y compatibilidad de pernos de anclaje (180–260 mm, M16–M24 listados)",
+    fig3Label: "04 / BRIDA Y PERNOS DE ANCLAJE",
+    fig3Caption: "Figura 3: Geometría de placa base con rango de orificios de 180–260 mm y pernos M16–M24 listados (M16–M22 incluidos; las bases no estándar requieren revisión de plano acotado).",
+    fig4Alt: "Verificaciones previas de ingeniería y límites de elevación",
+    fig4Label: "05 / VERIFICACIONES PREVIAS AL IZAJE",
+    fig4Caption: "Figura 4: Verificaciones previas del proyecto que abarcan revisión de cimentación, conexión a nivel de suelo, límites de elevación controlada y apriete final."
   },
   fr: {
-    heroCoverAlt: "Installation de candélabres de 12 m sans grue - Couverture du guide technique",
-    heroCoverLabel: "01 / SPÉCIFICATION DE PROCÉDURE CHANTIER",
-    heroCoverCaption: "Figure 1 : Guide technique d'érection de candélabres avec l'élévateur portable volvet. Charge éprouvée 300 kg et architecture scindée 85 kg évitant le recours au camion-grue.",
-    fig5Alt: "Comparatif de faisabilité chantier : camion-grue 16t vs élévateur hydraulique portable volvet",
-    fig5Label: "02 / FAISABILITÉ ET COMPARAISON CHANTIER",
-    fig5Caption: "Figure 5 : Comparaison d'accès et d'exploitation : grue mobile 16t conventionnelle vs élévateur portable volvet en allée étroite, effectif d'intervention et lignes aériennes.",
-    fig2Alt: "Architecture mécanique modulaire à deux unités de l'élévateur portable pour candélabres",
-    fig2Label: "03 / ARCHITECTURE MÉCANIQUE",
-    fig2Caption: "Figure 2 : Architecture hydraulique scindée en deux colis (mât de levage 45 kg et coffret 24V 40 kg) manuportables par deux techniciens.",
-    fig3Alt: "Compatibilité des platines d'assise et perçage radial P.C.D. 180 mm à 260 mm",
-    fig3Label: "04 / COMPATIBILITÉ DES BRIDES ET PLATINES",
-    fig3Caption: "Figure 3 : Platine d'assise universelle recevant les entraxes (P.C.D.) de 180 mm à 260 mm et tiges d'ancrage M16-M24 conformes à la norme ASTM F1554.",
-    fig4Alt: "Procédure opératoire standardisée (SOP) de levage au sol par deux opérateurs",
-    fig4Label: "05 / PROCÉDURE OPÉRATOIRE (SOP)",
-    fig4Caption: "Figure 4 : Procédure standard en trois étapes : Étape 1 préparation du massif, Étape 2 levage hydraulique et Étape 3 calage de verticalité et serrage au couple."
+    heroCoverAlt: "Installation de candélabres de 12 m sans grue - Couverture des spécifications",
+    heroCoverLabel: "01 / SYNTHÈSE DES SPÉCIFICATIONS",
+    heroCoverCaption: "Figure 1 : Synthèse des spécifications de l'élévateur hydraulique portable volvet. Charge nominale 300 kg et architecture bimodule de 85 kg pour mâts de classe 12 m sous réserve de revue de projet.",
+    fig5Alt: "Comparatif de planification : camion-grue vs élévateur hydraulique portable volvet",
+    fig5Label: "02 / COMPARATIF DE PLANIFICATION",
+    fig5Caption: "Figure 5 : Comparaison d'accès et de planification entre une grue mobile conventionnelle et l'élévateur portable volvet en accès étroit, effectif et gabarit aérien.",
+    fig2Alt: "Architecture mécanique à deux modules de l'élévateur portable pour candélabres",
+    fig2Label: "03 / ARCHITECTURE BIMODULE",
+    fig2Caption: "Figure 2 : Architecture hydraulique en deux modules comprenant un module de levage de 45 kg et un coffret électrique 24 V de 40 kg (85 kg au total ; 1–2 opérateurs mentionnés).",
+    fig3Alt: "Entraxe de platine et compatibilité des tiges d'ancrage (180–260 mm, M16–M24 listés)",
+    fig3Label: "04 / PLATINE ET TIGES D'ANCRAGE",
+    fig3Caption: "Figure 3 : Géométrie de platine montrant un entraxe de perçage de 180–260 mm et les tiges M16–M24 listées (M16–M22 inclus ; les bases non standard nécessitent l'examen d'un plan coté).",
+    fig4Alt: "Contrôles d'ingénierie préalables et limites de levage",
+    fig4Label: "05 / CONTRÔLES PRÉALABLES AU LEVAGE",
+    fig4Caption: "Figure 4 : Contrôles préalables de projet couvrant la vérification du massif, le raccordement au sol, les limites de levage contrôlé et le serrage final."
   },
   pt: {
-    heroCoverAlt: "Instalação de postes de 12 m sem caminhão munck - Capa do guia técnico",
-    heroCoverLabel: "01 / ESPECIFICAÇÃO DE PROCEDIMENTO DE CAMPO",
-    heroCoverCaption: "Figura 1: Guia técnico de montagem com elevador portátil volvet. Capacidade aferida de 300 kg e sistema bipartido de 85 kg para eliminar munck em acessos restritos.",
-    fig5Alt: "Comparativo de viabilidade em obra: caminhão munck de 16t vs elevador hidráulico volvet",
-    fig5Label: "02 / VIABILIDADE E COMPARAÇÃO TÉCNICA",
-    fig5Caption: "Figura 5: Comparativo operacional e de acesso: caminhão munck convencional de 16t vs elevador portátil volvet em passagens estreitas, equipe e redes aéreas.",
-    fig2Alt: "Arquitetura mecânica modular bipartida do elevador portátil de postes",
-    fig2Label: "03 / ARQUITETURA MECÂNICA",
-    fig2Caption: "Figura 2: Arquitetura hidráulica em dois módulos (coluna de 45 kg e gabinete 24V de 40 kg) para fácil manuseio por dois operadores.",
-    fig3Alt: "Compatibilidade de placa base e furação radial P.C.D. de 180 mm a 260 mm",
-    fig3Label: "04 / COMPATIBILIDADE DE FLANGE E BASE",
-    fig3Caption: "Figura 3: Placa base universal para círculos de furação (P.C.D.) de 180 mm a 260 mm e chumbadores M16-M24 em conformidade com ASTM F1554.",
-    fig4Alt: "Fluxo de trabalho padrão (SOP) para içamento ao nível do solo por dois técnicos",
-    fig4Label: "05 / PROCEDIMENTO OPERACIONAL (SOP)",
-    fig4Caption: "Figura 4: Procedimento padrão em três fases: Fase 1 preparação da base, Fase 2 içamento hidráulico e Fase 3 nivelamento e torqueamento final."
+    heroCoverAlt: "Instalação de postes de 12 m sem guindaste - Capa de especificações",
+    heroCoverLabel: "01 / RESUMO DE ESPECIFICAÇÕES",
+    heroCoverCaption: "Figura 1: Resumo de especificações do elevador hidráulico portátil volvet. Carga nominal de 300 kg e arquitetura de dois módulos de 85 kg para postes da classe 12 m sujeito a revisão de projeto.",
+    fig5Alt: "Comparativo de planejamento: caminhão guindaste vs elevador hidráulico portátil volvet",
+    fig5Label: "02 / COMPARATIVO DE PLANEJAMENTO",
+    fig5Caption: "Figura 5: Comparativo de acesso e planejamento entre um caminhão guindaste convencional e o elevador portátil volvet em passagens estreitas, equipe e espaço aéreo.",
+    fig2Alt: "Arquitetura mecânica de dois módulos do elevador portátil de postes",
+    fig2Label: "03 / ARQUITETURA DE DOIS MÓDULOS",
+    fig2Caption: "Figura 2: Arquitetura hidráulica em dois módulos composta por módulo de elevação de 45 kg e gabinete elétrico de 24 V de 40 kg (85 kg totais; 1–2 operadores listados).",
+    fig3Alt: "Vão de flange base e compatibilidade de chumbadores (180–260 mm, M16–M24 listados)",
+    fig3Label: "04 / FLANGE E CHUMBADORES",
+    fig3Caption: "Figura 3: Geometria da placa base com vão de furação de 180–260 mm e chumbadores M16–M24 listados (M16–M22 incluídos; bases fora do padrão exigem revisão de desenho cotado).",
+    fig4Alt: "Verificações prévias de engenharia e limites de içamento",
+    fig4Label: "05 / VERIFICAÇÕES PRÉVIAS AO IÇAMENTO",
+    fig4Caption: "Figura 4: Verificações prévias do projeto cobrindo inspeção da fundação, conexão no solo, limites de içamento controlado e aperto final."
   },
   vi: {
-    heroCoverAlt: "Lắp đặt cột đèn chiếu sáng 12m không cần cẩu - Bìa hướng dẫn kỹ thuật",
-    heroCoverLabel: "01 / ĐẶC TẢ QUY TRÌNH THI CÔNG HIỆN TRƯỜNG",
-    heroCoverCaption: "Hình 1: Cẩm nang hướng dẫn thi công dựng cột bằng máy nâng volvet. Tải trọng kiểm định 300kg và cơ chế chia đôi cụm 85kg giúp giải phóng xe cẩu 16 tấn.",
-    fig5Alt: "So sánh khả thi tại công trường: xe cẩu 16 tấn vs máy dựng cột thủy lực mini volvet",
-    fig5Label: "02 / TÍNH KHẢ THI VÀ SO SÁNH PHƯƠNG ÁN",
-    fig5Caption: "Hình 5: So sánh khả năng tiếp cận công trình: xe cẩu thùng 16 tấn truyền thống vs máy dựng cột volvet về lối đi hẹp, nhân lực và khoảng cách an toàn điện.",
-    fig2Alt: "Kiến trúc cơ khí chia đôi mô-đun của máy dựng cột đèn thủy lực",
-    fig2Label: "03 / KIẾN TRÚC CƠ KHÍ MÔ-ĐUN",
-    fig2Caption: "Hình 2: Cấu trúc thủy lực 2 mô-đun gồm khung kích nâng 45kg và tủ nguồn điện 24V 40kg được thiết kế tối ưu cho 2 công nhân di chuyển.",
-    fig3Alt: "Tương thích mặt bích đáy và rãnh hướng tâm P.C.D. từ 180mm đến 260mm",
-    fig3Label: "04 / ĐỘ TƯƠNG THÍCH MẶT BÍCH VÀ MÓNG",
-    fig3Caption: "Hình 3: Kết cấu mặt bích đáy đa năng đáp ứng đường kính vòng chia bu-lông (P.C.D.) 180-260mm và bu-lông móng M16-M24 theo chuẩn ASTM F1554.",
-    fig4Alt: "Quy trình vận hành tiêu chuẩn hiện trường (SOP) nâng cột từ mặt đất bởi 2 kỹ thuật viên",
-    fig4Label: "05 / QUY TRÌNH THI CÔNG HIỆN TRƯỜNG (SOP)",
-    fig4Caption: "Hình 4: Quy trình 3 giai đoạn tiêu chuẩn: Giai đoạn 1 chuẩn bị móng, Giai đoạn 2 nâng kích thủy lực và Giai đoạn 3 cân chỉnh siết bu-lông móng."
+    heroCoverAlt: "Lắp đặt cột đèn chiếu sáng 12 m không cần cẩu - Bìa tổng quan thông số",
+    heroCoverLabel: "01 / TỔNG QUAN THÔNG SỐ KỸ THUẬT",
+    heroCoverCaption: "Hình 1: Tổng quan thông số kích nâng cột đèn thủy lực di động volvet. Tải trọng định mức 300 kg và thiết kế hai mô-đun 85 kg cho dòng cột 12 m cần thẩm định dự án.",
+    fig5Alt: "So sánh lập kế hoạch: xe cẩu vs kích nâng cột đèn thủy lực di động volvet",
+    fig5Label: "02 / SO SÁNH LẬP KẾ HOẠCH DỰ ÁN",
+    fig5Caption: "Hình 5: So sánh khả năng tiếp cận và lập kế hoạch giữa xe cẩu truyền thống và thiết bị nâng di động volvet về lối đi hẹp, nhân lực và khoảng cách phía trên.",
+    fig2Alt: "Kiến trúc cơ khí hai mô-đun của kích nâng cột đèn thủy lực di động",
+    fig2Label: "03 / KIẾN TRÚC HAI MÔ-ĐUN",
+    fig2Caption: "Hình 2: Kiến trúc thủy lực hai mô-đun gồm mô-đun nâng thủy lực 45 kg và tủ điện 24 V 40 kg (tổng trọng lượng thiết bị 85 kg; ghi nhận 1–2 người vận hành).",
+    fig3Alt: "Khoảng lỗ mặt bích và độ tương thích bu-lông móng (180–260 mm, liệt kê M16–M24)",
+    fig3Label: "04 / MẶT BÍCH VÀ BU-LÔNG MÓNG",
+    fig3Caption: "Hình 3: Hình dạng tấm đế thể hiện khoảng lỗ mặt bích 180–260 mm và cỡ bu-lông M16–M24 được liệt kê (đi kèm M16–M22; chân đế phi tiêu chuẩn cần gửi bản vẽ có kích thước để thẩm định).",
+    fig4Alt: "Kiểm tra kỹ thuật trước lắp đặt và giới hạn nâng hạ",
+    fig4Label: "05 / KIỂM TRA TRƯỚC KHI NÂNG",
+    fig4Caption: "Hình 4: Các bước kiểm tra trước khi lắp đặt gồm khảo sát móng, kết nối thiết bị tại mặt đất, giới hạn nâng có kiểm soát và siết chặt đai ốc hoàn thiện."
   },
   th: {
-    heroCoverAlt: "การติดตั้งเสาไฟถนน 12 เมตรโดยไม่ใช้รถเครน - หน้าปกคู่มือเทคนิค",
-    heroCoverLabel: "01 / ข้อกำหนดขั้นตอนการปฏิบัติงานหน้างาน",
-    heroCoverCaption: "ภาพที่ 1: คู่มือวิศวกรรมการติดตั้งเสาไฟด้วยเครื่องยกไฮดรอลิก volvet พิกัดยก 300 กก. และระบบแยกส่วน 85 กก. ช่วยลดการใช้รถเครนขนาด 16 ตัน",
-    fig5Alt: "การเปรียบเทียบความเป็นไปได้หน้างาน: รถเครน 16 ตัน vs เครื่องยกไฮดรอลิกแบบพกพา volvet",
-    fig5Label: "02 / ความเป็นไปได้และการเปรียบเทียบหน้างาน",
-    fig5Caption: "ภาพที่ 5: การเปรียบเทียบการเข้าถึงหน้างาน: รถเครน 16 ตันแบบดั้งเดิม vs เครื่องยก volvet ในทางแคบ จำนวนคน และระยะห่างสายไฟฟ้า",
-    fig2Alt: "โครงสร้างสถาปัตยกรรมกลไกแยกส่วนสองโมดูลของเครื่องยกเสาไฟ",
-    fig2Label: "03 / สถาปัตยกรรมกลไกและชิ้นส่วน",
-    fig2Caption: "ภาพที่ 2: โครงสร้างไฮดรอลิก 2 ชิ้นส่วนประกอบด้วยชุดกระบอกยก 45 กก. และกล่องควบคุม 24V 40 กก. ออกแบบให้ช่าง 2 คนยกเคลื่อนย้ายได้สะดวก",
-    fig3Alt: "ความเข้ากันได้ของเพลทฐานและร่องสล็อตแนวรัศมี P.C.D. 180 มม. ถึง 260 มม.",
-    fig3Label: "04 / ความเข้ากันได้ของเพลทฐานและสลักยึด",
-    fig3Caption: "ภาพที่ 3: เพลทฐานอเนกประสงค์รองรับระยะพิทช์สลัก (P.C.D.) 180-260 มม. และสลักเกลียว M16-M24 ตามมาตรฐาน ASTM F1554",
-    fig4Alt: "ขั้นตอนการปฏิบัติงานมาตรฐานหน้างาน (SOP) ในการยกเสาโดยช่าง 2 คน",
-    fig4Label: "05 / ขั้นตอนการปฏิบัติงานมาตรฐาน (SOP)",
-    fig4Caption: "ภาพที่ 4: ขั้นตอนมาตรฐาน 3 ระยะ: ระยะที่ 1 สำรวจฐานราก ระยะที่ 2 จังหวะยกไฮดรอลิก และระยะที่ 3 การปรับระนาบและขันล็อกแรงบิด"
+    heroCoverAlt: "การติดตั้งเสาไฟถนน 12 ม. โดยไม่ใช้รถเครน - หน้าปกภาพรวมสเปก",
+    heroCoverLabel: "01 / ภาพรวมสเปกผลิตภัณฑ์",
+    heroCoverCaption: "ภาพที่ 1: ภาพรวมสเปกเครื่องยกเสาไฟไฮดรอลิกแบบพกพา volvet พิกัดยก 300 กก. และโครงสร้างแยกสองโมดูล 85 กก. สำหรับเสาไฟระดับ 12 ม. ภายใต้การตรวจสอบโครงการ",
+    fig5Alt: "การเปรียบเทียบการวางแผนโครงการ: รถเครน vs เครื่องยกเสาไฟไฮดรอลิกแบบพกพา volvet",
+    fig5Label: "02 / การเปรียบเทียบการวางแผน",
+    fig5Caption: "ภาพที่ 5: การเปรียบเทียบการเข้าถึงหน้างานและการวางแผนระหว่างรถเครนทั่วไปกับเครื่องยกเสาไฟแบบพกพา volvet ในทางแคบ การจัดทีมงาน และพื้นที่เหนือศีรษะ",
+    fig2Alt: "สถาปัตยกรรมกลไกสองโมดูลของเครื่องยกเสาไฟแบบพกพา",
+    fig2Label: "03 / สถาปัตยกรรมสองโมดูล",
+    fig2Caption: "ภาพที่ 2: สถาปัตยกรรมไฮดรอลิกสองโมดูลประกอบด้วยโมดูลยกไฮดรอลิก 45 กก. และตู้ไฟฟ้า 24 V 40 กก. (น้ำหนักอุปกรณ์รวม 85 กก. ระบุผู้ปฏิบัติงาน 1–2 คน)",
+    fig3Alt: "ระยะรูหน้าแปลนและความเข้ากันได้ของสลักยึดฐานราก (180–260 มม. ระบุ M16–M24)",
+    fig3Label: "04 / หน้าแปลนและสลักยึดฐานราก",
+    fig3Caption: "ภาพที่ 3: รูปทรงแผ่นฐานแสดงระยะรูหน้าแปลน 180–260 มม. และขนาดสลักยึด M16–M24 ที่ระบุไว้ (รวมชุด M16–M22 ฐานรากนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ)",
+    fig4Alt: "การตรวจสอบทางวิศวกรรมก่อนติดตั้งและขอบเขตการยก",
+    fig4Label: "05 / การตรวจสอบก่อนยก",
+    fig4Caption: "ภาพที่ 4: รายการตรวจสอบก่อนติดตั้งครอบคลุมการตรวจฐานราก การเชื่อมต่ออุปกรณ์ที่ระดับพื้น ขอบเขตการยกแบบควบคุม และการขันน็อตขั้นสุดท้าย"
   },
   id: {
-    heroCoverAlt: "Pemasangan tiang lampu jalan 12 meter tanpa derek - Sampul panduan teknik",
-    heroCoverLabel: "01 / SPESIFIKASI PROSEDUR LAPANGAN",
-    heroCoverCaption: "Gambar 1: Panduan prosedur teknik alat angkat portabel volvet. Kapasitas 300 kg dan sistem modular 85 kg mengeliminasi kebutuhan truk derek 16 ton.",
-    fig5Alt: "Perbandingan kelayakan lapangan: truk derek 16t vs alat angkat hidrolik portabel volvet",
-    fig5Label: "02 / KELAYAKAN DAN PERBANDINGAN LAPANGAN",
-    fig5Caption: "Gambar 5: Perbandingan akses lapangan: truk derek 16t konvensional vs alat angkat volvet pada jalur sempit, tenaga kerja, dan kabel udara.",
-    fig2Alt: "Arsitektur mekanik modular dua unit dari alat angkat tiang lampu portabel",
-    fig2Label: "03 / ARSITEKTUR MEKANIK MODULAR",
-    fig2Caption: "Gambar 2: Arsitektur hidrolik dua modul (unit pengangkat 45 kg dan kabinet daya 24V 40 kg) untuk kemudahan mobilisasi dua orang teknisi.",
-    fig3Alt: "Kesesuaian pelat dasar dan geometri alur radial P.C.D. 180 mm hingga 260 mm",
-    fig3Label: "04 / KESESUAIAN PELAT DASAR DAN FLENSA",
-    fig3Caption: "Gambar 3: Pelat dasar universal mendukung lingkaran baut (P.C.D.) 180-260 mm dan angkur M16-M24 sesuai standar ASTM F1554.",
-    fig4Alt: "Prosedur operasional standar (SOP) pendirian dari permukaan tanah oleh dua teknisi",
-    fig4Label: "05 / PROSEDUR OPERASIONAL STANDAR (SOP)",
-    fig4Caption: "Gambar 4: Tiga tahap prosedur standar: Tahap 1 persiapan pondasi, Tahap 2 langkah angkat hidrolik, dan Tahap 3 penyetelan waterpass dan penguncian torsi."
+    heroCoverAlt: "Pemasangan Tiang Lampu Jalan 12 m Tanpa Derek - Sampul Ringkasan Spesifikasi",
+    heroCoverLabel: "01 / RINGKASAN SPESIFIKASI",
+    heroCoverCaption: "Gambar 1: Ringkasan spesifikasi alat angkat tiang hidrolik portabel volvet. Beban terukur 300 kg dan desain dua modul 85 kg untuk kelas tiang 12 m dengan peninjauan proyek.",
+    fig5Alt: "Perbandingan perencanaan proyek: truk derek vs alat angkat tiang hidrolik portabel volvet",
+    fig5Label: "02 / PERBANDINGAN PERENCANAAN",
+    fig5Caption: "Gambar 5: Perbandingan akses lokasi dan perencanaan proyek antara truk derek konvensional dan alat angkat portabel volvet pada jalur sempit, alokasi kru, dan ruang udara.",
+    fig2Alt: "Arsitektur mekanik dua modul dari alat angkat tiang lampu portabel",
+    fig2Label: "03 / ARSITEKTUR DUA MODUL",
+    fig2Caption: "Gambar 2: Arsitektur hidrolik dua modul yang terdiri dari modul angkat hidrolik 45 kg dan kabinet listrik 24 V 40 kg (berat total 85 kg; tercantum 1–2 operator).",
+    fig3Alt: "Bentang lubang flensa dan kesesuaian baut angkur (180–260 mm, tercantum M16–M24)",
+    fig3Label: "04 / FLENSA DAN BAUT ANGKUR",
+    fig3Caption: "Gambar 3: Geometri pelat dasar dengan bentang lubang flensa 180–260 mm dan baut angkur M16–M24 tercantum (M16–M22 disertakan; dudukan non-standar memerlukan peninjauan gambar berdimensi).",
+    fig4Alt: "Pemeriksaan teknik pra-pemasangan dan batas pengangkatan",
+    fig4Label: "05 / PEMERIKSAAN PRA-ANGKAT",
+    fig4Caption: "Gambar 4: Pemeriksaan pra-pemasangan mencakup survei pondasi, penyambungan peralatan di permukaan tanah, batas pengangkatan terkendali, dan pengencangan akhir mur."
   }
 };
 
@@ -191,11 +191,11 @@ const renderedCards = new Set();
 const fm = figureMap[locale] || figureMap.en;
 
 function getSectionFigure(heading, folder) {
-  if (!folder) return null;
+  if (!folder || !isCraneExplainer) return null;
   const h = heading.trim();
 
   // 1. 对比决策矩阵 (Section 1)
-  if (!renderedCards.has("05") && (h.startsWith("1.") || /engineering challenge.*crane|arquitectura mecánica|desafío|défi|desafio|thách thức|ความท้าทาย|tantangan/i.test(h))) {
+  if (!renderedCards.has("05") && (h.startsWith("1.") || /site access|engineering challenge|desafío|acceso a obra|défi|accès chantier|desafio|acesso à obra|thách thức|tiếp cận|ความท้าทาย|การเข้าถึง|tantangan|akses lokasi/i.test(h))) {
     renderedCards.add("05");
     return {
       id: "05",
@@ -207,7 +207,7 @@ function getSectionFigure(heading, folder) {
   }
 
   // 2. 双模组分体机械架构 (Section 2)
-  if (!renderedCards.has("02") && (h.startsWith("2.") || /hydraulic mechanics.*300kg|mechanical architecture|seguridad|mecánica hidráulica|mécanique|mecânica|thủy lực|กลไกไฮดรอลิก|mekanika/i.test(h))) {
+  if (!renderedCards.has("02") && (h.startsWith("2.") || /two-module|hydraulic mechanics|arquitectura hidráulica|mecánica|architecture hydraulique|mécanique|arquitetura hidráulica|mecânica|kiến trúc thủy lực|thủy lực|สถาปัตยกรรมไฮดรอลิก|กลไก|arsitektur hidrolik|mekanika/i.test(h))) {
     renderedCards.add("02");
     return {
       id: "02",
@@ -218,8 +218,8 @@ function getSectionFigure(heading, folder) {
     };
   }
 
-  // 3. 底板法兰 P.C.D. 适配图 (Section 3)
-  if (!renderedCards.has("03") && (h.startsWith("3.") || /foundation anchorage.*p\\.?c\\.?d|compatibilidad de bridas|cimentación|massif|fundação|móng|ฐานราก|pondasi/i.test(h))) {
+  // 3. 底板法兰与地脚螺栓适配图 (Section 3)
+  if (!renderedCards.has("03") && (h.startsWith("3.") || /base flange|foundation anchorage|rango de brida|cimentación|entraxe de platine|massif|vão da flange|fundação|khoảng lỗ mặt bích|móng|ระยะรูหน้าแปลน|ฐานราก|bentang flensa|pondasi/i.test(h))) {
     renderedCards.add("03");
     return {
       id: "03",
@@ -230,8 +230,8 @@ function getSectionFigure(heading, folder) {
     };
   }
 
-  // 4. 标准 SOP 施工工序图 (Section 4)
-  if (!renderedCards.has("04") && (h.startsWith("4.") || /standard sop erection sequence|sop workflow|procedimiento operativo|procédure|procedimento|quy trình|ขั้นตอน|prosedur/i.test(h))) {
+  // 4. 安装前工程核查图 (Section 4)
+  if (!renderedCards.has("04") && (h.startsWith("4.") || /pre-installation|standard sop|verificaciones previas|procedimiento|contrôles d'ingénierie|procédure|verificações prévias|procedimento|kiểm tra kỹ thuật|quy trình|การตรวจสอบทางวิศวกรรม|ขั้นตอน|pemeriksaan teknik|prosedur/i.test(h))) {
     renderedCards.add("04");
     return {
       id: "04",
@@ -245,286 +245,286 @@ function getSectionFigure(heading, folder) {
   return null;
 }
 
-// 识别是否是子章节（Phase 1/2/3 或常见问答）
+// 识别是否是子章节（预检阶段或常见问答）
 function isSubHeading(heading) {
   const h = heading.trim();
-  return /^(?:Phase \d|Fase \d|Étape \d|Giai đoạn \d|ขั้นตอนที่ \d|Tahap \d|\?|What |Can |Does |How |¿|Est-ce |Peut-on |Quel |Comment |É |Como |O |Có |เสา |Apakah |Bagaimana )/i.test(h) || h.endsWith("?") || h.endsWith("？");
+  return /^(?:Pre-Lift|Equipment Connection|Controlled Lift|Verificación previa|Conexión del equipo|Elevación controlada|Vérification préalable|Raccordement|Levage contrôlé|Verificação prévia|Conexão do equipamento|Elevação controlada|Kiểm tra móng|Kết nối thiết bị|Nâng có kiểm soát|การตรวจสอบฐานราก|การเชื่อมต่ออุปกรณ์|การยกแบบควบคุม|Pemeriksaan Pondasi|Penyambungan Peralatan|Pengangkatan Terkendali|Phase \d|Fase \d|Étape \d|Giai đoạn \d|ขั้นตอนที่ \d|Tahap \d|\?|What |Can |Does |How |Which |¿|Est-ce |Peut-on |Quel |Quelles |Combien |Comment |É |Como |O |Quais |Quantos |Có |Giới hạn |Bảng thông số |Những bu-lông |Thiết bị |เสา |พิกัด |เอกสารสเปก |สลักยึด |อุปกรณ์ |Apakah |Bagaimana |Berapa |Baut angkur )/i.test(h) || h.endsWith("?") || h.endsWith("？");
 }
 
-// 多语言文案字典
+// 多语言文案字典（严格遵循 S4 规格基线）
 const copyMap = {
   en: {
-    directAnswerBadge: "Direct Engineering Answer / Executive Summary",
-    directAnswerText: "Specific 12m municipal street light poles (rated load 300kg) can be installed safely without a mobile crane by utilizing ground-level hydraulic leverage that self-anchors into the foundation's M16–M24 anchor cage. Feasibility must be confirmed against total weight, center of gravity, wind thresholds, and electrical clearances.",
-    specLabelLimit: "Working Load Limit",
-    specCapacity: "300 kg WLL (Up to 12m)",
-    specLabelCrew: "Crew Requirement",
-    specCrew: "2 Workers (85kg modular)",
-    specLabelBolt: "Bolt Circle Pattern",
-    specAnchorage: "P.C.D. 180–260 mm (ASTM F1554)",
-    specLabelPower: "Power & Mechanics",
-    specPower: "24V DC Fluid Power (Closed-circuit)",
-    tableCaption: "Table 1: Operational Comparison: Portable Hydraulic Pole Lifter vs. 16-Ton Mobile Crane",
-    colMetric: "Engineering Parameter",
+    directAnswerBadge: "Specification Summary / Project Review Scope",
+    directAnswerText: "12 m class street light poles within the 300 kg rated load can be evaluated for crane-free installation using a ground-level hydraulic pole lifter anchored to the foundation bolts. Suitability must be confirmed against total assembled weight, center of gravity, flange geometry, foundation condition, and overhead clearances.",
+    specLabelLimit: "Rated Load",
+    specCapacity: "300 kg (Up to 12 m class)",
+    specLabelCrew: "Operators Listed",
+    specCrew: "1–2 operators (85 kg split)",
+    specLabelBolt: "Flange & Bolts",
+    specAnchorage: "180–260 mm span (M16–M24 listed)",
+    specLabelPower: "Power Supply",
+    specPower: "24 V rechargeable battery",
+    tableCaption: "Table 1: Project Planning Comparison: Portable Hydraulic Pole Lifter vs. Mobile Crane",
+    colMetric: "Planning Factor",
     colLifter: "volvet Portable Pole Lifter",
-    colCrane: "16-Ton Mobile Boom Truck",
+    colCrane: "Mobile Crane",
     tableRows: [
-      { metric: "Jobsite Access & Corridors", lifter: "Narrow pathways, pedestrian walks, unpaved solar farms (zero roadway rutting)", crane: "Requires min 6m paved roadway width and firm ground for outrigger spread" },
-      { metric: "Crew Size & Training", lifter: "2 trained workers (85kg modular transport in standard pickup)", crane: "3–4 personnel (certified crane operator, rigger, signal person)" },
-      { metric: "Overhead Electrical Clearances", lifter: "Ground-level hydraulic hoist stays safely below powerlines (IEEE 516 / OSHA 1926)", crane: "High electrocution risk: requires OSHA 1926 boom clearances or shutoffs" },
-      { metric: "Foundation Anchoring", lifter: "Rigid self-anchoring to pre-embedded P.C.D. 180–260mm ASTM F1554 anchor cage", crane: "Relies on vehicular counterweights; high ground bearing pressures" },
-      { metric: "Logistical Permits & Setup", lifter: "May reduce municipal lane-closure permits; sets up in 15 minutes", crane: "Extended municipal permits, road closure notices, and multi-hour rental fees" }
+      { metric: "Site Access & Ground Footprint", lifter: "Two-module carry (45 kg hydraulic module + 40 kg cabinet) for narrow paths, medians, and unpaved sites", crane: "Requires road access width, load-bearing ground, and outrigger clearance" },
+      { metric: "Crew & Transport", lifter: "1–2 operators listed on the specification sheet; 85 kg total equipment weight", crane: "Requires crane operator, rigging crew, and heavy vehicle dispatch" },
+      { metric: "Working Elevation & Clearances", lifter: "Ground-level lifting setup; full 12 m pole arc still requires overhead utility clearance checks", crane: "Overhead boom operation requires boom swing and overhead line clearance planning" },
+      { metric: "Foundation & Flange Connection", lifter: "Bolts to foundation anchor studs across 180–260 mm span (M16–M22 included, M24 listed; non-standard bases require a dimensioned drawing review)", crane: "Supported by crane outriggers while lowering column onto foundation bolts" },
+      { metric: "Traffic & Site Preparation", lifter: "Compact footprint reduces lane-blocking footprint where permitted by site rules", crane: "Often requires road-closure permits, traffic control, and minimum crane rental windows" }
     ],
-    ctaAuditTitle: "Have a Custom Pole Flange or Tight Clearance?",
-    ctaAuditDesc: "Submit your destination, base plate dimensions, and foundation drawing for a prompt engineering compatibility review.",
-    ctaAuditBtn: "Request Free 24h Drawing Review ↗",
-    ctaRoiBtn: "Calculate Project Savings with ROI Calculator ↗",
-    reviewBadge: "Engineering Review Complete",
-    reviewStandards: "Standards Cited: ASTM F1554, ANSI/IES RP-8-18, OSHA 1926 Subpart CC, IEEE 516, EN 40-3",
+    ctaAuditTitle: "Have a Non-Standard Base or Tight Site Clearance?",
+    ctaAuditDesc: "Submit your destination, base plate dimensions, and foundation drawing for a project compatibility review. Non-standard bases require a dimensioned drawing review.",
+    ctaAuditBtn: "Request Configuration Review ↗",
+    ctaRoiBtn: "Compare Project Costs with ROI Calculator ↗",
+    reviewBadge: "Baseline-Reviewed Article",
+    reviewStandards: "Source Baseline: Product Specification Sheet (S4) · Fact Register F001–F031 · Field Validation Pending",
     breadcrumbGuide: "Guides",
     breadcrumbReviewed: "Reviewed article",
     eyebrowPrefix: "Source-based content",
     relatedTitle: "Related Technical Guides & Planning Tools",
-    faqSectionTitle: "Frequently Asked Questions: Crane-Free 12m Pole Erection",
-    eeatAccountabilityLabel: "Technical Review Accountability:",
+    faqSectionTitle: "Frequently Asked Questions: Crane-Free 12 m Pole Installation",
+    eeatAccountabilityLabel: "Editorial & Technical Review:",
     eeatReviewer: "volvet Engineering Review",
-    eeatComplianceLabel: "Compliance & Governing Standards:",
-    eeatFactLabel: "Verified Field Case & Test Parameters:",
-    eeatCaseBrief: "Engineering Baseline: Verified 300 kg WLL, 85 kg two-module architecture (45 kg mast, 40 kg power cabinet; heaviest single package 65 kg), 200–450 mm flange bolt circle diameter (P.C.D.), and 24V hydraulic power pack. Full-scale jobsite validation records and test certificates will be published upon field validation gate release."
+    eeatComplianceLabel: "Evidence & Baseline Scope:",
+    eeatFactLabel: "Specification Baseline Summary:",
+    eeatCaseBrief: "Specification Baseline: 12 m applicable pole class, 300 kg rated load, 85 kg two-module architecture (45 kg hydraulic module, 40 kg 24 V electrical cabinet), 180–260 mm flange hole span, and M16–M24 listed anchor bolts (M16–M22 included; non-standard bases require a dimensioned drawing review). Manufacturer-reported 20 s lift time, >50 lifts per charge, and >3000 cycles remain specification labels pending field validation."
   },
   es: {
-    directAnswerBadge: "Resumen Técnico de Ingeniería / Respuesta Directa",
-    directAnswerText: "Determinados postes de alumbrado público de hasta 12 metros (carga nominal 300 kg) pueden instalarse sin camión grúa mediante un elevador hidráulico autoanclado en la cimentación M16–M24. La viabilidad debe confirmarse según el peso total, centro de gravedad, resistencia de cimentación y distancias a líneas eléctricas.",
-    specLabelLimit: "Capacidad Nominal de Carga",
-    specCapacity: "300 kg Carga Máxima (Hasta 12m)",
-    specLabelCrew: "Personal Necesario",
-    specCrew: "2 Técnicos (85kg modular)",
-    specLabelBolt: "Patrón de Pernos de Anclaje",
-    specAnchorage: "P.C.D. 180–260 mm (ASTM F1554)",
-    specLabelPower: "Fuente de Energía y Mecánica",
-    specPower: "Batería 24V DC (Circuito cerrado)",
-    tableCaption: "Tabla 1: Comparativa Operativa: Elevador Hidráulico Portátil vs. Camión Grúa de 16 Toneladas",
-    colMetric: "Parámetro de Ingeniería",
+    directAnswerBadge: "Resumen de Especificaciones / Alcance de Revisión",
+    directAnswerText: "Los postes de alumbrado público de la clase de 12 m dentro de la carga nominal de 300 kg pueden evaluarse para instalación sin grúa mediante un elevador hidráulico portátil anclado a los pernos de cimentación. La idoneidad debe confirmarse según el peso total ensamblado, centro de gravedad, geometría de brida, estado de cimentación y distancias aéreas.",
+    specLabelLimit: "Carga Nominal",
+    specCapacity: "300 kg (Clase hasta 12 m)",
+    specLabelCrew: "Operarios Listados",
+    specCrew: "1–2 operarios (85 kg divididos)",
+    specLabelBolt: "Brida y Pernos",
+    specAnchorage: "Rango 180–260 mm (M16–M24 listados)",
+    specLabelPower: "Alimentación",
+    specPower: "Batería recargable de 24 V",
+    tableCaption: "Tabla 1: Comparativa de Planificación: Elevador Hidráulico Portátil vs. Camión Grúa",
+    colMetric: "Factor de Planificación",
     colLifter: "Elevador Portátil volvet",
-    colCrane: "Camión Grúa de 16t",
+    colCrane: "Camión Grúa",
     tableRows: [
-      { metric: "Acceso a Obra y Pasillos Estrechos", lifter: "Senderos peatonales, veredas, parques solares sin pavimentar (sin daño al terreno)", crane: "Requiere calzada pavimentada de al menos 6m y suelo firme para estabilizadores" },
-      { metric: "Personal Necesario y Capacitación", lifter: "2 técnicos capacitados (transporte modular de 85kg en camioneta pickup estándar)", crane: "3 a 4 personas (operador de grúa certificado, maniobrista y señalero)" },
-      { metric: "Distancias a Líneas Eléctricas Aéreas", lifter: "Operación hidráulica a ras de suelo; reduce riesgo cumpliendo IEEE 516 y OSHA 1926", crane: "Alto riesgo por pluma aérea; exige cortes de energía o grandes distancias de seguridad" },
-      { metric: "Anclaje en Cimentación", lifter: "Autoanclaje rígido a pernos preempotrados ASTM F1554 con P.C.D. de 180 a 260mm", crane: "Depende de contrapesos sobre el vehículo; genera altas presiones sobre el suelo" },
-      { metric: "Permisos Viales y Tiempo de Montaje", lifter: "Puede reducir la necesidad de permisos de corte vial; montaje listo en 15 minutos", crane: "Trámites prolongados de corte de tránsito y altos costos por horas mínimas de alquiler" }
+      { metric: "Acceso a Obra y Huella en Suelo", lifter: "Transporte en dos módulos (45 kg módulo hidráulico + 40 kg gabinete) para aceras estrechas y sitios sin pavimento", crane: "Requiere ancho de acceso vial, suelo portante y espacio para estabilizadores" },
+      { metric: "Cuadrilla y Transporte", lifter: "1–2 operarios indicados en la ficha técnica; 85 kg de peso total del equipo", crane: "Requiere operador de grúa, maniobristas y despacho de vehículo pesado" },
+      { metric: "Altura de Trabajo y Despejes", lifter: "Montaje a nivel de suelo; el arco completo de 12 m aún exige verificar líneas aéreas", crane: "La pluma aérea exige planificación de giro y distancias a líneas eléctricas" },
+      { metric: "Conexión a Cimentación y Brida", lifter: "Se fija a los pernos en rango 180–260 mm (M16–M22 incluidos, M24 listado; las bases no estándar requieren revisión de plano acotado)", crane: "Se apoya en estabilizadores mientras posiciona el poste sobre los pernos" },
+      { metric: "Tráfico y Preparación de Sitio", lifter: "Huella compacta que reduce la ocupación de calzada cuando lo permiten las normas locales", crane: "Suele requerir permisos de corte vial, señalización y horas mínimas de alquiler" }
     ],
-    ctaAuditTitle: "¿Tiene un plano de brida o accesos difíciles?",
-    ctaAuditDesc: "Envíe las dimensiones de placa base y plano de cimentación para una revisión técnica de compatibilidad.",
-    ctaAuditBtn: "Solicitar Revisión Técnica de Plano 24h ↗",
-    ctaRoiBtn: "Calcular Ahorro en la Calculadora ROI ↗",
-    reviewBadge: "Revisión de Ingeniería Aprobada",
-    reviewStandards: "Normas Aplicadas: ASTM F1554, ANSI/IES RP-8-18, OSHA 1926 Subpart CC, IEEE 516, EN 40-3",
+    ctaAuditTitle: "¿Tiene una Base No Estándar o Espacio Reducido?",
+    ctaAuditDesc: "Envíe su destino, medidas de placa base y plano de cimentación para revisión de compatibilidad. Las bases no estándar requieren revisión de plano acotado.",
+    ctaAuditBtn: "Solicitar Revisión de Configuración ↗",
+    ctaRoiBtn: "Comparar Costos con la Calculadora ROI ↗",
+    reviewBadge: "Artículo Revisado según Línea Base",
+    reviewStandards: "Línea Base: Ficha Técnica del Producto (S4) · Registro F001–F031 · Validación de Campo Pendiente",
     breadcrumbGuide: "Guías",
-    breadcrumbReviewed: "Artículo técnico verificado",
-    eyebrowPrefix: "Contenido verificado por ingeniería",
+    breadcrumbReviewed: "Artículo revisado",
+    eyebrowPrefix: "Contenido basado en ficha técnica",
     relatedTitle: "Guías técnicas y herramientas de planificación relacionadas",
-    faqSectionTitle: "Preguntas frecuentes sobre la instalación de postes sin grúa",
-    eeatAccountabilityLabel: "Responsabilidad Técnica de Revisión:",
+    faqSectionTitle: "Preguntas frecuentes sobre la instalación de postes de 12 m sin grúa",
+    eeatAccountabilityLabel: "Revisión Editorial y Técnica:",
     eeatReviewer: "volvet Engineering Review",
-    eeatComplianceLabel: "Alcance Normativo y Estándares de Cumplimiento:",
-    eeatFactLabel: "Expediente de Obra y Parámetros de Prueba Verificados:",
-    eeatCaseBrief: "Línea base de ingeniería: 300 kg WLL comprobado, arquitectura modular de 85 kg (mástil de 45 kg, gabinete de potencia de 40 kg; paquete individual máximo de 65 kg), rango de brida de 200 a 450 mm (P.C.D.) y central hidráulica 24V. Los registros de validación en obra y certificados de prueba se publicarán tras la liberación de la puerta de campo."
+    eeatComplianceLabel: "Alcance de Evidencia y Línea Base:",
+    eeatFactLabel: "Resumen de Línea Base Técnica:",
+    eeatCaseBrief: "Línea base técnica: clase de poste aplicable de 12 m, carga nominal de 300 kg, arquitectura de dos módulos de 85 kg (módulo hidráulico de 45 kg, gabinete eléctrico de 24 V de 40 kg), rango de orificios de brida de 180–260 mm y pernos M16–M24 listados (M16–M22 incluidos; las bases no estándar requieren revisión de plano acotado). Los valores reportados por el fabricante de 20 s, >50 elevaciones por carga y >3000 ciclos siguen pendientes de validación de campo."
   },
   fr: {
-    directAnswerBadge: "Réponse Technique Directe / Synthèse Ingénierie",
-    directAnswerText: "Certains candélabres d'éclairage public jusqu'à 12 mètres (charge nominale 300 kg) peuvent être érigés sans camion-grue au moyen d'un élévateur hydraulique auto-ancré sur le massif M16–M24. La faisabilité doit être validée selon le poids total, le centre de gravité, la résistance du massif et les distances sous lignes.",
-    specLabelLimit: "Charge Maximale Utile (CMU)",
-    specCapacity: "300 kg CMU (Jusqu'à 12m)",
-    specLabelCrew: "Effectif d'Intervention",
-    specCrew: "2 Opérateurs (85kg modulaire)",
-    specLabelBolt: "Entraxe et Tiges d'Ancrage",
-    specAnchorage: "P.C.D. 180–260 mm (ASTM F1554)",
-    specLabelPower: "Motorisation et Puissance",
-    specPower: "Batterie 24V DC (Circuit fermé)",
-    tableCaption: "Tableau 1 : Comparaison Opérationnelle : Élévateur Portable vs. Grue Télescopique 16t",
-    colMetric: "Paramètre Technique",
+    directAnswerBadge: "Synthèse Technique / Périmètre de Revue",
+    directAnswerText: "Les candélabres d'éclairage public de classe 12 m respectant la charge nominale de 300 kg peuvent être évalués pour une pose sans grue avec un élévateur hydraulique portable ancré sur les tiges de fondation. La compatibilité doit être confirmée selon le poids total assemblé, le centre de gravité, la géométrie de platine, l'état du massif et les gabarits aériens.",
+    specLabelLimit: "Charge Nominale",
+    specCapacity: "300 kg (Classe jusqu'à 12 m)",
+    specLabelCrew: "Opérateurs Listés",
+    specCrew: "1–2 opérateurs (85 kg scindés)",
+    specLabelBolt: "Platine et Tiges",
+    specAnchorage: "Entraxe 180–260 mm (M16–M24 listés)",
+    specLabelPower: "Alimentation",
+    specPower: "Batterie rechargeable 24 V",
+    tableCaption: "Tableau 1 : Comparatif de Planification : Élévateur Hydraulique Portable vs. Camion-Grue",
+    colMetric: "Critère de Planification",
     colLifter: "Élévateur Portable volvet",
-    colCrane: "Camion-Grue 16t",
+    colCrane: "Camion-Grue",
     tableRows: [
-      { metric: "Accès Chantier et Allées Étroites", lifter: "Cheminements piétons, parcs solaires non carrossables (aucun orniérage)", crane: "Exige une voie d'accès stabilisée de 6m et sol portant pour les stabilisateurs" },
-      { metric: "Effectif et Qualification Requise", lifter: "2 techniciens formés (transport modulaire 85kg en utilitaire standard)", crane: "3 à 4 agents (grutier certifié, élingueur, chef de manœuvre)" },
-      { metric: "Distances sous Lignes Électriques", lifter: "Levage au ras du sol réduisant les risques d'arc électrique (IEEE 516 / OSHA 1926)", crane: "Risque majeur d'électrisation : consignation de ligne ou gabarits stricts requis" },
-      { metric: "Ancrage et Réactions d'Assise", lifter: "Auto-ancrage rigide sur tiges M16–M24 ASTM F1554 d'entraxe 180–260mm", crane: "Dépend du contrepoids porteur ; fortes pressions au sol sur cales" },
-      { metric: "Autorisations de Voirie et Délais", lifter: "Réduit les demandes d'arrêtés de circulation ; mise en place en 15 minutes", crane: "Arrêtés de voirie complexes, déviations et forfaits journaliers élevés" }
+      { metric: "Accès Chantier et Emprise au Sol", lifter: "Transport en deux modules (45 kg module hydraulique + 40 kg coffret) pour allées étroites et sites non revêtus", crane: "Exige une largeur d'accès routier, un sol portant et le déploiement des stabilisateurs" },
+      { metric: "Effectif et Transport", lifter: "1–2 opérateurs inscrits sur la fiche technique ; 85 kg de poids total", crane: "Exige grutier, équipe d'élingage et mobilisation d'un porteur lourd" },
+      { metric: "Hauteur de Travail et Gabarits", lifter: "Mise en œuvre au sol ; le débattement complet de 12 m exige toujours le contrôle des lignes aériennes", crane: "La flèche aérienne impose une étude de giration et de distances aux lignes" },
+      { metric: "Raccordement Massif et Platine", lifter: "Fixation sur tiges d'ancrage dans l'entraxe 180–260 mm (M16–M22 inclus, M24 listé ; les bases non standard nécessitent l'examen d'un plan coté)", crane: "Appui sur stabilisateurs pendant la présentation du mât sur les tiges" },
+      { metric: "Circulation et Préparation", lifter: "Emprise réduite limitant l'occupation de voirie selon les règles du site", crane: "Nécessite souvent des arrêtés de circulation, balisage et forfaits horaires" }
     ],
-    ctaAuditTitle: "Une platine sur mesure ou un accès restreint ?",
-    ctaAuditDesc: "Transmettez votre plan de réservation et cotations de platine pour contrôle technique gratuit sous 24h.",
-    ctaAuditBtn: "Demander la Revue de Plan 24h ↗",
-    ctaRoiBtn: "Calculer les Économies sur le Simulateur ROI ↗",
-    reviewBadge: "Revue Technique d'Ingénierie Validée",
-    reviewStandards: "Normes Appliquées : ASTM F1554, ANSI/IES RP-8-18, OSHA 1926 Subpart CC, IEEE 516, EN 40-3",
+    ctaAuditTitle: "Une Base Non Standard ou un Accès Restreint ?",
+    ctaAuditDesc: "Transmettez votre destination, les dimensions de platine et le plan de fondation pour une revue de compatibilité. Les bases non standard nécessitent l'examen d'un plan coté.",
+    ctaAuditBtn: "Demander une Revue de Configuration ↗",
+    ctaRoiBtn: "Comparer les Coûts avec le Simulateur ROI ↗",
+    reviewBadge: "Article Revu selon Référentiel",
+    reviewStandards: "Référentiel Source : Fiche Technique Produit (S4) · Registre F001–F031 · Validation Terrain en Attente",
     breadcrumbGuide: "Guides",
-    breadcrumbReviewed: "Article technique validé",
-    eyebrowPrefix: "Contenu certifié par l'ingénierie",
-    relatedTitle: "Guides techniques et outils d'aide à la décision associés",
-    faqSectionTitle: "Foire aux questions sur le levage de candélabres sans grue",
-    eeatAccountabilityLabel: "Responsabilité Technique de Révision :",
+    breadcrumbReviewed: "Article revu",
+    eyebrowPrefix: "Contenu basé sur la fiche technique",
+    relatedTitle: "Guides techniques et outils de planification associés",
+    faqSectionTitle: "Foire aux questions sur l'installation de candélabres de 12 m sans grue",
+    eeatAccountabilityLabel: "Revue Éditoriale et Technique :",
     eeatReviewer: "volvet Engineering Review",
-    eeatComplianceLabel: "Cadre Normatif et Conformité Réglementaire :",
-    eeatFactLabel: "Dossier Chantier et Paramètres d'Essais Éprouvés :",
-    eeatCaseBrief: "Référentiel d'ingénierie : CMU vérifiée de 300 kg, architecture scindée de 85 kg (mât 45 kg, centrale 40 kg ; colis individuel max 65 kg), entraxe platine 200 à 450 mm (P.C.D.) et groupe hydraulique 24V. Les dossiers de validation chantier et certificats d'essais seront publiés lors de l'ouverture du jalon de validation."
+    eeatComplianceLabel: "Périmètre de Preuve et Référentiel :",
+    eeatFactLabel: "Résumé du Référentiel Technique :",
+    eeatCaseBrief: "Référentiel technique : classe de mât applicable de 12 m, charge nominale de 300 kg, architecture bimodule de 85 kg (module hydraulique 45 kg, coffret électrique 24 V de 40 kg), entraxe de platine 180–260 mm et tiges M16–M24 listées (M16–M22 inclus ; les bases non standard nécessitent l'examen d'un plan coté). Les valeurs déclarées par le fabricant de 20 s, >50 levées par charge et >3000 cycles restent en attente de validation terrain."
   },
   pt: {
-    directAnswerBadge: "Resumo Técnico de Engenharia / Resposta Direta",
-    directAnswerText: "Determinados postes de iluminação pública de até 12 metros (carga nominal 300 kg) podem ser instalados sem caminhão munck através de um elevador hidráulico autoancorado na base M16–M24. A viabilidade deve ser confirmada conforme o peso total, centro de gravidade, resistência da fundação e distâncias a redes elétricas.",
-    specLabelLimit: "Carga Máxima de Trabalho",
-    specCapacity: "300 kg Limite Seguro (Até 12m)",
-    specLabelCrew: "Equipe Necessária",
-    specCrew: "2 Operadores (85kg modular)",
-    specLabelBolt: "Padrão de Furação da Base",
-    specAnchorage: "P.C.D. 180–260 mm (ASTM F1554)",
-    specLabelPower: "Força e Sistema Motriz",
-    specPower: "Bateria 24V DC (Circuito fechado)",
-    tableCaption: "Tabela 1: Comparativo Operacional: Elevador Hidráulico Portátil vs. Caminhão Munck de 16t",
-    colMetric: "Parâmetro de Engenharia",
+    directAnswerBadge: "Resumo de Especificações / Escopo de Revisão",
+    directAnswerText: "Postes de iluminação pública da classe de 12 m dentro da carga nominal de 300 kg podem ser avaliados para instalação sem guindaste usando um elevador hidráulico portátil ancorado nos chumbadores da fundação. A adequação deve ser confirmada conforme o peso total montado, centro de gravidade, geometria da flange, condição da fundação e afastamentos aéreos.",
+    specLabelLimit: "Carga Nominal",
+    specCapacity: "300 kg (Classe até 12 m)",
+    specLabelCrew: "Operadores Listados",
+    specCrew: "1–2 operadores (85 kg divididos)",
+    specLabelBolt: "Flange e Chumbadores",
+    specAnchorage: "Vão 180–260 mm (M16–M24 listados)",
+    specLabelPower: "Alimentação",
+    specPower: "Bateria recarregável de 24 V",
+    tableCaption: "Tabela 1: Comparativo de Planejamento: Elevador Hidráulico Portátil vs. Caminhão Guindaste",
+    colMetric: "Fator de Planejamento",
     colLifter: "Elevador Portátil volvet",
-    colCrane: "Caminhão Munck de 16t",
+    colCrane: "Caminhão Guindaste",
     tableRows: [
-      { metric: "Acesso a Obra e Corredores Estreitos", lifter: "Calçadas, ciclovias, parques solares não pavimentados (sem afundamento do piso)", crane: "Exige pista pavimentada de no mínimo 6m e solo rígido para patolas de apoio" },
-      { metric: "Equipe e Treinamento Exigido", lifter: "2 operadores treinados (transporte modular de 85kg em picape comum)", crane: "3 a 4 trabalhadores (operador munck habilitado, rigger e sinaleiro)" },
-      { metric: "Distâncias sob Redes Aéreas", lifter: "Elevação rente ao solo; minimiza risco cumprindo IEEE 516 e OSHA 1926", crane: "Risco severo por lança aérea; requer desligamento de rede ou grande isolamento" },
-      { metric: "Ancoragem na Fundação", lifter: "Autoancoragem rígida nos chumbadores ASTM F1554 com P.C.D. de 180 a 260mm", crane: "Depende de contrapesos sobre o caminhão; altas pressões pontuais no piso" },
-      { metric: "Licenças de Trânsito e Mobilização", lifter: "Pode reduzir exigência de bloqueio de via; montagem concluída em 15 minutos", crane: "Processos lentos de autorização viária, desvios e alto custo de locação mínima" }
+      { metric: "Acesso à Obra e Área Ocupada", lifter: "Transporte em dois módulos (45 kg módulo hidráulico + 40 kg gabinete) para calçadas estreitas e locais sem pavimento", crane: "Exige largura de acesso viário, solo resistente e espaço para patolas" },
+      { metric: "Equipe e Transporte", lifter: "1–2 operadores listados na ficha técnica; 85 kg de peso total do equipamento", crane: "Exige operador de guindaste, equipe de amarração e veículo pesado" },
+      { metric: "Elevação e Afastamentos Aéreos", lifter: "Montagem no nível do solo; o arco completo de 12 m ainda exige checagem de redes aéreas", crane: "A lança aérea exige planejamento de giro e afastamento de linhas elétricas" },
+      { metric: "Conexão na Fundação e Flange", lifter: "Fixado nos chumbadores no vão de 180–260 mm (M16–M22 incluídos, M24 listado; bases fora do padrão exigem revisão de desenho cotado)", crane: "Apoiado nas patolas enquanto posiciona o poste sobre os chumbadores" },
+      { metric: "Trânsito e Preparação do Local", lifter: "Pegada compacta reduz interdição de faixa quando permitido pelas regras locais", crane: "Frequentemente exige licenças de interdição, sinalização e horas mínimas de locação" }
     ],
-    ctaAuditTitle: "Possui uma flange especial ou espaço restrito?",
-    ctaAuditDesc: "Envie as medidas da base e o desenho da fundação para análise técnica gratuita em 24h.",
-    ctaAuditBtn: "Solicitar Análise de Desenho 24h ↗",
-    ctaRoiBtn: "Calcular Economia na Calculadora ROI ↗",
-    reviewBadge: "Revisão de Engenharia Aprovada",
-    reviewStandards: "Normas Aplicadas: ASTM F1554, ANSI/IES RP-8-18, OSHA 1926 Subpart CC, IEEE 516, EN 40-3",
+    ctaAuditTitle: "Tem uma Base Fora do Padrão ou Espaço Restrito?",
+    ctaAuditDesc: "Envie seu destino, dimensões da placa base e desenho da fundação para revisão de compatibilidade. Bases fora do padrão exigem revisão de desenho cotado.",
+    ctaAuditBtn: "Solicitar Revisão de Configuração ↗",
+    ctaRoiBtn: "Comparar Custos com a Calculadora ROI ↗",
+    reviewBadge: "Artigo Revisado pela Linha de Base",
+    reviewStandards: "Linha de Base: Ficha Técnica do Produto (S4) · Registro F001–F031 · Validação em Campo Pendente",
     breadcrumbGuide: "Guias",
-    breadcrumbReviewed: "Artigo técnico verificado",
-    eyebrowPrefix: "Conteúdo chancelado pela engenharia",
+    breadcrumbReviewed: "Artigo revisado",
+    eyebrowPrefix: "Conteúdo baseado na ficha técnica",
     relatedTitle: "Guias técnicos e ferramentas de planejamento relacionados",
-    faqSectionTitle: "Perguntas frequentes sobre a instalação de postes sem munck",
-    eeatAccountabilityLabel: "Responsabilidade Técnica de Revisão:",
+    faqSectionTitle: "Perguntas frequentes sobre instalação de postes de 12 m sem guindaste",
+    eeatAccountabilityLabel: "Revisão Editorial e Técnica:",
     eeatReviewer: "volvet Engineering Review",
-    eeatComplianceLabel: "Escopo de Conformidade e Normas Aplicadas:",
-    eeatFactLabel: "Dossiê de Obra e Parâmetros de Teste Verificados:",
-    eeatCaseBrief: "Linha de base de engenharia: Carga de 300 kg WLL verificada, arquitetura bipartida de 85 kg (coluna de 45 kg, central de 40 kg; volume individual máximo de 65 kg), diâmetro de furação de 200 a 450 mm (P.C.D.) e sistema hidráulico 24V. Relatórios de campo e certificados de teste serão publicados após a liberação da etapa de validação."
+    eeatComplianceLabel: "Escopo de Evidência e Linha de Base:",
+    eeatFactLabel: "Resumo da Linha de Base Técnica:",
+    eeatCaseBrief: "Linha de base técnica: classe de poste aplicável de 12 m, carga nominal de 300 kg, arquitetura de dois módulos de 85 kg (módulo hidráulico de 45 kg, gabinete elétrico de 24 V de 40 kg), vão de furação de flange de 180–260 mm e chumbadores M16–M24 listados (M16–M22 incluídos; bases fora do padrão exigem revisão de desenho cotado). Os dados informados pelo fabricante de 20 s, >50 elevações por carga e >3000 ciclos seguem pendentes de validação em campo."
   },
   vi: {
-    directAnswerBadge: "Giải pháp Kỹ thuật Trực tiếp / Tóm tắt Điều hành",
-    directAnswerText: "Cột đèn chiếu sáng đô thị 12m (tải trọng định mức 300kg) có thể dựng an toàn không cần xe cẩu nhờ cơ chế thủy lực mặt đất tự neo vào cụm bu-lông móng M16–M24. Tính khả thi phải được xác nhận dựa trên tổng trọng lượng, trọng tâm, giới hạn gió và khoảng cách an toàn điện.",
-    specLabelLimit: "Tải Trọng Làm Việc An Toàn",
-    specCapacity: "300 kg Tải Định Mức (Đến 12m)",
-    specLabelCrew: "Đội Ngũ Thao Tác",
-    specCrew: "2 Công Nhân (85kg dạng cụm)",
-    specLabelBolt: "Vòng Chia Bu-lông Móng",
-    specAnchorage: "P.C.D. 180–260 mm (ASTM F1554)",
-    specLabelPower: "Nguồn Năng Lượng & Thủy Lực",
-    specPower: "Pin 24V DC (Hệ kín khép)",
-    tableCaption: "Bảng 1: So sánh Vận hành: Máy Dựng Cột Thủy Lực Mini vs. Xe Cẩu Thùng 16 Tấn",
-    colMetric: "Thông Số Kỹ Thuật",
-    colLifter: "Máy Dựng Cột Di Động volvet",
-    colCrane: "Xe Cẩu Thùng 16 Tấn",
+    directAnswerBadge: "Tóm Tắt Thông Số / Phạm Vi Thẩm Định",
+    directAnswerText: "Cột đèn chiếu sáng đô thị dòng 12 m trong giới hạn tải trọng định mức 300 kg có thể được đánh giá lắp đặt không cần xe cẩu bằng kích nâng cột thủy lực di động neo vào bu-lông móng. Tính phù hợp phải được xác nhận theo tổng trọng lượng lắp ráp, trọng tâm, hình dạng mặt bích, tình trạng móng và khoảng cách an toàn phía trên.",
+    specLabelLimit: "Tải Trọng Định Mức",
+    specCapacity: "300 kg (Dòng cột đến 12 m)",
+    specLabelCrew: "Số Người Vận Hành",
+    specCrew: "1–2 người vận hành (tách cụm 85 kg)",
+    specLabelBolt: "Mặt Bích & Bu-lông",
+    specAnchorage: "Khoảng lỗ 180–260 mm (liệt kê M16–M24)",
+    specLabelPower: "Nguồn Điện",
+    specPower: "Pin sạc 24 V",
+    tableCaption: "Bảng 1: So Sánh Lập Kế Hoạch Dự Án: Kích Nâng Cột Thủy Lực Di Động vs. Xe Cẩu",
+    colMetric: "Yếu Tố Lập Kế Hoạch",
+    colLifter: "Kích Nâng Di Động volvet",
+    colCrane: "Xe Cẩu",
     tableRows: [
-      { metric: "Lối Vào Công Trường & Không Gian Hẹp", lifter: "Đường đi bộ, vỉa hè, trang trại năng lượng mặt trời (không lún nứt mặt nền)", crane: "Yêu cầu mặt đường nhựa rộng tối thiểu 6m và nền đất cứng để mở rộng chân chống" },
-      { metric: "Quy Mô Đội Ngũ & Huấn Luyện", lifter: "2 công nhân lành nghề (vận chuyển 85kg gọn gàng trên thùng xe bán tải)", crane: "3 đến 4 nhân lực (tài xế cẩu chứng chỉ, thợ móc cáp, hoa tiêu xi-nhan)" },
-      { metric: "Khoảng Cách Dây Điện Cao Thế", lifter: "Nâng hạ sát mặt đất hạn chế nguy cơ phóng điện theo IEEE 516 / OSHA 1926", crane: "Nguy cơ điện giật cao: đòi hỏi cắt điện lưới hoặc khoảng cách tĩnh không lớn" },
-      { metric: "Cơ Chế Neo Giữ Móng Bê Tông", lifter: "Tự neo ngàm cứng vào cụm bu-lông móng ASTM F1554 P.C.D. 180–260mm", crane: "Dựa vào đối trọng xe cơ giới; gây áp lực tập trung rất lớn lên mặt đất" },
-      { metric: "Giấy Phép Giao Thông & Triển Khai", lifter: "Có thể giảm nhu cầu xin cấp phép cấm đường; sẵn sàng làm việc sau 15 phút", crane: "Thủ tục xin cấm làn đường phức tạp, cảnh báo giao thông và chi phí ca thuê lớn" }
+      { metric: "Tiếp Cận Công Trường & Mặt Bằng", lifter: "Di chuyển hai mô-đun (mô-đun thủy lực 45 kg + tủ điện 40 kg) cho lối đi hẹp và nền chưa trải nhựa", crane: "Cần bề rộng đường xe vào, nền đất chịu tải và không gian mở chân chống" },
+      { metric: "Nhân Lực & Vận Chuyển", lifter: "1–2 người vận hành ghi trên bảng thông số; tổng trọng lượng thiết bị 85 kg", crane: "Cần lái cẩu, tổ phụ cẩu và điều động xe tải chuyên dụng" },
+      { metric: "Cao Độ Làm Việc & Khoảng Trống", lifter: "Lắp đặt tại mặt đất; quỹ đạo nâng cột 12 m vẫn phải kiểm tra đường dây điện trên không", crane: "Cần cẩu vươn cao đòi hỏi lập kế hoạch góc quay và khoảng cách đường dây" },
+      { metric: "Liên Kết Móng & Mặt Bích", lifter: "Bắt bu-lông vào ty móng trong khoảng 180–260 mm (đi kèm M16–M22, liệt kê M24; chân đế phi tiêu chuẩn cần gửi bản vẽ có kích thước để thẩm định)", crane: "Tựa trên chân chống xe cẩu khi hạ cột vào bu-lông móng" },
+      { metric: "Giao Thông & Chuẩn Bị Mặt Bằng", lifter: "Diện tích chiếm chỗ gọn giúp giảm ảnh hưởng làn đường khi quy định cho phép", crane: "Thường cần giấy phép cấm đường, phân luồng và thời gian thuê tối thiểu" }
     ],
-    ctaAuditTitle: "Bản vẽ mặt bích phi tiêu chuẩn hoặc địa hình hẹp?",
-    ctaAuditDesc: "Gửi kích thước chân đế và bản vẽ móng để kỹ sư thẩm định độ tương thích trong vòng 24 giờ.",
-    ctaAuditBtn: "Yêu Cầu Thẩm Định Bản Vẽ 24h ↗",
-    ctaRoiBtn: "Tính Toán Chi Phí Dự Án với Máy Tính ROI ↗",
-    reviewBadge: "Đã Thẩm Định Kỹ Thuật Dự Án",
-    reviewStandards: "Tiêu Chuẩn Áp Dụng: ASTM F1554, ANSI/IES RP-8-18, OSHA 1926 Subpart CC, IEEE 516, EN 40-3",
+    ctaAuditTitle: "Có Chân Đế Phi Tiêu Chuẩn hoặc Mặt Bằng Hẹp?",
+    ctaAuditDesc: "Gửi điểm đến, kích thước tấm đế và bản vẽ móng để thẩm định độ tương thích dự án. Chân đế phi tiêu chuẩn cần gửi bản vẽ có kích thước để thẩm định.",
+    ctaAuditBtn: "Yêu Cầu Thẩm Định Cấu Hình ↗",
+    ctaRoiBtn: "So Sánh Chi Phí Dự Án bằng Công Cụ ROI ↗",
+    reviewBadge: "Bài Viết Đã Rà Soát Theo Đường Cơ Sở",
+    reviewStandards: "Đường Cơ Sở Nguồn: Bảng Thông Số Sản Phẩm (S4) · Sổ Đăng Ký F001–F031 · Chờ Kiểm Chứng Thực Địa",
     breadcrumbGuide: "Hướng dẫn",
-    breadcrumbReviewed: "Bài viết đã thẩm định",
-    eyebrowPrefix: "Nội dung chuẩn hóa kỹ thuật",
+    breadcrumbReviewed: "Bài viết đã rà soát",
+    eyebrowPrefix: "Nội dung dựa trên bảng thông số",
     relatedTitle: "Hướng dẫn kỹ thuật và công cụ lập kế hoạch liên quan",
-    faqSectionTitle: "Câu hỏi thường gặp về thi công dựng cột không dùng cẩu",
-    eeatAccountabilityLabel: "Trách nhiệm Kỹ thuật và Phê duyệt:",
+    faqSectionTitle: "Câu hỏi thường gặp về lắp đặt cột đèn 12 m không cần xe cẩu",
+    eeatAccountabilityLabel: "Rà Soát Biên Tập & Kỹ Thuật:",
     eeatReviewer: "volvet Engineering Review",
-    eeatComplianceLabel: "Phạm vi Tiêu chuẩn và Tuân thủ Kỹ thuật:",
-    eeatFactLabel: "Hồ sơ Hiện trường và Thông số Kiểm định Thực tế:",
-    eeatCaseBrief: "Tiêu chuẩn cơ sở kỹ thuật: Tải trọng định mức 300 kg WLL, cơ chế chia cụm 85 kg (kích 45 kg, nguồn 40 kg; kiện nặng nhất 65 kg), đường kính vòng chia bu-lông 200–450 mm (P.C.D.) và bộ nguồn thủy lực 24V. Hồ sơ nghiệm thu hiện trường và chứng chỉ thử nghiệm sẽ được công bố khi hoàn tất cổng phê duyệt thực tế."
+    eeatComplianceLabel: "Phạm Vi Bằng Chứng & Đường Cơ Sở:",
+    eeatFactLabel: "Tóm Tắt Đường Cơ Sở Thông Số:",
+    eeatCaseBrief: "Đường cơ sở thông số: cấp cột áp dụng 12 m, tải trọng định mức 300 kg, kiến trúc hai mô-đun 85 kg (mô-đun thủy lực 45 kg, tủ điện 24 V 40 kg), khoảng lỗ mặt bích 180–260 mm và cỡ bu-lông M16–M24 được liệt kê (đi kèm M16–M22; chân đế phi tiêu chuẩn cần gửi bản vẽ có kích thước để thẩm định). Các số liệu nhà sản xuất công bố 20 s, >50 lần nâng mỗi lần sạc và >3000 chu kỳ vẫn chờ kiểm chứng thực địa."
   },
   th: {
-    directAnswerBadge: "คำตอบเชิงวิศวกรรมโดยตรง / บทสรุปผู้บริหาร",
-    directAnswerText: "เสาไฟถนนเทศบาลความสูง 12 ม. (พิกัดยก 300 กก.) สามารถติดตั้งได้โดยไม่ต้องใช้รถเครน ด้วยการใช้ระบบงัดไฮดรอลิกระดับพื้นดินที่ยึดตัวเองเข้ากับชุดสลักเกลียว M16–M24 ของฐานราก ความเป็นไปได้ต้องได้รับการยืนยันตามน้ำหนักรวม จุดศูนย์ถ่วง ขีดจำกัดลม และระยะปลอดภัยจากสายไฟ",
-    specLabelLimit: "ขีดจำกัดน้ำหนักยกปลอดภัย",
-    specCapacity: "300 กก. พิกัดยกสูงสุด (เสา 12ม.)",
-    specLabelCrew: "จำนวนช่างติดตั้ง",
-    specCrew: "ช่าง 2 คน (แยกส่วน 85กก.)",
-    specLabelBolt: "รูปแบบวงกลมสลักเกลียว",
-    specAnchorage: "P.C.D. 180–260 มม. (ASTM F1554)",
-    specLabelPower: "ระบบพลังงานและกลไก",
-    specPower: "แบตเตอรี่ 24V DC (ระบบไฮดรอลิกปิด)",
-    tableCaption: "ตารางที่ 1: การเปรียบเทียบการทำงาน: เครื่องยกเสาแบบพกพา vs. รถเครนบูม 16 ตัน",
-    colMetric: "พารามิเตอร์ทางวิศวกรรม",
-    colLifter: "เครื่องยกเสาพกพา volvet",
-    colCrane: "รถเครนกระเช้า 16 ตัน",
+    directAnswerBadge: "สรุปสเปก / ขอบเขตการตรวจสอบโครงการ",
+    directAnswerText: "เสาไฟถนนระดับ 12 ม. ที่มีน้ำหนักอยู่ในพิกัดยก 300 กก. สามารถประเมินการติดตั้งโดยไม่ใช้รถเครนด้วยเครื่องยกเสาไฟไฮดรอลิกแบบพกพาที่ยึดกับสลักฐานราก ทั้งนี้ต้องยืนยันความเหมาะสมตามน้ำหนักประกอบรวม จุดศูนย์ถ่วง รูปทรงหน้าแปลน สภาพฐานราก และระยะปลอดภัยเหนือศีรษะ",
+    specLabelLimit: "พิกัดน้ำหนักยก",
+    specCapacity: "300 กก. (เสาระดับไม่เกิน 12 ม.)",
+    specLabelCrew: "ผู้ปฏิบัติงานที่ระบุ",
+    specCrew: "1–2 คน (แยกส่วน 85 กก.)",
+    specLabelBolt: "หน้าแปลนและสลักยึด",
+    specAnchorage: "ระยะรู 180–260 มม. (ระบุ M16–M24)",
+    specLabelPower: "แหล่งพลังงาน",
+    specPower: "แบตเตอรี่แบบชาร์จได้ 24 V",
+    tableCaption: "ตารางที่ 1: การเปรียบเทียบการวางแผนโครงการ: เครื่องยกเสาไฟไฮดรอลิกแบบพกพา vs. รถเครน",
+    colMetric: "ปัจจัยการวางแผน",
+    colLifter: "เครื่องยกเสาไฟแบบพกพา volvet",
+    colCrane: "รถเครน",
     tableRows: [
-      { metric: "การเข้าถึงหน้างานและพื้นที่แคบ", lifter: "ทางเดินเท้า ทางจักรยาน ฟาร์มโซลาร์เซลล์พื้นที่ดินนุ่ม (ไม่ทำลายผิวทาง)", crane: "ต้องการถนนลาดยางกว้างอย่างน้อย 6 ม. และพื้นดินมั่นคงเพื่อกางขาช้างค้ำยัน" },
-      { metric: "กำลังคนและการฝึกอบรม", lifter: "ช่างที่ผ่านการอบรม 2 คน (ขนย้ายน้ำหนัก 85 กก. สะดวกด้วยกระบะมาตรฐาน)", crane: "3 ถึง 4 คน (พนักงานขับเครนมีใบเซอร์ ช่างผูกรัดสายสลิง และผู้ส่งสัญญาณ)" },
-      { metric: "ระยะปลอดภัยจากสายไฟฟ้าแรงสูง", lifter: "ระบบยกไฮดรอลิกระดับพื้นดินช่วยลดอันตรายตามมาตรฐาน IEEE 516 / OSHA 1926", crane: "ความเสี่ยงถูกไฟดูดสูง: ต้องรักษาระยะห่างบูมเครนเคร่งครัดหรือตัดกระแสไฟ" },
-      { metric: "การยึดจับกับฐานรากคอนกรีต", lifter: "ยึดจับแข็งแรงกับสลักเกลียวฝังคอนกรีต ASTM F1554 ขนาด P.C.D. 180–260 มม.", crane: "อาศัยน้ำหนักถ่วงของตัวรถบรรทุก; ก่อให้เกิดแรงกดพื้นดินเฉพาะจุดสูงมาก" },
-      { metric: "การขอใบอนุญาตและเวลาตั้งเครื่อง", lifter: "อาจช่วยลดการขอปิดช่องจราจรเทศบาล; พร้อมใช้งานภายใน 15 นาที", crane: "ขั้นตอนขออนุญาตปิดถนนยุ่งยาก มีป้ายเบี่ยงทาง และค่าเช่าคิดตามชั่วโมงสูง" }
+      { metric: "การเข้าถึงหน้างานและพื้นที่ตั้งเครื่อง", lifter: "ขนย้ายแบบสองโมดูล (โมดูลไฮดรอลิก 45 กก. + ตู้ไฟฟ้า 40 กก.) สำหรับทางแคบและพื้นที่ยังไม่ลาดยาง", crane: "ต้องการความกว้างถนนทางเข้า พื้นดินรับน้ำหนักได้ และพื้นที่กางขาช้าง" },
+      { metric: "ทีมงานและการขนส่ง", lifter: "ระบุผู้ปฏิบัติงาน 1–2 คนในเอกสารสเปก น้ำหนักอุปกรณ์รวม 85 กก.", crane: "ต้องมีคนขับรถเครน ทีมผูกมัด และการจัดส่งรถบรรทุกหนัก" },
+      { metric: "ระดับความสูงทำงานและระยะปลอดภัย", lifter: "ตั้งเครื่องที่ระดับพื้นดิน แต่รัศมีการยกเสา 12 ม. ยังต้องตรวจสอบสายไฟฟ้าเหนือศีรษะ", crane: "การทำงานของบูมเหนือศีรษะต้องวางแผนวงสวิงและระยะห่างสายไฟ" },
+      { metric: "การเชื่อมต่อฐานรากและหน้าแปลน", lifter: "ยึดกับสลักฐานรากในช่วง 180–260 มม. (รวมชุด M16–M22 ระบุ M24; ฐานรากนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ)", crane: "รับน้ำหนักด้วยขาช้างขณะหย่อนเสาลงบนสลักฐานราก" },
+      { metric: "การจราจรและการเตรียมหน้างาน", lifter: "ขนาดกะทัดรัดช่วยลดการกีดขวางช่องจราจรเมื่อกฎหน้างานอนุญาต", crane: "มักต้องขออนุญาตปิดถนน จัดจราจร และมีชั่วโมงเช่าขั้นต่ำ" }
     ],
-    ctaAuditTitle: "มีแบบแปลนหน้าแปลนพิเศษหรือพื้นที่แคบหรือไม่?",
-    ctaAuditDesc: "ส่งขนาดแผ่นฐานและแบบแปลนฐานรากเพื่อรับการตรวจสอบความเข้ากันได้ทางวิศวกรรมฟรีภายใน 24 ชม.",
-    ctaAuditBtn: "ขอรับการตรวจสอบแบบแปลน 24 ชม. ↗",
-    ctaRoiBtn: "คำนวณการประหยัดด้วยเครื่องคำนวณ ROI ↗",
-    reviewBadge: "ผ่านการตรวจสอบทางวิศวกรรมแล้ว",
-    reviewStandards: "มาตรฐานที่อ้างอิง: ASTM F1554, ANSI/IES RP-8-18, OSHA 1926 Subpart CC, IEEE 516, EN 40-3",
+    ctaAuditTitle: "มีฐานรากนอกมาตรฐานหรือพื้นที่หน้างานจำกัดหรือไม่?",
+    ctaAuditDesc: "ส่งปลายทาง ขนาดแผ่นฐาน และแบบฐานรากเพื่อตรวจสอบความเข้ากันได้ของโครงการ ฐานรากนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ",
+    ctaAuditBtn: "ขอรับการตรวจสอบการกำหนดค่า ↗",
+    ctaRoiBtn: "เปรียบเทียบต้นทุนโครงการด้วยเครื่องคำนวณ ROI ↗",
+    reviewBadge: "บทความที่ตรวจสอบตามเกณฑ์มาตรฐานแล้ว",
+    reviewStandards: "เกณฑ์อ้างอิง: เอกสารสเปกผลิตภัณฑ์ (S4) · ทะเบียนข้อมูล F001–F031 · รอการทดสอบยืนยันภาคสนาม",
     breadcrumbGuide: "คู่มือ",
-    breadcrumbReviewed: "บทความที่ผ่านการตรวจสอบ",
-    eyebrowPrefix: "เนื้อหาที่ผ่านการตรวจสอบทางวิศวกรรม",
+    breadcrumbReviewed: "บทความที่ตรวจสอบแล้ว",
+    eyebrowPrefix: "เนื้อหาอ้างอิงตามเอกสารสเปก",
     relatedTitle: "คู่มือทางเทคนิคและเครื่องมือวางแผนที่เกี่ยวข้อง",
-    faqSectionTitle: "คำถามที่พบบ่อยเกี่ยวกับการติดตั้งเสาไฟโดยไม่ใช้รถเครน",
-    eeatAccountabilityLabel: "ความรับผิดชอบทางวิศวกรรมและการตรวจสอบ:",
+    faqSectionTitle: "คำถามที่พบบ่อยเกี่ยวกับการติดตั้งเสาไฟ 12 ม. โดยไม่ใช้รถเครน",
+    eeatAccountabilityLabel: "การตรวจสอบด้านเนื้อหาและวิศวกรรม:",
     eeatReviewer: "volvet Engineering Review",
-    eeatComplianceLabel: "ขอบเขตมาตรฐานและการปฏิบัติตามข้อกำหนด:",
-    eeatFactLabel: "บันทึกภาคสนามและพารามิเตอร์การทดสอบจริง:",
-    eeatCaseBrief: "เกณฑ์มาตรฐานทางวิศวกรรม: พิกัดยกปลอดภัย 300 กก. WLL, โครงสร้างแยกส่วน 85 กก. (กระบอกยก 45 กก., ตู้ควบคุม 40 กก.; ชิ้นส่วนหนักสุดไม่เกิน 65 กก.), รองรับระยะพิทช์ 200–450 มม. (P.C.D.) และชุดขับเคลื่อนไฮดรอลิก 24V บันทึกการตรวจสอบหน้างานจริงและใบรับรองการทดสอบจะเผยแพร่เมื่อผ่านการตรวจรับขั้นสุดท้าย"
+    eeatComplianceLabel: "ขอบเขตหลักฐานและเกณฑ์มาตรฐาน:",
+    eeatFactLabel: "สรุปเกณฑ์มาตรฐานสเปก:",
+    eeatCaseBrief: "เกณฑ์มาตรฐานสเปก: ระดับความสูงเสา 12 ม. พิกัดยก 300 กก. โครงสร้างสองโมดูล 85 กก. (โมดูลไฮดรอลิก 45 กก. ตู้ไฟฟ้า 24 V 40 กก.) ระยะรูหน้าแปลน 180–260 มม. และขนาดสลักยึด M16–M24 ที่ระบุไว้ (รวมชุด M16–M22 ฐานรากนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ) ตัวเลขที่ผู้ผลิตรายงาน 20 s, >50 ครั้งต่อการชาร์จ และ >3000 รอบยังคงเป็นค่าตามสเปกที่รอการยืนยันภาคสนาม"
   },
   id: {
-    directAnswerBadge: "Jawaban Rekayasa Langsung / Ringkasan Eksekutif",
-    directAnswerText: "Tiang lampu jalan perkotaan setinggi 12m (beban terukur 300kg) dapat dipasang secara aman tanpa truk derek melalui alat hidrolik portabel yang menambatkan diri pada baut angkur pondasi M16–M24. Kelayakan teknis harus dikonfirmasi berdasarkan berat total, pusat gravitasi, ambang batas angin, dan jarak aman listrik.",
-    specLabelLimit: "Batas Beban Kerja Aman (WLL)",
-    specCapacity: "300 kg Beban Maksimal (Hingga 12m)",
-    specLabelCrew: "Kebutuhan Tenaga Kerja",
-    specCrew: "2 Operator (85kg modular)",
-    specLabelBolt: "Pola Lingkaran Baut Angkur",
-    specAnchorage: "P.C.D. 180–260 mm (ASTM F1554)",
-    specLabelPower: "Daya & Sistem Mekanis",
-    specPower: "Baterai 24V DC (Sistem tertutup)",
-    tableCaption: "Tabel 1: Perbandingan Operasional: Alat Angkat Tiang Portabel vs. Truk Derek Boom 16 Ton",
-    colMetric: "Parameter Rekayasa",
+    directAnswerBadge: "Ringkasan Spesifikasi / Ruang Lingkup Tinjauan",
+    directAnswerText: "Tiang lampu jalan kelas 12 m dalam batas beban terukur 300 kg dapat dievaluasi untuk pemasangan tanpa derek menggunakan alat angkat tiang hidrolik portabel yang ditambatkan pada baut pondasi. Kesesuaian wajib dikonfirmasi berdasarkan berat rakitan total, titik pusat gravitasi, geometri flensa, kondisi pondasi, dan jarak bebas udara.",
+    specLabelLimit: "Beban Terukur",
+    specCapacity: "300 kg (Kelas hingga 12 m)",
+    specLabelCrew: "Operator Tercantum",
+    specCrew: "1–2 operator (modular 85 kg)",
+    specLabelBolt: "Flensa & Baut",
+    specAnchorage: "Bentang 180–260 mm (tercantum M16–M24)",
+    specLabelPower: "Sumber Daya",
+    specPower: "Baterai isi ulang 24 V",
+    tableCaption: "Tabel 1: Perbandingan Perencanaan Proyek: Alat Angkat Tiang Hidrolik Portabel vs. Truk Derek",
+    colMetric: "Faktor Perencanaan",
     colLifter: "Alat Angkat Portabel volvet",
-    colCrane: "Truk Derek Boom 16 Ton",
+    colCrane: "Truk Derek",
     tableRows: [
-      { metric: "Akses Lokasi & Koridor Sempit", lifter: "Jalur pejalan kaki, trotoar, ladang surya tanpa aspal (tanpa merusak tanah)", crane: "Membutuhkan lebar jalan aspal minimal 6m dan tanah padat untuk kaki outrigger" },
-      { metric: "Kebutuhan Tenaga & Pelatihan", lifter: "2 operator terlatih (transportasi modular 85kg dengan mobil pikap biasa)", crane: "3 hingga 4 personel (operator derek bersertifikat, rigger, dan pemandu sinyal)" },
-      { metric: "Jarak Bebas terhadap Kabel Udara", lifter: "Pengangkatan dari bawah meminimalkan risiko busur api listrik (IEEE 516 / OSHA 1926)", crane: "Risiko sengatan listrik tinggi: butuh pemadaman jaringan atau jarak bebas besar" },
-      { metric: "Penambatan pada Pondasi Beton", lifter: "Penambatan kaku mandiri pada baut angkur ASTM F1554 P.C.D. 180–260mm", crane: "Mengandalkan penyeimbang beban kendaraan; tekanan tanah setempat sangat tinggi" },
-      { metric: "Izin Lalu Lintas & Mobilisasi", lifter: "Dapat mengurangi kebutuhan izin penutupan jalan; siap beroperasi dalam 15 menit", crane: "Izin penutupan jalur rumit, pemasangan rambu pengalihan dan biaya sewa mahal" }
+      { metric: "Akses Lokasi & Area Tapak", lifter: "Angkut dua modul (modul hidrolik 45 kg + kabinet 40 kg) untuk jalur sempit dan area belum beraspal", crane: "Membutuhkan lebar akses jalan, daya dukung tanah, dan ruang kaki outrigger" },
+      { metric: "Kru & Transportasi", lifter: "1–2 operator tercantum pada lembar spesifikasi; berat total peralatan 85 kg", crane: "Membutuhkan operator derek, tim rigging, dan pengiriman kendaraan berat" },
+      { metric: "Ketinggian Kerja & Ruang Bebas", lifter: "Pemasangan di permukaan tanah; busur penuh tiang 12 m tetap memerlukan pemeriksaan kabel udara", crane: "Lengan derek udara memerlukan perencanaan ayunan boom dan jarak aman kabel listrik" },
+      { metric: "Sambungan Pondasi & Flensa", lifter: "Dibaut ke angkur pondasi pada bentang 180–260 mm (M16–M22 disertakan, M24 tercantum; dudukan non-standar memerlukan peninjauan gambar berdimensi)", crane: "Ditopang outrigger derek saat menurunkan tiang ke baut pondasi" },
+      { metric: "Lalu Lintas & Persiapan Lokasi", lifter: "Tapak ringkas mengurangi penutupan lajur bila diizinkan aturan lokasi", crane: "Sering memerlukan izin penutupan jalan, pengaturan lalu lintas, dan durasi sewa minimum" }
     ],
-    ctaAuditTitle: "Memiliki gambar flensa khusus atau ruang kerja sempit?",
-    ctaAuditDesc: "Kirimkan dimensi pelat dasar dan gambar pondasi untuk peninjauan kompatibilitas teknis cepat dalam 24 jam.",
-    ctaAuditBtn: "Minta Peninjauan Gambar 24 Jam ↗",
-    ctaRoiBtn: "Hitung Penghematan Proyek dengan Kalkulator ROI ↗",
-    reviewBadge: "Tinjauan Rekayasa Lengkap",
-    reviewStandards: "Standar yang Diterapkan: ASTM F1554, ANSI/IES RP-8-18, OSHA 1926 Subpart CC, IEEE 516, EN 40-3",
+    ctaAuditTitle: "Memiliki Dudukan Non-Standar atau Ruang Lokasi Terbatas?",
+    ctaAuditDesc: "Kirimkan tujuan proyek, ukuran pelat dasar, dan gambar pondasi untuk peninjauan kompatibilitas. Dudukan non-standar memerlukan peninjauan gambar berdimensi.",
+    ctaAuditBtn: "Minta Peninjauan Konfigurasi ↗",
+    ctaRoiBtn: "Bandingkan Biaya Proyek dengan Kalkulator ROI ↗",
+    reviewBadge: "Artikel Ditinjau Berdasarkan Garis Dasar",
+    reviewStandards: "Garis Dasar Sumber: Lembar Spesifikasi Produk (S4) · Register Fakta F001–F031 · Validasi Lapangan Tertunda",
     breadcrumbGuide: "Panduan",
-    breadcrumbReviewed: "Artikel terverifikasi",
-    eyebrowPrefix: "Konten berbasis rekayasa",
+    breadcrumbReviewed: "Artikel ditinjau",
+    eyebrowPrefix: "Konten berbasis spesifikasi",
     relatedTitle: "Panduan teknis dan alat perencanaan terkait",
-    faqSectionTitle: "Pertanyaan umum seputar pemasangan tiang lampu tanpa derek",
-    eeatAccountabilityLabel: "Akuntabilitas Teknis dan Verifikasi Rekayasa:",
+    faqSectionTitle: "Pertanyaan umum seputar pemasangan tiang lampu 12 m tanpa derek",
+    eeatAccountabilityLabel: "Tinjauan Editorial & Teknik:",
     eeatReviewer: "volvet Engineering Review",
-    eeatComplianceLabel: "Cakupan Standar dan Kepatuhan Keselamatan:",
-    eeatFactLabel: "Berkas Lapangan dan Parameter Uji Terverifikasi:",
-    eeatCaseBrief: "Garis dasar rekayasa: WLL 300 kg terverifikasi, sistem modular 85 kg (tiang 45 kg, kabinet daya 40 kg; paket terberat 65 kg), lingkaran baut flensa 200–450 mm (P.C.D.), dan paket tenaga hidrolik 24V. Dokumen validasi lapangan dan sertifikat uji akan diterbitkan setelah pembukaan gerbang validasi resmi."
+    eeatComplianceLabel: "Ruang Lingkup Bukti & Garis Dasar:",
+    eeatFactLabel: "Ringkasan Garis Dasar Spesifikasi:",
+    eeatCaseBrief: "Garis dasar spesifikasi: kelas tiang berlaku 12 m, beban terukur 300 kg, arsitektur dua modul 85 kg (modul hidrolik 45 kg, kabinet listrik 24 V 40 kg), bentang lubang flensa 180–260 mm, dan baut angkur M16–M24 tercantum (M16–M22 disertakan; dudukan non-standar memerlukan peninjauan gambar berdimensi). Angka laporan pabrikan 20 s, >50 angkatan per pengisian, dan >3000 siklus tetap berstatus label spesifikasi sambil menunggu validasi lapangan."
   }
 };
 
@@ -536,11 +536,13 @@ const compPath = locale === "en" ? "/guides/pole-jack-compatibility/" : localize
 
 const rawSeoTitle = locArticle?.seoTitle || article.seoTitle || article.title;
 const seoTitle = /\|\s*volvet/i.test(rawSeoTitle) ? rawSeoTitle : `${rawSeoTitle} | volvet`;
+const snapshotArticles = loadPublishedSnapshot().articles;
 
 const origin = publicOrigin();
 const articleImg = heroCoverImage || "/images/product/portable-pole-lifter-hero-cutout.png";
 const absImage = origin ? new URL(articleImg, origin).href : articleImg;
 const pageUrl = origin ? canonicalUrl(currentPath, origin) : currentPath;
+const datePublished = rawArticle.publishedAt || rawArticle.review?.reviewedAt || "2026-11-01";
 
 const techArticleSchema = {
   "@context": "https://schema.org",
@@ -548,8 +550,8 @@ const techArticleSchema = {
   "headline": article.title,
   "description": article.description,
   "inLanguage": locale,
-  "datePublished": "2026-10-28",
-  "dateModified": rawArticle.review?.reviewedAt || "2026-11-03",
+  "datePublished": datePublished,
+  "dateModified": rawArticle.review?.reviewedAt || datePublished,
   "image": absImage,
   "author": {
     "@type": "Organization",
@@ -610,33 +612,35 @@ const techArticleSchema = {
         </div>
       )}
 
-      <!-- Direct Answer Box (Google Featured Snippet Anchor) -->
-      <aside class="direct-answer-box" aria-label="Technical Direct Answer">
-        <div class="direct-answer-header">
-          <span class="direct-answer-badge">✓ {c.directAnswerBadge}</span>
-        </div>
-        <p class="direct-answer-text">
-          <strong>{c.directAnswerText}</strong>
-        </p>
-        <div class="direct-answer-specs">
-          <div class="spec-card">
-            <span class="spec-label">{c.specLabelLimit}</span>
-            <span class="spec-value">{c.specCapacity}</span>
+      {/* 仅对首篇 12 m 指南渲染内置参数摘要卡片，避免其他文章复用硬编码数据 */}
+      {isCraneExplainer && (
+        <aside class="direct-answer-box" aria-label="Technical Direct Answer">
+          <div class="direct-answer-header">
+            <span class="direct-answer-badge">✓ {c.directAnswerBadge}</span>
           </div>
-          <div class="spec-card">
-            <span class="spec-label">{c.specLabelCrew}</span>
-            <span class="spec-value">{c.specCrew}</span>
+          <p class="direct-answer-text">
+            <strong>{c.directAnswerText}</strong>
+          </p>
+          <div class="direct-answer-specs">
+            <div class="spec-card">
+              <span class="spec-label">{c.specLabelLimit}</span>
+              <span class="spec-value">{c.specCapacity}</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">{c.specLabelCrew}</span>
+              <span class="spec-value">{c.specCrew}</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">{c.specLabelBolt}</span>
+              <span class="spec-value">{c.specAnchorage}</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">{c.specLabelPower}</span>
+              <span class="spec-value">{c.specPower}</span>
+            </div>
           </div>
-          <div class="spec-card">
-            <span class="spec-label">{c.specLabelBolt}</span>
-            <span class="spec-value">{c.specAnchorage}</span>
-          </div>
-          <div class="spec-card">
-            <span class="spec-label">{c.specLabelPower}</span>
-            <span class="spec-value">{c.specPower}</span>
-          </div>
-        </div>
-      </aside>
+        </aside>
+      )}
 
       <article class="policy-body snapshot-article">
         {(() => {
@@ -651,7 +655,7 @@ const techArticleSchema = {
               hasRenderedFaqHeader = true;
             }
 
-            const shouldRenderComparisonTable = !hasRenderedComparisonTable && (
+            const shouldRenderComparisonTable = isCraneExplainer && !hasRenderedComparisonTable && (
               Boolean(fig && (fig.id === "05" || fig.src.includes("05-crane-vs-lifter-comparison"))) ||
               idx === 1 ||
               (idx === 0 && article.sections.length === 1)
@@ -712,7 +716,7 @@ const techArticleSchema = {
               {/* 使用专用 AST Markdown 渲染器解析段落 */}
               <div class="section-content" set:html={renderMarkdownBlock(s.paragraphs.join("\n\n"))} />
 
-              {/* 在法兰适配或第三节后插入高转化图纸审计 CTA */}
+              {/* 在法兰适配或第三节后插入配置核查 CTA */}
               {idx === 3 && (
                 <div class="interactive-b2b-cta-card">
                   <div class="cta-card-content">
@@ -738,7 +742,7 @@ const techArticleSchema = {
             <p><strong>{c.eeatAccountabilityLabel}</strong> {c.eeatReviewer}.</p>
             <p><strong>{c.eeatComplianceLabel}</strong> {c.reviewStandards}.</p>
             <p><strong>{c.eeatFactLabel}</strong> {c.eeatCaseBrief}</p>
-            <p class="muted">Fact Register: {rawArticle.evidenceRefs.join(", ")} &bull; Baseline Version: {rawArticle.review.baselineVersion} &bull; Specification-Only Baseline (Field Validation Pending) &bull; ASTM F1554 Anchor Foundation Design.</p>
+            <p class="muted">Fact Register: {rawArticle.evidenceRefs.join(", ")} &bull; Baseline Version: {rawArticle.review.baselineVersion} &bull; Specification-Only Baseline (Field Validation Pending) &bull; Non-standard bases require a dimensioned drawing review.</p>
           </div>
         </div>
 
@@ -747,10 +751,17 @@ const techArticleSchema = {
           <div class="links-row">
             {article.relatedPaths.map((p) => {
               const key = pageKeyForPath(p);
+              const guideSlug = p.match(/^\/guides\/([a-z0-9-]+)\/$/)?.[1];
+              const matchedGuide = guideSlug ? snapshotArticles.find(item => item.slug === guideSlug) : null;
+              const matchedGuideTitle = matchedGuide
+                ? (locale !== "en" && localizedContent[locale]?.[guideSlug]?.title
+                  ? localizedContent[locale][guideSlug].title
+                  : matchedGuide.title).replace(/\s*\|\s*volvet.*$/i, "").trim()
+                : null;
               const baseLabel = key && corePages[key]
                 ? corePages[key].title.replace(/\s*\|\s*volvet.*$/i, "").trim()
-                : p.replace(/^\/|\/$/g, "").replace(/-/g, " ");
-              const label = locale === "en" ? baseLabel : translateText(baseLabel, locale);
+                : (matchedGuideTitle || p.replace(/^\/|\/$/g, "").replace(/-/g, " "));
+              const label = (locale === "en" || matchedGuideTitle) ? baseLabel : translateText(baseLabel, locale);
               return (
                 <a class="related-link-chip" href={localizePath(p, locale)}>
                   <span>{label}</span>

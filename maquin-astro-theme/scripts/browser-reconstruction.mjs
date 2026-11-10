@@ -10,7 +10,7 @@ import {createInquiryServer} from '../server/inquiry-server.mjs';
 import {localizedPagePath} from '../src/lib/site-config.mjs';
 import {translateText} from '../src/lib/industrial-localization.mjs';
 import {checkFlange} from '../src/lib/flange-checker.mjs';
-import {REGIONAL_PRESETS} from '../src/lib/roi.mjs';
+import {input as roiFixtureInput} from './lib/decision-fixture.mjs';
 import {verifyBuiltVersion} from './lib/source-fingerprint.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),version=verifyBuiltVersion(root);
@@ -59,19 +59,25 @@ try{
    check((await page.locator('[name="foundation"]').inputValue())===t('Flange check: {span} mm / {bolt} / {holes} holes. Please review the base connection.').replace('{span}','240').replace('{bolt}','M24').replace('{holes}','4'),`${locale}: flange dimensions carried in local language`);
    check(await page.locator('.inquiry-details').evaluate(d=>d.open),`${locale}: carried details visible for editing`);
 
+   const fillRoiFixture=async()=>{
+    for(const [k,v] of Object.entries(roiFixtureInput)){
+     if(k==='suitability')await page.locator('#roi-form [name="suitability"]').check();
+     else await page.locator(`#roi-form [name="${k}"]`).fill(String(v));
+    }
+    await page.locator('#roi-form [type="submit"]').click();
+    await page.locator('#roi-results').waitFor({state:'visible'});
+   };
    await goto('roi');
-   for(const [key,preset] of Object.entries(REGIONAL_PRESETS)){
-    await page.locator(`[data-preset-key="${key}"]`).click();await page.locator('#roi-results').waitFor({state:'visible'});
-    const poles=await page.locator('[data-highlight="breakEvenPoles"]').innerText();
-    check(!/\bPoles\b/.test(poles)||locale==='en',`${locale}/${key}: translated payback unit`);
-    check((await page.locator('[data-highlight="paybackMonths"]').innerText()).includes(t('{value} months').replace('{value}','').trim()),`${locale}/${key}: translated months`);
-    check(!/Project Cost Reduction/.test(await page.locator('[data-highlight="savingPercent"]').innerText()),`${locale}/${key}: translated percentage label`);
-    check(await page.locator(`[data-preset-key="${key}"]`).getAttribute('aria-pressed')==='true',`${locale}/${key}: preset selected accessibly`);
-   }
+   check(await page.locator('.preset-strip').count()===0,`${locale}: no regional preset strip`);
+   await fillRoiFixture();
+   const poles=await page.locator('[data-highlight="breakEvenPoles"]').innerText();
+   check(!/\bPoles\b/.test(poles)||locale==='en',`${locale}/fixture: translated payback unit`);
+   check((await page.locator('[data-highlight="paybackMonths"]').innerText()).includes(t('{value} months').replace('{value}','').trim()),`${locale}/fixture: translated months`);
+   check(!/Project Cost Reduction/.test(await page.locator('[data-highlight="savingPercent"]').innerText()),`${locale}/fixture: translated percentage label`);
    await page.locator('[name="annualFixed"]').fill('1000000');await page.locator('#roi-form [type="submit"]').click();
    check(await page.locator('#roi-verdict').innerText()===t('No positive saving.'),`${locale}: negative result translated`);
    await page.locator('[type="reset"]').click();check(await page.locator('#roi-results').isHidden(),`${locale}: reset clears stale results`);
-   await page.locator('[data-preset-key="sea"]').click();await page.locator('#roi-to-inquiry').click();await page.waitForURL(base+path('quote')+'?context=roi');
+   await fillRoiFixture();await page.locator('#roi-to-inquiry').click();await page.waitForURL(base+path('quote')+'?context=roi');
    check((await page.locator('[name="message"]').inputValue()).startsWith(t('Visitor-entered scenario; not a quotation or suitability approval.')),`${locale}: ROI notes remain localized`);
 
    await goto('faq');
@@ -81,7 +87,7 @@ try{
     for(const [key,selector] of [['home','.procurement-cta-tier'],['compatibility','.flange-checker'],['compare','.comparison-matrix-wrapper'],['roi','.calculator-layout'],['about','.quality-testing-section']]){
      for(const width of [1440,390]){
       await page.setViewportSize({width,height:1000});await goto(key);
-      if(key==='roi')await page.locator('[data-preset-key="sea"]').click();
+      if(key==='roi')await fillRoiFixture();
       await page.locator(selector).screenshot({path:join(out,`${locale}-${key}-${width}.png`)});
      }
     }

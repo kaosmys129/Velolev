@@ -1,5 +1,5 @@
 {
-  "sourceDigest": "8d6666de0e1fc942df68aadec30e1ba99cc2eb996a5033fca7e0e12224efdfa1",
+  "sourceDigest": "3ff1e7832afb9dcb218c56739cef1212b604909654f933e8eca45b7cc9e53bdc",
   "assetDigest": "298b5209d8d604ca459034740747e6d4eff55efc8d64ea889cab54c81a8eb01f",
   "date": "2026-10-28",
   "stage": "D31-D60",
@@ -2983,71 +2983,35 @@
       "passed": true
     },
     {
-      "name": "about: linked resource /images/factory/cnc-machining-center.jpg",
+      "name": "about: linked resource /images/product/portable-pole-lifter-hero-cutout.png",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/factory/hydraulic-cylinder-assembly.jpg",
+      "name": "about: linked resource /images/evidence/equipment-trolley-side-detail.jpg",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/factory/welding-robot-rig.jpg",
+      "name": "about: linked resource /images/evidence/field-installation-flange-erect.jpg",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/factory/flange-base-machining.jpg",
+      "name": "about: linked resource /images/evidence/factory-crating-export-package.jpg",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/factory/electrical-cabinet-assembly.jpg",
+      "name": "about: linked resource /images/evidence/equipment-trolley-side-detail.jpg",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/quality/ultrasonic-flaw-detector.jpg",
+      "name": "about: linked resource /images/product/portable-pole-lifter-hero-cutout.png",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/quality/hydraulic-pressure-test-bench.jpg",
+      "name": "about: linked resource /images/evidence/field-installation-flange-erect.jpg",
       "passed": true
     },
     {
-      "name": "about: linked resource /images/quality/vertical-proof-load-test-rig.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/packaging/export-wooden-crating-rig.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/quality/metal-hardness-tester.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/quality/digital-calipers-alignment.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/quality/coating-thickness-gauge.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/quality/battery-charge-discharge-tester.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/quality/electrical-safety-test-station.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/packaging/industrial-vacuum-sealer.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/packaging/strapping-tensioner-rig.jpg",
-      "passed": true
-    },
-    {
-      "name": "about: linked resource /images/packaging/eva-foam-cnc-router.jpg",
+      "name": "about: linked resource /images/evidence/factory-crating-export-package.jpg",
       "passed": true
     },
     {
@@ -3863,7 +3827,7 @@
       "passed": true
     },
     {
-      "name": "home: linked resource /tools/roi-calculator/",
+      "name": "home: linked resource /guides/pole-jack-compatibility/",
       "passed": true
     },
     {
@@ -7056,6 +7020,10 @@
     },
     {
       "name": "calculator: no default public price",
+      "passed": true
+    },
+    {
+      "name": "calculator: regional currency/amount presets removed",
       "passed": true
     },
     {

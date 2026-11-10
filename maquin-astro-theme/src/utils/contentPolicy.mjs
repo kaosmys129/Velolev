@@ -118,12 +118,11 @@ export function enforceContentPolicy(html, locale = "en") {
 }
 
 export function organizationSchema(origin, locale = "en") {
-  const desc = aboutCopy[locale]?.metaDescription || "Specialized original equipment manufacturer (OEM) of portable hydraulic light pole lifting equipment, engineered to eliminate crane dependency across global infrastructure projects.";
+  const desc = aboutCopy[locale]?.metaDescription || "volvet portable hydraulic light pole lifter product reference and B2B project configuration review.";
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: baseline.brand.name,
-    legalName: "volvet Engineering & Equipment Co., Ltd.",
     description: desc,
     ...(origin ? {
       url: origin,
@@ -156,8 +155,9 @@ export function productSchema(origin, imageUrl, path = "/products/light-pole-jac
   const specs = baseline.product.specifications;
   const reported = baseline.product.manufacturerReportedPerformance;
   const copy = copyFor(locale);
-  const labels = copy.labels || copies.en.labels;
-  const isEn = locale === "en";
+  const pLabels = copy.propertyLabels || copies.en.propertyLabels || {};
+  const enLabels = copies.en.propertyLabels || {};
+  const propName = (key, fallback) => pLabels[key] || enLabels[key] || fallback;
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -171,20 +171,20 @@ export function productSchema(origin, imageUrl, path = "/products/light-pole-jac
     image: imageUrl,
     ...(origin ? { url: new URL(path, origin).href } : {}),
     additionalProperty: [
-      { "@type": "PropertyValue", name: isEn ? "Applicable light pole height" : (labels[0] || "Applicable light pole height"), value: specs.applicablePoleHeightM, unitText: "m" },
-      { "@type": "PropertyValue", name: isEn ? "Rated load" : (labels[1] || "Rated load"), value: specs.ratedLoadKg, unitText: "kg" },
-      { "@type": "PropertyValue", name: isEn ? "Battery voltage" : (labels[2] || "Battery"), value: specs.batteryVoltageV, unitText: "V" },
-      { "@type": "PropertyValue", name: isEn ? "Total weight" : (labels[3] || "Total weight"), value: specs.totalWeightKg, unitText: "kg" },
-      { "@type": "PropertyValue", name: isEn ? "Hydraulic module weight" : (labels[4] || "Hydraulic module"), value: specs.hydraulicModuleWeightKg, unitText: "kg" },
-      { "@type": "PropertyValue", name: isEn ? "Electrical cabinet weight" : (labels[5] || "Electrical cabinet"), value: specs.electricalCabinetWeightKg, unitText: "kg" },
-      { "@type": "PropertyValue", name: isEn ? "Hydraulic module dimensions" : (labels[6] || "Packaging"), value: specs.hydraulicModuleDimensionsMm.join(" × "), unitText: "mm" },
-      { "@type": "PropertyValue", name: isEn ? "Electrical cabinet dimensions" : (labels[7] || "Electrical cabinet"), value: specs.electricalCabinetDimensionsMm.join(" × "), unitText: "mm" },
-      { "@type": "PropertyValue", name: isEn ? "Packaging dimensions" : (labels[8] || "Packaging"), value: specs.packagingDimensionsMm.join(" × "), unitText: "mm" },
-      { "@type": "PropertyValue", name: isEn ? "Flange hole span compatibility" : (labels[10] || "Flange hole span"), value: `${specs.flangeHoleSpanMm[0]}–${specs.flangeHoleSpanMm[1]}`, unitText: "mm" },
-      { "@type": "PropertyValue", name: isEn ? "Anchor bolt compatibility" : (labels[8] ? "Anchor bolt compatibility" : "Anchor bolt compatibility"), value: specs.listedAnchorBoltSizes.join(", ") },
-      { "@type": "PropertyValue", name: isEn ? "Lift stroke time" : (labels[11] || "Lift time"), value: reported.liftTimeSeconds, unitText: "s" },
-      { "@type": "PropertyValue", name: isEn ? "Continuous lifts per full charge" : (labels[12] || "Lifts per full charge"), value: reported.liftsPerFullCharge },
-      { "@type": "PropertyValue", name: isEn ? "Design service cycles" : (labels[13] || "Usage cycles"), value: reported.usageCycles }
+      { "@type": "PropertyValue", name: propName("poleHeight", "Applicable light pole height"), value: specs.applicablePoleHeightM, unitText: "m" },
+      { "@type": "PropertyValue", name: propName("ratedLoad", "Rated load"), value: specs.ratedLoadKg, unitText: "kg" },
+      { "@type": "PropertyValue", name: propName("batteryVoltage", "Battery voltage"), value: specs.batteryVoltageV, unitText: "V" },
+      { "@type": "PropertyValue", name: propName("totalWeight", "Total weight"), value: specs.totalWeightKg, unitText: "kg" },
+      { "@type": "PropertyValue", name: propName("hydraulicWeight", "Hydraulic module weight"), value: specs.hydraulicModuleWeightKg, unitText: "kg" },
+      { "@type": "PropertyValue", name: propName("cabinetWeight", "Electrical cabinet weight"), value: specs.electricalCabinetWeightKg, unitText: "kg" },
+      { "@type": "PropertyValue", name: propName("hydraulicDimensions", "Hydraulic module dimensions"), value: specs.hydraulicModuleDimensionsMm.join(" × "), unitText: "mm" },
+      { "@type": "PropertyValue", name: propName("cabinetDimensions", "Electrical cabinet dimensions"), value: specs.electricalCabinetDimensionsMm.join(" × "), unitText: "mm" },
+      { "@type": "PropertyValue", name: propName("packagingDimensions", "Packaging dimensions"), value: specs.packagingDimensionsMm.join(" × "), unitText: "mm" },
+      { "@type": "PropertyValue", name: propName("flangeSpan", "Flange hole span compatibility"), value: `${specs.flangeHoleSpanMm[0]}–${specs.flangeHoleSpanMm[1]}`, unitText: "mm" },
+      { "@type": "PropertyValue", name: propName("anchorBolts", "Anchor bolt compatibility"), value: specs.listedAnchorBoltSizes.join(", ") },
+      { "@type": "PropertyValue", name: propName("liftTime", "Lift stroke time"), value: reported.liftTimeSeconds, unitText: "s" },
+      { "@type": "PropertyValue", name: propName("liftsPerCharge", "Continuous lifts per full charge"), value: reported.liftsPerFullCharge },
+      { "@type": "PropertyValue", name: propName("usageCycles", "Design service cycles"), value: reported.usageCycles }
     ]
   };
 }

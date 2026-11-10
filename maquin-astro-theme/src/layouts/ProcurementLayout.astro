@@ -2,7 +2,8 @@
 import baseline from "../data/content-baseline.json";
 import {publicOrigin,canonicalUrl,corePages,coreAlternates,industrialLocales,localizePath,localizedPagePath} from "../lib/site-config.mjs";
 import {localizeMarkup,translateText} from "../lib/industrial-localization.mjs";
-import {productSchema, organizationSchema} from "../utils/contentPolicy.mjs";
+import {productSchema, organizationSchema, faqSchema} from "../utils/contentPolicy.mjs";
+import {procurementFaq, productFaq} from "../data/decision-content.mjs";
 import copies from "../data/inquiry-copy.json";
 import HeaderDiscovery from "../components/procurement/HeaderDiscovery.astro";
 import LanguageSwitcher from "../components/LanguageSwitcher.astro";
@@ -99,6 +100,8 @@ const lcpImage = article?.heroCoverImage || (page === "home" || page === "produc
     {websiteSchema&&<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}/>}
     {breadcrumbSchema&&<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}/>}
     {page==="product"&&<script type="application/ld+json" set:html={JSON.stringify(productSchema(origin,origin?new URL(image,origin).href:image,path,current))}/>}
+    {page==="product"&&<script type="application/ld+json" set:html={JSON.stringify(faqSchema(productFaq,t))}/>}
+    {page==="faq"&&<script type="application/ld+json" set:html={JSON.stringify(faqSchema(procurementFaq,t))}/>}
     {extraSchemas.map(s=><script type="application/ld+json" set:html={JSON.stringify(s)}/>)}
   </head>
   <body class={`procurement page-${page}`}>

@@ -391,10 +391,10 @@ export function renderSubscriptionWelcomeEmail(subscriber, { unsubscribeUrl = nu
 
     <div style="background-color:#f7f9f3;border:1px solid #dce1d5;padding:18px 20px;border-radius:2px;margin:20px 0;">
       <ul style="margin:0;padding-left:18px;color:#2c332e;font-size:14px;line-height:1.8;">
-        <li><strong>Installation Cost Studies</strong>: Rigorous crane vs. hydraulic lifter ROI scenarios across municipal and solar projects.</li>
-        <li><strong>Base Flange Compatibility</strong>: Standardization updates for 180mm–260mm bolt patterns, foundation bolt offsets, and adapter rings.</li>
-        <li><strong>Jobsite Best Practices</strong>: Zero-crane pole installation procedures, 24V DC battery safety, and two-man crew mobilization workflows.</li>
-        <li><strong>Field Engineering Case Files</strong>: Verified field telemetry, wind resistance during erection, and pre-shipment quality testing data.</li>
+        <li><strong>Installation Cost Studies</strong>: Project cost comparisons between crane hire and portable hydraulic lifting across municipal and solar deployments.</li>
+        <li><strong>Base Flange Compatibility</strong>: Checklist guidance for 180–260 mm flange hole spans, M16–M24 anchor bolts, and dimensioned drawing review for non-standard bases.</li>
+        <li><strong>Jobsite Planning Notes</strong>: Two-module handling (45 kg + 40 kg), 24 V battery preparation, and project-specific site assessment workflows.</li>
+        <li><strong>Specification & Validation Updates</strong>: Source-derived specification notes, configuration boundaries, and field-validation progress updates.</li>
       </ul>
     </div>
 
@@ -420,10 +420,10 @@ export function renderSubscriptionWelcomeEmail(subscriber, { unsubscribeUrl = nu
 Thank you for subscribing with ${subscriber.email}.
 
 You will receive periodic engineering bulletins regarding:
-- Crane vs. portable lifter cost scenario benchmarks
-- Base flange compatibility checklists and adapter specs
-- Two-man crew site safety and 24V DC hydraulic operations
-- Technical case studies and equipment validation records
+- Crane vs. portable lifter cost scenario comparisons
+- Base flange compatibility checklists and dimensioned drawing review notes
+- Two-module transport (45 kg + 40 kg) and 24 V battery planning notes
+- Technical documentation and field validation progress updates
 
 Interactive Cost Calculator: ${publicOrigin}/tools/roi-calculator/
 

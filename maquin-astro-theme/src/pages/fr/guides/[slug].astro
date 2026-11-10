@@ -1,9 +1,13 @@
 ---
 import GuideArticlePage from "../../../components/procurement/GuideArticlePage.astro";
 import {loadPublishedSnapshot} from "../../../lib/reviewed-snapshot.mjs";
+import localizedContent from "../../../data/published-content-locales.json";
 
 export function getStaticPaths(){
-  return loadPublishedSnapshot().articles.map(article=>({params:{slug:article.slug},props:{article}}));
+  // 仅生成已在多语种快照中完成本地化的文章路由
+  return loadPublishedSnapshot().articles
+    .filter(article=>Boolean(localizedContent.fr?.[article.slug]))
+    .map(article=>({params:{slug:article.slug},props:{article}}));
 }
 
 const {article}=Astro.props;

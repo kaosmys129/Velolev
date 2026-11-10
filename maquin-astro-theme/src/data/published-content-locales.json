@@ -3,630 +3,576 @@
     "install-12m-street-light-poles-without-crane": {
       "locale": "es",
       "slug": "install-12m-street-light-poles-without-crane",
-      "title": "Cómo instalar postes de luz de 12 m sin grúa | volvet",
-      "description": "Guía técnica para instalar postes de alumbrado de 12 m sin camión grúa: límites de carga, anclajes, distancias de seguridad eléctrica y procedimiento paso a paso.",
+      "title": "Cómo instalar postes de luz de 12 m sin grúa: límites técnicos y revisión de proyecto | volvet",
+      "h1": "Cómo instalar postes de alumbrado público de 12 m sin grúa: límites técnicos y revisión de proyecto",
+      "description": "Guía basada en la ficha técnica para instalar postes de alumbrado de 12 m sin camión grúa: carga nominal de 300 kg, diseño modular de 85 kg, rango de brida de 180–260 mm y revisión de proyecto.",
       "imageFolder": "portable-light-pole-lifter-explainer-es",
       "sections": [
         {
-          "heading": "Descripción general y Criterios de Viabilidad Técnica",
+          "heading": "Descripción general y criterios de revisión",
           "paragraphs": [
-            "En la infraestructura de alumbrado público municipal y proyectos de iluminación solar, la erección de postes y las maniobras de izaje representan cuellos de botella críticos en seguridad laboral y presupuesto. Tradicionalmente, levantar postes de 6m a 12m depende de camiones grúa de 16 toneladas o grúas telescópicas para izar las columnas y alinear las placas base. Sin embargo, en calles urbanas angostas, paseos peatonales, campus cerrados y parques solares remotos sin caminos pavimentados, las grúas pesadas enfrentan restricciones de acceso severas, falta de espacio para estabilizadores y semanas de retraso por permisos de corte de tránsito.",
-            "Determinados postes de alumbrado público de hasta 12 metros pueden instalarse sin camión grúa mediante el [elevador hidráulico portátil para postes](/products/light-pole-jack/). Diseñado con una arquitectura de dos módulos divididos y anclaje mecánico directo a la zapata de concreto, un equipo de trabajo de dos personas puede completar el anclaje, la alineación de bridas y la elevación vertical suave desde el suelo. La viabilidad técnica debe confirmarse según el peso total, el centro de gravedad del conjunto, la resistencia de la cimentación y los anclajes, las condiciones de viento y las distancias de seguridad respecto a líneas eléctricas aéreas. Una capacidad nominal de 300kg no autoriza cualquier configuración en obra.",
-            "> ### 📌 Puntos Clave para Ingenieros de Proyecto\n> - **Reducción de Logística Pesada:** Permite erigir postes estándar de hasta 12m sin despacho obligatorio de camión grúa de 16 toneladas en accesos restringidos.\n> - **Capacidad Nominal Verificada:** Capacidad vertical limitada estrictamente a 300kg conforme a las especificaciones de diseño.\n> - **Transporte Modular para Dos Personas:** Peso total dividido de 85kg (elevador de 45kg + unidad de potencia 24V de 40kg), transportable fácilmente por dos técnicos en camionetas estándar.\n> - **Ajuste Universal de Placa Base:** Placa ranurada de alta resistencia compatible con círculos de pernos (P.C.D.) de 180mm a 260mm admitiendo espárragos ASTM F1554 de M16 a M24."
+            "La instalación de postes de alumbrado público y solar ha dependido tradicionalmente de camiones grúa. En aceras urbanas estrechas, corredores peatonales, camellones y parques solares sin pavimento, el acceso y apoyo de un vehículo grúa pesado puede generar restricciones operativas. Por ello, los ingenieros evalúan el uso de un [elevador hidráulico portátil para postes](/products/light-pole-jack/) para columnas de la clase de 12 m.",
+            "Límites clave de la ficha técnica para revisión del proyecto:\n- **Clase de poste aplicable:** Indicado para postes de luz de 12 m, sujeto al peso total ensamblado, centro de gravedad y revisión en obra.\n- **Carga nominal:** Capacidad máxima de 300 kg según la ficha técnica del equipo.\n- **Arquitectura de dos módulos:** Peso total del equipo de 85 kg dividido en un módulo hidráulico de 45 kg y un gabinete eléctrico de 24 V de 40 kg, con 1–2 operarios indicados en la ficha.\n- **Brida y pernos de anclaje:** Rango de orificios de brida de 180–260 mm con tamaños de pernos M16–M24 listados; las bases no estándar requieren revisión de plano acotado."
           ]
         },
         {
-          "heading": "1. El Desafío de Ingeniería en la Erección de Postes de 12 m sin Camión Grúa",
+          "heading": "1. Acceso a obra y factores del proyecto sin camión grúa",
           "paragraphs": [
-            "El principio rector del elevador portátil radica en sustituir maquinaria aérea pesada con potencia hidráulica modular a nivel del suelo. En entornos urbanos densos o áreas verdes protegidas, el posicionamiento de estabilizadores de camiones grúa genera presiones sobre el suelo que dañan pavimentos o redes subterráneas.",
-            "Al autoanclarse directamente sobre la zapata de concreto mediante la placa base existente, el elevador transfiere la fuerza de reacción vertical a la cimentación diseñada para soportar el momento de vuelco del poste. El ciclo de elevación vertical dura aproximadamente 20 segundos, con más de 50 ciclos por carga completa de batería.",
-            "💡 [¿Desea evaluar el impacto económico en su obra? Calcule el ahorro con la calculadora de ROI de grúas](/tools/roi-calculator/)"
+            "Elevar un poste de 12 m desde la posición horizontal hasta la vertical genera momentos de flexión y vuelco sobre la base y los pernos de anclaje. A diferencia de una pluma suspendida desde arriba, el elevador hidráulico portátil trabaja a nivel del suelo conectándose a la base del poste y anclándose a los pernos existentes de la cimentación.",
+            "Coincidir únicamente con la altura de 12 m no confirma la compatibilidad. Antes de elegir el montaje sin grúa, el equipo debe revisar el peso total ensamblado (poste, luminaria, brazo y componentes solares), el estado de la cimentación, las distancias a líneas eléctricas aéreas y las normas locales de seguridad."
           ]
         },
         {
-          "heading": "2. Mecánica Hidráulica para Dos Técnicos: Carga Nominal de 300 kg Verificada en Fábrica",
+          "heading": "2. Arquitectura hidráulica de dos módulos y especificaciones listadas",
           "paragraphs": [
-            "El sistema completo está estructurado en dos módulos independientes con un peso total de transporte de **85kg**:\n- **Conjunto Elevador Hidráulico:** Dimensiones de 610 × 220 × 220 mm con un peso de **45kg**, mástil de aleación estructural rígida y cilindro vertical de 800mm de carrera útil con pasadores mecánicos de seguridad anti-caída.\n- **Gabinete de Control y Potencia 24V:** Dimensiones de 500 × 300 × 250 mm con un peso de **40kg**, batería recargable **24V DC** de alta densidad energética y válvulas proporcionales microajustables.\n- **Embalaje Industrial para Exportación:** Dimensiones embaladas de 650 × 350 × 500 mm en caja de madera reforzada con flejes de acero según estándares industriales de exportación.",
-            "Debido a que ningún submódulo supera los 45kg, el conjunto facilita el traslado manual por una cuadrilla de dos personas, permitiendo ingresar por senderos peatonales o áreas ajardinadas sin deteriorar el terreno."
+            "El elevador portátil volvet se organiza en dos módulos independientes alimentados por una batería recargable integrada de 24 V, sin requerir red eléctrica externa ni generador.",
+            "Según la ficha técnica vigente:\n- **Módulo de elevación hidráulica:** 610 × 220 × 220 mm; peso: 45 kg (cilindro hidráulico, válvula hidráulica, bomba de aceite y manómetro).\n- **Gabinete eléctrico:** 500 × 300 × 250 mm; peso: 40 kg (sistema de control, bomba hidráulica, batería recargable de 24 V, amperímetro, voltímetro y botones de elevación).\n- **Peso total y embalaje:** 85 kg de peso total del equipo; dimensiones de embalaje de 650 × 350 × 500 mm en la ficha.\n- **Operarios indicados:** 1–2 operarios listados en la ficha técnica; la asignación real de cuadrilla debe cumplir el plan de seguridad del proyecto.",
+            "La ficha técnica también reporta cifras del fabricante de 20 s de tiempo de elevación, más de 50 elevaciones por carga completa y más de 3000 ciclos de uso. La validación de campo para carga de prueba, condiciones de obra y repetibilidad sigue pendiente."
           ]
         },
         {
-          "heading": "3. Mecánica de Anclaje a Cimentación: P.C.D. 180 mm a 260 mm y Resistencia de Pernos ASTM F1554",
+          "heading": "3. Rango de brida base, pernos de anclaje y configuración estándar incluida",
           "paragraphs": [
-            "La diversidad geométrica de las bridas se resuelve mediante una placa base universal maquinada con ranuras radiales:\n- **Diámetro del Círculo de Pernos (P.C.D.):** Compatible con círculos entre **180mm y 260mm**, adaptándose a jaulas cuadradas de 4 pernos o disposiciones circulares.\n- **Pernos de Anclaje Estructurales:** Compatible con espárragos según norma **ASTM F1554** (Grados 36, 55 o 105) en diámetros **M16, M18, M20, M22 y M24**.\n- **Accesorios Estándar Incluidos:** Incluye juegos de tuercas y arandelas endurecidas para M16 a M22. Para pernos M24 se requiere verificación previa de planos para confirmar longitud de rosca y paso.",
-            "Para validar la tolerancia geométrica de su zapata antes de la instalación en campo, consulte la [guía de compatibilidad de pernos de anclaje](/guides/pole-jack-compatibility/).",
-            "📐 [Verifique la compatibilidad de su brida de anclaje: solicite revisión técnica gratuita de planos en 24 horas](/quote/)"
+            "La compatibilidad en la base del poste depende de la geometría de la brida, la distancia entre orificios, el diámetro de los pernos y la proyección de rosca sobre el concreto.",
+            "La ficha distingue entre compatibilidad listada y piezas incluidas por defecto:\n- **Rango de orificios de brida:** 180–260 mm en el diagrama de origen. Dado que el diagrama incluye terminología dimensional que requiere aclaración de ingeniería, los detalles finales de conexión deben revisarse para cada proyecto.\n- **Tamaños de pernos listados:** M16, M18, M20, M22 y M24.\n- **Configuración estándar incluida:** 1 conjunto de equipo, 4 juegos de pernos cada uno para M16, M18, M20 y M22, y 1 juego de estacas de tierra. M24 figura en la tabla pero no se incluye por defecto.\n- **Bases no estándar:** Las bases no estándar requieren revisión de plano acotado antes de confirmar la adaptación."
           ]
         },
         {
-          "heading": "4. Procedimiento Operativo de Campo Paso a Paso (SOP)",
+          "heading": "4. Verificaciones previas de ingeniería y límites de operación",
           "paragraphs": [
-            "Para garantizar maniobras seguras y reproducibles, el trabajo en obra se divide en tres fases coordinadas estrictamente por dos técnicos certificados.",
-            "📄 [Consultar especificaciones técnicas completas y documentación de ingeniería en el centro de recursos](/resources/)"
+            "Las secuencias detalladas de operación en campo se mantienen en revisión de ingeniería y no se publican como procedimiento universal. Toda instalación debe respetar las distancias eléctricas de seguridad, la inspección de cimentación y la normativa local de izaje."
           ]
         },
         {
-          "heading": "Fase 1: Inspección de Cimentación y Verificación de Entorno",
+          "heading": "Verificación previa de cimentación y espacio aéreo",
           "paragraphs": [
-            "Verificar que el concreto de la zapata haya alcanzado su resistencia de diseño especificada; limpiar roscas de pernos M16 a M24 de residuos de mortero. Orientar el eje de iluminación de luminarias según pautas fotométricas **ANSI/IES RP-8-18**. Confirmar que las distancias de seguridad respecto a líneas eléctricas aéreas cumplan estrictamente con los límites de aproximación de **OSHA 1926.1408** y **IEEE 516** (manteniendo un despeje radial mínimo de 3.0 m a 6.0 m según el voltaje de la línea). El uso de un equipo de elevación a nivel de suelo reduce la oscilación de plumas telescópicas de grúa, pero la columna metálica de 12 m sigue siendo conductora durante la trayectoria de elevación y requiere un observador de seguridad en tierra en todo momento."
+            "Antes de movilizar el equipo a obra, confirme que la cimentación de concreto haya sido aprobada por el ingeniero responsable, que las roscas y proyecciones de los pernos estén limpias y sin daños, y que el arco completo de 12 m del poste mantenga distancia segura respecto a líneas eléctricas y estructuras cercanas."
           ]
         },
         {
-          "heading": "Fase 2: Montaje Modular y Autoanclaje Mecánico",
+          "heading": "Conexión del equipo y premontaje a nivel de suelo",
           "paragraphs": [
-            "Dos operarios posicionan la base de 45kg sobre los pernos expuestos de la cimentación y aprietan tuercas de sujeción para anclar la máquina sólidamente al suelo. Conectar el gabinete de potencia 24V mediante acoples hidráulicos rápidos de cara plana; ajustar estabilizadores nivelando con la burbuja de precisión. Alinear la orejeta de la base del poste acostado con el carro de elevación e insertar el pasador de seguridad de aleación."
+            "Verifique el estado del módulo hidráulico y del gabinete eléctrico de 24 V antes del izaje, asegure el acoplamiento de mangueras y conexiones eléctricas, y complete el cableado de la luminaria y el montaje del brazo a nivel del suelo antes de elevar la columna."
           ]
         },
         {
-          "heading": "Fase 3: Cableado a Nivel de Suelo y Elevación Hidráulica Dosificada de 24 V",
+          "heading": "Elevación controlada y apriete final de pernos",
           "paragraphs": [
-            "Ventaja fundamental: la fijación de luminarias, paneles solares, conexionado y ajuste angular se realizan completamente a nivel del suelo sin requerir escaleras ni andamios. El Operario A acciona la palanca de control hidráulico de 24V para una extensión controlada y constante en aproximadamente 20 segundos. El Operario B supervisa el ascenso desde un ángulo lateral de seguridad de 45 grados. Al alcanzar los 90° verticales, la válvula de retención y el tope mecánico fijan la columna mientras los técnicos ajustan las tuercas estructurales al torque especificado."
+            "Durante la elevación, mantenga al personal fuera de la trayectoria de giro y puntos de atrapamiento mientras supervisa la alineación y verticalidad. Una vez en posición vertical, asegure y apriete las tuercas estructurales según la especificación del proyecto antes de desconectar el equipo."
           ]
         },
         {
-          "heading": "Línea Base de Ingeniería: Especificaciones Confirmadas y Validación de Campo",
+          "heading": "5. Condiciones límite: cuándo sigue siendo necesario un camión grúa",
           "paragraphs": [
-            "Para mantener la integridad técnica, todos los parámetros publicados se basan estrictamente en las especificaciones confirmadas del fabricante:\n- **Límites de Carga y Altura:** Capacidad de carga vertical estrictamente de 300 kg WLL para postes estándar de hasta 12 m. Mástiles que superen estos límites requieren grúa pesada.\n- **Arquitectura Dividida:** Peso total del sistema de 85 kg dividido en dos módulos (mástil hidráulico de 45 kg y gabinete de potencia de 40 kg; paquete individual máximo de 65 kg para transporte manual por 2 operarios).\n- **Compatibilidad de Anclaje:** Rango de círculo de pernos (P.C.D.) de 180 a 260 mm para pernos de anclaje ASTM F1554 de M16 a M24.\n- **Validación en Obra:** Los expedientes completos de validación en campo y certificados de prueba de terceros se publicarán tras la liberación formal de las puertas de verificación."
+            "El elevador hidráulico portátil está diseñado para postes ligeros de la clase de 12 m dentro de su carga nominal de 300 kg y rango de brida de 180–260 mm. No sustituye universalmente a un camión grúa.",
+            "Utilice un camión grúa u otro método de izaje aprobado cuando se presente alguna de estas condiciones:\n1. **Peso total ensamblado superior a 300 kg:** Columnas decorativas pesadas, postes de pared gruesa o conjuntos múltiples de luminarias y baterías solares que superen los 300 kg.\n2. **Altura del poste superior a 12 m:** Torres de gran altura o postes viales por encima de la clase de 12 m.\n3. **Geometría de brida o cimentación no revisada:** Bases fuera del rango de 180–260 mm, pernos fuera de M16–M24 o bases no estándar sin revisión de plano acotado.\n4. **Clima adverso o cimentación deteriorada:** Vientos fuertes en obra o zapatas y pernos dañados incapaces de soportar las reacciones de montaje."
           ]
         },
         {
-          "heading": "5. Condiciones Límite en Obra: Cuándo es Obligatorio Utilizar un Camión Grúa",
+          "heading": "¿Cuáles son los límites nominales de altura y carga del poste?",
           "paragraphs": [
-            "| Mito Habitual en la Industria | Realidad de Ingeniería Verificada | Consecuencia Técnica |\n|---|---|---|\n| **Mito 1: Un solo trabajador puede realizar la instalación** | Se requiere estrictamente un equipo de dos operarios certificados. Un técnico opera la válvula de 24V y otro guía la alineación de pernos. | Operar en solitario genera puntos ciegos y riesgo de desalineación o vuelco. |\n| **Mito 2: Reemplaza a las grúas en cualquier circunstancia** | La capacidad está calibrada estrictamente para 300kg y 12m de altura. Mástiles pesados o torres de más de 12m requieren grúa pesada. | Sobrecargar el equipo compromete la integridad estructural del cilindro. |\n| **Mito 3: Reducción garantizada de costos sin cálculo previo** | El ahorro depende de las tarifas locales de grúas y el volumen de postes. Se debe evaluar caso por caso. | Promesas comerciales no verificadas distorsionan el presupuesto de obra. |",
-            "El elevador portátil es una herramienta especializada para luminarias convencionales de hasta 12m y no reemplaza a las grúas pesadas en todas las circunstancias. Es obligatorio contratar un camión grúa en los siguientes casos:\n- **Peso total del conjunto superior a 300kg:** Postes ornamentales de fundición pesada o mástiles con coronas múltiples de reflectores que excedan la carga nominal.\n- **Altura de columna superior a 12m:** Torres de gran altura (15m a 35m) para estadios o intercambiadores viales.\n- **Descentramiento severo de carga:** Luminarias con brazos voladizos extremadamente largos que desplacen el centro de gravedad fuera del eje admisible.\n- **Velocidad del viento en obra superior a 8.0 m/s (Escala Beaufort 4):** Las ráfagas que superen este umbral operativo de seguridad del equipo obligan a suspender de inmediato el izado con elevador portátil o recurrir a grúas pesadas con sistemas de arriostramiento guiado. *(Nota técnica de ingeniería: La norma europea **EN 40-3** rige exclusivamente el diseño y cálculo estructural de resistencia de la columna ante cargas de viento estáticas y dinámicas en servicio permanente, mientras que el límite de 8.0 m/s corresponde a la ventana segura de montaje establecida en el manual de procedimientos de campo del fabricante.)*\n- **Cimentación o pernos deteriorados:** Roscas barridas o zapatas agrietadas incapaces de resistir la precarga del autoanclaje."
+            "La ficha técnica indica una clase de poste aplicable de 12 m y una carga nominal de 300 kg. Ambos límites, junto con el centro de gravedad y la geometría de brida, deben verificarse en cada proyecto. Los postes de más de 300 kg o más de 12 m requieren grúa."
           ]
         },
         {
-          "heading": "¿Cuál es la altura y el peso máximo del poste para montaje sin grúa?",
+          "heading": "¿Cuántos operarios indica la ficha técnica?",
           "paragraphs": [
-            "La capacidad vertical nominal verificada es estrictamente de 300kg, diseñada para postes metálicos o de fibra de hasta 12m de altura. Cada equipo cuenta con especificaciones de fábrica verificadas. Postes de más de 300kg o más de 12m requieren camión grúa telescópica."
+            "La ficha técnica indica 1–2 operarios para el sistema de dos módulos de 85 kg (módulo hidráulico de 45 kg y gabinete eléctrico de 40 kg). La cuadrilla real en obra debe ajustarse al plan de seguridad y manipulación manual del proyecto."
           ]
         },
         {
-          "heading": "¿El equipo puede ser operado con seguridad por un solo trabajador?",
+          "heading": "¿Qué pernos de anclaje se incluyen y qué ocurre si mi brida no es estándar?",
           "paragraphs": [
-            "No. Las normas de seguridad en el trabajo exigen estrictamente un equipo de dos operarios. Aunque el embalaje dividido en 45kg y 40kg facilita el transporte manual por dos personas, durante la elevación vertical un técnico debe controlar la unidad hidráulica de 24V mientras el segundo guía la placa base hacia los pernos de cimentación."
+            "La ficha técnica lista pernos de anclaje M16, M18, M20, M22 y M24 en un rango de orificios de brida de 180–260 mm. La entrega estándar incluye 4 juegos cada uno de M16, M18, M20 y M22; M24 no se incluye por defecto. Las bases no estándar requieren revisión de plano acotado."
           ]
         },
         {
-          "heading": "¿La placa base es compatible con patrones de pernos cuadrados y circulares?",
+          "heading": "¿Cómo se alimenta el equipo en obras sin red eléctrica?",
           "paragraphs": [
-            "La placa base ranurada admite diámetros de círculo de pernos (P.C.D.) entre 180mm y 260mm, siendo compatible con espárragos M16, M18, M20, M22 y M24 según ASTM F1554. El envío estándar incluye herrajes para M16 a M22; para pernos M24 se recomienda enviar los planos de la zapata para validación técnica."
-          ]
-        },
-        {
-          "heading": "¿Cuáles son los requerimientos de suministro de energía en obras remotas?",
-          "paragraphs": [
-            "El equipo opera mediante un sistema interno de batería recargable de 24V DC. No produce emisiones de escape, no genera ruido de motor y permite más de 50 ciclos de elevación por carga completa bajo condiciones estándar de fábrica, siendo ideal para parques solares y carreteras rurales sin red eléctrica."
+            "El gabinete eléctrico utiliza una batería recargable de 24 V, sin requerir red eléctrica externa ni generador durante el izaje. La ficha reporta más de 50 elevaciones por carga completa y 20 s de tiempo de elevación según el fabricante, con validación en campo pendiente."
           ]
         }
-      ],
-      "h1": "Cómo instalar postes de alumbrado público de 12 metros sin grúa: requisitos y procedimiento"
+      ]
     }
   },
   "fr": {
     "install-12m-street-light-poles-without-crane": {
       "locale": "fr",
       "slug": "install-12m-street-light-poles-without-crane",
-      "title": "Comment installer des candélabres de 12 m sans grue | volvet",
-      "description": "Guide technique d'installation de candélabres de 12 m sans camion-grue : limites de charge, ancrages, sécurité électrique et procédure pas à pas.",
+      "title": "Comment installer des candélabres de 12 m sans grue : limites techniques et revue de projet | volvet",
+      "h1": "Comment installer des candélabres d'éclairage public de 12 m sans grue : limites techniques et revue de projet",
+      "description": "Guide basé sur la fiche technique pour installer des candélabres de 12 m sans camion-grue : charge nominale 300 kg, architecture bimodule 85 kg, entraxe 180–260 mm et revue de projet.",
       "imageFolder": "portable-light-pole-lifter-explainer-fr",
       "sections": [
         {
-          "heading": "Synthèse technique et Critères de Faisabilité Chantier",
+          "heading": "Présentation générale et critères de revue",
           "paragraphs": [
-            "Dans le domaine de l'éclairage public municipal et des infrastructures solaires autonomes, l'érection des candélabres et les opérations de levage constituent des enjeux critiques de sécurité et de budget. L'installation traditionnelle de mâts standard de 6m à 12m repose couramment sur des camions-grues télescopiques de 16 tonnes. Cependant, dans les ruelles étroites, voies piétonnes, campus fermés et centrales solaires hors piste carrossable, les engins lourds subissent de sévères contraintes d'encombrement, un manque de portance au sol pour leurs stabilisateurs et de longs délais d'arrêtés municipaux de circulation.",
-            "Certains candélabres d'éclairage public jusqu'à 12 mètres peuvent être érigés sans camion-grue au moyen de l'[élévateur hydraulique portable pour candélabres](/products/light-pole-jack/). Conçu selon une architecture scindée en deux modules et un auto-ancrage mécanique direct sur le massif de fondation, une équipe de deux techniciens peut assurer la fixation, l'alignement des platines et l'élévation verticale depuis le sol. La faisabilité technique doit impérativement être validée selon le poids total, le centre de gravité, la résistance du massif et des tiges d'ancrage, les conditions de vent et les distances d'approche des lignes électriques aériennes. Une charge nominale de 300 kg ne valide pas sans examen préalable toutes les configurations de chantier.",
-            "> ### 📌 Points Clés pour les Ingénieurs de Projet\n> - **Réduction de la Logistique Lourde :** Permet d'ériger des candélabres standard jusqu'à 12m sans recours systématique à un camion-grue de 16 tonnes dans les accès restreints.\n> - **Charge Nominale Éprouvée :** Capacité verticale strictement limitée à 300 kg conforme aux spécifications d'usine.\n> - **Manutention Modulaire à Deux Opérateurs :** Ensemble scindé en deux colis de 85 kg au total (unité de levage 45 kg + centrale 24V de 40 kg), facilement manuportable en pick-up standard.\n> - **Compatibilité Universelle des Platines :** Semelle d'assise à lumières radiales pour cercles de perçage (P.C.D.) de 180 mm à 260 mm recevant des tiges d'ancrage ASTM F1554 M16 à M24."
+            "La pose de candélabres municipaux et solaires repose traditionnellement sur un camion-grue. Sur les trottoirs étroits, allées piétonnes, terre-pleins et sites solaires non revêtus, l'accès et le calage d'un engin lourd posent des contraintes importantes. Les ingénieurs évaluent donc l'usage d'un [élévateur hydraulique portable pour candélabres](/products/light-pole-jack/) pour les mâts de classe 12 m.",
+            "Limites clés de la fiche technique pour la revue de projet :\n- **Classe de mât applicable :** Indiqué pour des candélabres de 12 m, sous réserve du poids total assemblé, du centre de gravité et d'une revue sur site.\n- **Charge nominale :** Charge maximale de 300 kg inscrite sur la fiche technique.\n- **Architecture à deux modules :** Poids total de l'équipement de 85 kg réparti entre un module hydraulique de 45 kg et un coffret électrique 24 V de 40 kg, avec 1–2 opérateurs mentionnés sur la fiche.\n- **Platine et tiges d'ancrage :** Entraxe de perçage de platine de 180–260 mm avec tiges M16–M24 listées ; les bases non standard nécessitent l'examen d'un plan coté."
           ]
         },
         {
-          "heading": "1. Le Défi d'Ingénierie du Levage de Candélabres de 12 m sans Camion-Grue",
+          "heading": "1. Accès chantier et paramètres de projet sans grue",
           "paragraphs": [
-            "Le principe fondamental de l'élévateur portable consiste à substituer au grutage lourd une cinématique hydraulique modulaire déployée au niveau du sol. En zone urbaine dense ou sur espaces verts aménagés, le déploiement des patins stabilisateurs de grue génère des pressions au sol excessives risquant de poinçonner les revêtements ou les réseaux enterrés.",
-            "En s'ancrant rigidement sur le massif béton via les tiges existantes, l'élévateur transmet les efforts de réaction directement aux fondations calculées pour reprendre le moment de renversement du candélabre. Le cycle de levage vertical s'effectue en environ 20 secondes, avec une autonomie supérieure à 50 cycles par charge de batterie.",
-            "💡 [Évaluez l'impact financier sur vos chantiers : Calculez vos économies avec le simulateur ROI grue](/tools/roi-calculator/)"
+            "Relever un candélabre de 12 m de l'horizontale à la verticale applique des efforts de flexion et de renversement au pied de mât et sur les tiges d'ancrage. Contrairement à une flèche de grue suspendue, l'élévateur hydraulique portable opère au sol en se raccordant à la base du mât et en s'ancrant sur les tiges existantes du massif.",
+            "La seule hauteur de 12 m ne suffit pas à confirmer la compatibilité. Avant de retenir une pose sans grue, il faut vérifier le poids total assemblé (mât, luminaire, crosse et ensemble solaire), l'état du massif, les distances aux lignes aériennes et les règles locales de sécurité."
           ]
         },
         {
-          "heading": "2. Mécanique Hydraulique à Deux Opérateurs : Charge Nominale 300 kg Éprouvée en Usine",
+          "heading": "2. Architecture hydraulique bimodule et spécifications listées",
           "paragraphs": [
-            "L'ensemble du système repose sur une architecture modulaire scindée en deux unités pour un poids de transport strictement vérifié de **85 kg** :\n- **Unité de Levage Hydraulique :** Dimensions de 610 × 220 × 220 mm pour un poids de **45 kg**, mât télescopique en alliage structural et vérin de course 800 mm avec broches mécaniques de sécurité anti-descente.\n- **Centrale Électrohydraulique 24V :** Dimensions de 500 × 300 × 250 mm pour un poids de **40 kg**, batterie rechargeable **24V DC** haute densité et distributeur proportionnel à commande fine.\n- **Emballage Industriel Export :** Caisse bois renforcée de 650 × 350 × 500 mm avec cerclage acier conforme aux standards industriels d'expédition.",
-            "Chaque composant pesant 45 kg ou moins, le matériel est manutentionnable par deux techniciens, permettant d'accéder aux allées piétonnes sans endommager le sol."
+            "L'élévateur portable volvet comprend deux modules distincts alimentés par une batterie rechargeable intégrée de 24 V, sans raccordement au réseau ni groupe électrogène.",
+            "Selon la fiche technique actuelle :\n- **Module de levage hydraulique :** 610 × 220 × 220 mm ; poids : 45 kg (vérin hydraulique, distributeur hydraulique, pompe à huile et manomètre).\n- **Coffret électrique :** 500 × 300 × 250 mm ; poids : 40 kg (système de commande, pompe hydraulique, batterie rechargeable 24 V, ampèremètre, voltmètre et boutons de levée).\n- **Poids total et emballage :** 85 kg de poids total ; dimensions d'emballage de 650 × 350 × 500 mm sur la fiche.\n- **Opérateurs mentionnés :** 1–2 opérateurs inscrits sur la fiche technique ; l'effectif réel sur chantier doit respecter le plan de sécurité du projet.",
+            "La fiche indique également des valeurs déclarées par le fabricant de 20 s de temps de levée, plus de 50 levées par charge complète et plus de 3000 cycles d'utilisation. La validation terrain concernant la charge d'essai, les conditions de site et la répétabilité reste en attente."
           ]
         },
         {
-          "heading": "3. Mécanique d'Ancrage sur Massif : P.C.D. 180 mm à 260 mm et Tiges d'Ancrage ASTM F1554",
+          "heading": "3. Entraxe de platine, tiges d'ancrage et configuration standard incluse",
           "paragraphs": [
-            "La variabilité dimensionnelle des entraxes est absorbée par une platine universelle à lumières radiales :\n- **Diamètre du Cercle de Perçage (P.C.D.) :** Compatible avec les entraxes de **180 mm à 260 mm**, convenant aux dispositions carrées à 4 tiges ou circulaires.\n- **Tiges d'Ancrage Structurelles :** Conforme aux spécifications **ASTM F1554** (Grades 36, 55 ou 105) pour diamètres **M16, M18, M20, M22 et M24**.\n- **Accessoires Fournis en Standard :** Comprend jeux d'écrous et rondelles trempées pour M16 à M22. Pour les tiges M24, une validation technique préalable sur plan est recommandée.",
-            "Consultez le [guide de compatibilité des platines et goujons d'ancrage](/guides/pole-jack-compatibility/) pour vérifier vos massifs.",
-            "📐 [Vérifiez la compatibilité de vos platines : Demandez une revue technique gratuite de vos plans sous 24h](/quote/)"
+            "La compatibilité au pied du mât dépend de la géométrie de la platine, de l'entraxe de perçage, du diamètre des tiges et du dépassement fileté au-dessus du béton.",
+            "La fiche technique distingue les éléments compatibles et la fourniture standard :\n- **Entraxe de perçage de platine :** 180–260 mm sur le schéma source. Comme le schéma comporte une terminologie dimensionnelle nécessitant une clarification technique, les détails finaux de raccordement doivent être vérifiés pour chaque projet.\n- **Diamètres de tiges listés :** M16, M18, M20, M22 et M24.\n- **Configuration standard incluse :** 1 ensemble d'équipement, 4 jeux de tiges d'ancrage pour chacun des diamètres M16, M18, M20 et M22, et 1 jeu de piquets de sol. Le diamètre M24 figure dans le tableau mais n'est pas inclus par défaut.\n- **Bases non standard :** Les bases non standard nécessitent l'examen d'un plan coté avant toute confirmation."
           ]
         },
         {
-          "heading": "4. Procédure Opérationnelle de Chantier Pas à Pas (SOP)",
+          "heading": "4. Contrôles d'ingénierie préalables et limites d'exploitation",
           "paragraphs": [
-            "Afin d'assurer des manœuvres sécurisées et reproductibles, l'intervention en chantier est articulée en trois étapes coordonnées par deux opérateurs qualifiés.",
-            "📄 [Consulter les spécifications techniques et la documentation d'ingénierie au centre de ressources](/resources/)"
+            "Les séquences opératoires détaillées sur chantier sont en cours de revue technique et ne sont pas publiées comme procédure universelle. Chaque installation doit respecter les distances de sécurité électrique, le contrôle du massif et la réglementation locale de levage."
           ]
         },
         {
-          "heading": "Étape 1 : Contrôle du Massif de Fondation et Dégagement sous Lignes",
+          "heading": "Vérification préalable du massif et du gabarit aérien",
           "paragraphs": [
-            "Vérifier la prise et la résistance à la compression du béton de fondation ; brosser les filets des tiges M16 à M24. Orienter le luminaire selon les spécifications photométriques **ANSI/IES RP-8-18**. Vérifier impérativement le respect des distances d'approche des lignes électriques aériennes conformément aux règles de sécurité en vigueur."
+            "Avant de mobiliser l'équipement sur site, confirmez que le massif béton a été réceptionné par l'ingénieur responsable, que les filetages et dépassements des tiges sont propres et intacts, et que le rayon complet de 12 m du mât reste à distance sûre des lignes aériennes et ouvrages voisins."
           ]
         },
         {
-          "heading": "Étape 2 : Assemblage Modulaire et Auto-Ancrage Mécanique",
+          "heading": "Raccordement de l'équipement et préassemblage au sol",
           "paragraphs": [
-            "Deux techniciens positionnent le bâti de 45 kg sur les tiges d'ancrage en attente et bloquent les écrous pour solidariser l'appareil au massif. Raccorder la centrale 24V via les coupleurs rapides hydrauliques ; caler les vérins d'assise au niveau à bulle de précision. Aligner l'articulation de pied du candélabre couché sur le chariot de levage et insérer la broche de sécurité."
+            "Contrôlez le module hydraulique et le coffret électrique 24 V avant le levage, vérifiez le bon verrouillage des flexibles hydrauliques et liaisons électriques, et effectuez le câblage du luminaire ainsi que la pose de la crosse au sol avant le relevage."
           ]
         },
         {
-          "heading": "Étape 3 : Câblage au Sol et Levage Hydraulique Dosé 24V",
+          "heading": "Levage contrôlé et serrage final des écrous",
           "paragraphs": [
-            "Avantage déterminant : la pose des luminaires, panneaux solaires et raccordements électriques s'opère intégralement au sol sans échelle. L'Opérateur A actionne le distributeur hydraulique 24V pour une érection régulière en environ 20 secondes. L'Opérateur B surveille la verticalité avec un angle de recul sécurisé de 45°. À la verticale (90°), le clapet parachute et la butée mécanique maintiennent le mât pendant le serrage au couple des écrous d'ancrage."
+            "Pendant la montée, maintenez le personnel hors de la trajectoire de basculement et des zones de pincement tout en contrôlant l'alignement et l'aplomb. Une fois le mât vertical, serrez les écrous structurels selon la spécification du projet avant de désaccoupler l'élévateur."
           ]
         },
         {
-          "heading": "Référentiel d'Ingénierie : Spécifications Confirmées et Validation Chantier",
+          "heading": "5. Conditions limites : quand une grue mobile reste indispensable",
           "paragraphs": [
-            "Afin de garantir la rigueur technique, tous les paramètres publiés sont strictement issus des spécifications confirmées par le constructeur :\n- **Limites de Charge et Hauteur :** Capacité de levage vertical strictement limitée à 300 kg CMU pour candélabres standard jusqu'à 12 m. Les mâts dépassant ces valeurs requièrent un camion-grue.\n- **Architecture Scindée :** Poids total de 85 kg scindé en deux colis (mât hydraulique 45 kg et coffret d'énergie 40 kg ; colis unitaire max 65 kg pour manutention aisée par 2 techniciens).\n- **Compatibilité d'Ancrage :** Entraxe de perçage (P.C.D.) de 180 à 260 mm recevant les tiges d'ancrage ASTM F1554 du M16 au M24.\n- **Validation sur Chantier :** Les dossiers complets de validation terrain et certificats d'essais tiers seront publiés après ouverture officielle des jalons de conformité."
+            "L'élévateur hydraulique portable est conçu pour des mâts légers de classe 12 m dans la limite de sa charge nominale de 300 kg et de l'entraxe 180–260 mm. Il ne remplace pas universellement une grue mobile.",
+            "Utilisez une grue mobile ou une méthode de levage agréée dans les cas suivants :\n1. **Poids total assemblé supérieur à 300 kg :** Candélabres décoratifs lourds, fûts à forte épaisseur ou ensembles multi-luminaires et batteries solaires dépassant 300 kg.\n2. **Hauteur de mât supérieure à 12 m :** Mâts de grande hauteur ou candélabres routiers au-delà de la classe 12 m.\n3. **Géométrie de platine ou de massif non validée :** Platines hors entraxe 180–260 mm, tiges hors M16–M24 ou bases non standard n'ayant pas fait l'objet d'un examen de plan coté.\n4. **Conditions météo défavorables ou massif dégradé :** Vent fort sur site ou fondations et tiges endommagées incapables de reprendre les réactions de levage."
           ]
         },
         {
-          "heading": "5. Conditions Limites de Chantier : Quand le Recours à une Grue Mobile Reste Obligatoire",
+          "heading": "Quelles sont les limites nominales de hauteur et de charge ?",
           "paragraphs": [
-            "| Idée Reçue Courante | Réalité d'Ingénierie Validée | Conséquence Chantier |\n|---|---|---|\n| **Idée 1 : Un seul technicien suffit pour lever le mât** | Les règles de prévention imposent strictement une équipe de deux opérateurs qualifiés. Un technicien pilote la centrale 24V, le second guide l'assise. | Travailler seul crée des angles morts et des risques d'instabilité. |\n| **Idée 2 : Remplace la grue pour n'importe quelle charge** | La CMU est strictement limitée à 300 kg et 12 m de hauteur. Les mâts lourds nécessitent impérativement une grue mobile. | Tout dépassement de charge compromet l'intégrité mécanique du vérin. |\n| **Idée 3 : Économies financières garanties sans calcul** | Le gain réel dépend du tarif horaire local des grues et du nombre de candélabres. Une simulation par projet est requise. | Les promesses non vérifiées faussent les budgets d'exploitation. |",
-            "L'élévateur portable est un outil spécialisé pour candélabres jusqu'à 12m et ne remplace pas une grue lourde en toutes circonstances. Le recours à une grue mobile reste obligatoire dans les cas suivants :\n- **Masse totale en tête supérieure à 300 kg :** Candélabres monumentaux en fonte ou mâts équipés de couronnes de projecteurs lourdes excédant la CMU.\n- **Hauteur de fût supérieure à 12 m :** Hauts mâts d'éclairage (15 m à 35 m) pour complexes sportifs ou échangeurs autoroutiers.\n- **Déport géométrique excessif :** Candélabres à consoles asymétriques très longues déplaçant le centre de gravité hors de l'axe vertical admissible.\n- **Vitesse du vent sur site supérieure à 8,0 m/s (Échelle Beaufort 4) :** Des rafales excédant ce seuil de sécurité opérationnelle imposent l'interruption immédiate du levage ou le recours à une grue mobile équipée de haubanage de guidage. *(Note technique d'ingénierie : La norme européenne **EN 40-3** encadre exclusivement la conception et la vérification mécanique de résistance du mât sous charges de vent en service permanent, tandis que le seuil de 8,0 m/s relève des tolérances de montage sécurisé définies par le manuel constructeur.)*\n- **Fondations dégradées :** Massifs béton fissurés ou tiges faussées ne permettant pas l'auto-ancrage rigide."
+            "La fiche technique indique une classe de candélabre applicable de 12 m et une charge nominale de 300 kg. Ces deux limites, ainsi que le centre de gravité et la géométrie de platine, doivent être vérifiés pour chaque projet. Au-delà de 300 kg ou 12 m, une grue est requise."
           ]
         },
         {
-          "heading": "Quelle est la hauteur et le poids maximal admissibles sans camion-grue ?",
+          "heading": "Combien d'opérateurs sont mentionnés sur la fiche technique ?",
           "paragraphs": [
-            "La capacité nominale de levage est strictement certifiée à 300 kg pour des mâts métalliques ou composites jusqu'à 12 m de hauteur. Chaque équipement répond aux spécifications d'usine confirmées. Au-delà de 300 kg ou 12 m, une grue télescopique est obligatoire."
+            "La fiche technique mentionne 1–2 opérateurs pour l'ensemble bimodule de 85 kg (module hydraulique de 45 kg et coffret électrique de 40 kg). L'effectif réel sur chantier doit respecter le plan de sécurité et les règles de manutention du projet."
           ]
         },
         {
-          "heading": "Le matériel peut-il être mis en œuvre par un seul opérateur sur le chantier ?",
+          "heading": "Quelles tiges d'ancrage sont incluses et que faire pour une platine non standard ?",
           "paragraphs": [
-            "Non. Les règles de prévention des risques au travail imposent une équipe de deux opérateurs. Bien que les modules de 45 kg et 40 kg soient manuportables à deux, le levage vertical requiert qu'un technicien pilote la centrale hydraulique pendant que le second guide l'alignement sur les tiges."
+            "La fiche technique liste les tiges M16, M18, M20, M22 et M24 sur un entraxe de perçage de 180–260 mm. La fourniture standard comprend 4 jeux chacun de M16, M18, M20 et M22 ; le M24 n'est pas inclus par défaut. Les bases non standard nécessitent l'examen d'un plan coté."
           ]
         },
         {
-          "heading": "La platine d'assise est-elle compatible avec les entraxes carrés et circulaires ?",
+          "heading": "Comment l'équipement est-il alimenté sur un site sans réseau électrique ?",
           "paragraphs": [
-            "La platine universelle à lumières oblongues accepte les cercles de perçage (P.C.D.) de 180 mm à 260 mm avec tiges d'ancrage M16, M18, M20, M22 et M24 selon ASTM F1554. Le matériel est livré avec la quincaillerie pour M16 à M22 ; pour les tiges M24, une validation préalable sur plan est recommandée."
-          ]
-        },
-        {
-          "heading": "Quelles sont les exigences d'alimentation électrique sur les chantiers isolés ?",
-          "paragraphs": [
-            "L'équipement fonctionne sur batterie autonome rechargeable 24V DC intégrée. Il n'émet aucun gaz d'échappement, fonctionne silencieusement et assure plus de 50 cycles complets d'érection par charge, parfaitement adapté aux centrales solaires et voies rurales sans réseau."
+            "Le coffret électrique intègre une batterie rechargeable de 24 V, ne nécessitant ni raccordement secteur ni générateur pendant le levage. La fiche mentionne des valeurs déclarées de plus de 50 levées par charge complète et 20 s de temps de levée, sous réserve de validation terrain."
           ]
         }
-      ],
-      "h1": "Comment installer des candélabres d'éclairage public de 12 mètres sans grue : exigences et procédure"
+      ]
     }
   },
   "pt": {
     "install-12m-street-light-poles-without-crane": {
       "locale": "pt",
       "slug": "install-12m-street-light-poles-without-crane",
-      "title": "Como instalar postes de iluminação de 12 m sem caminhão munck | volvet",
-      "description": "Guia técnico para instalar postes de iluminação de 12 m sem caminhão munck: limites de carga, ancoragens, segurança elétrica e procedimento passo a passo.",
+      "title": "Como instalar postes de iluminação de 12 m sem guindaste: limites técnicos e revisão de projeto | volvet",
+      "h1": "Como instalar postes de iluminação pública de 12 m sem guindaste: limites técnicos e revisão de projeto",
+      "description": "Guia baseado na ficha técnica para instalar postes de iluminação de 12 m sem caminhão munck: carga nominal de 300 kg, arquitetura bipartida de 85 kg, vão de flange de 180–260 mm e revisão de projeto.",
       "imageFolder": "portable-light-pole-lifter-explainer-pt",
       "sections": [
         {
-          "heading": "Visão Geral e Critérios de Viabilidade Técnica",
+          "heading": "Visão geral e critérios de revisão",
           "paragraphs": [
-            "Na infraestrutura de iluminação pública municipal e em usinas solares remotas, a instalação de postes e as manobras de içamento são etapas críticas em termos de orçamento e segurança operacional. Tradicionalmente, erguer postes de 6m a 12m requer caminhões munck de 16 toneladas ou guindastes telescópicos. Contudo, em vias estreitas, calçadões de pedestres, condomínios fechados e parques solares sem vias pavimentadas, caminhões pesados sofrem com restrições severas de acesso, falta de solo firme para sapatas estabilizadoras e lentidão na obtenção de autorizações de interdição de tráfego.",
-            "Determinados postes de iluminação pública de até 12 metros podem ser instalados sem caminhão munck utilizando o [elevador hidráulico portátil para postes](/products/light-pole-jack/). Projetado com arquitetura bipartida em dois módulos e autoancoragem direta na base de concreto, uma equipe de dois operadores executa a fixação mecânica, o alinhamento de flanges e o içamento vertical suave a partir do solo. A viabilidade técnica deve ser confirmada em função do peso total, centro de gravidade, resistência da fundação e dos chumbadores, velocidade do vento e distâncias de segurança em relação a redes elétricas aéreas. A capacidade nominal de 300kg não valida genericamente qualquer configuração de campo sem análise prévia.",
-            "> ### 📌 Pontos Principais para Engenheiros de Obra\n> - **Redução da Logística Pesada:** Permite erguer postes convencionais de até 12m sem deslocamento obrigatório de caminhão munck de 16 toneladas em acessos restritos.\n> - **Carga Nominal Aferida :** Capacidade vertical estritamente de 300kg conforme especificações de fábrica.\n> - **Transporte Modular para Duas Pessoas:** Conjunto bipartido com peso total de 85kg (unidade de içamento de 45kg + central 24V de 40kg), transportável em picapes convencionais.\n> - **Compatibilidade Universal de Flange:** Placa base ranhurada para círculos de furação (P.C.D.) de 180mm a 260mm com chumbadores ASTM F1554 de M16 a M24."
+            "A montagem de postes de iluminação pública e solar depende tradicionalmente de caminhões munck ou guindastes. Em calçadas estreitas, corredores de pedestres, canteiros ajardinados e usinas solares não pavimentadas, o acesso e patolamento de um caminhão pesado geram restrições operacionais. Por isso, engenheiros avaliam o uso de um [elevador hidráulico portátil para postes](/products/light-pole-jack/) para colunas da classe de 12 m.",
+            "Limites principais da ficha técnica para revisão de projeto:\n- **Classe de poste aplicável:** Listado para postes de 12 m, sujeito ao peso total montado, centro de gravidade e avaliação em obra.\n- **Carga nominal:** Capacidade máxima de 300 kg indicada na ficha técnica do equipamento.\n- **Arquitetura de dois módulos:** Peso total de 85 kg dividido entre um módulo hidráulico de 45 kg e um gabinete elétrico de 24 V de 40 kg, com 1–2 operadores listados na ficha.\n- **Flange e chumbadores:** Vão de furação da flange de 180–260 mm com bitolas M16–M24 listadas; bases fora do padrão exigem revisão de desenho cotado."
           ]
         },
         {
-          "heading": "1. O Desafio de Engenharia na Instalação de Postes de 12 m sem Caminhão Munck",
+          "heading": "1. Acesso à obra e fatores de projeto sem caminhão munck",
           "paragraphs": [
-            "O fundamento do elevador portátil reside em substituir equipamentos de grande porte por força hidráulica compacta ao nível do solo. Em calçadões ou áreas verdes, os estabilizadores de caminhões munck exercem altas pressões pontuais sobre o piso, com risco de fissurar pavimentos ou canalizações subterrâneas.",
-            "Ao fixar-se diretamente sobre os chumbadores da fundação, o equipamento transfere o esforço vertical de reação para o bloco de concreto dimensionado para suportar os momentos de tombamento do poste. O içamento vertical transcorre em cerca de 20 segundos, oferecendo autonomia para mais de 50 ciclos por carga de bateria.",
-            "💡 [Quer estimar o impacto financeiro no seu projeto? Simule a economia com a calculadora de ROI de guindastes](/tools/roi-calculator/)"
+            "Erguer um poste de 12 m da posição horizontal para a vertical aplica esforços de flexão e tombamento na base do poste e nos chumbadores da fundação. Diferente de uma lança suspensa pelo alto, o elevador hidráulico portátil atua no nível do solo conectando-se à base do poste e ancorando-se nos chumbadores existentes.",
+            "Apenas corresponder à altura de 12 m não confirma a compatibilidade. Antes de optar pela instalação sem guindaste, a equipe deve verificar o peso total montado (poste, luminária, braço e conjunto solar), a condição da fundação, as distâncias de redes elétricas aéreas e as normas locais de segurança."
           ]
         },
         {
-          "heading": "2. Mecânica Hidráulica para Dois Operadores: Carga Nominal de 300 kg Aferida em Fábrica",
+          "heading": "2. Arquitetura hidráulica de dois módulos e especificações listadas",
           "paragraphs": [
-            "O sistema completo é composto por dois módulos independentes com peso total de transporte de **85kg**:\n- **Módulo Elevador Hidráulico:** Dimensões de 610 × 220 × 220 mm com peso de **45kg**, coluna telescópica em liga estrutural de alta rigidez e cilindro vertical com curso útil de 800mm, provido de travas mecânicas de segurança antiqueda.\n- **Gabinete Eletro-hidráulico 24V:** Dimensões de 500 × 300 × 250 mm com peso de **40kg**, bateria recarregável **24V DC** de alta densidade e válvulas proporcionais de comando suave.\n- **Embalagem Industrial de Exportação:** Caixa de madeira reforçada de 650 × 350 × 500 mm com cintas de aço conforme normas industriais de transporte.",
-            "Como nenhum submódulo ultrapassa 45kg, o conjunto é facilmente manuseado por dois técnicos, possibilitando o deslocamento por calçadas e áreas ajardinadas sem danificar o solo."
+            "O elevador portátil volvet é composto por dois módulos separados alimentados por bateria recarregável integrada de 24 V, dispensando rede elétrica externa ou gerador.",
+            "De acordo com a ficha técnica atual:\n- **Módulo de elevação hidráulica:** 610 × 220 × 220 mm; peso: 45 kg (cilindro hidráulico, válvula hidráulica, bomba de óleo e manômetro).\n- **Gabinete elétrico:** 500 × 300 × 250 mm; peso: 40 kg (sistema de controle, bomba hidráulica, bateria recarregável de 24 V, amperímetro, voltímetro e botões de elevação).\n- **Peso total e embalagem:** 85 kg de peso total do equipamento; dimensões de embalagem de 650 × 350 × 500 mm na ficha.\n- **Operadores listados:** 1–2 operadores indicados na ficha técnica; o dimensionamento da equipe em campo deve seguir o plano de segurança do projeto.",
+            "A ficha técnica também informa dados declarados pelo fabricante de 20 s de tempo de elevação, mais de 50 elevações por carga completa e mais de 3000 ciclos de uso. A validação em campo para carga de ensaio, condições de obra e repetibilidade segue pendente."
           ]
         },
         {
-          "heading": "3. Mecânica de Ancoragem na Fundação: P.C.D. 180 mm a 260 mm e Chumbadores ASTM F1554",
+          "heading": "3. Vão da flange, chumbadores e configuração padrão incluída",
           "paragraphs": [
-            "A grande variação dimensional de furações é atendida pela placa base com rasgos radiais usinados:\n- **Diâmetro do Círculo de Furação (P.C.D.):** Compatível com círculos entre **180mm e 260mm**, acomodando arranjos quadrados de 4 chumbadores ou jaulas circulares.\n- **Chumbadores Estruturais:** Compatível com chumbadores conforme especificação **ASTM F1554** (Graus 36, 55 ou 105) em diâmetros **M16, M18, M20, M22 e M24**.\n- **Itens de Fixação Fornecidos:** Acompanha jogos de porcas e arruelas temperadas para M16 a M22. Para bitolas M24, recomenda-se verificação prévia de projeto para checagem de rosca e passo.",
-            "Consulte o [guia de compatibilidade de placas base e chumbadores](/guides/pole-jack-compatibility/) para avaliar suas sapatas.",
-            "📐 [Verifique a compatibilidade da sua flange: Solicite análise técnica gratuita de desenhos em 24h](/quote/)"
+            "A compatibilidade na base do poste depende da geometria da flange, do vão entre furos, do diâmetro dos chumbadores e da projeção de rosca acima do concreto.",
+            "A ficha diferencia a compatibilidade listada dos itens fornecidos por padrão:\n- **Vão de furação da flange:** 180–260 mm no diagrama de origem. Como o diagrama contém terminologia dimensional que ainda exige esclarecimento técnico, os detalhes finais de conexão devem ser revisados para o projeto real.\n- **Bitolas de chumbadores listadas:** M16, M18, M20, M22 e M24.\n- **Configuração padrão incluída:** 1 conjunto de equipamento, 4 jogos de chumbadores cada para M16, M18, M20 e M22, e 1 jogo de estacas de solo. O M24 consta na tabela, mas não é incluído por padrão.\n- **Bases fora do padrão:** Bases fora do padrão exigem revisão de desenho cotado antes de confirmar o encaixe."
           ]
         },
         {
-          "heading": "4. Procedimento Operacional Padrão de Campo Passo a Passo (SOP)",
+          "heading": "4. Verificações prévias de engenharia e limites operacionais",
           "paragraphs": [
-            "Para assegurar operações padronizadas e sem imprevistos, o trabalho em campo é executado em três fases coordenadas rigorosamente por dois técnicos certificados.",
-            "📄 [Consultar especificações técnicas completas e documentação de engenharia no centro de recursos](/resources/)"
+            "As sequências detalhadas de operação em campo permanecem em revisão de engenharia e não são publicadas como procedimento operacional universal. Toda instalação deve seguir os afastamentos elétricos de segurança, a inspeção da fundação e as normas locais de içamento."
           ]
         },
         {
-          "heading": "Fase 1: Inspeção da Fundação e Verificação de Espaço Aéreo",
+          "heading": "Verificação prévia da fundação e do espaço aéreo",
           "paragraphs": [
-            "Verificar a cura e resistência à compressão do concreto do bloco; limpar roscas dos chumbadores M16 a M24 eliminando resíduos de argamassa. Ajustar a orientação das luminárias conforme parâmetros fotométricos da norma **ANSI/IES RP-8-18**. Confirmar o cumprimento rigoroso das distâncias mínimas de afastamento de redes de distribuição aérea."
+            "Antes de mobilizar o equipamento para a obra, confirme que a fundação de concreto foi aprovada pelo engenheiro responsável, que as roscas e projeções dos chumbadores estão limpas e íntegras, e que todo o arco de 12 m do poste mantém afastamento seguro de redes aéreas e estruturas adjacentes."
           ]
         },
         {
-          "heading": "Fase 2: Montagem Modular e Autoancoragem Mecânica",
+          "heading": "Conexão do equipamento e pré-montagem no solo",
           "paragraphs": [
-            "Dois operadores posicionam a base de 45kg sobre os chumbadores expostos e apertam porcas de fixação para ancorar a máquina rigidamente ao bloco. Conectar o gabinete de potência 24V por meio de engates rápidos hidráulicos de face plana; nivelar o equipamento com os fusos e o nível esférico de precisão. Acoplar a articulação da base do poste horizontal ao carro de tração e introduzir o pino de segurança temperado."
+            "Inspecione o módulo hidráulico e o gabinete elétrico de 24 V antes do içamento, verifique o acoplamento firme das mangueiras hidráulicas e conexões elétricas, e conclua a fiação da luminária e a montagem do braço no nível do solo antes de erguer a coluna."
           ]
         },
         {
-          "heading": "Fase 3: Cabeamento no Solo e Içamento Hidráulico Controlado de 24V",
+          "heading": "Elevação controlada e aperto final dos chumbadores",
           "paragraphs": [
-            "Vantagem fundamental: a montagem de luminárias, painéis solares, fiação e regulagem de foco é feita inteiramente ao nível do solo, sem escadas ou andaimes. O Operador A atua na válvula direcional de 24V para uma extensão constante em aproximadamente 20 segundos. O Operador B monitora a verticalidade a partir de um raio lateral de segurança de 45°. Ao atingir 90°, a válvula de retenção e o batente mecânico travam a coluna enquanto os técnicos aplicam o torque especificado nas porcas estruturais."
+            "Durante a elevação, mantenha a equipe fora da trajetória de giro e pontos de esmagamento enquanto acompanha o alinhamento e o prumo. Ao atingir a posição vertical, aperte as porcas estruturais conforme a especificação do projeto antes de desconectar o conjunto."
           ]
         },
         {
-          "heading": "Linha de Base de Engenharia: Especificações Confirmadas e Validação em Campo",
+          "heading": "5. Condições de limite: quando um caminhão guindaste ainda é necessário",
           "paragraphs": [
-            "Para assegurar a integridade técnica, todos os parâmetros publicados baseiam-se estritamente nas especificações confirmadas do fabricante:\n- **Limites de Carga e Altura:** Capacidade de carga vertical estritamente de 300 kg WLL para postes convencionais de até 12 m. Postes que superem esses limites exigem caminhão munck.\n- **Arquitetura Bipartida:** Peso total do sistema de 85 kg dividido em dois módulos (unidade hidráulica de 45 kg e central de potência de 40 kg; volume unitário máximo de 65 kg para movimentação por 2 operadores).\n- **Compatibilidade de Ancoragem:** Faixa de círculo de furação (P.C.D.) de 180 a 260 mm para chumbadores ASTM F1554 de M16 a M24.\n- **Validação em Obra:** Os relatórios completos de ensaio em campo e certificados independentes serão disponibilizados após a liberação formal dos portões de validação."
+            "O elevador hidráulico portátil é projetado para postes leves da classe de 12 m dentro da carga nominal de 300 kg e vão de flange de 180–260 mm. Ele não substitui universalmente um caminhão guindaste.",
+            "Utilize um caminhão guindaste ou método de içamento aprovado sempre que ocorrer uma destas condições:\n1. **Peso total montado acima de 300 kg:** Postes decorativos pesados, colunas de parede espessa ou conjuntos múltiplos de luminárias e baterias solares acima de 300 kg.\n2. **Altura do poste acima de 12 m:** Mastros elevados ou postes rodoviários acima da classe de 12 m.\n3. **Geometria de flange ou fundação não revisada:** Bases fora do vão de 180–260 mm, chumbadores fora de M16–M24 ou bases fora do padrão sem revisão de desenho cotado.\n4. **Clima adverso ou fundação comprometida:** Ventos fortes no canteiro ou blocos e chumbadores danificados incapazes de suportar as reações de montagem."
           ]
         },
         {
-          "heading": "5. Condições de Limite em Obra: Quando o Uso de Guindaste Ainda É Obrigatório",
+          "heading": "Quais são os limites nominais de altura e carga do poste?",
           "paragraphs": [
-            "| Mito Habitual na Indústria | Realidade Técnica Verificada | Consequência Operacional |\n|---|---|---|\n| **Mito 1: Um único técnico pode realizar a montagem** | As normas de segurança exigem estritamente uma equipe de dois operadores treinados. Um comanda a hidráulica e o outro alinha os chumbadores. | Operação individual gera pontos cegos e risco de tombamento estrutural. |\n| **Mito 2: Substitui guindastes em qualquer situação** | A capacidade é calibrada rigorosamente para 300kg e 12m de poste. Torres pesadas ou altas exigem caminhão guindaste. | Sobrecargas excessivas comprometem a integridade mecânica dos cilindros. |\n| **Mito 3: Promessa de retorno fixo sem cálculo prévio** | O retorno real depende das tarifas locais de munck e do volume de postes por obra. Recomenda-se simular por projeto. | Promessas comerciais sem embasamento distorcem o planejamento orçamentário. |",
-            "O elevador portátil é um equipamento dedicado a postes convencionais de iluminação até 12m e não substitui caminhões munck pesados em todas as aplicações. A contratação de guindaste telescópico é mandatória nas seguintes situações:\n- **Peso total montado superior a 300kg:** Postes ornamentais em ferro fundido pesado ou hastes com baterias pesadas de projetores que excedam a carga de trabalho segura.\n- **Altura de poste superior a 12m:** Superpostes e mastros elevados (15m a 35m) para estádios e trevos rodoviários.\n- **Descentramento severo de carga:** Luminárias em braços longos que gerem braço de alavanca excessivo fora do eixo admissível.\n- **Velocidade de vento em obra superior a 8,0 m/s (Escala Beaufort 4):** Rajadas que superem este limite operacional de segurança exigem a paralisação imediata do içamento com elevador portátil ou o emprego de guindaste munck com cabos de contraventamento. *(Nota técnica: A norma europeia **EN 40-3** regulamenta estritamente o dimensionamento estrutural e o cálculo de momentos fletores do poste sob ação do vento em regime definitivo; o teto de 8,0 m/s decorre das diretrizes operacionais de montagem em campo do fabricante.)*\n- **Bases com defeito estrutural:** Concreto desagregado ou chumbadores danificados incapazes de suportar a fixação rígida da máquina."
+            "A ficha técnica lista uma classe de poste aplicável de 12 m e carga nominal de 300 kg. Ambos os limites, juntamente com o centro de gravidade e a geometria da flange, devem ser verificados em cada projeto. Colunas com mais de 300 kg ou mais de 12 m exigem guindaste."
           ]
         },
         {
-          "heading": "Qual é a altura e o peso máximo do poste para montagem sem munck?",
+          "heading": "Quantos operadores são listados na ficha técnica?",
           "paragraphs": [
-            "A capacidade nominal vertical é estritamente de 300kg para postes metálicos ou de fibra de até 12m de altura. Cada equipamento cumpre especificações de projeto de fábrica verificadas. Postes acima de 300kg ou 12m requerem caminhão munck telescópico."
+            "A ficha técnica lista 1–2 operadores para o sistema de dois módulos de 85 kg (módulo hidráulico de 45 kg e gabinete elétrico de 40 kg). A equipe real em campo deve seguir o plano de segurança e as regras de movimentação manual do projeto."
           ]
         },
         {
-          "heading": "O equipamento pode ser operado com segurança por apenas um trabalhador?",
+          "heading": "Quais chumbadores estão incluídos e o que fazer se a flange for fora do padrão?",
           "paragraphs": [
-            "Não. As normas regulamentadoras de segurança do trabalho determinam expressamente uma equipe de dois operadores. Embora os módulos de 45kg e 40kg sejam facilmente carregados por duas pessoas, durante o içamento um técnico deve comandar a unidade de 24V enquanto o outro direciona a placa base sobre os chumbadores."
+            "A ficha técnica lista chumbadores M16, M18, M20, M22 e M24 em um vão de furação de flange de 180–260 mm. O fornecimento padrão inclui 4 jogos cada de M16, M18, M20 e M22; o M24 não é incluído por padrão. Bases fora do padrão exigem revisão de desenho cotado."
           ]
         },
         {
-          "heading": "A placa base é compatível com disposições de chumbadores quadradas e circulares?",
+          "heading": "Como o equipamento é alimentado em locais sem rede elétrica?",
           "paragraphs": [
-            "Sim, a placa base ranhurada aceita círculos de furação (P.C.D.) de 180mm a 260mm com chumbadores M16, M18, M20, M22 e M24 em conformidade com a ASTM F1554. O conjunto inclui porcas e arruelas para M16 a M22; para roscas M24, recomenda-se envio prévio de desenhos para checagem técnica."
-          ]
-        },
-        {
-          "heading": "Quais são as exigências de energia elétrica em canteiros remotos?",
-          "paragraphs": [
-            "O equipamento opera com bateria recarregável selada de 24V DC integrada. Não gera emissões gasosas, é extremamente silencioso e assegura mais de 50 ciclos de içamento completos por carga em condições normais de fábrica, sendo ideal para usinas solares e estradas vicinais sem rede elétrica."
+            "O gabinete elétrico utiliza bateria recarregável de 24 V, dispensando rede elétrica externa ou gerador durante o içamento. A ficha informa valores declarados pelo fabricante de mais de 50 elevações por carga completa e 20 s de tempo de elevação, com validação em campo ainda pendente."
           ]
         }
-      ],
-      "h1": "Como instalar postes de iluminação pública de 12 metros sem caminhão munck: requisitos e procedimento"
+      ]
     }
   },
   "vi": {
     "install-12m-street-light-poles-without-crane": {
       "locale": "vi",
       "slug": "install-12m-street-light-poles-without-crane",
-      "title": "Cách lắp đặt cột đèn chiếu sáng 12m không cần xe cẩu | volvet",
-      "description": "Hướng dẫn kỹ thuật thi công lắp dựng cột đèn chiếu sáng 12m không cần xe cẩu: giới hạn tải trọng, bu-lông móng, an toàn điện và quy trình từng bước.",
+      "title": "Lắp đặt cột đèn chiếu sáng 12 m không cần cẩu: giới hạn thông số và thẩm định dự án | volvet",
+      "h1": "Lắp đặt cột đèn chiếu sáng đường phố 12 m không cần xe cẩu: giới hạn thông số và thẩm định dự án",
+      "description": "Tổng quan kỹ thuật dựa trên bảng thông số cho việc lắp đặt cột đèn 12 m không cần xe cẩu: tải trọng định mức 300 kg, cấu trúc 2 mô-đun 85 kg, khoảng lỗ mặt bích 180–260 mm và thẩm định dự án.",
       "imageFolder": "portable-light-pole-lifter-explainer-vi",
       "sections": [
         {
-          "heading": "Tổng quan và Tiêu chí Khả thi Kỹ thuật Thi công",
+          "heading": "Tổng quan và giới hạn thẩm định",
           "paragraphs": [
-            "Trong hạ tầng chiếu sáng đô thị và các dự án năng lượng mặt trời độc lập, việc dựng cột và các thao tác cẩu lắp luôn là điểm nghẽn lớn về ngân sách và an toàn lao động. Theo phương pháp truyền thống, lắp dựng cột từ 6m đến 12m đòi hỏi xe cẩu tự hành 16 tấn hoặc xe cẩu thùng chuyên dụng. Tuy nhiên, tại các tuyến phố đi bộ chật hẹp, khuôn viên nội bộ, dải phân cách cây xanh và các trang trại điện mặt trời địa hình phức tạp, xe cẩu lớn gặp nhiều trở ngại do kích thước cồng kềnh, thiếu mặt bằng cho chân chống thủy lực và thời gian chờ xin giấy phép phân luồng giao thông kéo dài.",
-            "Nhiều loại cột đèn chiếu sáng công cộng cao tới 12 mét hoàn toàn có thể được lắp đặt mà không cần xe cẩu bằng cách sử dụng [máy dựng cột thủy lực mini di động](/products/light-pole-jack/). Với cấu trúc chia cụm hai mô-đun và cơ chế tự neo cơ khí trực tiếp vào bu-lông móng bê tông, tổ đội 2 kỹ thuật viên có thể hoàn thành việc cố định, căn chỉnh mặt bích và nâng dựng cột êm ái từ mặt đất. Khả năng thi công thực tế phải được thẩm định kỹ dựa trên tổng trọng lượng cột, vị trí trọng tâm, cường độ chịu uốn của móng và bu-lông, tốc độ gió và khoảng cách an toàn đối với đường dây điện trên không. Tải trọng danh định 300kg không đồng nghĩa với việc cho phép lắp dựng mọi cấu hình mà không qua kiểm tra.",
-            "> ### 📌 Điểm Cốt lõi dành cho Kỹ sư Dự án\n> - **Cắt giảm Hoàn toàn Xe cẩu Nặng:** Cho phép dựng cột tiêu chuẩn đến 12m mà không cần huy động xe cẩu 16 tấn tại các vị trí tiếp cận khó khăn.\n> - **Tải trọng Danh định Kiểm định:** Tải trọng nâng phương đứng giới hạn chuẩn xác ở mức 300kg theo đúng thông số thiết kế kỹ thuật của nhà sản xuất.\n> - **Vận chuyển Mô-đun Hai Người:** Tổng trọng lượng chia cụm 85kg (khung kích nâng 45kg + bộ nguồn điện 24V 40kg), vận chuyển dễ dàng bằng xe bán tải tiêu chuẩn.\n> - **Tương thích Mặt bích Đáy Đa năng:** Bích thép xẻ rãnh hướng tâm tương thích với đường kính vòng chia bu-lông (P.C.D.) từ 180mm đến 260mm, sử dụng bu-lông ASTM F1554 từ M16 đến M24."
+            "Việc dựng cột đèn chiếu sáng đô thị và đèn năng lượng mặt trời theo cách truyền thống thường phụ thuộc vào xe cẩu tự hành. Tại vỉa hè hẹp, lối đi bộ, dải phân cách cây xanh và các dự án điện mặt trời chưa trải nhựa, việc đưa xe cẩu hạng nặng vào vị trí có thể gặp hạn chế về lối đi, nền đất và điều tiết giao thông. Vì vậy, kỹ sư dự án thường đánh giá khả năng sử dụng [kích nâng cột đèn thủy lực di động](/products/light-pole-jack/) cho dòng cột tiêu chuẩn 12 m.",
+            "Các giới hạn thông số chính cần xem xét cho dự án:\n- **Cấp chiều cao cột áp dụng:** Ghi nhận cho cột đèn 12 m, tùy thuộc tổng trọng lượng cột sau lắp ráp, trọng tâm và đánh giá thực tế tại công trường.\n- **Giới hạn tải trọng định mức:** Tải trọng định mức tối đa 300 kg theo bảng thông số sản phẩm.\n- **Kiến trúc hai mô-đun:** Tổng trọng lượng thiết bị 85 kg chia thành mô-đun nâng thủy lực 45 kg và tủ điện 24 V nặng 40 kg, với 1–2 người vận hành được ghi trên bảng thông số.\n- **Phạm vi mặt bích và bu-lông móng:** Khoảng lỗ mặt bích 180–260 mm với các cỡ bu-lông M16–M24 được liệt kê; chân đế phi tiêu chuẩn cần gửi bản vẽ có kích thước để thẩm định."
           ]
         },
         {
-          "heading": "1. Thách thức Kỹ thuật trong Lắp dựng Cột đèn Chiếu sáng 12m Không dùng Xe cẩu",
+          "heading": "1. Tiếp cận công trường và yếu tố dự án khi dựng cột không dùng cẩu",
           "paragraphs": [
-            "Nguyên lý cốt lõi của máy dựng cột di động là thay thế cần cẩu cồng kềnh trên cao bằng lực đẩy thủy lực định hướng tại mặt đất. Tại các khu vực đô thị đông đúc hoặc công viên cảnh quan, áp lực từ chân chống xe cẩu lớn rất dễ gây nứt vỡ vỉa hè hoặc hư hại hệ thống hạ tầng ngầm.",
-            "Bằng cách tự neo chặt vào bu-lông móng bê tông, thiết bị truyền lực phản phản hồi thẳng vào móng trụ vốn đã được tính toán để chịu mô-men lật của cột. Chu kỳ nâng dựng cột chỉ mất khoảng 20 giây, cung cấp hơn 50 chu kỳ nâng cho mỗi lần sạc đầy ắc quy.",
-            "💡 [Bạn muốn đánh giá hiệu quả kinh tế cho dự án? Tính toán tiết kiệm chi phí với công cụ tính ROI xe cẩu](/tools/roi-calculator/)"
+            "Nâng cột đèn 12 m từ phương ngang lên phương thẳng đứng tạo ra phản lực uốn và lật tại chân cột và bu-lông móng. Khác với cần cẩu treo từ trên cao, thiết bị nâng thủy lực di động làm việc ở mặt đất bằng cách liên kết với chân cột và neo vào hệ bu-lông móng hiện hữu.",
+            "Chỉ riêng việc khớp chiều cao cột 12 m chưa đủ để khẳng định tính phù hợp. Trước khi chọn phương án không dùng cẩu, đội ngũ dự án cần kiểm tra tổng trọng lượng toàn bộ cột, đèn, cần đèn và cụm pin mặt trời, tình trạng móng bê tông, khoảng cách an toàn với đường dây điện trên không và quy định an toàn tại công trường."
           ]
         },
         {
-          "heading": "2. Cơ chế Thủy lực Hai Kỹ thuật viên: Tải trọng Danh định 300kg Kiểm định tại Nhà máy",
+          "heading": "2. Kiến trúc thủy lực hai mô-đun và thông số liệt kê",
           "paragraphs": [
-            "Toàn bộ hệ thống được chia làm hai mô-đun độc lập với tổng trọng lượng vận chuyển là **85kg**:\n- **Cụm Khung Kích Thủy lực:** Kích thước 610 × 220 × 220 mm, trọng lượng **45kg**, chế tạo từ thép hợp kim kết cấu cường độ cao với xi-lanh hành trình hữu ích 800mm, tích hợp chốt khóa cơ khí an toàn chống sụt áp.\n- **Tủ Điều khiển và Bộ nguồn 24V:** Kích thước 500 × 300 × 250 mm, trọng lượng **40kg**, trang bị ắc quy sạc **24V DC** dung lượng cao và van tỷ lệ thủy lực vi chỉnh nhẹ nhàng.\n- **Bao bì Tiêu chuẩn Xuất khẩu:** Kiện gỗ gia cố đai thép 650 × 350 × 500 mm đáp ứng đầy đủ tiêu chuẩn đóng gói vận tải công nghiệp.",
-            "Do không có mô-đun nào vượt quá 45kg, hai công nhân có thể dễ dàng khiêng vác thiết bị tiếp cận các lối đi bộ hoặc thảm cỏ mà không cần cơ giới hóa mặt đất."
+            "Kích nâng cột đèn di động volvet gồm hai mô-đun tách rời sử dụng pin sạc 24 V tích hợp, không cần điện lưới bên ngoài hay máy phát điện.",
+            "Theo bảng thông số sản phẩm hiện hành:\n- **Mô-đun nâng thủy lực:** 610 × 220 × 220 mm; trọng lượng: 45 kg (xi-lanh thủy lực, van thủy lực, bơm dầu và đồng hồ áp suất dầu).\n- **Tủ điện điều khiển:** 500 × 300 × 250 mm; trọng lượng: 40 kg (hệ thống điều khiển, bơm thủy lực, pin sạc 24 V, ampe kế, vôn kế và nút bấm nâng).\n- **Tổng trọng lượng thiết bị và đóng gói:** Tổng trọng lượng thiết bị 85 kg; kích thước đóng gói 650 × 350 × 500 mm theo bảng thông số.\n- **Số người vận hành ghi nhận:** 1–2 người vận hành trên bảng thông số; việc bố trí nhân lực thực tế phải tuân thủ kế hoạch an toàn của dự án.",
+            "Bảng thông số cũng nêu các số liệu do nhà sản xuất công bố gồm thời gian nâng 20 s, trên 50 lần nâng mỗi lần sạc đầy và trên 3000 chu kỳ sử dụng. Việc kiểm chứng thực địa về tải thử, điều kiện công trường và độ lặp lại hiện vẫn đang chờ hoàn tất."
           ]
         },
         {
-          "heading": "3. Cơ chế Neo giữ Móng: Đường kính Vòng chia P.C.D. 180mm đến 260mm và Bu-lông ASTM F1554",
+          "heading": "3. Khoảng lỗ mặt bích, bu-lông móng và cấu hình tiêu chuẩn đi kèm",
           "paragraphs": [
-            "Sự đa dạng về quy cách mặt bích chân cột được giải quyết triệt để nhờ thiết kế rãnh hướng tâm:\n- **Đường kính Vòng chia Bu-lông (P.C.D.):** Tương thích linh hoạt trong dải từ **180mm đến 260mm**, đáp ứng bố trí 4 bu-lông dạng vuông hoặc lồng tròn.\n- **Tiêu chuẩn Bu-lông Móng:** Tương thích với bu-lông kết cấu theo tiêu chuẩn **ASTM F1554** (Cấp bền Grade 36, 55 hoặc 105) với các cỡ **M16, M18, M20, M22 và M24**.\n- **Phụ kiện Kèm theo Máy:** Bao gồm đầy đủ tán và long đền tôi cứng cho cỡ M16 đến M22. Đối với cỡ bu-lông M24, cần gửi bản vẽ móng để kiểm tra bước ren và chiều dài nhô trước khi thi công.",
-            "Tham khảo thêm [hướng dẫn kiểm tra độ tương thích mặt bích và bu-lông móng](/guides/pole-jack-compatibility/).",
-            "📐 [Kiểm tra độ tương thích mặt bích: Yêu cầu đánh giá bản vẽ móng miễn phí trong 24 giờ](/quote/)"
+            "Độ tương thích tại chân cột phụ thuộc vào hình dạng mặt bích, khoảng cách lỗ bu-lông, đường kính ty ren và chiều cao nhô lên khỏi móng bê tông.",
+            "Bảng thông số tách bạch rõ giữa khả năng tương thích liệt kê và phụ kiện đi kèm mặc định:\n- **Khoảng lỗ mặt bích thể hiện:** 180–260 mm trên sơ đồ gốc. Do sơ đồ mặt bích có thuật ngữ kích thước cần được làm rõ thêm về mặt kỹ thuật, chi tiết liên kết cuối cùng phải được rà soát cho từng dự án thực tế.\n- **Cỡ bu-lông móng liệt kê:** M16, M18, M20, M22 và M24.\n- **Cấu hình tiêu chuẩn đi kèm:** 1 bộ thiết bị, mỗi cỡ M16, M18, M20, M22 gồm 4 bộ bu-lông và 1 bộ cọc tiếp địa. M24 có trong bảng tương thích nhưng không đi kèm mặc định.\n- **Chân đế phi tiêu chuẩn:** Chân đế phi tiêu chuẩn cần gửi bản vẽ có kích thước để thẩm định trước khi xác nhận lắp vừa."
           ]
         },
         {
-          "heading": "4. Quy trình Vận hành Tiêu chuẩn Hiện trường Từng bước (SOP)",
+          "heading": "4. Kiểm tra kỹ thuật trước lắp đặt và giới hạn rà soát vận hành",
           "paragraphs": [
-            "Nhằm đảm bảo quá trình lắp dựng chuẩn xác và an toàn tuyệt đối, quy trình thi công hiện trường được chia làm ba giai đoạn phối hợp bởi hai kỹ thuật viên.",
-            "📄 [Tra cứu thông số kỹ thuật và tài liệu hồ sơ kỹ thuật tại trung tâm tài nguyên](/resources/)"
+            "Trình tự thao tác chi tiết tại hiện trường hiện đang được giữ để thẩm định kỹ thuật thay vì ban hành như quy trình vận hành chuẩn chung. Mọi công tác lắp đặt phải tuân thủ khoảng cách an toàn điện, kiểm tra móng và quy định nâng hạ tại địa phương."
           ]
         },
         {
-          "heading": "Giai đoạn 1: Khảo sát Móng Bê tông và Đo đạc Khoảng cách An toàn",
+          "heading": "Kiểm tra móng và không gian phía trên trước khi nâng",
           "paragraphs": [
-            "Kiểm tra móng bê tông đã đạt đủ ngày tuổi và cường độ thiết kế; làm sạch ren bu-lông M16 đến M24 khỏi vữa thừa. Định hướng góc chiếu sáng của đèn theo tiêu chuẩn trắc quang **ANSI/IES RP-8-18**. Đo đạc và xác nhận khoảng cách an toàn tĩnh điện đối với các đường dây tải điện trên không xung quanh."
+            "Trước khi đưa thiết bị ra công trường, hãy xác nhận móng bê tông đã được kỹ sư phụ trách nghiệm thu, ren và phần nhô của bu-lông sạch và nguyên vẹn, đồng thời toàn bộ quỹ đạo nâng 12 m của cột giữ khoảng cách an toàn với đường dây điện trên không và công trình lân cận."
           ]
         },
         {
-          "heading": "Giai đoạn 2: Lắp ráp Cụm mô-đun và Tự neo Cơ khí vào Bu-lông Móng",
+          "heading": "Kết nối thiết bị và lắp ráp sơ bộ ở mặt đất",
           "paragraphs": [
-            "Hai kỹ thuật viên đặt khung đế 45kg lên các đầu bu-lông móng nhô sẵn và siết chặt ê-cu để cố định chắc chắn máy vào bệ bê tông. Kết nối tủ nguồn 24V bằng khớp nối nhanh thủy lực mặt phẳng; cân chỉnh thăng bằng qua các chân vít định vị và giọt nước thủy chuẩn. Đưa bản lề chân cột đèn nằm dưới đất vào khớp nối của bàn nâng và gài chốt an toàn hợp kim."
+            "Kiểm tra mô-đun thủy lực và tủ điện 24 V trước khi nâng, đảm bảo ống thủy lực và đầu nối điện được lắp chặt đúng kỹ thuật, đồng thời hoàn tất đấu dây đèn và lắp cần đèn ngay trên mặt đất trước khi dựng cột."
           ]
         },
         {
-          "heading": "Giai đoạn 3: Đấu nối Dây điện tại Mặt đất và Dựng cột Thủy lực 24V Kiểm soát",
+          "heading": "Nâng có kiểm soát và siết chặt bu-lông hoàn thiện",
           "paragraphs": [
-            "Ưu điểm vượt trội: toàn bộ việc lắp đặt đèn chiếu sáng, tấm pin năng lượng mặt trời, đấu nối dây dẫn và tinh chỉnh góc nghiêng đều thực hiện tại mặt đất mà không cần dùng thang hoặc giàn giáo. Kỹ thuật viên A gạt cần van thủy lực 24V để nâng cột đều đặn trong khoảng 20 giây. Kỹ thuật viên B quan sát độ lệch từ góc an toàn 45 độ. Khi cột đạt vị trí thẳng đứng 90 độ, van một chiều thủy lực và cữ chặn cơ khí sẽ giữ vững cột để hai kỹ thuật viên siết chặt toàn bộ đai ốc móng đúng lực siết quy định."
+            "Trong quá trình nâng, giữ nhân sự tránh xa vùng quét và điểm kẹp trong khi theo dõi độ thẳng hàng và độ thẳng đứng của cột. Khi cột đạt phương thẳng đứng, siết chặt đai ốc kết cấu theo yêu cầu thiết kế trước khi tháo thiết bị nâng."
           ]
         },
         {
-          "heading": "Cơ sở Kỹ thuật: Thông số Xác nhận và Kế hoạch Nghiệm thu Hiện trường",
+          "heading": "5. Điều kiện biên: khi nào vẫn bắt buộc dùng xe cẩu",
           "paragraphs": [
-            "Để bảo đảm tính chuẩn xác và trung thực kỹ thuật, mọi thông số công bố đều dựa trên đặc tả kỹ thuật được xác nhận từ nhà sản xuất:\n- **Giới hạn Tải trọng & Chiều cao:** Tải trọng nâng phương đứng giới hạn chuẩn xác ở mức 300 kg WLL cho cột tiêu chuẩn đến 12 m. Cột vượt tải hoặc chiều cao này bắt buộc dùng xe cẩu.\n- **Cơ chế Chia cụm Di động:** Tổng trọng lượng thiết bị 85 kg chia thành hai cụm độc lập (khung kích 45 kg và bộ nguồn 40 kg; kiện nặng nhất không quá 65 kg cho tổ đội 2 người).\n- **Khả năng Tương thích Mặt bích:** Vòng chia bu-lông (P.C.D.) từ 180 đến 260 mm với bu-lông móng ASTM F1554 từ M16 đến M24.\n- **Nghiệm thu Thực tế:** Hồ sơ nghiệm thu hiện trường và chứng chỉ thử nghiệm độc lập sẽ được công bố khi hoàn tất cổng kiểm duyệt vận hành."
+            "Thiết bị nâng thủy lực di động được thiết kế cho các cột đèn hạng nhẹ dòng 12 m trong giới hạn tải trọng định mức 300 kg và khoảng lỗ mặt bích 180–260 mm, không thay thế hoàn toàn xe cẩu trong mọi trường hợp.",
+            "Cần sử dụng xe cẩu hoặc phương án nâng được phê duyệt khác khi gặp một trong các điều kiện sau:\n1. **Tổng trọng lượng lắp ráp vượt quá 300 kg:** Cột gang trang trí nặng, cột thân dày hoặc cụm nhiều đèn và bộ pin mặt trời nặng vượt quá tải trọng định mức 300 kg.\n2. **Chiều cao cột vượt quá 12 m:** Cột đèn pha cao hoặc cột đường trục vượt quá cấp 12 m liệt kê.\n3. **Hình dạng mặt bích hoặc móng chưa được thẩm định:** Chân đế nằm ngoài khoảng lỗ 180–260 mm, bu-lông ngoài dải M16–M24 hoặc chân đế phi tiêu chuẩn chưa qua thẩm định bản vẽ có kích thước.\n4. **Thời tiết bất lợi hoặc móng hư hỏng:** Gió lớn tại công trường hoặc móng bê tông và bu-lông bị hư hại không đủ khả năng chịu phản lực khi dựng cột."
           ]
         },
         {
-          "heading": "5. Điều kiện Biên Mặt bằng: Khi nào Bắt buộc phải Sử dụng Xe cẩu Thùng",
+          "heading": "Giới hạn định mức về chiều cao và tải trọng cột là bao nhiêu?",
           "paragraphs": [
-            "| Quan Niệm Sai Phổ Biến | Thực Tế Kỹ Thuật Đã Kiểm Chứng | Hậu Quả Thi Công |\n|---|---|---|\n| **Hiểu lầm 1: Chỉ cần một công nhân là có thể lắp dựng** | Quy định an toàn bắt buộc phải có tổ đội 2 kỹ thuật viên. Một người điều khiển van thủy lực 24V, người kia dẫn hướng bu-lông móng. | Thi công đơn độc tạo điểm mù nguy hiểm và dễ gây nghiêng lệch đổ cột. |\n| **Hiểu lầm 2: Thay thế xe cẩu cho mọi loại tải trọng** | Thiết bị được giới hạn chuẩn xác ở mức 300kg và cột cao 12m. Cột siêu cao hoặc giàn đèn nặng bắt buộc dùng cẩu lớn. | Nâng quá tải trọng gây nguy cơ phá hủy kết cấu xi-lanh thủy lực. |\n| **Hiểu lầm 3: Cam kết hoàn vốn cố định mà không cần tính** | Hiệu quả kinh tế phụ thuộc vào đơn giá thuê xe cẩu địa phương và số lượng cột. Cần tính toán theo từng dự án cụ thể. | Cam kết thương mại thiếu căn cứ gây sai lệch dự toán đầu tư. |",
-            "Thiết bị kích nâng di động là giải pháp chuyên dụng cho cột đèn tiêu chuẩn đến 12m và không thay thế xe cẩu lớn trong mọi trường hợp. Bắt buộc phải sử dụng xe cẩu thùng trong các trường hợp sau:\n- **Tổng trọng lượng tổ hợp vượt quá 300kg:** Cột gang trang trí đúc nặng hoặc trụ gắn giàn đèn pha sân vận động vượt tải trọng cho phép.\n- **Chiều cao cột vượt quá 12m:** Trụ chiếu sáng cao (từ 15m đến 35m) cho nút giao cao tốc hoặc sân vận động.\n- **Cần vươn đèn lệch tâm quá lớn:** Tay vươn quá dài làm trọng tâm bị lệch nghiêm trọng khỏi trục nâng an toàn.\n- **Tốc độ gió tại hiện trường vượt quá 8,0 m/s (Cấp 4 thang Beaufort):** Gió giật vượt ngưỡng an toàn vận hành này bắt buộc phải tạm dừng việc dựng cột bằng máy nâng di động hoặc chuyển sang dùng xe cẩu có giằng cáp định vị. *(Lưu ý kỹ thuật: Tiêu chuẩn châu Âu **EN 40-3** áp dụng cho việc tính toán thiết kế cơ học chịu tải trọng gió tĩnh và động của thân cột khi đưa vào vận hành lâu dài, trong khi mốc 8,0 m/s là ngưỡng giới hạn an toàn thi công do nhà sản xuất quy định trong sổ tay SOP hiện trường.)*\n- **Bu-lông móng bị hư hỏng:** Chân ren bị trờn hoặc móng bê tông bị nứt vỡ không đảm bảo khả năng tự neo giữ máy."
+            "Bảng thông số liệt kê cấp cột áp dụng 12 m và tải trọng định mức 300 kg. Cả hai giới hạn này cùng với trọng tâm cột và hình dạng mặt bích đều phải được kiểm tra cho từng dự án. Cột nặng hơn 300 kg hoặc cao hơn 12 m cần sử dụng xe cẩu."
           ]
         },
         {
-          "heading": "Chiều cao và tải trọng cột tối đa cho phép lắp dựng không dùng cẩu là bao nhiêu?",
+          "heading": "Bảng thông số ghi nhận bao nhiêu người vận hành?",
           "paragraphs": [
-            "Tải trọng nâng danh định theo phương đứng được chứng nhận nghiêm ngặt ở mức 300kg đối với cột thép hoặc composite cao tới 12m. Mỗi thiết bị tuân thủ đúng các thông số thiết kế đã kiểm tra. Cột vượt quá 300kg hoặc cao hơn 12m bắt buộc phải sử dụng xe cẩu."
+            "Bảng thông số ghi nhận 1–2 người vận hành cho hệ thống hai mô-đun nặng 85 kg (mô-đun thủy lực 45 kg và tủ điện 40 kg). Số lượng nhân sự thực tế tại công trường phải tuân theo phương án an toàn và quy tắc bốc xếp thủ công của dự án."
           ]
         },
         {
-          "heading": "Thiết bị có thể được vận hành an toàn bởi một công nhân duy nhất không?",
+          "heading": "Những bu-lông nào đi kèm sẵn và nếu mặt bích phi tiêu chuẩn thì xử lý thế nào?",
           "paragraphs": [
-            "Không. Các quy chuẩn an toàn lao động quy định bắt buộc phải có tổ đội 2 kỹ thuật viên cùng thao tác. Mặc dù các mô-đun 45kg và 40kg có thể khiêng vác nhẹ nhàng, nhưng trong quá trình dựng cột thẳng đứng, một người cần kiểm soát van thủy lực trong khi người thứ hai giám sát và dẫn hướng bích cột vào bu-lông móng."
+            "Bảng thông số liệt kê các cỡ bu-lông M16, M18, M20, M22 và M24 trên khoảng lỗ mặt bích 180–260 mm. Bộ tiêu chuẩn đi kèm 4 bộ mỗi cỡ M16, M18, M20 và M22; M24 không đi kèm mặc định. Chân đế phi tiêu chuẩn cần gửi bản vẽ có kích thước để thẩm định."
           ]
         },
         {
-          "heading": "Mặt bích đế có tương thích với bố trí bu-lông móng dạng vuông và dạng tròn không?",
+          "heading": "Thiết bị lấy nguồn điện như thế nào ở công trường chưa có điện lưới?",
           "paragraphs": [
-            "Mặt bích đế xẻ rãnh đa năng tương thích với đường kính vòng chia bu-lông (P.C.D.) từ 180mm đến 260mm, sử dụng bu-lông M16, M18, M20, M22 và M24 theo tiêu chuẩn ASTM F1554. Máy đi kèm phụ kiện cho cỡ M16 đến M22; đối với bu-lông M24, khách hàng nên gửi bản vẽ móng để kỹ thuật viên thẩm định trước."
-          ]
-        },
-        {
-          "heading": "Yêu cầu về nguồn điện tại các công trình xa lưới điện là gì?",
-          "paragraphs": [
-            "Thiết bị vận hành bằng hệ thống ắc quy sạc 24V DC tích hợp bên trong tủ nguồn. Máy hoàn toàn không phát thải khí xả, không gây tiếng ồn động cơ và đáp ứng hơn 50 chu kỳ nâng cho mỗi lần sạc đầy, đặc biệt phù hợp cho các dự án điện mặt trời và đường giao thông nông thôn chưa có điện lưới."
+            "Tủ điện sử dụng pin sạc 24 V tích hợp, không cần nguồn điện lưới hay máy phát điện trong quá trình nâng. Bảng thông số nêu số liệu nhà sản xuất công bố trên 50 lần nâng mỗi lần sạc đầy và thời gian nâng 20 s, hiện vẫn chờ kiểm chứng thực địa."
           ]
         }
-      ],
-      "h1": "Cách lắp đặt cột đèn chiếu sáng công cộng 12 mét không cần xe cẩu: yêu cầu kỹ thuật và quy trình"
+      ]
     }
   },
   "th": {
     "install-12m-street-light-poles-without-crane": {
       "locale": "th",
       "slug": "install-12m-street-light-poles-without-crane",
-      "title": "วิธีติดตั้งเสาไฟถนน 12 เมตรโดยไม่ต้องใช้รถเครน | volvet",
-      "description": "คู่มือเทคนิคการติดตั้งเสาไฟถนน 12 เมตรโดยไม่ต้องใช้รถเครน: ขีดจำกัดน้ำหนักยก, สลักยึดฐานราก, ความปลอดภัยสายไฟฟ้า และขั้นตอนการปฏิบัติงานอย่างละเอียด.",
+      "title": "การติดตั้งเสาไฟถนน 12 ม. โดยไม่ใช้รถเครน: ขอบเขตสเปกและการตรวจสอบโครงการ | volvet",
+      "h1": "การติดตั้งเสาไฟถนน 12 ม. โดยไม่ใช้รถเครน: ขอบเขตสเปกและการตรวจสอบโครงการ",
+      "description": "ภาพรวมทางวิศวกรรมตามเอกสารสเปกสำหรับการติดตั้งเสาไฟถนน 12 ม. โดยไม่ใช้รถเครน: พิกัดยก 300 กก. โครงสร้างแยก 2 โมดูล 85 กก. ระยะรูหน้าแปลน 180–260 มม. และการตรวจสอบโครงการ",
       "imageFolder": "portable-light-pole-lifter-explainer-th",
       "sections": [
         {
-          "heading": "ภาพรวมและเกณฑ์ความเป็นไปได้ทางวิศวกรรม",
+          "heading": "ภาพรวมและขอบเขตการตรวจสอบสเปก",
           "paragraphs": [
-            "ในโครงการไฟส่องสว่างถนนเทศบาลและโครงการพลังงานแสงอาทิตย์ การยกและติดตั้งเสาไฟเป็นขั้นตอนสำคัญที่มีต้นทุนสูงและมีความเสี่ยงด้านความปลอดภัย การติดตั้งเสาไฟขนาด 6 ถึง 12 เมตรตามธรรมเนียมเดิมมักต้องพึ่งพารถเครนขนาด 16 ตันหรือรถกระเช้า แต่ในพื้นที่ถนนแคบ ทางเท้า ทางเดินในมหาวิทยาลัย หรือโซลาร์ฟาร์มที่ไม่มีถนนลาดยาง รถเครนขนาดใหญ่ต้องเผชิญกับข้อจำกัดด้านพื้นที่ ไม่มีจุดตั้งขารับน้ำหนักที่มั่นคง และต้องรอการขออนุญาตปิดช่องจราจรเป็นเวลานาน",
-            "เสาไฟส่องสว่างถนนขนาดความสูงไม่เกิน 12 เมตรบางประเภทสามารถติดตั้งได้โดยไม่ต้องใช้รถเครน ผ่านการใช้งาน [เครื่องยกเสาไฟไฮดรอลิกแบบพกพา](/products/light-pole-jack/) ซึ่งได้รับการออกแบบด้วยโครงสร้างแยกส่วน 2 ชิ้นและระบบยึดสมอเชิงกลเข้ากับสลักฐานรากคอนกรีตโดยตรง ช่างปฏิบัติการเพียง 2 คนสามารถทำการยึดเครื่อง จัดแนวแผ่นเพลท และยกเสาในแนวตั้งได้อย่างนุ่มนวลจากระดับพื้นดิน ความเป็นไปได้ทางเทคนิคต้องได้รับการตรวจสอบตามน้ำหนักรวม จุดศูนย์ถ่วง ความแข็งแรงของฐานรากและสลักเกลียว สภาพแรงลม และระยะห่างปลอดภัยจากสายไฟฟ้าเหนือศีรษะ พิกัดยก 300 กก. ไม่ได้หมายความว่าสามารถใช้ได้กับทุกโครงสร้างโดยไม่มีการตรวจสอบวิศวกรรม",
-            "> ### 📌 สาระสำคัญสำหรับวิศวกรโครงการ\n> - **ลดการพึ่งพารถเครนขนาดใหญ่:** ติดตั้งเสาไฟมาตรฐานสูงถึง 12 ม. ได้โดยไม่ต้องเรียกรถเครนขนาด 16 ตันในพื้นที่จำกัด\n> - **พิกัดยกตรวจสอบจากโรงงาน:** พิกัดยกแนวตั้งจำกัดที่ 300 กก. ตามข้อกำหนดทางวิศวกรรมของโรงงาน\n> - **โครงสร้างแยกชิ้นสำหรับช่าง 2 คน:** น้ำหนักรวม 85 กก. แยกเป็น 2 ชิ้น (ชุดกระบอกยก 45 กก. + ชุดขับเคลื่อน 24V 40 กก.) ขนย้ายได้ง่ายด้วยรถกระบะทั่วไป\n> - **เพลทฐานรองรับรอบทิศทาง:** แผ่นเพลทเซาะร่องแนวรัศมีรองรับระยะพิทช์สลัก (P.C.D.) ตั้งแต่ 180 มม. ถึง 260 มม. ใช้กับสลักเกลียว ASTM F1554 ขนาด M16 ถึง M24"
+            "การติดตั้งเสาไฟถนนเทศบาลและเสาไฟโซลาร์เซลล์มักพึ่งพารถเครนเป็นหลัก แต่ในทางเท้าเมืองที่แคบ ทางเดินเท้า เกาะกลางจัดสวน และพื้นที่โครงการโซลาร์เซลล์ที่ยังไม่ลาดยาง การนำรถเครนขนาดใหญ่เข้าหน้างานอาจติดข้อจำกัดด้านทางเข้า การรับน้ำหนักพื้น และการจัดจราจร วิศวกรโครงการจึงพิจารณาใช้ [เครื่องยกเสาไฟไฮดรอลิกแบบพกพา](/products/light-pole-jack/) สำหรับเสาไฟรุ่นมาตรฐาน 12 ม.",
+            "ขอบเขตสเปกสำคัญสำหรับการตรวจสอบโครงการ:\n- **ระดับความสูงเสาที่ระบุ:** ระบุสำหรับเสาไฟ 12 ม. โดยขึ้นอยู่กับน้ำหนักเสาประกอบรวมทั้งหมด จุดศูนย์ถ่วง และการตรวจสอบหน้างาน\n- **พิกัดน้ำหนักยก:** พิกัดน้ำหนักยกสูงสุด 300 กก. ตามเอกสารสเปกผลิตภัณฑ์\n- **โครงสร้างแบบแยกสองโมดูล:** น้ำหนักอุปกรณ์รวม 85 กก. แยกเป็นชุดยกไฮดรอลิก 45 กก. และตู้ควบคุมไฟฟ้า 24 V หนัก 40 กก. โดยระบุผู้ปฏิบัติงาน 1–2 คนในเอกสาร\n- **ขอบเขตหน้าแปลนและสลักยึด:** ระบุระยะรูหน้าแปลน 180–260 มม. พร้อมขนาดสลักยึด M16–M24 ที่ระบุไว้ ฐานรากนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ"
           ]
         },
         {
-          "heading": "1. ความท้าทายทางวิศวกรรมในการติดตั้งเสาไฟ 12 เมตรโดยไม่ใช้รถเครน",
+          "heading": "1. การเข้าถึงหน้างานและปัจจัยโครงการเมื่อประเมินการติดตั้งโดยไม่ใช้เครน",
           "paragraphs": [
-            "หลักการสำคัญของเครื่องยกเสาแบบพกพาคือการแทนที่เครื่องจักรยกขนาดใหญ่ด้วยแรงขับเคลื่อนไฮดรอลิกที่ระดับพื้นดิน ในเขตเมืองหรือพื้นที่สวน ขารองรับของรถเครนจะสร้างแรงกดบนพื้นผิวสูงมาก ซึ่งอาจทำให้พื้นทางเท้าหรือโครงสร้างใต้ดินแตกร้าวเสียหาย",
-            "ด้วยการยึดเครื่องจักรเข้ากับสลักฐานรากคอนกรีตโดยตรง แรงปฏิกิริยาแนวตั้งจะถ่ายลงสู่ฐานรากซึ่งถูกออกแบบมาเพื่อรับโมเมนต์ดัดของเสาอยู่แล้ว รอบเวลาการยกเสาขึ้นสู่แนวตั้งใช้เวลาเพียงประมาณ 20 วินาที และแบตเตอรี่สามารถทำงานได้มากกว่า 50 รอบต่อการชาร์จเต็มหนึ่งครั้ง",
-            "💡 [ต้องการประเมินความคุ้มค่าทางการเงินในโครงการของคุณ? คำนวณความประหยัดด้วยเครื่องคำนวณ ROI รถเครน](/tools/roi-calculator/)"
+            "การยกเสาไฟ 12 ม. จากแนวนอนขึ้นสู่แนวตั้งทำให้เกิดแรงดัดและโมเมนต์พลิกคว่ำที่ฐานเสาและสลักยึดฐานราก แตกต่างจากบูมเครนที่ห้อยจากด้านบน เครื่องยกเสาไฟไฮดรอลิกแบบพกพาทำงานที่ระดับพื้นดินโดยเชื่อมต่อกับชุดฐานเสาและยึดกับสลักฐานรากที่มีอยู่เดิม",
+            "ความสูงเสา 12 ม. เพียงอย่างเดียวยังไม่ยืนยันความเข้ากันได้ ก่อนเลือกวิธีติดตั้งโดยไม่ใช้เครน ทีมโครงการต้องตรวจสอบน้ำหนักประกอบรวมทั้งหมดของเสา โคมไฟ กิ่งโคม และชุดโซลาร์เซลล์ สภาพฐานราก ระยะห่างสายไฟฟ้าเหนือศีรษะ และกฎความปลอดภัยหน้างาน"
           ]
         },
         {
-          "heading": "2. กลไกไฮดรอลิกสำหรับช่าง 2 คน: พิกัดน้ำหนักยก 300 กก. ผ่านการทดสอบจากโรงงาน",
+          "heading": "2. สถาปัตยกรรมไฮดรอลิกสองโมดูลและสเปกที่ระบุ",
           "paragraphs": [
-            "ระบบประกอบด้วย 2 ชิ้นส่วนแยกอิสระที่มีน้ำหนักขนส่งรวม **85 กก.**:\n- **ชุดกระบอกยกไฮดรอลิก:** ขนาด 610 × 220 × 220 มม. น้ำหนัก **45 กก.** โครงเสาโลหะผสมโครงสร้างแข็งแกร่ง กระบอกยกมีระยะชัก 800 มม. พร้อมสลักกลไกนิรภัยป้องกันการเลื่อนระดับ\n- **กล่องควบคุมและชุดจ่ายไฟ 24V:** ขนาด 500 × 300 × 250 มม. น้ำหนัก **40 กก.** บรรจุแบตเตอรี่ชาร์จซ้ำได้ **24V DC** ความจุสูง พร้อมวาล์วไฮดรอลิกควบคุมละเอียด\n- **กล่องไม้มาตรฐานส่งออก:** ขนาด 650 × 350 × 500 มม. เสริมแถบเหล็กรัดรอบตามมาตรฐานการขนส่งอุตสาหกรรมระหว่างประเทศ",
-            "เนื่องจากแต่ละชิ้นส่วนมีน้ำหนักไม่เกิน 45 กก. ช่าง 2 คนจึงสามารถยกเคลื่อนย้ายผ่านทางเดินแคบหรือพื้นที่สวนได้อย่างสะดวกโดยไม่ทำให้พื้นผิวทางเสียหาย"
+            "เครื่องยกเสาไฟแบบพกพา volvet แบ่งออกเป็นสองโมดูลแยกกัน ใช้พลังงานจากแบตเตอรี่แบบชาร์จได้ 24 V ในตัว โดยไม่ต้องต่อไฟฟ้าภายนอกหรือเครื่องปั่นไฟ",
+            "ตามเอกสารสเปกผลิตภัณฑ์ปัจจุบัน:\n- **โมดูลยกไฮดรอลิก:** 610 × 220 × 220 มม. น้ำหนัก: 45 กก. (กระบอกไฮดรอลิก วาล์วไฮดรอลิก ปั๊มน้ำมัน และเกจวัดแรงดันน้ำมัน)\n- **ตู้ควบคุมไฟฟ้า:** 500 × 300 × 250 มม. น้ำหนัก: 40 กก. (ระบบควบคุม ปั๊มไฮดรอลิก แบตเตอรี่แบบชาร์จได้ 24 V แอมมิเตอร์ โวลต์มิเตอร์ และปุ่มควบคุมการยก)\n- **น้ำหนักอุปกรณ์รวมและบรรจุภัณฑ์:** น้ำหนักอุปกรณ์รวม 85 กก. ขนาดบรรจุภัณฑ์ตามเอกสาร 650 × 350 × 500 มม.\n- **จำนวนผู้ปฏิบัติงานที่ระบุ:** ระบุ 1–2 คนในเอกสารสเปก การจัดทีมหน้างานจริงต้องเป็นไปตามแผนความปลอดภัยของโครงการ",
+            "เอกสารสเปกยังระบุตัวเลขที่ผู้ผลิตรายงานไว้ ได้แก่ เวลายก 20 s จำนวนการยกมากกว่า 50 ครั้งต่อการชาร์จเต็ม และรอบการใช้งานมากกว่า 3000 รอบ ทั้งนี้ การทดสอบยืนยันภาคสนามสำหรับน้ำหนักทดสอบ สภาพหน้างาน และความสม่ำเสมอยังอยู่ระหว่างดำเนินการ"
           ]
         },
         {
-          "heading": "3. กลไกการยึดฐานราก: P.C.D. 180 มม. ถึง 260 มม. และสลักเกลียว ASTM F1554",
+          "heading": "3. ระยะรูหน้าแปลน สลักยึดฐานราก และชุดอุปกรณ์มาตรฐานที่ให้มา",
           "paragraphs": [
-            "ความหลากหลายของระยะห่างสลักฐานเสาแก้ไขได้ด้วยเพลทฐานอเนกประสงค์ที่มีร่องสล็อตแนวรัศมี:\n- **เส้นผ่านศูนย์กลางวงกลมสลัก (P.C.D.):** รองรับระยะระหว่าง **180 มม. ถึง 260 มม.** ใช้ได้กับทั้งรูปแบบสี่เหลี่ยม 4 สลักหรือแบบวงกลม\n- **สลักเกลียวยึดฐานราก:** สอดคล้องตามมาตรฐาน **ASTM F1554** (เกรด 36, 55 หรือ 105) ขนาดเส้นผ่านศูนย์กลาง **M16, M18, M20, M22 และ M24**\n- **อุปกรณ์มาตรฐานในชุด:** ประกอบด้วยชุดน็อตและแหวนรองชุบแข็งสำหรับขนาด M16 ถึง M22 สำหรับขนาด M24 แนะนำให้ส่งแบบแปลนฐานรากเพื่อตรวจสอบระยะเกลียวก่อนการใช้งาน",
-            "ตรวจสอบข้อมูลเพิ่มเติมได้ที่ [คู่มือความเข้ากันได้ของเพลทฐานและสลักยึด](/guides/pole-jack-compatibility/)",
-            "📐 [ตรวจสอบความเข้ากันได้ของเพลทฐาน: ขอรับการตรวจแบบแปลนฟรีภายใน 24 ชั่วโมง](/quote/)"
+            "ความเข้ากันได้ที่ฐานเสาขึ้นอยู่กับรูปทรงหน้าแปลน ระยะห่างรูสลัก เส้นผ่านศูนย์กลางเกลียว และระยะเกลียวที่โผล่พ้นฐานรากคอนกรีต",
+            "เอกสารสเปกแยกข้อมูลระหว่างรายการที่รองรับและอุปกรณ์มาตรฐานที่จัดส่งมาด้วย:\n- **ระยะรูหน้าแปลนที่แสดง:** 180–260 มม. บนแผนภาพต้นฉบับ เนื่องจากแผนภาพหน้าแปลนมีคำศัพท์เชิงขนาดที่ยังต้องได้รับคำชี้แจงทางวิศวกรรม รายละเอียดการเชื่อมต่อขั้นสุดท้ายจึงต้องตรวจสอบสำหรับโครงการจริง\n- **ขนาดสลักยึดที่ระบุ:** M16, M18, M20, M22 และ M24\n- **ชุดอุปกรณ์มาตรฐานที่ให้มา:** อุปกรณ์ 1 ชุด สลักยึดขนาด M16, M18, M20 และ M22 ขนาดละ 4 ชุด และหลักปักดิน 1 ชุด ส่วน M24 มีชื่อในตารางความเข้ากันได้แต่ไม่ได้รวมมาในชุดมาตรฐาน\n- **ฐานนอกมาตรฐาน:** ฐานรากนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบก่อนยืนยันความเข้ากันได้"
           ]
         },
         {
-          "heading": "4. ขั้นตอนการปฏิบัติงานมาตรฐานหน้างานแบบทีละขั้นตอน (SOP)",
+          "heading": "4. การตรวจสอบทางวิศวกรรมก่อนติดตั้งและขอบเขตการทบทวนการทำงาน",
           "paragraphs": [
-            "เพื่อให้มั่นใจในความปลอดภัยและประสิทธิภาพการติดตั้งที่เป็นมาตรฐาน การทำงานหน้างานแบ่งออกเป็น 3 ขั้นตอนโดยทีมช่าง 2 คนที่ผ่านการฝึกอบรม",
-            "📄 [ดูข้อกำหนดทางเทคนิคและเอกสารวิศวกรรมที่ศูนย์ทรัพยากร](/resources/)"
+            "ลำดับขั้นตอนการปฏิบัติงานภาคสนามโดยละเอียดยังอยู่ระหว่างการทบทวนทางวิศวกรรมและยังไม่ได้เผยแพร่เป็นขั้นตอนมาตรฐานสากล การติดตั้งทุกครั้งต้องปฏิบัติตามระยะปลอดภัยทางไฟฟ้า การตรวจสอบฐานราก และข้อบังคับการยกในท้องถิ่น"
           ]
         },
         {
-          "heading": "ขั้นตอนที่ 1: การสำรวจฐานรากและตรวจสอบระยะปลอดภัยแนวสายไฟ",
+          "heading": "การตรวจสอบฐานรากและพื้นที่เหนือศีรษะก่อนยก",
           "paragraphs": [
-            "ตรวจสอบว่าคอนกรีตฐานรากแห้งตัวได้ค่าความแข็งแรงตามแบบ ทำความสะอาดเกลียวสลัก M16 ถึง M24 จากคราบปูน จัดแนวแกนโคมไฟส่องสว่างตามเกณฑ์โฟโตเมตริก **ANSI/IES RP-8-18** ตรวจสอบระยะห่างปลอดภัยในแนวดิ่งจากสายไฟฟ้าแรงสูงเหนือศีรษะอย่างเคร่งครัดตามมาตรฐานความปลอดภัย"
+            "ก่อนนำอุปกรณ์เข้าหน้างาน ให้ยืนยันว่าฐานรากคอนกรีตได้รับการตรวจสอบและอนุมัติจากวิศวกรผู้รับผิดชอบ เกลียวและระยะโผล่ของสลักยึดสะอาดไม่เสียหาย และรัศมีการยกเสา 12 ม. ทั้งหมดอยู่ห่างจากสายไฟฟ้าแรงสูงและสิ่งปลูกสร้างใกล้เคียงอย่างปลอดภัย"
           ]
         },
         {
-          "heading": "ขั้นตอนที่ 2: การประกอบชุดโมดูลและการยึดสมอทางกลกับสลักฐานราก",
+          "heading": "การเชื่อมต่ออุปกรณ์และการประกอบล่วงหน้าที่ระดับพื้น",
           "paragraphs": [
-            "ช่าง 2 คนยกฐานเครื่องน้ำหนัก 45 กก. สวมเข้ากับสลักฐานรากที่โผล่ขึ้นมาแล้วขันน็อตยึดเครื่องให้แน่นกับคอนกรีต ต่อสายไฮดรอลิกเข้ากับกล่องควบคุม 24V ด้วยข้อต่อสวมเร็วแบบหน้าเรียบ ปรับขาตั้งและระดับน้ำฟองกลมให้ได้ระนาบ นำหูยึดโคนเสาไฟที่วางราบบนพื้นเข้าสวมกับแท่นยกของเครื่องแล้วสอดสลักนิรภัยเหล็กกล้า"
+            "ตรวจสอบโมดูลไฮดรอลิกและตู้ควบคุมไฟฟ้า 24 V ก่อนเริ่มยก ตรวจสอบว่าสายไฮดรอลิกและจุดต่อไฟฟ้าแน่นหนาถูกต้อง และเดินสายโคมไฟพร้อมประกอบกิ่งโคมให้เรียบร้อยที่ระดับพื้นก่อนยกเสา"
           ]
         },
         {
-          "heading": "ขั้นตอนที่ 3: การเดินสายไฟฟ้าที่ระดับพื้นดินและการยกด้วยระบบไฮดรอลิก 24V",
+          "heading": "การยกแบบควบคุมและการขันน็อตยึดขั้นสุดท้าย",
           "paragraphs": [
-            "ข้อได้เปรียบสำคัญ: การติดตั้งโคมไฟ แผงโซลาร์เซลล์ การเดินสายไฟ และปรับมุมองศาทำได้ทั้งหมดบนพื้นดินโดยไม่ต้องใช้บันได ช่าง A โยกคันควบคุมวาล์วไฮดรอลิก 24V เพื่อยกเสาขึ้นอย่างต่อเนื่องในเวลาประมาณ 20 วินาที ช่าง B คอยสังเกตการณ์ในมุมปลอดภัย 45 องศา เมื่อเสาตั้งตรง 90 องศา วาล์วกันตกและตัวหยุดทางกลจะยึดเสาไว้ขณะที่ช่างขันน็อตโครงสร้างตามค่าแรงบิดที่กำหนด"
+            "ระหว่างการยก ให้บุคลากรอยู่ห่างจากแนวแกว่งและจุดหนีบพร้อมเฝ้าดูแนวการวางฐานและความได้ดิ่งของเสา เมื่อเสาตั้งตรงได้แนวดิ่งแล้ว ให้ขันน็อตโครงสร้างตามสเปกโครงการให้แน่นก่อนปลดชุดเครื่องยกออก"
           ]
         },
         {
-          "heading": "เกณฑ์มาตรฐานทางวิศวกรรม: ข้อมูลจำเพาะที่ยืนยันและการตรวจสอบภาคสนาม",
+          "heading": "5. เงื่อนไขขอบเขต: เมื่อใดที่ยังจำเป็นต้องใช้รถเครน",
           "paragraphs": [
-            "เพื่อรักษาความถูกต้องตามหลักวิศวกรรม ข้อมูลทั้งหมดอ้างอิงจากข้อกำหนดทางเทคนิคที่ได้รับการยืนยันของผู้ผลิตโดยตรง:\n- **ขีดจำกัดน้ำหนักและความสูง:** พิกัดยกปลอดภัยจำกัดที่ 300 กก. WLL สำหรับเสาไฟมาตรฐานไม่เกิน 12 ม. เสาที่เกินพิกัดนี้ต้องใช้รถเครนยก\n- **โครงสร้างแยกชิ้น:** น้ำหนักรวม 85 กก. แยกออกเป็น 2 ชิ้น (ชุดยกไฮดรอลิก 45 กก. และตู้ขับเคลื่อน 40 กก. ชิ้นส่วนเดี่ยวหนักสุดไม่เกิน 65 กก. สำหรับช่าง 2 คน)\n- **ความเข้ากันได้กับฐานราก:** รองรับระยะพิทช์สลัก (P.C.D.) ตั้งแต่ 180 ถึง 260 มม. สำหรับสลักเกลียว ASTM F1554 ขนาด M16 ถึง M24\n- **การตรวจสอบภาคสนาม:** รายงานผลการทดสอบภาคสนามฉบับสมบูรณ์และใบรับรองจะได้รับการเผยแพร่หลังผ่านการตรวจรับขั้นสุดท้าย"
+            "เครื่องยกเสาไฟไฮดรอลิกแบบพกพาออกแบบมาสำหรับเสาไฟขนาดเบาในระดับ 12 ม. ภายใต้พิกัดยก 300 กก. และระยะรูหน้าแปลน 180–260 มม. จึงไม่สามารถใช้แทนรถเครนได้ในทุกกรณี",
+            "ควรใช้รถเครนหรือวิธีการยกที่ได้รับอนุมัติอื่นเมื่อเข้าเงื่อนไขข้อใดข้อหนึ่งต่อไปนี้:\n1. **น้ำหนักประกอบรวมเกิน 300 กก.:** เสาเหล็กหล่อตกแต่งน้ำหนักมาก เสาผนังหนา หรือชุดโคมไฟหลายดวงและแบตเตอรี่โซลาร์เซลล์ขนาดใหญ่ที่เกินพิกัด 300 กก.\n2. **ความสูงเสาเกิน 12 ม.:** เสาไฟสนามสูงหรือเสาไฟทางหลวงที่สูงกว่าระดับ 12 ม. ที่ระบุไว้\n3. **รูปทรงหน้าแปลนหรือฐานรากที่ยังไม่ผ่านการตรวจสอบ:** ฐานที่อยู่นอกช่วงระยะรู 180–260 มม. สลักยึดนอกขนาด M16–M24 หรือฐานนอกมาตรฐานที่ยังไม่ผ่านการตรวจสอบแบบระบุขนาด\n4. **สภาพอากาศไม่เอื้ออำนวยหรือฐานรากชำรุด:** ลมแรงจัดหน้างาน หรือฐานรากและสลักยึดที่เสียหายจนไม่สามารถรับแรงปฏิกิริยาระหว่างการตั้งเสาได้อย่างปลอดภัย"
           ]
         },
         {
-          "heading": "5. ข้อจำกัดและเงื่อนไขหน้างาน: กรณีใดบ้างที่จำเป็นต้องใช้รถเครนยก",
+          "heading": "พิกัดความสูงและน้ำหนักเสาสูงสุดที่ระบุคือเท่าใด",
           "paragraphs": [
-            "| ความเข้าใจผิดทั่วไป | ข้อเท็จจริงทางวิศวกรรมที่ผ่านการพิสูจน์ | ผลกระทบทางเทคนิคหน้างาน |\n|---|---|---|\n| **ความเข้าใจผิด 1: ช่างคนเดียวสามารถยกติดตั้งได้** | กฎความปลอดภัยกำหนดให้ต้องใช้ทีมช่าง 2 คน โดยคนหนึ่งคุมวาล์วไฮดรอลิก 24V อีกคนคอยประคองแนวสลักฐานราก | การทำงานคนเดียวสร้างจุดบอดและเสี่ยงต่อการเอียงล้มของโครงสร้างเสา |\n| **ความเข้าใจผิด 2: ใช้ทดแทนรถเครนได้ทุกขนาดน้ำหนัก** | พิกัดยกถูกจำกัดที่ 300 กก. และเสาสูงไม่เกิน 12 ม. เสาไฮมาสต์หรือเสาขนาดใหญ่ยังจำเป็นต้องใช้รถเครน | การยกน้ำหนักเกินพิกัดจะทำลายโครงสร้างกระบอกไฮดรอลิกอย่างรุนแรง |\n| **ความเข้าใจผิด 3: สัญญาคืนทุนคงที่โดยไม่ต้องคำนวณ** | ความประหยัดที่แท้จริงขึ้นอยู่กับค่าเช่ารถเครนในท้องถิ่นและจำนวนเสาไฟ ควรประเมินตามสภาพโครงการจริง | คำสัญญาทางการค้าที่ไม่มีการคำนวณทำให้งบประมาณโครงการคลาดเคลื่อน |",
-            "เครื่องยกเสาแบบพกพาเป็นเครื่องมือเฉพาะทางสำหรับเสาไฟมาตรฐานความสูงไม่เกิน 12 ม. และไม่ได้ใช้ทดแทนรถเครนขนาดใหญ่ได้ในทุกสถานการณ์ จำเป็นต้องใช้รถเครนในกรณีต่อไปนี้:\n- **น้ำหนักรวมของโครงสร้างเสาเกิน 300 กก.:** เสาเหล็กหล่อตกแต่งที่มีน้ำหนักมากหรือเสาที่มีชุดโคมไฟขนาดใหญ่เกินพิกัดยก\n- **ความสูงของเสาเกิน 12 เมตร:** เสาไฟไฮมาสต์ความสูง 15 ถึง 35 เมตรสำหรับสนามกีฬาหรือทางแยกต่างระดับ\n- **แขนยื่นเยื้องศูนย์มากเกินไป:** เสาที่มีกิ่งโคมยื่นยาวผิดปกติทำให้จุดศูนย์ถ่วงหลุดออกจากแนวแกนยกที่ปลอดภัย\n- **ความเร็วลมในพื้นที่หน้างานเกิน 8.0 ม./วินาที (ระดับ 4 ตามมาตราโบฟอร์ต):** ลมกระโชกที่เกินขีดจำกัดความปลอดภัยนี้จำเป็นต้องระงับการยกเสาด้วยเครื่องยกแบบพกพาชั่วคราว หรือเปลี่ยนไปใช้รถเครนขนาดใหญ่พร้อมสลิงนำทาง *(หมายเหตุทางวิศวกรรม: มาตรฐานยุโรป **EN 40-3** กำหนดขึ้นสำหรับการออกแบบและคำนวณโมเมนต์ดัดรับแรงลมของโครงสร้างเสาไฟในการใช้งานระยะยาว ส่วนเกณฑ์ 8.0 ม./วินาที เป็นขีดจำกัดความปลอดภัยในการติดตั้งตามคู่มือขั้นตอนปฏิบัติงาน SOP ของผู้ผลิต)*\n- **ฐานรากหรือสลักเกลียวชำรุด:** คอนกรีตแตกร้าวหรือเกลียวสลักเสียหายจนไม่สามารถรองรับการยึดเครื่องจักรได้อย่างมั่นคง"
+            "เอกสารสเปกระบุระดับความสูงเสาที่ใช้งานได้ 12 ม. และพิกัดยก 300 กก. ต้องตรวจสอบทั้งสองค่านี้ร่วมกับจุดศูนย์ถ่วงของเสาและรูปทรงหน้าแปลนในแต่ละโครงการ เสาที่หนักเกิน 300 กก. หรือสูงเกิน 12 ม. ต้องใช้รถเครน"
           ]
         },
         {
-          "heading": "ความสูงและน้ำหนักสูงสุดของเสาที่สามารถติดตั้งโดยไม่ใช้เครนคือเท่าใด?",
+          "heading": "เอกสารสเปกระบุจำนวนผู้ปฏิบัติงานไว้กี่คน",
           "paragraphs": [
-            "พิกัดยกสูงสุดในแนวตั้งจำกัดที่ 300 กก. อย่างเคร่งครัด สำหรับเสาเหล็กหรือเสาคอมโพสิตความสูงไม่เกิน 12 เมตร อุปกรณ์ทุกตัวเป็นไปตามข้อมูลจำเพาะที่ผ่านการตรวจสอบแล้ว เสาที่มีน้ำหนักเกิน 300 กก. หรือสูงเกิน 12 เมตรต้องใช้รถเครนยก"
+            "เอกสารสเปกระบุผู้ปฏิบัติงาน 1–2 คนสำหรับชุดอุปกรณ์สองโมดูลน้ำหนัก 85 กก. (โมดูลไฮดรอลิก 45 กก. และตู้ไฟฟ้า 40 กก.) จำนวนทีมงานจริงหน้างานต้องเป็นไปตามแผนความปลอดภัยและกฎการยกเคลื่อนย้ายของโครงการ"
           ]
         },
         {
-          "heading": "ช่างคนเดียวสามารถใช้งานอุปกรณ์นี้ได้อย่างปลอดภัยหรือไม่?",
+          "heading": "สลักยึดขนาดใดรวมอยู่ในชุด และหากหน้าแปลนนอกมาตรฐานต้องทำอย่างไร",
           "paragraphs": [
-            "ไม่ได้ ข้อกำหนดด้านความปลอดภัยในการทำงานระบุชัดเจนว่าต้องใช้ทีมช่าง 2 คน แม้ว่าแต่ละชิ้นส่วนจะยกได้ง่าย แต่ในระหว่างการยกเสา ช่างคนหนึ่งต้องควบคุมวาล์วไฮดรอลิกขณะที่อีกคนคอยสังเกตการณ์และประคองแนวสลักฐานราก"
+            "เอกสารสเปกระบุขนาดสลักยึด M16, M18, M20, M22 และ M24 บนระยะรูหน้าแปลน 180–260 มม. ชุดมาตรฐานจัดส่งให้ขนาดละ 4 ชุดสำหรับ M16, M18, M20 และ M22 ส่วน M24 ไม่ได้รวมมาในชุดมาตรฐาน ฐานรากนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ"
           ]
         },
         {
-          "heading": "เพลทฐานรองรับรูปแบบสลักเกลียวทั้งแบบสี่เหลี่ยมและแบบวงกลมหรือไม่?",
+          "heading": "อุปกรณ์ใช้พลังงานอย่างไรในหน้างานที่ไม่มีไฟฟ้าสายส่ง",
           "paragraphs": [
-            "เพลทฐานเซาะร่องรองรับระยะพิทช์สลัก (P.C.D.) ระหว่าง 180 มม. ถึง 260 มม. ใช้งานได้กับสลักขนาด M16, M18, M20, M22 และ M24 ตามมาตรฐาน ASTM F1554 ชุดอุปกรณ์มาตรฐานมีน็อตสำหรับ M16 ถึง M22 หากใช้สลัก M24 แนะนำให้ส่งแบบแปลนฐานรากเพื่อตรวจสอบล่วงหน้า"
-          ]
-        },
-        {
-          "heading": "ข้อกำหนดด้านพลังงานไฟฟ้าในพื้นที่หน้างานห่างไกลเป็นอย่างไร?",
-          "paragraphs": [
-            "เครื่องจักรทำงานด้วยระบบแบตเตอรี่ชาร์จซ้ำได้ 24V DC ในตัว ไม่ปล่อยไอเสีย ไม่เกิดเสียงรบกวนของเครื่องยนต์ และสามารถยกเสาได้มากกว่า 50 รอบต่อการชาร์จเต็ม เหมาะอย่างยิ่งสำหรับโครงการโซลาร์เซลล์และถนนชนบทที่ยังไม่มีระบบไฟฟ้าหลัก"
+            "ตู้ควบคุมไฟฟ้าใช้แบตเตอรี่แบบชาร์จได้ 24 V จึงไม่ต้องต่อไฟฟ้าภายนอกหรือเครื่องปั่นไฟระหว่างการยก เอกสารระบุตัวเลขจากผู้ผลิตที่มากกว่า 50 ครั้งต่อการชาร์จเต็มและเวลายก 20 s โดยการทดสอบภาคสนามยังอยู่ระหว่างรอดำเนินการ"
           ]
         }
-      ],
-      "h1": "วิธีติดตั้งเสาไฟส่องสว่างถนน 12 เมตรโดยไม่ต้องใช้รถเครน: ข้อกำหนดทางเทคนิคและขั้นตอนปฏิบัติงาน"
+      ]
     }
   },
   "id": {
     "install-12m-street-light-poles-without-crane": {
       "locale": "id",
       "slug": "install-12m-street-light-poles-without-crane",
-      "title": "Cara memasang tiang lampu jalan 12 meter tanpa derek | volvet",
-      "description": "Panduan teknis mendirikan tiang lampu jalan 12 meter tanpa truk derek: batas beban kerja, angkur pondasi, keselamatan listrik, dan prosedur langkah demi langkah.",
+      "title": "Memasang Tiang Lampu Jalan 12 m Tanpa Derek: Batas Spesifikasi dan Tinjauan Proyek | volvet",
+      "h1": "Memasang Tiang Lampu Jalan 12 m Tanpa Truk Derek: Batas Spesifikasi dan Tinjauan Proyek",
+      "description": "Tinjauan teknik berbasis lembar spesifikasi untuk memasang tiang lampu jalan 12 m tanpa truk derek: beban terukur 300 kg, desain dua modul 85 kg, bentang lubang flensa 180–260 mm, dan tinjauan proyek.",
       "imageFolder": "portable-light-pole-lifter-explainer-id",
       "sections": [
         {
-          "heading": "Ringkasan Eksekutif dan Kriteria Kelayakan Teknis",
+          "heading": "Ringkasan dan batas peninjauan",
           "paragraphs": [
-            "Dalam pembangunan infrastruktur penerangan jalan umum dan proyek penerangan tenaga surya, proses pengangkatan dan pendirian tiang lampu merupakan tahapan krusial yang menyita anggaran serta memerlukan perhatian keselamatan kerja yang tinggi. Metode konvensional untuk mendirikan tiang 6m hingga 12m biasanya bergantung pada truk derek (boom truck) 16 ton. Namun, pada jalan perkotaan yang sempit, jalur pedestrian, kawasan kampus tertutup, dan area pembangkit surya terpencil tanpa jalan beraspal, truk derek besar menghadapi kendala ruang gerak yang parah, tanah yang tidak cukup kuat untuk bantalan outrigger, serta penundaan akibat perizinan penutupan jalan.",
-            "Tiang lampu jalan tertentu hingga tinggi 12 meter dapat didirikan tanpa truk derek menggunakan [alat angkat hidrolik portabel untuk tiang](/products/light-pole-jack/). Dirancang dengan arsitektur dua modul terpisah dan penambatan mekanis langsung ke pondasi beton, tim kerja yang terdiri dari dua teknisi dapat menyelesaikan penguncian, penyelarasan pelat dasar, dan pengangkatan vertikal dari permukaan tanah. Kelayakan teknis harus dipastikan berdasarkan berat total, pusat gravitasi, kekuatan pondasi dan baut angkur, kecepatan angin, serta jarak aman dari kabel listrik udara bertegangan. Kapasitas nominal 300kg tidak otomatis menyetujui setiap konfigurasi lapangan tanpa perhitungan teknis.",
-            "> ### 📌 Poin Kunci untuk Insinyur Proyek\n> - **Pengurangan Logistik Berat:** Memungkinkan pendirian tiang standar hingga 12m tanpa pengerahan truk derek 16 ton di area akses terbatas.\n> - **Kapasitas Terverifikasi di Pabrik:** Beban kerja vertikal dibatasi tepat 300kg sesuai spesifikasi desain pabrik.\n> - **Transportasi Modular untuk Dua Pekerja:** Berat total terbagi 85kg (unit pengangkat 45kg + unit daya hidrolik 24V 40kg), mudah diangkut mobil pickup standar.\n> - **Penyesuaian Pelat Dasar Universal:** Pelat dasar beralur radial cocok untuk lingkaran baut (P.C.D.) 180mm hingga 260mm dengan baut angkur ASTM F1554 dari M16 hingga M24."
+            "Pemasangan tiang lampu jalan kota dan tenaga surya secara tradisional bergantung pada truk derek. Pada trotoar sempit, jalur pejalan kaki, median taman, dan area proyek surya yang belum beraspal, mendatangkan truk derek berat dapat menimbulkan kendala akses, daya dukung tanah, dan pengaturan lalu lintas. Karena itu, insinyur proyek mengevaluasi penggunaan [alat angkat tiang lampu hidrolik portabel](/products/light-pole-jack/) untuk kelas tiang standar 12 m.",
+            "Batas spesifikasi utama untuk tinjauan proyek:\n- **Kelas Tiang yang Berlaku:** Tercantum untuk tiang lampu 12 m, bergantung pada berat rakitan total tiang, titik pusat gravitasi, dan peninjauan lokasi.\n- **Batas Beban Terukur:** Beban terukur maksimum 300 kg pada lembar spesifikasi produk.\n- **Arsitektur Dua Modul:** Berat total peralatan 85 kg yang terbagi menjadi modul angkat hidrolik 45 kg dan kabinet listrik 24 V 40 kg, dengan 1–2 operator tercantum pada lembar spesifikasi.\n- **Cakupan Flensa dan Baut Angkur:** Bentang lubang flensa 180–260 mm dengan ukuran baut angkur M16–M24 tercantum; dudukan non-standar memerlukan peninjauan gambar berdimensi."
           ]
         },
         {
-          "heading": "1. Tantangan Rekayasa Pendirian Tiang Lampu 12 m Tanpa Truk Derek",
+          "heading": "1. Akses Lokasi dan Faktor Proyek saat Mengevaluasi Pemasangan Tanpa Derek",
           "paragraphs": [
-            "Prinsip utama dari alat angkat portabel ini adalah menggantikan alat berat pengangkat atas dengan tenaga hidrolik modular di permukaan tanah. Di kawasan perkotaan yang padat atau area hijau, tumpuan kaki truk derek menghasilkan tekanan tanah titik tinggi yang dapat merusak trotoar atau jaringan pipa utilitas bawah tanah.",
-            "Dengan menambatkan alat secara kaku pada baut angkur pondasi, gaya reaksi vertikal dialihkan langsung ke pondasi beton yang memang telah dirancang menahan momen guling tiang. Waktu pengangkatan tiang hanya membutuhkan sekitar 20 detik, dengan daya baterai yang mampu melayani lebih dari 50 siklus pengangkatan per pengisian penuh.",
-            "💡 [Ingin mengetahui dampak efisiensi biaya pada proyek Anda? Hitung penghematan dengan kalkulator ROI truk derek](/tools/roi-calculator/)"
+            "Mendirikan tiang lampu jalan 12 m dari posisi horizontal ke vertikal menimbulkan gaya lentur dan reaksi guling pada pelat dasar tiang serta baut angkur pondasi. Berbeda dengan lengan derek yang menggantung dari atas, alat angkat tiang hidrolik portabel bekerja di permukaan tanah dengan terhubung ke dudukan tiang dan menambatkan diri pada baut pondasi yang ada.",
+            "Kesesuaian tinggi tiang 12 m saja belum memastikan kecocokan. Sebelum memilih pemasangan tanpa derek, tim proyek perlu memeriksa berat rakitan total tiang, luminer, lengan lampu, dan komponen surya, kondisi pondasi, jarak bebas utilitas udara, serta aturan keselamatan lokasi setempat."
           ]
         },
         {
-          "heading": "2. Mekanika Hidrolik Dua Teknisi: Beban Nominal 300 kg Teruji di Pabrik",
+          "heading": "2. Arsitektur Hidrolik Dua Modul dan Spesifikasi Tercantum",
           "paragraphs": [
-            "Sistem lengkap tersusun atas dua modul mandiri dengan total berat transportasi sebesar **85kg**:\n- **Unit Pengangkat Hidrolik:** Dimensi 610 × 220 × 220 mm dengan berat **45kg**, tiang paduan struktural kokoh dan silinder vertikal dengan panjang langkah efektif 800mm yang dilengkapi pin pengaman mekanis anti-turun.\n- **Kotak Kontrol Daya 24V:** Dimensi 500 × 300 × 250 mm dengan berat **40kg**, baterai isi ulang **24V DC** berkapasitas tinggi serta katup proporsional untuk kendali halus.\n- **Kemasan Ekspor Industri:** Peti kayu kokoh 650 × 350 × 500 mm dengan pengikat sabuk baja sesuai standar pengiriman industri internasional.",
-            "Karena tidak ada modul yang melebihi 45kg, perangkat ini sangat mudah dipindahkan oleh dua orang teknisi melewati jalur pejalan kaki tanpa merusak permukaan rumput atau paving."
+            "Alat angkat tiang lampu portabel volvet terdiri atas dua modul terpisah yang ditenagai baterai isi ulang 24 V terintegrasi tanpa memerlukan sambungan listrik jaringan maupun generator.",
+            "Berdasarkan lembar spesifikasi produk saat ini:\n- **Modul Angkat Hidrolik:** 610 × 220 × 220 mm; berat: 45 kg (silinder hidrolik, katup hidrolik, pompa oli, dan pengukur tekanan oli).\n- **Kabinet Listrik:** 500 × 300 × 250 mm; berat: 40 kg (sistem kontrol, pompa hidrolik, baterai isi ulang 24 V, amperemeter, voltmeter, dan tombol angkat).\n- **Berat Total Peralatan dan Kemasan:** Berat total peralatan 85 kg; dimensi kemasan lembar sumber 650 × 350 × 500 mm.\n- **Operator Tercantum:** 1–2 operator tercantum pada lembar spesifikasi; alokasi kru aktual di lapangan wajib mengikuti rencana keselamatan proyek.",
+            "Lembar spesifikasi juga mencantumkan angka laporan pabrikan berupa waktu angkat 20 s, lebih dari 50 kali angkat per pengisian penuh, dan lebih dari 3000 siklus pemakaian. Validasi lapangan untuk beban uji, kondisi lokasi, metode pencatatan waktu, dan keterulangan masih tertunda."
           ]
         },
         {
-          "heading": "3. Mekanisme Penambatan Pondasi: P.C.D. 180 mm hingga 260 mm dan Angkur ASTM F1554",
+          "heading": "3. Bentang Flensa Dasar, Baut Angkur, dan Konfigurasi Standar Termasuk",
           "paragraphs": [
-            "Variasi ukuran pelat dasar tiang dapat diatasi secara fleksibel oleh pelat dasar beralur radial:\n- **Diameter Lingkaran Baut (P.C.D.):** Kompatibel dengan lingkaran antara **180mm dan 260mm**, cocok untuk konfigurasi 4 baut persegi maupun susunan melingkar.\n- **Baut Angkur Struktural:** Sesuai dengan standar **ASTM F1554** (Grade 36, 55, atau 105) pada diameter **M16, M18, M20, M22, dan M24**.\n- **Perangkat Pengikat Standar:** Dilengkapi set mur dan ring baja untuk ukuran M16 hingga M22. Untuk ukuran baut M24, disarankan mengirimkan gambar pondasi untuk verifikasi ulir dan panjang stud.",
-            "Pelajari lebih lanjut pada [panduan kompatibilitas baut angkur dan pelat dasar](/guides/pole-jack-compatibility/).",
-            "📐 [Pastikan kompatibilitas pelat dasar Anda: Minta peninjauan gambar teknik gratis dalam 24 jam](/quote/)"
+            "Kesesuaian pada pangkal tiang bergantung pada geometri flensa, bentang lingkaran lubang baut, diameter baut tanam, dan tonjolan ulir di atas pondasi beton.",
+            "Lembar spesifikasi memisahkan data kompatibilitas tercantum dan perangkat keras standar bawaan:\n- **Bentang Lubang Flensa Ditampilkan:** 180–260 mm pada diagram sumber. Karena diagram flensa memuat terminologi dimensi yang masih memerlukan klarifikasi rekayasa, detail sambungan akhir wajib ditinjau untuk proyek aktual.\n- **Ukuran Baut Angkur Tercantum:** M16, M18, M20, M22, dan M24.\n- **Konfigurasi Standar Termasuk:** 1 set peralatan, masing-masing 4 set baut angkur M16, M18, M20, dan M22, serta 1 set pasak tanah. M24 tercantum dalam tabel kompatibilitas tetapi tidak disertakan secara bawaan.\n- **Dudukan Non-Standar:** Dudukan non-standar memerlukan peninjauan gambar berdimensi sebelum memastikan kecocokan."
           ]
         },
         {
-          "heading": "4. Prosedur Operasional Standar Lapangan Langkah demi Langkah (SOP)",
+          "heading": "4. Pemeriksaan Teknik Pra-Pemasangan dan Batas Peninjauan Operasi",
           "paragraphs": [
-            "Untuk menjamin pengoperasian yang aman dan terstandar, proses pemasangan di lapangan dibagi menjadi tiga tahap yang dikoordinasikan secara ketat oleh dua teknisi terlatih.",
-            "📄 [Konsultasikan spesifikasi teknis dan dokumentasi rekayasa di pusat sumber daya](/resources/)"
+            "Urutan langkah operasi lapangan secara rinci saat ini ditahan untuk peninjauan rekayasa dan tidak dipublikasikan sebagai prosedur operasi standar universal. Setiap pemasangan wajib mematuhi jarak aman kelistrikan, pemeriksaan pondasi, dan peraturan pengangkatan setempat."
           ]
         },
         {
-          "heading": "Tahap 1: Survei Pondasi dan Pemeriksaan Ruang Bebas Kabel Udara",
+          "heading": "Pemeriksaan Pondasi dan Ruang Udara Sebelum Pengangkatan",
           "paragraphs": [
-            "Pastikan beton pondasi telah mencapai umur dan kekuatan tekan rencana; bersihkan ulir baut M16 hingga M24 dari sisa semen. Posisikan arah pencahayaan rumah lampu sesuai panduan fotometri **ANSI/IES RP-8-18**. Periksa dan pastikan jarak bebas vertikal terhadap kabel listrik udara bertegangan memenuhi regulasi keselamatan."
+            "Sebelum memobilisasi peralatan ke lokasi, pastikan pondasi beton telah diperiksa dan disetujui oleh insinyur penanggung jawab, ulir dan tonjolan baut angkur bersih serta tidak rusak, dan seluruh lintasan busur 12 m tiang bebas aman dari kabel listrik udara maupun bangunan sekitar."
           ]
         },
         {
-          "heading": "Tahap 2: Perakitan Modular dan Penambatan Mandiri ke Angkur Pondasi",
+          "heading": "Penyambungan Peralatan dan Pra-Perakitan di Permukaan Tanah",
           "paragraphs": [
-            "Dua teknisi menempatkan rangka dudukan 45kg pada baut angkur yang menonjol dan mengencangkan mur pengikat agar mesin tertambat kokoh pada beton. Sambungkan kotak daya 24V melalui quick-coupler hidrolik; ratakan posisi menggunakan sekrup leveling dan indikator waterpass. Pasangkan engsel bawah tiang lampu yang terbaring ke dudukan angkat mesin dan masukkan pin pengunci baja."
+            "Periksa modul hidrolik dan kabinet listrik 24 V sebelum pengangkatan, pastikan selang hidrolik dan sambungan listrik terpasang erat, serta selesaikan pengkabelan luminer dan pemasangan lengan lampu di permukaan tanah sebelum mendirikan tiang."
           ]
         },
         {
-          "heading": "Tahap 3: Pengkabelan di Permukaan Tanah dan Pengangkatan Hidrolik 24V Terukur",
+          "heading": "Pengangkatan Terkendali dan Pengencangan Akhir Baut",
           "paragraphs": [
-            "Keunggulan utama: pemasangan lampu, panel surya, penyambungan kabel, dan penyetelan sudut kemiringan dilakukan sepenuhnya di atas tanah tanpa perlu tangga atau perancah. Teknisi A menggerakkan tuas katup hidrolik 24V untuk mengangkat tiang secara stabil dalam waktu sekitar 20 detik. Teknisi B mengawasi dari sudut aman 45 derajat. Begitu tiang mencapai posisi vertikal 90 derajat, katup pengaman dan stopper mekanis akan menahan tiang selagi teknisi mengencangkan mur angkur pondasi sesuai torsi yang ditentukan."
+            "Selama proses pengangkatan, jaga personel tetap berada di luar jalur ayunan dan titik jepit sambil memantau kesejajaran dasar serta ketegakan tiang. Setelah tiang mencapai posisi vertikal, kencangkan mur angkur struktural sesuai spesifikasi proyek sebelum melepas unit pengangkat."
           ]
         },
         {
-          "heading": "Garis Dasar Rekayasa: Spesifikasi Terkonfirmasi dan Validasi Lapangan",
+          "heading": "5. Kondisi Batas: Kapan Truk Derek Tetap Diperlukan",
           "paragraphs": [
-            "Untuk menjamin akurasi dan integritas teknis, seluruh parameter yang diterbitkan mengacu pada spesifikasi resmi yang telah dikonfirmasi oleh pabrikan:\n- **Batas Beban dan Ketinggian:** Kapasitas angkat vertikal dibatasi tepat 300 kg WLL untuk tiang standar hingga 12 m. Tiang yang melebihi batas ini wajib menggunakan truk derek.\n- **Arsitektur Modular:** Berat total sistem 85 kg terbagi dalam dua modul (unit tiang hidrolik 45 kg dan unit daya 40 kg; paket terberat 65 kg untuk diangkat 2 operator).\n- **Kompatibilitas Penambatan:** Rentang lingkaran baut (P.C.D.) 180 hingga 260 mm untuk baut angkur ASTM F1554 dari M16 hingga M24.\n- **Validasi Lapangan:** Berkas validasi lapangan lengkap dan sertifikat uji pihak ketiga akan dipublikasikan setelah pembukaan gerbang verifikasi resmi."
+            "Alat angkat tiang hidrolik portabel dirancang untuk kolom ringan kelas 12 m dalam batas beban terukur 300 kg dan bentang flensa 180–260 mm, bukan pengganti universal untuk truk derek.",
+            "Gunakan truk derek atau metode pengangkatan lain yang disetujui apabila salah satu kondisi berikut berlaku:\n1. **Berat Rakitan Total Melebihi 300 kg:** Tiang dekoratif besi cor berat, kolom berdinding tebal, atau rangkaian multi-luminer dan paket baterai surya besar di atas beban terukur 300 kg.\n2. **Tinggi Tiang Melebihi 12 m:** Tiang sorot tinggi atau tiang jalan raya yang melampaui kelas 12 m tercantum.\n3. **Geometri Flensa atau Pondasi Belum Ditinjau:** Dudukan di luar bentang lubang 180–260 mm, baut di luar ukuran M16–M24, atau dudukan non-standar yang belum melewati peninjauan gambar berdimensi.\n4. **Cuaca Buruk atau Pondasi Rusak:** Kondisi angin kencang di lokasi atau pondasi serta baut angkur yang rusak sehingga tidak mampu menahan reaksi pendirian secara aman."
           ]
         },
         {
-          "heading": "5. Batasan Kondisi Lapangan: Kapan Truk Derek Tetap Wajib Digunakan",
+          "heading": "Berapa batas tinggi tiang dan beban terukur yang berlaku?",
           "paragraphs": [
-            "| Mitos Umum di Lapangan | Fakta Rekayasa Terverifikasi | Konsekuensi Teknis |\n|---|---|---|\n| **Mitos 1: Pemasangan dapat dikerjakan oleh satu orang saja** | Standar K3 mewajibkan minimal dua teknisi terlatih. Satu mengoperasikan katup hidrolik 24V, satu lagi memandu baut angkur. | Bekerja sendiri menimbulkan titik buta dan risiko ketidaksejajaran tiang. |\n| **Mitos 2: Menggantikan truk derek untuk semua beban** | Kapasitas dibatasi tepat 300kg dan tinggi tiang 12m. Tiang lebih berat atau lebih tinggi wajib menggunakan derek besar. | Beban berlebih berisiko merusak integritas mekanis silinder hidrolik. |\n| **Mitos 3: Janji penghematan biaya pasti tanpa perhitungan** | Penghematan aktual bergantung pada tarif sewa derek lokal dan volume tiang proyek. Evaluasi per proyek sangat disarankan. | Klaim komersial tanpa bukti perhitungan merusak perencanaan anggaran proyek. |",
-            "Alat angkat portabel merupakan perangkat khusus untuk tiang lampu standar hingga 12m dan bukan pengganti truk derek pada semua kondisi. Penggunaan truk derek tetap wajib dilakukan pada kondisi berikut:\n- **Berat total tiang melebihi 300kg:** Tiang besi cor dekoratif yang sangat berat atau tiang dengan deretan lampu sorot berlebih yang melampaui kapasitas kerja aman.\n- **Tinggi tiang melebihi 12 meter:** Tiang lampu sorot tinggi (15m hingga 35m) untuk stadion atau simpang susun jalan tol.\n- **Beban eksentrik yang parah:** Lengan tiang yang terlalu panjang sehingga menggeser pusat gravitasi di luar batas aman.\n- **Kecepatan angin di lokasi melebihi 8,0 m/s (Skala Beaufort 4):** Hembusan angin di atas ambang batas keselamatan operasional ini mewajibkan penghentian manuver pengangkatan dengan lifter portabel atau beralih ke truk derek dengan pemandu kawat penguat. *(Catatan teknis: Standar Eropa **EN 40-3** mengatur perhitungan desain dan kekuatan mekanis kolom tiang terhadap beban angin dalam penggunaan permanen, sedangkan batas 8,0 m/s merupakan batas toleransi keselamatan pemasangan sesuai panduan SOP lapangan pabrikan.)*\n- **Pondasi atau baut angkur cacat:** Ulir baut rusak atau beton retak sehingga tidak mampu menahan gaya penambatan alat."
+            "Lembar spesifikasi mencantumkan kelas tiang 12 m dan beban terukur 300 kg. Kedua batas tersebut, bersama titik pusat gravitasi tiang dan geometri flensa, wajib diperiksa untuk setiap proyek. Tiang yang lebih berat dari 300 kg atau lebih tinggi dari 12 m memerlukan derek."
           ]
         },
         {
-          "heading": "Berapa batas tinggi dan berat tiang maksimum untuk perakitan tanpa derek?",
+          "heading": "Berapa jumlah operator yang tercantum pada lembar spesifikasi?",
           "paragraphs": [
-            "Kapasitas angkat vertikal terverifikasi tepat 300kg untuk tiang logam atau komposit hingga tinggi 12 meter. Setiap unit memenuhi spesifikasi desain pabrik yang telah dikonfirmasi. Tiang dengan berat di atas 300kg atau tinggi di atas 12 meter wajib menggunakan truk derek teleskopik."
+            "Lembar spesifikasi mencantumkan 1–2 operator untuk sistem dua modul seberat 85 kg (modul hidrolik 45 kg dan kabinet listrik 40 kg). Jumlah kru aktual di lapangan harus mengikuti rencana keselamatan dan aturan penanganan manual proyek Anda."
           ]
         },
         {
-          "heading": "Bisakah peralatan ini dioperasikan dengan aman oleh satu teknisi saja?",
+          "heading": "Baut angkur apa saja yang disertakan dan bagaimana jika flensa saya non-standar?",
           "paragraphs": [
-            "Tidak. Peraturan keselamatan kerja mewajibkan minimal dua orang teknisi. Meskipun modul 45kg dan 40kg dapat diangkat dengan mudah, proses pendirian tiang memerlukan satu operator untuk mengendalikan katup hidrolik sementara operator lainnya memandu pelat dasar tiang masuk ke baut angkur."
+            "Lembar spesifikasi mencantumkan baut angkur M16, M18, M20, M22, dan M24 pada bentang lubang flensa 180–260 mm. Paket standar mencakup masing-masing 4 set M16, M18, M20, dan M22; M24 tidak disertakan secara bawaan. Dudukan non-standar memerlukan peninjauan gambar berdimensi."
           ]
         },
         {
-          "heading": "Apakah pelat dasar mendukung pola baut angkur persegi dan melingkar?",
+          "heading": "Bagaimana peralatan mendapatkan daya di lokasi tanpa jaringan listrik?",
           "paragraphs": [
-            "Pelat dasar beralur universal mendukung diameter lingkaran baut (P.C.D.) antara 180mm hingga 260mm menggunakan baut M16, M18, M20, M22, dan M24 sesuai ASTM F1554. Perlengkapan standar menyediakan mur untuk M16 hingga M22; untuk ukuran M24, disarankan mengirimkan gambar pondasi untuk peninjauan teknis."
-          ]
-        },
-        {
-          "heading": "Apa saja persyaratan pasokan daya di lokasi proyek terpencil?",
-          "paragraphs": [
-            "Alat ini ditenagai oleh baterai isi ulang tertutup 24V DC yang terpasang di dalam unit daya. Tidak menghasilkan asap pembuangan, bebas kebisingan mesin, dan mampu melayani lebih dari 50 siklus pengangkatan per pengisian penuh, sangat cocok untuk proyek lampu surya dan jalan pedesaan yang belum terhubung jaringan listrik."
+            "Kabinet listrik menggunakan baterai isi ulang 24 V sehingga tidak memerlukan pasokan listrik jaringan maupun generator selama pengangkatan. Lembar spesifikasi mencantumkan angka laporan pabrikan lebih dari 50 kali angkat per pengisian penuh dan waktu angkat 20 s, dengan validasi lapangan masih tertunda."
           ]
         }
-      ],
-      "h1": "Cara memasang tiang lampu jalan 12 meter tanpa derek: persyaratan teknis dan prosedur lapangan"
+      ]
     }
   }
 }
