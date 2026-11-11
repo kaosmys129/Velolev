@@ -6,11 +6,21 @@ import { publicOrigin } from "../lib/site-config.mjs";
 export function GET() {
   const origin = publicOrigin();
   const cleanOrigin = origin ? origin.replace(/\/$/, "") : null;
-  const allowedAgents = ["*", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "GPTBot"];
+  const allowedAgents = [
+    "*",
+    "Bingbot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "GPTBot",
+    "PerplexityBot",
+    "ClaudeBot",
+    "Google-Extended",
+    "Bytespider"
+  ];
   const body = cleanOrigin
     ? `${allowedAgents
         .map((agent) => `User-agent: ${agent}\nAllow: /\nDisallow: /admin/\nDisallow: /404.html`)
-        .join("\n\n")}\n\nSitemap: ${cleanOrigin}/sitemap-index.xml\n`
+        .join("\n\n")}\n\nSitemap: ${cleanOrigin}/sitemap-index.xml\n# LLM Knowledge Base\n# llms.txt: ${cleanOrigin}/llms.txt\n# llms-full.txt: ${cleanOrigin}/llms-full.txt\n`
     : "User-agent: *\nDisallow: /\n# Preview only: the approved volvet domain is pending configuration.\n";
   return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }

@@ -191,55 +191,64 @@ const renderedCards = new Set();
 const fm = figureMap[locale] || figureMap.en;
 
 function getSectionFigure(heading, folder) {
-  if (!folder || !isCraneExplainer) return null;
+  if (!folder) return null;
   const h = heading.trim();
+  const folderPath = path.join(publicBase, folder);
 
   // 1. 对比决策矩阵 (Section 1)
   if (!renderedCards.has("05") && (h.startsWith("1.") || /site access|engineering challenge|desafío|acceso a obra|défi|accès chantier|desafio|acesso à obra|thách thức|tiếp cận|ความท้าทาย|การเข้าถึง|tantangan|akses lokasi/i.test(h))) {
-    renderedCards.add("05");
-    return {
-      id: "05",
-      src: `/images/${folder}/05-crane-vs-lifter-comparison-16x9.png`,
-      alt: fm.fig5Alt,
-      label: fm.fig5Label,
-      caption: fm.fig5Caption
-    };
+    if (fs.existsSync(path.join(folderPath, "05-crane-vs-lifter-comparison-16x9.png"))) {
+      renderedCards.add("05");
+      return {
+        id: "05",
+        src: `/images/${folder}/05-crane-vs-lifter-comparison-16x9.png`,
+        alt: fm.fig5Alt,
+        label: fm.fig5Label,
+        caption: fm.fig5Caption
+      };
+    }
   }
 
   // 2. 双模组分体机械架构 (Section 2)
   if (!renderedCards.has("02") && (h.startsWith("2.") || /two-module|hydraulic mechanics|arquitectura hidráulica|mecánica|architecture hydraulique|mécanique|arquitetura hidráulica|mecânica|kiến trúc thủy lực|thủy lực|สถาปัตยกรรมไฮดรอลิก|กลไก|arsitektur hidrolik|mekanika/i.test(h))) {
-    renderedCards.add("02");
-    return {
-      id: "02",
-      src: `/images/${folder}/02-two-module-architecture-16x9.png`,
-      alt: fm.fig2Alt,
-      label: fm.fig2Label,
-      caption: fm.fig2Caption
-    };
+    if (fs.existsSync(path.join(folderPath, "02-two-module-architecture-16x9.png"))) {
+      renderedCards.add("02");
+      return {
+        id: "02",
+        src: `/images/${folder}/02-two-module-architecture-16x9.png`,
+        alt: fm.fig2Alt,
+        label: fm.fig2Label,
+        caption: fm.fig2Caption
+      };
+    }
   }
 
   // 3. 底板法兰与地脚螺栓适配图 (Section 3)
   if (!renderedCards.has("03") && (h.startsWith("3.") || /base flange|foundation anchorage|rango de brida|cimentación|entraxe de platine|massif|vão da flange|fundação|khoảng lỗ mặt bích|móng|ระยะรูหน้าแปลน|ฐานราก|bentang flensa|pondasi/i.test(h))) {
-    renderedCards.add("03");
-    return {
-      id: "03",
-      src: `/images/${folder}/03-flange-pcd-compatibility-16x9.png`,
-      alt: fm.fig3Alt,
-      label: fm.fig3Label,
-      caption: fm.fig3Caption
-    };
+    if (fs.existsSync(path.join(folderPath, "03-flange-pcd-compatibility-16x9.png"))) {
+      renderedCards.add("03");
+      return {
+        id: "03",
+        src: `/images/${folder}/03-flange-pcd-compatibility-16x9.png`,
+        alt: fm.fig3Alt,
+        label: fm.fig3Label,
+        caption: fm.fig3Caption
+      };
+    }
   }
 
   // 4. 安装前工程核查图 (Section 4)
   if (!renderedCards.has("04") && (h.startsWith("4.") || /pre-installation|standard sop|verificaciones previas|procedimiento|contrôles d'ingénierie|procédure|verificações prévias|procedimento|kiểm tra kỹ thuật|quy trình|การตรวจสอบทางวิศวกรรม|ขั้นตอน|pemeriksaan teknik|prosedur/i.test(h))) {
-    renderedCards.add("04");
-    return {
-      id: "04",
-      src: `/images/${folder}/04-sop-field-workflow-16x9.png`,
-      alt: fm.fig4Alt,
-      label: fm.fig4Label,
-      caption: fm.fig4Caption
-    };
+    if (fs.existsSync(path.join(folderPath, "04-sop-field-workflow-16x9.png"))) {
+      renderedCards.add("04");
+      return {
+        id: "04",
+        src: `/images/${folder}/04-sop-field-workflow-16x9.png`,
+        alt: fm.fig4Alt,
+        label: fm.fig4Label,
+        caption: fm.fig4Caption
+      };
+    }
   }
 
   return null;
@@ -574,8 +583,76 @@ const techArticleSchema = {
     "@id": pageUrl
   }
 };
+
+// 提取并构建 FAQPage Schema（赋能 Google FAQ Rich Snippets 与 Bing/ChatGPT 问答抽取）
+const faqEntities = [];
+if (Array.isArray(rawArticle.faq)) {
+  for (const item of rawArticle.faq) {
+    if (item.question && item.answer) {
+      faqEntities.push({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      });
+    }
+  }
+}
+
+if (faqEntities.length === 0 && Array.isArray(article.sections)) {
+  for (const s of article.sections) {
+    const heading = (s.heading || "").trim();
+    if (heading.includes("?") || heading.includes("？") || isSubHeading(heading)) {
+      // 形式 1: 章节标题本身是问句
+      if (s.paragraphs && s.paragraphs.length > 0) {
+        const cleanAnswer = s.paragraphs.join(" ").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replaceAll("`", "").replace(/[*_#]/g, "");
+        faqEntities.push({
+          "@type": "Question",
+          "name": heading,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": cleanAnswer
+          }
+        });
+      }
+    } else if (/faq|frequently asked/i.test(heading)) {
+      // 形式 2: 章节是 FAQ 容器，段落采用 **Question?** Answer 格式
+      if (Array.isArray(s.paragraphs)) {
+        for (const p of s.paragraphs) {
+          const match = p.match(/^\*\*([^*?？]+[?？])\*\*\s*([\s\S]+)$/);
+          if (match) {
+            const q = match[1].trim();
+            const a = match[2].trim().replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replaceAll("`", "").replace(/[*_#]/g, "");
+            faqEntities.push({
+              "@type": "Question",
+              "name": q,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": a
+              }
+            });
+          }
+        }
+      }
+    }
+  }
+}
+
+const faqSchema = faqEntities.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqEntities
+} : null;
+
+const extraSchemas = [techArticleSchema, faqSchema].filter(Boolean);
+
+// 提取动态 Direct Answer 首屏直接解答卡文案
+const directAnswerBadge = locArticle?.directAnswerBadge || rawArticle.directAnswerBadge || c.directAnswerBadge;
+const directAnswerText = locArticle?.directAnswerText || rawArticle.directAnswerText || (rawArticle.description ? rawArticle.description : c.directAnswerText);
 ---
-<Layout page="guides" locale={locale} article={{ ...meta, title: seoTitle, heroCoverImage }} extraSchemas={[techArticleSchema]}>
+<Layout page="guides" locale={locale} article={{ ...meta, title: seoTitle, heroCoverImage }} extraSchemas={extraSchemas}>
   <main id="main">
     <div class="wrap">
       <nav class="breadcrumb-nav" aria-label="Breadcrumb">
@@ -612,35 +689,33 @@ const techArticleSchema = {
         </div>
       )}
 
-      {/* 仅对首篇 12 m 指南渲染内置参数摘要卡片，避免其他文章复用硬编码数据 */}
-      {isCraneExplainer && (
-        <aside class="direct-answer-box" aria-label="Technical Direct Answer">
-          <div class="direct-answer-header">
-            <span class="direct-answer-badge">✓ {c.directAnswerBadge}</span>
+      {/* 渲染动态参数摘要与直接回答卡片（赋能 Google Featured Snippets 与 AI 搜索 Direct Answer） */}
+      <aside class="direct-answer-box" aria-label="Technical Direct Answer">
+        <div class="direct-answer-header">
+          <span class="direct-answer-badge">✓ {directAnswerBadge}</span>
+        </div>
+        <p class="direct-answer-text">
+          <strong>{directAnswerText}</strong>
+        </p>
+        <div class="direct-answer-specs">
+          <div class="spec-card">
+            <span class="spec-label">{c.specLabelLimit}</span>
+            <span class="spec-value">{c.specCapacity}</span>
           </div>
-          <p class="direct-answer-text">
-            <strong>{c.directAnswerText}</strong>
-          </p>
-          <div class="direct-answer-specs">
-            <div class="spec-card">
-              <span class="spec-label">{c.specLabelLimit}</span>
-              <span class="spec-value">{c.specCapacity}</span>
-            </div>
-            <div class="spec-card">
-              <span class="spec-label">{c.specLabelCrew}</span>
-              <span class="spec-value">{c.specCrew}</span>
-            </div>
-            <div class="spec-card">
-              <span class="spec-label">{c.specLabelBolt}</span>
-              <span class="spec-value">{c.specAnchorage}</span>
-            </div>
-            <div class="spec-card">
-              <span class="spec-label">{c.specLabelPower}</span>
-              <span class="spec-value">{c.specPower}</span>
-            </div>
+          <div class="spec-card">
+            <span class="spec-label">{c.specLabelCrew}</span>
+            <span class="spec-value">{c.specCrew}</span>
           </div>
-        </aside>
-      )}
+          <div class="spec-card">
+            <span class="spec-label">{c.specLabelBolt}</span>
+            <span class="spec-value">{c.specAnchorage}</span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">{c.specLabelPower}</span>
+            <span class="spec-value">{c.specPower}</span>
+          </div>
+        </div>
+      </aside>
 
       <article class="policy-body snapshot-article">
         {(() => {
