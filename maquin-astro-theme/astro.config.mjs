@@ -64,7 +64,7 @@ export default defineConfig({
         }
         return {
           ...item,
-          lastmod: new Date("2026-10-28T00:00:00.000Z").toISOString(),
+          lastmod: new Date().toISOString(),
           ...(links.length ? { links } : {}),
         };
       },

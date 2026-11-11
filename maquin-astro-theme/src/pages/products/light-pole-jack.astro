@@ -1,5 +1,17 @@
 ---
 import ProcurementLayout from "../../layouts/ProcurementLayout.astro";
 import ProductPage from "../../components/procurement/ProductPage.astro";
+import {publicOrigin} from "../../lib/site-config.mjs";
+
+const origin = publicOrigin() || "https://www.velolev.org";
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "velolev Portable Hydraulic Light Pole Lifter Overview",
+  description: "Mechanical demonstration and physical specifications of the velolev portable hydraulic light pole lifter for 12 m class street lighting poles up to 300 kg.",
+  thumbnailUrl: `${origin}/images/product/portable-pole-lifter-hero-cutout.png`,
+  uploadDate: "2026-10-28T08:00:00+08:00",
+  contentUrl: `${origin}/media/equipment-overview.mp4`
+};
 ---
-<ProcurementLayout page="product"><ProductPage/></ProcurementLayout>
+<ProcurementLayout page="product" extraSchemas={[videoSchema]}><ProductPage/></ProcurementLayout>

@@ -2,7 +2,7 @@ import {specificationSummary} from './specification-downloads.mjs';
 import {translateText} from './industrial-localization.mjs';
 import {industrialLocales} from './site-config.mjs';
 
-export const documentNames=['volvet-specifications.csv','volvet-specifications.json','project-information-worksheet.csv'];
+export const documentNames=['velolev-specifications.csv','velolev-specifications.json','volvet-specifications.csv','volvet-specifications.json','project-information-worksheet.csv'];
 export function localizedDocumentPath(name,locale='en'){
  if(!documentNames.includes(name))throw new Error('Unknown document.');
  return `${industrialLocales.includes(locale)?`/${locale}`:''}/resources/${name}`;
@@ -23,7 +23,7 @@ const csv=rows=>'\ufeff'+rows.map(row=>row.map(cell).join(',')).join('\r\n')+'\r
 const valueText=value=>Array.isArray(value)?value.join(' × '):value;
 export function localizedSpecificationCsv(locale){
  const s=localizedSpecification(locale),t=value=>translateText(value,locale);
- const rows=[[t('Field'),t('Value')],['volvet',s.brand],[t('Source'),s.source],[t('Version'),s.baselineVersion],[t('Purpose'),s.purpose],
+ const rows=[[t('Field'),t('Value')],['velolev',s.brand],[t('Source'),s.source],[t('Version'),s.baselineVersion],[t('Purpose'),s.purpose],
  ...Object.entries(s.specifications).map(([key,value])=>[s.labels[key],`${valueText(value)}${units[key]?` ${units[key]}`:''}`]),
  ...Object.entries(s.standardConfiguration).map(([key,value])=>[s.labels[key],Array.isArray(value)?value.join(' / '):value]),
  ...Object.keys(performanceLabels).map(key=>[`${s.manufacturerReportedPerformanceLabel} · ${s.labels[key]}`,`${s.manufacturerReportedPerformance[key]}${key==='liftTimeSeconds'?' s':''}`]),

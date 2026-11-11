@@ -7,7 +7,7 @@
       "status": "published",
       "slug": "install-12m-street-light-poles-without-crane",
       "title": "Installing 12 m Street Light Poles Without a Crane: Specification Boundaries and Project Review",
-      "seoTitle": "12 m Street Light Pole Installation Without a Crane | volvet",
+      "seoTitle": "12m Street Light Pole Installation Without Crane | velolev",
       "description": "Specification-grounded engineering overview for installing 12 m street light poles without a mobile crane: 300 kg rated load, 85 kg two-module layout, 180–260 mm flange span, and project review boundaries.",
       "sections": [
         {
@@ -27,7 +27,7 @@
         {
           "heading": "2. Two-Module Hydraulic Architecture and Listed Specifications",
           "paragraphs": [
-            "The volvet portable light pole jack is organized into two separate modules powered by an onboard 24 V rechargeable battery rather than an external grid connection or diesel generator.",
+            "The velolev portable light pole jack is organized into two separate modules powered by an onboard 24 V rechargeable battery rather than an external grid connection or diesel generator.",
             "According to the current product specification sheet:\n- **Hydraulic Lifting Module:** 610 × 220 × 220 mm; weight: 45 kg (hydraulic cylinder, hydraulic valve, oil pump, and oil pressure gauge).\n- **Electrical Cabinet:** 500 × 300 × 250 mm; weight: 40 kg (control system, hydraulic pump, 24 V rechargeable battery, ammeter, voltage meter, and lift buttons).\n- **Total Equipment Weight and Packaging:** 85 kg total equipment weight; 650 × 350 × 500 mm source-sheet packaging dimensions.\n- **Operators Listed:** 1–2 operators listed on the specification sheet; site crew allocation must follow project safety and manual-handling rules.",
             "The specification sheet also lists manufacturer-reported figures of 20 s lift time, over 50 lifts per full charge, and more than 3000 usage cycles. Field validation for test load, site conditions, timing method, and repeatability remains pending, so these figures serve as specification labels rather than guaranteed field cycle times or service life."
           ]
@@ -128,24 +128,25 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "06b1baaa765e760258171db44e072bf1a8cc4cb836cf5c78ae38afbba98112b9"
-      }
+        "contentSha256": "e3f5327be49ddee2f847ab22fea270c20d2015d2f6971c8dc7baeaa435fda636"
+      },
+      "seoDescription": "Guide to crane-free 12m street light pole installation: 300kg rated load, 85kg modular system, 180–260mm flange span, and project drawing review."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "m24-anchor-bolts-180-260mm-flange-compatibility",
       "title": "M24 Anchor Bolts and 180–260 mm Flange Span Compatibility on a Portable Pole Lifter",
-      "seoTitle": "M24 Anchor Bolts & 180–260 mm Flange Span Compatibility | volvet",
+      "seoTitle": "M24 Bolts & 180–260mm Flange Compatibility | velolev",
       "description": "Engineering compatibility guide for M24 anchor studs, 180–260 mm flange hole spans, standard M16–M22 included bolts, and drawing review rules for non-standard pole bases.",
       "sections": [
         {
           "heading": "Direct Compatibility Answer",
           "paragraphs": [
-            "The volvet Portable Light Pole Lifter specification sheet lists M16, M18, M20, M22, and M24 anchor bolt sizes alongside a 180–260 mm flange hole span. However, listed compatibility and default included hardware are separate items: standard delivery includes 4 sets each of M16, M18, M20, and M22 anchor bolts, while M24 hardware is not included by default.",
+            "The velolev Portable Light Pole Lifter specification sheet lists M16, M18, M20, M22, and M24 anchor bolt sizes alongside a 180–260 mm flange hole span. However, listed compatibility and default included hardware are separate items: standard delivery includes 4 sets each of M16, M18, M20, and M22 anchor bolts, while M24 hardware is not included by default.",
             "In addition, because the source flange diagram contains dimension terminology that still requires engineering clarification, teams must verify how their drawing defines the span and submit a dimensioned base-plate drawing whenever M24 studs, 6-hole or 8-hole patterns, or spans outside 180–260 mm are specified."
           ]
         },
@@ -172,7 +173,7 @@
         {
           "heading": "Frequently Asked Questions on M24 and 180–260 mm Flanges",
           "paragraphs": [
-            "**Are M24 anchor bolts included in the standard volvet kit?** No. Standard delivery includes 1 equipment set, 1 set of ground stakes, and 4 sets each of M16, M18, M20, and M22 anchor bolts. M24 appears in the compatibility table but must be confirmed separately.",
+            "**Are M24 anchor bolts included in the standard velolev kit?** No. Standard delivery includes 1 equipment set, 1 set of ground stakes, and 4 sets each of M16, M18, M20, and M22 anchor bolts. M24 appears in the compatibility table but must be confirmed separately.",
             "**Can a 6-hole flange with a 220 mm span use the standard 4-bolt setup?** No. Any 6-hole or 8-hole base plate, as well as any span below 180 mm or above 260 mm, is classified as a non-standard base and requires a dimensioned drawing review before confirming fitment."
           ]
         }
@@ -197,24 +198,25 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "ab1d8f867d2e3dab808d5c434802616a19069de5fd293bda10a5eda9f797c296"
-      }
+        "contentSha256": "1e6ecf335d78bc604739ed2630af6f2ee631fbdaf0fa5b96ac55f0aa74081c02"
+      },
+      "seoDescription": "Review M24 anchor studs, 180–260mm base flange spans, included M16–M22 hardware, and dimensioned drawing review requirements for non-standard bases."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "solar-street-light-pole-weight-limits-panel-battery-erection",
       "title": "Solar Street Light Pole Weight Limits: Checking Panel, Bracket, and Battery Loads Under 300 kg",
-      "seoTitle": "Solar Street Light Pole Weight Limits Under 300 kg | volvet",
+      "seoTitle": "Solar Street Light Pole Weight Limits Under 300kg | velolev",
       "description": "How to calculate total assembled solar street light weight (pole, solar panel, mounting bracket, battery box, and luminaire) against the 300 kg rated load and 12 m class limit.",
       "sections": [
         {
           "heading": "Why Bare-Pole Weight Is Insufficient for Solar Lighting Projects",
           "paragraphs": [
-            "Off-grid solar street light columns carry significantly more top-mounted mass than standard grid-connected roadway poles. When contractors check only the bare steel pole weight against the volvet Portable Light Pole Lifter 300 kg rated load and 12 m applicable pole class, they risk overlooking solar panels, mounting frames, battery enclosures, and outreach brackets.",
+            "Off-grid solar street light columns carry significantly more top-mounted mass than standard grid-connected roadway poles. When contractors check only the bare steel pole weight against the velolev Portable Light Pole Lifter 300 kg rated load and 12 m applicable pole class, they risk overlooking solar panels, mounting frames, battery enclosures, and outreach brackets.",
             "While the equipment is powered by an onboard 24 V rechargeable battery and requires no grid electricity on rural corridors, lifting a complete solar assembly has not yet been validated as a standard configuration. Every solar street light project must therefore undergo an assembled weight, geometry, and base-drawing review before selecting crane-free installation."
           ]
         },
@@ -267,24 +269,25 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "f165a6199f6018096d2a3ee75ca9b2714d9a4fdbeffc444e187623542fc5b315"
-      }
+        "contentSha256": "2882a4819ceea952126cc2f8f1369e80de638fefd5892d28f418a8c9842ef7c1"
+      },
+      "seoDescription": "Check total assembled solar street light weight (pole, solar panel, bracket, battery box) against the 300kg rated load and 12m class equipment limit."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "modular-85kg-pole-lifter-operator-planning-boundaries",
       "title": "85 kg Split Two-Module Pole Lifter: Transport Dimensions and 1–2 Operator Planning Boundaries",
-      "seoTitle": "85 kg Split Pole Lifter & 1–2 Operator Planning Limits | volvet",
+      "seoTitle": "85kg Split Two-Module Pole Lifter Planning | velolev",
       "description": "Detailed breakdown of the 85 kg two-module portable light pole lifter (45 kg hydraulic unit and 40 kg 24 V electrical cabinet) and 1–2 operator site planning boundaries.",
       "sections": [
         {
           "heading": "Two-Module Architecture for Narrow-Access Lighting Sites",
           "paragraphs": [
-            "Urban sidewalks, pedestrian promenades, landscaped road medians, and multi-level parking decks often block truck-mounted cranes due to width limits, low overhead clearances, or paved surface load restrictions. The volvet Portable Light Pole Lifter addresses physical transport into these corridors through an 85 kg two-module architecture rather than a single heavy chassis.",
+            "Urban sidewalks, pedestrian promenades, landscaped road medians, and multi-level parking decks often block truck-mounted cranes due to width limits, low overhead clearances, or paved surface load restrictions. The velolev Portable Light Pole Lifter addresses physical transport into these corridors through an 85 kg two-module architecture rather than a single heavy chassis.",
             "According to the confirmed S4 specification sheet, the system separates into a 45 kg hydraulic lifting module and a 40 kg electrical cabinet, with source-sheet packaging dimensions of 650 × 350 × 500 mm. Planning crew allocation and site logistics accurately requires understanding both the module weights and the operator boundary stated in the specification table."
           ]
         },
@@ -311,7 +314,7 @@
         {
           "heading": "Frequently Asked Questions on 85 kg Modular Transport and Crew Size",
           "paragraphs": [
-            "**What is the heaviest single module of the volvet portable light pole lifter?** The hydraulic lifting module weighs 45 kg (610 × 220 × 220 mm) and the 24 V electrical cabinet weighs 40 kg (500 × 300 × 250 mm), totaling 85 kg.",
+            "**What is the heaviest single module of the velolev portable light pole lifter?** The hydraulic lifting module weighs 45 kg (610 × 220 × 220 mm) and the 24 V electrical cabinet weighs 40 kg (500 × 300 × 250 mm), totaling 85 kg.",
             "**How many operators are required on site?** The specification sheet parameter table lists 1–2 operators. Actual crew size must follow your project safety assessment, manual-handling thresholds, and local lifting supervision rules."
           ]
         }
@@ -338,18 +341,19 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "bdceeaf9d9b8db6449587693aa4ff8e318bd8a533f433d0a6ecf8e18ce94b6a6"
-      }
+        "contentSha256": "62cc2f819db51c0d6ac19cd796967bb5fe715f31dfd6e1db8844c1124c8ab7e6"
+      },
+      "seoDescription": "Planning guide for the 85kg two-module light pole lifter (45kg hydraulic unit + 40kg 24V electrical cabinet) and 1–2 operator site access boundaries."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "when-mobile-cranes-still-required-over-300kg-12m-direct-burial",
       "title": "When Mobile Cranes Are Still Required: Pole Height Over 12 m, Weight Over 300 kg, and Direct-Burial Limits",
-      "seoTitle": "When Mobile Cranes Are Still Required Over 300 kg or 12 m | volvet",
+      "seoTitle": "When Mobile Cranes Are Required Over 300kg & 12m | velolev",
       "description": "Clear engineering exclusion matrix defining when a portable hydraulic light pole lifter cannot be used and a mobile crane or alternative lifting method is mandatory.",
       "sections": [
         {
@@ -370,7 +374,7 @@
           "heading": "2. Mixed-Scope Tenders: Combining Portable Lifters and Cranes",
           "paragraphs": [
             "Many municipal lighting upgrades and industrial park packages include a mix of standard 8 m to 12 m street light columns alongside a smaller number of 14 m to 18 m intersection poles or heavy multi-arm structures. Separating the bill of quantities into two work packages avoids forcing either tool outside its safe envelope.",
-            "Assign the 12 m class columns (at or below 300 kg with verified flange geometry) to portable hydraulic lifting evaluation, and schedule a mobile crane exclusively for the over-height, over-weight, or direct-burial items. When comparing costs across the portable-eligible subset, enter your own local crane rental and crew rates in the volvet Cost Scenario Calculator without assumed price presets."
+            "Assign the 12 m class columns (at or below 300 kg with verified flange geometry) to portable hydraulic lifting evaluation, and schedule a mobile crane exclusively for the over-height, over-weight, or direct-burial items. When comparing costs across the portable-eligible subset, enter your own local crane rental and crew rates in the velolev Cost Scenario Calculator without assumed price presets."
           ]
         },
         {
@@ -382,7 +386,7 @@
         {
           "heading": "Frequently Asked Questions on Crane vs Portable Lifter Limits",
           "paragraphs": [
-            "**Can the volvet portable lifter install direct-burial poles that go into an excavated hole without a flange plate?** No. The equipment connects to a bolted pole base and foundation anchor studs. Direct-burial poles require a crane or suspended lifting method.",
+            "**Can the velolev portable lifter install direct-burial poles that go into an excavated hole without a flange plate?** No. The equipment connects to a bolted pole base and foundation anchor studs. Direct-burial poles require a crane or suspended lifting method.",
             "**What happens if a project has 35 poles under 300 kg and 5 poles weighing 380 kg?** Only the 35 poles at or below 300 kg and within the 12 m class can be evaluated for the portable lifter; the five 380 kg poles must be erected with a mobile crane."
           ]
         }
@@ -408,25 +412,26 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "f217707eede0724cf1e5a6eabc3bcc359630df61cee8312d37f4a453a6712906"
-      }
+        "contentSha256": "d9e9004c125b2222675f2a935daa526b6d224ff51406c641a6251cfed18168cb"
+      },
+      "seoDescription": "Engineering exclusion matrix defining when a portable hydraulic light pole lifter cannot be used and a mobile crane or boom truck remains mandatory."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost",
       "title": "40-Pole Parking Lot Lighting Installation: Comparing Crane Rental vs Portable Lifter Scope and Cost Inputs",
-      "seoTitle": "40-Pole Parking Lot Lighting: Crane vs Portable Lifter Scope | volvet",
+      "seoTitle": "40-Pole Parking Lot Lighting: Crane vs Lifter | velolev",
       "description": "How to compare mobile crane rental and a portable hydraulic pole lifter across a 40-pole parking lot lighting project using identical scope boundaries and your own local rates.",
       "sections": [
         {
           "heading": "Why Same-Scope Comparison Matters on Multi-Pole Parking Projects",
           "paragraphs": [
-            "Commercial parking lots, logistics yards, and university campuses frequently require installing 20 to 60 roadway or area lighting columns in a single phase. When comparing a mobile truck crane against the volvet Portable Light Pole Lifter, accurate budgeting depends on defining an identical work package rather than comparing equipment rental hours alone.",
-            "Because volvet operates on a private B2B quotation model without public machine prices or assumed regional currency presets, project estimators enter their own local crane rental rates, crew costs, and project volume into the volvet Cost Scenario Calculator to test sensitivity under transparent formulas."
+            "Commercial parking lots, logistics yards, and university campuses frequently require installing 20 to 60 roadway or area lighting columns in a single phase. When comparing a mobile truck crane against the velolev Portable Light Pole Lifter, accurate budgeting depends on defining an identical work package rather than comparing equipment rental hours alone.",
+            "Because velolev operates on a private B2B quotation model without public machine prices or assumed regional currency presets, project estimators enter their own local crane rental rates, crew costs, and project volume into the velolev Cost Scenario Calculator to test sensitivity under transparent formulas."
           ]
         },
         {
@@ -452,7 +457,7 @@
         {
           "heading": "Frequently Asked Questions on Multi-Pole Cost Modeling",
           "paragraphs": [
-            "**Why does the volvet Cost Scenario Calculator leave equipment price blank?** volvet quotes B2B export configurations privately based on project scope and destination, so no public equipment price or regional currency preset is published.",
+            "**Why does the velolev Cost Scenario Calculator leave equipment price blank?** velolev quotes B2B export configurations privately based on project scope and destination, so no public equipment price or regional currency preset is published.",
             "**Does the 20 s manufacturer-reported lift time represent full installation time per pole?** No. The 20 s figure refers only to the reported lift stroke (with field validation pending). Full per-pole cycle time must include transport, staging, wiring, alignment, and anchor tightening."
           ]
         }
@@ -478,25 +483,26 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "3ac4fab60a12572ef336ebdee675fb4c56148f4c781d9686c114ddeb9679e793"
-      }
+        "contentSha256": "ea24e05751857707a7fcf63af372b6002d2504bfb6f8d5100750e8959738a37e"
+      },
+      "seoDescription": "Compare crane rental against a portable hydraulic pole lifter for 40-pole parking lot lighting projects using identical scope and local labor rates."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "24v-battery-off-grid-rural-road-pole-lifting-planning",
       "title": "24 V Battery Portable Pole Lifter for Off-Grid Rural Roads: Lifts Per Charge and Field Planning",
-      "seoTitle": "24 V Battery Pole Lifter for Off-Grid Rural Roads | volvet",
+      "seoTitle": "24V Battery Pole Lifter for Off-Grid Rural Roads | velolev",
       "description": "Field planning guide for using the 24 V rechargeable battery electrical cabinet on off-grid rural highway corridors, including manufacturer-reported lifts per charge boundaries.",
       "sections": [
         {
           "heading": "Self-Contained 24 V Power for Unpowered Highway Corridors",
           "paragraphs": [
             "Rural road lighting and off-grid solar corridor projects often span kilometers of highway where grid power is unavailable during civil and mechanical installation. Bringing a separate diesel generator alongside lifting gear adds fuel logistics, noise, and extra vehicle movements.",
-            "The volvet Portable Light Pole Lifter integrates a 24 V rechargeable battery inside its 40 kg electrical cabinet (500 × 300 × 250 mm), enabling hydraulic lifting strokes without external mains electricity. Proper field planning requires separating confirmed battery hardware specs from manufacturer-reported endurance figures that remain under field validation."
+            "The velolev Portable Light Pole Lifter integrates a 24 V rechargeable battery inside its 40 kg electrical cabinet (500 × 300 × 250 mm), enabling hydraulic lifting strokes without external mains electricity. Proper field planning requires separating confirmed battery hardware specs from manufacturer-reported endurance figures that remain under field validation."
           ]
         },
         {
@@ -522,7 +528,7 @@
         {
           "heading": "Frequently Asked Questions on 24 V Battery Operation",
           "paragraphs": [
-            "**Does the volvet portable lifter require a generator on off-grid sites?** No. The electrical cabinet houses a 24 V rechargeable battery that powers the hydraulic pump during lifting.",
+            "**Does the velolev portable lifter require a generator on off-grid sites?** No. The electrical cabinet houses a 24 V rechargeable battery that powers the hydraulic pump during lifting.",
             "**Has the over 50 lifts per full charge figure been independently verified in field trials?** Not yet. The source specification sheet lists over 50 lifts per full charge as a manufacturer-reported figure with field validation pending."
           ]
         }
@@ -548,25 +554,26 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "331dc7154f3c0f459bf48e22435d18a54c5c1f2bbf374f947bd79a322c2dca12"
-      }
+        "contentSha256": "d4bdde3dc56220463338c46435eb06cd68b4361c023e4454208a3d8dc15804ba"
+      },
+      "seoDescription": "Field planning for the 24V rechargeable battery lifter on off-grid rural highway corridors, covering reported lifts per charge and battery handling."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "pickup-truck-transport-modular-pole-jack-dimensions",
       "title": "Pickup Truck and Van Transport for a Modular Pole Lifter: 650 × 350 × 500 mm Packaging and Module Dimensions",
-      "seoTitle": "Pickup Truck Transport & 650×350×500 mm Pole Lifter Dimensions | volvet",
-      "description": "Verify vehicle cargo dimensions, packaging footprint (650 × 350 × 500 mm), and split module weights (45 kg + 40 kg) for transporting the volvet pole lifter in utility pickups or vans.",
+      "seoTitle": "Pickup Truck Transport & Modular Lifter Dimensions | velolev",
+      "description": "Verify vehicle cargo dimensions, packaging footprint (650 × 350 × 500 mm), and split module weights (45 kg + 40 kg) for transporting the velolev pole lifter in utility pickups or vans.",
       "sections": [
         {
           "heading": "Transporting Pole Lifting Equipment Without Flatbed Trucks",
           "paragraphs": [
             "Contractors maintaining municipal street lighting, park pathways, and campus parking lots frequently operate standard utility pickup trucks or service vans rather than flatbed crane trucks. Knowing exact module dimensions and net weights allows logistics planners to verify cargo-bed fitment and tie-down points before dispatch.",
-            "The volvet Portable Light Pole Lifter has a combined equipment weight of 85 kg split across two modules, with source-sheet packaging dimensions of 650 × 350 × 500 mm."
+            "The velolev Portable Light Pole Lifter has a combined equipment weight of 85 kg split across two modules, with source-sheet packaging dimensions of 650 × 350 × 500 mm."
           ]
         },
         {
@@ -592,7 +599,7 @@
         {
           "heading": "Frequently Asked Questions on Transport and Packaging",
           "paragraphs": [
-            "**What are the packaging dimensions of the volvet portable light pole lifter?** The source specification sheet lists packaging dimensions of 650 × 350 × 500 mm and a total equipment weight of 85 kg.",
+            "**What are the packaging dimensions of the velolev portable light pole lifter?** The source specification sheet lists packaging dimensions of 650 × 350 × 500 mm and a total equipment weight of 85 kg.",
             "**Are packaging material and gross shipping weight fixed on the specification sheet?** No. Packaging material and gross weight are confirmed per actual order based on shipping mode and destination."
           ]
         }
@@ -618,25 +625,26 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "ba1e5e8d3434ed25a42030884ae48016d674f3f3e4379673efc9f7b8f39ad9c7"
-      }
+        "contentSha256": "a9e89b2d09feba35dda865ea3016b56671e0bd4f53afcacd0e7e46c6712c74f8"
+      },
+      "seoDescription": "Vehicle cargo dimensions, packaging footprint (650×350×500mm), and split module weights (45kg + 40kg) for transporting the lifter in utility pickups."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "overhead-power-lines-narrow-alley-pole-erection-planning",
       "title": "Planning 10 m and 12 m Street Light Pole Erection Near Overhead Power Lines and Narrow Alleys",
-      "seoTitle": "Pole Erection Planning Near Overhead Lines & Narrow Alleys | volvet",
+      "seoTitle": "Pole Erection Near Overhead Lines & Narrow Alleys | velolev",
       "description": "Pre-installation site survey checklist for evaluating ground-level hydraulic pole erection near overhead distribution lines, facades, and narrow urban alleys.",
       "sections": [
         {
           "heading": "Why Constrained Urban Corridors Require Two-Plane Clearance Checks",
           "paragraphs": [
             "Retrofitting street lighting in historic districts, narrow residential lanes, and tree-lined avenues presents two simultaneous geometric constraints: narrow ground corridors that block crane outriggers, and overhead utility wires or building projections that intersect a 10 m to 12 m pole swing radius.",
-            "While the 85 kg two-module volvet Portable Light Pole Lifter (45 kg hydraulic module plus 40 kg electrical cabinet) resolves ground-level vehicle access, ground portability never overrides electrical approach clearances or municipal lifting permits."
+            "While the 85 kg two-module velolev Portable Light Pole Lifter (45 kg hydraulic module plus 40 kg electrical cabinet) resolves ground-level vehicle access, ground portability never overrides electrical approach clearances or municipal lifting permits."
           ]
         },
         {
@@ -649,7 +657,7 @@
         {
           "heading": "2. Planning Guidance vs Site Operating Procedures",
           "paragraphs": [
-            "Consistent with volvet editorial and engineering policy, this guide supports early project planning and site data collection rather than serving as a field operating manual. Detailed step-by-step operating sequences, personnel exclusion zones, and electrical isolation protocols must be governed by reviewed equipment manuals, certified supervisors, and local electrical safety regulations."
+            "Consistent with velolev editorial and engineering policy, this guide supports early project planning and site data collection rather than serving as a field operating manual. Detailed step-by-step operating sequences, personnel exclusion zones, and electrical isolation protocols must be governed by reviewed equipment manuals, certified supervisors, and local electrical safety regulations."
           ]
         },
         {
@@ -687,25 +695,26 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "ce8a6bc03cc658a1fbbe77c9c49516fb5dda5244f0d807bdf78a6314eaa071c0"
-      }
+        "contentSha256": "966deec49c2f5d010cb07f9cde0601987b901c756d48102be54782165a63f8c3"
+      },
+      "seoDescription": "Pre-lift planning and clearance checks for 10m and 12m street light pole installation near overhead power lines, tight easements, and pedestrian alleys."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "20-second-lift-stroke-vs-total-light-pole-installation-time",
       "title": "20-Second Reported Lift Stroke vs Total Street Light Pole Installation Time: Scope Breakdown",
-      "seoTitle": "20s Lift Stroke vs Total Street Light Installation Time | volvet",
+      "seoTitle": "20s Lift Stroke vs Total Pole Installation Time | velolev",
       "description": "Understand the difference between the manufacturer-reported 20 s hydraulic lift stroke (field validation pending) and full per-pole installation hours on street lighting sites.",
       "sections": [
         {
           "heading": "Separating Hydraulic Stroke Duration from Full Installation Cycle Time",
           "paragraphs": [
-            "The volvet Portable Light Pole Lifter specification sheet lists a manufacturer-reported lift time of 20 s alongside over 50 lifts per full charge and more than 3000 usage cycles. In project scheduling and tender estimation, mistaking a 20 s hydraulic elevation stroke for total per-pole installation time leads to unrealistic crew productivity targets.",
-            "As documented in the volvet editorial policy and product specification baseline, all three performance figures are manufacturer-reported labels with field validation pending—and lifting time is never a statement of complete installation time."
+            "The velolev Portable Light Pole Lifter specification sheet lists a manufacturer-reported lift time of 20 s alongside over 50 lifts per full charge and more than 3000 usage cycles. In project scheduling and tender estimation, mistaking a 20 s hydraulic elevation stroke for total per-pole installation time leads to unrealistic crew productivity targets.",
+            "As documented in the velolev editorial policy and product specification baseline, all three performance figures are manufacturer-reported labels with field validation pending—and lifting time is never a statement of complete installation time."
           ]
         },
         {
@@ -757,18 +766,19 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "490636d657adb0cf0d21e2546895aece3ec3b50d8b669895bfc17b062155206b"
-      }
+        "contentSha256": "9b8df2c965d97ad9307445192d90b690545d3c4b1cb0bd55863069bca6767712"
+      },
+      "seoDescription": "Understand the difference between the manufacturer-reported 20s hydraulic lift stroke and full per-pole installation hours on road lighting projects."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "foundation-inspection-before-self-anchoring-pole-erection",
       "title": "Pre-Installation Foundation and Anchor Stud Inspection Checklist Before Pole Lifter Review",
-      "seoTitle": "Foundation & Anchor Stud Inspection Before Pole Lifter Review | volvet",
+      "seoTitle": "Foundation & Anchor Stud Pre-Lift Checklist | velolev",
       "description": "What foundation dimensions, anchor bolt measurements, and site photographs to gather before submitting a street light pole connection review.",
       "sections": [
         {
@@ -789,7 +799,7 @@
           "heading": "2. Distinguishing Pre-Inquiry Checks from Site Engineering Instructions",
           "paragraphs": [
             "Civil foundation design—including concrete mix strength, curing schedule, reinforcement cage depth, and base-plate grouting tolerances—must always be specified and signed off by the project civil or structural engineer.",
-            "volvet reviews equipment-to-flange mechanical compatibility based on your dimensioned drawings and S4 equipment specifications; it does not issue civil foundation design approvals or field installation manuals."
+            "velolev reviews equipment-to-flange mechanical compatibility based on your dimensioned drawings and S4 equipment specifications; it does not issue civil foundation design approvals or field installation manuals."
           ]
         },
         {
@@ -826,32 +836,33 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "0f2e2cb83511115b47853f6a7bbdb9eaea41eacebd96ba4c39d5bd07d770bf0b"
-      }
+        "contentSha256": "4a1d03f72617f51f3cd60c6bb5704ec442ef7f4efe0999b1826ece0cbecdfed9"
+      },
+      "seoDescription": "Pre-installation checklist for concrete foundation cure strength, anchor bolt projection, thread inspection, and base plate orientation checks."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "evaluating-portable-pole-lifter-technical-evidence-b2b-tenders",
       "title": "Evaluating Portable Light Pole Lifter Technical Documentation in B2B Tenders: Source Specs vs Pending Records",
-      "seoTitle": "Evaluating Pole Lifter Technical Evidence in B2B Tenders | volvet",
+      "seoTitle": "Evaluating Pole Lifter Specs in B2B Tenders | velolev",
       "description": "Transparent procurement guide distinguishing confirmed S4 specification data, manufacturer-reported metrics, and project-specific compliance documents in B2B tenders.",
       "sections": [
         {
           "heading": "Why Evidence Transparency Matters in Municipal and EPC Tenders",
           "paragraphs": [
             "Public lighting tenders, utility framework contracts, and EPC procurement packages require technical submittals to distinguish verified product specifications from pending test reports or order-specific certificates. Overstating unverified claims exposes contractors to tender disqualification and site compliance delays.",
-            "volvet structures all public product information around a controlled specification baseline (S4, version 2026-10-28.3) and explicitly marks which items are confirmed specifications, manufacturer-reported figures, or project-specific records pending verification."
+            "velolev structures all public product information around a controlled specification baseline (S4, version 2026-10-28.3) and explicitly marks which items are confirmed specifications, manufacturer-reported figures, or project-specific records pending verification."
           ]
         },
         {
           "heading": "1. Technical Evidence Classification Matrix for Tender Reviewers",
           "paragraphs": [
             "Use this four-tier evidence matrix when compiling a technical submittal or pre-qualification file:",
-            "| Documentation / Evidence Category | Current Status on volvet | How Procurement Teams Should Use It |\n| :--- | :--- | :--- |\n| S4 specification sheet facts | Confirmed product source (12 m class, 300 kg load, 24 V, 85 kg split modules, 180–260 mm span, M16–M22 kit) | Download structured JSON and CSV files from /resources/ for technical comparison tables |\n| Manufacturer-reported performance | Listed on S4 (20 s lift time, over 50 lifts/charge, more than 3000 cycles) with field validation pending | Cite with explicit qualification that independent field validation is pending |\n| Project information worksheet | Public downloadable template on /resources/ | Use to standardize pole weight, flange drawing, and site data before requesting review |\n| Certificates, field manual, warranty, and case records | Not published as generic downloads; confirmed or supplied per actual order/review | State specific tender compliance requirements in your /quote/ inquiry |"
+            "| Documentation / Evidence Category | Current Status on velolev | How Procurement Teams Should Use It |\n| :--- | :--- | :--- |\n| S4 specification sheet facts | Confirmed product source (12 m class, 300 kg load, 24 V, 85 kg split modules, 180–260 mm span, M16–M22 kit) | Download structured JSON and CSV files from /resources/ for technical comparison tables |\n| Manufacturer-reported performance | Listed on S4 (20 s lift time, over 50 lifts/charge, more than 3000 cycles) with field validation pending | Cite with explicit qualification that independent field validation is pending |\n| Project information worksheet | Public downloadable template on /resources/ | Use to standardize pole weight, flange drawing, and site data before requesting review |\n| Certificates, field manual, warranty, and case records | Not published as generic downloads; confirmed or supplied per actual order/review | State specific tender compliance requirements in your /quote/ inquiry |"
           ]
         },
         {
@@ -864,7 +875,7 @@
         {
           "heading": "3. Summary of Hard Commercial and Technical Boundaries",
           "paragraphs": [
-            "Tender evaluators reviewing volvet documentation should note four clear boundaries:\n- **Single Physical Product:** One portable hydraulic light pole lifter system (`modelNumber: null`), evaluated across project-specific flange and load conditions.\n- **No Unreviewed Operating Manuals:** Step-by-step site operating sequences are held for reviewed documentation rather than published as generic web instructions.\n- **Complete Solar Assemblies Pending Validation:** Solar street light projects require full assembled weight and geometry review.\n- **Private B2B Quotation:** Equipment pricing, packaging material, gross shipping weight, and warranty terms are confirmed per actual order."
+            "Tender evaluators reviewing velolev documentation should note four clear boundaries:\n- **Single Physical Product:** One portable hydraulic light pole lifter system (`modelNumber: null`), evaluated across project-specific flange and load conditions.\n- **No Unreviewed Operating Manuals:** Step-by-step site operating sequences are held for reviewed documentation rather than published as generic web instructions.\n- **Complete Solar Assemblies Pending Validation:** Solar street light projects require full assembled weight and geometry review.\n- **Private B2B Quotation:** Equipment pricing, packaging material, gross shipping weight, and warranty terms are confirmed per actual order."
           ]
         },
         {
@@ -898,25 +909,26 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "603f6ae1c55606a96f8ebe8dfcf73ede78031030f95df04883c9b7fcdbdb0e6e"
-      }
+        "contentSha256": "c89a27420da2e5f93d32aaa6ff75ef9d6d66f9e0520484201437e28e1a82b287"
+      },
+      "seoDescription": "Procurement guide distinguishing confirmed S4 specification data, manufacturer-reported metrics, and project-specific compliance records in tenders."
     },
     {
       "locale": "en",
       "status": "published",
       "slug": "solar-wind-sail-area-site-assessment-pole-lifting",
       "title": "Solar Street Light Wind Sail Area and Site Exposure Inputs for Pre-Installation Engineering Review",
-      "seoTitle": "Solar Street Light Wind Sail Area & Site Exposure Inputs | volvet",
+      "seoTitle": "Solar Street Light Wind Sail Area & Site Assessment | velolev",
       "description": "How to document solar panel surface area, mounting elevation, terrain exposure, and total assembled weight under 300 kg for pre-installation engineering review.",
       "sections": [
         {
           "heading": "Why Solar Panel Surface Area Affects Erection Planning",
           "paragraphs": [
             "Large photovoltaic modules mounted near the top of a 10 m to 12 m lighting column introduce both extra static mass and an elevated wind sail area compared with a compact LED luminaire alone. Even when ambient site conditions appear calm at ground level, wind pressure acting on a broad solar panel at 10 m to 12 m height creates overturning reactions at the pole base.",
-            "Because lifting a complete solar street light assembly has not yet been validated as a standard configuration on the volvet specification sheet, recording accurate panel geometry and site exposure data is essential for pre-installation engineering review."
+            "Because lifting a complete solar street light assembly has not yet been validated as a standard configuration on the velolev specification sheet, recording accurate panel geometry and site exposure data is essential for pre-installation engineering review."
           ]
         },
         {
@@ -942,7 +954,7 @@
         {
           "heading": "Frequently Asked Questions on Solar Panel Sail Area and Lifting",
           "paragraphs": [
-            "**Does the volvet specification sheet list a maximum wind speed for lifting solar poles?** No. No numeric wind-speed threshold is published in the S4 specification sheet. Lifting operations must follow site weather governance and project engineering review.",
+            "**Does the velolev specification sheet list a maximum wind speed for lifting solar poles?** No. No numeric wind-speed threshold is published in the S4 specification sheet. Lifting operations must follow site weather governance and project engineering review.",
             "**What if the solar panel and battery push the total pole weight to 315 kg?** A 315 kg assembly exceeds the 300 kg rated load and cannot be lifted with this equipment; a mobile crane must be used."
           ]
         }
@@ -966,11 +978,12 @@
       ],
       "review": {
         "status": "approved",
-        "reviewer": "volvet Engineering Review",
+        "reviewer": "velolev Engineering Review",
         "reviewedAt": "2026-11-10",
         "baselineVersion": "2026-10-28.3",
-        "contentSha256": "d5b35a844cb2157bd7cc94c044b8d78127568559183a38f8dcf23c274f6e830c"
-      }
+        "contentSha256": "358a048f809277eb0490cfcf13424678b40b85b787f191c5e2dd5311d7fd6fe8"
+      },
+      "seoDescription": "Assess solar panel wind sail area, aerodynamic drag, foundation overturning moments, and gust exposure before crane-free street light pole erection."
     }
   ]
 }

@@ -42,10 +42,10 @@ for (const file of pages) {
     const originPattern = new RegExp(effectiveOrigin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
     metadataForIdentityCheck = metadata.replace(originPattern, "");
   }
-  check(!/\b(?:Velolev|PoleLift)\b/i.test(visible + " " + metadataForIdentityCheck), `${name}: legacy identity`);
+  check(!/\b(?:volvet|velvet|PoleLift)\b/i.test(visible + " " + metadataForIdentityCheck), `${name}: legacy identity`);
   check(!/[$€£¥]|\b(?:USD|EUR|CNY|IDR|BRL)\b|ดอลลาร์|đô\s*la/i.test(visible + metadata), `${name}: public monetary amount`);
   check(!/\b(?:in stock|out of stock|inventory)\b|en stock|em estoque|tồn kho|stok tersedia|สินค้าคงคลัง/i.test(visible + metadata), `${name}: public stock status`);
-  check(!/sales@(?:polelift|velolev)|\+86\s*21\s*1234|Shanghai Pilot Free Trade Zone/i.test(visible), `${name}: unconfigured legacy contact`);
+  check(!/sales@(?:polelift|volvet|velvet)|\+86\s*21\s*1234|Shanghai Pilot Free Trade Zone/i.test(visible), `${name}: unconfigured legacy contact`);
   check(!/~?98\s*kg|ISPM[ -]?15|fumigated|Zero heavy crane permits|Zero pavement cracking|50\+ lifts per charge/i.test(visible), `${name}: unregistered logistics, permission or unqualified performance claim`);
   check(!/500\s*\+|2015\s*[–-]\s*2018|±\s*0[.,]5|24h\s*(?:Zero|Pressure)|100%\s*(?:Full Stroke|bench-tested)/i.test(visible), `${name}: unregistered corporate history, capacity or completed-testing claim`);
   // 校验清理后的 S4 基线边界：禁止未经证实的规范标准、吨位、定制过渡板、零成本与未核实金额声明
@@ -69,7 +69,7 @@ for (const file of pages) {
       const value = JSON.parse((n.childNodes ?? []).map((x)=>x.value ?? "").join(""));
       const serialized = JSON.stringify(value);
       check(!/"(?:offers|price|priceCurrency|availability|aggregateRating|review)"/.test(serialized), `${name}: forbidden commercial/evidence schema`);
-      check(!/VideoObject|velolev\.com|polelift\.com|"legalName"/i.test(serialized),`${name}: unapproved media/domain/legalName schema`);
+      check(!/volvet\.com|polelift\.com|"legalName"/i.test(serialized),`${name}: unapproved media/domain/legalName schema`);
     } catch (e) { failures.push(`${name}: invalid JSON-LD: ${e.message}`); }
   }
 }

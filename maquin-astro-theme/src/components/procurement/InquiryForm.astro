@@ -53,7 +53,7 @@ const id=`inquiry-${locale}`;
       if(!field.value){field.value=copy.flangeNote.replace("{span}",span).replace("{bolt}",bolt==="Other"?"—":bolt).replace("{holes}",holes);const details=field.closest("details");if(details)details.open=true;}
     }
   }
-  if(params.get("context")==="roi")try{const raw=sessionStorage.getItem("volvet-roi-inquiry");sessionStorage.removeItem("volvet-roi-inquiry");if(raw){const scenario=JSON.parse(raw),notes=form.elements.namedItem("message") as HTMLTextAreaElement;const compatible=(scenario.version===2&&scenario.locale===locale)||(scenario.version===1&&locale==="en");if(compatible&&Number.isFinite(scenario.createdAt)&&Date.now()-scenario.createdAt>=0&&Date.now()-scenario.createdAt<30*60*1000&&typeof scenario.notes==="string"&&scenario.notes.length<=3000&&!notes.value){notes.value=scenario.notes;const details=notes.closest("details");if(details)details.open=true;const notice=document.createElement("p");notice.className="note";notice.textContent=copy.roiCarried;form.prepend(notice);}}}catch{}
+  if(params.get("context")==="roi")try{const raw=sessionStorage.getItem("velolev-roi-inquiry");sessionStorage.removeItem("velolev-roi-inquiry");if(raw){const scenario=JSON.parse(raw),notes=form.elements.namedItem("message") as HTMLTextAreaElement;const compatible=(scenario.version===2&&scenario.locale===locale)||(scenario.version===1&&locale==="en");if(compatible&&Number.isFinite(scenario.createdAt)&&Date.now()-scenario.createdAt>=0&&Date.now()-scenario.createdAt<30*60*1000&&typeof scenario.notes==="string"&&scenario.notes.length<=3000&&!notes.value){notes.value=scenario.notes;const details=notes.closest("details");if(details)details.open=true;const notice=document.createElement("p");notice.className="note";notice.textContent=copy.roiCarried;form.prepend(notice);}}}catch{}
   form.addEventListener("submit",async event=>{
    event.preventDefault();if(busy)return;clearErrors();status.textContent="";
    const data=new FormData(form);data.set("locale",locale);data.set("sourcePage",location.pathname);
@@ -70,7 +70,7 @@ const id=`inquiry-${locale}`;
     shell.querySelector<HTMLElement>("[data-receipt-reference]")!.textContent=result.receipt.reference;
     shell.querySelector<HTMLElement>("[data-test-marker]")!.hidden=!result.receipt.isTest;
     form.hidden=true;success.hidden=false;success.focus();
-    document.dispatchEvent(new CustomEvent("volvet:inquiry-submitted",{detail:{locale,page:location.pathname,method:"private_inbox"}}));
+    document.dispatchEvent(new CustomEvent("velolev:inquiry-submitted",{detail:{locale,page:location.pathname,method:"private_inbox"}}));
    }catch{status.textContent=copy.failed;status.focus();}
    finally{clearTimeout(timeout);busy=false;button.disabled=false;button.textContent=copy.submit;form.removeAttribute("aria-busy");form.querySelectorAll<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>("input,select,textarea").forEach(n=>n.disabled=false);}
   });

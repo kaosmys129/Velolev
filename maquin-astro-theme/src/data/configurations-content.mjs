@@ -15,14 +15,14 @@ export const configurationVariants = [
     path: "/configurations/m16-m22-anchor-bolt-pole-lifter/",
     shortTitle: "M16–M22 4-Bolt Kit",
     eyebrow: "Configuration / Standard 4-Bolt Kit",
-    title: "M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | volvet",
+    title: "M16–M22 Pole Lifter Config (180–260mm Span) | velolev",
     h1: "M16–M22 4-Bolt Flange Configuration",
     description:
-      "Specification overview for the standard included 4-bolt anchor kit (M16, M18, M20, M22 — 4 sets each) within a 180–260 mm flange hole span for 12 m class poles up to 300 kg.",
+      "Specs for the included 4-bolt anchor kit (M16–M22, 4 sets each) within 180–260 mm flange hole span for 12m poles up to 300kg. Request a review.",
     lead:
       "Review the standard included anchor bolt configuration for 4-hole base plates within the listed 180–260 mm flange hole span, and confirm your drawing measurement definition before ordering.",
     directAnswer:
-      `The standard volvet Portable Light Pole Lifter delivery includes 1 equipment set, 1 set of ground stakes, and 4 sets each of ${std.anchorBoltSizesIncluded.join(", ")} anchor bolts for 4-bolt pole bases within the listed ${specs.flangeHoleSpanMm[0]}–${specs.flangeHoleSpanMm[1]} mm flange hole span. It is rated for ${specs.applicablePoleHeightM} m class light poles up to ${specs.ratedLoadKg} kg total assembled weight. Because the source flange diagram includes dimension terminology that still requires engineering clarification, confirm how your drawing defines the span and submit a dimensioned drawing for any non-standard base.`,
+      `The standard velolev Portable Light Pole Lifter delivery includes 1 equipment set, 1 set of ground stakes, and 4 sets each of ${std.anchorBoltSizesIncluded.join(", ")} anchor bolts for 4-bolt pole bases within the listed ${specs.flangeHoleSpanMm[0]}–${specs.flangeHoleSpanMm[1]} mm flange hole span. It is rated for ${specs.applicablePoleHeightM} m class light poles up to ${specs.ratedLoadKg} kg total assembled weight. Because the source flange diagram includes dimension terminology that still requires engineering clarification, confirm how your drawing defines the span and submit a dimensioned drawing for any non-standard base.`,
     highlights: [
       `${std.anchorBoltSizesIncluded.join(" / ")} · ${std.anchorBoltSetsPerSize} sets each included`,
       `${specs.flangeHoleSpanMm[0]}–${specs.flangeHoleSpanMm[1]} mm listed flange hole span`,
@@ -76,14 +76,14 @@ export const configurationVariants = [
     path: "/configurations/m24-non-standard-flange-pole-lifter-review/",
     shortTitle: "M24 & Non-Standard Flange Review",
     eyebrow: "Configuration / M24 & Drawing Review",
-    title: "M24 Anchor Bolt & Non-Standard Flange Drawing Review | volvet",
+    title: "M24 Bolt & Non-Standard Flange Review | velolev",
     h1: "M24 & Non-Standard Flange Review",
     description:
-      "Engineering review boundary for M24 anchor studs, 6-hole or 8-hole base plates, and flange spans outside 180–260 mm on the volvet portable light pole lifter.",
+      "Engineering review boundary for M24 anchor studs, 6-hole or 8-hole base plates, and flange spans outside 180–260 mm on the velolev portable light pole lifter.",
     lead:
       "Check how M24 studs, 6-hole or 8-hole patterns, and flange spans below 180 mm or above 260 mm are handled before committing equipment to your project.",
     directAnswer:
-      "M24 is listed in the volvet Portable Light Pole Lifter compatibility table alongside M16, M18, M20, and M22, but M24 hardware is not included in the standard kit. In addition, 6-hole or 8-hole flanges and base plates outside the listed 180–260 mm flange hole span are not approved by default. Non-standard bases require a dimensioned drawing review before confirming fitment, and no custom adapter plates or default M24 bolt kits are promised without project review.",
+      "M24 is listed in the velolev Portable Light Pole Lifter compatibility table alongside M16, M18, M20, and M22, but M24 hardware is not included in the standard kit. In addition, 6-hole or 8-hole flanges and base plates outside the listed 180–260 mm flange hole span are not approved by default. Non-standard bases require a dimensioned drawing review before confirming fitment, and no custom adapter plates or default M24 bolt kits are promised without project review.",
     highlights: [
       "M24 listed in compatibility table (not in standard kit)",
       "6-hole & 8-hole bases require drawing review",
@@ -112,7 +112,7 @@ export const configurationVariants = [
     quoteLabel: "Submit M24 or non-standard flange drawing",
     faqs: [
       [
-        "Is M24 compatible with the volvet portable light pole lifter?",
+        "Is M24 compatible with the velolev portable light pole lifter?",
         "M24 is listed in the specification sheet compatibility table (M16–M24), but it is not included in the standard M16–M22 bolt kit and requires project confirmation.",
       ],
       [
@@ -120,7 +120,7 @@ export const configurationVariants = [
         "No. Only 4-hole bases within 180–260 mm appear in the default listed check. Non-standard bases require a dimensioned drawing review before confirming compatibility.",
       ],
       [
-        "Does volvet supply custom adapter plates off the shelf for non-standard flanges?",
+        "Does velolev supply custom adapter plates off the shelf for non-standard flanges?",
         "No off-the-shelf custom adapter plates are promised. Non-standard bases require a dimensioned drawing review to evaluate actual connection feasibility.",
       ],
     ],
@@ -137,14 +137,14 @@ export const configurationVariants = [
     path: "/configurations/12m-300kg-street-light-pole-lifter/",
     shortTitle: "12 m / 300 kg Load Envelope",
     eyebrow: "Configuration / Height & Load Envelope",
-    title: "12 m Pole Class & 300 kg Rated Load Street Light Lifter | volvet",
+    title: "12m Pole & 300kg Rated Load Pole Lifter | velolev",
     h1: "12 m Pole Class / 300 kg Load Envelope",
     description:
-      "Project review boundary for 12 m class street light poles up to 300 kg total assembled weight (pole, bracket arm, luminaire, and attachments) using the 24 V hydraulic lifter.",
+      "Review boundary for 12m class street light poles up to 300kg total assembled load using the 24V hydraulic lifter. Submit drawing for review.",
     lead:
       "Evaluate whether your roadway lighting column fits within the 12 m applicable pole class and 300 kg rated load ceiling when all top attachments are included.",
     directAnswer:
-      `The volvet Portable Light Pole Lifter is specified for ${specs.applicablePoleHeightM} m class light poles with a ${specs.ratedLoadKg} kg maximum rated load and a ${specs.batteryVoltageV} V rechargeable battery. Project engineers must verify the complete assembled weight—combining the bare pole, bracket arm, luminaire, wiring, and any attached accessories—rather than bare column weight alone. Source-sheet figures of ${perf.liftTimeSeconds} s lift time, ${perf.liftsPerFullCharge} lifts per charge, and ${perf.usageCycles} usage cycles are manufacturer-reported with field validation pending; poles exceeding ${specs.applicablePoleHeightM} m or ${specs.ratedLoadKg} kg require a crane.`,
+      `The velolev Portable Light Pole Lifter is specified for ${specs.applicablePoleHeightM} m class light poles with a ${specs.ratedLoadKg} kg maximum rated load and a ${specs.batteryVoltageV} V rechargeable battery. Project engineers must verify the complete assembled weight—combining the bare pole, bracket arm, luminaire, wiring, and any attached accessories—rather than bare column weight alone. Source-sheet figures of ${perf.liftTimeSeconds} s lift time, ${perf.liftsPerFullCharge} lifts per charge, and ${perf.usageCycles} usage cycles are manufacturer-reported with field validation pending; poles exceeding ${specs.applicablePoleHeightM} m or ${specs.ratedLoadKg} kg require a crane.`,
     highlights: [
       `${specs.applicablePoleHeightM} m applicable light pole height class`,
       `${specs.ratedLoadKg} kg maximum rated assembled load`,
@@ -201,14 +201,14 @@ export const configurationVariants = [
     path: "/configurations/85kg-split-portable-pole-lifter-narrow-access/",
     shortTitle: "85 kg Two-Module Narrow Access",
     eyebrow: "Configuration / Modular Transport & Access",
-    title: "85 kg Split Two-Module Portable Pole Lifter for Narrow Access | volvet",
+    title: "85kg Split Two-Module Narrow Access Lifter | velolev",
     h1: "85 kg Two-Module Narrow-Access Setup",
     description:
       "Modular transport and site access overview for the 85 kg split light pole lifter: 45 kg hydraulic unit (610×220×220 mm) and 40 kg 24 V cabinet (500×300×250 mm).",
     lead:
       "Plan logistics and crew allocation for sidewalks, pedestrian zones, medians, and parking decks where a truck-mounted crane cannot enter.",
     directAnswer:
-      `The volvet Portable Light Pole Lifter has a total equipment weight of ${specs.totalWeightKg} kg divided into two separate modules: a ${specs.hydraulicModuleWeightKg} kg hydraulic lifting module (${specs.hydraulicModuleDimensionsMm.join(" × ")} mm) and a ${specs.electricalCabinetWeightKg} kg ${specs.batteryVoltageV} V electrical cabinet (${specs.electricalCabinetDimensionsMm.join(" × ")} mm), with source-sheet packaging dimensions of ${specs.packagingDimensionsMm.join(" × ")} mm. The specification sheet lists ${specs.operators} operators; actual crew size, manual-handling equipment, and ground-bearing checks must follow your project safety plan.`,
+      `The velolev Portable Light Pole Lifter has a total equipment weight of ${specs.totalWeightKg} kg divided into two separate modules: a ${specs.hydraulicModuleWeightKg} kg hydraulic lifting module (${specs.hydraulicModuleDimensionsMm.join(" × ")} mm) and a ${specs.electricalCabinetWeightKg} kg ${specs.batteryVoltageV} V electrical cabinet (${specs.electricalCabinetDimensionsMm.join(" × ")} mm), with source-sheet packaging dimensions of ${specs.packagingDimensionsMm.join(" × ")} mm. The specification sheet lists ${specs.operators} operators; actual crew size, manual-handling equipment, and ground-bearing checks must follow your project safety plan.`,
     highlights: [
       `${specs.totalWeightKg} kg total equipment weight (${specs.hydraulicModuleWeightKg} kg + ${specs.electricalCabinetWeightKg} kg)`,
       `Hydraulic unit: ${specs.hydraulicModuleDimensionsMm.join(" × ")} mm`,
@@ -265,14 +265,14 @@ export const configurationVariants = [
     path: "/configurations/24v-off-grid-solar-pole-lifter/",
     shortTitle: "24 V Off-Grid Solar Pole Review",
     eyebrow: "Configuration / 24 V Off-Grid Solar Review",
-    title: "24 V Off-Grid Battery Pole Lifter for Solar Street Light Review | volvet",
+    title: "24V Off-Grid Battery Solar Pole Lifter Review | velolev",
     h1: "24 V Off-Grid Battery Solar Pole Review",
     description:
-      "Project review guide for off-grid solar street light poles using the 24 V rechargeable battery lifter, including total solar assembly weight and drawing checks.",
+      "Project review guide for off-grid solar street light poles using the 24V battery lifter, covering total solar assembly weight and drawing checks.",
     lead:
       "Prepare total solar assembly weight, top-mounted component layout, and flange drawings for an engineering review before selecting crane-free erection.",
     directAnswer:
-      `The volvet Portable Light Pole Lifter runs on a ${specs.batteryVoltageV} V rechargeable battery housed in the ${specs.electricalCabinetWeightKg} kg electrical cabinet (manufacturer-reported ${perf.liftsPerFullCharge} lifts per full charge, with field validation pending), avoiding external grid power on remote corridors. However, the current source sheet describes standard light pole equipment and lifting a complete solar assembly (pole, solar panel, mounting frame, battery enclosure, and luminaire) has not been validated as a standard configuration. Submit the complete assembled weight (must stay within ${specs.ratedLoadKg} kg), pole height (${specs.applicablePoleHeightM} m class), and dimensioned base drawings for review.`,
+      `The velolev Portable Light Pole Lifter runs on a ${specs.batteryVoltageV} V rechargeable battery housed in the ${specs.electricalCabinetWeightKg} kg electrical cabinet (manufacturer-reported ${perf.liftsPerFullCharge} lifts per full charge, with field validation pending), avoiding external grid power on remote corridors. However, the current source sheet describes standard light pole equipment and lifting a complete solar assembly (pole, solar panel, mounting frame, battery enclosure, and luminaire) has not been validated as a standard configuration. Submit the complete assembled weight (must stay within ${specs.ratedLoadKg} kg), pole height (${specs.applicablePoleHeightM} m class), and dimensioned base drawings for review.`,
     highlights: [
       `${specs.batteryVoltageV} V rechargeable battery (no site mains required)`,
       `${perf.liftsPerFullCharge} lifts per full charge (manufacturer-reported; validation pending)`,

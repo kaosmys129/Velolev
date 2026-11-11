@@ -31,10 +31,10 @@ test("seven locales suppress split price cards, price paragraphs and stock state
 });
 
 test("metadata, legacy contact links, logos and fragment schema cannot leak old identity or offers", () => {
-  const html = `<meta name="description" content="Velolev at $1,500"><img src="/Velolev-logo.png" alt="Velolev"><a href="mailto:sales@polelift.com">sales@polelift.com</a><a href="https://www.velolev.com/equipment/">PoleLift</a><script type="application/ld+json">{"offers":{"price":1500,"availability":"InStock"}}</script>`;
+  const html = `<meta name="description" content="volvet at $1,500"><img src="/volvet-logo.png" alt="volvet"><a href="mailto:sales@polelift.com">sales@polelift.com</a><a href="https://www.volvet.com/equipment/">PoleLift</a><script type="application/ld+json">{"offers":{"price":1500,"availability":"InStock"}}</script>`;
   const output = enforceContentPolicy(html);
-  assert.doesNotMatch(output, /Velolev|PoleLift|polelift\.com|velolev\.com|mailto:|"offers"|InStock|\$1,500/i);
-  assert.match(output, /volvet-wordmark\.svg/);
+  assert.doesNotMatch(output, /volvet|velvet|PoleLift|polelift\.com|volvet\.com|mailto:|"offers"|InStock|\$1,500/i);
+  assert.match(output, /velolev-wordmark\.svg/);
   assert.match(output, /\/equipment\//);
 });
 
@@ -48,7 +48,7 @@ test("promotional timing is suppressed while approved dimensions remain intact",
 
 test("Product schema has grounded specs and no commercial or invented evidence fields", () => {
   const schema = productSchema(null, "/product.png");
-  assert.equal(schema.brand.name, "volvet");
+  assert.equal(schema.brand.name, "velolev");
   for (const k of ["offers", "price", "availability", "aggregateRating", "review", "sku"]) assert.equal(k in schema, false);
   assert.equal(schema.url, undefined);
   assert.equal(baseline.contact.email, null);
@@ -58,7 +58,7 @@ test("Product schema has grounded specs and no commercial or invented evidence f
 test("Organization and FAQ schemas contain valid structured data without commercial traps", () => {
   const org = organizationSchema("https://example.com");
   assert.equal(org["@type"], "Organization");
-  assert.equal(org.name, "volvet");
+  assert.equal(org.name, "velolev");
   assert.equal(org.url, "https://example.com");
   for (const k of ["offers", "price", "availability", "aggregateRating", "review", "sku"]) assert.equal(k in org, false);
 

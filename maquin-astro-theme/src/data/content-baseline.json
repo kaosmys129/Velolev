@@ -1,9 +1,9 @@
 {
   "version": "2026-10-28.3",
   "brand": {
-    "name": "volvet",
+    "name": "velolev",
     "status": "confirmed_by_user",
-    "confirmedOn": "2026-10-28"
+    "confirmedOn": "2026-11-11"
   },
   "deployment": {
     "publicOrigin": "https://www.velolev.org",

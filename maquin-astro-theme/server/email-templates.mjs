@@ -1,5 +1,5 @@
 /**
- * volvet 工业机械 - Resend 邮件服务 HTML 与纯文本模板
+ * velolev 工业机械 - Resend 邮件服务 HTML 与纯文本模板
  * 遵循 B2B 工业采购设计语言 (Warm Sand, Carbon Ink, Industrial Yellow)
  */
 
@@ -178,7 +178,7 @@ function baseLayout({ title, previewText, content, unsubscribeUrl = null }) {
         <table role="presentation" class="container">
           <tr>
             <td class="header-bar">
-              <a href="https://www.velolev.org" class="logo-text">volvet</a>
+              <a href="https://www.velolev.org" class="logo-text">velolev</a>
               <span class="logo-badge">Engineering & Procurement</span>
             </td>
           </tr>
@@ -189,8 +189,8 @@ function baseLayout({ title, previewText, content, unsubscribeUrl = null }) {
           </tr>
           <tr>
             <td class="footer-cell">
-              <p style="margin:0 0 8px 0;color:#e1e5dc;font-weight:600;">volvet | Portable Pole Lifter & Heavy Jacking Systems</p>
-              <p style="margin:0 0 8px 0;">This email was sent by the volvet B2B project notification system.</p>
+              <p style="margin:0 0 8px 0;color:#e1e5dc;font-weight:600;">velolev | Portable Pole Lifter & Heavy Jacking Systems</p>
+              <p style="margin:0 0 8px 0;">This email was sent by the velolev B2B project notification system.</p>
               ${unsubscribeUrl ? `<p style="margin:8px 0 0 0;"><a href="${escapeHtml(unsubscribeUrl)}">Unsubscribe from these emails</a> | <a href="https://www.velolev.org/privacy/">Privacy Policy</a></p>` : `<p style="margin:8px 0 0 0;"><a href="https://www.velolev.org/privacy/">Privacy Policy</a> | <a href="https://www.velolev.org/terms/">Terms of Service</a></p>`}
             </td>
           </tr>
@@ -304,12 +304,12 @@ Admin Inbox: ${adminUrl}
 export function renderInquiryCustomerEmail(inquiry, { publicOrigin = "https://www.velolev.org" } = {}) {
   const reference = inquiry.reference;
   const isTest = Boolean(inquiry.isTest);
-  const title = `Inquiry Receipt Confirmation: ${reference} | volvet`;
+  const title = `Inquiry Receipt Confirmation: ${reference} | velolev`;
   const previewText = `We have received your project inquiry (${reference}). Our engineering team will review the parameters shortly.`;
 
   const content = `
     ${isTest ? '<div class="test-badge">TEST MODE RECEIPT</div>' : ""}
-    <h1>Thank you for contacting volvet.</h1>
+    <h1>Thank you for contacting velolev.</h1>
     <p>Dear ${escapeHtml(inquiry.name || "Customer")},</p>
     <p>We have successfully recorded your project inquiry for review. A dedicated reference code has been generated for your technical specification:</p>
 
@@ -370,7 +370,7 @@ What happens next:
 2. A technical representative will follow up via email or phone with formal review notes.
 3. If you have site drawings or foundation photos, you can reply directly to this email.
 
-volvet | Engineering & Procurement Support
+velolev | Engineering & Procurement Support
 https://www.velolev.org
 `;
 
@@ -381,11 +381,11 @@ https://www.velolev.org
  * 3. 订阅欢迎与确认邮件模板 (Subscription Welcome / Double Opt-in)
  */
 export function renderSubscriptionWelcomeEmail(subscriber, { unsubscribeUrl = null, publicOrigin = "https://www.velolev.org" } = {}) {
-  const title = "Welcome to volvet Engineering & Equipment Digest";
-  const previewText = "You are now subscribed to volvet technical bulletins, equipment benchmarks, and installation guides.";
+  const title = "Welcome to velolev Engineering & Equipment Digest";
+  const previewText = "You are now subscribed to velolev technical bulletins, equipment benchmarks, and installation guides.";
 
   const content = `
-    <h1>Welcome to volvet Technical Digest</h1>
+    <h1>Welcome to velolev Technical Digest</h1>
     <p>Thank you for subscribing with <strong>${escapeHtml(subscriber.email)}</strong>.</p>
     <p>You will receive periodic engineering updates from our heavy equipment team, focused on:</p>
 
@@ -415,7 +415,7 @@ export function renderSubscriptionWelcomeEmail(subscriber, { unsubscribeUrl = nu
     unsubscribeUrl
   });
 
-  const text = `Welcome to volvet Technical Digest
+  const text = `Welcome to velolev Technical Digest
 ======================================================
 Thank you for subscribing with ${subscriber.email}.
 
@@ -448,7 +448,7 @@ export function renderEdmEmail({
 }, recipient, { unsubscribeUrl = null } = {}) {
   const content = `
     <div style="font-size:11px;font-weight:700;color:#859083;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">
-      volvet Engineering Briefing
+      velolev Engineering Briefing
     </div>
     <h1>${escapeHtml(headline || title)}</h1>
     ${lead ? `<p style="font-size:15px;line-height:1.6;color:#202521;font-weight:500;margin-bottom:20px;">${escapeHtml(lead)}</p>` : ""}

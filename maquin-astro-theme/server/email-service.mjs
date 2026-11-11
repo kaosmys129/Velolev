@@ -1,5 +1,5 @@
 /**
- * volvet 工业机械 - Resend 邮件服务核心管理器
+ * velolev 工业机械 - Resend 邮件服务核心管理器
  * 统一处理询盘通知、客户确认、订阅欢迎、EDM 营销群发
  */
 
@@ -14,7 +14,7 @@ import {
 export class EmailService {
   constructor(options = {}) {
     this.apiKey = options.apiKey || process.env.RESEND_API_KEY || null;
-    this.fromEmail = options.fromEmail || process.env.RESEND_FROM_EMAIL || "volvet <notifications@velolev.org>";
+    this.fromEmail = options.fromEmail || process.env.RESEND_FROM_EMAIL || "velolev <notifications@velolev.org>";
     this.adminEmail = options.adminEmail || process.env.ADMIN_NOTIFICATION_EMAIL || "sales@velolev.org";
     this.audienceId = options.audienceId || process.env.RESEND_AUDIENCE_ID || null;
     this.replyTo = options.replyTo || process.env.RESEND_REPLY_TO || "support@velolev.org";

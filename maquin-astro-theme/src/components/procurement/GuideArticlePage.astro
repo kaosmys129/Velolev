@@ -26,14 +26,14 @@ const article = {
   sections: locArticle?.sections || rawArticle.sections
 };
 
-const h1Text = locArticle?.h1 || article.h1 || article.title.replace(/\s*\|\s*volvet.*$/i, "");
+const h1Text = locArticle?.h1 || article.h1 || article.title.replace(/\s*\|\s*velolev.*$/i, "");
 
 const currentPath = locale === "en" ? `/guides/${article.slug}/` : `/${locale}/guides/${article.slug}/`;
 
 const meta = {
   path: currentPath,
-  title: article.title.includes("|") ? article.title : `${article.title} | volvet`,
-  description: article.description,
+  title: locArticle?.seoTitle || rawArticle.seoTitle || (article.title.includes("|") ? article.title : `${article.title} | velolev`),
+  description: locArticle?.seoDescription || rawArticle.seoDescription || article.description,
   alternates: articleAlternates(article.slug, { articles: [rawArticle], localesMap: localizedContent })
 };
 
@@ -46,8 +46,8 @@ const candidates = [
   locArticle?.imageFolder,
   ...(isCraneExplainer ? [`portable-light-pole-lifter-explainer-${locale}`] : []),
   article.slug,
-  `volvet-lifter-${article.slug}`,
-  ...(isCraneExplainer ? ["volvet-lifter-task-based-deepseek-article"] : [])
+  `velolev-lifter-${article.slug}`,
+  ...(isCraneExplainer ? ["velolev-lifter-task-based-deepseek-article"] : [])
 ].filter(Boolean);
 
 let imageFolder = null;
@@ -69,10 +69,10 @@ const figureMap = {
   en: {
     heroCoverAlt: "Installing 12 m Street Light Poles Without Crane - Specification Overview Cover",
     heroCoverLabel: "01 / SPECIFICATION OVERVIEW",
-    heroCoverCaption: "Figure 1: volvet portable hydraulic pole lifter specification overview. 300 kg rated load and 85 kg two-module layout for 12 m class lighting poles subject to project review.",
-    fig5Alt: "Project planning comparison: mobile crane vs volvet portable hydraulic pole lifter",
+    heroCoverCaption: "Figure 1: velolev portable hydraulic pole lifter specification overview. 300 kg rated load and 85 kg two-module layout for 12 m class lighting poles subject to project review.",
+    fig5Alt: "Project planning comparison: mobile crane vs velolev portable hydraulic pole lifter",
     fig5Label: "02 / PROJECT PLANNING COMPARISON",
-    fig5Caption: "Figure 5: Site access and project planning comparison between a conventional mobile crane and the volvet portable pole lifter across narrow paths, crew allocation, and overhead clearances.",
+    fig5Caption: "Figure 5: Site access and project planning comparison between a conventional mobile crane and the velolev portable pole lifter across narrow paths, crew allocation, and overhead clearances.",
     fig2Alt: "Portable light pole lifter two-module mechanical architecture",
     fig2Label: "03 / TWO-MODULE ARCHITECTURE",
     fig2Caption: "Figure 2: Two-module hydraulic architecture comprising a 45 kg hydraulic lifting module and a 40 kg 24 V electrical cabinet (85 kg total equipment weight; 1–2 operators listed).",
@@ -86,10 +86,10 @@ const figureMap = {
   es: {
     heroCoverAlt: "Cómo instalar postes de luz de 12 m sin grúa - Portada de especificaciones",
     heroCoverLabel: "01 / RESUMEN DE ESPECIFICACIONES",
-    heroCoverCaption: "Figura 1: Resumen de especificaciones del elevador hidráulico portátil volvet. Carga nominal de 300 kg y diseño de dos módulos de 85 kg para postes de clase 12 m sujeto a revisión de proyecto.",
-    fig5Alt: "Comparativa de planificación: camión grúa frente a elevador hidráulico portátil volvet",
+    heroCoverCaption: "Figura 1: Resumen de especificaciones del elevador hidráulico portátil velolev. Carga nominal de 300 kg y diseño de dos módulos de 85 kg para postes de clase 12 m sujeto a revisión de proyecto.",
+    fig5Alt: "Comparativa de planificación: camión grúa frente a elevador hidráulico portátil velolev",
     fig5Label: "02 / COMPARATIVA DE PLANIFICACIÓN",
-    fig5Caption: "Figura 5: Comparativa de acceso y planificación entre un camión grúa convencional y el elevador portátil volvet en accesos estrechos, cuadrilla y espacio aéreo.",
+    fig5Caption: "Figura 5: Comparativa de acceso y planificación entre un camión grúa convencional y el elevador portátil velolev en accesos estrechos, cuadrilla y espacio aéreo.",
     fig2Alt: "Arquitectura mecánica de dos módulos del elevador portátil para postes de luz",
     fig2Label: "03 / ARQUITECTURA DE DOS MÓDULOS",
     fig2Caption: "Figura 2: Arquitectura hidráulica de dos módulos compuesta por módulo de elevación de 45 kg y gabinete eléctrico de 24 V de 40 kg (85 kg totales; 1–2 operarios indicados).",
@@ -103,10 +103,10 @@ const figureMap = {
   fr: {
     heroCoverAlt: "Installation de candélabres de 12 m sans grue - Couverture des spécifications",
     heroCoverLabel: "01 / SYNTHÈSE DES SPÉCIFICATIONS",
-    heroCoverCaption: "Figure 1 : Synthèse des spécifications de l'élévateur hydraulique portable volvet. Charge nominale 300 kg et architecture bimodule de 85 kg pour mâts de classe 12 m sous réserve de revue de projet.",
-    fig5Alt: "Comparatif de planification : camion-grue vs élévateur hydraulique portable volvet",
+    heroCoverCaption: "Figure 1 : Synthèse des spécifications de l'élévateur hydraulique portable velolev. Charge nominale 300 kg et architecture bimodule de 85 kg pour mâts de classe 12 m sous réserve de revue de projet.",
+    fig5Alt: "Comparatif de planification : camion-grue vs élévateur hydraulique portable velolev",
     fig5Label: "02 / COMPARATIF DE PLANIFICATION",
-    fig5Caption: "Figure 5 : Comparaison d'accès et de planification entre une grue mobile conventionnelle et l'élévateur portable volvet en accès étroit, effectif et gabarit aérien.",
+    fig5Caption: "Figure 5 : Comparaison d'accès et de planification entre une grue mobile conventionnelle et l'élévateur portable velolev en accès étroit, effectif et gabarit aérien.",
     fig2Alt: "Architecture mécanique à deux modules de l'élévateur portable pour candélabres",
     fig2Label: "03 / ARCHITECTURE BIMODULE",
     fig2Caption: "Figure 2 : Architecture hydraulique en deux modules comprenant un module de levage de 45 kg et un coffret électrique 24 V de 40 kg (85 kg au total ; 1–2 opérateurs mentionnés).",
@@ -120,10 +120,10 @@ const figureMap = {
   pt: {
     heroCoverAlt: "Instalação de postes de 12 m sem guindaste - Capa de especificações",
     heroCoverLabel: "01 / RESUMO DE ESPECIFICAÇÕES",
-    heroCoverCaption: "Figura 1: Resumo de especificações do elevador hidráulico portátil volvet. Carga nominal de 300 kg e arquitetura de dois módulos de 85 kg para postes da classe 12 m sujeito a revisão de projeto.",
-    fig5Alt: "Comparativo de planejamento: caminhão guindaste vs elevador hidráulico portátil volvet",
+    heroCoverCaption: "Figura 1: Resumo de especificações do elevador hidráulico portátil velolev. Carga nominal de 300 kg e arquitetura de dois módulos de 85 kg para postes da classe 12 m sujeito a revisão de projeto.",
+    fig5Alt: "Comparativo de planejamento: caminhão guindaste vs elevador hidráulico portátil velolev",
     fig5Label: "02 / COMPARATIVO DE PLANEJAMENTO",
-    fig5Caption: "Figura 5: Comparativo de acesso e planejamento entre um caminhão guindaste convencional e o elevador portátil volvet em passagens estreitas, equipe e espaço aéreo.",
+    fig5Caption: "Figura 5: Comparativo de acesso e planejamento entre um caminhão guindaste convencional e o elevador portátil velolev em passagens estreitas, equipe e espaço aéreo.",
     fig2Alt: "Arquitetura mecânica de dois módulos do elevador portátil de postes",
     fig2Label: "03 / ARQUITETURA DE DOIS MÓDULOS",
     fig2Caption: "Figura 2: Arquitetura hidráulica em dois módulos composta por módulo de elevação de 45 kg e gabinete elétrico de 24 V de 40 kg (85 kg totais; 1–2 operadores listados).",
@@ -137,10 +137,10 @@ const figureMap = {
   vi: {
     heroCoverAlt: "Lắp đặt cột đèn chiếu sáng 12 m không cần cẩu - Bìa tổng quan thông số",
     heroCoverLabel: "01 / TỔNG QUAN THÔNG SỐ KỸ THUẬT",
-    heroCoverCaption: "Hình 1: Tổng quan thông số kích nâng cột đèn thủy lực di động volvet. Tải trọng định mức 300 kg và thiết kế hai mô-đun 85 kg cho dòng cột 12 m cần thẩm định dự án.",
-    fig5Alt: "So sánh lập kế hoạch: xe cẩu vs kích nâng cột đèn thủy lực di động volvet",
+    heroCoverCaption: "Hình 1: Tổng quan thông số kích nâng cột đèn thủy lực di động velolev. Tải trọng định mức 300 kg và thiết kế hai mô-đun 85 kg cho dòng cột 12 m cần thẩm định dự án.",
+    fig5Alt: "So sánh lập kế hoạch: xe cẩu vs kích nâng cột đèn thủy lực di động velolev",
     fig5Label: "02 / SO SÁNH LẬP KẾ HOẠCH DỰ ÁN",
-    fig5Caption: "Hình 5: So sánh khả năng tiếp cận và lập kế hoạch giữa xe cẩu truyền thống và thiết bị nâng di động volvet về lối đi hẹp, nhân lực và khoảng cách phía trên.",
+    fig5Caption: "Hình 5: So sánh khả năng tiếp cận và lập kế hoạch giữa xe cẩu truyền thống và thiết bị nâng di động velolev về lối đi hẹp, nhân lực và khoảng cách phía trên.",
     fig2Alt: "Kiến trúc cơ khí hai mô-đun của kích nâng cột đèn thủy lực di động",
     fig2Label: "03 / KIẾN TRÚC HAI MÔ-ĐUN",
     fig2Caption: "Hình 2: Kiến trúc thủy lực hai mô-đun gồm mô-đun nâng thủy lực 45 kg và tủ điện 24 V 40 kg (tổng trọng lượng thiết bị 85 kg; ghi nhận 1–2 người vận hành).",
@@ -154,10 +154,10 @@ const figureMap = {
   th: {
     heroCoverAlt: "การติดตั้งเสาไฟถนน 12 ม. โดยไม่ใช้รถเครน - หน้าปกภาพรวมสเปก",
     heroCoverLabel: "01 / ภาพรวมสเปกผลิตภัณฑ์",
-    heroCoverCaption: "ภาพที่ 1: ภาพรวมสเปกเครื่องยกเสาไฟไฮดรอลิกแบบพกพา volvet พิกัดยก 300 กก. และโครงสร้างแยกสองโมดูล 85 กก. สำหรับเสาไฟระดับ 12 ม. ภายใต้การตรวจสอบโครงการ",
-    fig5Alt: "การเปรียบเทียบการวางแผนโครงการ: รถเครน vs เครื่องยกเสาไฟไฮดรอลิกแบบพกพา volvet",
+    heroCoverCaption: "ภาพที่ 1: ภาพรวมสเปกเครื่องยกเสาไฟไฮดรอลิกแบบพกพา velolev พิกัดยก 300 กก. และโครงสร้างแยกสองโมดูล 85 กก. สำหรับเสาไฟระดับ 12 ม. ภายใต้การตรวจสอบโครงการ",
+    fig5Alt: "การเปรียบเทียบการวางแผนโครงการ: รถเครน vs เครื่องยกเสาไฟไฮดรอลิกแบบพกพา velolev",
     fig5Label: "02 / การเปรียบเทียบการวางแผน",
-    fig5Caption: "ภาพที่ 5: การเปรียบเทียบการเข้าถึงหน้างานและการวางแผนระหว่างรถเครนทั่วไปกับเครื่องยกเสาไฟแบบพกพา volvet ในทางแคบ การจัดทีมงาน และพื้นที่เหนือศีรษะ",
+    fig5Caption: "ภาพที่ 5: การเปรียบเทียบการเข้าถึงหน้างานและการวางแผนระหว่างรถเครนทั่วไปกับเครื่องยกเสาไฟแบบพกพา velolev ในทางแคบ การจัดทีมงาน และพื้นที่เหนือศีรษะ",
     fig2Alt: "สถาปัตยกรรมกลไกสองโมดูลของเครื่องยกเสาไฟแบบพกพา",
     fig2Label: "03 / สถาปัตยกรรมสองโมดูล",
     fig2Caption: "ภาพที่ 2: สถาปัตยกรรมไฮดรอลิกสองโมดูลประกอบด้วยโมดูลยกไฮดรอลิก 45 กก. และตู้ไฟฟ้า 24 V 40 กก. (น้ำหนักอุปกรณ์รวม 85 กก. ระบุผู้ปฏิบัติงาน 1–2 คน)",
@@ -171,10 +171,10 @@ const figureMap = {
   id: {
     heroCoverAlt: "Pemasangan Tiang Lampu Jalan 12 m Tanpa Derek - Sampul Ringkasan Spesifikasi",
     heroCoverLabel: "01 / RINGKASAN SPESIFIKASI",
-    heroCoverCaption: "Gambar 1: Ringkasan spesifikasi alat angkat tiang hidrolik portabel volvet. Beban terukur 300 kg dan desain dua modul 85 kg untuk kelas tiang 12 m dengan peninjauan proyek.",
-    fig5Alt: "Perbandingan perencanaan proyek: truk derek vs alat angkat tiang hidrolik portabel volvet",
+    heroCoverCaption: "Gambar 1: Ringkasan spesifikasi alat angkat tiang hidrolik portabel velolev. Beban terukur 300 kg dan desain dua modul 85 kg untuk kelas tiang 12 m dengan peninjauan proyek.",
+    fig5Alt: "Perbandingan perencanaan proyek: truk derek vs alat angkat tiang hidrolik portabel velolev",
     fig5Label: "02 / PERBANDINGAN PERENCANAAN",
-    fig5Caption: "Gambar 5: Perbandingan akses lokasi dan perencanaan proyek antara truk derek konvensional dan alat angkat portabel volvet pada jalur sempit, alokasi kru, dan ruang udara.",
+    fig5Caption: "Gambar 5: Perbandingan akses lokasi dan perencanaan proyek antara truk derek konvensional dan alat angkat portabel velolev pada jalur sempit, alokasi kru, dan ruang udara.",
     fig2Alt: "Arsitektur mekanik dua modul dari alat angkat tiang lampu portabel",
     fig2Label: "03 / ARSITEKTUR DUA MODUL",
     fig2Caption: "Gambar 2: Arsitektur hidrolik dua modul yang terdiri dari modul angkat hidrolik 45 kg dan kabinet listrik 24 V 40 kg (berat total 85 kg; tercantum 1–2 operator).",
@@ -275,7 +275,7 @@ const copyMap = {
     specPower: "24 V rechargeable battery",
     tableCaption: "Table 1: Project Planning Comparison: Portable Hydraulic Pole Lifter vs. Mobile Crane",
     colMetric: "Planning Factor",
-    colLifter: "volvet Portable Pole Lifter",
+    colLifter: "velolev Portable Pole Lifter",
     colCrane: "Mobile Crane",
     tableRows: [
       { metric: "Site Access & Ground Footprint", lifter: "Two-module carry (45 kg hydraulic module + 40 kg cabinet) for narrow paths, medians, and unpaved sites", crane: "Requires road access width, load-bearing ground, and outrigger clearance" },
@@ -296,7 +296,7 @@ const copyMap = {
     relatedTitle: "Related Technical Guides & Planning Tools",
     faqSectionTitle: "Frequently Asked Questions: Crane-Free 12 m Pole Installation",
     eeatAccountabilityLabel: "Editorial & Technical Review:",
-    eeatReviewer: "volvet Engineering Review",
+    eeatReviewer: "velolev Engineering Review",
     eeatComplianceLabel: "Evidence & Baseline Scope:",
     eeatFactLabel: "Specification Baseline Summary:",
     eeatCaseBrief: "Specification Baseline: 12 m applicable pole class, 300 kg rated load, 85 kg two-module architecture (45 kg hydraulic module, 40 kg 24 V electrical cabinet), 180–260 mm flange hole span, and M16–M24 listed anchor bolts (M16–M22 included; non-standard bases require a dimensioned drawing review). Manufacturer-reported 20 s lift time, >50 lifts per charge, and >3000 cycles remain specification labels pending field validation."
@@ -314,7 +314,7 @@ const copyMap = {
     specPower: "Batería recargable de 24 V",
     tableCaption: "Tabla 1: Comparativa de Planificación: Elevador Hidráulico Portátil vs. Camión Grúa",
     colMetric: "Factor de Planificación",
-    colLifter: "Elevador Portátil volvet",
+    colLifter: "Elevador Portátil velolev",
     colCrane: "Camión Grúa",
     tableRows: [
       { metric: "Acceso a Obra y Huella en Suelo", lifter: "Transporte en dos módulos (45 kg módulo hidráulico + 40 kg gabinete) para aceras estrechas y sitios sin pavimento", crane: "Requiere ancho de acceso vial, suelo portante y espacio para estabilizadores" },
@@ -335,7 +335,7 @@ const copyMap = {
     relatedTitle: "Guías técnicas y herramientas de planificación relacionadas",
     faqSectionTitle: "Preguntas frecuentes sobre la instalación de postes de 12 m sin grúa",
     eeatAccountabilityLabel: "Revisión Editorial y Técnica:",
-    eeatReviewer: "volvet Engineering Review",
+    eeatReviewer: "velolev Engineering Review",
     eeatComplianceLabel: "Alcance de Evidencia y Línea Base:",
     eeatFactLabel: "Resumen de Línea Base Técnica:",
     eeatCaseBrief: "Línea base técnica: clase de poste aplicable de 12 m, carga nominal de 300 kg, arquitectura de dos módulos de 85 kg (módulo hidráulico de 45 kg, gabinete eléctrico de 24 V de 40 kg), rango de orificios de brida de 180–260 mm y pernos M16–M24 listados (M16–M22 incluidos; las bases no estándar requieren revisión de plano acotado). Los valores reportados por el fabricante de 20 s, >50 elevaciones por carga y >3000 ciclos siguen pendientes de validación de campo."
@@ -353,7 +353,7 @@ const copyMap = {
     specPower: "Batterie rechargeable 24 V",
     tableCaption: "Tableau 1 : Comparatif de Planification : Élévateur Hydraulique Portable vs. Camion-Grue",
     colMetric: "Critère de Planification",
-    colLifter: "Élévateur Portable volvet",
+    colLifter: "Élévateur Portable velolev",
     colCrane: "Camion-Grue",
     tableRows: [
       { metric: "Accès Chantier et Emprise au Sol", lifter: "Transport en deux modules (45 kg module hydraulique + 40 kg coffret) pour allées étroites et sites non revêtus", crane: "Exige une largeur d'accès routier, un sol portant et le déploiement des stabilisateurs" },
@@ -374,7 +374,7 @@ const copyMap = {
     relatedTitle: "Guides techniques et outils de planification associés",
     faqSectionTitle: "Foire aux questions sur l'installation de candélabres de 12 m sans grue",
     eeatAccountabilityLabel: "Revue Éditoriale et Technique :",
-    eeatReviewer: "volvet Engineering Review",
+    eeatReviewer: "velolev Engineering Review",
     eeatComplianceLabel: "Périmètre de Preuve et Référentiel :",
     eeatFactLabel: "Résumé du Référentiel Technique :",
     eeatCaseBrief: "Référentiel technique : classe de mât applicable de 12 m, charge nominale de 300 kg, architecture bimodule de 85 kg (module hydraulique 45 kg, coffret électrique 24 V de 40 kg), entraxe de platine 180–260 mm et tiges M16–M24 listées (M16–M22 inclus ; les bases non standard nécessitent l'examen d'un plan coté). Les valeurs déclarées par le fabricant de 20 s, >50 levées par charge et >3000 cycles restent en attente de validation terrain."
@@ -392,7 +392,7 @@ const copyMap = {
     specPower: "Bateria recarregável de 24 V",
     tableCaption: "Tabela 1: Comparativo de Planejamento: Elevador Hidráulico Portátil vs. Caminhão Guindaste",
     colMetric: "Fator de Planejamento",
-    colLifter: "Elevador Portátil volvet",
+    colLifter: "Elevador Portátil velolev",
     colCrane: "Caminhão Guindaste",
     tableRows: [
       { metric: "Acesso à Obra e Área Ocupada", lifter: "Transporte em dois módulos (45 kg módulo hidráulico + 40 kg gabinete) para calçadas estreitas e locais sem pavimento", crane: "Exige largura de acesso viário, solo resistente e espaço para patolas" },
@@ -413,7 +413,7 @@ const copyMap = {
     relatedTitle: "Guias técnicos e ferramentas de planejamento relacionados",
     faqSectionTitle: "Perguntas frequentes sobre instalação de postes de 12 m sem guindaste",
     eeatAccountabilityLabel: "Revisão Editorial e Técnica:",
-    eeatReviewer: "volvet Engineering Review",
+    eeatReviewer: "velolev Engineering Review",
     eeatComplianceLabel: "Escopo de Evidência e Linha de Base:",
     eeatFactLabel: "Resumo da Linha de Base Técnica:",
     eeatCaseBrief: "Linha de base técnica: classe de poste aplicável de 12 m, carga nominal de 300 kg, arquitetura de dois módulos de 85 kg (módulo hidráulico de 45 kg, gabinete elétrico de 24 V de 40 kg), vão de furação de flange de 180–260 mm e chumbadores M16–M24 listados (M16–M22 incluídos; bases fora do padrão exigem revisão de desenho cotado). Os dados informados pelo fabricante de 20 s, >50 elevações por carga e >3000 ciclos seguem pendentes de validação em campo."
@@ -431,7 +431,7 @@ const copyMap = {
     specPower: "Pin sạc 24 V",
     tableCaption: "Bảng 1: So Sánh Lập Kế Hoạch Dự Án: Kích Nâng Cột Thủy Lực Di Động vs. Xe Cẩu",
     colMetric: "Yếu Tố Lập Kế Hoạch",
-    colLifter: "Kích Nâng Di Động volvet",
+    colLifter: "Kích Nâng Di Động velolev",
     colCrane: "Xe Cẩu",
     tableRows: [
       { metric: "Tiếp Cận Công Trường & Mặt Bằng", lifter: "Di chuyển hai mô-đun (mô-đun thủy lực 45 kg + tủ điện 40 kg) cho lối đi hẹp và nền chưa trải nhựa", crane: "Cần bề rộng đường xe vào, nền đất chịu tải và không gian mở chân chống" },
@@ -452,7 +452,7 @@ const copyMap = {
     relatedTitle: "Hướng dẫn kỹ thuật và công cụ lập kế hoạch liên quan",
     faqSectionTitle: "Câu hỏi thường gặp về lắp đặt cột đèn 12 m không cần xe cẩu",
     eeatAccountabilityLabel: "Rà Soát Biên Tập & Kỹ Thuật:",
-    eeatReviewer: "volvet Engineering Review",
+    eeatReviewer: "velolev Engineering Review",
     eeatComplianceLabel: "Phạm Vi Bằng Chứng & Đường Cơ Sở:",
     eeatFactLabel: "Tóm Tắt Đường Cơ Sở Thông Số:",
     eeatCaseBrief: "Đường cơ sở thông số: cấp cột áp dụng 12 m, tải trọng định mức 300 kg, kiến trúc hai mô-đun 85 kg (mô-đun thủy lực 45 kg, tủ điện 24 V 40 kg), khoảng lỗ mặt bích 180–260 mm và cỡ bu-lông M16–M24 được liệt kê (đi kèm M16–M22; chân đế phi tiêu chuẩn cần gửi bản vẽ có kích thước để thẩm định). Các số liệu nhà sản xuất công bố 20 s, >50 lần nâng mỗi lần sạc và >3000 chu kỳ vẫn chờ kiểm chứng thực địa."
@@ -470,7 +470,7 @@ const copyMap = {
     specPower: "แบตเตอรี่แบบชาร์จได้ 24 V",
     tableCaption: "ตารางที่ 1: การเปรียบเทียบการวางแผนโครงการ: เครื่องยกเสาไฟไฮดรอลิกแบบพกพา vs. รถเครน",
     colMetric: "ปัจจัยการวางแผน",
-    colLifter: "เครื่องยกเสาไฟแบบพกพา volvet",
+    colLifter: "เครื่องยกเสาไฟแบบพกพา velolev",
     colCrane: "รถเครน",
     tableRows: [
       { metric: "การเข้าถึงหน้างานและพื้นที่ตั้งเครื่อง", lifter: "ขนย้ายแบบสองโมดูล (โมดูลไฮดรอลิก 45 กก. + ตู้ไฟฟ้า 40 กก.) สำหรับทางแคบและพื้นที่ยังไม่ลาดยาง", crane: "ต้องการความกว้างถนนทางเข้า พื้นดินรับน้ำหนักได้ และพื้นที่กางขาช้าง" },
@@ -491,7 +491,7 @@ const copyMap = {
     relatedTitle: "คู่มือทางเทคนิคและเครื่องมือวางแผนที่เกี่ยวข้อง",
     faqSectionTitle: "คำถามที่พบบ่อยเกี่ยวกับการติดตั้งเสาไฟ 12 ม. โดยไม่ใช้รถเครน",
     eeatAccountabilityLabel: "การตรวจสอบด้านเนื้อหาและวิศวกรรม:",
-    eeatReviewer: "volvet Engineering Review",
+    eeatReviewer: "velolev Engineering Review",
     eeatComplianceLabel: "ขอบเขตหลักฐานและเกณฑ์มาตรฐาน:",
     eeatFactLabel: "สรุปเกณฑ์มาตรฐานสเปก:",
     eeatCaseBrief: "เกณฑ์มาตรฐานสเปก: ระดับความสูงเสา 12 ม. พิกัดยก 300 กก. โครงสร้างสองโมดูล 85 กก. (โมดูลไฮดรอลิก 45 กก. ตู้ไฟฟ้า 24 V 40 กก.) ระยะรูหน้าแปลน 180–260 มม. และขนาดสลักยึด M16–M24 ที่ระบุไว้ (รวมชุด M16–M22 ฐานรากนอกมาตรฐานต้องส่งแบบระบุขนาดเพื่อตรวจสอบ) ตัวเลขที่ผู้ผลิตรายงาน 20 s, >50 ครั้งต่อการชาร์จ และ >3000 รอบยังคงเป็นค่าตามสเปกที่รอการยืนยันภาคสนาม"
@@ -509,7 +509,7 @@ const copyMap = {
     specPower: "Baterai isi ulang 24 V",
     tableCaption: "Tabel 1: Perbandingan Perencanaan Proyek: Alat Angkat Tiang Hidrolik Portabel vs. Truk Derek",
     colMetric: "Faktor Perencanaan",
-    colLifter: "Alat Angkat Portabel volvet",
+    colLifter: "Alat Angkat Portabel velolev",
     colCrane: "Truk Derek",
     tableRows: [
       { metric: "Akses Lokasi & Area Tapak", lifter: "Angkut dua modul (modul hidrolik 45 kg + kabinet 40 kg) untuk jalur sempit dan area belum beraspal", crane: "Membutuhkan lebar akses jalan, daya dukung tanah, dan ruang kaki outrigger" },
@@ -530,7 +530,7 @@ const copyMap = {
     relatedTitle: "Panduan teknis dan alat perencanaan terkait",
     faqSectionTitle: "Pertanyaan umum seputar pemasangan tiang lampu 12 m tanpa derek",
     eeatAccountabilityLabel: "Tinjauan Editorial & Teknik:",
-    eeatReviewer: "volvet Engineering Review",
+    eeatReviewer: "velolev Engineering Review",
     eeatComplianceLabel: "Ruang Lingkup Bukti & Garis Dasar:",
     eeatFactLabel: "Ringkasan Garis Dasar Spesifikasi:",
     eeatCaseBrief: "Garis dasar spesifikasi: kelas tiang berlaku 12 m, beban terukur 300 kg, arsitektur dua modul 85 kg (modul hidrolik 45 kg, kabinet listrik 24 V 40 kg), bentang lubang flensa 180–260 mm, dan baut angkur M16–M24 tercantum (M16–M22 disertakan; dudukan non-standar memerlukan peninjauan gambar berdimensi). Angka laporan pabrikan 20 s, >50 angkatan per pengisian, dan >3000 siklus tetap berstatus label spesifikasi sambil menunggu validasi lapangan."
@@ -544,7 +544,7 @@ const roiPath = locale === "en" ? "/tools/roi-calculator/" : localizedPagePath("
 const compPath = locale === "en" ? "/guides/pole-jack-compatibility/" : localizedPagePath("compatibility", locale);
 
 const rawSeoTitle = locArticle?.seoTitle || article.seoTitle || article.title;
-const seoTitle = /\|\s*volvet/i.test(rawSeoTitle) ? rawSeoTitle : `${rawSeoTitle} | volvet`;
+const seoTitle = /\|\s*velolev/i.test(rawSeoTitle) ? rawSeoTitle : `${rawSeoTitle} | velolev`;
 const snapshotArticles = loadPublishedSnapshot().articles;
 
 const origin = publicOrigin();
@@ -564,17 +564,17 @@ const techArticleSchema = {
   "image": absImage,
   "author": {
     "@type": "Organization",
-    "name": "volvet Engineering Review",
+    "name": "velolev Engineering Review",
     ...(origin ? { "url": origin } : {})
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet",
+    "name": "velolev",
     ...(origin ? {
       "url": origin,
       "logo": {
         "@type": "ImageObject",
-        "url": `${origin}/brand/volvet-wordmark.svg`
+        "url": `${origin}/brand/velolev-wordmark.svg`
       }
     } : {})
   },
@@ -831,10 +831,10 @@ const directAnswerText = locArticle?.directAnswerText || rawArticle.directAnswer
               const matchedGuideTitle = matchedGuide
                 ? (locale !== "en" && localizedContent[locale]?.[guideSlug]?.title
                   ? localizedContent[locale][guideSlug].title
-                  : matchedGuide.title).replace(/\s*\|\s*volvet.*$/i, "").trim()
+                  : matchedGuide.title).replace(/\s*\|\s*velolev.*$/i, "").trim()
                 : null;
               const baseLabel = key && corePages[key]
-                ? corePages[key].title.replace(/\s*\|\s*volvet.*$/i, "").trim()
+                ? corePages[key].title.replace(/\s*\|\s*velolev.*$/i, "").trim()
                 : (matchedGuideTitle || p.replace(/^\/|\/$/g, "").replace(/-/g, " "));
               const label = (locale === "en" || matchedGuideTitle) ? baseLabel : translateText(baseLabel, locale);
               return (

@@ -56,13 +56,16 @@ const items = scenes.slice(0, limit);
       <article class="jobsite-card" id={`scene-${item.id}`}>
         <a class="jobsite-image-wrap" href={item.image} data-media-image data-caption={item.caption} aria-label={`Enlarge image: ${item.title}`}>
           <span class="jobsite-badge">{item.tag}</span>
-          <img
-            src={item.image}
-            alt={item.alt}
-            loading="lazy"
-            width="680"
-            height="380"
-          />
+          <picture>
+            <source srcset={item.image.replace(/\.jpg$/, ".webp")} type="image/webp" />
+            <img
+              src={item.image}
+              alt={item.alt}
+              loading="lazy"
+              width="680"
+              height="380"
+            />
+          </picture>
           <span class="jobsite-expand" aria-hidden="true">↗</span>
         </a>
         <div class="jobsite-content">

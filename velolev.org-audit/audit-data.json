@@ -1,0 +1,270 @@
+{
+  "summary": {
+    "health_score": 84,
+    "business_type": "B2B Industrial Equipment Manufacturer & Exporter (Portable Light Pole Lifter)",
+    "top_findings": [
+      "Brand Entity & Domain Mismatch: Domain is velolev.org but brand identity is exclusively volvet across all pages, titles, logos, and schemas without entity aliasing or sameAs linkage.",
+      "Double Redirect Chain on Bare Domain: http://velolev.org -> 308 -> https://velolev.org/ -> 308 -> https://www.velolev.org/ (2 hops).",
+      "Missing /sitemap.xml: Default /sitemap.xml returns HTTP 404; only /sitemap-index.xml is served, without a server redirect.",
+      "Client-side Meta-Refresh (HTTP 200) on Legacy Routes: /equipment/ and /pricing-plan/ serve HTML 200 with meta-refresh rather than server-side HTTP 308 redirects.",
+      "Unoptimized Heavy Image Payloads: Reference jobsite JPEG images on homepage reach 896 KB each (2.55 MB total for 3 thumbnails), lacking WebP/AVIF compression."
+    ],
+    "quick_wins": [
+      "Add 308 redirect rules in vercel.json for /sitemap.xml -> /sitemap-index.xml, /equipment/ -> /products/light-pole-jack/, and /pricing-plan/ -> /quote/.",
+      "Compress reference images to WebP/AVIF (680x380 px) to save 2.4 MB (94% payload reduction) on the homepage.",
+      "Shorten 37 titles (>65 chars) and 47 meta descriptions (>160 chars) to prevent Google SERP truncation.",
+      "Add Content-Security-Policy (CSP) header in vercel.json.",
+      "Fix H1 typography spacing glitches (e.g., 'Light pole lifting.Made portable.' -> 'Light pole lifting. Made portable.')."
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 84,
+      "what_works": [
+        "Fast Edge serving on Vercel with HTTP/2 and HTTP/3 support",
+        "TLS 1.3 encryption with valid Let's Encrypt certificate (88 days remaining)",
+        "HSTS enabled with strict preload requirements (max-age=31536000; includeSubDomains; preload)",
+        "Security headers: nosniff, SAMEORIGIN, strict-origin-when-cross-origin, Permissions-Policy",
+        "Clean canonical URLs across all 143 sitemap pages (100% self-referencing matches)",
+        "robots.txt explicitly permits all major search bots and AI crawlers (GPTBot, ClaudeBot, etc.)",
+        "Clean 404 handling without soft-404 traps"
+      ],
+      "findings": [
+        {
+          "title": "Double Redirect Chain on Bare HTTP Domain",
+          "severity": "High",
+          "description": "http://velolev.org performs a 308 redirect to https://velolev.org/, which then executes a second 308 redirect to https://www.velolev.org/. Double hops dilute link equity and waste crawl budget.",
+          "recommendation": "Update Vercel domain routing or middleware so http://velolev.org redirects directly to https://www.velolev.org/ in a single 308 hop."
+        },
+        {
+          "title": "Standard /sitemap.xml Returns HTTP 404",
+          "severity": "High",
+          "description": "Many crawlers, third-party SEO auditing tools, and search bots query /sitemap.xml by default. Currently, https://www.velolev.org/sitemap.xml returns HTTP 404, while the valid index is at /sitemap-index.xml.",
+          "recommendation": "Add a permanent redirect rule in vercel.json from /sitemap.xml to /sitemap-index.xml."
+        },
+        {
+          "title": "Legacy Routes Use HTTP 200 Client Meta-Refresh Instead of Server Redirects",
+          "severity": "High",
+          "description": "Paths /equipment/ and /pricing-plan/ return HTTP 200 with <meta http-equiv='refresh'> and <meta name='robots' content='noindex'>. Search engines may delay deindexing and crawling of the true destination.",
+          "recommendation": "Configure permanent HTTP 308 redirects in vercel.json for /equipment/ -> /products/light-pole-jack/ and /pricing-plan/ -> /quote/."
+        },
+        {
+          "title": "Missing Content-Security-Policy (CSP) Header",
+          "severity": "Low",
+          "description": "The server does not transmit a Content-Security-Policy header, leaving an opening for potential script injection or framing risks.",
+          "recommendation": "Define an appropriate CSP header within vercel.json headers configuration."
+        },
+        {
+          "title": "Hardcoded Static lastmod Timestamps in Sitemap",
+          "severity": "Low",
+          "description": "All 143 entries in sitemap-0.xml carry the identical static date '2026-10-28T00:00:00.000Z', preventing search engines from recognizing true incremental article updates.",
+          "recommendation": "Dynamically derive lastmod in astro.config.mjs serialize hook using article publish/update metadata."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality & E-E-A-T",
+      "score": 82,
+      "what_works": [
+        "Exceptional engineering rigor: F001-F031 physical fact cards with clear distinction between confirmed specs and pending field validation",
+        "Explicit negative scope boundaries protecting customer safety (strict 12 m height and 300 kg load limits)",
+        "Comprehensive E-E-A-T institutional pages: About Us, Editorial Policy, Privacy Notice, Terms",
+        "High topical depth in English pillar articles (1,500 - 3,500 words with calculation formulas and crane cost comparisons)"
+      ],
+      "findings": [
+        {
+          "title": "Critical Brand Entity & Domain Disconnect (velolev.org vs volvet)",
+          "severity": "Critical",
+          "description": "The domain is velolev.org, yet the brand is exclusively identified as 'volvet' across all page titles, logos, schemas, and body copy. There is zero on-page or schema explanation of the relationship between velolev and volvet.",
+          "recommendation": "Add clear corporate brand entity linkage: explain on /about-us/ that volvet is the brand/trademark hosted at velolev.org, add sameAs and alternateName properties in Organization schema, or align domain branding."
+        },
+        {
+          "title": "Multilingual Asymmetry (35 English Pages vs 18 in Other Locales)",
+          "severity": "Medium",
+          "description": "English offers 35 pages including deep equipment configurations and comparison guides. In contrast, Spanish, French, Portuguese, Vietnamese, Thai, and Indonesian only have 18 pages each, leaving 17 key articles unlocalized.",
+          "recommendation": "Translate the 5 configuration pages and high-performing guide articles into the 6 supported international target markets."
+        },
+        {
+          "title": "Thin Content Signals in Thai (/th/) Pages",
+          "severity": "Low",
+          "description": "14 pages in the Thai (/th/) subdirectory extract to under 250 words, partly due to lack of space delimiters in Thai and brief translated copy, posing a potential low-quality content risk in regional SERPs.",
+          "recommendation": "Enrich Thai technical guides with fuller localization and descriptive engineering vocabulary."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 85,
+      "what_works": [
+        "100% of 143 pages have title tags and meta descriptions",
+        "100% of 143 pages follow the single H1 hierarchy standard",
+        "Consistent brand suffix appending (' | volvet') on all titles",
+        "Clean URL structure with trailing slashes and descriptive lowercase slugs",
+        "Zero orphan pages: all 143 sitemap pages are discoverable through internal links"
+      ],
+      "findings": [
+        {
+          "title": "37 Title Tags Exceed 65 Characters (SERP Truncation)",
+          "severity": "Medium",
+          "description": "37 pages carry titles between 66 and 82 characters (e.g. 'M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | volvet' - 82 chars), resulting in truncated display snippets in Google search results.",
+          "recommendation": "Trim titles to 55-60 characters while front-loading core target keywords (e.g., 'M16–M22 Pole Lifter Configuration (180–260mm) | volvet')."
+        },
+        {
+          "title": "47 Meta Descriptions Exceed 160 Characters",
+          "severity": "Medium",
+          "description": "47 pages have descriptions ranging from 161 to 225 characters (e.g., /es/equipment/ at 225 chars), causing search engines to truncate sentences mid-phrase.",
+          "recommendation": "Condense descriptions to 140-155 characters with clear B2B procurement calls-to-action."
+        },
+        {
+          "title": "Punctuation and Typography Spacing Glitches in H1 Tags",
+          "severity": "Low",
+          "description": "Multiple H1 headings lack spacing after sentence-terminating periods, such as 'Light pole lifting.Made portable.' and 'Calculate a scenario.Keep the assumptions.'. Additionally, 'lightpole' is written as a single compound word on the equipment page.",
+          "recommendation": "Ensure proper spacing after periods ('Light pole lifting. Made portable.') and use standard terminology ('light pole')."
+        }
+      ]
+    },
+    {
+      "name": "Schema & Structured Data",
+      "score": 88,
+      "what_works": [
+        "100% schema deployment across all 143 pages with 0 JSON syntax errors",
+        "Proper deployment of Organization, WebSite, BreadcrumbList, Product, TechArticle, and FAQPage",
+        "Rich PropertyValue specification cards embedded in Product schema"
+      ],
+      "findings": [
+        {
+          "title": "Product Schema Missing 'offers' and Product Identifiers",
+          "severity": "Medium",
+          "description": "Product schema on configuration pages omits the 'offers' property, triggering Google Rich Result warnings in Search Console. It also lacks 'sku' and 'mpn'.",
+          "recommendation": "Include an Offer object with availability ('https://schema.org/InStock') and priceSpecification or price on request, plus an MPN/SKU identifier."
+        },
+        {
+          "title": "Organization Schema Lacks sameAs Entity Links & Physical Address",
+          "severity": "Low",
+          "description": "Organization schema lists name, description, logo, and contactPoint, but lacks sameAs links to official social profiles, registries, and physical company address.",
+          "recommendation": "Add sameAs links and PostalAddress in Organization schema to solidify Google Knowledge Graph entity mapping."
+        },
+        {
+          "title": "TechArticle Schema Omits Explicit Author Object",
+          "severity": "Low",
+          "description": "Guide pages deploy TechArticle schema without an explicit Person or Organization author entity.",
+          "recommendation": "Add author: {'@type': 'Organization', 'name': 'volvet Technical Engineering Team'} to TechArticle schema."
+        }
+      ]
+    },
+    {
+      "name": "Performance (Core Web Vitals)",
+      "score": 78,
+      "what_works": [
+        "Zero-JS / minimal-JS static architecture with zero framework client hydration overhead",
+        "Tiny external CSS payload (31.5 KB total across 2 files)",
+        "Web font (/fonts/geologica-latin.woff2 - 24.6 KB) preloaded with crossorigin",
+        "Above-the-fold hero image preloaded with fetchpriority='high'",
+        "Sub-150ms TTFB on Vercel Global Edge Network"
+      ],
+      "findings": [
+        {
+          "title": "Heavy Uncompressed Reference Images (2.55 MB on Homepage)",
+          "severity": "High",
+          "description": "Three reference jobsite photos on the homepage are served as uncompressed JPEGs: jobsite-rural-solar-street-light.jpg (897 KB), jobsite-parking-lot-tight-space.jpg (834 KB), jobsite-sidewalk-municipal-road.jpg (819 KB). Total image payload is 2.55 MB for 3 thumbnail cards.",
+          "recommendation": "Convert all content images to WebP/AVIF format and scale them to their display dimensions (680x380 px at 80% quality), reducing file size from 850 KB to ~35 KB per image (94% savings)."
+        },
+        {
+          "title": "Hero Image Served as 196 KB PNG Without Modern Format Variants",
+          "severity": "Medium",
+          "description": "The hero cutout image (/images/product/portable-pole-lifter-hero-cutout.png) is a 195.7 KB PNG file without WebP/AVIF fallback or picture srcset element.",
+          "recommendation": "Provide WebP/AVIF version with alpha channel to cut hero payload down to ~45 KB."
+        }
+      ]
+    },
+    {
+      "name": "AI Search & GEO Readiness",
+      "score": 92,
+      "what_works": [
+        "llms.txt (6.8 KB) and llms-full.txt (59.3 KB) deployed and fully accessible at domain root",
+        "robots.txt explicitly allows GPTBot, ChatGPT-User, ClaudeBot, PerplexityBot, Bytespider, and OAI-SearchBot",
+        "Fully server-rendered content (911 words on homepage) accessible without headless browser execution",
+        "Systematic F001-F031 physical fact cards providing grounded engineering data for LLM citation"
+      ],
+      "findings": [
+        {
+          "title": "llms.txt Formatting Hygiene Warnings",
+          "severity": "Low",
+          "description": "llms.txt includes parameter specifications under H2 headings rather than link lists [Title](URL) as proposed in llmstxt.org v2, producing 11 item-without-link parser notes.",
+          "recommendation": "Refactor llms.txt so general specifications precede the first H2, and H2 sections consist strictly of markdown links to published articles and data sheets."
+        },
+        {
+          "title": "Well-Known AI Discovery Files Absent",
+          "severity": "Low",
+          "description": "Probes to /.well-known/ai-catalog.json and /.well-known/agent-card.json return HTTP 404.",
+          "recommendation": "Optionally deploy ai-catalog.json and agent-card.json to advertise machine-readable endpoints."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 80,
+      "what_works": [
+        "Descriptive, keyword-rich alt text on 100% of content photos",
+        "Explicit width and height HTML attributes preventing Cumulative Layout Shift (CLS)",
+        "Native loading='lazy' attribute configured on all below-the-fold images"
+      ],
+      "findings": [
+        {
+          "title": "Tracking / Spacer 1x1 Base64 GIF Lacks Alt Tag",
+          "severity": "Low",
+          "description": "Base64 1x1 spacer GIF present across all pages lacks alt='' attribute or role='presentation', creating an accessibility/SEO audit warning.",
+          "recommendation": "Add alt='' or aria-hidden='true' to the spacer image element."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes & Infrastructure Routing",
+        "timeframe": "Week 1 (P0)",
+        "items": [
+          "Configure permanent 308 redirects in vercel.json: /sitemap.xml -> /sitemap-index.xml, /equipment/ -> /products/light-pole-jack/, /pricing-plan/ -> /quote/.",
+          "Fix bare domain HTTP redirect chain in Vercel to ensure single-hop http://velolev.org -> https://www.velolev.org/.",
+          "Add corporate entity clarification on /about-us/ and Organization schema linking the velolev.org domain with the volvet brand identity.",
+          "Add Content-Security-Policy (CSP) header in vercel.json."
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Performance & Metadata Optimization",
+        "timeframe": "Weeks 2-3 (P1)",
+        "items": [
+          "Batch convert and optimize all jobsite evidence images and hero PNG to WebP/AVIF, slashing ~2.4 MB from the homepage payload.",
+          "Trim 37 page titles exceeding 65 characters to 55-60 characters to eliminate Google SERP truncation.",
+          "Condense 47 meta descriptions exceeding 160 characters down to 140-155 characters with clear procurement CTAs.",
+          "Fix typography and punctuation spacing in H1 tags ('Light pole lifting. Made portable.')."
+        ]
+      },
+      {
+        "name": "Phase 3: Schema Enrichment & International Expansion",
+        "timeframe": "Month 2 (P2)",
+        "items": [
+          "Enrich Product schema with Offer / AggregateOffer RFQ details, MPN, and SKU identifiers.",
+          "Add sameAs social/corporate links and PostalAddress to Organization schema; add author entity to TechArticle schema.",
+          "Align localized URL path conventions between English and international locales (/products/ vs /equipment/).",
+          "Translate 5 equipment configuration pages into Spanish, French, Portuguese, Vietnamese, Thai, and Indonesian."
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring, Verification & AI Search Upgrades",
+        "timeframe": "Ongoing (P3)",
+        "items": [
+          "Connect Google Search Console and GA4 to monitor indexation and organic query impressions.",
+          "Refactor llms.txt to comply with llmstxt.org v2 format standards.",
+          "Implement dynamic lastmod timestamps in sitemap generation linked to content file modification dates."
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

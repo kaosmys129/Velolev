@@ -1,5 +1,5 @@
 import {languageNames} from "../lib/languages.mjs";
-// Single source of truth for all locale logic in the volvet site.
+// Single source of truth for all locale logic in the velolev site.
 // astro.config.mjs imports `defaultLocale` / `locales` from here.
 
 export const defaultLocale = "en" as const;

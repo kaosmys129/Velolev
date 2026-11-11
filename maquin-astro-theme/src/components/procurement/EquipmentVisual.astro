@@ -4,7 +4,10 @@ const {compact=false}=Astro.props;
 <figure class:list={["hero-visual",{compact}]} aria-label="Product reference illustration">
   <span class="visual-label">01 / Portable light pole lifter</span>
   <a class="visual-film-link" href="#equipment-overview"><span aria-hidden="true">▶</span> Watch the overview <span class="kicker">00:24</span></a>
-  <img src="/images/product/portable-pole-lifter-hero-cutout.png" width="800" height="563" alt="Reference view of the yellow hydraulic lifting module and electrical cabinet" fetchpriority="high"/>
+  <picture>
+    <source srcset="/images/product/portable-pole-lifter-hero-cutout.webp" type="image/webp" />
+    <img src="/images/product/portable-pole-lifter-hero-cutout.png" width="800" height="563" alt="Reference view of the yellow hydraulic lifting module and electrical cabinet" fetchpriority="high"/>
+  </picture>
   <figcaption class="visual-caption">Product reference · confirm the supplied configuration for your project</figcaption>
 </figure>
 <style>figure{margin:0}.compact{min-height:450px}.compact img{height:410px}.visual-film-link{position:absolute;bottom:56px;left:24px;z-index:2;display:flex;align-items:center;gap:14px;background:var(--dark);color:var(--paper);padding:11px 16px;font-size:11px;transition:background .2s}.visual-film-link>span:first-child{color:var(--yellow)}.visual-film-link:hover{background:#344035}.visual-film-link .kicker{padding-left:12px;border-left:1px solid #ffffff35;font-size:10px}</style>

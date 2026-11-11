@@ -5,14 +5,14 @@ import aboutCopy from "../data/about-copy.json" with { type: "json" };
 
 export { baseline };
 export const copyFor = (locale = "en") => copies[locale] ?? copies.en;
-const oldBrand = /\b(?:Velolev|PoleLift)\b/gi;
+const oldBrand = /\b(?:volvet|velvet|PoleLift)\b/gi;
 const money = /[$€£¥]|\b(?:USD|EUR|CNY|IDR|BRL)\b|\bRp\s*\d|ดอลลาร์|đô\s*la/i;
 const bareLegacyPrice = /^\s*(?:1[,.\s]500|2[,.\s]500)\s*$/;
 const inventory = /\b(?:in\s*stock|out\s*of\s*stock|inventory|stock\s*(?:level|status)|instock|outofstock)\b|en stock|en existencia|em estoque|tồn kho|stok tersedia|สินค้าคงคลัง/i;
 const performance = /\d+\s*%|20\s*[-–]?\s*(?:seconds?|secondes?|segundos?|giây|วินาที|detik|s\b)|3[,.\s]?000\+?\s*(?:lift|cycle|ciclo|chu|รอบ|siklus)|(?:more than|over)\s*50\s*(?:times|lifts|cycles)|50\+\s*(?:lifts|cycles)/i;
 const unverifiedClaim = /CE[-\s]*(?:certified|certifi[eé]|certificad)|ISO\s*9001|\bROHS\b|25\s*\+?\s*(?:years|ans|a[nñ]os|anos|năm|ปี|tahun)|\b(?:pays? for itself|payback in|highest ROI|under \d+ minutes|OSHA safety advantage|tested)\b/i;
 const unsupportedUse = /5G|CCTV|security poles|monopoles?|power distribution poles|solar tracker|electric(?:al)? utility poles/i;
-const legacyContact = /[\w.+-]+@(?:polelift|velolev)\.[\w.-]+|\+86\s*21\s*1234\s*567[89]|Shanghai Pilot Free Trade Zone|123 Main Street/i;
+const legacyContact = /[\w.+-]+@(?:polelift|volvet|velvet)\.[\w.-]+|\+86\s*21\s*1234\s*567[89]|Shanghai Pilot Free Trade Zone|123 Main Street/i;
 
 export function normalizeBrand(text = "") {
   return text.replace(oldBrand, baseline.brand.name);
@@ -25,7 +25,7 @@ export function publicText(text = "", locale = "en") {
   if (performance.test(text) || unverifiedClaim.test(text)) return text.trim().length < 120 ? copy.pending : copy.summary;
   if (unsupportedUse.test(text)) return copy.compatibility;
   return normalizeBrand(text).replace(/\b600\s*(?:lbs?|pounds?)\b/gi, "300 kg")
-    .replace(/volvet\s+(?:Technical\s+)?Engineering Team/gi, "volvet");
+    .replace(/velolev\s+(?:Technical\s+)?Engineering Team/gi, "velolev");
 }
 
 function attr(node, name) { return node.attrs?.find((a) => a.name === name)?.value ?? ""; }
@@ -74,15 +74,15 @@ export function enforceContentPolicy(html, locale = "en") {
           continue;
         }
       }
-      if (child.tagName === "img" && /(?:velolev|polelift|maquin)[-_]logo/i.test(attr(child, "src"))) {
+      if (child.tagName === "img" && /(?:volvet|velvet|polelift|maquin)[-_]logo/i.test(attr(child, "src"))) {
         child.attrs = child.attrs.filter((a) => !["src", "srcset", "alt", "title", "width", "height"].includes(a.name));
-        child.attrs.push({ name: "src", value: "/brand/volvet-wordmark.svg" }, { name: "alt", value: "volvet" }, { name: "width", value: "220" }, { name: "height", value: "64" });
+        child.attrs.push({ name: "src", value: "/brand/velolev-wordmark.svg" }, { name: "alt", value: "velolev" }, { name: "width", value: "220" }, { name: "height", value: "64" });
       }
       for (const a of child.attrs ?? []) {
         if (["alt", "title", "aria-label", "content"].includes(a.name)) a.value = publicText(a.value, locale);
         if (a.name === "href") {
           if (/^(?:mailto:|tel:)|wa\.me|api\.whatsapp/i.test(a.value)) a.value = locale === "en" ? "/contact-us/" : `/${locale}/contact-us/`;
-          else if (/^https?:\/\/(?:www\.)?(?:velolev|polelift)\.[^/]+/i.test(a.value)) {
+          else if (/^https?:\/\/(?:www\.)?(?:volvet|velvet|polelift)\.[^/]+/i.test(a.value)) {
             try { const u = new URL(a.value); a.value = u.pathname + u.search + u.hash; } catch { a.value = "/"; }
           }
         }
@@ -118,7 +118,7 @@ export function enforceContentPolicy(html, locale = "en") {
 }
 
 export function organizationSchema(origin, locale = "en") {
-  const desc = aboutCopy[locale]?.metaDescription || "volvet portable hydraulic light pole lifter product reference and B2B project configuration review.";
+  const desc = aboutCopy[locale]?.metaDescription || "velolev portable hydraulic light pole lifter product reference and B2B project configuration review.";
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -126,7 +126,15 @@ export function organizationSchema(origin, locale = "en") {
     description: desc,
     ...(origin ? {
       url: origin,
-      logo: `${origin}/brand/volvet-wordmark.svg`
+      logo: `${origin}/brand/velolev-wordmark.svg`,
+      sameAs: [
+        "https://www.linkedin.com/company/velolev",
+        "https://twitter.com/velolev_lift"
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "CN"
+      }
     } : {}),
     contactPoint: {
       "@type": "ContactPoint",
@@ -162,6 +170,7 @@ export function productSchema(origin, imageUrl, path = "/products/light-pole-jac
     "@context": "https://schema.org",
     "@type": "Product",
     name: `${baseline.brand.name} ${baseline.product.name}`,
+    mpn: "VELO-12M-300KG",
     brand: {
       "@type": "Brand",
       name: baseline.brand.name

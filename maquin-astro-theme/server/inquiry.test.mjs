@@ -12,7 +12,7 @@ import {canonicalUrl,publicOrigin,coreAlternates} from "../src/lib/site-config.m
 const token="local-unit-tests-only-0123456789-0123456789";
 const payload=()=>({name:"Controlled test",email:"test@example.test",phone:"",country:"Test destination",consent:true,quantity:"2",poleHeight:"12",poleWeight:"250",locale:"en",sourcePage:"/quote/",application:"street-lighting",message:"TEST ONLY — not a sales lead"});
 const pdf=Buffer.from("%PDF-1.4\n1 0 obj\n<<>>\nendobj\n%%EOF");
-function workspace(t){const dir=mkdtempSync(join(tmpdir(),"volvet-inquiry-test-"));t.after(()=>rmSync(dir,{recursive:true,force:true}));return dir;}
+function workspace(t){const dir=mkdtempSync(join(tmpdir(),"velolev-inquiry-test-"));t.after(()=>rmSync(dir,{recursive:true,force:true}));return dir;}
 async function app(t,options={}){const dir=workspace(t),dist=join(dir,"public");mkdirSync(dist);writeFileSync(join(dist,"index.html"),"public test page");writeFileSync(join(dist,"404.html"),"not found");const created=createInquiryServer({directory:join(dir,"private"),dist,adminToken:token,testMode:true,logger:{error(){}},...options});created.server.listen(0,"127.0.0.1");await once(created.server,"listening");t.after(async()=>{created.server.close();await once(created.server,"close");});return {...created,url:`http://127.0.0.1:${created.server.address().port}`};}
 const post=(url,data=payload(),key=randomUUID(),headers={})=>fetch(url+"/api/inquiries",{method:"POST",headers:{"Content-Type":"application/json","Idempotency-Key":key,...headers},body:JSON.stringify(data)});
 const admin=(url,path,init={})=>fetch(url+path,{...init,headers:{Authorization:`Bearer ${token}`,...init.headers}});

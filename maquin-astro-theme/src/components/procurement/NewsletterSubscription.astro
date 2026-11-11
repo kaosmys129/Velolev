@@ -1,6 +1,6 @@
 ---
 /**
- * volvet 工业机械 - 邮件订阅组件
+ * velolev 工业机械 - 邮件订阅组件
  * 支持 7 种语言切换，完全适配采购设计系统 (Procurement Industrial Design System)
  */
 import { translateText } from "../../lib/industrial-localization.mjs";
@@ -209,7 +209,7 @@ const copy = {
 
         form.hidden = true;
         success.hidden = false;
-        document.dispatchEvent(new CustomEvent("volvet:subscription-submitted", {
+        document.dispatchEvent(new CustomEvent("velolev:subscription-submitted", {
           detail: { email, locale, page: location.pathname }
         }));
       } catch (err) {

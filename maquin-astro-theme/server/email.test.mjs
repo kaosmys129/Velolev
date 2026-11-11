@@ -15,7 +15,7 @@ import { createInquiryServer } from "./inquiry-server.mjs";
 import { validateSubscription } from "./inquiry-validation.mjs";
 
 function tempWorkspace(t) {
-  const dir = mkdtempSync(join(tmpdir(), "volvet-email-test-"));
+  const dir = mkdtempSync(join(tmpdir(), "velolev-email-test-"));
   t.after(() => rmSync(dir, { recursive: true, force: true }));
   return dir;
 }
@@ -58,7 +58,7 @@ test("email templates render valid industrial layout with escaped parameters", (
     { email: "contractor@example.com" },
     { unsubscribeUrl: "https://www.velolev.org/api/unsubscribe?email=contractor@example.com" }
   );
-  assert.match(welcomeMail.subject, /Welcome to volvet/);
+  assert.match(welcomeMail.subject, /Welcome to velolev/);
   assert.match(welcomeMail.html, /contractor@example\.com/);
   assert.match(welcomeMail.html, /api\/unsubscribe/);
 

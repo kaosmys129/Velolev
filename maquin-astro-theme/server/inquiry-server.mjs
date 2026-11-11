@@ -190,7 +190,7 @@ export function createInquiryServer({
         subscriptionStore.unsubscribe(email);
         if(req.method==="GET"&&(req.headers.accept?.includes("text/html")||!req.headers.accept?.includes("application/json"))){
           res.writeHead(200,{...sharedHeaders,"Content-Type":"text/html; charset=utf-8"});
-          return res.end(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Unsubscribed | volvet</title><style>body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#f4f3ef;color:#1d201e;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}.box{background:#fff;padding:40px;border:1px solid #dcdfd5;border-top:4px solid #f4cc3d;max-width:480px;text-align:center;}h1{font-size:22px;margin:0 0 12px 0;}p{font-size:14px;color:#454e46;line-height:1.6;}a{color:#1d201e;font-weight:700;}</style></head><body><div class="box"><h1>Unsubscribed Successfully</h1><p>The email <strong>${escapeHtml(email)}</strong> has been removed from the volvet technical digest list.</p><p style="margin-top:24px;"><a href="/">← Return to volvet</a></p></div></body></html>`);
+          return res.end(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Unsubscribed | velolev</title><style>body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#f4f3ef;color:#1d201e;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}.box{background:#fff;padding:40px;border:1px solid #dcdfd5;border-top:4px solid #f4cc3d;max-width:480px;text-align:center;}h1{font-size:22px;margin:0 0 12px 0;}p{font-size:14px;color:#454e46;line-height:1.6;}a{color:#1d201e;font-weight:700;}</style></head><body><div class="box"><h1>Unsubscribed Successfully</h1><p>The email <strong>${escapeHtml(email)}</strong> has been removed from the velolev technical digest list.</p><p style="margin-top:24px;"><a href="/">← Return to velolev</a></p></div></body></html>`);
         }
         return json(res,200,{status:"unsubscribed",email});
       }
@@ -203,7 +203,7 @@ export function createInquiryServer({
         // 5.1 询盘列表与导出
         if(url.pathname==="/api/admin/inquiries"&&req.method==="GET")return json(res,200,store.list({offset:Math.max(0,Number(url.searchParams.get("offset"))||0),limit:30,includeTests}));
         if(url.pathname==="/api/admin/inquiries.csv"&&req.method==="GET") {
-          res.writeHead(200,{...sharedHeaders,"Cache-Control":"no-store","Content-Type":"text/csv; charset=utf-8","Content-Disposition":"attachment; filename=volvet-inquiries.csv"});return res.end(store.exportCsv({includeTests}));
+          res.writeHead(200,{...sharedHeaders,"Cache-Control":"no-store","Content-Type":"text/csv; charset=utf-8","Content-Disposition":"attachment; filename=velolev-inquiries.csv"});return res.end(store.exportCsv({includeTests}));
         }
 
         // 5.2 订阅者列表与导出
@@ -218,7 +218,7 @@ export function createInquiryServer({
           const fields=["email","locale","country","source_page","created_at"];
           const cell=(v)=>{let s=String(v??"");if(/^[=+@\-\t\r\n]|^\s+[=+@-]/.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"';};
           const csv="\ufeff"+[fields.map(cell).join(","),...subs.items.map(row=>fields.map(k=>cell(row[k])).join(","))].join("\r\n");
-          res.writeHead(200,{...sharedHeaders,"Cache-Control":"no-store","Content-Type":"text/csv; charset=utf-8","Content-Disposition":"attachment; filename=volvet-subscribers.csv"});
+          res.writeHead(200,{...sharedHeaders,"Cache-Control":"no-store","Content-Type":"text/csv; charset=utf-8","Content-Disposition":"attachment; filename=velolev-subscribers.csv"});
           return res.end(csv);
         }
 
@@ -312,6 +312,6 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).hr
   if(!["127.0.0.1","localhost","::1"].includes(host)&&(!publicOrigin||!process.env.INQUIRY_ADMIN_TOKEN||process.env.INQUIRY_TEST_MODE==="true"))throw new Error("External binding requires a public origin, explicit private admin token and non-test mode.");
   const {server,emailService}=createInquiryServer({directory,adminToken:token,testMode:process.env.INQUIRY_TEST_MODE==="true",publicOrigin});
   const emailStatus=emailService.getStatus();
-  server.listen(port,host,()=>console.log(`volvet site and inquiry inbox: http://${host}:${port}/\nPrivate inbox: /admin/inquiries/\nAdmin key file (keep private): ${keyPath}\nResend Email Service: ${emailStatus.configured ? "CONFIGURED (" + emailStatus.fromEmail + ")" : "MOCK/NOT CONFIGURED"}`));
+  server.listen(port,host,()=>console.log(`velolev site and inquiry inbox: http://${host}:${port}/\nPrivate inbox: /admin/inquiries/\nAdmin key file (keep private): ${keyPath}\nResend Email Service: ${emailStatus.configured ? "CONFIGURED (" + emailStatus.fromEmail + ")" : "MOCK/NOT CONFIGURED"}`));
   for(const signal of ["SIGTERM","SIGINT"])process.on(signal,()=>server.close(()=>process.exit(0)));
 }

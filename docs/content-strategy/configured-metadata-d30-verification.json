@@ -152,7 +152,7 @@
       "passed": true
     },
     {
-      "name": "home: local link /resources/volvet-specifications.csv",
+      "name": "home: local link /resources/velolev-specifications.csv",
       "passed": true
     },
     {
@@ -388,7 +388,7 @@
       "passed": true
     },
     {
-      "name": "product: local link /resources/volvet-specifications.csv",
+      "name": "product: local link /resources/velolev-specifications.csv",
       "passed": true
     },
     {
@@ -596,7 +596,7 @@
       "passed": true
     },
     {
-      "name": "compatibility: local link /resources/volvet-specifications.csv",
+      "name": "compatibility: local link /resources/velolev-specifications.csv",
       "passed": true
     },
     {

@@ -3,7 +3,7 @@ import {localizedDocumentPath} from '../../lib/localized-documents.mjs';
 interface Props {locale?:string;mode?:'banner'|'compact'|'cards';highlightTier?:1|2|3;class?:string;}
 const {locale='en',mode='cards',highlightTier=1,class:className=''}=Astro.props;
 const paths=[
- {tier:2,step:'01',title:'Explore the specifications',body:'Download the dimensions, module weights and included components for your project comparison.',href:localizedDocumentPath('volvet-specifications.csv',locale),label:'Download CSV ↓',download:true},
+ {tier:2,step:'01',title:'Explore the specifications',body:'Download the dimensions, module weights and included components for your project comparison.',href:localizedDocumentPath('velolev-specifications.csv',locale),label:'Download CSV ↓',download:true},
  {tier:3,step:'02',title:'Review your base connection',body:'Check the flange dimensions, then share your drawing and project details for a configuration review.',href:'/guides/pole-jack-compatibility/#flange-instant-checker',label:'Check compatibility →'},
  {tier:1,step:'03',title:'Request a project quote',body:'Send the application, quantity and destination. Start with the information you have; drawings are optional.',href:'/quote/',label:'Request a project quote',download:false}
 ];

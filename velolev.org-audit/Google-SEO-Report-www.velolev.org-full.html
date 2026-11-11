@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 22mm 18mm 25mm 18mm;
+    @bottom-center {
+      content: "Page " counter(page) " of " counter(pages);
+      font-size: 9pt;
+      color: #6b7280;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+    @bottom-left {
+      content: "Confidential";
+      font-size: 7pt;
+      color: #d6d3cc;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+    @bottom-right {
+      content: "www.velolev.org Google SEO Report";
+      font-size: 8pt;
+      color: #cbd5e1;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+  }
+
+  @page :first {
+    margin: 0;
+    @bottom-left { content: none; }
+    @bottom-center { content: none; }
+    @bottom-right { content: none; }
+  }
+
+  @page toc {
+    @bottom-center {
+      content: counter(page);
+      font-size: 9pt;
+      color: #6b7280;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Times New Roman', 'DejaVu Serif', Georgia, serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background: white;
+  }
+
+  /* ─── Title Page (Clean White) ─── */
+  .title-page {
+    page: first;
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #1a1a2e;
+    position: relative;
+    padding: 50mm 30mm 40mm 30mm;
+    border-top: 6mm solid #1e3a5f;
+  }
+
+  .title-page .badge {
+    background: #f7f6f3;
+    border: 1px solid #d6d3cc;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 9pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15mm;
+    color: #1e3a5f;
+  }
+
+  .title-page h1 {
+    font-size: 28pt;
+    font-weight: bold;
+    margin-bottom: 5mm;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    color: #1a1a2e;
+  }
+
+  .title-page .subtitle {
+    font-size: 13pt;
+    color: #6b7280;
+    margin-bottom: 12mm;
+    font-weight: 300;
+  }
+
+  .title-page .url {
+    font-size: 12pt;
+    color: #1e3a5f;
+    margin-bottom: 15mm;
+    padding: 4mm 8mm;
+    border: 1px solid #d6d3cc;
+    border-radius: 6px;
+    background: #faf9f7;
+  }
+
+  .title-page .score-box {
+    background: #faf9f7;
+    border: 2px solid #d6d3cc;
+    border-radius: 12px;
+    padding: 6mm 12mm;
+    margin-bottom: 15mm;
+  }
+
+  .title-page .score-number {
+    font-size: 42pt;
+    font-weight: bold;
+    color: #1e3a5f;
+    line-height: 1;
+  }
+
+  .title-page .score-label {
+    font-size: 10pt;
+    color: #6b7280;
+    margin-top: 2mm;
+  }
+
+  .title-page .meta {
+    font-size: 9pt;
+    color: #6b7280;
+    margin-top: 8mm;
+    padding-top: 5mm;
+    border-top: 1px solid #d6d3cc;
+  }
+
+  .title-page .meta span {
+    margin: 0 8px;
+  }
+
+  /* ─── Table of Contents ─── */
+  .toc-page {
+    page: toc;
+    page-break-before: always;
+  }
+
+  .toc-page h2 {
+    font-size: 18pt;
+    color: #1e3a5f;
+    margin-bottom: 8mm;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid #1e3a5f;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .toc-list li {
+    padding: 2mm 0;
+    border-bottom: 1px solid #f1f5f9;
+    overflow: hidden;
+  }
+
+  .toc-list li.toc-section {
+    font-weight: bold;
+    font-size: 11pt;
+    padding-top: 4mm;
+    color: #0f172a;
+  }
+
+  .toc-list li.toc-sub {
+    padding-left: 8mm;
+    font-size: 9.5pt;
+    color: #475569;
+  }
+
+  .toc-score {
+    display: inline-block;
+    float: right;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 9pt;
+    font-weight: bold;
+    color: white;
+  }
+
+  .score-good { background: #2d6a4f; }
+  .score-warn { background: #d4740e; }
+  .score-bad { background: #c53030; }
+
+  /* ─── Section Styles ─── */
+  div.section {
+    page-break-before: always;
+  }
+
+  .section-header {
+    background: #faf9f7;
+    border-left: 4px solid #1e3a5f;
+    padding: 5mm 6mm;
+    margin-bottom: 6mm;
+    page-break-after: avoid;
+  }
+
+  .section-header h2 {
+    font-size: 16pt;
+    color: #0f172a;
+    margin-bottom: 1mm;
+  }
+
+  .section-header .section-score {
+    font-size: 12pt;
+    font-weight: bold;
+    float: right;
+    margin-top: -6mm;
+  }
+
+  h3 {
+    font-size: 12pt;
+    color: #1e3a5f;
+    margin-top: 6mm;
+    margin-bottom: 3mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 1px solid #d6d3cc;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    font-size: 10.5pt;
+    color: #334155;
+    margin-top: 4mm;
+    margin-bottom: 2mm;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 3mm;
+    color: #334155;
+  }
+
+  .highlight {
+    background: #fef3c7;
+    border-left: 3px solid #d4740e;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .critical-box {
+    background: #fef2f2;
+    border-left: 3px solid #c53030;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .success-box {
+    background: #f0fdf4;
+    border-left: 3px solid #2d6a4f;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4mm 0 6mm 0;
+    font-size: 9pt;
+  }
+
+  thead th {
+    background: #f7f6f3;
+    color: #0f172a;
+    font-weight: bold;
+    padding: 3mm 4mm;
+    text-align: left;
+    border-bottom: 2px solid #d6d3cc;
+    font-size: 9pt;
+  }
+
+  tbody td {
+    padding: 2.5mm 3mm;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #fdfcfa;
+  }
+
+  .status-pass {
+    color: #2d6a4f;
+    font-weight: bold;
+  }
+
+  .status-fail {
+    color: #c53030;
+    font-weight: bold;
+  }
+
+  .status-warn {
+    color: #d4740e;
+    font-weight: bold;
+  }
+
+  .status-partial {
+    color: #4a5568;
+    font-weight: bold;
+  }
+
+  /* ─── Charts ─── */
+  .chart-container {
+    text-align: center;
+    margin: 4mm 0;
+  }
+
+  .chart-container img {
+    max-width: 100%;
+    max-height: 120mm;
+    height: auto;
+  }
+
+  .chart-caption {
+    font-size: 8.5pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 2mm;
+    text-align: center;
+  }
+
+  .chart-half {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    text-align: center;
+    margin: 2mm 0;
+  }
+
+  .chart-half img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ─── Two column layout ─── */
+  .two-col {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 3mm 0;
+  }
+
+  .two-col .col {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 2mm;
+  }
+
+  .four-col {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 3mm 0;
+  }
+
+  .four-col .col {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 1.5mm;
+  }
+
+  /* ─── Metric Cards ─── */
+  .metric-card {
+    background: #faf9f7;
+    border: 1px solid #d6d3cc;
+    border-radius: 6px;
+    padding: 2.5mm 3mm;
+    text-align: center;
+    margin: 2mm 0;
+  }
+
+  .metric-card .value {
+    font-size: 14pt;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  .metric-card .label {
+    font-size: 7.5pt;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1mm;
+  }
+
+  /* ─── Action Plan ─── */
+  .action-item {
+    background: #faf9f7;
+    border-radius: 4px;
+    padding: 3mm 4mm;
+    margin: 3mm 0;
+    border-left: 3px solid #cbd5e1;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .action-item.critical {
+    border-left-color: #c53030;
+    background: #fdf2f2;
+  }
+
+  .action-item.high {
+    border-left-color: #d4740e;
+    background: #fdf8ef;
+  }
+
+  .action-item.medium {
+    border-left-color: #1e3a5f;
+    background: #f0f4f8;
+  }
+
+  .action-item.low {
+    border-left-color: #94a3b8;
+  }
+
+  .action-item h4 {
+    margin-top: 0;
+    margin-bottom: 1.5mm;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .action-item .effort {
+    font-size: 8.5pt;
+    color: #64748b;
+    float: right;
+  }
+
+  .priority-tag {
+    display: inline-block;
+    padding: 0.5mm 3mm;
+    border-radius: 3px;
+    font-size: 8pt;
+    font-weight: bold;
+    color: white;
+    margin-right: 2mm;
+    vertical-align: middle;
+  }
+
+  .priority-critical { background: #c53030; }
+  .priority-high { background: #d4740e; }
+  .priority-medium { background: #1e3a5f; }
+  .priority-low { background: #94a3b8; }
+
+  /* ─── Code blocks ─── */
+  .code-block {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 3mm 4mm;
+    border-radius: 4px;
+    font-family: 'DejaVu Sans Mono', monospace;
+    font-size: 8pt;
+    line-height: 1.6;
+    margin: 3mm 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  /* ─── Divider ─── */
+  .divider {
+    border: none;
+    border-top: 1px solid #d6d3cc;
+    margin: 5mm 0;
+  }
+
+  /* ─── Roadmap ─── */
+  .roadmap-phase {
+    background: #faf9f7;
+    border-radius: 6px;
+    padding: 4mm 5mm;
+    margin: 4mm 0;
+    border: 1px solid #d6d3cc;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .roadmap-phase h4 {
+    margin-top: 0;
+    border-bottom: none;
+    color: #1e3a5f;
+  }
+
+  .roadmap-phase ul {
+    margin: 2mm 0 0 5mm;
+    padding: 0;
+  }
+
+  .roadmap-phase li {
+    margin-bottom: 1.5mm;
+    font-size: 9.5pt;
+    color: #334155;
+  }
+
+  /* ─── Lists ─── */
+  ul {
+    margin-left: 5mm;
+    margin-bottom: 3mm;
+  }
+
+  li {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Data freshness ─── */
+  .data-freshness {
+    font-size: 8pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 1px solid #d6d3cc;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ======================================================= TITLE PAGE === -->
+<div class="title-page">
+  <div class="badge">Full SEO Audit Report</div>
+  <h1>www.velolev.org</h1>
+  <div class="subtitle">Prepared by Claude SEO</div>
+  <div class="score-box">
+    <div class="score-number">84<span style="font-size: 20pt; color: #94a3b8;">/100</span></div>
+    <div class="score-label">SEO Health Score</div>
+  </div>
+  <div class="meta">
+    <span>November 11, 2026</span>
+    <span>Full Audit</span>
+  </div>
+</div>
+
+
+<!-- ======================================================= TABLE OF CONTENTS === -->
+<div class="toc-page">
+  <h2>Table of Contents</h2>
+  <ul class="toc-list">
+    <li class="toc-section"><span>1. Executive Summary</span></li>
+    <li class="toc-sub"><span>Key Metrics, Critical Issues &amp; Quick Wins</span></li>
+    <li class="toc-section"><span>2. Audit Categories</span></li>
+    <li class="toc-sub"><span>What Works</span></li>
+    <li class="toc-sub"><span>Findings by Severity</span></li>
+    <li class="toc-section"><span>3. Action Plan</span></li>
+    <li class="toc-sub"><span>Phased Roadmap</span></li>
+    <li class="toc-section"><span>4. Data Sources &amp; Methodology</span></li>
+  </ul>
+</div>
+
+
+<!-- ======================================================= 1. EXECUTIVE SUMMARY === -->
+<div class="section">
+  <div class="section-header">
+    <h2>1. Executive Summary</h2>
+  </div>
+
+  <p>This report presents a comprehensive SEO audit of <strong>www.velolev.org</strong> for a <strong>B2B Industrial Equipment Manufacturer &amp; Exporter (Portable Light Pole Lifter)</strong> site, generated on November 11, 2026. Findings combine technical, content, schema, performance, visual, and search-readiness evidence as available.</p>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="metric-card">
+        <div class="value" style="color: #d4740e;">84/100</div>
+        <div class="label">SEO Health Score</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="critical-box">
+    <strong>Critical Issues Found:</strong>
+    <ol>
+      <li>Brand Entity &amp; Domain Mismatch: Domain is velolev.org but brand identity is exclusively volvet across all pages, titles, logos, and schemas without entity aliasing or sameAs linkage.</li>
+      <li>Double Redirect Chain on Bare Domain: http://velolev.org -&gt; 308 -&gt; https://velolev.org/ -&gt; 308 -&gt; https://www.velolev.org/ (2 hops).</li>
+      <li>Missing /sitemap.xml: Default /sitemap.xml returns HTTP 404; only /sitemap-index.xml is served, without a server redirect.</li>
+      <li>Client-side Meta-Refresh (HTTP 200) on Legacy Routes: /equipment/ and /pricing-plan/ serve HTML 200 with meta-refresh rather than server-side HTTP 308 redirects.</li>
+      <li>Unoptimized Heavy Image Payloads: Reference jobsite JPEG images on homepage reach 896 KB each (2.55 MB total for 3 thumbnails), lacking WebP/AVIF compression.</li>
+    </ol>
+  </div>
+
+  <div class="success-box">
+    <strong>Quick Wins:</strong>
+    <ol>
+      <li>Add 308 redirect rules in vercel.json for /sitemap.xml -&gt; /sitemap-index.xml, /equipment/ -&gt; /products/light-pole-jack/, and /pricing-plan/ -&gt; /quote/.</li>
+      <li>Compress reference images to WebP/AVIF (680x380 px) to save 2.4 MB (94% payload reduction) on the homepage.</li>
+      <li>Shorten 37 titles (&gt;65 chars) and 47 meta descriptions (&gt;160 chars) to prevent Google SERP truncation.</li>
+      <li>Add Content-Security-Policy (CSP) header in vercel.json.</li>
+      <li>Fix H1 typography spacing glitches (e.g., &#x27;Light pole lifting.Made portable.&#x27; -&gt; &#x27;Light pole lifting. Made portable.&#x27;).</li>
+    </ol>
+  </div>
+
+</div>
+
+<!-- ======================================================= 2. AUDIT CATEGORIES === -->
+<div class="section">
+  <div class="section-header">
+    <h2>2. Audit Categories</h2>
+  </div>
+
+  <h3>2.1 Technical SEO</h3>
+  <p><strong>Score:</strong> <span class="status-pass">84/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Fast Edge serving on Vercel with HTTP/2 and HTTP/3 support</li>
+    <li>TLS 1.3 encryption with valid Let&#x27;s Encrypt certificate (88 days remaining)</li>
+    <li>HSTS enabled with strict preload requirements (max-age=31536000; includeSubDomains; preload)</li>
+    <li>Security headers: nosniff, SAMEORIGIN, strict-origin-when-cross-origin, Permissions-Policy</li>
+    <li>Clean canonical URLs across all 143 sitemap pages (100% self-referencing matches)</li>
+    <li>robots.txt explicitly permits all major search bots and AI crawlers (GPTBot, ClaudeBot, etc.)</li>
+    <li>Clean 404 handling without soft-404 traps</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Double Redirect Chain on Bare HTTP Domain <span class="status-warn">High</span></h4>
+    <p>http://velolev.org performs a 308 redirect to https://velolev.org/, which then executes a second 308 redirect to https://www.velolev.org/. Double hops dilute link equity and waste crawl budget.</p>
+    <p><strong>Recommendation:</strong> Update Vercel domain routing or middleware so http://velolev.org redirects directly to https://www.velolev.org/ in a single 308 hop.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Standard /sitemap.xml Returns HTTP 404 <span class="status-warn">High</span></h4>
+    <p>Many crawlers, third-party SEO auditing tools, and search bots query /sitemap.xml by default. Currently, https://www.velolev.org/sitemap.xml returns HTTP 404, while the valid index is at /sitemap-index.xml.</p>
+    <p><strong>Recommendation:</strong> Add a permanent redirect rule in vercel.json from /sitemap.xml to /sitemap-index.xml.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Legacy Routes Use HTTP 200 Client Meta-Refresh Instead of Server Redirects <span class="status-warn">High</span></h4>
+    <p>Paths /equipment/ and /pricing-plan/ return HTTP 200 with &lt;meta http-equiv=&#x27;refresh&#x27;&gt; and &lt;meta name=&#x27;robots&#x27; content=&#x27;noindex&#x27;&gt;. Search engines may delay deindexing and crawling of the true destination.</p>
+    <p><strong>Recommendation:</strong> Configure permanent HTTP 308 redirects in vercel.json for /equipment/ -&gt; /products/light-pole-jack/ and /pricing-plan/ -&gt; /quote/.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Missing Content-Security-Policy (CSP) Header <span class="status-warn">Low</span></h4>
+    <p>The server does not transmit a Content-Security-Policy header, leaving an opening for potential script injection or framing risks.</p>
+    <p><strong>Recommendation:</strong> Define an appropriate CSP header within vercel.json headers configuration.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Hardcoded Static lastmod Timestamps in Sitemap <span class="status-warn">Low</span></h4>
+    <p>All 143 entries in sitemap-0.xml carry the identical static date &#x27;2026-10-28T00:00:00.000Z&#x27;, preventing search engines from recognizing true incremental article updates.</p>
+    <p><strong>Recommendation:</strong> Dynamically derive lastmod in astro.config.mjs serialize hook using article publish/update metadata.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.2 Content Quality &amp; E-E-A-T</h3>
+  <p><strong>Score:</strong> <span class="status-pass">82/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Exceptional engineering rigor: F001-F031 physical fact cards with clear distinction between confirmed specs and pending field validation</li>
+    <li>Explicit negative scope boundaries protecting customer safety (strict 12 m height and 300 kg load limits)</li>
+    <li>Comprehensive E-E-A-T institutional pages: About Us, Editorial Policy, Privacy Notice, Terms</li>
+    <li>High topical depth in English pillar articles (1,500 - 3,500 words with calculation formulas and crane cost comparisons)</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Critical Brand Entity &amp; Domain Disconnect (velolev.org vs volvet) <span class="status-warn">Critical</span></h4>
+    <p>The domain is velolev.org, yet the brand is exclusively identified as &#x27;volvet&#x27; across all page titles, logos, schemas, and body copy. There is zero on-page or schema explanation of the relationship between velolev and volvet.</p>
+    <p><strong>Recommendation:</strong> Add clear corporate brand entity linkage: explain on /about-us/ that volvet is the brand/trademark hosted at velolev.org, add sameAs and alternateName properties in Organization schema, or align domain branding.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Multilingual Asymmetry (35 English Pages vs 18 in Other Locales) <span class="status-warn">Medium</span></h4>
+    <p>English offers 35 pages including deep equipment configurations and comparison guides. In contrast, Spanish, French, Portuguese, Vietnamese, Thai, and Indonesian only have 18 pages each, leaving 17 key articles unlocalized.</p>
+    <p><strong>Recommendation:</strong> Translate the 5 configuration pages and high-performing guide articles into the 6 supported international target markets.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Thin Content Signals in Thai (/th/) Pages <span class="status-warn">Low</span></h4>
+    <p>14 pages in the Thai (/th/) subdirectory extract to under 250 words, partly due to lack of space delimiters in Thai and brief translated copy, posing a potential low-quality content risk in regional SERPs.</p>
+    <p><strong>Recommendation:</strong> Enrich Thai technical guides with fuller localization and descriptive engineering vocabulary.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.3 On-Page SEO</h3>
+  <p><strong>Score:</strong> <span class="status-pass">85/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>100% of 143 pages have title tags and meta descriptions</li>
+    <li>100% of 143 pages follow the single H1 hierarchy standard</li>
+    <li>Consistent brand suffix appending (&#x27; | volvet&#x27;) on all titles</li>
+    <li>Clean URL structure with trailing slashes and descriptive lowercase slugs</li>
+    <li>Zero orphan pages: all 143 sitemap pages are discoverable through internal links</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>37 Title Tags Exceed 65 Characters (SERP Truncation) <span class="status-warn">Medium</span></h4>
+    <p>37 pages carry titles between 66 and 82 characters (e.g. &#x27;M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | volvet&#x27; - 82 chars), resulting in truncated display snippets in Google search results.</p>
+    <p><strong>Recommendation:</strong> Trim titles to 55-60 characters while front-loading core target keywords (e.g., &#x27;M16–M22 Pole Lifter Configuration (180–260mm) | volvet&#x27;).</p>
+  </div>
+  <div class="action-item medium">
+    <h4>47 Meta Descriptions Exceed 160 Characters <span class="status-warn">Medium</span></h4>
+    <p>47 pages have descriptions ranging from 161 to 225 characters (e.g., /es/equipment/ at 225 chars), causing search engines to truncate sentences mid-phrase.</p>
+    <p><strong>Recommendation:</strong> Condense descriptions to 140-155 characters with clear B2B procurement calls-to-action.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Punctuation and Typography Spacing Glitches in H1 Tags <span class="status-warn">Low</span></h4>
+    <p>Multiple H1 headings lack spacing after sentence-terminating periods, such as &#x27;Light pole lifting.Made portable.&#x27; and &#x27;Calculate a scenario.Keep the assumptions.&#x27;. Additionally, &#x27;lightpole&#x27; is written as a single compound word on the equipment page.</p>
+    <p><strong>Recommendation:</strong> Ensure proper spacing after periods (&#x27;Light pole lifting. Made portable.&#x27;) and use standard terminology (&#x27;light pole&#x27;).</p>
+  </div>
+  <hr class="divider">
+  <h3>2.4 Schema &amp; Structured Data</h3>
+  <p><strong>Score:</strong> <span class="status-pass">88/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>100% schema deployment across all 143 pages with 0 JSON syntax errors</li>
+    <li>Proper deployment of Organization, WebSite, BreadcrumbList, Product, TechArticle, and FAQPage</li>
+    <li>Rich PropertyValue specification cards embedded in Product schema</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Product Schema Missing &#x27;offers&#x27; and Product Identifiers <span class="status-warn">Medium</span></h4>
+    <p>Product schema on configuration pages omits the &#x27;offers&#x27; property, triggering Google Rich Result warnings in Search Console. It also lacks &#x27;sku&#x27; and &#x27;mpn&#x27;.</p>
+    <p><strong>Recommendation:</strong> Include an Offer object with availability (&#x27;https://schema.org/InStock&#x27;) and priceSpecification or price on request, plus an MPN/SKU identifier.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Organization Schema Lacks sameAs Entity Links &amp; Physical Address <span class="status-warn">Low</span></h4>
+    <p>Organization schema lists name, description, logo, and contactPoint, but lacks sameAs links to official social profiles, registries, and physical company address.</p>
+    <p><strong>Recommendation:</strong> Add sameAs links and PostalAddress in Organization schema to solidify Google Knowledge Graph entity mapping.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>TechArticle Schema Omits Explicit Author Object <span class="status-warn">Low</span></h4>
+    <p>Guide pages deploy TechArticle schema without an explicit Person or Organization author entity.</p>
+    <p><strong>Recommendation:</strong> Add author: {&#x27;@type&#x27;: &#x27;Organization&#x27;, &#x27;name&#x27;: &#x27;volvet Technical Engineering Team&#x27;} to TechArticle schema.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.5 Performance (Core Web Vitals)</h3>
+  <p><strong>Score:</strong> <span class="status-warn">78/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Zero-JS / minimal-JS static architecture with zero framework client hydration overhead</li>
+    <li>Tiny external CSS payload (31.5 KB total across 2 files)</li>
+    <li>Web font (/fonts/geologica-latin.woff2 - 24.6 KB) preloaded with crossorigin</li>
+    <li>Above-the-fold hero image preloaded with fetchpriority=&#x27;high&#x27;</li>
+    <li>Sub-150ms TTFB on Vercel Global Edge Network</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Heavy Uncompressed Reference Images (2.55 MB on Homepage) <span class="status-warn">High</span></h4>
+    <p>Three reference jobsite photos on the homepage are served as uncompressed JPEGs: jobsite-rural-solar-street-light.jpg (897 KB), jobsite-parking-lot-tight-space.jpg (834 KB), jobsite-sidewalk-municipal-road.jpg (819 KB). Total image payload is 2.55 MB for 3 thumbnail cards.</p>
+    <p><strong>Recommendation:</strong> Convert all content images to WebP/AVIF format and scale them to their display dimensions (680x380 px at 80% quality), reducing file size from 850 KB to ~35 KB per image (94% savings).</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Hero Image Served as 196 KB PNG Without Modern Format Variants <span class="status-warn">Medium</span></h4>
+    <p>The hero cutout image (/images/product/portable-pole-lifter-hero-cutout.png) is a 195.7 KB PNG file without WebP/AVIF fallback or picture srcset element.</p>
+    <p><strong>Recommendation:</strong> Provide WebP/AVIF version with alpha channel to cut hero payload down to ~45 KB.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.6 AI Search &amp; GEO Readiness</h3>
+  <p><strong>Score:</strong> <span class="status-pass">92/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>llms.txt (6.8 KB) and llms-full.txt (59.3 KB) deployed and fully accessible at domain root</li>
+    <li>robots.txt explicitly allows GPTBot, ChatGPT-User, ClaudeBot, PerplexityBot, Bytespider, and OAI-SearchBot</li>
+    <li>Fully server-rendered content (911 words on homepage) accessible without headless browser execution</li>
+    <li>Systematic F001-F031 physical fact cards providing grounded engineering data for LLM citation</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>llms.txt Formatting Hygiene Warnings <span class="status-warn">Low</span></h4>
+    <p>llms.txt includes parameter specifications under H2 headings rather than link lists [Title](URL) as proposed in llmstxt.org v2, producing 11 item-without-link parser notes.</p>
+    <p><strong>Recommendation:</strong> Refactor llms.txt so general specifications precede the first H2, and H2 sections consist strictly of markdown links to published articles and data sheets.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Well-Known AI Discovery Files Absent <span class="status-warn">Low</span></h4>
+    <p>Probes to /.well-known/ai-catalog.json and /.well-known/agent-card.json return HTTP 404.</p>
+    <p><strong>Recommendation:</strong> Optionally deploy ai-catalog.json and agent-card.json to advertise machine-readable endpoints.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.7 Images</h3>
+  <p><strong>Score:</strong> <span class="status-pass">80/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Descriptive, keyword-rich alt text on 100% of content photos</li>
+    <li>Explicit width and height HTML attributes preventing Cumulative Layout Shift (CLS)</li>
+    <li>Native loading=&#x27;lazy&#x27; attribute configured on all below-the-fold images</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Tracking / Spacer 1x1 Base64 GIF Lacks Alt Tag <span class="status-warn">Low</span></h4>
+    <p>Base64 1x1 spacer GIF present across all pages lacks alt=&#x27;&#x27; attribute or role=&#x27;presentation&#x27;, creating an accessibility/SEO audit warning.</p>
+    <p><strong>Recommendation:</strong> Add alt=&#x27;&#x27; or aria-hidden=&#x27;true&#x27; to the spacer image element.</p>
+  </div>
+  <hr class="divider">
+</div>
+
+<!-- ======================================================= 3. ACTION PLAN === -->
+<div class="section">
+  <div class="section-header">
+    <h2>3. Action Plan</h2>
+  </div>
+
+  <div class="roadmap-phase">
+    <h4>Phase 1: Critical Fixes &amp; Infrastructure Routing <span class="effort">Week 1 (P0)</span></h4>
+    <ul>
+      <li>Configure permanent 308 redirects in vercel.json: /sitemap.xml -&gt; /sitemap-index.xml, /equipment/ -&gt; /products/light-pole-jack/, /pricing-plan/ -&gt; /quote/.</li>
+      <li>Fix bare domain HTTP redirect chain in Vercel to ensure single-hop http://velolev.org -&gt; https://www.velolev.org/.</li>
+      <li>Add corporate entity clarification on /about-us/ and Organization schema linking the velolev.org domain with the volvet brand identity.</li>
+      <li>Add Content-Security-Policy (CSP) header in vercel.json.</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Phase 2: High-Impact Performance &amp; Metadata Optimization <span class="effort">Weeks 2-3 (P1)</span></h4>
+    <ul>
+      <li>Batch convert and optimize all jobsite evidence images and hero PNG to WebP/AVIF, slashing ~2.4 MB from the homepage payload.</li>
+      <li>Trim 37 page titles exceeding 65 characters to 55-60 characters to eliminate Google SERP truncation.</li>
+      <li>Condense 47 meta descriptions exceeding 160 characters down to 140-155 characters with clear procurement CTAs.</li>
+      <li>Fix typography and punctuation spacing in H1 tags (&#x27;Light pole lifting. Made portable.&#x27;).</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Phase 3: Schema Enrichment &amp; International Expansion <span class="effort">Month 2 (P2)</span></h4>
+    <ul>
+      <li>Enrich Product schema with Offer / AggregateOffer RFQ details, MPN, and SKU identifiers.</li>
+      <li>Add sameAs social/corporate links and PostalAddress to Organization schema; add author entity to TechArticle schema.</li>
+      <li>Align localized URL path conventions between English and international locales (/products/ vs /equipment/).</li>
+      <li>Translate 5 equipment configuration pages into Spanish, French, Portuguese, Vietnamese, Thai, and Indonesian.</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Phase 4: Monitoring, Verification &amp; AI Search Upgrades <span class="effort">Ongoing (P3)</span></h4>
+    <ul>
+      <li>Connect Google Search Console and GA4 to monitor indexation and organic query impressions.</li>
+      <li>Refactor llms.txt to comply with llmstxt.org v2 format standards.</li>
+      <li>Implement dynamic lastmod timestamps in sitemap generation linked to content file modification dates.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ======================================================= DATA SOURCES & METHODOLOGY === -->
+<div class="section" style="text-align: center; padding-top: 15mm;">
+  <hr class="divider">
+  <h3 style="text-align: left;">Data Sources &amp; Methodology</h3>
+  <table>
+    <thead>
+      <tr><th>Source</th><th>Description</th><th>Update Frequency</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>PageSpeed Insights API</td>
+          <td>Lighthouse lab audit (mobile emulation, Moto G Power, slow 4G)</td>
+          <td>Real-time</td></tr>
+      <tr><td>Chrome UX Report (CrUX)</td>
+          <td>28-day rolling field data from real Chrome users</td>
+          <td>Daily ~04:00 UTC</td></tr>
+      <tr><td>CrUX History API</td>
+          <td>25-week p75 trend data per metric</td>
+          <td>Weekly</td></tr>
+      <tr><td>Google Search Console</td>
+          <td>Search Analytics (clicks, impressions, CTR, position)</td>
+          <td>2-3 day lag</td></tr>
+      <tr><td>URL Inspection API</td>
+          <td>Per-URL index status, coverage state, crawl info</td>
+          <td>Real-time (2,000/day)</td></tr>
+    </tbody>
+  </table>
+  <p style="color: #94a3b8; font-size: 9pt; margin-top: 5mm;">
+    Report generated by Claude SEO (Google SEO Intelligence Skill), November 11, 2026<br>
+    Methodology based on Google Web Vitals thresholds, Search Console documentation, and Lighthouse scoring algorithms.
+  </p>
+</div>
+
+</body>
+</html>

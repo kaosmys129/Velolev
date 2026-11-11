@@ -15,7 +15,7 @@ import {verifyBuiltVersion} from './lib/source-fingerprint.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),version=verifyBuiltVersion(root);
 const out=join(root,'../docs/content-strategy/qa-multilingual');mkdirSync(out,{recursive:true});
-const directory=mkdtempSync(join(tmpdir(),'volvet-language-qa-'));
+const directory=mkdtempSync(join(tmpdir(),'velolev-language-qa-'));
 const {server,store}=createInquiryServer({directory,adminToken:randomBytes(36).toString('base64url'),testMode:true,rateLimit:200,logger:{error(){}}});
 server.listen(0,'127.0.0.1');await once(server,'listening');
 const base=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({headless:true});
@@ -92,7 +92,7 @@ try{
    const notes=await page.locator('[name="message"]').inputValue();
    check(notes.startsWith(t('Visitor-entered scenario; not a quotation or suitability approval.')),`${locale}: translated scenario reaches quote form`);
    check(notes.length<=3000,`${locale}: scenario fits inquiry limit`);
-   check(await page.evaluate(()=>sessionStorage.getItem('volvet-roi-inquiry')===null),`${locale}: consumed scenario removed`);
+   check(await page.evaluate(()=>sessionStorage.getItem('velolev-roi-inquiry')===null),`${locale}: consumed scenario removed`);
    await page.locator('[name="name"]').fill(`Controlled language QA ${locale}`);await page.locator('[name="email"]').fill(`language-${locale}@example.invalid`);await page.locator('[name="country"]').fill('Controlled QA destination');
    await page.locator('[name="consent"]').check();await page.locator('[data-inquiry-form] [type="submit"]').click();
    await page.locator('[data-inquiry-success]').waitFor({state:'visible'});
@@ -104,7 +104,7 @@ try{
    await page.locator('[data-inquiry-form] [type="submit"]').click();await page.locator('[data-error-for="phone"]').filter({hasText:t('Enter a valid phone number.')}).waitFor();
    check(true,`${locale}: real server field error shown in local language`);
    check(await page.locator('[name="phone"]').inputValue()==='invalid-phone',`${locale}: validation retains entered data`);
-   await page.evaluate(locale=>sessionStorage.setItem('volvet-roi-inquiry',JSON.stringify({version:2,locale,createdAt:Date.now()-31*60000,notes:'Expired scenario must not be copied'})),locale);
+   await page.evaluate(locale=>sessionStorage.setItem('velolev-roi-inquiry',JSON.stringify({version:2,locale,createdAt:Date.now()-31*60000,notes:'Expired scenario must not be copied'})),locale);
    await goto(page,path('quote')+'?context=roi');check(await page.locator('[name="message"]').inputValue()==='',`${locale}: expired scenario rejected`);
 
    await goto(page,path('resources'));

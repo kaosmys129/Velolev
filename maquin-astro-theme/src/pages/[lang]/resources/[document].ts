@@ -3,7 +3,7 @@ import {documentNames,localizedSpecification,localizedSpecificationCsv,localized
 export function getStaticPaths(){return industrialLocales.flatMap(lang=>documentNames.map(document=>({params:{lang,document}})));}
 export function GET({params}){
  const {lang,document}=params;
- const json=document==='volvet-specifications.json';
- const body=json?JSON.stringify(localizedSpecification(lang),null,2)+'\n':document==='volvet-specifications.csv'?localizedSpecificationCsv(lang):localizedProjectWorksheet(lang);
+ const json=document==='velolev-specifications.json'||document==='volvet-specifications.json';
+ const body=json?JSON.stringify(localizedSpecification(lang),null,2)+'\n':(document==='velolev-specifications.csv'||document==='volvet-specifications.csv')?localizedSpecificationCsv(lang):localizedProjectWorksheet(lang);
  return new Response(body,{headers:{'Content-Type':json?'application/json; charset=utf-8':'text/csv; charset=utf-8','Content-Disposition':`attachment; filename="${lang}-${document}"`}});
 }

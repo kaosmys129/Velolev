@@ -1,5 +1,5 @@
 /**
- * volvet 工业机械 - 邮件订阅者数据存储 (SQLite)
+ * velolev 工业机械 - 邮件订阅者数据存储 (SQLite)
  * 严格保持在私有目录，防止暴露于前端公网资源
  */
 import { DatabaseSync } from "node:sqlite";

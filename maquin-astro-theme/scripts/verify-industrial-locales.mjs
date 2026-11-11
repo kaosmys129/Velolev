@@ -59,7 +59,7 @@ for(const locale of industrialLocales){
       const englishNodes=all(english);
       for(const name of ['alt','aria-label','title','placeholder','data-caption','data-label','data-alt','data-enlarge-template','data-ready-template']){
         const englishValues=new Set(englishNodes.map(n=>attrs(n)[name]).filter(Boolean));
-        for(const n of nodes){const value=attrs(n)[name];if(!value||!/[A-Za-z]{3}/.test(value)||!englishValues.has(value)||authoredNative.has(value)||value==='volvet')continue;
+        for(const n of nodes){const value=attrs(n)[name];if(!value||!/[A-Za-z]{3}/.test(value)||!englishValues.has(value)||authoredNative.has(value)||value==='velolev'||value==='volvet')continue;
           if(copy[value]!==value&&extra[locale][value]!==value&&!intentionalSame.has(value)&&![...Object.values(languageNames),...Object.values(languageLabels[locale])].includes(value))assert.fail(`Untranslated ${name}: ${value}`);
           // Language picker names are explicitly authored in the language UI.
           if(name==='aria-label'&&/^(Choose language|Choose language:)/.test(value))assert.fail(`English language picker: ${value}`);
@@ -77,7 +77,7 @@ for(const locale of industrialLocales){
     check(`${path}: localized content and metadata`,()=>{
       const title=nodes.find(n=>n.tagName==="title")?.childNodes?.[0]?.value;
       assert.ok(title&&!/Project inquiry|Project Quotation/.test(title));
-      for(const n of nodes){if(n.nodeName!=="#text"||["script","style"].includes(n.parentNode?.tagName))continue;const value=n.value.trim().replace(/\s+/g," ");if([...Object.values(languageNames),...Object.values(languageLabels[locale]),"volvet","© 2026 volvet"].includes(value))continue;
+      for(const n of nodes){if(n.nodeName!=="#text"||["script","style"].includes(n.parentNode?.tagName))continue;const value=n.value.trim().replace(/\s+/g," ");if([...Object.values(languageNames),...Object.values(languageLabels[locale]),"velolev","© 2026 velolev","volvet","© 2026 volvet"].includes(value))continue;
         if(englishText.has(value)&&/[A-Za-z]{3}/.test(value)&&copy[value]!==value&&extra[locale][value]!==value&&!authoredNative.has(value))assert.fail(`Untranslated text: ${value}`);}
       if(key==="product"){const visible=nodes.filter(n=>n.nodeName==="#text"&&!["script","style"].includes(n.parentNode?.tagName)).map(n=>n.value).join(" ");for(const token of ["300 kg","24 V","85 kg","M24",">50",">3000"])assert.ok(visible.includes(token),token);}
     });

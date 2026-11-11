@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * volvet 工业机械 - EDM 邮件营销与技术简报群发脚本
+ * velolev 工业机械 - EDM 邮件营销与技术简报群发脚本
  * 
  * 使用方式:
  *   node scripts/send-edm.mjs --dry-run
@@ -49,7 +49,7 @@ const defaultCampaign = {
       <p style="margin:0 0 8px 0;font-size:13px;line-height:1.6;">• <strong>Transport Logistics</strong>: Split two-module configuration (45 kg hydraulic module + 40 kg electrical cabinet, 85 kg total).</p>
       <p style="margin:0;font-size:13px;line-height:1.6;">• <strong>Listed Rating & Power</strong>: 12 m pole class, 300 kg rated load, and 24 V rechargeable battery (field validation pending).</p>
     </div>
-    <p>The specification summary and interactive cost scenario calculator are available on the volvet procurement engineering portal.</p>
+    <p>The specification summary and interactive cost scenario calculator are available on the velolev procurement engineering portal.</p>
   `,
   ctaText: "Open Interactive Cost Calculator →",
   ctaUrl: `${process.env.PUBLIC_ORIGIN || "https://www.velolev.org"}/tools/roi-calculator/`,
@@ -62,7 +62,7 @@ const defaultCampaign = {
 
 async function main() {
   console.log("====================================================");
-  console.log("volvet Industrial EDM Campaign Dispatch Tool");
+  console.log("velolev Industrial EDM Campaign Dispatch Tool");
   console.log("====================================================");
 
   let campaign = defaultCampaign;
