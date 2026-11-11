@@ -92,6 +92,11 @@ const lcpImage = article?.heroCoverImage || (page === "home" || page === "produc
     {origin&&alternates.map(a=><link rel="alternate" hreflang={a.lang} href={canonicalUrl(a.path,origin)}/>)}
     {origin&&!errorPage&&<link rel="alternate" hreflang="x-default" href={canonicalUrl(meta.path,origin)}/>}
     <meta name="google-site-verification" content={process.env.PUBLIC_GOOGLE_SITE_VERIFICATION || "I0C-9eeF0azvJLmlpSU5ANMNNbVlq1Vl7itR96HhvsY"} />
+    <meta name="msvalidate.01" content={process.env.PUBLIC_BING_SITE_VERIFICATION || "688E33B9448E1EBD330B6E8F9F845BAC"} />
+    {process.env.PUBLIC_YANDEX_SITE_VERIFICATION && <meta name="yandex-verification" content={process.env.PUBLIC_YANDEX_SITE_VERIFICATION} />}
+    {process.env.PUBLIC_NAVER_SITE_VERIFICATION && <meta name="naver-site-verification" content={process.env.PUBLIC_NAVER_SITE_VERIFICATION} />}
+    {process.env.PUBLIC_BAIDU_SITE_VERIFICATION && <meta name="baidu-site-verification" content={process.env.PUBLIC_BAIDU_SITE_VERIFICATION} />}
+    {process.env.PUBLIC_SOGOU_SITE_VERIFICATION && <meta name="sogou-site-verification" content={process.env.PUBLIC_SOGOU_SITE_VERIFICATION} />}
     <link rel="icon" href="/brand/volvet-wordmark.svg" type="image/svg+xml"/>
     <link rel="preload" href="/fonts/geologica-latin.woff2" as="font" type="font/woff2" crossorigin/>
     {lcpImage&&<link rel="preload" as="image" href={lcpImage} fetchpriority="high"/>}
