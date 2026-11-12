@@ -86,6 +86,9 @@ const lcpImage = article?.heroCoverImage || (page === "home" || page === "produc
 <html lang={current}>
   <head>
     <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+    {origin && !errorPage && (
+      <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${process.env.PUBLIC_GA4_MEASUREMENT_ID||"G-4Q24SC9CKE"}');(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${process.env.PUBLIC_GA4_MEASUREMENT_ID||"G-4Q24SC9CKE"}';document.head.appendChild(s);})();`}></script>
+    )}
     <title>{title}</title><meta name="description" content={description}/>
     {(!origin||errorPage)&&<meta name="robots" content="noindex,nofollow"/>}
     {canonical&&<link rel="canonical" href={canonical}/>}

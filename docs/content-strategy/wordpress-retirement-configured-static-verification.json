@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "sourceDigest": "fc7f160fc3f8a9b111e6b3a153c49b5410d6b98cfb6d7c4d73d9da28818655f3",
+  "sourceDigest": "bcfbbddbaef17bf9cc383b8141bafa693b1fd72b9e5d9b28178fe669115fa229",
   "assetDigest": "0d66cec69235266f6bae539cd50014382c3e1b8b4a59c165db7f15a284972bfd",
   "snapshotDigest": null,
   "origin": "https://www.velolev.org",
@@ -9,7 +9,7 @@
   "modernPublicHtml": 144,
   "redirects": 85,
   "wordpressFiles": 0,
-  "buildBytes": 31968033,
+  "buildBytes": 32012792,
   "checks": 707,
   "failures": []
 }
