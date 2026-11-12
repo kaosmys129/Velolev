@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "submissionTimestamp": "2026-11-12T12:22:44+08:00",
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "host": "www.velolev.org",
+  "key": "5e672439aa59958dfc91438cbfa2b00c",
+  "keyLocation": "https://www.velolev.org/5e672439aa59958dfc91438cbfa2b00c.txt",
+  "keyVerificationStatus": "HTTP/2 200 OK (verified live on production)",
+  "totalUrlsSubmitted": 143,
+  "batches": 1,
+  "httpResponseStatus": 200,
+  "responseMessage": "OK",
+  "scope": "All modern canonical pages extracted from dist/sitemap-0.xml after 4-phase SEO remediation",
+  "targetEngines": [
+    "Microsoft Bing",
+    "Yandex",
+    "Seznam.cz",
+    "Naver",
+    "Downstream AI engines (Microsoft Copilot, ChatGPT Search)"
+  ]
+}
