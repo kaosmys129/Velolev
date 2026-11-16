@@ -33,7 +33,7 @@ export class InquiryStore {
       return this.receipt(existing,true);
     }
     const id = randomUUID(), createdAt = new Date().toISOString();
-    const reference = `VOL-${createdAt.slice(0,10).replaceAll("-","")}-${id.slice(0,8).toUpperCase()}`;
+    const reference = `VEL-${createdAt.slice(0,10).replaceAll("-","")}-${id.slice(0,8).toUpperCase()}`;
     try {
       this.db.prepare(`INSERT INTO inquiries (id,reference,idempotency_key,digest,created_at,is_test,payload,attachment_name,attachment_type,attachment_size,attachment)
         VALUES (?,?,?,?,?,?,?,?,?,?,?)`).run(id,reference,key,digest,createdAt,this.testMode?1:0,JSON.stringify(payload),attachment?.name??null,attachment?.type??null,attachment?.size??null,attachment?.bytes??null);

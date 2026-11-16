@@ -1,5 +1,5 @@
 {
-  "sourceDigest": "33f16338573a273da343cba65fd7cff87721b8bbb2f56cf85e710c3efede5c83",
+  "sourceDigest": "a4082949ea80e3fcd6bc231dbd48414a3fa265aee4872bb1c533897400e040ce",
   "assetDigest": "5193b91078a0748ce9eaaaadabfcec5ff7be7ffcc9c085580a36817d3593dae5",
   "snapshotDigest": null,
   "origin": "https://www.velolev.org",
@@ -1429,31 +1429,31 @@
   "controlledInquiries": [
     {
       "locale": "en",
-      "reference": "VOL-20261116-E95108A7"
+      "reference": "VEL-20261116-8B5A992E"
     },
     {
       "locale": "es",
-      "reference": "VOL-20261116-9D10E85A"
+      "reference": "VEL-20261116-A828165E"
     },
     {
       "locale": "fr",
-      "reference": "VOL-20261116-2FE254E4"
+      "reference": "VEL-20261116-E8A87790"
     },
     {
       "locale": "pt",
-      "reference": "VOL-20261116-BB73F9DF"
+      "reference": "VEL-20261116-7CC4ACEE"
     },
     {
       "locale": "vi",
-      "reference": "VOL-20261116-421AA532"
+      "reference": "VEL-20261116-66F2E109"
     },
     {
       "locale": "th",
-      "reference": "VOL-20261116-3CA794F7"
+      "reference": "VEL-20261116-AED61713"
     },
     {
       "locale": "id",
-      "reference": "VOL-20261116-7C666CF0"
+      "reference": "VEL-20261116-B7F81423"
     }
   ],
   "testDataOnly": true,

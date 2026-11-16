@@ -22,7 +22,7 @@ function tempWorkspace(t) {
 
 test("email templates render valid industrial layout with escaped parameters", () => {
   const dummyInquiry = {
-    reference: "VOL-20261030-TEST1234",
+    reference: "VEL-20261030-TEST1234",
     name: "John & Sons <Engineering>",
     company: "Road Infra Ltd",
     email: "john@example.com",
@@ -41,7 +41,7 @@ test("email templates render valid industrial layout with escaped parameters", (
 
   // 1. 管理员通知邮件
   const adminMail = renderInquiryAdminEmail(dummyInquiry);
-  assert.match(adminMail.subject, /VOL-20261030-TEST1234/);
+  assert.match(adminMail.subject, /VEL-20261030-TEST1234/);
   assert.match(adminMail.html, /John &amp; Sons &lt;Engineering&gt;/);
   assert.match(adminMail.html, /specs\.pdf/);
   assert.match(adminMail.text, /Melbourne/);
@@ -49,7 +49,7 @@ test("email templates render valid industrial layout with escaped parameters", (
   // 2. 客户确认邮件
   const customerMail = renderInquiryCustomerEmail(dummyInquiry);
   assert.match(customerMail.subject, /Inquiry Receipt Confirmation/);
-  assert.match(customerMail.html, /VOL-20261030-TEST1234/);
+  assert.match(customerMail.html, /VEL-20261030-TEST1234/);
   assert.match(customerMail.html, /Australia/);
   assert.match(customerMail.text, /What happens next/);
 
@@ -140,7 +140,7 @@ test("email service operates in mock mode without api key and triggers inquiry n
 
   // 发送询盘邮件
   const result = await service.sendInquiryNotifications({
-    reference: "VOL-20261030-MOCK0001",
+    reference: "VEL-20261030-MOCK0001",
     name: "Alex",
     company: "Lighting Corp",
     email: "alex@example.com",
@@ -152,7 +152,7 @@ test("email service operates in mock mode without api key and triggers inquiry n
   assert.equal(result.admin.mock, true);
   assert.equal(result.customer.success, true);
   assert.equal(result.customer.mock, true);
-  assert(logs.some(l => l.includes("VOL-20261030-MOCK0001")));
+  assert(logs.some(l => l.includes("VEL-20261030-MOCK0001")));
 });
 
 test("inquiry server handles subscribe, unsubscribe and admin subscriber queries", async (t) => {

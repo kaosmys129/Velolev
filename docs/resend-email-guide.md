@@ -78,7 +78,7 @@ cp .env.example .env
 - **收件人**：`ADMIN_NOTIFICATION_EMAIL` (例如 `sales@velolev.org`)
 - **主题**：`[New Inquiry] {reference} - {company/name} ({country})`
 - **邮件内容**：
-  - 专属询盘唯一追踪号（如 `VOL-20261030-ABCD1234`）
+  - 专属询盘唯一追踪号（如 `VEL-20261030-ABCD1234`）
   - 客户全套基本信息（姓名、公司、邮箱、电话、目的地国家）
   - 工程选型技术参数（杆高、总重、法兰规格、应用场景、采购数量）
   - 客户留下的项目详细需求留言
