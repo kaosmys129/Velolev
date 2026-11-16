@@ -73,7 +73,16 @@
       ]
     },
     {
-      "source": "/(.*)\\.(csv|json)",
+      "source": "/:path*.csv",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/:path*.json",
       "headers": [
         {
           "key": "X-Robots-Tag",
