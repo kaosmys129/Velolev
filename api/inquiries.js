@@ -143,21 +143,33 @@ export default async function handler(req, res) {
       isTest
     };
 
-    // 如果配置了 Resend，异步发送邮件通知给管理员
-    if (process.env.RESEND_API_KEY && process.env.ADMIN_NOTIFICATION_EMAIL && !isTest) {
-      fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${process.env.RESEND_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          from: process.env.RESEND_FROM_EMAIL || "velolev <inquiries@velolev.org>",
-          to: [process.env.ADMIN_NOTIFICATION_EMAIL],
-          subject: `[velolev] New B2B Inquiry: ${reference} (${country || "Global"})`,
-          text: `A new inquiry has been received:\n\nReference: ${reference}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCountry: ${country}\nMessage: ${message}\nLocale: ${locale}\nTime: ${now.toISOString()}`
-        })
-      }).catch(err => console.error("Resend notify error:", err));
+    // 如果配置了 Resend，发送邮件通知给管理员 (采用 await 确保 Serverless 环境下完整投递)
+    if (process.env.RESEND_API_KEY && process.env.ADMIN_NOTIFICATION_EMAIL) {
+      let fromSender = process.env.RESEND_FROM_EMAIL || "velolev <onboarding@resend.dev>";
+      // 安全降级：Resend 官方规则严禁未验证的 @gmail.com 作为发件人，若误配则自动使用官方沙箱发件人
+      if (/@gmail\.com/i.test(fromSender)) {
+        fromSender = "velolev <onboarding@resend.dev>";
+      }
+      try {
+        const resendRes = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${process.env.RESEND_API_KEY}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            from: fromSender,
+            to: [process.env.ADMIN_NOTIFICATION_EMAIL],
+            reply_to: email || process.env.RESEND_REPLY_TO || undefined,
+            subject: `[velolev] New B2B Inquiry: ${reference} (${country || "Global"})`,
+            text: `A new inquiry has been received:\n\nReference: ${reference}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCountry: ${country}\nMessage: ${message}\nLocale: ${locale}\nTime: ${now.toISOString()}`
+          })
+        });
+        const resendData = await resendRes.json();
+        console.log("Resend API response:", resendRes.status, resendData);
+      } catch (err) {
+        console.error("Resend notify error:", err);
+      }
     }
 
     return res.status(201).json({ receipt });
