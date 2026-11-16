@@ -45,16 +45,31 @@ export default async function handler(req, res) {
     let isTest = false;
 
     if (contentType.includes("application/json")) {
-      const data = JSON.parse(rawBuffer.toString("utf8"));
-      name = data.name || "";
-      email = data.email || "";
-      phone = data.phone || "";
-      country = data.country || "";
-      message = data.message || "";
-      locale = data.locale || "en";
-      isTest = Boolean(data.isTest || name.includes("TEST") || message.includes("TEST ONLY"));
+      try {
+        const data = JSON.parse(rawBuffer.toString("utf8"));
+        name = data.name || "";
+        email = data.email || "";
+        phone = data.phone || "";
+        country = data.country || "";
+        message = data.message || "";
+        locale = data.locale || "en";
+        isTest = Boolean(data.isTest || name.includes("TEST") || message.includes("TEST ONLY"));
+      } catch {
+        return res.status(400).json({
+          error: { code: "invalid_json", message: "Malformed JSON payload." }
+        });
+      }
+    } else if (contentType.includes("application/x-www-form-urlencoded")) {
+      const params = new URLSearchParams(rawBuffer.toString("utf8"));
+      name = params.get("name") || "";
+      email = params.get("email") || "";
+      phone = params.get("phone") || "";
+      country = params.get("country") || "";
+      message = params.get("message") || "";
+      locale = params.get("locale") || "en";
+      isTest = Boolean(name.includes("TEST") || message.includes("TEST ONLY"));
     } else {
-      // 兼容解析 multipart 或 urlencoded (支持完整 UTF-8 与连字符/换行字段)
+      // 兼容解析 multipart (支持完整 UTF-8 与连字符/换行字段)
       const text = rawBuffer.toString("utf8");
       const extract = (key) => {
         const regex = new RegExp(`name="${key}"(?:;[^\r\n]*)?(?:\\r?\\n){2}([\\s\\S]*?)(?:\\r?\\n--|$)`, "i");
