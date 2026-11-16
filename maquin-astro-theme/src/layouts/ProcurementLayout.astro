@@ -140,7 +140,7 @@ const lcpImage = article?.heroCoverImage || (page === "home" || page === "produc
     <MediaLightbox locale={current}/>
     <footer class="site-footer">
       <div class="footer-top"><a class="wordmark" href={homePath}><span aria-hidden="true">v</span>velolev</a><p>{t("Portable equipment.")}<br/>{t("Project-specific decisions.")}</p><a href={quotePath} class="text-link">{ui[3]} <span aria-hidden="true">↗</span></a></div>
-      <div class="footer-discovery">{[["solar","Solar lighting"],["parking","Parking & campus"],["compare","Compare methods"],["roi","Cost calculator"],["resources","Resources"],["faq","FAQ"],["about","About velolev"]].map(([key,label])=><a href={localizedPagePath(key,current)??corePages[key].path}>{t(label)}</a>)}</div>
+      <div class="footer-discovery">{[["solar","Solar lighting"],["parking","Parking & campus"],["compare","Compare methods"],["roi","Cost calculator"],["guides","Planning guides"],["resources","Resources"],["faq","FAQ"],["about","About velolev"]].map(([key,label])=><a href={localizedPagePath(key,current)??corePages[key].path}>{t(label)}</a>)}</div>
       <div class="footer-bottom"><p>© {new Date().getUTCFullYear()} velolev</p><div>{[["privacy","Privacy"],["terms","Terms"],["editorial","Information policy"]].map(([key,label])=><a href={localizedPagePath(key,current)??corePages[key].path}>{t(label)}</a>)}</div>
         <LanguageSwitcher locale={current} placement="footer" alternates={alternates}/>
       </div>

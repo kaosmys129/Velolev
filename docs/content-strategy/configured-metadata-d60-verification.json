@@ -1,5 +1,5 @@
 {
-  "sourceDigest": "fc7f160fc3f8a9b111e6b3a153c49b5410d6b98cfb6d7c4d73d9da28818655f3",
+  "sourceDigest": "d1e62e93de907f92ceb3f5a694396a3fe2514f51bf79db8f37f58ebae7a45250",
   "assetDigest": "0d66cec69235266f6bae539cd50014382c3e1b8b4a59c165db7f15a284972bfd",
   "date": "2026-10-28",
   "stage": "D31-D60",
@@ -164,6 +164,10 @@
     },
     {
       "name": "solar: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /guides/",
       "passed": true
     },
     {
@@ -583,6 +587,10 @@
       "passed": true
     },
     {
+      "name": "parking: linked resource /guides/",
+      "passed": true
+    },
+    {
       "name": "parking: linked resource /resources/",
       "passed": true
     },
@@ -987,6 +995,10 @@
       "passed": true
     },
     {
+      "name": "compare: linked resource /guides/",
+      "passed": true
+    },
+    {
       "name": "compare: linked resource /resources/",
       "passed": true
     },
@@ -1372,6 +1384,10 @@
     },
     {
       "name": "roi: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /guides/",
       "passed": true
     },
     {
@@ -1780,6 +1796,10 @@
     },
     {
       "name": "method: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /guides/",
       "passed": true
     },
     {
@@ -2192,6 +2212,10 @@
     },
     {
       "name": "resources: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /guides/",
       "passed": true
     },
     {
@@ -2628,6 +2652,10 @@
     },
     {
       "name": "faq: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /guides/",
       "passed": true
     },
     {
@@ -3076,6 +3104,10 @@
     },
     {
       "name": "about: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /guides/",
       "passed": true
     },
     {
@@ -3555,6 +3587,10 @@
       "passed": true
     },
     {
+      "name": "guides: linked resource /guides/",
+      "passed": true
+    },
+    {
       "name": "guides: linked resource /resources/",
       "passed": true
     },
@@ -3984,6 +4020,10 @@
     },
     {
       "name": "home: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /guides/",
       "passed": true
     },
     {
@@ -4419,6 +4459,10 @@
       "passed": true
     },
     {
+      "name": "product: linked resource /guides/",
+      "passed": true
+    },
+    {
       "name": "product: linked resource /resources/",
       "passed": true
     },
@@ -4823,6 +4867,10 @@
       "passed": true
     },
     {
+      "name": "compatibility: linked resource /guides/",
+      "passed": true
+    },
+    {
       "name": "compatibility: linked resource /resources/",
       "passed": true
     },
@@ -5208,6 +5256,10 @@
     },
     {
       "name": "quote: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /guides/",
       "passed": true
     },
     {
@@ -5599,6 +5651,10 @@
       "passed": true
     },
     {
+      "name": "contact: linked resource /guides/",
+      "passed": true
+    },
+    {
       "name": "contact: linked resource /resources/",
       "passed": true
     },
@@ -5984,6 +6040,10 @@
     },
     {
       "name": "privacy: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /guides/",
       "passed": true
     },
     {
@@ -6375,6 +6435,10 @@
       "passed": true
     },
     {
+      "name": "terms: linked resource /guides/",
+      "passed": true
+    },
+    {
       "name": "terms: linked resource /resources/",
       "passed": true
     },
@@ -6760,6 +6824,10 @@
     },
     {
       "name": "editorial: linked resource /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /guides/",
       "passed": true
     },
     {

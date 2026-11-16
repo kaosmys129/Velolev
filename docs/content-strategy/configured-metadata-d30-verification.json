@@ -188,6 +188,10 @@
       "passed": true
     },
     {
+      "name": "home: local link /guides/",
+      "passed": true
+    },
+    {
       "name": "home: local link /resources/",
       "passed": true
     },
@@ -424,6 +428,10 @@
       "passed": true
     },
     {
+      "name": "product: local link /guides/",
+      "passed": true
+    },
+    {
       "name": "product: local link /resources/",
       "passed": true
     },
@@ -632,6 +640,10 @@
       "passed": true
     },
     {
+      "name": "compatibility: local link /guides/",
+      "passed": true
+    },
+    {
       "name": "compatibility: local link /resources/",
       "passed": true
     },
@@ -821,6 +833,10 @@
     },
     {
       "name": "quote: local link /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /guides/",
       "passed": true
     },
     {
@@ -1016,6 +1032,10 @@
       "passed": true
     },
     {
+      "name": "contact: local link /guides/",
+      "passed": true
+    },
+    {
       "name": "contact: local link /resources/",
       "passed": true
     },
@@ -1205,6 +1225,10 @@
     },
     {
       "name": "privacy: local link /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /guides/",
       "passed": true
     },
     {
@@ -1400,6 +1424,10 @@
       "passed": true
     },
     {
+      "name": "terms: local link /guides/",
+      "passed": true
+    },
+    {
       "name": "terms: local link /resources/",
       "passed": true
     },
@@ -1589,6 +1617,10 @@
     },
     {
       "name": "editorial: local link /tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /guides/",
       "passed": true
     },
     {

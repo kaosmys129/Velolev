@@ -1,2 +1,2 @@
 import {specificationCsv} from "../../lib/specification-downloads.mjs";
-export const GET=()=>new Response(specificationCsv(),{headers:{"Content-Type":"text/csv; charset=utf-8","Content-Disposition":"attachment; filename=velolev-specifications.csv"}});
+export const GET=()=>new Response(specificationCsv(),{headers:{"Content-Type":"text/csv; charset=utf-8","Content-Disposition":"attachment; filename=velolev-specifications.csv","X-Robots-Tag":"noindex, nofollow"}});
