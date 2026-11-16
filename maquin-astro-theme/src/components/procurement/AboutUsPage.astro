@@ -9,6 +9,16 @@ import MilestoneTimeline from "./MilestoneTimeline.astro";
 import TeamGrid from "./TeamGrid.astro";
 const logisticsCopy=copy.ui;
 const quotePath = localizedPagePath("quote", current);
+const brandEntityNotes: Record<string, string> = {
+  en: "velolev is the dedicated international export and engineering distribution brand of volvet (Volvet Machinery / 沃维特), manufacturing portable hydraulic light pole lifters for crane-free municipal lighting installation.",
+  es: "velolev es la marca de exportación y distribución internacional de volvet (Volvet Machinery / 沃维特), suministrando elevadores hidráulicos portátiles de postes sin grúa.",
+  fr: "velolev est la marque internationale d'exportation et de distribution de volvet (Volvet Machinery / 沃维特), fournissant des lève-poteaux hydrauliques portables sans grue.",
+  pt: "velolev é a marca internacional de exportação e distribuição de volvet (Volvet Machinery / 沃维特), fornecendo elevadores hidráulicos portáteis de postes sem guindaste.",
+  vi: "velolev là thương hiệu xuất khẩu và phân phối quốc tế của volvet (Volvet Machinery / 沃维特), cung cấp máy nâng trụ đèn thủy lực di động không dùng cẩu.",
+  th: "velolev เป็นแบรนด์ส่งออกและจัดจำหน่ายระหว่างประเทศของ volvet (Volvet Machinery / 沃维特) นำเสนอเครื่องยกเสาไฟไฮดรอลิกแบบพกพาโดยไม่ต้องใช้รถเครน",
+  id: "velolev adalah merek ekspor dan distribusi internasional dari volvet (Volvet Machinery / 沃维特), menyediakan alat derek tiang hidrolik portabel tanpa derek berat."
+};
+const brandEntityNotice = brandEntityNotes[current] || brandEntityNotes.en;
 ---
 
 <main id="main" class="about-page-main" data-about-source="S4" data-field-validation={copy.fieldValidation} data-corporate-evidence={copy.corporateEvidence}>
@@ -21,6 +31,9 @@ const quotePath = localizedPagePath("quote", current);
         </div>
         <h1 class="hero-title">{copy.hero.title}</h1>
         <p class="lead hero-lead muted">{copy.hero.subtitle}</p>
+        <div class="brand-entity-note">
+          <p>{brandEntityNotice}</p>
+        </div>
       </div>
 
       <div class="stats-grid">
@@ -128,6 +141,8 @@ const quotePath = localizedPagePath("quote", current);
 .hero-badge-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .hero-title{font-size:clamp(34px,4.8vw,62px);font-weight:650;line-height:1.12;letter-spacing:-.035em;color:var(--ink);margin:16px 0 20px;overflow-wrap:anywhere}
 .hero-lead{font-size:18px;line-height:1.65;margin:0;overflow-wrap:anywhere}
+.brand-entity-note{margin-top:20px;padding:12px 18px;background:var(--white);border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:2px}
+.brand-entity-note p{font-size:13px;line-height:1.6;color:var(--ink);margin:0}
 .stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .stat-card{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:24px 20px;display:flex;flex-direction:column;justify-content:space-between;min-width:0;max-width:100%;border-left:3px solid var(--yellow);transition:transform .2s ease,border-color .2s ease}
 .stat-card:hover{border-color:var(--yellow);transform:translateY(-2px)}

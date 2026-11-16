@@ -5,7 +5,7 @@ import aboutCopy from "../data/about-copy.json" with { type: "json" };
 
 export { baseline };
 export const copyFor = (locale = "en") => copies[locale] ?? copies.en;
-const oldBrand = /\b(?:volvet|velvet|PoleLift)\b/gi;
+const oldBrand = /\b(?:velvet|PoleLift)\b/gi;
 const money = /[$€£¥]|\b(?:USD|EUR|CNY|IDR|BRL)\b|\bRp\s*\d|ดอลลาร์|đô\s*la/i;
 const bareLegacyPrice = /^\s*(?:1[,.\s]500|2[,.\s]500)\s*$/;
 const inventory = /\b(?:in\s*stock|out\s*of\s*stock|inventory|stock\s*(?:level|status)|instock|outofstock)\b|en stock|en existencia|em estoque|tồn kho|stok tersedia|สินค้าคงคลัง/i;
@@ -123,6 +123,7 @@ export function organizationSchema(origin, locale = "en") {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: baseline.brand.name,
+    alternateName: ["volvet", "Volvet Machinery", "沃维特"],
     description: desc,
     ...(origin ? {
       url: origin,
@@ -140,6 +141,48 @@ export function organizationSchema(origin, locale = "en") {
       "@type": "ContactPoint",
       contactType: "technical support & export inquiries",
       availableLanguage: ["English", "Spanish", "French", "Portuguese", "Vietnamese", "Thai", "Indonesian"]
+    }
+  };
+}
+
+export function webApplicationSchema(origin, path = "/tools/roi-calculator/", locale = "en") {
+  const url = origin ? new URL(path, origin).href : path;
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Mobile Crane vs. Hydraulic Lifter ROI Calculator",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "All",
+    browserRequirements: "Requires JavaScript. Requires HTML5.",
+    url,
+    description: "Interactive cost analysis and payback scenario calculator comparing crane rental expenses with the velolev portable hydraulic light pole lifter.",
+    creator: {
+      "@type": "Organization",
+      name: baseline.brand.name,
+      alternateName: ["volvet", "Volvet Machinery", "沃维特"],
+      ...(origin ? { url: origin } : {})
+    }
+  };
+}
+
+export function aboutPageSchema(origin, path = "/about-us/", locale = "en") {
+  const url = origin ? new URL(path, origin).href : path;
+  const desc = aboutCopy[locale]?.metaDescription || "Review velolev portable light pole lifter engineering focus, specification sources, and B2B project workflow.";
+  const title = aboutCopy[locale]?.metaTitle || "About velolev: Equipment & Information | velolev";
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: title,
+    description: desc,
+    url,
+    mainEntity: {
+      "@type": "Organization",
+      name: baseline.brand.name,
+      alternateName: ["volvet", "Volvet Machinery", "沃维特"],
+      ...(origin ? {
+        url: origin,
+        logo: `${origin}/brand/velolev-wordmark.svg`
+      } : {})
     }
   };
 }

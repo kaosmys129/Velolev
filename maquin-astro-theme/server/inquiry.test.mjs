@@ -65,6 +65,10 @@ test("HTTP receipt is only returned after a persisted record is available to aut
  const {url,store}=await app(t);const response=await post(url);assert.equal(response.status,201);const {receipt}=await response.json();
  assert.equal(receipt.status,"received");assert.equal(receipt.isTest,true);assert.equal(receipt.emailNotification,"not_configured");assert.equal(receipt.email,undefined);
  assert.equal(store.get(receipt.id).quantity,"2");
+ const resSlash=await fetch(url+"/api/inquiries/",{method:"POST",headers:{"Content-Type":"application/json","Idempotency-Key":randomUUID()},body:JSON.stringify(payload())});
+ assert.equal(resSlash.status,201);
+ const statusRes=await fetch(url+"/api/inquiry-status/");
+ assert.equal(statusRes.status,200);
  const detail=await admin(url,`/api/admin/inquiries/${receipt.id}`);assert.equal(detail.status,200);assert.equal((await detail.json()).item.reference,receipt.reference);
  const unauthorized=await fetch(url+"/api/admin/inquiries");assert.equal(unauthorized.status,401);
 });

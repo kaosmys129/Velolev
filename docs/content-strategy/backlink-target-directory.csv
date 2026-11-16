@@ -1,0 +1,61 @@
+platform_name,domain,estimated_da,tier,category,submission_url,link_type,target_volvet_page,outreach_status,notes
+GitHub Official Specs,github.com,98,Tier1,Open Source Specs,https://github.com/kaosmys129/portable-pole-lifter-specifications,dofollow,https://www.velolev.org/products/light-pole-jack/,completed,已上线包含完整JSON/CSV及全站语义回链
+Zenodo Academic Archive,zenodo.org,89,Tier1,Academic Citation,https://zenodo.org/deposit/new,dofollow,https://www.velolev.org/resources/,planned,获取工程白皮书与规格库的DOI权威引用
+ThomasNet,thomasnet.com,78,Tier1,B2B Directory,https://www.thomasnet.com/register/,dofollow,https://www.velolev.org/,blocked_by_captcha,DataDome商用验证码拦截需非自动化环境独立登记
+Kompass Global,kompass.com,74,Tier1,B2B Directory,https://us.kompass.com/register/company/,dofollow,https://www.velolev.org/,submitted,已提交企业建档意向申请等待客服对接
+Europages,europages.com,72,Tier1,B2B Directory,https://www.europages.co.uk/en/company-editor/2da7a334-7fa7-496b-a413-6f95056da52c/basic-info,dofollow,https://www.velolev.org/,completed,企业主页已建立(UUID:2da7a334-7fa7-496b-a413-6f95056da52c)并上架主打产品草稿
+GlobalSpec Engineering360,globalspec.com,76,Tier1,Engineering Directory,https://advertising.globalspec.com/list-your-products/,dofollow,https://www.velolev.org/products/light-pole-jack/,reviewed,已探明Product Discovery准入机制并锁定直接渠道sales@globalspec.com
+DirectIndustry,directindustry.com,70,Tier1,B2B Machinery,https://www.directindustry.com/contact-sales.html,dofollow,https://www.velolev.org/products/light-pole-jack/,planned,专注于工业设备与施工机械展示平台
+Crunchbase Company Profile,crunchbase.com,91,Tier1,Company Database,https://www.crunchbase.com/add-organization,nofollow,https://www.velolev.org/,planned,建立企业实体与品牌数字足迹
+LinkedIn Company Page,linkedin.com,99,Tier1,Professional Social,https://www.linkedin.com/company/setup/new/,dofollow,https://www.velolev.org/,completed,发布多语言工程长文与施工案例视频
+YouTube Official Channel,youtube.com,100,Tier1,Video Platform,https://www.youtube.com/,nofollow,https://www.velolev.org/,completed,视频简介带官网核心工具和法兰指南链接
+ResearchGate Technical Whitepaper,researchgate.net,93,Tier1,Academic Research,https://www.researchgate.net/,dofollow,https://www.velolev.org/guides/install-light-pole-without-crane/,planned,上传12米路灯安装工艺及力学分析论文
+SlideShare Presentation,slideshare.net,92,Tier1,Document Sharing,https://www.slideshare.net/upload,dofollow,https://www.velolev.org/tools/roi-calculator/,planned,上传路灯立杆施工成本与方案对比PPT
+Illuminating Engineering Society (IES),ies.org,68,Tier1,Industry Association,https://www.ies.org/standards/,dofollow,https://www.velolev.org/guides/pole-jack-compatibility/,planned,向照明工程学会提交标准安装工具与技术白皮书
+CIBSE (Chartered Institution of Building Services Engineers),cibse.org,69,Tier1,Engineering Institute,https://www.cibse.org/,dofollow,https://www.velolev.org/guides/install-light-pole-without-crane/,planned,向英国及国际建筑服务工程师协会推荐施工工法
+Construction Europe,construction-europe.com,61,Tier1,Construction Media,https://www.construction-europe.com/contact-us/,dofollow,https://www.velolev.org/,planned,欧洲施工机械专题投稿与新品报道
+Lighting Today,lighting-today.com,52,Tier1,Lighting Media,https://lighting-today.com/contact/,dofollow,https://www.velolev.org/solutions/solar-street-light-installation/,planned,亚太照明行业主流杂志与数字化专栏
+EC&M Magazine,ecmweb.com,64,Tier2,Electrical Engineering,https://www.ecmweb.com/page/contact-us,dofollow,https://www.velolev.org/tools/roi-calculator/,planned,向电气承包杂志投稿狭窄路段立杆施工方案
+Electrical Contractor Magazine,ecmag.com,63,Tier2,Electrical Contractor,https://www.ecmag.com/contact,dofollow,https://www.velolev.org/compare/pole-jack-vs-crane/,planned,电气承包商实用工具与设备对比分析
+Solar Power World,solarpowerworldonline.com,66,Tier2,Renewable Energy,https://www.solarpowerworldonline.com/editorial-submissions/,dofollow,https://www.velolev.org/solutions/solar-street-light-installation/,planned,太阳能路灯高空作业与分体式机械应用专栏
+Civil + Structural Engineer Media,csengineermag.com,58,Tier2,Civil Engineering,https://csengineermag.com/submit-content/,dofollow,https://www.velolev.org/guides/pole-jack-compatibility/,planned,土木与结构工程师杂志技术文章投稿
+Reddit r/electricians,reddit.com,97,Tier2,Community Forum,https://www.reddit.com/r/electricians/,nofollow,https://www.velolev.org/guides/pole-jack-compatibility/,in_progress,针对狭窄空间和吊车受限提问提供工程解答
+Eng-Tips Engineering Forums,eng-tips.com,65,Tier2,Engineering Forum,https://www.eng-tips.com/,nofollow,https://www.velolev.org/tools/roi-calculator/,in_progress,讨论市政路灯基础反力与吊车进场台班对比
+All About Circuits,allaboutcircuits.com,72,Tier2,Electrical Community,https://forum.allaboutcircuits.com/,nofollow,https://www.velolev.org/solutions/solar-street-light-installation/,in_progress,分享太阳能路灯整套装配立杆的电气与机械受力参数
+Quora Light Pole Discussions,quora.com,93,Tier2,Q&A Community,https://www.quora.com/topic/Street-Lights,nofollow,https://www.velolev.org/guides/install-light-pole-without-crane/,in_progress,系统回答路灯无吊车立杆操作流程与技术要求
+Mike Holt's Electrical Forum,forums.mikeholt.com,55,Tier2,Industry Forum,https://forums.mikeholt.com/,nofollow,https://www.velolev.org/guides/pole-jack-compatibility/,planned,全球最大电气工程师讨论区关于地脚螺栓和法兰讨论
+IndustryNet,industrynet.com,59,Tier2,Industrial Directory,https://www.industrynet.com/list,dofollow,https://www.velolev.org/,planned,美国本土制造企业与机电设备服务商名录
+MacRAE's Blue Book,macraesbluebook.com,58,Tier2,Industrial Directory,https://www.macraesbluebook.com/company_add.cfm,dofollow,https://www.velolev.org/,planned,北美百年老牌工业采购与机械目录
+IndustryStock,industrystock.com,62,Tier2,Global Directory,https://www.industrystock.com/en/company/register,dofollow,https://www.velolev.org/,planned,德国及欧洲主要机电装备企业搜索引擎
+SolarQuotes Australia,solarquotes.com.au,59,Tier2,Renewable Energy,https://www.solarquotes.com.au/,nofollow,https://www.velolev.org/solutions/solar-street-light-installation/,planned,澳大利亚太阳能工程与照明安装指南引用
+Civil Engineering Portal,engineeringcivil.com,51,Tier2,Civil Engineering,https://www.engineeringcivil.com/,dofollow,https://www.velolev.org/guides/install-light-pole-without-crane/,planned,土木工程技术方案与施工机械论文分享
+Lighting Design Alliance,lightingdesignalliance.com,45,Tier2,Lighting Design,https://lightingdesignalliance.com/,dofollow,https://www.velolev.org/guides/pole-jack-compatibility/,planned,照明设计师与施工协同工具推荐
+Renewable Energy World,renewableenergyworld.com,75,Tier2,Clean Tech Media,https://www.renewableenergyworld.com/write-for-us/,dofollow,https://www.velolev.org/solutions/solar-street-light-installation/,planned,针对离网光伏照明与微电网立杆机械投稿
+LightNOW News,lightnowblog.com,44,Tier2,Lighting Blog,https://lightnowblog.com/contact/,dofollow,https://www.velolev.org/products/light-pole-jack/,planned,北美照明行业前沿技术动态博客
+Lighting Controls Association,lightingcontrolsassociation.org,54,Tier2,Industry Association,https://lightingcontrolsassociation.org/,dofollow,https://www.velolev.org/resources/,planned,智慧照明与控制系统杆件快速架设解决方案
+Engineering.com,engineering.com,73,Tier2,Engineering Media,https://www.engineering.com/contact-us/,dofollow,https://www.velolev.org/tools/roi-calculator/,planned,工程技术人员必备的在线成本与结构核验工具
+Plant Engineering,plantengineering.com,60,Tier2,Plant Maintenance,https://www.plantengineering.com/contact-us/,dofollow,https://www.velolev.org/compare/pole-jack-vs-crane/,planned,厂区与园区照明杆维保无起重机施工方案
+Electrical Review UK,electricalreview.co.uk,53,Tier2,Electrical Industry,https://www.electricalreview.co.uk/contact-us/,dofollow,https://www.velolev.org/,planned,英国及欧洲电气工程前沿装备评测
+Civil Engineer Web,civilengineerweb.com,42,Tier2,Civil Portal,https://civilengineerweb.com/,dofollow,https://www.velolev.org/guides/install-light-pole-without-crane/,planned,基础工程与高耸构筑物便携起竖工法介绍
+QuimiNet Mexico,quiminet.com,64,Tier3,LATAM Directory,https://www.quiminet.com/registro/,dofollow,https://www.velolev.org/es/,planned,墨西哥与拉美最大工业设备采购与B2B黄页
+Cosmos Online Mexico,cosmos.com.mx,57,Tier3,LATAM Directory,https://www.cosmos.com.mx/alta/,dofollow,https://www.velolev.org/es/,planned,墨西哥主流工业制品与机械在线目录
+Directorio Industrial Mexico,directorioindustrial.mx,43,Tier3,LATAM Directory,https://directorioindustrial.mx/,dofollow,https://www.velolev.org/es/products/light-pole-jack/,planned,墨西哥本土工业机械与承包商名录
+Indiamart Supplier Profile,indiamart.com,82,Tier3,Asia B2B,https://seller.indiamart.com/,nofollow,https://www.velolev.org/,planned,南亚及东南亚重要机电进出口采购商机
+ThaiWebDirectory,thaiwebdirectory.com,41,Tier3,SEA Directory,https://www.thaiwebdirectory.com/,dofollow,https://www.velolev.org/th/,planned,泰国本土工程机械与电气工程商业目录
+Vietnam Yellow Pages,yellowpages.vnn.vn,48,Tier3,SEA Directory,https://www.yellowpages.vnn.vn/,dofollow,https://www.velolev.org/vi/,planned,越南全国企业名录机械制造分类入驻
+IndoTrading,indotrading.com,55,Tier3,SEA Directory,https://www.indotrading.com/,dofollow,https://www.velolev.org/id/,planned,印度尼西亚大型工业品与施工设备采办网
+B2B Manufacture,b2bmanufacture.com,50,Tier3,Global B2B,https://www.b2bmanufacture.com/,dofollow,https://www.velolev.org/,planned,全球机械制造商与外贸出口供应商名录
+KellySearch,kellysearch.com,56,Tier3,Global B2B,https://www.kellysearch.com/,dofollow,https://www.velolev.org/,planned,专业工业零部件与施工专用设备分类
+IndustryMart,industrymart.com,46,Tier3,Global B2B,https://www.industrymart.com/,dofollow,https://www.velolev.org/,planned,工业装备与自动化起重机械展示平台
+SourceForge Project Profile,sourceforge.net,92,Tier3,Tech Directory,https://sourceforge.net/create/,dofollow,https://www.velolev.org/resources/,planned,托管开源选型表与计算逻辑的镜像档案
+Product Hunt Maker,producthunt.com,90,Tier3,Tech Directory,https://www.producthunt.com/posts/new,nofollow,https://www.velolev.org/tools/roi-calculator/,planned,发布工程在线ROI测算器免费工具
+AlternativeTo,alternativeto.net,81,Tier3,Software Directory,https://alternativeto.net/software/add/,dofollow,https://www.velolev.org/compare/pole-jack-vs-crane/,planned,作为传统起重机租赁规划工具的轻量开源替代品
+npm Package Registry,npmjs.com,94,Tier3,Developer Ecosystem,https://www.npmjs.com/package/@volvet/portable-pole-lifter-specifications,dofollow,https://www.velolev.org/products/light-pole-jack/,planned,在开源包元数据中长期锚定官网规格主页
+jsDelivr CDN Mirror,jsdelivr.com,89,Tier3,CDN Mirror,https://www.jsdelivr.com/,dofollow,https://www.velolev.org/,planned,开源参数CDN分发中保留官方规范回链
+Instructables DIY & Engineering,instructables.com,91,Tier3,DIY / Engineering,https://www.instructables.com/,nofollow,https://www.velolev.org/guides/install-light-pole-without-crane/,planned,分享狭窄空间无起重机安装路灯的工程全流程步骤图解
+Medium Engineering Publication,medium.com,95,Tier3,Content Syndication,https://medium.com/new-story,nofollow,https://www.velolev.org/compare/pole-jack-vs-crane/,planned,发布深度技术对比文章并规范附注官网引用
+Substack Technical Column,substack.com,91,Tier3,Newsletter,https://substack.com/,nofollow,https://www.velolev.org/tools/roi-calculator/,planned,开设《Infrastructure Tooling Weekly》发布成本模型
+Flickr Construction Machinery,flickr.com,92,Tier3,Image Sharing,https://www.flickr.com/,nofollow,https://www.velolev.org/products/light-pole-jack/,planned,上传设备高清工况图并在图片描述中附带官网出处
+Vimeo Project Showcase,vimeo.com,95,Tier3,Video Showcase,https://vimeo.com/,nofollow,https://www.velolev.org/,planned,发布1080P现场施工视频并在视频简介中附带技术参数链接
+Behance Industrial Design,behance.net,92,Tier3,Design Portfolio,https://www.behance.net/,dofollow,https://www.velolev.org/,planned,展示分体式便携模块化工业结构设计与人机工程
+X (Twitter) Engineering Handle,x.com,94,Tier3,Social Media,https://x.com/,nofollow,https://www.velolev.org/,completed,发布每日工程技巧与最新多语言博客索引

@@ -135,13 +135,13 @@ export function createInquiryServer({
       if(req.headers.origin&&!allowedOrigins.has(req.headers.origin))throw new InquiryError(403,"origin_rejected","This request origin is not allowed.");
       if(req.headers["sec-fetch-site"]==="cross-site")throw new InquiryError(403,"origin_rejected","Cross-site submission is not allowed.");
       
-      // 1. 询盘系统状态
-      if(url.pathname==="/api/inquiry-status"&&req.method==="GET") {
+      // 1. 询盘系统状态 (兼容末尾斜杠)
+      if((url.pathname==="/api/inquiry-status"||url.pathname==="/api/inquiry-status/")&&req.method==="GET") {
         return json(res,200,{receiving:true,delivery:"private_inbox",emailNotification:isEmailConfigured?"resend":"not_configured",testMode});
       }
 
-      // 2. 询盘提交
-      if(url.pathname==="/api/inquiries"&&req.method==="POST") {
+      // 2. 询盘提交 (兼容末尾斜杠)
+      if((url.pathname==="/api/inquiries"||url.pathname==="/api/inquiries/")&&req.method==="POST") {
         const key=validateIdempotencyKey(req.headers["idempotency-key"]);
         const incoming=await body(req),data=validateInquiry(incoming.input),file=validateAttachment(incoming.file);
         const previous=store.existing(key);

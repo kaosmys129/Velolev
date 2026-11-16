@@ -91,6 +91,20 @@
       ]
     }
   ],
+  "rewrites": [
+    {
+      "source": "/api/inquiries/",
+      "destination": "/api/inquiries"
+    },
+    {
+      "source": "/api/inquiry-status/",
+      "destination": "/api/inquiry-status"
+    },
+    {
+      "source": "/api/:path*/",
+      "destination": "/api/:path*"
+    }
+  ],
   "redirects": [
     {
       "source": "/(.*)",

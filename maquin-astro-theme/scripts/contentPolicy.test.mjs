@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { parseFragment } from "parse5";
-import { baseline, enforceContentPolicy, productSchema, organizationSchema, faqSchema, publicText, copyFor } from "../src/utils/contentPolicy.mjs";
+import { baseline, enforceContentPolicy, productSchema, organizationSchema, faqSchema, webApplicationSchema, aboutPageSchema, publicText, copyFor } from "../src/utils/contentPolicy.mjs";
 
 const visible = (html) => {
   const walk = (n) => ["style", "script"].includes(n.tagName) ? "" : n.nodeName === "#text" ? n.value : (n.childNodes ?? []).map(walk).join(" ");
@@ -59,6 +59,7 @@ test("Organization and FAQ schemas contain valid structured data without commerc
   const org = organizationSchema("https://example.com");
   assert.equal(org["@type"], "Organization");
   assert.equal(org.name, "velolev");
+  assert.deepEqual(org.alternateName, ["volvet", "Volvet Machinery", "沃维特"]);
   assert.equal(org.url, "https://example.com");
   for (const k of ["offers", "price", "availability", "aggregateRating", "review", "sku"]) assert.equal(k in org, false);
 
@@ -67,6 +68,28 @@ test("Organization and FAQ schemas contain valid structured data without commerc
   assert.equal(faq.mainEntity.length, 1);
   const serialized = JSON.stringify(faq);
   assert.doesNotMatch(serialized, /"(?:offers|price|priceCurrency|availability|aggregateRating|review)"/);
+});
+
+test("WebApplication and AboutPage schemas contain valid metadata without commercial traps", () => {
+  const webApp = webApplicationSchema("https://example.com", "/tools/roi-calculator/");
+  assert.equal(webApp["@type"], "WebApplication");
+  assert.equal(webApp.applicationCategory, "BusinessApplication");
+  assert.equal(webApp.url, "https://example.com/tools/roi-calculator/");
+  assert.equal(webApp.creator["@type"], "Organization");
+  for (const k of ["offers", "price", "availability", "aggregateRating", "review", "sku"]) assert.equal(k in webApp, false);
+
+  const about = aboutPageSchema("https://example.com", "/about-us/");
+  assert.equal(about["@type"], "AboutPage");
+  assert.equal(about.url, "https://example.com/about-us/");
+  assert.equal(about.mainEntity["@type"], "Organization");
+  assert.deepEqual(about.mainEntity.alternateName, ["volvet", "Volvet Machinery", "沃维特"]);
+  for (const k of ["offers", "price", "availability", "aggregateRating", "review", "sku"]) assert.equal(k in about, false);
+});
+
+test("volvet brand entity is unblocked while legacy typos and old names remain normalized", () => {
+  assert.equal(publicText("volvet machinery"), "volvet machinery");
+  assert.equal(publicText("velvet machinery"), "velolev machinery");
+  assert.equal(publicText("PoleLift equipment"), "velolev equipment");
 });
 
 test("new editorial copy cannot reintroduce an old price or pretend contact configuration exists", () => {

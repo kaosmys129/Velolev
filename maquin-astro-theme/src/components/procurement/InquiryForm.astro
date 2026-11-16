@@ -7,7 +7,7 @@ const c={flangeNote:t("Flange check: {span} mm / {bolt} / {holes} holes. Please 
 const id=`inquiry-${locale}`;
 ---
 <div class="inquiry-shell" data-inquiry-shell data-copy={JSON.stringify(c)}>
-  <form class="project-inquiry" data-inquiry-form action="/api/inquiries" method="post" enctype="multipart/form-data">
+  <form class="project-inquiry" data-inquiry-form action="/api/inquiries/" method="post" enctype="multipart/form-data">
     <div class="inquiry-grid">
       <div class="inquiry-field"><label for={`${id}-name`}>{c.name} <span aria-hidden="true">*</span></label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="100"/><small data-error-for="name" id={`${id}-name-error`}></small></div>
       <div class="inquiry-field"><label for={`${id}-company`}>{c.company}</label><input id={`${id}-company`} name="company" autocomplete="organization" maxlength="160"/><small data-error-for="company" id={`${id}-company-error`}></small></div>
@@ -63,9 +63,10 @@ const id=`inquiry-${locale}`;
    form.querySelectorAll<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>("input,select,textarea").forEach(n=>n.disabled=true);
    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
    try{
-    const response=await fetch("/api/inquiries",{method:"POST",body:data,headers:{"Idempotency-Key":key},signal:controller.signal});
-    const result=await response.json();
-    if(!response.ok){status.textContent=result.error?.code==="validation_failed"?copy.validation:copy.failed;for(const [name,message] of Object.entries(result.error?.fields??{})){const note=form.querySelector<HTMLElement>(`[data-error-for="${name}"]`),field=form.elements.namedItem(name) as HTMLElement|null;if(note)note.textContent=copy.serverErrors[String(message)]??copy.validation;field?.setAttribute("aria-invalid","true");if(note?.id)field?.setAttribute("aria-describedby",note.id);const details=field?.closest("details");if(details)details.open=true;}status.focus();return;}
+    const response=await fetch("/api/inquiries/",{method:"POST",body:data,headers:{"Idempotency-Key":key},signal:controller.signal});
+    let result:any=null;
+    try{result=await response.json();}catch{result=null;}
+    if(!response.ok||!result){status.textContent=result?.error?.code==="validation_failed"?copy.validation:copy.failed;for(const [name,message] of Object.entries(result?.error?.fields??{})){const note=form.querySelector<HTMLElement>(`[data-error-for="${name}"]`),field=form.elements.namedItem(name) as HTMLElement|null;if(note)note.textContent=copy.serverErrors[String(message)]??copy.validation;field?.setAttribute("aria-invalid","true");if(note?.id)field?.setAttribute("aria-describedby",note.id);const details=field?.closest("details");if(details)details.open=true;}status.focus();return;}
     if(result.receipt?.status!=="received"||!result.receipt?.reference)throw new Error("No confirmed receipt");
     shell.querySelector<HTMLElement>("[data-receipt-reference]")!.textContent=result.receipt.reference;
     shell.querySelector<HTMLElement>("[data-test-marker]")!.hidden=!result.receipt.isTest;

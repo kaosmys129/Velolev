@@ -42,7 +42,7 @@ for (const file of pages) {
     const originPattern = new RegExp(effectiveOrigin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
     metadataForIdentityCheck = metadata.replace(originPattern, "");
   }
-  check(!/\b(?:volvet|velvet|PoleLift)\b/i.test(visible + " " + metadataForIdentityCheck), `${name}: legacy identity`);
+  check(!/\b(?:velvet|PoleLift)\b/i.test(visible + " " + metadataForIdentityCheck), `${name}: legacy identity`);
   check(!/[$€£¥]|\b(?:USD|EUR|CNY|IDR|BRL)\b|ดอลลาร์|đô\s*la/i.test(visible + metadata), `${name}: public monetary amount`);
   check(!/\b(?:in stock|out of stock|inventory)\b|en stock|em estoque|tồn kho|stok tersedia|สินค้าคงคลัง/i.test(visible + metadata), `${name}: public stock status`);
   check(!/sales@(?:polelift|volvet|velvet)|\+86\s*21\s*1234|Shanghai Pilot Free Trade Zone/i.test(visible), `${name}: unconfigured legacy contact`);
