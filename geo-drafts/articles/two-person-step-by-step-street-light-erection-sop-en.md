@@ -104,7 +104,7 @@ While European standard EN 40-3 governs column structural wind moments in perman
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

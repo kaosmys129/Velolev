@@ -5,8 +5,8 @@ coverImage: "/images/portable-light-pole-lifter-explainer-pt/cover-flow-hero-16x
 # Elevador Hidráulico Portátil para Postes: Arquitetura Mecânica, Compatibilidade de Flanges e Guia de Seleção em Obra
 
 
-![Elevador portátil de postes volvet capa de engenharia cinematográfica](/images/portable-light-pole-lifter-explainer-pt/cover-flow-hero-16x9.png)
-*Capa Principal: Montagem em campo de poste de iluminação de 12m sem caminhão-guindaste com o elevador portátil volvet. Integrado com plantas técnicas de obra.*
+![Elevador portátil de postes velolev capa de engenharia cinematográfica](/images/portable-light-pole-lifter-explainer-pt/cover-flow-hero-16x9.png)
+*Capa Principal: Montagem em campo de poste de iluminação de 12m sem caminhão-guindaste com o elevador portátil velolev. Integrado com plantas técnicas de obra.*
 
 
 
@@ -23,7 +23,7 @@ O [elevador hidráulico portátil para postes](/products/light-pole-jack/) repre
 > - **Compatibilidade Universal de Flanges:** Placa base com rasgos radiais para diâmetros de furação (P.C.D.) de 180mm a 260mm acomodando chumbadores M16 a M24 (F015, F016).
 
 ![Elevador hidráulico portátil para postes: instalação sem guindaste até 12m](/images/portable-light-pole-lifter-explainer-pt/01-feature-hero-cover-16x9.png)
-*Figura 1: Guia de seleção técnica do elevador hidráulico portátil volvet. Carga nominal verificada de 300kg e estrutura dividida de 85kg eliminando a necessidade de caminhões munck de 16 toneladas.*
+*Figura 1: Guia de seleção técnica do elevador hidráulico portátil velolev. Carga nominal verificada de 300kg e estrutura dividida de 85kg eliminando a necessidade de caminhões munck de 16 toneladas.*
 
 ---
 
@@ -116,8 +116,8 @@ Para assegurar uma rotina de campo segura e disciplinada, as equipes aplicam um 
 
 ## 5. Limites de Engenharia e Mitos Operacionais Comuns
 
-![Comparativo de viabilidade em obra: caminhão munck 16t vs elevador volvet](/images/portable-light-pole-lifter-explainer-pt/05-crane-vs-lifter-comparison-16x9.png)
-*Figura 5: Análise de viabilidade operacional e acesso em obra: caminhão munck convencional de 16 toneladas frente ao elevador portátil volvet em vias estreitas e segurança elétrica.*
+![Comparativo de viabilidade em obra: caminhão munck 16t vs elevador velolev](/images/portable-light-pole-lifter-explainer-pt/05-crane-vs-lifter-comparison-16x9.png)
+*Figura 5: Análise de viabilidade operacional e acesso em obra: caminhão munck convencional de 16 toneladas frente ao elevador portátil velolev em vias estreitas e segurança elétrica.*
 
 Na tomada de decisão de compras industriais B2B, gestores de obras devem separar claramente dados de engenharia certificados de equívocos corriqueiros de mercado:
 

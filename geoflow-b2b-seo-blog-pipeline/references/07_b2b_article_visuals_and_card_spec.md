@@ -1,7 +1,7 @@
 # 07 · GEOFlow B2B 工业品出海文章配图与瑞士卡片视觉规范
 
 > 依据标准：`guizang-social-card-skill` 视觉排版美学与企业级原子物理事实治理网 (F001–F031)  
-> 适用场景：便携式路灯立杆机（volvet / portable light pole lifter）及工业装备出海独立站、GEO 生成式引擎优化与全渠道社媒营销  
+> 适用场景：便携式路灯立杆机（velolev / portable light pole lifter）及工业装备出海独立站、GEO 生成式引擎优化与全渠道社媒营销  
 > 版本：2026-11-02 · V1.0
 
 ---
@@ -139,15 +139,15 @@ export function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-const meta = { path: `/guides/${article.slug}/`, title: `${article.title} | volvet`, description: article.description };
+const meta = { path: `/guides/${article.slug}/`, title: `${article.title} | velolev`, description: article.description };
 
 // 1. 自动定位该文章在 public/images 中的配图目录
 const publicBase = fileURLToPath(new URL("../../../public/images", import.meta.url));
 const candidates = [
   article.slug,
-  `volvet-lifter-${article.slug}`,
-  article.slug.replace(/^(?:install-12m-street-light-poles-without-crane)$/, "volvet-lifter-task-based-deepseek-article"),
-  "volvet-lifter-task-based-deepseek-article"
+  `velolev-lifter-${article.slug}`,
+  article.slug.replace(/^(?:install-12m-street-light-poles-without-crane)$/, "velolev-lifter-task-based-deepseek-article"),
+  "velolev-lifter-task-based-deepseek-article"
 ];
 
 let imageFolder = null;
@@ -168,9 +168,9 @@ function getSectionFigure(heading, folder) {
     renderedCards.add("05");
     return {
       src: `/images/${folder}/05-crane-vs-lifter-comparison-16x9.png`,
-      alt: "Jobsite feasibility comparison: 16-ton mobile crane vs volvet portable hydraulic pole lifter",
+      alt: "Jobsite feasibility comparison: 16-ton mobile crane vs velolev portable hydraulic pole lifter",
       label: "02 / FEASIBILITY & COMPARISON",
-      caption: "Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus volvet portable pole lifter across narrow access, crew size, and powerline clearances."
+      caption: "Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus velolev portable pole lifter across narrow access, crew size, and powerline clearances."
     };
   }
   // 双模组分体架构 (Section 2)
@@ -227,7 +227,7 @@ function formatText(p) {
             src={`/images/${imageFolder}/01-feature-hero-cover-16x9.png`}
             alt={`${article.title} - Overview Engineering Diagram`}
             label="01 / ENGINEERING SPECIFICATION"
-            caption="Figure 1: volvet portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency."
+            caption="Figure 1: velolev portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency."
             eager
             class="article-infographic"
           />

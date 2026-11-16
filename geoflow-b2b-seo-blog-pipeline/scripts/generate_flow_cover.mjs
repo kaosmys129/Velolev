@@ -8,7 +8,7 @@
  * 核心升级：
  *   1. 彻底切换为整站统一的高定浅色系（工程暖白底色 + 精细浅灰坐标网格 + 工业安全橙与石墨黑高对比）；
  *   2. 背景丰富多元化：根据文章核心内容动态融合【CAD 机械蓝图剖面 + 真实施工道路标线 + 太阳能光伏/地基法兰线稿 + 吊车对比外廓 + 0-90° 激光起升轨迹】；
- *   3. 画面右侧置入 volvet 真实高精透明设备立姿（823x579 透明抠图），配以自然柔和的重机漫射投影；
+ *   3. 画面右侧置入 velolev 真实高精透明设备立姿（823x579 透明抠图），配以自然柔和的重机漫射投影；
  *   4. 国际顶级工业大刊排版（IEEE Spectrum / Scandinavian Industrial Design 风格）：
  *      - 醒目大标题、深浅字重交替、关键词工业橙高亮、纯白浮雕 HUD 遥测三联数据卡；
  *   5. 保持 Google Flow MCP (Nano Banana 2 / Imagen 4) 的提示词生成与参考图绑定契约（浅色实景光照规范）；
@@ -54,7 +54,7 @@ const COVER_I18N = {
     kpi3Sub: 'F008 · 45KG 主机 + 40KG 电箱',
     mapLegend: '现场实测工况 · 2.5M 安全作业半径 · 零汽车吊支腿占道',
     statusTag: '现场工况核验通过 (VERIFIED)',
-    figureCaption: (slug) => `\n![volvet 便携式路灯升杆机工程现场真实感封面大图](/images/${slug}/cover-flow-hero-16x9.png)\n*封面全景大图：volvet 便携式升杆机 12m 市政路灯免吊车原位液压起竖工程全景。背景融合施工现场 CAD 蓝图与工况测绘标线，标定 24V DC 动力总成与严格双人作业编制合规，彻底消除汽车起重机占道盲区。*\n`
+    figureCaption: (slug) => `\n![velolev 便携式路灯升杆机工程现场真实感封面大图](/images/${slug}/cover-flow-hero-16x9.png)\n*封面全景大图：velolev 便携式升杆机 12m 市政路灯免吊车原位液压起竖工程全景。背景融合施工现场 CAD 蓝图与工况测绘标线，标定 24V DC 动力总成与严格双人作业编制合规，彻底消除汽车起重机占道盲区。*\n`
   },
   en: {
     kicker: 'GLOBAL INFRASTRUCTURE FIELD DISPATCH · ENGINEERING LOG',
@@ -69,7 +69,7 @@ const COVER_I18N = {
     kpi3Sub: 'F008 · 45KG RIG + 40KG 24V PACK',
     mapLegend: 'SITE ENGINEERING CADASTRAL · 2.5M SAFETY RADIUS · ZERO OUTRIGGER FOOTPRINT',
     statusTag: 'FIELD VERIFIED SPECIFICATION',
-    figureCaption: (slug) => `\n![volvet Portable Light Pole Lifter Cinematic Engineering Cover Hero](/images/${slug}/cover-flow-hero-16x9.png)\n*Cover Hero: On-site zero-crane erection of 12m municipal lighting pole using volvet portable lifter. Integrated with site engineering layout and mechanical blueprint. Standard 2-person crew compliance eliminates heavy crane roadway closures.*\n`
+    figureCaption: (slug) => `\n![velolev Portable Light Pole Lifter Cinematic Engineering Cover Hero](/images/${slug}/cover-flow-hero-16x9.png)\n*Cover Hero: On-site zero-crane erection of 12m municipal lighting pole using velolev portable lifter. Integrated with site engineering layout and mechanical blueprint. Standard 2-person crew compliance eliminates heavy crane roadway closures.*\n`
   },
   es: {
     kicker: 'DESPACHO DE INFRAESTRUCTURA GLOBAL · REGISTRO TÉCNICO',
@@ -84,7 +84,7 @@ const COVER_I18N = {
     kpi3Sub: 'F008 · ELEVADOR 45KG + BATERÍA 40KG',
     mapLegend: 'TOPOLOGÍA DE OBRA EN CAMPO · RADIO DE SEGURIDAD 2.5M · CERO ESTABILIZADORES',
     statusTag: 'ESPECIFICACIÓN VERIFICADA',
-    figureCaption: (slug) => `\n![Elevador portátil de postes volvet portada de ingeniería cinematográfica](/images/${slug}/cover-flow-hero-16x9.png)\n*Portada Principal: Despliegue en campo del elevador portátil de postes de luz volvet para instalación sin grúa de columnas de 12 m. Integrado con esquemas de ingeniería y sin cortes de tránsito vial.*\n`
+    figureCaption: (slug) => `\n![Elevador portátil de postes velolev portada de ingeniería cinematográfica](/images/${slug}/cover-flow-hero-16x9.png)\n*Portada Principal: Despliegue en campo del elevador portátil de postes de luz velolev para instalación sin grúa de columnas de 12 m. Integrado con esquemas de ingeniería y sin cortes de tránsito vial.*\n`
   },
   fr: {
     kicker: 'DISPATCH INFRASTRUCTURE INDUSTRIELLE · RAPPORT CHANTIER',
@@ -99,7 +99,7 @@ const COVER_I18N = {
     kpi3Sub: 'F008 · VÉRIN 45KG + ARMOIRE 40KG',
     mapLegend: 'PLAN DE VOIRIE DU CHANTIER · RAYON DE SÉCURITÉ 2,5M · ZÉRO STABILISATEUR',
     statusTag: 'CONFORME AUX NORMES OSHA / IEEE',
-    figureCaption: (slug) => `\n![Élévateur de candélabre portable volvet couverture d'ingénierie cinématique](/images/${slug}/cover-flow-hero-16x9.png)\n*Image de Couverture : Déploiement sur site du système de levage hydraulique portable volvet pour mâts de 12 m sans camion-grue. Intégré aux plans de chantier et normes de sécurité.*\n`
+    figureCaption: (slug) => `\n![Élévateur de candélabre portable velolev couverture d'ingénierie cinématique](/images/${slug}/cover-flow-hero-16x9.png)\n*Image de Couverture : Déploiement sur site du système de levage hydraulique portable velolev pour mâts de 12 m sans camion-grue. Intégré aux plans de chantier et normes de sécurité.*\n`
   },
   pt: {
     kicker: 'INFRAESTRUTURA PESADA GLOBAL · RELATÓRIO TÉCNICO DE OBRA',
@@ -114,7 +114,7 @@ const COVER_I18N = {
     kpi3Sub: 'F008 · MÓDULO 45KG + BATERIA 40KG',
     mapLegend: 'TOPOLOGIA TÉCNICA LOCAL · RAIO DE SEGURANÇA 2,5M · SEM SAPATAS ESTABILIZADORAS',
     statusTag: 'OPERAÇÃO EM CAMPO HOMOLOGADA',
-    figureCaption: (slug) => `\n![Elevador portátil de postes volvet capa de engenharia cinematográfica](/images/${slug}/cover-flow-hero-16x9.png)\n*Capa Principal: Montagem em campo de poste de iluminação de 12m sem caminhão-guindaste com o elevador portátil volvet. Integrado com plantas técnicas de obra.*\n`
+    figureCaption: (slug) => `\n![Elevador portátil de postes velolev capa de engenharia cinematográfica](/images/${slug}/cover-flow-hero-16x9.png)\n*Capa Principal: Montagem em campo de poste de iluminação de 12m sem caminhão-guindaste com o elevador portátil velolev. Integrado com plantas técnicas de obra.*\n`
   },
   vi: {
     kicker: 'BÁO CÁO KỸ THUẬT HẠ TẦNG TOÀN CẦU · HỒ SƠ CÔNG TRÌNH',
@@ -129,7 +129,7 @@ const COVER_I18N = {
     kpi3Sub: 'F008 · TRỤ NÂNG 45KG + PIN 40KG',
     mapLegend: 'MẶT BẰNG THI CÔNG ĐÔ THỊ · BÁN KÍNH AN TOÀN 2.5M · KHÔNG CHÂN CHỐNG CẨU',
     statusTag: 'HỆ THỐNG ĐÃ KIỂM ĐỊNH CHẤT LƯỢNG',
-    figureCaption: (slug) => `\n![Máy dựng trụ đèn chiếu sáng di động volvet ảnh bìa kỹ thuật điện ảnh](/images/${slug}/cover-flow-hero-16x9.png)\n*Hình Bìa Toàn Cảnh: Hiện trường thi công lắp dựng cột đèn chiếu sáng 12m không cần xe cẩu bằng máy nâng thủy lực di động volvet kết hợp bản vẽ thiết kế thi công.*\n`
+    figureCaption: (slug) => `\n![Máy dựng trụ đèn chiếu sáng di động velolev ảnh bìa kỹ thuật điện ảnh](/images/${slug}/cover-flow-hero-16x9.png)\n*Hình Bìa Toàn Cảnh: Hiện trường thi công lắp dựng cột đèn chiếu sáng 12m không cần xe cẩu bằng máy nâng thủy lực di động velolev kết hợp bản vẽ thiết kế thi công.*\n`
   },
   th: {
     kicker: 'รายงานภาคสนามโครงสร้างพื้นฐานระดับโลก · ข้อมูลวิศวกรรมหน้างาน',
@@ -144,7 +144,7 @@ const COVER_I18N = {
     kpi3Sub: 'F008 · แท่นยก 45 กก. + ชุดไฟ 40 กก.',
     mapLegend: 'ผังวิศวกรรมถนนภาคสนาม · รัศมีความปลอดภัย 2.5 ม. · ไม่มีขาค้ำยันกีดขวางทาง',
     statusTag: 'มาตรฐานวิศวกรรมได้รับการยืนยัน',
-    figureCaption: (slug) => `\n![เครื่องยกเสาไฟถนนแบบพกพา volvet ภาพหน้าปกวิศวกรรมภาพยนตร์](/images/${slug}/cover-flow-hero-16x9.png)\n*ภาพหน้าปกหลัก: การติดตั้งเสาไฟถนนเทศบาลสูง 12 เมตรในสถานที่จริงโดยไม่ต้องใช้รถเครนด้วยเครื่องยกไฮดรอลิกแบบพกพา volvet ผสานแบบร่างทางวิศวกรรมหน้างาน.*\n`
+    figureCaption: (slug) => `\n![เครื่องยกเสาไฟถนนแบบพกพา velolev ภาพหน้าปกวิศวกรรมภาพยนตร์](/images/${slug}/cover-flow-hero-16x9.png)\n*ภาพหน้าปกหลัก: การติดตั้งเสาไฟถนนเทศบาลสูง 12 เมตรในสถานที่จริงโดยไม่ต้องใช้รถเครนด้วยเครื่องยกไฮดรอลิกแบบพกพา velolev ผสานแบบร่างทางวิศวกรรมหน้างาน.*\n`
   },
   id: {
     kicker: 'DISPATCH INFRASTRUKTUR GLOBAL · CATATAN TEKNIK LAPANGAN',
@@ -159,7 +159,7 @@ const COVER_I18N = {
     kpi3Sub: 'F008 · ALAT 45KG + BATERAI 40KG',
     mapLegend: 'TATA LETAK PROYEK JALAN · RADIUS KEAMANAN 2.5M · BEBAS KAKI DEREK',
     statusTag: 'VERIFIKASI TEKNIS SELESAI',
-    figureCaption: (slug) => `\n![Alat pengangkat tiang lampu portabel volvet sampul rekayasa sinematik](/images/${slug}/cover-flow-hero-16x9.png)\n*Sampul Utama: Pemasangan tiang lampu jalan 12 meter di lapangan tanpa truk derek menggunakan pengangkat hidrolik portabel volvet. Dilengkapi tata letak rekayasa lapangan.*\n`
+    figureCaption: (slug) => `\n![Alat pengangkat tiang lampu portabel velolev sampul rekayasa sinematik](/images/${slug}/cover-flow-hero-16x9.png)\n*Sampul Utama: Pemasangan tiang lampu jalan 12 meter di lapangan tanpa truk derek menggunakan pengangkat hidrolik portabel velolev. Dilengkapi tata letak rekayasa lapangan.*\n`
   }
 };
 
@@ -188,8 +188,8 @@ export function detectArticleLanguage(filePath, content) {
 export function extractArticleHighlights(content, filePath, lang) {
   const baseName = path.basename(filePath, path.extname(filePath));
   let slug = baseName
-    .replace(/polelift/gi, 'volvet-lifter')
-    .replace(/velolev/gi, 'volvet');
+    .replace(/polelift/gi, 'velolev-lifter')
+    .replace(/velolev/gi, 'velolev');
 
   let title = '';
   let metaDesc = '';
@@ -279,7 +279,7 @@ export function buildGoogleFlowPrompt(highlights) {
   const { specificContext } = highlights;
 
   const prompt = [
-    `Cinematic, bright daylight, Scandinavian architectural documentary engineering photography of the volvet portable light pole lifter rig operating on site.`,
+    `Cinematic, bright daylight, Scandinavian architectural documentary engineering photography of the velolev portable light pole lifter rig operating on site.`,
     `Subject: A heavy-duty, compact industrial fluid-power pole lifter machine with a telescoping hydraulic lift column (finished in industrial safety orange and graphite grey), firmly bolted to a concrete foundation base with heavy galvanized anchor bolts. A secondary mechanical safety lock pin is clearly visible on the hydraulic mast.`,
     `Action & Crew: Two professional utility electricians wearing clean fluorescent high-visibility safety vests (EN ISO 20471 compliant) and hard hats are working collaboratively. One technician operates the handheld ergonomic remote control pendant, while the second technician observes at a 45-degree vantage angle to ensure clearance. A standard 10-meter octagonal galvanized steel street lighting pole is tilting steadily upward from 0 to 45 degrees towards the vertical position.`,
     `Setting & Environment: ${specificContext}. Bright morning natural sunlight, clear blue sky, clean pale concrete pavement and curb alignment. Clean site logistics. Noticeably NO large mobile cranes, NO 16-ton boom trucks, NO extended outriggers blocking traffic, leaving the street lane completely open and unobstructed.`,
@@ -334,7 +334,7 @@ export function generateContextualEngineeringSvg(contextType) {
       <!-- 近景：便携式立杆机 2.5m 紧凑自锚作业区 (高亮绿/橙) -->
       <circle cx="1480" cy="580" r="160" fill="rgba(234, 88, 12, 0.04)" stroke="${orangeAccent}" stroke-width="2.5" stroke-dasharray="8 6" />
       <circle cx="1480" cy="580" r="8" fill="${orangeAccent}" />
-      <text x="1330" y="770" font-family="'IBM Plex Mono', monospace" font-size="13" fill="${orangeAccent}" font-weight="700">✓ VOLVET RIG: ZERO CRANE OUTRIGGER FOOTPRINT</text>
+      <text x="1330" y="770" font-family="'IBM Plex Mono', monospace" font-size="13" fill="${orangeAccent}" font-weight="700">✓ VELOLEV RIG: ZERO CRANE OUTRIGGER FOOTPRINT</text>
 
       <!-- 高速公路路桩与标牌微缩符号 -->
       <rect x="1100" y="180" width="160" height="36" rx="4" fill="#ffffff" stroke="${linePrimary}" stroke-width="1.5" />
@@ -815,7 +815,7 @@ export async function renderSwissCoverHtml(highlights) {
     <div class="rig-hud-overlay">
       <div class="hud-angle-pill">📐 0°-45° TILT TRAJECTORY</div>
     </div>
-    ${rigBase64 ? `<img src="${rigBase64}" class="rig-image" alt="volvet portable light pole lifter" />` : ''}
+    ${rigBase64 ? `<img src="${rigBase64}" class="rig-image" alt="velolev portable light pole lifter" />` : ''}
   </div>
 
   <!-- 3. 上层信息层：大刊级浅色工程封面排版与数据遥测 -->
@@ -824,7 +824,7 @@ export async function renderSwissCoverHtml(highlights) {
     <div class="top-meta-header">
       <div class="brand-and-gis-bar">
         <div class="brand-lockup">
-          <div class="brand-badge">VOLVET</div>
+          <div class="brand-badge">VELOLEV</div>
           <div class="brand-title">HEAVY FLUID RIGGING</div>
         </div>
         <div class="gis-telemetry-tag">

@@ -5,8 +5,8 @@ coverImage: "/images/portable-light-pole-lifter-explainer/cover-flow-hero-16x9.p
 # 便携式路灯升杆机工程技术解析、法兰适配与选型指南 (Portable Hydraulic Light Pole Lifter: Engineering Architecture, Flange Compatibility, and Jobsite Selection Guide)
 
 
-![volvet 便携式路灯升杆机工程现场真实感封面大图](/images/portable-light-pole-lifter-explainer/cover-flow-hero-16x9.png)
-*封面全景大图：volvet 便携式升杆机 12m 市政路灯免吊车原位液压起竖工程全景。背景融合施工现场 CAD 蓝图与工况测绘标线，标定 24V DC 动力总成与严格双人作业编制合规，彻底消除汽车起重机占道盲区。*
+![velolev 便携式路灯升杆机工程现场真实感封面大图](/images/portable-light-pole-lifter-explainer/cover-flow-hero-16x9.png)
+*封面全景大图：velolev 便携式升杆机 12m 市政路灯免吊车原位液压起竖工程全景。背景融合施工现场 CAD 蓝图与工况测绘标线，标定 24V DC 动力总成与严格双人作业编制合规，彻底消除汽车起重机占道盲区。*
 
 
 
@@ -27,7 +27,7 @@ coverImage: "/images/portable-light-pole-lifter-explainer/cover-flow-hero-16x9.p
 > - **超宽基础法兰螺栓分布圆直径兼容 (Universal Foundation Fit)：** 重载放射状长腰槽底板精准兼容 180-260mm 地脚螺栓分布圆直径（P.C.D.），全面容纳 M16 至 M24 规格基础锚栓 (F015, F016)。
 
 ![便携式路灯升杆机工程技术选型全景图](/images/portable-light-pole-lifter-explainer/01-feature-hero-cover-16x9.png)
-*图 1：volvet 便携式路灯升杆机工程选型全景图。严格标定 300kg 垂直试验台核定载荷与 85kg 分体式双模组运输设计，彻底免除 16 吨汽车起重机依赖。*
+*图 1：velolev 便携式路灯升杆机工程选型全景图。严格标定 300kg 垂直试验台核定载荷与 85kg 分体式双模组运输设计，彻底免除 16 吨汽车起重机依赖。*
 
 ---
 
@@ -120,8 +120,8 @@ coverImage: "/images/portable-light-pole-lifter-explainer/cover-flow-hero-16x9.p
 
 ## 5. 工程选型避坑与作业边界防线 (Critical Misconceptions and Jobsite Boundaries)
 
-![工况可行性决策矩阵：16 吨汽车吊 vs volvet 便携式液压升杆机](/images/portable-light-pole-lifter-explainer/05-crane-vs-lifter-comparison-16x9.png)
-*图 5：工况可行性与现场准入对比：传统 16 吨随车吊对比 volvet 便携式升杆机在狭窄通道、作业人员编制及高压临电作业半径维度的综合测算。*
+![工况可行性决策矩阵：16 吨汽车吊 vs velolev 便携式液压升杆机](/images/portable-light-pole-lifter-explainer/05-crane-vs-lifter-comparison-16x9.png)
+*图 5：工况可行性与现场准入对比：传统 16 吨随车吊对比 velolev 便携式升杆机在狭窄通道、作业人员编制及高压临电作业半径维度的综合测算。*
 
 在海外 B2B 项目采购与现场工艺选型中，工程决策者必须清晰界定技术适用边界，坚决避免以下三大认知误区：
 

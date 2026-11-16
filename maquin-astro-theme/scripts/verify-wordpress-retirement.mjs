@@ -31,7 +31,7 @@ for(const [from,to] of Object.entries(siteRedirects))check(`terminal alias: ${fr
 let transport='static';
 if(args.includes('--http')){
  const {createInquiryServer}=await import('../server/inquiry-server.mjs');
- const dir=mkdtempSync(join(tmpdir(),'volvet-retirement-qa-'));
+ const dir=mkdtempSync(join(tmpdir(),'velolev-retirement-qa-'));
  const {server,store}=createInquiryServer({dist,directory:dir,adminToken:'controlled-retirement-test-only-0123456789',testMode:true,logger:{error(){}}});
  let request;
  try{

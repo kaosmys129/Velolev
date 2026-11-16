@@ -186,7 +186,7 @@
 
 | Variable Key (变量名) | Variable Value (变量值) | Environments (生效环境) | 核心技术影响与作用 |
 |---|---|---|---|
-| **`PUBLIC_SITE_URL`** | `https://www.velolev.org` | 勾选 **Production**, **Preview**, **Development** | **全站生产 SEO 总控开关**。决定 `@astrojs/sitemap` 插件是否启用、全站 128 个页面的 `<link rel="canonical">`、OpenGraph URL 与多语言 `hreflang` 标签的绝对域名生成。若不配置，站点将降级为 `https://volvet.invalid` 且不生成 sitemap。 |
+| **`PUBLIC_SITE_URL`** | `https://www.velolev.org` | 勾选 **Production**, **Preview**, **Development** | **全站生产 SEO 总控开关**。决定 `@astrojs/sitemap` 插件是否启用、全站 128 个页面的 `<link rel="canonical">`、OpenGraph URL 与多语言 `hreflang` 标签的绝对域名生成。若不配置，站点将降级为 `https://velolev.invalid` 且不生成 sitemap。 |
 
 *(可选业务变量)*：
 - `INQUIRY_ADMIN_TOKEN`：若生产环境启用了在线后台查询，可在此配置管理员安全 Token；
@@ -358,7 +358,7 @@ curl -sL https://www.velolev.org/sitemap-0.xml | grep -oE '<loc>[^<]+</loc>' | h
   1. 检查 Namecheap 控制台是否错误配置了 URL Redirect 转发。若有，请立即删除。
   2. 检查 Vercel Domains 设置：必须是 `velolev.org` 重定向到 `www.velolev.org`，绝不能配置成反向互指（例如两边都互相 Redirect），主域名 `www.velolev.org` 必须无任何重定向配置，直连 Production。
 
-#### Q4: 网站部署成功后，发现 sitemap 报 404 或链接前缀变成了 `https://volvet.invalid`？
+#### Q4: 网站部署成功后，发现 sitemap 报 404 或链接前缀变成了 `https://velolev.invalid`？
 - **原因**：Vercel 项目环境变量中未配置 `PUBLIC_SITE_URL`。Astro 站点配置在缺少该环境变量时，为防止非法脏数据蔓延，会主动关闭站点地图生成插件。
 - **修复方案**：
   1. 打开 Vercel 项目 -> **Settings** -> **Environment Variables**；

@@ -11,12 +11,7 @@ export function GET() {
 
   const content = `# velolev Portable Hydraulic Light Pole Lifter
 
-> velolev (international export brand of volvet / Volvet Machinery / 沃维特) manufactures portable split-module hydraulic pole lifters designed for crane-free installation and maintenance of 12 m class street light poles up to 300 kg rated load. Total system weight: 85 kg (45 kg hydraulic lifting module + 40 kg 24 V electrical cabinet). Standard base flange compatibility: 180–260 mm bolt circle span with M16, M18, M20, and M22 anchor hardware included (M24 listed). Poles exceeding 300 kg or 12 m require heavy mobile cranes. Commercial terms and fitment verification are provided upon engineering drawing review at ${cleanOrigin}/quote/.
-
-## Brand Entity & Manufacturing Heritage
-- Brand Name: velolev (primary export and distribution identity)
-- Parent / Manufacturing Entity: volvet (常州沃维特机械 / Volvet Machinery)
-- Relationship: velolev is the authorized international brand of volvet machinery for overseas commercial distribution and engineering support. Equipment specifications on ${cleanOrigin} represent official volvet portable light pole lifter products.
+> velolev manufactures portable split-module hydraulic pole lifters designed for crane-free installation and maintenance of 12 m class street light poles up to 300 kg rated load. Total system weight: 85 kg (45 kg hydraulic lifting module + 40 kg 24 V electrical cabinet). Standard base flange compatibility: 180–260 mm bolt circle span with M16, M18, M20, and M22 anchor hardware included (M24 listed). Poles exceeding 300 kg or 12 m require heavy mobile cranes. Commercial terms and fitment verification are provided upon engineering drawing review at ${cleanOrigin}/quote/.
 
 ## Core Equipment & Tools
 - [Equipment Overview & Technical Specifications](${cleanOrigin}/products/light-pole-jack/): Full mechanical architecture, dimensions, weights, and included anchor hardware.

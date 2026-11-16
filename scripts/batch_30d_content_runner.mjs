@@ -400,25 +400,25 @@ function generateArticleContent(topic, locale) {
   let h1Title = topic.title_en;
   if (locale === 'es') {
     h1Title = `Cómo Instalar Postes de Alumbrado en ${topic.pillar_name}: Procedimiento Técnico y Seguridad`;
-    if (topic.day === 1) h1Title = "Cómo instalar postes de luz de 12 m sin grúa | volvet";
+    if (topic.day === 1) h1Title = "Cómo instalar postes de luz de 12 m sin grúa | velolev";
     if (topic.day === 2) h1Title = "Instalación de Postes de Luz Solares en Zonas Remotas Sin Camión Grúa";
     if (topic.day === 3) h1Title = "Montaje de Postes en Cascos Históricos Peatonales Sin Cierre de Calles";
   } else if (locale === 'fr') {
     h1Title = `Installation de Candélabres (${topic.pillar_name}) Sans Camion Grue : Limites et SOP`;
-    if (topic.day === 1) h1Title = "Comment installer des mâts d'éclairage de 12 m sans camion grue | volvet";
+    if (topic.day === 1) h1Title = "Comment installer des mâts d'éclairage de 12 m sans camion grue | velolev";
     if (topic.day === 2) h1Title = "Installation de Candélabres Solaires Isolés Sans Camion Grue Ni Groupe Électrogène";
   } else if (locale === 'pt') {
     h1Title = `Instalação de Postes de Iluminação (${topic.pillar_name}) Sem Guindaste : Guia de Engenharia`;
-    if (topic.day === 1) h1Title = "Como instalar postes de iluminação de 12m sem caminhão guindaste | volvet";
+    if (topic.day === 1) h1Title = "Como instalar postes de iluminação de 12m sem caminhão guindaste | velolev";
   } else if (locale === 'vi') {
     h1Title = `Giải Pháp Thi Công Dựng Trụ Đèn (${topic.pillar_name}) Không Cần Xe Cẩu : Quy Chuẩn SOP`;
-    if (topic.day === 1) h1Title = "Cách lắp đặt cột đèn chiếu sáng 12m không cần xe cẩu | volvet";
+    if (topic.day === 1) h1Title = "Cách lắp đặt cột đèn chiếu sáng 12m không cần xe cẩu | velolev";
   } else if (locale === 'th') {
     h1Title = `การติดตั้งเสาไฟถนน (${topic.pillar_name}) โดยไม่ใช้รถเครน : ขั้นตอนมาตรฐานความปลอดภัย`;
-    if (topic.day === 1) h1Title = "วิธีติดตั้งเสาไฟถนนขนาด 12 เมตรโดยไม่ใช้รถเครน | volvet";
+    if (topic.day === 1) h1Title = "วิธีติดตั้งเสาไฟถนนขนาด 12 เมตรโดยไม่ใช้รถเครน | velolev";
   } else if (locale === 'id') {
     h1Title = `Pemasangan Tiang Lampu Jalan (${topic.pillar_name}) Tanpa Truk Crane : Prosedur Teknis`;
-    if (topic.day === 1) h1Title = "Cara memasang tiang lampu jalan 12 meter tanpa truk crane | volvet";
+    if (topic.day === 1) h1Title = "Cara memasang tiang lampu jalan 12 meter tanpa truk crane | velolev";
   }
 
   // 组装完整长文
@@ -495,7 +495,7 @@ ${dict.faqs.map(f => `### ${f.q}\n${f.a}`).join('\n\n')}
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

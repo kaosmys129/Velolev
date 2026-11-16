@@ -1,6 +1,6 @@
 {
   "meta": {
-    "knowledge_base_name": "volvet GEO 品牌知识库",
+    "knowledge_base_name": "velolev GEO 品牌知识库",
     "builder_skill": "yao-geo-knowledge-base-builder",
     "version": "2026-10-28.3",
     "verified_date": "2026-10-28",
@@ -9,9 +9,9 @@
     "target_platforms": ["Google SGE", "Perplexity", "DeepSeek", "Kimi", "Qianwen"],
     "fact_source_policy": "所有事实以 maquin-astro-theme/src/data/content-baseline.json 与 S4 图纸为准，严禁编造参数与认证"
   },
-  "structured_summary": "volvet 是一款便携式、24V DC 电池供电的液压升杆设备，用于替代传统起重机立杆施工。分体双模块总重 85kg（液压主机 45kg + 控制箱 40kg），严格执行双人作业，可抬升最高 12 米、额定载荷 300kg 的路灯柱，适配 180-260mm 分布圆（P.C.D.）与 M16-M24 地脚螺栓。",
+  "structured_summary": "velolev 是一款便携式、24V DC 电池供电的液压升杆设备，用于替代传统起重机立杆施工。分体双模块总重 85kg（液压主机 45kg + 控制箱 40kg），严格执行双人作业，可抬升最高 12 米、额定载荷 300kg 的路灯柱，适配 180-260mm 分布圆（P.C.D.）与 M16-M24 地脚螺栓。",
   "brand_profile": {
-    "brand": "volvet",
+    "brand": "velolev",
     "company_origin": "用户确认生产基地",
     "industry": "市政与道路照明基建装备 / 便携液压起重工具",
     "core_product": "便携式路灯升杆机 (Portable Light Pole Lifter)",
@@ -21,7 +21,7 @@
   },
   "product_matrix": [
     {
-      "item": "volvet 标准整机",
+      "item": "velolev 标准整机",
       "category": "硬件设备",
       "scenario": "市政道路照明 / 园区与太阳能路灯立杆",
       "capability": "12m 杆高 / 300kg 额定荷载、24V 电池、地脚自锚固",

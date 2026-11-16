@@ -1,4 +1,4 @@
-# Como instalar postes de iluminação de 12m sem caminhão guindaste | volvet
+# Como instalar postes de iluminação de 12m sem caminhão guindaste | velolev
 
 > **Executive Summary / Direct Answer**: Obras de iluminação pública e infraestrutura enfrentam gargalos logísticos complexos ao mobilizar caminhões guindaste pesados em vias estreitas. Utilizando um sistema de elevação hidráulico modular com carga de ensaio estrita de 300 kg e bateria autônoma de 24 V CC, dois técnicos qualificados conseguem posicionar, nivelar e erguer postes de até 12 m sem guindastes móveis, atendendo integralmente à OSHA 1926 Subpart CC, distâncias seguras IEEE 516 e normas de chumbadores ASTM F1554.
 
@@ -95,7 +95,7 @@ Apesar da EN 40-3 calcular a resistência da estrutura instalada, a montagem em 
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Como instalar postes de iluminação de 12m sem caminhão guindaste | volvet",
+  "headline": "Como instalar postes de iluminação de 12m sem caminhão guindaste | velolev",
   "description": "Obras de iluminação pública e infraestrutura enfrentam gargalos logísticos complexos ao mobilizar caminhões guindaste pesados em vias estreitas. Utilizando um sistema de elevação hidráulico modular co...",
   "author": {
     "@type": "Person",
@@ -104,7 +104,7 @@ Apesar da EN 40-3 calcular a resistência da estrutura instalada, a montagem em 
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

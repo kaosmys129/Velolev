@@ -32,7 +32,7 @@
 然而，本次深度排查发现了 **1 个影响品牌在搜索引擎及 AI 知识图谱定位的根本性架构缺陷** 以及 **多个关键的技术、性能与国际化瓶颈**：
 
 ### Top 5 核心关键缺陷 (Top 5 Critical/High Findings)
-1. **【P0 - 品牌实体与域名严重割裂】**：线上域名为 `velolev.org`，但全站从页面标题、品牌 Logo、正文描述到 Schema 结构化数据，均 **100% 宣称为品牌 `volvet`**。站内无任何文字、无 `Organization.alternateName`、无 `sameAs` 官方登记说明解释两者关系，导致 Google Knowledge Graph 无法将 `volvet` 的品牌声量确权映射至 `velolev.org`，产生严重的品牌实体悬空与搜索归属混淆。
+1. **【P0 - 品牌实体与域名严重割裂】**：线上域名为 `velolev.org`，但全站从页面标题、品牌 Logo、正文描述到 Schema 结构化数据，均 **100% 宣称为品牌 `velolev`**。站内无任何文字、无 `Organization.alternateName`、无 `sameAs` 官方登记说明解释两者关系，导致 Google Knowledge Graph 无法将 `velolev` 的品牌声量确权映射至 `velolev.org`，产生严重的品牌实体悬空与搜索归属混淆。
 2. **【P0 - 标准 `/sitemap.xml` 返回 HTTP 404】**：全站仅部署了 `/sitemap-index.xml`（内含 `/sitemap-0.xml`），而所有搜索引擎爬虫及第三方诊断工具最优先抓取的标准入口 `https://www.velolev.org/sitemap.xml` 直接返回 404，且未配置 308/301 重定向。
 3. **【P0 - 历史重定向使用客户端 HTML 软跳转 (HTTP 200)】**：核心路径 `/equipment/` 与 `/pricing-plan/` 返回带有 `<meta http-equiv="refresh">` 和 `<meta name="robots" content="noindex">` 的 HTTP 200 页面，而非服务端 HTTP 308 永久重定向，造成抓取配额浪费与权重传递断层。
 4. **【P1 - 首页案例参考图片未经压缩产生 2.55 MB 冗余负载】**：首页案例展示区 3 张缩略图均为未压缩原图 JPEG（单图达 896.6 KB），仅此 3 张图占用了 2.55 MB 传输体积。未采用 WebP/AVIF 等现代格式，未提供响应式尺寸，严重拖累移动端 LCP。
@@ -117,12 +117,12 @@
 
 ### 4.1 标题标签 (Title Tags)
 - **覆盖率**：143 / 143 (100%)。
-- **品牌格式**：全站所有页面严格遵循 `页面主题关键词 | volvet` 统一后缀命名。
+- **品牌格式**：全站所有页面严格遵循 `页面主题关键词 | velolev` 统一后缀命名。
 - **长度异常排查**：
   - **超长标题 (长度 > 65 字符)**：共计 **37 个页面**，将导致在 SERP 展示时出现字符截断。
-    - 典型示例 1：`M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | volvet` (82 字符)
-    - 典型示例 2：`24 V Off-Grid Battery Pole Lifter for Solar Street Light Review | volvet` (72 字符)
-    - 典型示例 3：`Guías de instalación de postes y herramientas de planificación | volvet` (71 字符)
+    - 典型示例 1：`M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | velolev` (82 字符)
+    - 典型示例 2：`24 V Off-Grid Battery Pole Lifter for Solar Street Light Review | velolev` (72 字符)
+    - 典型示例 3：`Guías de instalación de postes y herramientas de planificación | velolev` (71 字符)
   - **过短标题 (长度 < 30 字符)**：仅 4 个页面（均为系统页/部分语言的关于页）。
 
 ### 4.2 元描述标签 (Meta Descriptions)
@@ -150,13 +150,13 @@
 
 ## 五、内容质量与 E-E-A-T 深度审计 (Content Quality & E-E-A-T - 82/100)
 
-### 5.1 核心致命问题：品牌实体与域名严重割裂 (velolev.org vs volvet)
+### 5.1 核心致命问题：品牌实体与域名严重割裂 (velolev.org vs velolev)
 - **现状实测**：
   - 访问域名：`www.velolev.org` / `velolev.org`
-  - 页面展现：全站标题均为 `| volvet`，Logo 图片为 `volvet-wordmark.svg`，正文第一句为 `"Plan street light pole installation with volvet..."`，Schema 中 `"name": "volvet"`。
+  - 页面展现：全站标题均为 `| velolev`，Logo 图片为 `velolev-wordmark.svg`，正文第一句为 `"Plan street light pole installation with velolev..."`，Schema 中 `"name": "velolev"`。
   - **问题实质**：整个网站从始至终没有任何一处提及 `velolev` 这个单词！
 - **SEO 与知识图谱破坏力**：
-  1. 用户的品牌词搜索（如在 Google 中搜索 `"volvet"` 或 `"volvet light pole lifter"`），Google 会优先寻找包含品牌词的域名（如 volvet.com / volvet.org）。当面对 `velolev.org` 时，搜索引擎难以确立其作为该品牌官方站点的权威性。
+  1. 用户的品牌词搜索（如在 Google 中搜索 `"velolev"` 或 `"velolev light pole lifter"`），Google 会优先寻找包含品牌词的域名（如 velolev.com / velolev.org）。当面对 `velolev.org` 时，搜索引擎难以确立其作为该品牌官方站点的权威性。
   2. 若 `velolev` 是历史遗留域名或字母混淆注册（Anagram），缺乏公开的实体所有权（Legal Entity）声明或商标从属说明，将直接触发 Google 反垃圾与反仿冒算法的降权筛查。
 
 ### 5.2 权威度与工程严谨性 (E-E-A-T 标杆表现)
@@ -182,7 +182,7 @@
 
 ### 6.1 已部署类型分析
 1. **`Organization` (部署于全站所有页面)**：
-   包含品牌名称 `volvet`、设备摘要、官网 URL、Logo 绝对地址，以及支持 7 种语言的技术支持联络点 (`ContactPoint`)。
+   包含品牌名称 `velolev`、设备摘要、官网 URL、Logo 绝对地址，以及支持 7 种语言的技术支持联络点 (`ContactPoint`)。
 2. **`WebSite` (部署于首页)**：
    声明站点名称及默认语言。
 3. **`BreadcrumbList` (部署于所有内页)**：
@@ -211,7 +211,7 @@
 - **Organization Schema 缺失实体外部链接与地址**：
   缺少 `sameAs` 字段（缺少 LinkedIn 公司主页、YouTube 视频主页等）以及 `PostalAddress` 实体，减弱了实体在现实世界中物理真实性的佐证。
 - **TechArticle 缺少显式 `author` 实体**：
-  目前技术文章的 Schema 缺少独立的 `Person` 或 `Organization` 作者对象，建议注入 `author: {"@type": "Organization", "name": "volvet Technical Engineering Team"}`。
+  目前技术文章的 Schema 缺少独立的 `Person` 或 `Organization` 作者对象，建议注入 `author: {"@type": "Organization", "name": "velolev Technical Engineering Team"}`。
 
 ---
 
@@ -312,7 +312,7 @@ Phase 1: P0 紧急修复 (Week 1)
   ├── 1. vercel.json 增加 /sitemap.xml -> /sitemap-index.xml (308 重定向)
   ├── 2. vercel.json 增加 /equipment/ -> /products/light-pole-jack/ 及 /pricing-plan/ -> /quote/ (308 重定向)
   ├── 3. 修复裸域 HTTP 双跳，统一单跳直达 https://www.velolev.org/
-  ├── 4. /about-us/ 补充品牌实体说明，明确 volvet 与 velolev.org 的从属认证关系并在 Schema 增补
+  ├── 4. /about-us/ 补充品牌实体说明，明确 velolev 与 velolev.org 的从属认证关系并在 Schema 增补
   └── 5. vercel.json 注入 Content-Security-Policy (CSP) 标头
 
 Phase 2: P1 性能降载与元数据瘦身 (Weeks 2-3)
@@ -344,7 +344,7 @@ Phase 4: P3 持续监测与 AI 搜索能力演进 (持续追踪)
 2. **外部链接与反向链接 (Backlinks Profile) 数据**：
    由于无 Moz / Ahrefs / DataForSEO 外部 API 授权，本报告未包含外部反向链接质量、Domain Authority (DA) 及毒性外链（Toxic Links）评估。
 3. **品牌战略决策 (Brand Strategy Alignment)**：
-   `velolev` 与 `volvet` 的命名分歧究竟是暂时的过渡期策略，还是计划长期沿用此架构？后续技术团队需与商业负责人敲定是否需要做域名统一或注册同名主域名。
+   `velolev` 与 `velolev` 的命名分歧究竟是暂时的过渡期策略，还是计划长期沿用此架构？后续技术团队需与商业负责人敲定是否需要做域名统一或注册同名主域名。
 
 ---
 *报告生成工具：Claude SEO Orchestrator & Audit Pipeline*  

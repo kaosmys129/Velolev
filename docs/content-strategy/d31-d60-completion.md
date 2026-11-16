@@ -1,4 +1,4 @@
-# volvet D31–D60 开发验收
+# velolev D31–D60 开发验收
 
 > 前次实现与验收记录。之后的审计及整改已完成，当前结果见 `d31-d60-remainder-completion.md` 和 `d60-remainder-verification.json`。原手机失败和未核实断言已处理，正式发布审核仍待真实资料。
 

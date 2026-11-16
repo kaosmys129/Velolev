@@ -1,4 +1,4 @@
-# Project: volvet About Us Factory & Engineering Endorsement System
+# Project: velolev About Us Factory & Engineering Endorsement System
 
 ## Architecture
 - **Framework**: Astro 5 (Static Site Generation / SSG)

@@ -12,7 +12,7 @@
 | 审计维度 | 权重 | 修复前评分 | 复审当前评分 | 核心达标证据 (Live Verified) |
 | :--- | :---: | :---: | :---: | :--- |
 | **Technical SEO (技术基建)** | 25% | 45 | **98** | `/sitemap.xml` 308 直跳；85 路由服务端 308；CSP/HSTS 生效；`/api/` 屏蔽；`.csv/.json` 注入 `X-Robots-Tag: noindex, nofollow` |
-| **Content & E-E-A-T (内容与品牌)** | 25% | 55 | **94** | 13 篇长文与公共页面 **0 处** `velvet`/`volvet`；标题收敛至 52–64 字符；页脚全站挂载 `/guides/` 一级内链 |
+| **Content & E-E-A-T (内容与品牌)** | 25% | 55 | **94** | 13 篇长文与公共页面 **0 处** `velvet`/`velolev`；标题收敛至 52–64 字符；页脚全站挂载 `/guides/` 一级内链 |
 | **On-Page & Schema (结构化数据)** | 20% | 68 | **97** | 补全 Product `mpn: VELO-12M-300KG`、`VideoObject`、`Organization` `sameAs` & `address`、全站单 `<h1>` |
 | **Performance & Media (性能降载)** | 15% | 62 | **95** | 案例图 WebP 缩减至 52.7–59.7 KB（降幅 **93.6%**）；Hero 图 WebP 缩减至 23.8 KB（降幅 **87.8%**） |
 | **GEO & Agentic AI (AI 搜索就绪)** | 15% | 65 | **96** | `llms.txt` 死链修复且符合 v2 规范；全量放行 AI 爬虫；全站 143 URL 已广播 IndexNow (HTTP 200) |
@@ -37,7 +37,7 @@
 
 ### 3. 页面元数据、结构化数据与品牌清洗抽检
 
-| 页面路径 | 状态码 | Title 长度 | Desc 长度 | H1 数 | Schema 类型 | 品牌脱敏 (`velvet/volvet`) |
+| 页面路径 | 状态码 | Title 长度 | Desc 长度 | H1 数 | Schema 类型 | 品牌脱敏 (`velvet/velolev`) |
 | :--- | :---: | :---: | :---: | :---: | :--- | :---: |
 | `/` | 200 | 56 | 151 | 1 | Organization (`sameAs`), WebSite | **0 处** |
 | `/products/light-pole-jack/` | 200 | 63 | 159 | 1 | Organization, BreadcrumbList, Product (`mpn`), FAQPage, VideoObject | **0 处** |

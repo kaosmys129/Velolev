@@ -1,8 +1,8 @@
-# volvet · GEO 内容与出海长文生产汇总 (geo-drafts)
+# velolev · GEO 内容与出海长文生产汇总 (geo-drafts)
 
 > 规范依据：`geoflow-b2b-seo-blog-pipeline`（融合 QuickCreator AI SEO 5 步方法论与企业级原子物理事实治理网）
 > 事实基准：`maquin-astro-theme/src/data/content-baseline.json`（版本：2026-10-28.3）及 S4 规格图纸
-> 更新日期：2026-11-01 ｜ 品牌确认：`volvet`（旧 PoleLift / Velolev 仅作历史资料归档，严禁在新内容中出现）
+> 更新日期：2026-11-01 ｜ 品牌确认：`velolev`（旧 PoleLift / Velolev 仅作历史资料归档，严禁在新内容中出现）
 
 ---
 
@@ -12,7 +12,7 @@
    - 全面清除未经证实的认证宣称（彻底剔除任何 CE、ISO 9001 虚假背书）；
    - 彻底删除所有裸露货币符号（`$`、`€`、`£`、`¥`），统一采用 B2B 商业宏观叙述与 ROI 测算模型；
    - 纠正作业人员编制宣称：严格标定为两名作业人员协同作业（`two-person operation` / `two workers`），严禁宣传单人独立高空施工；
-   - 纠正历史陈旧品牌名：统一为 `volvet` 或通用工程品类术语（`portable light pole lifter` / `portable hydraulic pole lifter`）。
+   - 纠正历史陈旧品牌名：统一为 `velolev` 或通用工程品类术语（`portable light pole lifter` / `portable hydraulic pole lifter`）。
 
 2. **锁定核心原子物理事实 (F001–F031)**：
    - 额定起升载荷：严格标定为 **300kg**（出厂垂直试验台 100% 核定，F002）；
@@ -49,7 +49,7 @@
 | `geo-drafts/articles/portable-light-pole-lifter-explainer-en.md` | **Portable Light Pole Lifter: Engineering Architecture, Flange Compatibility, and Jobsite Selection Guide (英文母版)** | ✅ 门禁 100% 通过（0 违规） | F001-F020 (9 项) | ✅ 5 处高清卡片已回写挂载 |
 | `geo-drafts/articles/portable-light-pole-lifter-explainer-es.md` | **Elevador Portátil Hidráulico de Postes de Luz: Arquitectura de Ingeniería, Compatibilidad de Brida y Guía de Selección para Obras (西班牙语)** | ✅ 门禁 100% 通过（0 违规） | F001-F020 (9 项) | ✅ 5 处高清卡片已回写挂载 |
 | `geo-drafts/articles/portable-light-pole-lifter-explainer-id.md` | **Alat Pengangkat Tiang Lampu Portabel: Arsitektur Rekayasa, Kompatibilitas Flensa, dan Panduan Pemilihan Lapangan (印尼语)** | ✅ 门禁 100% 通过（0 违规） | F001-F020 (9 项) | ✅ 5 处高清卡片已回写挂载 |
-| `geo-drafts/knowledge-base/polelift-knowledge-base.md` | volvet GEO 品牌知识库（Markdown 权威版） | ✅ 已对齐基准（清除旧认证与价格） | F001–F031 完整台账 | - |
+| `geo-drafts/knowledge-base/polelift-knowledge-base.md` | velolev GEO 品牌知识库（Markdown 权威版） | ✅ 已对齐基准（清除旧认证与价格） | F001–F031 完整台账 | - |
 | `geo-drafts/knowledge-base/polelift-knowledge-base.json` | 同知识库机器可读 JSON 数据包 | ✅ 已校验结构合法 | 机器可读合规定义 | - |
 | `ops/geoflow/private/seed.json` | GEOFlow 独立后台数据库种子（Articles 1, 2, 3 归入正式分类 1, 2, 3 与标题关联） | ✅ 同步更新完成 | 数据库正式草稿已同步 | - |
 

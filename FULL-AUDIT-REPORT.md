@@ -12,8 +12,8 @@
 
 ### 1. 双模式构建基线说明 (`Dual-Mode Baseline`)
 本项目通过 [astro.config.mjs](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/astro.config.mjs#L1-L32) 与 [site-config.mjs](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/lib/site-config.mjs#L1-L65) 实现双模式构建保护：
-1. **当前预发布模式 (`pending-domain-preview`)**：当未设置 `PUBLIC_SITE_URL` 且 [publication-gates.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/data/publication-gates.json) 中的 5 项上线门禁处于 `pending` 状态时，当前 `maquin-astro-theme/dist/`（见 [.volvet-build.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/dist/.volvet-build.json)）自动注入 `<meta name="robots" content="noindex, nofollow">`、HTTP 响应头 `X-Robots-Tag: noindex, nofollow, noarchive`、`robots.txt` 全站 `Disallow: /`，且不输出 `<link rel="canonical">`、`hreflang` 与 `sitemap-index.xml`。这是符合预发布防抢先收录规范的安全机制。
-2. **正式域名配置模式 (`configured-origin`)**：在模拟注入 `PUBLIC_SITE_URL="https://volvet.example.com"` 的独立构建测试中，全站 126 个公开内容页可正常切换为 `index, follow`，自动生成自引用 Canonical、7 语种 + `x-default` 双向互链 `hreflang`、`sitemap-index.xml` / `sitemap-0.xml` 以及面向 `OAI-SearchBot`、`ClaudeBot`、`PerplexityBot`、`Google-Extended` 的 `Allow: /` 规则。
+1. **当前预发布模式 (`pending-domain-preview`)**：当未设置 `PUBLIC_SITE_URL` 且 [publication-gates.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/data/publication-gates.json) 中的 5 项上线门禁处于 `pending` 状态时，当前 `maquin-astro-theme/dist/`（见 [.velolev-build.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/dist/.velolev-build.json)）自动注入 `<meta name="robots" content="noindex, nofollow">`、HTTP 响应头 `X-Robots-Tag: noindex, nofollow, noarchive`、`robots.txt` 全站 `Disallow: /`，且不输出 `<link rel="canonical">`、`hreflang` 与 `sitemap-index.xml`。这是符合预发布防抢先收录规范的安全机制。
+2. **正式域名配置模式 (`configured-origin`)**：在模拟注入 `PUBLIC_SITE_URL="https://velolev.example.com"` 的独立构建测试中，全站 126 个公开内容页可正常切换为 `index, follow`，自动生成自引用 Canonical、7 语种 + `x-default` 双向互链 `hreflang`、`sitemap-index.xml` / `sitemap-0.xml` 以及面向 `OAI-SearchBot`、`ClaudeBot`、`PerplexityBot`、`Google-Extended` 的 `Allow: /` 规则。
 
 ### 2. 核心阻断问题 (Top 3 Critical Issues)
 1. **[F-01 / Critical] 生产构建相对路径越界与 `en` 分支限制导致 7 语种旗舰技术指南 100% 配图及对比表 `Table 1` 丢失**：
@@ -52,7 +52,7 @@
 - **Step 1 — 正向信号 (+4)**：
   1. 核心参数围绕 [content-baseline.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/data/content-baseline.json)（300 kg WLL、85 kg 分体总重、65 kg 最重单件、24V/12V、200–450 mm 法兰跨距）构建，工程边界清晰。
   2. 诚实披露设备不适用边界（如 >14m 杆体、法兰不匹配或跨越护栏场景仍需吊车）。
-  3. 配备真实可下载的 CSV/JSON 规格清单与项目核对表（`/resources/volvet-specifications.csv`、`project-information-worksheet.csv`）。
+  3. 配备真实可下载的 CSV/JSON 规格清单与项目核对表（`/resources/velolev-specifications.csv`、`project-information-worksheet.csv`）。
   4. 全站 126 个内容页无薄内容页（正文词数 260–2,491 词，可读性 Flesch Kincaid Grade 9.7–10.2 契合工程采购受众）。
 - **Step 2 — 缺陷信号 (-1)**：
   1. 旗舰技术指南、`llms.txt` 与首页存在越过 `content-baseline.json` 门禁的未核实个人署名/实测案例/ISPM-15/70% 降本承诺（F-02），且英文旗舰文章存在 Markdown 列表压平、ASCII 乱码与无链接伪 CTA（F-03）。
@@ -114,7 +114,7 @@
   1. 部署了结构化 `/llms.txt` 端点（[llms.txt.ts](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/pages/llms.txt.ts)），清晰索引核心产品、规格清单、对比页与 7 语种入口。
   2. 配置正式域名后，`robots.txt` 显式允许 `OAI-SearchBot`、`ClaudeBot`、`PerplexityBot` 与 `Google-Extended` 抓取。
   3. 旗舰指南与核心决策页顶部均设计了高信息密度的 Direct Answer / TL;DR 工程摘要块（`answer_block_scanner.py` 得分 95/100，`citation_readiness.py` 得分 85/100）。
-  4. 提供机器可直接读取的 `/resources/volvet-specifications.json` 与 `.csv` 原始工程数据包。
+  4. 提供机器可直接读取的 `/resources/velolev-specifications.json` 与 `.csv` 原始工程数据包。
 - **Step 2 — 缺陷信号 (-1)**：
   1. `llms.txt.ts:12-19` 泄露了内部事实编码 `(F001..F023)` 与未核实的 `ISPM-15`/24小时保压声明（F-02），且指南页核心对比表 `Table 1` 因 `fig` 为空被连带隐藏（F-01）。
 - **Step 3 — 基础分**：`4 / (4 + 1) × 100 = 87.0`（含结构化 JSON 资源加分）
@@ -142,7 +142,7 @@
 | ID | 领域 (Area) | 严重度 (Severity) | 置信度 (Confidence) | 修复状态 (Status) | 核心发现 (Finding) | 源码与产物证据 (Evidence) | 业务与 SEO 影响 (Impact) | 修复方案摘要 (Fix) |
 | :--- | :--- | :---: | :---: | :---: | :--- | :--- | :--- | :--- |
 | **F-01** | Technical SEO / Image / Content | **Critical** | Confirmed | **已解决 (Resolved)** | `GuideArticlePage.astro` 构建期相对路径越界及 `en` 分支限制导致 7 语种技术指南 100% 配图与对比表 `Table 1` 丢失 | [GuideArticlePage.astro](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/components/procurement/GuideArticlePage.astro#L41-L63) 第 41 行 `new URL("../../../public/images", import.meta.url)` 在 `dist/chunks/` 下越界；第 43 行 `locale !== "en"` 排除英文目录；第 681 行 `<table class="engineering-data-table">` 被包裹在 `{fig && ...}` 内。 | 7 语种旗舰指南页丢失全部 5 张信息图、16:9 封面图及核心对比表 `Table 1`；`og:image` 与 `TechArticle.image` 被迫回退至通用抠图。 | 已使用 `path.resolve(process.cwd(), "public/images")` 解析路径，移除 `locale !== "en"` 限制，解耦第 681 行 `Table 1` 渲染条件并加入去重状态位保护（确保 `Table 1` 在第 1 节对比图下方精准且仅渲染 1 次，消除多语言下多重渲染缺陷），清理 4 个冗余图片目录。 |
-| **F-02** | Content Quality / E-E-A-T | **Critical** | Confirmed | **已解决 (Resolved)** | 指南页、`llms.txt` 与首页包含违反 `content-baseline.json` 的未验证工程师署名、实测数据、ISPM-15 与 70% 降本承诺 | [content-baseline.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/data/content-baseline.json#L27-L40) 规定 `fieldValidation: "pending"`、`publishPaybackPromises: false`。但指南页与 `llms.txt`、首页曾含 `Carlos Mendoza, PE`、`ISO/IEC 17025`、`ISPM-15`、`(F001..F020)` 与 70% 承诺。 | 违反 Google YMYL 工业起重设备 E-E-A-T 真实性准则与项目自身的编辑合规基线。 | 审稿人已统一为 `volvet Engineering Review`，清除全部未验证实测案例、`ISO/IEC 17025`、`(F001..F023)` 与 `ISPM-15`，同步更新首页及 `reconstruction-copy.json` 消除 70% 承诺。 |
+| **F-02** | Content Quality / E-E-A-T | **Critical** | Confirmed | **已解决 (Resolved)** | 指南页、`llms.txt` 与首页包含违反 `content-baseline.json` 的未验证工程师署名、实测数据、ISPM-15 与 70% 降本承诺 | [content-baseline.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/data/content-baseline.json#L27-L40) 规定 `fieldValidation: "pending"`、`publishPaybackPromises: false`。但指南页与 `llms.txt`、首页曾含 `Carlos Mendoza, PE`、`ISO/IEC 17025`、`ISPM-15`、`(F001..F020)` 与 70% 承诺。 | 违反 Google YMYL 工业起重设备 E-E-A-T 真实性准则与项目自身的编辑合规基线。 | 审稿人已统一为 `velolev Engineering Review`，清除全部未验证实测案例、`ISO/IEC 17025`、`(F001..F023)` 与 `ISPM-15`，同步更新首页及 `reconstruction-copy.json` 消除 70% 承诺。 |
 | **F-03** | Content Quality / On-Page / Conversion | **Critical** | Confirmed | **已解决 (Resolved)** | 英文旗舰指南 `/guides/install-12m-street-light-poles-without-crane/` 存在 Markdown 列表压平、ASCII 流程图乱码与 3 处无链接伪 CTA（且承诺不存在的 PDF） | [prepare-geoflow-review.mjs](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/scripts/prepare-geoflow-review.mjs#L62-L63) 曾将多行列表空格合并并剥离了 Markdown 链接，导致无序/有序列表坍塌为单行、ASCII 框图坍塌、伪 CTA 失去 `<a>`。 | 严重损害英文主站旗舰长文的阅读体验、Featured Snippet 列表抓取与询盘转化率。 | 已修复 `prepare-geoflow-review.mjs:62-63` 换行保留逻辑，恢复列表换行并移除 ASCII 乱码与伪 CTA，重算并更新 `published-content.json` 第 133 行 `review.contentSha256`。 |
 | **F-04** | Schema & Structured Data | **Critical** | Confirmed | **已解决 (Resolved)** | 14 个商业页面违规注入受限的 `FAQPage` JSON-LD | [ProcurementLayout.astro](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/layouts/ProcurementLayout.astro#L46) 与 [GuideArticlePage.astro](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/components/procurement/GuideArticlePage.astro#L562-L578) 曾注入 `FAQPage`。 | Google 自 2023 年 8 月起仅对政府和权威医疗站点授予 `FAQPage` 富媒体展示，商业站部署属无效冗余标记。 | 已从 `ProcurementLayout.astro:46` 与 `GuideArticlePage.astro` 移除 `FAQPage` Schema 注入（保留 `contentPolicy.mjs` 中的导出供测试），页面保留可见 `<details>` 手风琴。 |
 | **F-05** | Schema & Structured Data | **Warning** | Confirmed | **已解决 (Resolved)** | `TechArticle` JSON-LD 注入在 `<body>` 中，`image` 与 `mainEntityOfPage.@id` 使用相对路径，且缺失 `author.url` / `publisher.logo` | `TechArticle` 原在组件正文 slot 输出，`image` 与 `@id` 未调用绝对规范化解析。 | 即使配置 `PUBLIC_SITE_URL`，`TechArticle` 的 `@id` 与 `image` 仍为相对路径，触发结构化数据校验告警。 | `TechArticle` 已移至 `ProcurementLayout.astro` `<head>`（通过 `extraSchemas` 传递），统一生成绝对规范 URL 并补全 logo/url。 |
@@ -153,7 +153,7 @@
 | **F-10** | On-Page / International SEO | **Warning** | Confirmed | **已解决 (Resolved)** | 技术指南页底部相关工程资源链接在 7 个语种中共 42 处直接渲染原始英文 URL slug 作为可见锚文本 | 原代码使用字符替换直接显示 `compare/pole jack vs crane ↗` 等裸露 slug。 | 削弱内链锚文本语义相关性，且在 6 个非英语页面上造成语言混杂。 | 已通过 `pageKeyForPath`、`corePages` 与 `translateText` 映射为 7 语种可读本地化标题。 |
 | **F-11** | Technical SEO / URL Architecture | **Warning** | Confirmed | **已解决 (Resolved)** | 英语与非英语核心商业页存在非对称 URL slug | 跨语种 URL slug 存在映射别名（已由 `route-aliases.json` 与 `site-config.mjs` 完整兜底覆盖）。 | 跨语种 URL 语义不一致。 | 保持现有 85 个 301 语义化退役映射，并在 `astro.config.mjs` sitemap serialize 中注入规范 alternate 交叉关联。 |
 | **F-12** | Technical SEO / Sitemap | **Warning** | Confirmed | **已解决 (Resolved)** | 生成的 `sitemap-0.xml` 缺失 `<lastmod>` 时间戳与多语言 `<xhtml:link rel="alternate" hreflang="...">` 注释 | 原 `sitemap` 仅配置 filter，未配置 serialize 钩子。 | 搜索引擎无法直接从 Sitemap 获取 126 个页面的最后修改时间与多语言对应簇。 | 已在 `astro.config.mjs` 的 `@astrojs/sitemap` 中加入 `serialize(item)`，输出 7 语种 + `x-default` `xhtml:link` 与统一 `lastmod`。 |
-| **F-13** | On-Page SEO | **Warning** | Confirmed | **已解决 (Resolved)** | 全站 50/126 页 `<title>` 长度越界，71/126 页 Description 长度越界 | 英文指南页 Title 曾因重复拼接品牌后缀达 120 字符。 | 超长标题与描述在 SERP 中被截断，影响展示与点击率。 | 已清理指南页 Title 重复拼接逻辑，精简为 53 字符（`12m Light Pole Installation Without a Crane \| volvet`），收敛 Description。 |
+| **F-13** | On-Page SEO | **Warning** | Confirmed | **已解决 (Resolved)** | 全站 50/126 页 `<title>` 长度越界，71/126 页 Description 长度越界 | 英文指南页 Title 曾因重复拼接品牌后缀达 120 字符。 | 超长标题与描述在 SERP 中被截断，影响展示与点击率。 | 已清理指南页 Title 重复拼接逻辑，精简为 53 字符（`12m Light Pole Installation Without a Crane \| velolev`），收敛 Description。 |
 | **F-14** | On-Page / Social Meta | **Warning** | Confirmed | **已解决 (Resolved)** | 全站 126 页缺失 Twitter Card 标签与 `og:locale` 标签，且技术指南页 `og:type` 固定为 `website` | 原布局未输出 `twitter:*` 与 `og:locale`，文章页未能使用 `og:type="article"`。 | 海外社媒分享缺少丰富卡片预览。 | 已在 `ProcurementLayout.astro` 补充 `twitter:card="summary_large_image"`、`twitter:title`、`twitter:description`、`twitter:image`、`og:locale` 与 `og:type="article"`。 |
 | **F-15** | On-Page / Accessibility | **Warning** | Confirmed | **已解决 (Resolved)** | 7 个语种 `/faq/` 页面存在标题层级跳跃（`H1` 跳至 `H3`），且全站 `<dialog>` 含无 `src` 的空 `<img>` | `FaqPage.astro:4` 原含 `<h3>Ask with a drawing.</h3>`；`MediaLightbox.astro:11` 曾含 `<img data-lightbox-image alt="" />`。 | 破坏大纲层级且触发无 src 标签警告。 | 已将 `FaqPage.astro` 改为 `<h2>` 消除跳级；为 `MediaLightbox.astro` 补充 1×1 透明 GIF 占位符与显式宽高。 |
 | **F-16** | Image Optimization / CWV | **Warning** | Confirmed | **已解决 (Resolved)** | 首屏 LCP 主图未在 `<head>` 预加载 | 首屏重要视觉资源未进行 preload 标记。 | 增加弱网首屏 LCP 渲染延迟。 | 已在 `ProcurementLayout.astro` `<head>` 中为主图注入 `<link rel="preload" as="image" href={lcpImageHref} fetchpriority="high">`。 |
@@ -172,9 +172,9 @@
 ### 1. 六维评分明细表 (`Scorecard Breakdown`)
 | 评估维度 | 满分 | 修复前 | 修复后 | 修复落地与验证记录 |
 | :--- | :---: | :---: | :---: | :--- |
-| **1. 搜索意图与受众匹配 (Search Intent & Audience Fit)** | 20 | 18 | **20** | 精准锁定受限空间免吊车立杆痛点，首屏直出直接结论块；Title 精简为 53 字符（`12m Light Pole Installation Without a Crane \| volvet`），消除品牌词重复。 |
+| **1. 搜索意图与受众匹配 (Search Intent & Audience Fit)** | 20 | 18 | **20** | 精准锁定受限空间免吊车立杆痛点，首屏直出直接结论块；Title 精简为 53 字符（`12m Light Pole Installation Without a Crane \| velolev`），消除品牌词重复。 |
 | **2. 结构、可读性与视觉证据 (Structure, Scannability & Visuals)** | 15 | 8 | **14** | `GuideArticlePage.astro:41-48` 路径解析修复，7 语种 35 张 16:9 配图与 `Table 1` 对比表全部恢复；英文 Markdown 列表有序/无序换行全部恢复，坍塌 ASCII 乱码已清理。 |
-| **3. E-E-A-T 与信息溯源 (E-E-A-T & Provenance)** | 20 | 10 | **19** | 审稿人统一为机构署名 `volvet Engineering Review`；全面清理未验证个人署名、`ISO/IEC 17025` 与现场未验证实测案例，与 `content-baseline.json` 保持 100% 一致。 |
+| **3. E-E-A-T 与信息溯源 (E-E-A-T & Provenance)** | 20 | 10 | **19** | 审稿人统一为机构署名 `velolev Engineering Review`；全面清理未验证个人署名、`ISO/IEC 17025` 与现场未验证实测案例，与 `content-baseline.json` 保持 100% 一致。 |
 | **4. 技术与物理事实准确性 (Technical Factual Accuracy)** | 20 | 14 | **19** | 核心物理力矩公式与 300 kg WLL 等额定参数严谨核对，全量清除 6 语种残留的 `(F001..F023)` 内部编码与 24h 保压声称。 |
 | **5. 页面与技术 SEO (On-Page & Technical SEO)** | 15 | 8 | **14** | 移除商业受限的 `FAQPage` JSON-LD；`TechArticle` 移入 `<head>` 并采用绝对 URL；42 处相关链接锚文本映射为 7 语种可读标题；`og:type` 设置为 `article` 并补全 Twitter Card。 |
 | **6. B2B 转化与下一步引导 (B2B Conversion & Next-Step UX)** | 10 | 4 | **8** | 清理 3 处内联伪 CTA 与未核实 PDF 承诺；保留高转化率的交互式双按钮卡片（直接导向 `/quote/` 与 `/resources/` 工作表）。 |
@@ -189,7 +189,7 @@
 
 ### 3. 建议替换的 SEO 元数据与大纲规范 (`Recommended Article Metadata & Outline`)
 - **建议 `<title>`（53 字符，消除重复品牌后缀）**：
-  `12m Light Pole Installation Without a Crane | volvet`
+  `12m Light Pole Installation Without a Crane | velolev`
 - **建议 `<meta name="description">`（152 字符）**：
   `Engineering guide to erecting 8m–12m street light poles without a mobile crane using a two-module 85 kg hydraulic lifter (300 kg WLL, 200–450 mm flange).`
 - **建议 Direct Answer 摘要盒首段**：
@@ -219,5 +219,5 @@
 2. **正式上线前强制核查门禁 (`Pre-Launch Gate Checklist`)**：
    - [x] 完成 [ACTION-PLAN.md](file:///Users/peterpc/Documents/liftpolemachine-web/ACTION-PLAN.md) 中全部 **P0（4 项）** 与 **P1（5 项）** 修复（已 100% 修复并通过自动化测试闭环）。
    - [ ] 补齐线下证明材料并将 [publication-gates.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/data/publication-gates.json) 中的 5 项门禁（`supplier_identity`、`privacy_retention`、`engineering_documents`、`application_validation`、`editorial_review`）状态更新为 `"passed"`。
-   - [ ] 在生产构建环境中设置 `PUBLIC_SITE_URL="https://<正式生产域名>"`，运行 `npm --prefix maquin-astro-theme run build` 与 `npm --prefix maquin-astro-theme run release:check`，确认 `dist/.volvet-build.json` 中 `releaseMode === "configured-origin"` 且 `indexable === true`。
+   - [ ] 在生产构建环境中设置 `PUBLIC_SITE_URL="https://<正式生产域名>"`，运行 `npm --prefix maquin-astro-theme run build` 与 `npm --prefix maquin-astro-theme run release:check`，确认 `dist/.velolev-build.json` 中 `releaseMode === "configured-origin"` 且 `indexable === true`。
    - [ ] 部署后在 Google Search Console 提交 `https://<正式生产域名>/sitemap-index.xml`，并使用 URL Inspection Tool 与 Rich Results Test 抽检 7 语种首页、产品页与技术指南页。

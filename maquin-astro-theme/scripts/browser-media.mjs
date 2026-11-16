@@ -11,7 +11,7 @@ import {verifyBuiltVersion} from "./lib/source-fingerprint.mjs";
 
 const root=fileURLToPath(new URL("../",import.meta.url));
 const out=join(root,"../output/playwright/media");
-const directory=mkdtempSync(join(tmpdir(),"volvet-media-browser-"));
+const directory=mkdtempSync(join(tmpdir(),"velolev-media-browser-"));
 mkdirSync(out,{recursive:true});
 verifyBuiltVersion(root);
 const {server}=createInquiryServer({directory,adminToken:randomBytes(36).toString("base64url"),testMode:true});

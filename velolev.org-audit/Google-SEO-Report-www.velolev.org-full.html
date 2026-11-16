@@ -587,7 +587,7 @@
   <div class="critical-box">
     <strong>Critical Issues Found:</strong>
     <ol>
-      <li>Brand Entity &amp; Domain Mismatch: Domain is velolev.org but brand identity is exclusively volvet across all pages, titles, logos, and schemas without entity aliasing or sameAs linkage.</li>
+      <li>Brand Entity &amp; Domain Mismatch: Domain is velolev.org but brand identity is exclusively velolev across all pages, titles, logos, and schemas without entity aliasing or sameAs linkage.</li>
       <li>Double Redirect Chain on Bare Domain: http://velolev.org -&gt; 308 -&gt; https://velolev.org/ -&gt; 308 -&gt; https://www.velolev.org/ (2 hops).</li>
       <li>Missing /sitemap.xml: Default /sitemap.xml returns HTTP 404; only /sitemap-index.xml is served, without a server redirect.</li>
       <li>Client-side Meta-Refresh (HTTP 200) on Legacy Routes: /equipment/ and /pricing-plan/ serve HTML 200 with meta-refresh rather than server-side HTTP 308 redirects.</li>
@@ -664,9 +664,9 @@
   </ul>
   <h4>Findings</h4>
   <div class="action-item medium">
-    <h4>Critical Brand Entity &amp; Domain Disconnect (velolev.org vs volvet) <span class="status-warn">Critical</span></h4>
-    <p>The domain is velolev.org, yet the brand is exclusively identified as &#x27;volvet&#x27; across all page titles, logos, schemas, and body copy. There is zero on-page or schema explanation of the relationship between velolev and volvet.</p>
-    <p><strong>Recommendation:</strong> Add clear corporate brand entity linkage: explain on /about-us/ that volvet is the brand/trademark hosted at velolev.org, add sameAs and alternateName properties in Organization schema, or align domain branding.</p>
+    <h4>Critical Brand Entity &amp; Domain Disconnect (velolev.org vs velolev) <span class="status-warn">Critical</span></h4>
+    <p>The domain is velolev.org, yet the brand is exclusively identified as &#x27;velolev&#x27; across all page titles, logos, schemas, and body copy. There is zero on-page or schema explanation of the relationship between velolev and velolev.</p>
+    <p><strong>Recommendation:</strong> Add clear corporate brand entity linkage: explain on /about-us/ that velolev is the brand/trademark hosted at velolev.org, add sameAs and alternateName properties in Organization schema, or align domain branding.</p>
   </div>
   <div class="action-item medium">
     <h4>Multilingual Asymmetry (35 English Pages vs 18 in Other Locales) <span class="status-warn">Medium</span></h4>
@@ -685,15 +685,15 @@
   <ul>
     <li>100% of 143 pages have title tags and meta descriptions</li>
     <li>100% of 143 pages follow the single H1 hierarchy standard</li>
-    <li>Consistent brand suffix appending (&#x27; | volvet&#x27;) on all titles</li>
+    <li>Consistent brand suffix appending (&#x27; | velolev&#x27;) on all titles</li>
     <li>Clean URL structure with trailing slashes and descriptive lowercase slugs</li>
     <li>Zero orphan pages: all 143 sitemap pages are discoverable through internal links</li>
   </ul>
   <h4>Findings</h4>
   <div class="action-item medium">
     <h4>37 Title Tags Exceed 65 Characters (SERP Truncation) <span class="status-warn">Medium</span></h4>
-    <p>37 pages carry titles between 66 and 82 characters (e.g. &#x27;M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | volvet&#x27; - 82 chars), resulting in truncated display snippets in Google search results.</p>
-    <p><strong>Recommendation:</strong> Trim titles to 55-60 characters while front-loading core target keywords (e.g., &#x27;M16–M22 Pole Lifter Configuration (180–260mm) | volvet&#x27;).</p>
+    <p>37 pages carry titles between 66 and 82 characters (e.g. &#x27;M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | velolev&#x27; - 82 chars), resulting in truncated display snippets in Google search results.</p>
+    <p><strong>Recommendation:</strong> Trim titles to 55-60 characters while front-loading core target keywords (e.g., &#x27;M16–M22 Pole Lifter Configuration (180–260mm) | velolev&#x27;).</p>
   </div>
   <div class="action-item medium">
     <h4>47 Meta Descriptions Exceed 160 Characters <span class="status-warn">Medium</span></h4>
@@ -728,7 +728,7 @@
   <div class="action-item medium">
     <h4>TechArticle Schema Omits Explicit Author Object <span class="status-warn">Low</span></h4>
     <p>Guide pages deploy TechArticle schema without an explicit Person or Organization author entity.</p>
-    <p><strong>Recommendation:</strong> Add author: {&#x27;@type&#x27;: &#x27;Organization&#x27;, &#x27;name&#x27;: &#x27;volvet Technical Engineering Team&#x27;} to TechArticle schema.</p>
+    <p><strong>Recommendation:</strong> Add author: {&#x27;@type&#x27;: &#x27;Organization&#x27;, &#x27;name&#x27;: &#x27;velolev Technical Engineering Team&#x27;} to TechArticle schema.</p>
   </div>
   <hr class="divider">
   <h3>2.5 Performance (Core Web Vitals)</h3>
@@ -802,7 +802,7 @@
     <ul>
       <li>Configure permanent 308 redirects in vercel.json: /sitemap.xml -&gt; /sitemap-index.xml, /equipment/ -&gt; /products/light-pole-jack/, /pricing-plan/ -&gt; /quote/.</li>
       <li>Fix bare domain HTTP redirect chain in Vercel to ensure single-hop http://velolev.org -&gt; https://www.velolev.org/.</li>
-      <li>Add corporate entity clarification on /about-us/ and Organization schema linking the velolev.org domain with the volvet brand identity.</li>
+      <li>Add corporate entity clarification on /about-us/ and Organization schema linking the velolev.org domain with the velolev brand identity.</li>
       <li>Add Content-Security-Policy (CSP) header in vercel.json.</li>
     </ul>
   </div>

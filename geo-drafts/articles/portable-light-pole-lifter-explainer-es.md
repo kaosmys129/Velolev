@@ -5,8 +5,8 @@ coverImage: "/images/portable-light-pole-lifter-explainer-es/cover-flow-hero-16x
 # Elevador Hidráulico Portátil para Postes de Luz: Arquitectura Técnica, Compatibilidad de Bridas y Guía de Selección
 
 
-![Elevador portátil de postes volvet portada de ingeniería cinematográfica](/images/portable-light-pole-lifter-explainer-es/cover-flow-hero-16x9.png)
-*Portada Principal: Despliegue en campo del elevador portátil de postes de luz volvet para instalación sin grúa de columnas de 12 m. Integrado con esquemas de ingeniería y sin cortes de tránsito vial.*
+![Elevador portátil de postes velolev portada de ingeniería cinematográfica](/images/portable-light-pole-lifter-explainer-es/cover-flow-hero-16x9.png)
+*Portada Principal: Despliegue en campo del elevador portátil de postes de luz velolev para instalación sin grúa de columnas de 12 m. Integrado con esquemas de ingeniería y sin cortes de tránsito vial.*
 
 
 
@@ -25,7 +25,7 @@ El [portable hydraulic pole lifter](/products/light-pole-jack/) representa una m
 > - **Ajuste Universal de Placa Base:** Placa ranurada de alta resistencia compatible con círculos de pernos (P.C.D.) de 180mm a 260mm admitiendo espárragos M16 a M24 (F015, F016).
 
 ![Elevador hidráulico portátil para postes de luz: erección sin grúa hasta 12m](/images/portable-light-pole-lifter-explainer-es/01-feature-hero-cover-16x9.png)
-*Figura 1: Guía de selección de ingeniería del elevador hidráulico portátil volvet. Capacidad nominal verificada de 300kg y arquitectura modular dividida de 85kg eliminando la necesidad de camiones pluma de 16 toneladas.*
+*Figura 1: Guía de selección de ingeniería del elevador hidráulico portátil velolev. Capacidad nominal verificada de 300kg y arquitectura modular dividida de 85kg eliminando la necesidad de camiones pluma de 16 toneladas.*
 
 ---
 
@@ -104,8 +104,8 @@ Para garantizar operaciones seguras y estandarizadas, el trabajo en obra se divi
 
 ## 5. Límites Técnicos y Aclaración de Mitos Habituales
 
-![Comparación de factibilidad en obra: camión grúa de 16 toneladas vs elevador volvet](/images/portable-light-pole-lifter-explainer-es/05-crane-vs-lifter-comparison-16x9.png)
-*Figura 5: Comparativa de factibilidad operativa y acceso en obra: camión grúa tradicional de 16 toneladas frente al elevador portátil volvet en accesos estrechos, cuadrilla de trabajo y distancias de seguridad.*
+![Comparación de factibilidad en obra: camión grúa de 16 toneladas vs elevador velolev](/images/portable-light-pole-lifter-explainer-es/05-crane-vs-lifter-comparison-16x9.png)
+*Figura 5: Comparativa de factibilidad operativa y acceso en obra: camión grúa tradicional de 16 toneladas frente al elevador portátil velolev en accesos estrechos, cuadrilla de trabajo y distancias de seguridad.*
 
 En la adquisición de maquinaria industrial B2B, es imperativo establecer con claridad los límites operativos para evitar errores en obra:
 

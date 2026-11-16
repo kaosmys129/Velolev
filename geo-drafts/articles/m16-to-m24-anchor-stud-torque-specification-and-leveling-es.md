@@ -104,7 +104,7 @@ Aunque la norma europea EN 40-3 rige el cálculo estructural del poste frente al
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

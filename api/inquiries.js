@@ -43,6 +43,7 @@ export default async function handler(req, res) {
     let message = "";
     let locale = "en";
     let isTest = false;
+    let website = "";
 
     if (contentType.includes("application/json")) {
       try {
@@ -53,6 +54,7 @@ export default async function handler(req, res) {
         country = data.country || "";
         message = data.message || "";
         locale = data.locale || "en";
+        website = data.website || "";
         isTest = Boolean(data.isTest || name.includes("TEST") || message.includes("TEST ONLY"));
       } catch {
         return res.status(400).json({
@@ -67,12 +69,13 @@ export default async function handler(req, res) {
       country = params.get("country") || "";
       message = params.get("message") || "";
       locale = params.get("locale") || "en";
+      website = params.get("website") || "";
       isTest = Boolean(name.includes("TEST") || message.includes("TEST ONLY"));
     } else {
-      // 兼容解析 multipart (支持完整 UTF-8 与连字符/换行字段)
+      // 兼容解析 multipart (支持完整 UTF-8、多行头部与连字符/换行字段)
       const text = rawBuffer.toString("utf8");
       const extract = (key) => {
-        const regex = new RegExp(`name="${key}"(?:;[^\r\n]*)?(?:\\r?\\n){2}([\\s\\S]*?)(?:\\r?\\n--|$)`, "i");
+        const regex = new RegExp(`name="${key}"(?:[^\r\n]*\r?\n)+?\r?\n([\\s\\S]*?)(?:\\r?\\n--|$)`, "i");
         const match = text.match(regex);
         return match ? match[1].trim() : "";
       };
@@ -82,7 +85,15 @@ export default async function handler(req, res) {
       country = extract("country");
       message = extract("message");
       locale = extract("locale") || "en";
+      website = extract("website");
       isTest = Boolean(name.includes("TEST") || message.includes("TEST ONLY"));
+    }
+
+    // 蜜罐安全校验：机器人若填写隐藏的 website 字段直接拒绝
+    if (website && website.trim()) {
+      return res.status(422).json({
+        error: { code: "invalid_submission", message: "Please review your submission." }
+      });
     }
 
     // 校验必填联系方式（至少提供 email 或 phone 之一）
@@ -92,6 +103,27 @@ export default async function handler(req, res) {
           code: "validation_failed",
           message: "Please provide an email or phone number.",
           fields: { email: "Provide an email address or phone number." }
+        }
+      });
+    }
+
+    // 格式校验
+    if (email && (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254)) {
+      return res.status(400).json({
+        error: {
+          code: "validation_failed",
+          message: "Enter a valid email address.",
+          fields: { email: "Enter a valid email address." }
+        }
+      });
+    }
+
+    if (phone && (!/^[+\d\s().-]{6,50}$/.test(phone) || phone.replace(/\D/g, "").length < 6)) {
+      return res.status(400).json({
+        error: {
+          code: "validation_failed",
+          message: "Enter a valid phone number.",
+          fields: { phone: "Enter a valid phone number." }
         }
       });
     }

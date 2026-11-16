@@ -19,4 +19,4 @@
    - 补充 `sameAs`（LinkedIn、官方视频频道、行业协会链接）；
    - 补充 `address` (PostalAddress 物理公司实体地址)。
 3. **TechArticle 缺少显式 `author` 实体**：
-   - 建议挂载 `author: {"@type": "Organization", "name": "volvet Technical Engineering Team"}`。
+   - 建议挂载 `author: {"@type": "Organization", "name": "velolev Technical Engineering Team"}`。

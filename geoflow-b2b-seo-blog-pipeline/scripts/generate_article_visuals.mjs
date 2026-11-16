@@ -52,11 +52,11 @@ const I18N = {
       kpi4Lbl: '直流动力电池',
       kpi4Code: 'F004 · 50+ 次满电起升',
       rigTitle: '分体模块化总成',
-      rigModel: '型号：VOLVET-PLP-12M',
+      rigModel: '型号：VELOLEV-PLP-12M',
       rigPcd: '径向长腰孔 P.C.D.: 180-260mm',
       rigSop: '双人作业 S.O.P.',
       stdLbl: '行业权威规范符合：',
-      footerNote: 'VOLVET 流体动力装备 · 出厂 100% 质检校准'
+      footerNote: 'VELOLEV 流体动力装备 · 出厂 100% 质检校准'
     },
     card2: {
       sectionBadge: '第一章 · 机械工程架构',
@@ -127,13 +127,13 @@ const I18N = {
     },
     card5: {
       sectionBadge: '工程决策与可行性测算矩阵',
-      meta: '16 吨随车吊 VS. VOLVET 便携式立杆机',
+      meta: '16 吨随车吊 VS. VELOLEV 便携式立杆机',
       kicker: '现场组织、施工安全与综合效益测算',
       title: '工况可行性决策矩阵：市政承包商为何转向便携式升杆机',
       desc: '针对常规 6m 至 12m 市政道路照明工程，彻底消除吊车进场调度、市政封路审批与高空临电触电风险。',
       th1: '施工与评估维度',
       th2: '传统 16 吨随车吊 / 汽车起重机',
-      th3: 'volvet 便携式液压路灯升杆机',
+      th3: 'velolev 便携式液压路灯升杆机',
       r1P: '狭窄通道通行能力',
       r1C: '需 3.5m 净路宽 + 4 处支腿受力面（易压损绿化/路缘石）',
       r1L: '可通行 1.2m 人行道、非机动车道与泥泞松软地面',
@@ -171,14 +171,14 @@ const I18N = {
       tag2: '12M 最大杆高',
       tag3: '85KG 双模组分体',
       footer1: '地面预装 · 零重型吊车占道',
-      footer2: 'VOLVET 流体动力装备'
+      footer2: 'VELOLEV 流体动力装备'
     },
     figures: {
-      fig1: (relDir) => `\n![便携式路灯升杆机工程技术选型全景图](${relDir}/01-feature-hero-cover-16x9.png)\n*图 1：volvet 便携式路灯升杆机工程选型全景图。严格标定 300kg 垂直试验台核定载荷与 85kg 分体式双模组运输设计，彻底免除 16 吨汽车起重机依赖。*\n`,
+      fig1: (relDir) => `\n![便携式路灯升杆机工程技术选型全景图](${relDir}/01-feature-hero-cover-16x9.png)\n*图 1：velolev 便携式路灯升杆机工程选型全景图。严格标定 300kg 垂直试验台核定载荷与 85kg 分体式双模组运输设计，彻底免除 16 吨汽车起重机依赖。*\n`,
       fig2: (relDir) => `\n![便携式路灯升杆机分体式双模组机械工程架构](${relDir}/02-two-module-architecture-16x9.png)\n*图 2：分体式双模组流体动力架构：45kg 液压主机与 40kg 24V 直流电控箱，满足两人协同搬运与国际人工搬运健康安全标准。*\n`,
       fig3: (relDir) => `\n![通用底座法兰与 P.C.D. 180-260mm 径向腰孔力学适配](${relDir}/03-flange-pcd-compatibility-16x9.png)\n*图 3：重型通用底板径向长腰孔几何结构，广泛兼容 180mm 至 260mm 地脚螺栓分布圆直径（P.C.D.）及 M16 至 M24 锚栓，符合 ASTM F1554 标准。*\n`,
       fig4: (relDir) => `\n![地面预装与电控平稳顶升三阶段标准化双人作业 SOP](${relDir}/04-sop-field-workflow-16x9.png)\n*图 4：三阶段标准化地面作业流程规范，严格标定两名作业人员协同编制，彻底规避传统高空登高与触电危险（符合 OSHA 1926 与 IEEE 516 标准）。*\n`,
-      fig5: (relDir) => `\n![工况可行性决策矩阵：16 吨汽车吊 vs volvet 便携式液压升杆机](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*图 5：工况可行性与现场准入对比：传统 16 吨随车吊对比 volvet 便携式升杆机在狭窄通道、作业人员编制及高压临电作业半径维度的综合测算。*\n`
+      fig5: (relDir) => `\n![工况可行性决策矩阵：16 吨汽车吊 vs velolev 便携式液压升杆机](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*图 5：工况可行性与现场准入对比：传统 16 吨随车吊对比 velolev 便携式升杆机在狭窄通道、作业人员编制及高压临电作业半径维度的综合测算。*\n`
     }
   },
 
@@ -200,11 +200,11 @@ const I18N = {
       kpi4Lbl: 'DC Battery',
       kpi4Code: 'F004 · 50+ CYCLES',
       rigTitle: 'MODULAR RIG ASSEMBLY',
-      rigModel: 'MODEL: VOLVET-PLP-12M',
+      rigModel: 'MODEL: VELOLEV-PLP-12M',
       rigPcd: 'RADIAL P.C.D.: 180-260mm',
       rigSop: '2-WORKER S.O.P.',
       stdLbl: 'COMPLIANCE VERIFIED:',
-      footerNote: 'VOLVET FLUID POWER ENGINEERING · FACTORY AUDITED'
+      footerNote: 'VELOLEV FLUID POWER ENGINEERING · FACTORY AUDITED'
     },
     card2: {
       sectionBadge: 'SECTION 1 ENGINEERING ARCHITECTURE',
@@ -275,13 +275,13 @@ const I18N = {
     },
     card5: {
       sectionBadge: 'DECISION & FEASIBILITY MATRIX',
-      meta: '16-TON CRANE VS. VOLVET PORTABLE LIFTER',
+      meta: '16-TON CRANE VS. VELOLEV PORTABLE LIFTER',
       kicker: 'LOGISTICS, SAFETY & COST-BENEFIT EVALUATION',
       title: 'Jobsite Feasibility: Why Municipal Contractors Shift to Lifters',
       desc: 'Eliminate high crane mobilization charges, road closure permits, and aerial electrocution risks for standard 6m to 12m roadway illumination projects.',
       th1: 'Operational Parameter',
       th2: 'Traditional 16-Ton Boom Truck / Mobile Crane',
-      th3: 'volvet Portable Hydraulic Pole Lifter',
+      th3: 'velolev Portable Hydraulic Pole Lifter',
       r1P: 'Narrow Access Maneuverability',
       r1C: 'Requires 3.5m roadway width + 4 outrigger footprints (crushes turf/curbs)',
       r1L: 'Traverses 1.2m pedestrian sidewalks, bike paths & unpaved terrain',
@@ -319,14 +319,14 @@ const I18N = {
       tag2: '12M MAX HEIGHT',
       tag3: '85KG MODULAR',
       footer1: 'ZERO-CRANE GROUND ERECTION',
-      footer2: 'VOLVET FLUID POWER'
+      footer2: 'VELOLEV FLUID POWER'
     },
     figures: {
-      fig1: (relDir) => `\n![Portable Light Pole Lifter: Zero-Crane Erection up to 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Figure 1: volvet portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.*\n`,
+      fig1: (relDir) => `\n![Portable Light Pole Lifter: Zero-Crane Erection up to 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Figure 1: velolev portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.*\n`,
       fig2: (relDir) => `\n![Portable light pole lifter two-module mechanical engineering architecture](${relDir}/02-two-module-architecture-16x9.png)\n*Figure 2: Split two-module fluid power architecture: 45kg hydraulic lifter rig and 40kg 24V power control cabinet compliant with international manual handling safety regulations.*\n`,
       fig3: (relDir) => `\n![Base flange compatibility and P.C.D. 180mm to 260mm radial slotted geometry](${relDir}/03-flange-pcd-compatibility-16x9.png)\n*Figure 3: Heavy-duty base plate radial slotted geometry accommodating 180mm to 260mm bolt circle diameters (P.C.D.) and M16 to M24 foundation anchor studs per ASTM F1554.*\n`,
       fig4: (relDir) => `\n![Standard two-worker ground-level erection SOP workflow](${relDir}/04-sop-field-workflow-16x9.png)\n*Figure 4: Standard three-phase ground-level erection SOP strictly mandating a two-person certified crew, neutralizing overhead electrical contact risks per OSHA 1926 and IEEE 516.*\n`,
-      fig5: (relDir) => `\n![Jobsite feasibility comparison: 16-ton mobile crane vs volvet portable hydraulic pole lifter](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus volvet portable pole lifter across narrow access, crew size, and powerline clearances.*\n`
+      fig5: (relDir) => `\n![Jobsite feasibility comparison: 16-ton mobile crane vs velolev portable hydraulic pole lifter](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus velolev portable pole lifter across narrow access, crew size, and powerline clearances.*\n`
     }
   },
 
@@ -348,11 +348,11 @@ const I18N = {
       kpi4Lbl: 'Batería DC',
       kpi4Code: 'F004 · 50+ CICLOS',
       rigTitle: 'ENSAMBLE MODULAR',
-      rigModel: 'MODELO: VOLVET-PLP-12M',
+      rigModel: 'MODELO: VELOLEV-PLP-12M',
       rigPcd: 'P.C.D. RADIAL: 180-260mm',
       rigSop: 'S.O.P. DE DOS OPERARIOS',
       stdLbl: 'CONFORMIDAD VERIFICADA:',
-      footerNote: 'INGENIERÍA HIDRÁULICA VOLVET · AUDITADO EN PLANTA'
+      footerNote: 'INGENIERÍA HIDRÁULICA VELOLEV · AUDITADO EN PLANTA'
     },
     card2: {
       sectionBadge: 'SECCIÓN 1 ARQUITECTURA MECÁNICA',
@@ -423,13 +423,13 @@ const I18N = {
     },
     card5: {
       sectionBadge: 'MATRIZ DE DECISIÓN Y FACTIBILIDAD',
-      meta: 'CAMIÓN PLUMA 16T VS. ELEVADOR PORTÁTIL VOLVET',
+      meta: 'CAMIÓN PLUMA 16T VS. ELEVADOR PORTÁTIL VELOLEV',
       kicker: 'LOGÍSTICA, SEGURIDAD Y EVALUACIÓN COSTO-BENEFICIO',
       title: 'Factibilidad en Obra: Por Qué los Contratistas Eligen Elevadores',
       desc: 'Elimine costos de movilización de grúas, permisos de corte vial y riesgos de electrocución en proyectos estándar de 6m a 12m.',
       th1: 'Parámetro Operativo',
       th2: 'Camión Grúa / Pluma Tradicional de 16 Toneladas',
-      th3: 'Elevador Hidráulico Portátil volvet',
+      th3: 'Elevador Hidráulico Portátil velolev',
       r1P: 'Acceso en Espacios Estrechos',
       r1C: 'Requiere vía de 3.5m + 4 estabilizadores abiertos (daña césped y aceras)',
       r1L: 'Transita por aceras peatonales de 1.2m, ciclovías y terreno sin pavimentar',
@@ -467,14 +467,14 @@ const I18N = {
       tag2: '12M ALTURA MÁX',
       tag3: '85KG MODULAR',
       footer1: 'ERECCIÓN A NIVEL DE SUELO',
-      footer2: 'POTENCIA FLUIDA VOLVET'
+      footer2: 'POTENCIA FLUIDA VELOLEV'
     },
     figures: {
-      fig1: (relDir) => `\n![Elevador hidráulico portátil para postes de luz: erección sin grúa hasta 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Figura 1: Guía de selección de ingeniería del elevador hidráulico portátil volvet. Capacidad nominal verificada de 300kg y arquitectura modular dividida de 85kg eliminando la necesidad de camiones pluma de 16 toneladas.*\n`,
+      fig1: (relDir) => `\n![Elevador hidráulico portátil para postes de luz: erección sin grúa hasta 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Figura 1: Guía de selección de ingeniería del elevador hidráulico portátil velolev. Capacidad nominal verificada de 300kg y arquitectura modular dividida de 85kg eliminando la necesidad de camiones pluma de 16 toneladas.*\n`,
       fig2: (relDir) => `\n![Arquitectura técnica modular dividida del elevador de postes](${relDir}/02-two-module-architecture-16x9.png)\n*Figura 2: Arquitectura de potencia fluida en dos módulos divididos: estructura hidráulica de 45kg y gabinete de control de 24V de 40kg conforme a normas internacionales de manejo manual.*\n`,
       fig3: (relDir) => `\n![Compatibilidad de brida base y geometría ranurada radial P.C.D. 180mm a 260mm](${relDir}/03-flange-pcd-compatibility-16x9.png)\n*Figura 3: Geometría ranurada radial de la placa base reforzada que admite círculos de pernos (P.C.D.) de 180mm a 260mm y pernos de anclaje M16 a M24 según norma ASTM F1554.*\n`,
       fig4: (relDir) => `\n![Flujo de trabajo SOP de instalación en suelo para dos operarios](${relDir}/04-sop-field-workflow-16x9.png)\n*Figura 4: Procedimiento estandarizado de tres fases a nivel del suelo que exige estrictamente un equipo de dos operarios certificados, neutralizando riesgos eléctricos según OSHA 1926 e IEEE 516.*\n`,
-      fig5: (relDir) => `\n![Comparación de factibilidad en obra: camión grúa de 16 toneladas vs elevador volvet](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Figura 5: Comparativa de factibilidad operativa y acceso en obra: camión grúa tradicional de 16 toneladas frente al elevador portátil volvet en accesos estrechos, cuadrilla de trabajo y distancias de seguridad.*\n`
+      fig5: (relDir) => `\n![Comparación de factibilidad en obra: camión grúa de 16 toneladas vs elevador velolev](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Figura 5: Comparativa de factibilidad operativa y acceso en obra: camión grúa tradicional de 16 toneladas frente al elevador portátil velolev en accesos estrechos, cuadrilla de trabajo y distancias de seguridad.*\n`
     }
   },
 
@@ -496,11 +496,11 @@ const I18N = {
       kpi4Lbl: 'Baterai DC',
       kpi4Code: 'F004 · 50+ SIKLUS',
       rigTitle: 'PERAKITAN RIG MODULAR',
-      rigModel: 'MODEL: VOLVET-PLP-12M',
+      rigModel: 'MODEL: VELOLEV-PLP-12M',
       rigPcd: 'P.C.D. RADIAL: 180-260mm',
       rigSop: 'S.O.P. 2 PEKERJA',
       stdLbl: 'KEPATUHAN TERVERIFIKASI:',
-      footerNote: 'REKAYASA FLUIDA VOLVET · AUDIT PABRIK'
+      footerNote: 'REKAYASA FLUIDA VELOLEV · AUDIT PABRIK'
     },
     card2: {
       sectionBadge: 'BAGIAN 1 ARSITEKTUR TEKNIK',
@@ -571,13 +571,13 @@ const I18N = {
     },
     card5: {
       sectionBadge: 'MATRIKS KEPUTUSAN & KELAYAKAN PROYEK',
-      meta: 'MOBILE CRANE 16T VS. ALAT PORTABEL VOLVET',
+      meta: 'MOBILE CRANE 16T VS. ALAT PORTABEL VELOLEV',
       kicker: 'LOGISTIK, KESELAMATAN & EVALUASI BIAYA-MANFAAT',
       title: 'Kelayakan Lapangan: Mengapa Kontraktor Beralih ke Alat Portabel',
       desc: 'Eliminasi biaya mobilisasi crane yang mahal, izin penutupan jalan, dan risiko sengatan listrik untuk tiang lampu 6m hingga 12m.',
       th1: 'Parameter Operasional',
       th2: 'Mobil Derek / Crane Tradisional 16 Ton',
-      th3: 'volvet Alat Pendiri Tiang Hidrolik Portabel',
+      th3: 'velolev Alat Pendiri Tiang Hidrolik Portabel',
       r1P: 'Manuver di Akses Sempit',
       r1C: 'Perlu lebar jalan 3.5m + 4 jejak outrigger (merusak trotoar/rumput)',
       r1L: 'Melewati trotoar pejalan kaki 1.2m, jalur sepeda & tanah belum diaspal',
@@ -615,14 +615,14 @@ const I18N = {
       tag2: '12M TINGGI MAKS',
       tag3: '85KG MODULAR',
       footer1: 'PENDIRIAN DI PERMUKAAN TANAH',
-      footer2: 'DAYA FLUIDA VOLVET'
+      footer2: 'DAYA FLUIDA VELOLEV'
     },
     figures: {
-      fig1: (relDir) => `\n![Alat Pendiri Tiang Lampu Portabel Hidrolik: Pendirian Tanpa Derek hingga 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Gambar 1: Panduan pemilihan teknik alat pendiri tiang hidrolik portabel volvet. Kapasitas uji terverifikasi 300kg dan arsitektur transportasi terpisah 85kg yang meniadakan kebutuhan truk derek 16 ton.*\n`,
+      fig1: (relDir) => `\n![Alat Pendiri Tiang Lampu Portabel Hidrolik: Pendirian Tanpa Derek hingga 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Gambar 1: Panduan pemilihan teknik alat pendiri tiang hidrolik portabel velolev. Kapasitas uji terverifikasi 300kg dan arsitektur transportasi terpisah 85kg yang meniadakan kebutuhan truk derek 16 ton.*\n`,
       fig2: (relDir) => `\n![Arsitektur teknik mesin modular dua modul alat pendiri tiang](${relDir}/02-two-module-architecture-16x9.png)\n*Gambar 2: Arsitektur hidrolik dua modul terpisah: unit pengangkat 45kg dan kabinet kontrol daya 24V seberat 40kg sesuai regulasi penanganan beban manual internasional.*\n`,
       fig3: (relDir) => `\n![Kompatibilitas flensa dasar dan geometri lubang radial P.C.D. 180mm hingga 260mm](${relDir}/03-flange-pcd-compatibility-16x9.png)\n*Gambar 3: Geometri pelat dasar berlubang radial tugas berat yang mendukung diameter lingkaran baut (P.C.D.) 180mm hingga 260mm dan angkur fondasi M16 hingga M24 sesuai ASTM F1554.*\n`,
       fig4: (relDir) => `\n![Alur kerja SOP pendirian tiang dua pekerja di permukaan tanah](${relDir}/04-sop-field-workflow-16x9.png)\n*Gambar 4: SOP tiga tahap di permukaan tanah yang secara ketat mewajibkan regu kerja dua orang teknisi, memitigasi bahaya induksi listrik udara sesuai OSHA 1926 dan IEEE 516.*\n`,
-      fig5: (relDir) => `\n![Perbandingan kelayakan lapangan: truk derek 16 ton vs alat pendiri tiang volvet](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Gambar 5: Analisis kelayakan operasional dan akses lapangan: mobile crane konvensional 16 ton dibandingkan alat pendiri tiang portabel volvet dalam hal jalur sempit, jumlah personel, dan batas keselamatan listrik.*\n`
+      fig5: (relDir) => `\n![Perbandingan kelayakan lapangan: truk derek 16 ton vs alat pendiri tiang velolev](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Gambar 5: Analisis kelayakan operasional dan akses lapangan: mobile crane konvensional 16 ton dibandingkan alat pendiri tiang portabel velolev dalam hal jalur sempit, jumlah personel, dan batas keselamatan listrik.*\n`
     }
   },
 
@@ -644,11 +644,11 @@ const I18N = {
       kpi4Lbl: 'Batterie DC',
       kpi4Code: 'F004 · 50+ CYCLES',
       rigTitle: 'ASSEMBLAGE MODULAIRE',
-      rigModel: 'MODÈLE : VOLVET-PLP-12M',
+      rigModel: 'MODÈLE : VELOLEV-PLP-12M',
       rigPcd: 'P.C.D. RADIAL : 180-260mm',
       rigSop: 'S.O.P. 2 OPÉRATEURS',
       stdLbl: 'CONFORMITÉ VÉRIFIÉE :',
-      footerNote: 'INGÉNIERIE HYDRAULIQUE VOLVET · AUDITÉ EN USINE'
+      footerNote: 'INGÉNIERIE HYDRAULIQUE VELOLEV · AUDITÉ EN USINE'
     },
     card2: {
       sectionBadge: 'SECTION 1 ARCHITECTURE MÉCANIQUE',
@@ -719,13 +719,13 @@ const I18N = {
     },
     card5: {
       sectionBadge: 'MATRICE DE DÉCISION ET FAISABILITÉ',
-      meta: 'CAMION-GRUE 16T VS ÉLÉVATEUR VOLVET',
+      meta: 'CAMION-GRUE 16T VS ÉLÉVATEUR VELOLEV',
       kicker: 'LOGISTIQUE, SÉCURITÉ & ANALYSE COÛT-BÉNÉFICE',
       title: 'Faisabilité chantier : pourquoi les installateurs choisissent l\'élévateur',
       desc: 'Éliminez les frais de mobilisation de grue, les arrêtés de voirie et les risques d\'électrocution pour mâts d\'éclairage de 6 m à 12 m.',
       th1: 'Paramètre opérationnel',
       th2: 'Camion-grue classique de 16 tonnes',
-      th3: 'Élévateur hydraulique portable volvet',
+      th3: 'Élévateur hydraulique portable velolev',
       r1P: 'Accès en voie étroite',
       r1C: 'Largeur de voirie 3.5 m requise + 4 stabilisateurs (endommage trottoirs/pelouses)',
       r1L: 'Circule sur trottoirs de 1.2 m, pistes cyclables et sols non stabilisés',
@@ -763,14 +763,14 @@ const I18N = {
       tag2: '12 M HAUTEUR MAX',
       tag3: '85 KG MODULAIRE',
       footer1: 'ÉRECTION AU SOL SANS GRUE',
-      footer2: 'HYDRAULIQUE VOLVET'
+      footer2: 'HYDRAULIQUE VELOLEV'
     },
     figures: {
-      fig1: (relDir) => `\n![Élévateur hydraulique portable pour candélabres : érection sans grue jusqu'à 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Figure 1 : Guide de sélection technique de l'élévateur hydraulique portable volvet. Charge d'épreuve vérifiée de 300 kg et conception modulaire de 85 kg éliminant le recours aux camions-grues de 16 tonnes.*\n`,
+      fig1: (relDir) => `\n![Élévateur hydraulique portable pour candélabres : érection sans grue jusqu'à 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Figure 1 : Guide de sélection technique de l'élévateur hydraulique portable velolev. Charge d'épreuve vérifiée de 300 kg et conception modulaire de 85 kg éliminant le recours aux camions-grues de 16 tonnes.*\n`,
       fig2: (relDir) => `\n![Architecture mécanique à deux modules de l'élévateur de mât portable](${relDir}/02-two-module-architecture-16x9.png)\n*Figure 2 : Architecture à deux modules séparés : unité de levage de 45 kg et armoire de commande 24V de 40 kg conformes aux normes internationales de manutention manuelle.*\n`,
       fig3: (relDir) => `\n![Compatibilité de bride d'assise et géométrie radiale P.C.D. 180 mm à 260 mm](${relDir}/03-flange-pcd-compatibility-16x9.png)\n*Figure 3 : Platine d'assise renforcée à lumières radiales compatible avec cercles de perçage (P.C.D.) de 180 mm à 260 mm et tiges d'ancrage M16 à M24 selon ASTM F1554.*\n`,
       fig4: (relDir) => `\n![Procédure SOP standard d'érection au sol par deux opérateurs](${relDir}/04-sop-field-workflow-16x9.png)\n*Figure 4 : Procédure standardisée en 3 phases au sol imposant une équipe de deux techniciens qualifiés, éliminant les risques électriques selon OSHA 1926 et IEEE 516.*\n`,
-      fig5: (relDir) => `\n![Comparatif de faisabilité sur chantier : camion-grue 16t vs élévateur volvet](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Figure 5 : Analyse de faisabilité opérationnelle et d'accès chantier : camion-grue conventionnel de 16 tonnes face à l'élévateur portable volvet en voie étroite et sécurité électrique.*\n`
+      fig5: (relDir) => `\n![Comparatif de faisabilité sur chantier : camion-grue 16t vs élévateur velolev](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Figure 5 : Analyse de faisabilité opérationnelle et d'accès chantier : camion-grue conventionnel de 16 tonnes face à l'élévateur portable velolev en voie étroite et sécurité électrique.*\n`
     }
   },
 
@@ -792,11 +792,11 @@ const I18N = {
       kpi4Lbl: 'Bateria DC',
       kpi4Code: 'F004 · 50+ CICLOS',
       rigTitle: 'CONJUNTO MODULAR',
-      rigModel: 'MODELO: VOLVET-PLP-12M',
+      rigModel: 'MODELO: VELOLEV-PLP-12M',
       rigPcd: 'P.C.D. RADIAL: 180-260mm',
       rigSop: 'S.O.P. DE 2 OPERADORES',
       stdLbl: 'CONFORMIDADE VERIFICADA:',
-      footerNote: 'ENGENHARIA HIDRÁULICA VOLVET · AUDITADO EM FÁBRICA'
+      footerNote: 'ENGENHARIA HIDRÁULICA VELOLEV · AUDITADO EM FÁBRICA'
     },
     card2: {
       sectionBadge: 'SEÇÃO 1 ARQUITETURA MECÂNICA',
@@ -867,13 +867,13 @@ const I18N = {
     },
     card5: {
       sectionBadge: 'MATRIZ DE DECISÃO E VIABILIDADE',
-      meta: 'CAMINHÃO MUNCK 16T VS ELEVADOR VOLVET',
+      meta: 'CAMINHÃO MUNCK 16T VS ELEVADOR VELOLEV',
       kicker: 'LOGÍSTICA, SEGURANÇA E AVALIAÇÃO CUSTO-BENEFÍCIO',
       title: 'Viabilidade em Obra: Por Que Empreiteiros Migram para Elevadores',
       desc: 'Elimine custos de mobilização de guindastes pesados, licenças de interdição de tráfego e riscos elétricos em postes de 6m a 12m.',
       th1: 'Parâmetro Operacional',
       th2: 'Caminhão Munck / Guindaste de 16 Toneladas',
-      th3: 'Elevador Hidráulico Portátil volvet',
+      th3: 'Elevador Hidráulico Portátil velolev',
       r1P: 'Acesso em Vias Estreitas',
       r1C: 'Requer pista de 3.5m + 4 sapatas abertas (danifica calçadas e gramados)',
       r1L: 'Transita em calçadas de 1.2m, ciclovias e terreno não pavimentado',
@@ -911,14 +911,14 @@ const I18N = {
       tag2: '12M ALTURA MÁX',
       tag3: '85KG MODULAR',
       footer1: 'INSTALAÇÃO NO NÍVEL DO SOLO',
-      footer2: 'POTÊNCIA FLUIDA VOLVET'
+      footer2: 'POTÊNCIA FLUIDA VELOLEV'
     },
     figures: {
-      fig1: (relDir) => `\n![Elevador hidráulico portátil para postes: instalação sem guindaste até 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Figura 1: Guia de seleção técnica do elevador hidráulico portátil volvet. Carga nominal verificada de 300kg e estrutura dividida de 85kg eliminando a necessidade de caminhões munck de 16 toneladas.*\n`,
+      fig1: (relDir) => `\n![Elevador hidráulico portátil para postes: instalação sem guindaste até 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Figura 1: Guia de seleção técnica do elevador hidráulico portátil velolev. Carga nominal verificada de 300kg e estrutura dividida de 85kg eliminando a necessidade de caminhões munck de 16 toneladas.*\n`,
       fig2: (relDir) => `\n![Arquitetura mecânica bimodular do elevador de postes portátil](${relDir}/02-two-module-architecture-16x9.png)\n*Figura 2: Arquitetura de potência fluida em dois módulos separados: estrutura hidráulica de 45kg e gabinete elétrico 24V de 40kg em conformidade com normas de manuseio manual.*\n`,
       fig3: (relDir) => `\n![Compatibilidade de flange base e geometria radial P.C.D. 180mm a 260mm](${relDir}/03-flange-pcd-compatibility-16x9.png)\n*Figura 3: Placa base reforçada com rasgos radiais compatível com círculos de furação (P.C.D.) de 180mm a 260mm e chumbadores M16 a M24 conforme norma ASTM F1554.*\n`,
       fig4: (relDir) => `\n![Procedimento SOP padrão de instalação no solo por dois operadores](${relDir}/04-sop-field-workflow-16x9.png)\n*Figura 4: Procedimento padronizado em três fases no nível do solo exigindo estritamente dois técnicos qualificados, neutralizando riscos elétricos conforme OSHA 1926 e IEEE 516.*\n`,
-      fig5: (relDir) => `\n![Comparativo de viabilidade em obra: caminhão munck 16t vs elevador volvet](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Figura 5: Análise de viabilidade operacional e acesso em obra: caminhão munck convencional de 16 toneladas frente ao elevador portátil volvet em vias estreitas e segurança elétrica.*\n`
+      fig5: (relDir) => `\n![Comparativo de viabilidade em obra: caminhão munck 16t vs elevador velolev](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Figura 5: Análise de viabilidade operacional e acesso em obra: caminhão munck convencional de 16 toneladas frente ao elevador portátil velolev em vias estreitas e segurança elétrica.*\n`
     }
   },
 
@@ -940,11 +940,11 @@ const I18N = {
       kpi4Lbl: 'Pin DC',
       kpi4Code: 'F004 · 50+ CHU KỲ',
       rigTitle: 'HỆ THỐNG MÔ-ĐUN',
-      rigModel: 'MODEL: VOLVET-PLP-12M',
+      rigModel: 'MODEL: VELOLEV-PLP-12M',
       rigPcd: 'P.C.D. HƯỚNG TÂM: 180-260mm',
       rigSop: 'S.O.P. 2 NHÂN CÔNG',
       stdLbl: 'TIÊU CHUẨN ĐẠT ĐƯỢC:',
-      footerNote: 'KỸ THUẬT THỦY LỰC VOLVET · KIỂM ĐỊNH NHÀ MÁY'
+      footerNote: 'KỸ THUẬT THỦY LỰC VELOLEV · KIỂM ĐỊNH NHÀ MÁY'
     },
     card2: {
       sectionBadge: 'PHẦN 1 KIẾN TRÚC CƠ KHÍ',
@@ -1015,13 +1015,13 @@ const I18N = {
     },
     card5: {
       sectionBadge: 'BẢNG MA TRẬN ĐÁNH GIÁ TÍNH KHẢ THI',
-      meta: 'XE CẨU 16 TẤN VS MÁY DỰNG CỘT VOLVET',
+      meta: 'XE CẨU 16 TẤN VS MÁY DỰNG CỘT VELOLEV',
       kicker: 'HẬU CẦN, AN TOÀN VÀ ĐÁNH GIÁ HIỆU QUẢ KINH TẾ',
       title: 'Khả thi hiện trường: Vì sao nhà thầu chuyển sang máy dựng cột',
       desc: 'Loại bỏ chi phí thuê xe cẩu đắt đỏ, thủ tục xin cấp phép cấm đường và rủi ro điện giật trên cao với cột đèn 6m đến 12m.',
       th1: 'Thông số đánh giá',
       th2: 'Xe cẩu tự hành / Xe cẩu 16 tấn truyền thống',
-      th3: 'Máy dựng cột đèn thủy lực di động volvet',
+      th3: 'Máy dựng cột đèn thủy lực di động velolev',
       r1P: 'Lối tiếp cận chật hẹp',
       r1C: 'Yêu cầu lòng đường 3.5m + 4 chân chống xòe rộng (làm lún hỏng vỉa hè)',
       r1L: 'Vào được vỉa hè hẹp 1.2m, làn xe đạp và nền đất yếu',
@@ -1059,14 +1059,14 @@ const I18N = {
       tag2: '12M CHIỀU CAO TỐI ĐA',
       tag3: '85KG HAI KIỆN',
       footer1: 'DỰNG CỘT TỪ MẶT ĐẤT',
-      footer2: 'THỦY LỰC VOLVET'
+      footer2: 'THỦY LỰC VELOLEV'
     },
     figures: {
-      fig1: (relDir) => `\n![Máy dựng cột đèn thủy lực di động: Dựng cột không dùng cẩu đến 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Hình 1: Hướng dẫn kỹ thuật và chọn thiết bị máy dựng cột thủy lực di động volvet. Tải trọng thử nghiệm 300kg và kết cấu tách 2 kiện 85kg giúp loại bỏ hoàn toàn xe cẩu 16 tấn.*\n`,
+      fig1: (relDir) => `\n![Máy dựng cột đèn thủy lực di động: Dựng cột không dùng cẩu đến 12m](${relDir}/01-feature-hero-cover-16x9.png)\n*Hình 1: Hướng dẫn kỹ thuật và chọn thiết bị máy dựng cột thủy lực di động velolev. Tải trọng thử nghiệm 300kg và kết cấu tách 2 kiện 85kg giúp loại bỏ hoàn toàn xe cẩu 16 tấn.*\n`,
       fig2: (relDir) => `\n![Kiến trúc cơ khí hai mô-đun máy dựng cột đèn di động](${relDir}/02-two-module-architecture-16x9.png)\n*Hình 2: Kiến trúc thủy lực hai mô-đun tách rời: Cụm nâng 45kg và tủ điện 24V 40kg đáp ứng quy chuẩn an toàn lao động bê vác quốc tế.*\n`,
       fig3: (relDir) => `\n![Độ tương thích mặt bích móng và rãnh xẻ hướng tâm P.C.D. 180mm đến 260mm](${relDir}/03-flange-pcd-compatibility-16x9.png)\n*Hình 3: Kết cấu tấm đế chịu lực rãnh xẻ hướng tâm tương thích vòng bulong (P.C.D.) 180mm đến 260mm và bulong móng M16 đến M24 theo tiêu chuẩn ASTM F1554.*\n`,
       fig4: (relDir) => `\n![Quy trình thi công SOP chuẩn dưới mặt đất cho hai kỹ thuật viên](${relDir}/04-sop-field-workflow-16x9.png)\n*Hình 4: Quy trình 3 giai đoạn thi công chuẩn dưới mặt đất bắt buộc đúng 2 nhân sự, triệt tiêu hoàn toàn nguy cơ phóng điện theo OSHA 1926 và IEEE 516.*\n`,
-      fig5: (relDir) => `\n![So sánh tính khả thi hiện trường: Xe cẩu 16 tấn vs máy dựng cột volvet](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Hình 5: Phân tích khả thi thi công và tiếp cận hiện trường: Xe cẩu 16 tấn truyền thống so với máy dựng cột di động volvet về lối đi hẹp, nhân lực và an toàn điện lưới.*\n`
+      fig5: (relDir) => `\n![So sánh tính khả thi hiện trường: Xe cẩu 16 tấn vs máy dựng cột velolev](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*Hình 5: Phân tích khả thi thi công và tiếp cận hiện trường: Xe cẩu 16 tấn truyền thống so với máy dựng cột di động velolev về lối đi hẹp, nhân lực và an toàn điện lưới.*\n`
     }
   },
 
@@ -1088,11 +1088,11 @@ const I18N = {
       kpi4Lbl: 'แบตเตอรี่ DC',
       kpi4Code: 'F004 · 50+ รอบการยก',
       rigTitle: 'ชุดประกอบโมดูล',
-      rigModel: 'รุ่น: VOLVET-PLP-12M',
+      rigModel: 'รุ่น: VELOLEV-PLP-12M',
       rigPcd: 'P.C.D. แนวรัศมี: 180-260 มม.',
       rigSop: 'S.O.P. ทีมช่าง 2 คน',
       stdLbl: 'มาตรฐานที่ผ่านการรับรอง:',
-      footerNote: 'วิศวกรรมระบบไฮดรอลิก VOLVET · ตรวจสอบจากโรงงาน'
+      footerNote: 'วิศวกรรมระบบไฮดรอลิก VELOLEV · ตรวจสอบจากโรงงาน'
     },
     card2: {
       sectionBadge: 'ส่วนที่ 1 สถาปัตยกรรมทางกลศาสตร์',
@@ -1163,13 +1163,13 @@ const I18N = {
     },
     card5: {
       sectionBadge: 'ตารางเมทริกซ์การตัดสินใจและความคุ้มค่า',
-      meta: 'รถเครน 16 ตัน VS เครื่องยกเสา VOLVET',
+      meta: 'รถเครน 16 ตัน VS เครื่องยกเสา VELOLEV',
       kicker: 'การขนส่ง ความปลอดภัย และการประเมินความคุ้มค่าทางเศรษฐกิจ',
       title: 'ความเป็นไปได้หน้างาน: ทำไมผู้รับเหมาจึงเปลี่ยนมาใช้เครื่องยกเสา',
       desc: 'ลดค่าเช่ารถเครนราคาแพง ขั้นตอนการขอปิดการจราจร และความเสี่ยงจากสายไฟฟ้าแรงสูงสำหรับเสาไฟ 6–12 ม.',
       th1: 'พารามิเตอร์การประเมิน',
       th2: 'รถเครน / รถเฮี๊ยบ 16 ตันแบบดั้งเดิม',
-      th3: 'เครื่องยกเสาไฟไฮดรอลิกพกพา volvet',
+      th3: 'เครื่องยกเสาไฟไฮดรอลิกพกพา velolev',
       r1P: 'การเข้าถึงพื้นที่แคบ',
       r1C: 'ต้องใช้ความกว้างถนน 3.5 ม. + พื้นที่กางขาค้ำยัน 4 จุด (ทำลายทางเท้า/สนามหญ้า)',
       r1L: 'ผ่านทางเดินเท้ากว้าง 1.2 ม. เลนจักรยาน และพื้นที่ดินอ่อนได้',
@@ -1207,14 +1207,14 @@ const I18N = {
       tag2: 'เสาสูงสุด 12 ม.',
       tag3: 'โมดูลแยกชิ้น 85 กก.',
       footer1: 'ติดตั้งเสาจากระดับพื้นดิน',
-      footer2: 'ระบบกำลังของไหล VOLVET'
+      footer2: 'ระบบกำลังของไหล VELOLEV'
     },
     figures: {
-      fig1: (relDir) => `\n![เครื่องยกเสาไฟไฮดรอลิกพกพา: ติดตั้งเสาไฟโดยไม่ต้องใช้เครนสูงถึง 12 ม.](${relDir}/01-feature-hero-cover-16x9.png)\n*ภาพที่ 1: คู่มือการเลือกทางวิศวกรรมเครื่องยกเสาไฟไฮดรอลิกพกพา volvet ผ่านการทดสอบพิกัดยก 300 กก. และการออกแบบแยกชิ้น 85 กก. ขจัดความจำเป็นในการใช้รถเครน 16 ตัน.*\n`,
+      fig1: (relDir) => `\n![เครื่องยกเสาไฟไฮดรอลิกพกพา: ติดตั้งเสาไฟโดยไม่ต้องใช้เครนสูงถึง 12 ม.](${relDir}/01-feature-hero-cover-16x9.png)\n*ภาพที่ 1: คู่มือการเลือกทางวิศวกรรมเครื่องยกเสาไฟไฮดรอลิกพกพา velolev ผ่านการทดสอบพิกัดยก 300 กก. และการออกแบบแยกชิ้น 85 กก. ขจัดความจำเป็นในการใช้รถเครน 16 ตัน.*\n`,
       fig2: (relDir) => `\n![สถาปัตยกรรมทางกลศาสตร์สองโมดูลของเครื่องยกเสาไฟพกพา](${relDir}/02-two-module-architecture-16x9.png)\n*ภาพที่ 2: สถาปัตยกรรมกำลังของไหลสองโมดูลแยกส่วน: ชุดโครงสร้างยก 45 กก. และตู้ควบคุมไฟฟ้า 24V ขนาด 40 กก. สอดคล้องตามมาตรฐานความปลอดภัยการยกย้ายด้วยแรงคน.*\n`,
       fig3: (relDir) => `\n![ความเข้ากันได้ของหน้าแปลนฐานและร่องสล็อตแนวรัศมี P.C.D. 180 มม. ถึง 260 มม.](${relDir}/03-flange-pcd-compatibility-16x9.png)\n*ภาพที่ 3: แผ่นฐานรองรับงานหนักพร้อมร่องสล็อตแนวรัศมี รองรับวงโบลต์ (P.C.D.) 180 มม. ถึง 260 มม. และแองเคอร์โบลต์ M16 ถึง M24 ตามมาตรฐาน ASTM F1554.*\n`,
       fig4: (relDir) => `\n![ขั้นตอนการทำงาน SOP มาตรฐานบนพื้นดินสำหรับช่างเทคนิคสองคน](${relDir}/04-sop-field-workflow-16x9.png)\n*ภาพที่ 4: ขั้นตอนการปฏิบัติงาน 3 ระยะบนพื้นดินที่กำหนดให้ใช้ช่างเทคนิค 2 คนอย่างเคร่งครัด ขจัดความเสี่ยงต่อการสัมผัสสายไฟฟ้าตาม OSHA 1926 และ IEEE 516.*\n`,
-      fig5: (relDir) => `\n![การเปรียบเทียบความเป็นไปได้หน้างาน: รถเครน 16 ตัน vs เครื่องยกเสาไฟ volvet](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*ภาพที่ 5: การวิเคราะห์ความเป็นไปได้ในการทำงานและการเข้าถึงพื้นที่: รถเครนขนาด 16 ตันแบบดั้งเดิมเทียบกับเครื่องยกเสาไฟพกพา volvet ในด้านทางเข้าแคบ ทีมงาน และความปลอดภัยจากสายไฟ.*\n`
+      fig5: (relDir) => `\n![การเปรียบเทียบความเป็นไปได้หน้างาน: รถเครน 16 ตัน vs เครื่องยกเสาไฟ velolev](${relDir}/05-crane-vs-lifter-comparison-16x9.png)\n*ภาพที่ 5: การวิเคราะห์ความเป็นไปได้ในการทำงานและการเข้าถึงพื้นที่: รถเครนขนาด 16 ตันแบบดั้งเดิมเทียบกับเครื่องยกเสาไฟพกพา velolev ในด้านทางเข้าแคบ ทีมงาน และความปลอดภัยจากสายไฟ.*\n`
     }
   }
 };
@@ -1246,8 +1246,8 @@ function detectLanguage(filePath, content) {
 function getCleanArticleSlug(filePath) {
   const rawFileName = path.basename(filePath, path.extname(filePath));
   return rawFileName
-    .replace(/polelift/gi, 'volvet-lifter')
-    .replace(/velolev/gi, 'volvet');
+    .replace(/polelift/gi, 'velolev-lifter')
+    .replace(/velolev/gi, 'velolev');
 }
 
 // 转换资产为 Base64 Data URI
@@ -1288,7 +1288,7 @@ async function processSingleArticle(articleFilePath, options) {
   const articleTitle = titleMatch ? titleMatch[1].trim() : dict.heroTitle;
 
   // 加载品牌徽标与真实硬件产品图
-  const brandLogoPath = path.resolve(projectRoot, 'maquin-astro-theme/public/brand/volvet-wordmark.svg');
+  const brandLogoPath = path.resolve(projectRoot, 'maquin-astro-theme/public/brand/velolev-wordmark.svg');
   const productHeroPath = path.resolve(projectRoot, 'maquin-astro-theme/public/images/product/portable-pole-lifter-hero-cutout.png');
   const brandLogoUri = await getBase64DataUri(brandLogoPath, 'image/svg+xml');
   const productHeroUri = await getBase64DataUri(productHeroPath, 'image/png');
@@ -1492,7 +1492,7 @@ async function processSingleArticle(articleFilePath, options) {
       // 同步复制至 Astro 前端公共资源目录 (public/images/<articleSlug>)
       const publicBase = path.resolve(projectRoot, 'maquin-astro-theme/public/images');
       const targetDirs = [path.join(publicBase, articleSlug)];
-      if (articleSlug === 'volvet-lifter-task-based-deepseek-article') {
+      if (articleSlug === 'velolev-lifter-task-based-deepseek-article') {
         targetDirs.push(path.join(publicBase, 'install-12m-street-light-poles-without-crane'));
       }
       for (const tDir of targetDirs) {

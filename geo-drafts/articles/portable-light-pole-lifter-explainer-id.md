@@ -5,8 +5,8 @@ coverImage: "/images/portable-light-pole-lifter-explainer-id/cover-flow-hero-16x
 # Alat Pendiri Tiang Lampu Portabel Hidrolik: Arsitektur Teknik, Kompatibilitas Flensa, dan Panduan Pemilihan di Lapangan
 
 
-![Alat pengangkat tiang lampu portabel volvet sampul rekayasa sinematik](/images/portable-light-pole-lifter-explainer-id/cover-flow-hero-16x9.png)
-*Sampul Utama: Pemasangan tiang lampu jalan 12 meter di lapangan tanpa truk derek menggunakan pengangkat hidrolik portabel volvet. Dilengkapi tata letak rekayasa lapangan.*
+![Alat pengangkat tiang lampu portabel velolev sampul rekayasa sinematik](/images/portable-light-pole-lifter-explainer-id/cover-flow-hero-16x9.png)
+*Sampul Utama: Pemasangan tiang lampu jalan 12 meter di lapangan tanpa truk derek menggunakan pengangkat hidrolik portabel velolev. Dilengkapi tata letak rekayasa lapangan.*
 
 
 
@@ -23,7 +23,7 @@ Penggunaan [portable hydraulic pole lifter](/products/light-pole-jack/) menghadi
 > - **Kesesuaian Fondasi Universal:** Pelat dasar berlubang radial mendukung diameter lingkaran baut (P.C.D.) 180mm hingga 260mm untuk angkur M16 hingga M24 (F015, F016).
 
 ![Alat Pendiri Tiang Lampu Portabel Hidrolik: Pendirian Tanpa Derek hingga 12m](/images/portable-light-pole-lifter-explainer-id/01-feature-hero-cover-16x9.png)
-*Gambar 1: Panduan pemilihan teknik alat pendiri tiang hidrolik portabel volvet. Kapasitas uji terverifikasi 300kg dan arsitektur transportasi terpisah 85kg yang meniadakan kebutuhan truk derek 16 ton.*
+*Gambar 1: Panduan pemilihan teknik alat pendiri tiang hidrolik portabel velolev. Kapasitas uji terverifikasi 300kg dan arsitektur transportasi terpisah 85kg yang meniadakan kebutuhan truk derek 16 ton.*
 
 ---
 
@@ -116,8 +116,8 @@ Untuk memastikan keselamatan kerja dan ketepatan operasional, pelaksanaan di lap
 
 ## 5. Batasan Rekayasa Teknis & Koreksi Kesalahpahaman Umum
 
-![Perbandingan kelayakan lapangan: truk derek 16 ton vs alat pendiri tiang volvet](/images/portable-light-pole-lifter-explainer-id/05-crane-vs-lifter-comparison-16x9.png)
-*Gambar 5: Analisis kelayakan operasional dan akses lapangan: mobile crane konvensional 16 ton dibandingkan alat pendiri tiang portabel volvet dalam hal jalur sempit, jumlah personel, dan batas keselamatan listrik.*
+![Perbandingan kelayakan lapangan: truk derek 16 ton vs alat pendiri tiang velolev](/images/portable-light-pole-lifter-explainer-id/05-crane-vs-lifter-comparison-16x9.png)
+*Gambar 5: Analisis kelayakan operasional dan akses lapangan: mobile crane konvensional 16 ton dibandingkan alat pendiri tiang portabel velolev dalam hal jalur sempit, jumlah personel, dan batas keselamatan listrik.*
 
 Dalam pengadaan peralatan B2B dan perencanaan metode konstruksi, pengambil keputusan teknik harus memahami batasan fisik yang sebenarnya:
 

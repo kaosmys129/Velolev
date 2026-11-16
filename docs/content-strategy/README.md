@@ -1,4 +1,4 @@
-# volvet 项目内容策略入口
+# velolev 项目内容策略入口
 
 最新交互更新：页眉、页脚均已接入统一的七语切换组件，包含整页跳转、参数/锚点、刷新与浏览历史的验收。详见 [语言切换交付](language-switching-completion.md) 和 [当前版本验证](language-switching-verification.json)。下述多语重构和旧主题评估保留各自阶段口径。
 

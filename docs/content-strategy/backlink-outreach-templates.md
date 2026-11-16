@@ -1,4 +1,4 @@
-# volvet B2B 工业出海高转化外链拓展邮件话术库（Outreach Templates）
+# velolev B2B 工业出海高转化外链拓展邮件话术库（Outreach Templates）
 
 本话术库针对机械制造、市政工程与光伏照明的 B2B 行业特性定制，严禁任何垃圾营销辞令，采用**“工程同行技术交流 + 免费工具价值赋能 + 解决实际痛点”**的专业沟通方式，涵盖 4 大核心拓展场景，包含英文（EN）及拉美本土化西文（ES）。
 
@@ -32,7 +32,7 @@ Either way, thank you for curating such a helpful resource list!
 Best regards,
 
 [Your Name]
-Engineering Content Specialist | volvet
+Engineering Content Specialist | velolev
 Website: https://www.velolev.org/
 Open Specs: https://github.com/kaosmys129/portable-pole-lifter-specifications
 ```
@@ -72,7 +72,7 @@ Would any of these align with your upcoming content calendar? Happy to provide a
 Best regards,
 
 [Your Name]
-Lead Technical Contributor | volvet
+Lead Technical Contributor | velolev
 https://www.velolev.org/
 ```
 
@@ -104,7 +104,7 @@ Hope this helps keep your resource accurate for your readers!
 Best regards,
 
 [Your Name]
-Technical Research Team | volvet
+Technical Research Team | velolev
 https://www.velolev.org/
 ```
 
@@ -140,7 +140,7 @@ Quedo a su disposición para cualquier consulta técnica o ampliación de inform
 Atentamente,
 
 [Su Nombre]
-Especialista en Documentación Técnica | volvet
+Especialista en Documentación Técnica | velolev
 Portal oficial: https://www.velolev.org/es/
 Repositorio técnico abierto: https://github.com/kaosmys129/portable-pole-lifter-specifications
 ```

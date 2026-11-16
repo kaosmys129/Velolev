@@ -34,7 +34,7 @@ function parseCsv(text) {
   return rows;
 }
 
-console.log("=== volvet 外链策略与目标名录自动化验证 ===");
+console.log("=== velolev 外链策略与目标名录自动化验证 ===");
 
 // 1. 验证关键策略与模板文件是否存在
 const filesToCheck = [
@@ -70,9 +70,9 @@ const tierCounts = { Tier1: 0, Tier2: 0, Tier3: 0 };
 const invalidUrls = [];
 
 for (const row of rows) {
-  const { platform_name, domain, estimated_da, tier, category, submission_url, link_type, target_volvet_page } = row;
+  const { platform_name, domain, estimated_da, tier, category, submission_url, link_type, target_velolev_page } = row;
 
-  if (!platform_name || !domain || !estimated_da || !tier || !link_type || !target_volvet_page) {
+  if (!platform_name || !domain || !estimated_da || !tier || !link_type || !target_velolev_page) {
     console.error(`❌ 存在不完整数据行: ${JSON.stringify(row)}`);
     process.exit(1);
   }
@@ -98,8 +98,8 @@ for (const row of rows) {
   }
 
   // 目标落地页必须属于 velolev.org 官方合法域名
-  if (!target_volvet_page.startsWith("https://www.velolev.org")) {
-    invalidUrls.push({ domain, target_volvet_page });
+  if (!target_velolev_page.startsWith("https://www.velolev.org")) {
+    invalidUrls.push({ domain, target_velolev_page });
   }
 }
 

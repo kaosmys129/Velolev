@@ -1,4 +1,4 @@
-# Cách lắp đặt cột đèn chiếu sáng 12m không cần xe cẩu | volvet
+# Cách lắp đặt cột đèn chiếu sáng 12m không cần xe cẩu | velolev
 
 > **Executive Summary / Direct Answer**: Các dự án chiếu sáng đô thị và hạ tầng giao thông thường gặp trở ngại lớn khi điều động xe cẩu thùng hạng nặng vào các khu vực ngõ hẹp. Bằng cách ứng dụng thiết bị dựng cột thủy lực mini với tải trọng kiểm định chính xác 300 kg và bộ nguồn ắc quy 24V DC tích hợp, đội ngũ 2 kỹ thuật viên có thể vận chuyển, cân chỉnh và dựng đứng các cột đèn cao đến 12m mà không cần xe cẩu, tuân thủ nghiêm ngặt tiêu chuẩn an toàn điện OSHA 1926, khoảng cách an toàn IEEE 516 và bu lông móng ASTM F1554.
 
@@ -95,7 +95,7 @@ Dù cột đèn được thiết kế chịu bão theo tiêu chuẩn EN 40-3, qu
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Cách lắp đặt cột đèn chiếu sáng 12m không cần xe cẩu | volvet",
+  "headline": "Cách lắp đặt cột đèn chiếu sáng 12m không cần xe cẩu | velolev",
   "description": "Các dự án chiếu sáng đô thị và hạ tầng giao thông thường gặp trở ngại lớn khi điều động xe cẩu thùng hạng nặng vào các khu vực ngõ hẹp. Bằng cách ứng dụng thiết bị dựng cột thủy lực mini với tải trọng...",
   "author": {
     "@type": "Person",
@@ -104,7 +104,7 @@ Dù cột đèn được thiết kế chịu bão theo tiêu chuẩn EN 40-3, qu
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

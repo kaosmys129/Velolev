@@ -2,7 +2,7 @@
   "assetDigest": "9253411d91c71b87fa89b781ccc79d5c55456954d2622010c8443d8124b80088",
   "mediaReferences": [
     {
-      "path": "brand/volvet-wordmark.svg",
+      "path": "brand/velolev-wordmark.svg",
       "sha256": "6116904937102e65aa5d4a6d59ce81f38b824072c7ead5d15623eadca77bca0b",
       "evidenceStatus": "reference_only_not_factory_or_field_test_proof"
     },
@@ -161,7 +161,7 @@
     {
       "key": "solar",
       "path": "/solutions/solar-street-light-installation/",
-      "title": "Solar Street Light Pole Installation Planning | volvet",
+      "title": "Solar Street Light Pole Installation Planning | velolev",
       "description": "Prepare solar pole assembly, flange, foundation and project information for an equipment review. Complete solar assemblies require project-specific validation.",
       "htmlSha256": "f311ddac3cde4b159271c46bb365555f42320401a1775f3a52c251c401205e31",
       "businessEvidence": "additional_identity_or_engineering_evidence_pending"
@@ -169,7 +169,7 @@
     {
       "key": "parking",
       "path": "/solutions/parking-lot-lighting/",
-      "title": "Parking Lot & Campus Pole Installation Planning | volvet",
+      "title": "Parking Lot & Campus Pole Installation Planning | velolev",
       "description": "Review pole, foundation, access and work-area information for parking lot and campus lighting projects before selecting lifting equipment.",
       "htmlSha256": "e7f5c0a72dc7343a2a12fbaa496bec6ba420b3d24db52a62d455ea2a0401de6e",
       "businessEvidence": "additional_identity_or_engineering_evidence_pending"
@@ -177,7 +177,7 @@
     {
       "key": "compare",
       "path": "/compare/pole-jack-vs-crane/",
-      "title": "Pole Lifter vs Crane: Project Selection Guide | volvet",
+      "title": "Pole Lifter vs Crane: Project Selection Guide | velolev",
       "description": "Compare scope, compatibility, mobilisation and project cost inputs for a portable pole lifter and a crane without assumed savings.",
       "htmlSha256": "83de4dc7b6a30e8685adc7537bf70e273c5eb700f29cd4bef700b550f13ad319",
       "businessEvidence": "current_fact_baseline_applied"
@@ -185,7 +185,7 @@
     {
       "key": "roi",
       "path": "/tools/roi-calculator/",
-      "title": "Pole Installation Cost Scenario Calculator | volvet",
+      "title": "Pole Installation Cost Scenario Calculator | velolev",
       "description": "Compare project costs using your own inputs. Review transparent formulas, annual costs and conditional payback without a public equipment price.",
       "htmlSha256": "4429662a6afdb2fecf557142fd9db18ca081ff5ac6afb11d609e2f182778e8dd",
       "businessEvidence": "current_fact_baseline_applied"
@@ -193,7 +193,7 @@
     {
       "key": "method",
       "path": "/guides/install-light-pole-without-crane/",
-      "title": "Installing Light Poles Without a Crane: Methods & Limits | volvet",
+      "title": "Installing Light Poles Without a Crane: Methods & Limits | velolev",
       "description": "A planning guide to equipment selection, complete work scope and engineering review. It is not a field operating procedure.",
       "htmlSha256": "7f9ba34b1854f590caf8e7af120e2168c748d08be9e7f469755e515277936199",
       "businessEvidence": "additional_identity_or_engineering_evidence_pending"
@@ -201,7 +201,7 @@
     {
       "key": "resources",
       "path": "/resources/",
-      "title": "Product Specifications & Project Documents | volvet",
+      "title": "Product Specifications & Project Documents | velolev",
       "description": "Download a source-derived product specification summary and a project information worksheet. Request reviewed project documents through the inquiry form.",
       "htmlSha256": "5ea5d8ab2053e91b65b6d01f2fe54463967ba30c290e85885f8eda6a2ddddfbc",
       "businessEvidence": "current_fact_baseline_applied"
@@ -209,7 +209,7 @@
     {
       "key": "faq",
       "path": "/faq/",
-      "title": "Portable Light Pole Lifter Questions | volvet",
+      "title": "Portable Light Pole Lifter Questions | velolev",
       "description": "Answers about rated load, pole height, standard configuration, compatibility, reported performance and the private quotation process.",
       "htmlSha256": "b8e84a2cfa55587901a290afe8bad29fe8162359ba8f0ec32569999f245a37a0",
       "businessEvidence": "current_fact_baseline_applied"
@@ -217,15 +217,15 @@
     {
       "key": "about",
       "path": "/about-us/",
-      "title": "About volvet: Equipment & Information | volvet",
-      "description": "Learn the confirmed volvet product focus and information policy. Corporate identity, factory details and credentials remain subject to verification.",
+      "title": "About velolev: Equipment & Information | velolev",
+      "description": "Learn the confirmed velolev product focus and information policy. Corporate identity, factory details and credentials remain subject to verification.",
       "htmlSha256": "8e2f180823afe59a4b9934e4fe6ca03d74092520a5a737f2c3cf5bc610689da2",
       "businessEvidence": "additional_identity_or_engineering_evidence_pending"
     },
     {
       "key": "guides",
       "path": "/guides/",
-      "title": "Pole Installation Guides & Planning Tools | volvet",
+      "title": "Pole Installation Guides & Planning Tools | velolev",
       "description": "Find pole compatibility guidance, application planning, equipment comparison, cost scenarios and source-derived specifications.",
       "htmlSha256": "87d9b98b4ac0041c881cb8b5b201cdd27609f41dc9f25c3772533b29fbd5c26e",
       "businessEvidence": "current_fact_baseline_applied"
@@ -233,23 +233,23 @@
     {
       "key": "home",
       "path": "/",
-      "title": "Portable Light Pole Lifter for Street Lighting | volvet",
-      "description": "Plan street light pole installation with volvet. Review the 12 m pole class, 300 kg rated load, foundation requirements and project quotation process.",
+      "title": "Portable Light Pole Lifter for Street Lighting | velolev",
+      "description": "Plan street light pole installation with velolev. Review the 12 m pole class, 300 kg rated load, foundation requirements and project quotation process.",
       "htmlSha256": "8afa1c83196c435e4cef4ff99b5658b6f9f10fe331201861e428b142e3f95780",
       "businessEvidence": "current_fact_baseline_applied"
     },
     {
       "key": "product",
       "path": "/products/light-pole-jack/",
-      "title": "Portable Light Pole Lifter: Specifications & Configuration | volvet",
-      "description": "Review volvet portable light pole lifter specifications, two-module dimensions, included anchor bolts and compatibility requirements. Request a B2B project quotation.",
+      "title": "Portable Light Pole Lifter: Specifications & Configuration | velolev",
+      "description": "Review velolev portable light pole lifter specifications, two-module dimensions, included anchor bolts and compatibility requirements. Request a B2B project quotation.",
       "htmlSha256": "26ba9924f5cc0af7955a3cf1eac980470bfb259e6b654523af46cccf199bcfff",
       "businessEvidence": "current_fact_baseline_applied"
     },
     {
       "key": "compatibility",
       "path": "/guides/pole-jack-compatibility/",
-      "title": "Pole Lifter Compatibility: Pole, Flange & Foundation | volvet",
+      "title": "Pole Lifter Compatibility: Pole, Flange & Foundation | velolev",
       "description": "Check the information needed to review pole lifter compatibility: pole weight and height, flange drawing, anchor bolts, foundation and site conditions.",
       "htmlSha256": "37bcc7cb85f255ee9f197a6b2c2b1d87f1573a840fd80323ac1e6ad8601a9429",
       "businessEvidence": "current_fact_baseline_applied"
@@ -257,7 +257,7 @@
     {
       "key": "quote",
       "path": "/quote/",
-      "title": "Request a Project Quotation | volvet",
+      "title": "Request a Project Quotation | velolev",
       "description": "Send your pole specifications, project quantity and destination for a private B2B configuration review and quotation.",
       "htmlSha256": "103b3c247a68a3885bc4eb88992f63bbda4254116335cd5c95d02de5de169b51",
       "businessEvidence": "current_fact_baseline_applied"
@@ -265,43 +265,43 @@
     {
       "key": "contact",
       "path": "/contact-us/",
-      "title": "Contact volvet: Project, Distributor & Support Inquiries",
-      "description": "Send a project, distributor, support or privacy request to volvet. Provide an email address or phone number so your inquiry can be reviewed.",
+      "title": "Contact velolev: Project, Distributor & Support Inquiries",
+      "description": "Send a project, distributor, support or privacy request to velolev. Provide an email address or phone number so your inquiry can be reviewed.",
       "htmlSha256": "7b726add7c3024988e5097ba61d675bc5896bf6a3f7e2cab2476a68ea7f6d6ef",
       "businessEvidence": "current_fact_baseline_applied"
     },
     {
       "key": "privacy",
       "path": "/privacy/",
-      "title": "Privacy Notice | volvet",
-      "description": "How volvet handles contact details, project specifications and optional attachments submitted through the inquiry service.",
+      "title": "Privacy Notice | velolev",
+      "description": "How velolev handles contact details, project specifications and optional attachments submitted through the inquiry service.",
       "htmlSha256": "8cbe7c3be4bf5f629b6371f4297fffb5feab547321dd8ce3f28cafda2aeabde1",
       "businessEvidence": "current_fact_baseline_applied"
     },
     {
       "key": "terms",
       "path": "/terms/",
-      "title": "Website & Project Inquiry Terms | volvet",
-      "description": "Understand the purpose of volvet product information, project review and private quotation requests.",
+      "title": "Website & Project Inquiry Terms | velolev",
+      "description": "Understand the purpose of velolev product information, project review and private quotation requests.",
       "htmlSha256": "50a05d1db240e09adcd1e4ff1e279421288ff7aec4dea5092db1437f89d1535d",
       "businessEvidence": "current_fact_baseline_applied"
     },
     {
       "key": "editorial",
       "path": "/editorial-policy/",
-      "title": "Product Information & Editorial Policy | volvet",
-      "description": "How volvet distinguishes specification-sheet facts, manufacturer-reported performance, engineering review and field evidence.",
+      "title": "Product Information & Editorial Policy | velolev",
+      "description": "How velolev distinguishes specification-sheet facts, manufacturer-reported performance, engineering review and field evidence.",
       "htmlSha256": "bb5047e3c451e4b025020bd8080d9c6d8545e2cc38de729f8e2a2641f230f2bd",
       "businessEvidence": "current_fact_baseline_applied"
     }
   ],
   "downloads": [
     {
-      "path": "/resources/volvet-specifications.csv",
+      "path": "/resources/velolev-specifications.csv",
       "sha256": "8f789cca5b0ee878a1a0e1abf566eb1d4f8bd7db8a4975645cbe27d4371f3c03"
     },
     {
-      "path": "/resources/volvet-specifications.json",
+      "path": "/resources/velolev-specifications.json",
       "sha256": "ab7edc4ca81be3d9d99c370a9be085b96e047f4de376b03117ff155cb288d43b"
     },
     {

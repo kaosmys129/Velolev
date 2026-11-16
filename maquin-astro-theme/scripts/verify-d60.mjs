@@ -5,7 +5,7 @@ const root=fileURLToPath(new URL("../",import.meta.url));
 const configuredArg=process.argv.find(a=>a.startsWith("--configured=")||a.startsWith("--production="));
 const argVal=configuredArg?configuredArg.split("=")[1]:null;
 const fixture=process.argv.find(a=>a.startsWith("--snapshot="))?.slice(11);
-const buildMetaPath=join(root,"dist",".volvet-build.json");
+const buildMetaPath=join(root,"dist",".velolev-build.json");
 const buildMeta=existsSync(buildMetaPath)?JSON.parse(readFileSync(buildMetaPath,"utf8")):null;
 
 let isFixture=false;
@@ -43,8 +43,8 @@ for(const [key,page] of Object.entries(corePages)){
  if(isConfigured){for(const v of coreAlternates(key)){const d=parse(readFileSync(fileFor(v.path),"utf8"));for(const o of coreAlternates(key))check(all(d,"link").some(n=>attr(n,"hreflang")===o.lang&&attr(n,"href")===`${origin}${o.path}`),`${key}/${v.lang}: reciprocal ${o.lang}`);}}
 }
 check(new Set(titles).size===17,"seventeen distinct core titles");
-const s=JSON.parse(readFileSync(join(dist,"resources/volvet-specifications.json"),"utf8"));check(s.baselineVersion===baseline.version&&s.specifications.ratedLoadKg===300,"download: actual current source data");check(s.fieldValidation==="pending"&&!s.standardConfiguration.anchorBoltSizesIncluded.includes("M24"),"download: evidence and included configuration boundaries");
-for(const name of ["volvet-specifications.csv","project-information-worksheet.csv"])check(readFileSync(join(dist,"resources",name),"utf8").length>200,`download: ${name} exists and substantive`);
+const s=JSON.parse(readFileSync(join(dist,"resources/velolev-specifications.json"),"utf8"));check(s.baselineVersion===baseline.version&&s.specifications.ratedLoadKg===300,"download: actual current source data");check(s.fieldValidation==="pending"&&!s.standardConfiguration.anchorBoltSizesIncluded.includes("M24"),"download: evidence and included configuration boundaries");
+for(const name of ["velolev-specifications.csv","project-information-worksheet.csv"])check(readFileSync(join(dist,"resources",name),"utf8").length>200,`download: ${name} exists and substantive`);
 for(const lang of ["en","es","fr","pt","vi","th","id"]){const path=lang==="en"?"/about-us/":`/${lang}/about-us/`;const raw=readFileSync(fileFor(path),"utf8"),doc=parse(raw),body=text(doc);check(raw.includes('data-about-source="S4"')&&raw.includes('data-corporate-evidence="pending"')&&raw.includes('data-field-validation="pending"'),`${lang}: about source and pending evidence explicit`);check(!/500\s*\+|2015|2018|±\s*0[.,]5|24h|100%/.test(body),`${lang}: no unverified capacity, history or test claims`);check(!/equipment-engineering-drawing-raw|manufacturer-spec-sheet-raw/.test(raw),`${lang}: reference images are not used as factory or testing proof`);}
 const roi=readFileSync(fileFor(corePages.roi.path),"utf8");check(!/<input[^>]+name="(?:investment|craneDaily|craneFixed)"[^>]+value="[^"]+"/.test(roi),"calculator: no default public price");check(!roi.includes("preset-strip")&&!roi.includes("REGIONAL_PRESETS"),"calculator: regional currency/amount presets removed");check(roi.includes("No resale value")&&roi.includes("Zero project volume"),"calculator: scope and edge conditions visible");
 if(isConfigured){const sitemap=readFileSync(join(dist,"sitemap-0.xml"),"utf8");for(const p of Object.values(corePages))check(sitemap.includes(`<loc>${origin}${p.path}</loc>`),`sitemap: ${p.path}`);for(const alias of Object.keys(aliases))check(!sitemap.includes(`<loc>${origin}${alias}</loc>`),`sitemap: exclude ${alias}`);}

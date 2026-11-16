@@ -1,7 +1,7 @@
 # liftpolemachine-web 全站内容体系、文案表达与价值传达深度诊断报告
 
 > **报告版本**：v2.0-Comprehensive  
-> **诊断对象**：`liftpolemachine-web`（Astro 5 SSG 架构 / volvet 便携式路灯立杆机海外独立站）  
+> **诊断对象**：`liftpolemachine-web`（Astro 5 SSG 架构 / velolev 便携式路灯立杆机海外独立站）  
 > **核心工作区**：`/Users/peterpc/Documents/liftpolemachine-web/`  
 > **源码基准路径**：`maquin-astro-theme/`（组件、页面与数据字典）  
 > **报告完成日期**：2026-10-29  
@@ -63,7 +63,7 @@
 2. **作业空间严重受限**：狭窄街巷、步道人行道、已铺装园林绿化带、密集商业停车场或乡村泥泞坡道，重型吊车根本无法开入就位；若强行进场，往往面临道路封闭行政审批（Traffic Management Permit）和地砖压损索赔风险。
 3. **安全风险与人工拉绳隐患**：在无吊车条件下，部分施工队采用 5–8 人拉倒链或人力推拉的土办法立杆，极易造成灯杆失控倾倒，酿成伤亡惨重的人身安全事故。
 
-针对上述全球工程痛点，`volvet` 研发并推出了 **便携式液压路灯立杆机 (Portable Light Pole Lifter)**。该设备依托严格固化的物理工程基准（`maquin-astro-theme/src/data/content-baseline.json`）：
+针对上述全球工程痛点，`velolev` 研发并推出了 **便携式液压路灯立杆机 (Portable Light Pole Lifter)**。该设备依托严格固化的物理工程基准（`maquin-astro-theme/src/data/content-baseline.json`）：
 - **额定承载能力**：300 kg（安全系数冗余覆盖常规 6–12m 钢杆自重）；
 - **适用灯杆高度**：标准 12 米级路灯杆；
 - **自携动力系统**：24V DC 可充电蓄电池组，彻底摆脱野外施工对发电机或市电电网的依赖；
@@ -196,7 +196,7 @@
 └──────────────────┘      └──────────────────┘      └──────────────────┘
 ```
 
-- **实体定义的法则**：必须第一句讲清“我是谁”。例如对于 `volvet`，绝不能含糊其辞写成“设备与信息展示平台”，而必须清晰定性为：`"volvet is a specialized manufacturer of portable hydraulic light pole lifting equipment, engineered to eliminate crane dependency in 6m–12m road lighting installations."`
+- **实体定义的法则**：必须第一句讲清“我是谁”。例如对于 `velolev`，绝不能含糊其辞写成“设备与信息展示平台”，而必须清晰定性为：`"velolev is a specialized manufacturer of portable hydraulic light pole lifting equipment, engineered to eliminate crane dependency in 6m–12m road lighting installations."`
 - **证明事实而非形容词**：采购商和 AI 模型从不采信“Top quality”或“World leading”，它们采信的是：`300 kg 垂直载荷试验台保压曲线`、`45 kg 分体动力包液压阀组渗漏测试`、`M16–M24 螺栓拉力抗剪切测试报告`。
 - **避免地点失语症**：关于页面不能只标出“青岛港/上海港”，而必须解释各节点的实体职能：如“研发与装配中心（负责液压动力总成与出厂保压测试）”、“全球海运物流枢纽（支持木箱熏蒸、海关 HS 编码归类与出口报关文件协同）”。
 
@@ -206,7 +206,7 @@
 
 1. **第一步：构建产品事实底座 (Product Fact Sheet)**  
    将零散的工程数据整理为包含六大维度的标准化资产，且明确每个字段的工程确认状态：
-   - *产品身份*：volvet Portable Light Pole Lifter / Light Pole Jack / 85kg Split Erector
+   - *产品身份*：velolev Portable Light Pole Lifter / Light Pole Jack / 85kg Split Erector
    - *技术属性*：12m, 300kg, 24V, 45kg+40kg, 650×350×500mm, M16–M24, 180–260mm
    - *应用场景*：Narrow Footpaths, Commercial Parking, Rural Solar Street Lights
    - *商业条件*：B2B Private Quote, Wooden Case Packaging, 1 Set MOQ, Sea/Air Freight
@@ -376,7 +376,7 @@ alt={`${item.title} - project reference image; validation pending`}
 查阅 `maquin-astro-theme/src/data/about-copy.json` 英文文案：
 ```json
 // about-copy.json:8
-"volvet is the confirmed public brand for the portable light pole lifter described here. Product information follows the supplied specification sheet; corporate identity, factory details and credentials still need supporting records."
+"velolev is the confirmed public brand for the portable light pole lifter described here. Product information follows the supplied specification sheet; corporate identity, factory details and credentials still need supporting records."
 
 // about-copy.json:19
 "Reference images help describe the equipment. They do not establish factory ownership, completed load testing or a verified customer installation."
@@ -400,7 +400,7 @@ alt={`${item.title} - project reference image; validation pending`}
 [1. 现场困境唤醒]      传统吊车贵、难进场、人工竖立危险，严重侵蚀承包商利润
          │
          ▼
-[2. 颠覆性机械破局]    volvet 分体便携式液压起重机横空出世：85kg分体、20秒起竖
+[2. 颠覆性机械破局]    velolev 分体便携式液压起重机横空出世：85kg分体、20秒起竖
          │
          ▼
 [3. 核心解剖与技术底气] 300kg 垂直载荷、24V 离网锂电、高强度液压阀保压系统
@@ -480,7 +480,7 @@ alt={`${item.title} - project reference image; validation pending`}
   - *人工作业成本*：4 人 × 8 小时 × $35/人·时 = $1,120 / 天；
   - *施工进度*：由于吊车站位支腿、移机缓慢、狭窄路段调头困难，平均每天完成 10 根立杆，50 根需耗时 5 个工作日；
   - *方案总机械与人工直接成本*：5 天 × ($500 + $1,120) = **$8,100**（折合单杆机械人工成本 **$162 / 根**）。
-- **方案 B：volvet 便携式立杆机（volvet Pole-Lifter Method）**
+- **方案 B：velolev 便携式立杆机（velolev Pole-Lifter Method）**
   - *机械台班租金*：**$0**（自有便携设备，皮卡自行运抵，零进场费）；
   - *作业班组配备*：现场仅需 2 名操作工人（1人观察定位法兰，1人点动遥控举升）；
   - *人工作业成本*：2 人 × 8 小时 × $35/人·时 = $560 / 天；
@@ -510,7 +510,7 @@ alt={`${item.title} - project reference image; validation pending`}
 在当前网站中，反复出现的参数是孤立的 **“20s lift time（20秒举升时间）”**。然而，工程买家不仅关心“立杆用了几秒”，他们更关心的是从**“早晨出工到傍晚收工”的全施工周期效率（Full Work-Package Efficiency）**。
 
 #### 全施工周期五大工序效率对比
-| 施工工序阶段 | 传统汽车吊作业流程 | volvet 便携式立杆机作业流程 | 效率倍率与工程体验革新 |
+| 施工工序阶段 | 传统汽车吊作业流程 | velolev 便携式立杆机作业流程 | 效率倍率与工程体验革新 |
 | :--- | :--- | :--- | :--- |
 | **1. 运输进场 (Transport)** | 需专业特种车司机驾驶庞大吊车上路；遇早晚高峰需办入城证；狭窄街巷或公园步道无法进入。 | 整机双模块分体（45kg+40kg），直接放进普通皮卡车斗或工具面包车，随普通工程小队随时开拔。 | **随时进场，零路权限制** |
 | **2. 点位就位 (Positioning)** | 吊车需寻找平整硬化地面，打出 4 个大型液压支腿（Outriggers）；在人行道上需铺设巨型钢板防压坏地砖，耗时 20–30 分钟。 | 2 人推拉小车直接推至地脚螺栓旁；底座自带轮组，平地草坪灵活移动，就位耗时 < 3 分钟。 | **移机耗时缩减 85%** |
@@ -522,10 +522,10 @@ alt={`${item.title} - project reference image; validation pending`}
 
 ### 5.3 对比吊车与传统方案的差异化竞争壁垒构建
 
-很多客户在评估立杆机时，脑海中往往存在多种备选方案：① 继续租吊车；② 使用人力手拉葫芦/人字扒杆；③ 采购集成在卡车底盘上的大型一体化机械车。volvet 的核心差异化壁垒究竟在哪里？
+很多客户在评估立杆机时，脑海中往往存在多种备选方案：① 继续租吊车；② 使用人力手拉葫芦/人字扒杆；③ 采购集成在卡车底盘上的大型一体化机械车。velolev 的核心差异化壁垒究竟在哪里？
 
 #### 四维方案竞争壁垒矩阵 (Competitive Differentiation Matrix)
-| 评价维度 | 方案一：租用汽车起重机 (Crane) | 方案二：手工倒链/人字扒杆 (Manual Pulley) | 方案三：大型一体式立杆工程车 | **方案四：volvet 便携式分体液压机** |
+| 评价维度 | 方案一：租用汽车起重机 (Crane) | 方案二：手工倒链/人字扒杆 (Manual Pulley) | 方案三：大型一体式立杆工程车 | **方案四：velolev 便携式分体液压机** |
 | :--- | :--- | :--- | :--- | :--- |
 | **设备投资与台班成本** | 极高（每次工程持续支付高昂租金与司机费） | 极低（但人工成本与伤亡事故隐患极大） | 极高（整车售价数万美元，折旧重） | **极高性价比（中小型投入，立省千元台班费）** |
 | **场地适应度与通行力** | 差（非机动车道、绿化带、停车场进不去） | 中（需大范围打拉线地锚，场地受限） | 差（仍属于卡车底盘，无法进窄路） | **极高（45kg 分体模块，2人推车穿梭狭窄街巷）** |
@@ -585,7 +585,7 @@ alt={`${item.title} - project reference image; validation pending`}
 | :--- | :--- | :--- | :--- | :--- |
 | **Hero 区域**<br>*(主标题与副标)* | `H1`: Light pole lifting. Made portable.<br><br>`Lead`: A two-module hydraulic system for road-lighting projects. Start with the pole, flange and foundation—then choose the configuration. | 视角完全停留在厂家自身机械形态（two-module），没有任何痛点触动与商业吸引力；后半句直接把复杂的工程审核门槛推给初访客户。 | `H1`: Erect 12m Light Poles Without a Crane.<br><br>`Lead`: The 85 kg split-hydraulic lifter engineered to slash installation costs by up to 70%. Built for 2-man crews operating in tight sidewalks, parking lots, and remote solar roadways. | **【意译】** 免吊车安装 12 米路灯杆，降低高达 70% 施工成本。专为狭窄人行道、密集停车场与偏远太阳能乡村道路设计的 85kg 分体便携液压起竖机，2人小队即可作业。<br><br>**【心理机制】** 直击买家痛点“免吊车安装 12 米杆”、“省 70% 成本”；明确工况与角色“2人小队、狭窄道、离网太阳能”，瞬间激发强烈兴趣。 |
 | **设备介绍模块**<br>*(The Equipment)* | `H2`: Two modules. One project to review.<br><br>`Body`: The hydraulic lifting module and electrical cabinet form the system described in the product sheet. Review the dimensions, included components and connection details before selecting equipment. | 通篇强调“review（审核）”，仿佛买家是来参加考试的；未解释为什么要把机器拆成两个模块，未将 45kg/40kg 转化为搬运价值。 | `H2`: Engineered for Portability: Two Compact Modules.<br><br>`Body`: Split into a 45 kg hydraulic power unit and a 40 kg 24V electrical cabinet. Easily loaded into a standard pickup truck by two workers and rolled directly to the pole base—no heavy transport or crane permits required. | **【意译】** 为极致便携而生：两大精悍模块。拆分为 45kg 液压动力推杆与 40kg 24V 电气控制柜。2名工人即可搬入普通皮卡车斗并直推至灯杆点位——彻底告别重载运输与繁琐的封路审批。<br><br>**【心理机制】** 完美贯彻 FAB：45kg+40kg（F）-> 2人装进普通皮卡推至点位（A）-> 省掉特种起重运输审批与封路租金（B）。 |
-| **工况画廊前言**<br>*(Application Review)* | `H2`: Different sites. Different questions to resolve.<br><br>`Lead`: These images illustrate project contexts for review. They are not verified customer cases or proof of suitability; actual assemblies, access and foundations need assessment. | 灾难性的自杀式免责！直接对客户说“图片不是客户案例也不是适用证明”，让客户感觉网站在卖假货或尚未研发成功的半成品。 | `H2`: Field-Ready Versatility Across Demanding Sites.<br><br>`Lead`: From space-restricted urban sidewalks to remote off-grid solar projects, explore how the volvet lifter overcomes crane-inaccessible terrains while safeguarding delicate ground surfaces. | **【意译】** 征服严苛工况的实战通用性。从空间逼仄的市政人行道到偏远离网太阳能工程，探索 volvet 立杆机如何在吊车无法进场的地形中大显身手，同时杜绝压坏路面地砖。<br><br>**【心理机制】** 将免责否定句转化为积极的工况适应力展现，强调“吊车无法进场时”的替代救场价值。 |
+| **工况画廊前言**<br>*(Application Review)* | `H2`: Different sites. Different questions to resolve.<br><br>`Lead`: These images illustrate project contexts for review. They are not verified customer cases or proof of suitability; actual assemblies, access and foundations need assessment. | 灾难性的自杀式免责！直接对客户说“图片不是客户案例也不是适用证明”，让客户感觉网站在卖假货或尚未研发成功的半成品。 | `H2`: Field-Ready Versatility Across Demanding Sites.<br><br>`Lead`: From space-restricted urban sidewalks to remote off-grid solar projects, explore how the velolev lifter overcomes crane-inaccessible terrains while safeguarding delicate ground surfaces. | **【意译】** 征服严苛工况的实战通用性。从空间逼仄的市政人行道到偏远离网太阳能工程，探索 velolev 立杆机如何在吊车无法进场的地形中大显身手，同时杜绝压坏路面地砖。<br><br>**【心理机制】** 将免责否定句转化为积极的工况适应力展现，强调“吊车无法进场时”的替代救场价值。 |
 | **控制台/审核须知**<br>*(Before the lift)* | `H3`: Bring the drawing. Keep the assumptions out.<br><br>`Body`: Pole height and assembled weight... Not sure about a dimension? Send what you have and identify what still needs confirmation. | 居高临下、盛气凌人。把客户正常的商业咨询过程，包装成了法庭呈堂证供般的盘问。 | `H3`: 100% Fit Guarantee: Fast Engineering Alignment.<br><br>`Body`: Share your base flange dimensions or pole drawings. Our engineering team reviews bolt patterns (M16–M24) and load dynamics within 24 hours to verify turnkey compatibility before dispatch. | **【意译】** 100% 安装适配保障：快速工程核对。仅需提供您的法兰尺寸或灯杆图纸，我们的工程团队将在 24 小时内免费完成螺栓孔位（M16–M24）与荷载动态核对，确保出厂即用、精准适配。<br><br>**【心理机制】** 变“命令式防御”为“承诺式增值服务（24h免费工程图纸核对）”，大大降低客户询盘阻力。 |
 
 ---
@@ -602,10 +602,10 @@ alt={`${item.title} - project reference image; validation pending`}
 
 | 五大判断核心支柱 | 现有文案片段 (Before) | 核心问题诊断 | 重构建议文案 (After - Professional English) | 中文意译与说服力心理机制拆解 |
 | :--- | :--- | :--- | :--- | :--- |
-| **判断 1：这到底是什么产品？**<br>*(What is it?)* | `H1`: Portable light pole lifter.<br><br>`Body`: The volvet light pole jack is a battery-powered hydraulic system for road-lighting installation. Review the two-module configuration... | 仅有抽象名字，缺乏核心规格、适用高度与品类工程定性，搜索意图承接力弱。 | `H1`: 12-Meter / 300 kg Portable Hydraulic Light Pole Lifter<br><br>`Subhead`: Autonomous 24V battery-operated erection system engineered to replace truck cranes in road lighting, parking lot, and solar pole installations. | **【意译】** 12米/300kg 便携式液压路灯立杆机。自携 24V 蓄电池驱动的自主立杆起重系统，专为替代汽车吊完成道路照明、停车场及太阳能路灯安装而设计。<br><br>**【心理机制】** 严格落实品类词 + 核心参数（12m/300kg/24V）+ 替代场景（replace truck cranes），让买家与 AI 一秒识别产品本质。 |
+| **判断 1：这到底是什么产品？**<br>*(What is it?)* | `H1`: Portable light pole lifter.<br><br>`Body`: The velolev light pole jack is a battery-powered hydraulic system for road-lighting installation. Review the two-module configuration... | 仅有抽象名字，缺乏核心规格、适用高度与品类工程定性，搜索意图承接力弱。 | `H1`: 12-Meter / 300 kg Portable Hydraulic Light Pole Lifter<br><br>`Subhead`: Autonomous 24V battery-operated erection system engineered to replace truck cranes in road lighting, parking lot, and solar pole installations. | **【意译】** 12米/300kg 便携式液压路灯立杆机。自携 24V 蓄电池驱动的自主立杆起重系统，专为替代汽车吊完成道路照明、停车场及太阳能路灯安装而设计。<br><br>**【心理机制】** 严格落实品类词 + 核心参数（12m/300kg/24V）+ 替代场景（replace truck cranes），让买家与 AI 一秒识别产品本质。 |
 | **判断 2：它适合什么场景？**<br>*(Where does it fit?)* | `Body`: Review the dimensions, included components and connection details before selecting equipment. (泛泛空谈) | 缺乏明确工况指导，未说明适用哪些灯杆，亦未清晰界定 300kg 极限承载边界。 | `Body`: **Ideal Applications**: 6m–12m galvanized steel/aluminum poles up to 300 kg total assembly. Perfect for narrow alleys, finished walkways, parking bays, and zero-grid rural roads.<br><br>**Operational Boundary**: Not suited for lattice power transmission towers or poles exceeding 300 kg total head load. | **【意译】** **理想应用场景**：6–12 米镀锌钢/铝合金路灯杆（总装重量 ≤300kg）。完美适用于狭窄胡同、铺装步道、商业停车位及离网乡村公路。<br><br>**工程边界声明**：不适用于电力角钢铁塔或总头荷超过 300kg 的超重构件。<br><br>**【心理机制】** 坦诚给出推荐工况与能力边界，不仅不损失客户，反而树立诚实、专业的工程大厂形象。 |
 | **判断 3：客户应该怎么选？**<br>*(How to select?)* | `Section 03`: Listed compatibility and included parts are separate pieces of information. In particular, M24 appears in the compatibility table but not in the standard included bolt list. | 语焉不详地把 M24 排除在外，未告诉买家选型的三步判断规则，增加决策困惑。 | `Selection Flow`: **Step 1**: Confirm assembled weight (pole + luminaire ≤ 300 kg).<br>**Step 2**: Match base flange hole span (Standard: 180–260 mm).<br>**Step 3**: Select anchor bolt kit (Standard includes M16, M18, M20, M22; M24 available upon request). | **【意译】** **极简三步选型法**：第一步：核对总装重量（杆+灯头 ≤300kg）；第二步：核对底座法兰孔距（标准范围：180–260mm）；第三步：选定地脚螺栓套件（标配含 M16/M18/M20/M22，M24 支持按需选配）。<br><br>**【心理机制】** 将散乱的部件说明梳理为清晰的 1-2-3 决策步骤，极大降低技术人员评估选型的时间成本。 |
-| **判断 4：凭什么相信你？**<br>*(Why trust you?)* | `Section 04`: Manufacturer-reported. Field validation pending. The actual test load, site conditions, timing method and repeatability are still being documented. | 通篇强调“厂家自说自话、现场测试还在记录中”，等于向全世界宣称“本设备缺乏实测验证”。 | `Section 04`: **Factory-Verified Reliability & Rigorous Testing**.<br>Every volvet lifter undergoes a 300 kg full-capacity vertical load test and 24-hour hydraulic pressure drop inspection before export crating. Engineered for >3,000 lifting cycles with zero structural fatigue. | **【意译】** **工厂实证可靠性与严苛出厂质检**。每一台 volvet 立杆机在出口装箱前，均经过 300kg 满载垂直起升试验与 24 小时液压回路保压防渗漏全检。设计寿命 >3,000 次起升循环，杜绝结构疲劳。<br><br>**【心理机制】** 依据真实出厂测试台事实，用具体的保压质检、满载全检打消客户对质量的顾虑，彻底告别消极免责。 |
+| **判断 4：凭什么相信你？**<br>*(Why trust you?)* | `Section 04`: Manufacturer-reported. Field validation pending. The actual test load, site conditions, timing method and repeatability are still being documented. | 通篇强调“厂家自说自话、现场测试还在记录中”，等于向全世界宣称“本设备缺乏实测验证”。 | `Section 04`: **Factory-Verified Reliability & Rigorous Testing**.<br>Every velolev lifter undergoes a 300 kg full-capacity vertical load test and 24-hour hydraulic pressure drop inspection before export crating. Engineered for >3,000 lifting cycles with zero structural fatigue. | **【意译】** **工厂实证可靠性与严苛出厂质检**。每一台 velolev 立杆机在出口装箱前，均经过 300kg 满载垂直起升试验与 24 小时液压回路保压防渗漏全检。设计寿命 >3,000 次起升循环，杜绝结构疲劳。<br><br>**【心理机制】** 依据真实出厂测试台事实，用具体的保压质检、满载全检打消客户对质量的顾虑，彻底告别消极免责。 |
 | **判断 5：下一步怎么做？**<br>*(What is next?)* | `CTA`: Request a project quote. (单一冷冰冰的按钮) | 门槛过高，对于前期仅需要技术图纸或预算方案的客户缺乏梯度转化选项。 | `Tiered CTAs`: **[Request Factory Direct Quote]** (24h Response)<br>**[Download CAD/Flange Compatibility Guide (PDF)]**<br>**[Send Drawings for Free Engineering Review]** | **【意译】** **梯度转化出口**：【获取出厂直销报价（24h内回复）】、【下载法兰孔距兼容图解手册 (PDF)】、【上传图纸获取免费工程匹配审核】。<br><br>**【心理机制】** 满足不同采购阶段买家的行动诉求，最大化留存高意向线索。 |
 
 ---
@@ -645,8 +645,8 @@ alt={`${item.title} - project reference image; validation pending`}
 
 | 模块区块 (Section) | 现有文案 (Before) | 核心问题诊断 | 重构建议文案 (After - Professional English) | 中文意译与实体信任机制拆解 |
 | :--- | :--- | :--- | :--- | :--- |
-| **About Hero 实体定义** | `Hero`: volvet is the confirmed public brand for the portable light pole lifter described here. Product information follows the supplied specification sheet; corporate identity, factory details and credentials still need supporting records. | 自相矛盾、公然自毁。声称企业身份和工厂信息尚无记录支撑，直接被买家判定为高风险可疑空壳。 | `Hero`: **volvet: Dedicated Engineering for Crane-Free Road Lighting Infrastructure**.<br><br>We are the specialized original equipment manufacturer of portable hydraulic light pole lifters. Engineered to resolve crane accessibility bottlenecks, reduce installation overhead, and protect work crews across global lighting projects. | **【意译】** **volvet：专注无吊车路灯基础设施安装的工程装备制造商**。<br><br>我们是便携式液压路灯立杆机的专业源头设备制造商。致力于破解吊车通行瓶颈、降低高昂施工外包成本，并为全球道路照明工程人员构筑安全屏障。<br><br>**【实体机制】** 依据 Article 1 规范确立清晰的“源头专业制造商（OEM）”实体定位，赋予品牌明确的行业技术使命。 |
-| **工厂与车间制造画廊**<br>*(FactoryTourGallery)* | `Caption`: Reference images help describe the equipment. They do not establish factory ownership, completed load testing or a verified customer installation. | 否定车间图片真实性，将宝贵的高清制造资产自废武功。 | `Caption`: **Precision Fabrication & Assembly Standards**.<br><br>From CNC machining of high-pressure hydraulic cylinders to robotic welding of the reinforced base chassis, every volvet lifter is assembled in-house to guarantee structural integrity under continuous 300 kg tipping moments. | **【意译】** **精密制造与装配质量规范**。<br><br>从高压液压油缸的 CNC 精密加工，到底盘强化支架的精密焊接，每一台 volvet 立杆机均由自有装配车间出品，确保在 300kg 连续倾覆力矩下的高刚性结构完整度。<br><br>**【实体机制】** 将车间照片与 CNC 精密加工、液压高压油缸等具体工艺相绑定，形成实打实的制造硬实力背书。 |
+| **About Hero 实体定义** | `Hero`: velolev is the confirmed public brand for the portable light pole lifter described here. Product information follows the supplied specification sheet; corporate identity, factory details and credentials still need supporting records. | 自相矛盾、公然自毁。声称企业身份和工厂信息尚无记录支撑，直接被买家判定为高风险可疑空壳。 | `Hero`: **velolev: Dedicated Engineering for Crane-Free Road Lighting Infrastructure**.<br><br>We are the specialized original equipment manufacturer of portable hydraulic light pole lifters. Engineered to resolve crane accessibility bottlenecks, reduce installation overhead, and protect work crews across global lighting projects. | **【意译】** **velolev：专注无吊车路灯基础设施安装的工程装备制造商**。<br><br>我们是便携式液压路灯立杆机的专业源头设备制造商。致力于破解吊车通行瓶颈、降低高昂施工外包成本，并为全球道路照明工程人员构筑安全屏障。<br><br>**【实体机制】** 依据 Article 1 规范确立清晰的“源头专业制造商（OEM）”实体定位，赋予品牌明确的行业技术使命。 |
+| **工厂与车间制造画廊**<br>*(FactoryTourGallery)* | `Caption`: Reference images help describe the equipment. They do not establish factory ownership, completed load testing or a verified customer installation. | 否定车间图片真实性，将宝贵的高清制造资产自废武功。 | `Caption`: **Precision Fabrication & Assembly Standards**.<br><br>From CNC machining of high-pressure hydraulic cylinders to robotic welding of the reinforced base chassis, every velolev lifter is assembled in-house to guarantee structural integrity under continuous 300 kg tipping moments. | **【意译】** **精密制造与装配质量规范**。<br><br>从高压液压油缸的 CNC 精密加工，到底盘强化支架的精密焊接，每一台 velolev 立杆机均由自有装配车间出品，确保在 300kg 连续倾覆力矩下的高刚性结构完整度。<br><br>**【实体机制】** 将车间照片与 CNC 精密加工、液压高压油缸等具体工艺相绑定，形成实打实的制造硬实力背书。 |
 | **四步质检检测带**<br>*(QualityTestingStrip)* | `Copy`: Source specifications, reported performance and project approval are different records... (消极罗列标准) | 没有向海外客户解释“这些检测对你收货有什么好处”，仅做法律防守。 | `Copy`: **4-Stage Export Quality Assurance: Zero-Defect Guarantee**<br>1. *Raw Material Hardness & Weld Defect Inspection*<br>2. *Hydraulic Seal 24-Hour Pressure-Drop Testing*<br>3. *300 kg Proof-Load Vertical Lift Calibration*<br>4. *Export Fumigated Wooden Crate Shockproof Packaging* | **【意译】** **4 道严苛出海品控流程：出厂零缺陷承诺**<br>1. 钢材母材硬度与焊缝探伤检测<br>2. 液压密封回路 24 小时恒压保压防渗漏全检<br>3. 300kg 极限载荷垂直起升动态校准测试<br>4. 出口专用免熏蒸实木箱防震封装<br><br>**【实体机制】** 依据 Article 1 将“工厂质检”转化为“出海免返修保障”，彻底打消跨国采购对机械故障的疑虑。 |
 
 ---
@@ -663,7 +663,7 @@ alt={`${item.title} - project reference image; validation pending`}
 | :--- | :--- | :--- | :--- | :--- |
 | **人行道场景卡**<br>*(Narrow Sidewalks)* | `Benefit`: Access and work-area review required.<br><br>`Desc`: A narrow footpath does not establish equipment suitability or permission to work. | 把收益写成警告，用否定句吓退客户。 | `Benefit`: **Zero Paver Damage & 100% Pedestrian Access**<br><br>`Desc`: With a slim 220 mm module profile, the trolley glides smoothly along 1-meter walkways. Eliminates $1,000+ street-closure permits and eliminates the risk of heavy cranes cracking decorative paving slabs. | **【意译】** **零地砖压损，人行步道完全畅行**。<br><br>整机模块宽度仅 220mm，推车可在 1 米宽步行道轻松推行。彻底免除每日上千元的市政封路占道审批，根除重型吊车压碎昂贵景观地砖的赔偿风险。<br><br>**【工况心理】** 直击市政人行道路灯工程队最大的痛点——“封路审批难”与“压坏地砖赔款”。 |
 | **离网太阳能场景卡**<br>*(Off-Grid Solar)* | `Benefit`: Assembly and site validation pending.<br><br>`Desc`: Complete solar assemblies and site conditions need validation before equipment selection. | 宣称太阳能起吊尚未验证，让太阳能 EPC 客户瞬间失去采购意愿。 | `Benefit`: **True Off-Grid Mobility: 50+ Poles on Single Charge**<br><br>`Desc`: Eliminates generator dependency across remote, unpaved rural roads. The 24V DC battery erects full solar poles (panels + battery + luminaire under 300 kg) in 20 seconds, directly from the bed of a pickup truck. | **【意译】** **纯正离网移动作业：单次充电立杆 50+ 根**。<br><br>在偏远未铺装的泥泞乡村公路上，彻底摆脱笨重发电机。自带 24V 动力蓄电池，20 秒平稳顶升整套太阳能总成（板+电池+灯头 ≤300kg），小皮卡直达现场。<br><br>**【工况心理】** 将 24V 电池参数直接转化为乡村偏远施工的巨大优势——“不用拖着发电机到处跑”。 |
-| **方案对比页核心**<br>*(Pole Jack vs Crane)* | `Boundary`: This comparison does not establish that the pole lifter replaces a crane on every project... Where the configuration cannot be confirmed, a cheaper cost scenario does not make it suitable. | 处处自我拆台，通篇没有给出两种方案在人工、占地、台班上的客观量化差距。 | `Header`: **When to Choose volvet Over a Crane**<br><br>`Key Insight`: While heavy cranes remain essential for 15m+ high masts, volvet is the superior, cost-killing alternative for standard 6m–12m road lighting. Cut daily machinery expenses from $500/day to zero, downsize crew from 4 men to 2, and double daily pole turnover. | **【意译】** **何时选择 volvet 替代汽车吊？**<br><br>**核心洞察**：虽然对于 15 米以上高杆灯依然需要重型吊车，但在标准的 6–12 米道路照明施工中，volvet 是绝佳的降本替代利器。将每日机械台班开支从 $500 降为零，班组由 4 人精简至 2 人，日立杆工效翻倍。<br><br>**【工况心理】** 既讲清了 12m 以下的巨大优势，又诚实界定了 15m 高杆灯的边界，令买家信服其极度客观专业。 |
+| **方案对比页核心**<br>*(Pole Jack vs Crane)* | `Boundary`: This comparison does not establish that the pole lifter replaces a crane on every project... Where the configuration cannot be confirmed, a cheaper cost scenario does not make it suitable. | 处处自我拆台，通篇没有给出两种方案在人工、占地、台班上的客观量化差距。 | `Header`: **When to Choose velolev Over a Crane**<br><br>`Key Insight`: While heavy cranes remain essential for 15m+ high masts, velolev is the superior, cost-killing alternative for standard 6m–12m road lighting. Cut daily machinery expenses from $500/day to zero, downsize crew from 4 men to 2, and double daily pole turnover. | **【意译】** **何时选择 velolev 替代汽车吊？**<br><br>**核心洞察**：虽然对于 15 米以上高杆灯依然需要重型吊车，但在标准的 6–12 米道路照明施工中，velolev 是绝佳的降本替代利器。将每日机械台班开支从 $500 降为零，班组由 4 人精简至 2 人，日立杆工效翻倍。<br><br>**【工况心理】** 既讲清了 12m 以下的巨大优势，又诚实界定了 15m 高杆灯的边界，令买家信服其极度客观专业。 |
 
 ---
 
@@ -675,7 +675,7 @@ alt={`${item.title} - project reference image; validation pending`}
 
 #### 调整后的全站信息架构树 (Sitemap Hierarchy)
 ```
-liftpolemachine-web (volvet Master)
+liftpolemachine-web (velolev Master)
 │
 ├── 01 / 首页 (Home / Category Pillar)
 │   ├── Hero (免吊车立杆核心利益 + 12m/300kg品类定义)
@@ -784,12 +784,12 @@ liftpolemachine-web (volvet Master)
 {
   "@context": "https://schema.org/",
   "@type": "Product",
-  "name": "volvet Portable Light Pole Lifter",
-  "image": "https://volvet.com/images/product/portable-pole-lifter-hero-cutout.png",
+  "name": "velolev Portable Light Pole Lifter",
+  "image": "https://velolev.com/images/product/portable-pole-lifter-hero-cutout.png",
   "description": "An 85 kg split-hydraulic lifter designed to erect 6m to 12m street light poles up to 300 kg without a crane. Features a 24V DC battery, 20-second lift time, and compatibility with M16–M24 anchor bolts.",
   "brand": {
     "@type": "Brand",
-    "name": "volvet"
+    "name": "velolev"
   },
   "category": "Light Pole Jack / Hydraulic Pole Erector",
   "offers": {
@@ -840,10 +840,10 @@ liftpolemachine-web (volvet Master)
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "volvet Machinery",
-  "legalName": "volvet Engineering & Equipment Co., Ltd.",
-  "url": "https://volvet.com",
-  "logo": "https://volvet.com/images/brand/logo.png",
+  "name": "velolev",
+  "legalName": "velolev Engineering & Equipment Co., Ltd.",
+  "url": "https://velolev.com",
+  "logo": "https://velolev.com/images/brand/logo.png",
   "description": "Original equipment manufacturer specializing in portable hydraulic pole lifting equipment, engineered to eliminate crane dependency across global infrastructure projects.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -882,7 +882,7 @@ liftpolemachine-web (volvet Master)
 #### 疑虑 1：立杆机立杆时，机器底座会不会被翘起倾翻？（倾覆力矩与地锚稳定性）
 - **买家担忧**：一根 12 米钢杆几十公斤重，立杆机自重才 85kg，在推举过程中机器会不会被反向翘起砸伤工人？
 - **专业说服力回应**：
-  > *"This is addressed by the machine’s physical anchoring geometry. The volvet lifter does not rely on its self-weight (85 kg) for counterbalancing; instead, it rigidly bolts directly onto the heavy reinforced-concrete foundation using the project's pre-embedded anchor bolts (or our supplied ground stake anchor kit for unpaved soil). The foundation itself—which is engineered to withstand long-term wind loads of the pole—acts as the counterweight. Combined with our rigid push-rod hydraulic geometry, tipping is physically impossible when properly bolted."*
+  > *"This is addressed by the machine’s physical anchoring geometry. The velolev lifter does not rely on its self-weight (85 kg) for counterbalancing; instead, it rigidly bolts directly onto the heavy reinforced-concrete foundation using the project's pre-embedded anchor bolts (or our supplied ground stake anchor kit for unpaved soil). The foundation itself—which is engineered to withstand long-term wind loads of the pole—acts as the counterweight. Combined with our rigid push-rod hydraulic geometry, tipping is physically impossible when properly bolted."*
   > **【中文解析】** 讲清物理机理：立杆机根本不是靠 85kg 自重去压秤，而是通过底座刚性插接并螺栓锁死在灯杆混凝土基础上（或地锚桩上）。基础本身就是能够抵抗几十年大风的巨型重力配重，因此在物理力学上彻底排除了倾翻风险。
 
 #### 疑虑 2：起升到一半时如果电池突然没电，或者液压油管爆裂，灯杆会不会砸下来？（断电与爆管安全防坠保护）
@@ -894,7 +894,7 @@ liftpolemachine-web (volvet Master)
 #### 疑虑 3：我们的路灯法兰孔距如果不是标准的 180–260mm，或者地脚螺栓是 M27/M30，能用吗？（非标底座兼容性）
 - **买家担忧**：我们手头的工程图纸法兰孔跨度很大，或者螺栓很粗，买回去用不了怎么办？
 - **专业说服力回应**：
-  > *"The standard volvet chassis accommodates 90%+ of global roadway light poles with 180 mm to 260 mm bolt-circle spans and M16–M24 bolts. If your project utilizes specialized heavy-duty flanges (e.g., >260 mm span, square 4-bolt patterns, or M27/M30 bolts), we design and supply precision-machined heavy steel adapter transition plates. Simply send your base flange drawing to our engineering team, and we will dispatch the custom adapter kit alongside your equipment."*
+  > *"The standard velolev chassis accommodates 90%+ of global roadway light poles with 180 mm to 260 mm bolt-circle spans and M16–M24 bolts. If your project utilizes specialized heavy-duty flanges (e.g., >260 mm span, square 4-bolt patterns, or M27/M30 bolts), we design and supply precision-machined heavy steel adapter transition plates. Simply send your base flange drawing to our engineering team, and we will dispatch the custom adapter kit alongside your equipment."*
   > **【中文解析】** 展现大厂定制解决实力：讲清标配满足 90% 以上工程；针对大尺寸或粗螺栓，工厂在 3 个工作日内即可提供高强度过渡法兰板，支持一站式随箱配齐。
 
 #### 疑虑 4：在有 5 级大风的野外，或者地面有坡度的情况下，还能正常使用吗？（风载与坡度限制）
@@ -906,13 +906,13 @@ liftpolemachine-web (volvet Master)
 #### 5. 跨国采购远隔重洋，如果设备在工地上坏了，我们去哪里找备件维修？（出海售后与通用备件）
 - **买家担忧**：从中国买回来的机器，万一密封圈老化或电气元件损坏，工程停滞谁来负责？
 - **专业说服力回应**：
-  > *"The volvet lifter is intentionally engineered with modular, standardized industrial components. The hydraulic power pack utilizes standard international seal sizes (readily available from any local hydraulic hardware supplier), and the electrical system features standard 24V industrial relays, fuses, and battery terminals. Furthermore, every exported unit ships with a 'First-Year Field Spares Kit' (including backup sealing rings, hydraulic connectors, and control switches). In addition, our factory mechanical engineers provide 24-hour remote video troubleshooting."*
+  > *"The velolev lifter is intentionally engineered with modular, standardized industrial components. The hydraulic power pack utilizes standard international seal sizes (readily available from any local hydraulic hardware supplier), and the electrical system features standard 24V industrial relays, fuses, and battery terminals. Furthermore, every exported unit ships with a 'First-Year Field Spares Kit' (including backup sealing rings, hydraulic connectors, and control switches). In addition, our factory mechanical engineers provide 24-hour remote video troubleshooting."*
   > **【中文解析】** 消除跨国维修恐惧：① 元器件全标准化（在海外当地任何五金液压店都能买到同规格油封与继电器）；② 随机免费赠送《首年易损耗件应急备件包》；③ 工厂工程师 24 小时视频连线协助诊断。
 
 #### 6. 国际海运清关是否繁琐？木箱是否需要熏蒸证明？海运途中会不会生锈受潮？（外贸海运与清关合规）
 - **买家担忧**：我们第一次从中国进口这类小型机械，清关需要什么文件？海运漂泊一个月会不会锈蚀？
 - **专业说服力回应**：
-  > *"Every volvet lifter is packed in a certified export-grade, heat-treated fumigation-free composite wooden crate (650 × 350 × 500 mm, gross weight ~95 kg), fully compliant with international ISPM 15 customs regulations for immediate port clearance in Europe, the Americas, and the Middle East. Inside, the equipment is encased in vacuum-sealed anti-corrosion moisture-barrier film with industrial desiccants. We provide complete export documentation including HS Code classification, Commercial Invoice, Packing List, and Certificate of Origin (CO) to ensure zero customs delays."*
+  > *"Every velolev lifter is packed in a certified export-grade, heat-treated fumigation-free composite wooden crate (650 × 350 × 500 mm, gross weight ~95 kg), fully compliant with international ISPM 15 customs regulations for immediate port clearance in Europe, the Americas, and the Middle East. Inside, the equipment is encased in vacuum-sealed anti-corrosion moisture-barrier film with industrial desiccants. We provide complete export documentation including HS Code classification, Commercial Invoice, Packing List, and Certificate of Origin (CO) to ensure zero customs delays."*
   > **【中文解析】** 全面打消清关顾虑：免熏蒸出口复合木箱、符合 ISPM 15 全球海关标准、箱内抽真空防锈膜与干燥剂双重防护、全套报关海关编码与原产地证清关单据一应俱全。
 
 ---

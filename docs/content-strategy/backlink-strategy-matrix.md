@@ -1,6 +1,6 @@
-# volvet B2B 工业独立站全维度外链战略矩阵与执行 SOP
+# velolev B2B 工业独立站全维度外链战略矩阵与执行 SOP
 
-本矩阵结合 Google 官方搜索质量指南（Search Quality Rater Guidelines）、`seo-backlinks` 技能规范及视频教程核心逻辑，为 **volvet**（`https://www.velolev.org`）便携式液压立杆机定制全套可执行的外链建设标准与风控体系。
+本矩阵结合 Google 官方搜索质量指南（Search Quality Rater Guidelines）、`seo-backlinks` 技能规范及视频教程核心逻辑，为 **velolev**（`https://www.velolev.org`）便携式液压立杆机定制全套可执行的外链建设标准与风控体系。
 
 ---
 
@@ -31,14 +31,14 @@
 
 ## 二、 锚文本（Anchor Text）黄金配比与防操纵红线
 
-为防范 Google SpamBrain 与企鹅算法（Penguin）对过度优化（Over-optimization）的惩罚，volvet 全站外链必须严格执行以下分布配比：
+为防范 Google SpamBrain 与企鹅算法（Penguin）对过度优化（Over-optimization）的惩罚，velolev 全站外链必须严格执行以下分布配比：
 
 | 锚文本类型 | 严格控制占比 | 代表性锚文本示例 | 战略目的与风控红线 |
 | :--- | :---: | :--- | :--- |
-| **品牌锚文本 (Branded)** | **45% – 50%** | `volvet`, `volvet engineering`, `volvet lifter`, `equipos volvet` | 巩固“volvet = 便携立杆机唯一品牌”的知识图谱认知，最安全、权重最高。 |
+| **品牌锚文本 (Branded)** | **45% – 50%** | `velolev`, `velolev engineering`, `velolev lifter`, `equipos velolev` | 巩固“velolev = 便携立杆机唯一品牌”的知识图谱认知，最安全、权重最高。 |
 | **裸链/URL (Naked URL)** | **20% – 25%** | `https://www.velolev.org/`, `velolev.org`, `www.velolev.org/tools/roi-calculator/` | 模拟行业白皮书、学术报告与论坛参考文献的自然引用习惯。 |
 | **通用锚文本 (Generic)** | **10% – 15%** | `visit website`, `source`, `view full specifications`, `online calculator`, `leer más` | 自然链接的必备佐证，有效稀释关键词浓度，避免被判定操纵排名。 |
-| **部分匹配词 (Partial Match)** | **10% – 15%** | `portable pole lifter by volvet`, `volvet 12m light pole installation method`, `crane cost comparison tool` | 将品牌名与核心品类/长尾场景组合，兼顾主题相关性与自然度。 |
+| **部分匹配词 (Partial Match)** | **10% – 15%** | `portable pole lifter by velolev`, `velolev 12m light pole installation method`, `crane cost comparison tool` | 将品牌名与核心品类/长尾场景组合，兼顾主题相关性与自然度。 |
 | **精准关键词 (Exact Match)** | **3% – 5%** | `portable light pole lifter`, `light pole jack`, `install light poles without crane` | **风控红线**：严禁超过 5%。一旦单月 Exact Match 占比超过 15%，将直接触发 Google 算法降权。 |
 
 ### Dofollow 与 Nofollow 属性平衡
@@ -49,7 +49,7 @@
 
 ## 三、 四大“可链接资产”（Linkable Assets）矩阵与落地页映射
 
-外部博主与站长只愿意链接有实际参考价值的内容。volvet 依托已发布的数字化功能，包装出 4 个极具传播力度的外链磁铁：
+外部博主与站长只愿意链接有实际参考价值的内容。velolev 依托已发布的数字化功能，包装出 4 个极具传播力度的外链磁铁：
 
 | 资产名称 | 目标落地 URL | 核心受众与应用场景 | 价值钩子（Why Others Link to Us） |
 | :--- | :--- | :--- | :--- |
@@ -74,7 +74,7 @@
 - **适用层级**：Tier 1 & Tier 2。
 - **执行流程**：
   1. 检索大学土木工程系、市政电气协会或专业施工工具汇总页面（Google 搜索 `"useful resources" + "street lighting" OR "civil engineering tools"`）；
-  2. 发送工具推荐邮件，强调 volvet ROI 计算器与法兰校核器的纯粹工程实用性与免登录特性；
+  2. 发送工具推荐邮件，强调 velolev ROI 计算器与法兰校核器的纯粹工程实用性与免登录特性；
   3. 建议对方将其补充至“Free Calculators & Sizing Tools”子分类中。
 
 ### 渠道 3：数据驱动公关（Data-driven PR）
@@ -82,7 +82,7 @@
 - **执行流程**：
   1. 基于全球路灯安装工况数据，提炼《2026 Global Light Pole Erection Efficiency & Safety Benchmark》（2026全球路灯立杆施工效率与安全基准数据简报）；
   2. 向机械工程与基础设施媒体（如 Construction Europe, Lighting Today, B2B Engineering News）提供独家统计摘要；
-  3. 引导媒体在引用数据时将来源标注为 `According to research by volvet Engineering (velolev.org)...`。
+  3. 引导媒体在引用数据时将来源标注为 `According to research by velolev Engineering (velolev.org)...`。
 
 ### 渠道 4：专家媒体引用与记者问答（Digital PR）
 - **适用层级**：Tier 1 高权威新闻引用。
@@ -102,7 +102,7 @@
 - **适用层级**：Tier 2 权威实体黄页。
 - **执行流程**：
   1. 完成全球 Top 20 工业与装备制造名录的入驻（ThomasNet, Kompass, Europages, IndustryNet, GlobalSpec, DirectIndustry）；
-  2. 严格统一全网 NAP（Name: volvet, Address: 官方生产研发基地, Phone/Contact: 统一官方通道）；
+  2. 严格统一全网 NAP（Name: velolev, Address: 官方生产研发基地, Phone/Contact: 统一官方通道）；
   3. 在产品分类中准确勾选 `Street Lighting Installation Equipment`, `Hydraulic Pole Erectors`, `Solar Light Installation Tools`。
 
 ### 渠道 7：技术内容营销与学术传播（Content Syndication）
@@ -117,7 +117,7 @@
 - **执行流程**：
   1. 使用 Ahrefs / Semrush 监控国内外已停更的吊车租赁网站、传统拔杆机（Pole Puller）厂商的外部反向链接；
   2. 筛选出 HTTP 404 或内容陈旧过时的引用页面；
-  3. 礼貌致信站长，指出其文章中存在失效链接，并推荐 volvet 最新的在线替代方法指南或 ROI 计算器作为更新候选。
+  3. 礼貌致信站长，指出其文章中存在失效链接，并推荐 velolev 最新的在线替代方法指南或 ROI 计算器作为更新候选。
 
 ---
 
@@ -186,6 +186,6 @@ flowchart TD
 1. **Google Search Console“链接”控制台**：
    - 每两周导出一次“顶级指向网站”与“顶级链接网页”，核验新增来源域名的合法性与目标落地页承接能力。
 2. **Google Alerts 品牌声量监控**：
-   - 配置关键词监控：`"volvet"`, `"velolev.org"`, `"portable light pole lifter"`，一旦发现未加外链的媒体报道或论坛提及（Unlinked Brand Mentions），第一时间执行联系要求补充来源出处链接。
+   - 配置关键词监控：`"velolev"`, `"velolev.org"`, `"portable light pole lifter"`，一旦发现未加外链的媒体报道或论坛提及（Unlinked Brand Mentions），第一时间执行联系要求补充来源出处链接。
 3. **自动化测试守门**：
    - 将外链分布与目标目录纳入工程端日常自动化审计，持续保障外链健康生态。

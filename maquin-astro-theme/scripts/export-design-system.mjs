@@ -28,7 +28,7 @@ for (const dir of Object.values(dirs)) {
 
 // 拷贝核心设计资产
 const assetSources = [
-  { from: join(root, "public/brand/volvet-wordmark.svg"), to: join(dirs.assets, "volvet-wordmark.svg") },
+  { from: join(root, "public/brand/velolev-wordmark.svg"), to: join(dirs.assets, "velolev-wordmark.svg") },
   { from: join(root, "public/images/product/portable-pole-lifter-hero-cutout.png"), to: join(dirs.assets, "portable-pole-lifter-hero-cutout.png") },
   { from: join(root, "public/images/product/portable-pole-lifter-side-cutout.png"), to: join(dirs.assets, "portable-pole-lifter-side-cutout.png") },
   { from: join(root, "public/images/product/portable-light-pole-lifter-specification-sheet.png"), to: join(dirs.assets, "portable-light-pole-lifter-specification-sheet.png") },
@@ -42,7 +42,7 @@ for (const { from, to } of assetSources) {
 }
 
 // 启动私有服务
-const adminToken = "volvet-design-export-session-key-20261028-abcdef";
+const adminToken = "velolev-design-export-session-key-20261028-abcdef";
 const inboxDir = join(root, ".local/design-export-inbox");
 mkdirSync(inboxDir, { recursive: true });
 
@@ -74,7 +74,7 @@ const sampleInquiry = store.save(
     poleHeight: "12",
     poleWeight: "280",
     foundation: "M20 anchor bolts, square flange 220mm bolt circle, concrete pier",
-    message: "Requesting quotation for 4 units of volvet 12m pole lifters with M20 anchor bolts for municipal roadway lighting replacement program. Tight sidewalks with bike lanes.",
+    message: "Requesting quotation for 4 units of velolev 12m pole lifters with M20 anchor bolts for municipal roadway lighting replacement program. Tight sidewalks with bike lanes.",
     sourcePage: "/quote/",
     locale: "en",
     consent: true,
@@ -84,7 +84,7 @@ const sampleInquiry = store.save(
     name: "gothenburg-flange-spec-sample.pdf",
     type: "application/pdf",
     size: 4820,
-    bytes: Buffer.from("%PDF-1.4\n%volvet sample drawing attachment\n1 0 obj\n<<>>\nendobj\n%%EOF"),
+    bytes: Buffer.from("%PDF-1.4\n%velolev sample drawing attachment\n1 0 obj\n<<>>\nendobj\n%%EOF"),
   },
   "idempotency-key-design-seed-record-001"
 );
@@ -104,7 +104,7 @@ async function scrollPage(page) {
 
 const manifest = {
   exportDate: new Date().toISOString(),
-  brand: "volvet",
+  brand: "velolev",
   scaleFactor: 2,
   artboards: [],
 };
@@ -451,7 +451,7 @@ console.log(`\n[Manifest] Saved ${manifest.artboards.length} artboards to design
 const designTokens = {
   version: "1.0.0",
   date: "2026-10-28",
-  brand: "volvet",
+  brand: "velolev",
   colors: {
     primary: {
       yellow: { value: "#f4cc3d", hex: "#f4cc3d", role: "Primary Accent & CTA Button", usage: "Main action buttons, brand badge accent, highlighted borders" },
@@ -531,10 +531,10 @@ const designTokens = {
 writeFileSync(join(dirs.tokens, "design-tokens.json"), JSON.stringify(designTokens, null, 2) + "\n");
 
 // 生成设计规范 Markdown
-const designSpecMd = `# volvet 全站设计系统与 UI 规范说明书 (Design System Specification)
+const designSpecMd = `# velolev 全站设计系统与 UI 规范说明书 (Design System Specification)
 
 > **版本**：v1.0.0 (2026-10-28)  
-> **适用范围**：volvet 便携式立杆机全球独立站 (Desktop / Tablet / Mobile)  
+> **适用范围**：velolev 便携式立杆机全球独立站 (Desktop / Tablet / Mobile)  
 > **设计基调**：**精密工业美学 (Precision Industrial Aesthetic)**。以工程参数严谨性为主导，米灰纸质感底色融合工业明黄，兼顾高可读性与专业感。
 
 ---
@@ -642,7 +642,7 @@ const showcaseHtml = `<!doctype html>
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>volvet 全站设计稿导出画廊 & UI 设计规范交付看板</title>
+  <title>velolev 全站设计稿导出画廊 & UI 设计规范交付看板</title>
   <style>
     :root {
       --bg: #141715;
@@ -955,7 +955,7 @@ const showcaseHtml = `<!doctype html>
     <div class="brand-group">
       <span class="logo-badge">v</span>
       <div>
-        <div class="brand-title">volvet · 全站设计稿导出与设计系统规范</div>
+        <div class="brand-title">velolev · 全站设计稿导出与设计系统规范</div>
         <div class="brand-sub">Portable Light Pole Lifter Global Independent Site · High-Fidelity Design Review</div>
       </div>
     </div>
@@ -1099,9 +1099,9 @@ const showcaseHtml = `<!doctype html>
 writeFileSync(join(exportDir, "index.html"), showcaseHtml);
 
 // 生成 README.md
-const readmeMd = `# volvet 全站设计稿导出交付包 (Design Exports Package)
+const readmeMd = `# velolev 全站设计稿导出交付包 (Design Exports Package)
 
-本目录由自动化设计系统导出引擎于 ${new Date().toISOString()} 自动生成，收录了 volvet 便携式立杆机全球独立站的全部高保真设计稿、交互状态画板、多语言版本截图及设计系统 Tokens 规范。
+本目录由自动化设计系统导出引擎于 ${new Date().toISOString()} 自动生成，收录了 velolev 便携式立杆机全球独立站的全部高保真设计稿、交互状态画板、多语言版本截图及设计系统 Tokens 规范。
 
 ---
 

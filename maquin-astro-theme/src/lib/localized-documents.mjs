@@ -2,7 +2,7 @@ import {specificationSummary} from './specification-downloads.mjs';
 import {translateText} from './industrial-localization.mjs';
 import {industrialLocales} from './site-config.mjs';
 
-export const documentNames=['velolev-specifications.csv','velolev-specifications.json','volvet-specifications.csv','volvet-specifications.json','project-information-worksheet.csv'];
+export const documentNames=['velolev-specifications.csv','velolev-specifications.json','project-information-worksheet.csv'];
 export function localizedDocumentPath(name,locale='en'){
  if(!documentNames.includes(name))throw new Error('Unknown document.');
  return `${industrialLocales.includes(locale)?`/${locale}`:''}/resources/${name}`;

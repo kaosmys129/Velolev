@@ -104,7 +104,7 @@ Dù cột đèn được thiết kế chịu bão theo tiêu chuẩn EN 40-3, qu
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

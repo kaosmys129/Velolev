@@ -40,7 +40,7 @@ test('retired runtime and content editor cannot be re-enabled by the active buil
 test('the replacement inventory includes reviewed guide articles and excludes admin, redirects and error pages',async t=>{
  const {mkdtempSync,mkdirSync,writeFileSync,rmSync}=await import('node:fs');
  const {tmpdir}=await import('node:os');
- const directory=mkdtempSync(join(tmpdir(),'volvet-inventory-test-'));t.after(()=>rmSync(directory,{recursive:true,force:true}));
+ const directory=mkdtempSync(join(tmpdir(),'velolev-inventory-test-'));t.after(()=>rmSync(directory,{recursive:true,force:true}));
  for(const [path,html] of [
   ['index.html','<title>Home</title><h1>Home</h1>'],
   ['guides/reviewed-example/index.html','<title>Reviewed example</title><h1>Reviewed guide</h1>'],

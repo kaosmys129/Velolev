@@ -11,7 +11,7 @@ test("localized navigation retains the language, query and section across curren
     ["/guides/pole-jack-compatibility/","pt","/pt/guides/pole-jack-compatibility/"],
     ["/es/equipment/","fr","/fr/equipment/"],
     ["/es/blog/","en","/guides/"],
-    ["/resources/volvet-specifications.csv","pt","/resources/volvet-specifications.csv"],
+    ["/resources/velolev-specifications.csv","pt","/resources/velolev-specifications.csv"],
     ["https://example.com/quote/","es","https://example.com/quote/"],
     ["//example.com/quote/","es","//example.com/quote/"],
     ["#specifications","es","#specifications"],

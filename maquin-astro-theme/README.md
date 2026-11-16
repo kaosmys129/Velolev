@@ -1,4 +1,4 @@
-# volvet industrial procurement site
+# velolev industrial procurement site
 
 Astro static pages share `src/layouts/ProcurementLayout.astro` and `src/styles/procurement.css` across English, Spanish, French, Portuguese, Vietnamese, Thai and Indonesian. No WordPress installation, Elementor runtime or HTML fragment generator is required.
 

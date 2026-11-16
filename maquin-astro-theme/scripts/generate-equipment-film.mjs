@@ -8,7 +8,7 @@ import {fileURLToPath} from "node:url";
 
 const root=fileURLToPath(new URL("../",import.meta.url));
 const output=join(root,"public/media");
-const temporary=mkdtempSync(join(tmpdir(),"volvet-equipment-film-"));
+const temporary=mkdtempSync(join(tmpdir(),"velolev-equipment-film-"));
 const scenes=[
   "images/product/portable-pole-lifter-hero-cutout.png",
   "images/evidence/equipment-trolley-side-detail.jpg",

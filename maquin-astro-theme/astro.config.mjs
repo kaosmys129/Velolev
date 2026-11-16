@@ -14,7 +14,7 @@ const publicOrigin = resolvePublicOrigin();
 export default defineConfig({
   output: "static",
   // 优先使用已配置的正式域名；若在预览环境显式清空 PUBLIC_SITE_URL，则回落到 .invalid 仅预览模式
-  site: publicOrigin || "https://volvet.invalid",
+  site: publicOrigin || "https://velolev.invalid",
   trailingSlash: "always",
   // i18n: 英文默认站位于根路径（无前缀），其余语言使用 /es/ /fr/ ... 前缀。
   // 语言切换与 hreflang 交叉链接由 ProcurementLayout 注入；sitemap 仍逐语言列出独立 URL。

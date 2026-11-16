@@ -1159,11 +1159,11 @@
       "passed": true
     },
     {
-      "name": "resources: linked resource /resources/volvet-specifications.csv",
+      "name": "resources: linked resource /resources/velolev-specifications.csv",
       "passed": true
     },
     {
-      "name": "resources: linked resource /resources/volvet-specifications.json",
+      "name": "resources: linked resource /resources/velolev-specifications.json",
       "passed": true
     },
     {
@@ -3547,7 +3547,7 @@
       "passed": true
     },
     {
-      "name": "download: volvet-specifications.csv exists and substantive",
+      "name": "download: velolev-specifications.csv exists and substantive",
       "passed": true
     },
     {

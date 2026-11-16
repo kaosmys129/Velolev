@@ -14,7 +14,7 @@
 | **P0-1** | 技术 SEO | `https://www.velolev.org/sitemap.xml` 直接返回 HTTP 404；全站仅有 `/sitemap-index.xml`，且未配置别名重定向 | 修复标准搜索引擎（Google、Bing、Baidu）与第三方审计工具的默认地图嗅探失败 | 后端/运维 | 在 `vercel.json` 根级增加 `redirects`：<br>`{"source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true}` |
 | **P0-2** | 技术 SEO | 历史旧路径 `/equipment/` 与 `/pricing-plan/` 返回 HTTP 200 + Meta-Refresh 软跳转，而非服务端 HTTP 308 | 消除爬虫软跳转惩罚，直接且即时传递历史页面权重，释放抓取配额 | 前端/运维 | 在 `vercel.json` 中配置服务端 308 重定向：<br>`{"source": "/equipment/", "destination": "/products/light-pole-jack/", "permanent": true}`,<br>`{"source": "/pricing-plan/", "destination": "/quote/", "permanent": true}` |
 | **P0-3** | 技术 SEO | 裸域 HTTP 双跳链路：`http://velolev.org` -> 308 -> `https://velolev.org/` -> 308 -> `https://www.velolev.org/` | 消除双重 308 跳转链，降低 200ms+ 首包延迟，避免外链权重稀释 | 运维/域名 | 在 Vercel 域名路由或边缘代理中优化裸域规则，强制 `http://velolev.org` 单跳直达目标地址 `https://www.velolev.org/` |
-| **P0-4** | E-E-A-T / GEO | 品牌实体与域名割裂：全站 Title、Logo、正文、Schema 均为 `volvet`，但域名为 `velolev.org`，全站无任何实体关联解释 | 建立 Google Knowledge Graph 对品牌词 `volvet` 的权威归属，降低 AI 搜索幻觉 | 运营/产品 | 在 `/about-us/` 中明确阐述：`volvet` 是依托 `velolev.org` 运营的便携路灯立杆机官方设备品牌；并在 `Organization` Schema 增加 `alternateName: ["velolev", "volvet equipment"]` |
+| **P0-4** | E-E-A-T / GEO | 品牌实体与域名割裂：全站 Title、Logo、正文、Schema 均为 `velolev`，但域名为 `velolev.org`，全站无任何实体关联解释 | 建立 Google Knowledge Graph 对品牌词 `velolev` 的权威归属，降低 AI 搜索幻觉 | 运营/产品 | 在 `/about-us/` 中明确阐述：`velolev` 是依托 `velolev.org` 运营的便携路灯立杆机官方设备品牌；并在 `Organization` Schema 增加 `alternateName: ["velolev", "velolev equipment"]` |
 | **P0-5** | 安全标头 | 缺少 `Content-Security-Policy` (CSP) 响应头 | 提升 HTTP 安全等级并消除安全审计 Low 级别告警 | 运维 | 在 `vercel.json` 的 `headers` 中为 `/(.*)` 增加 `Content-Security-Policy` 策略配置 |
 
 ---
@@ -25,7 +25,7 @@
 |------|----------|----------------|----------|----------|-------------------|
 | **P1-1** | 核心性能 | 首页案例区 3 张缩略图为未压缩的原始 JPEG，单图高达 896.6 KB，3 张图总计 **2.55 MB**！ | 首页图片负载暴降 **94% (~2.4 MB)**，大幅提升移动端 LCP 与加载速度 | 前端/设计 | 将 `/images/evidence/jobsite-*.jpg` 等图片以 680x380 规格批量转换为 WebP/AVIF 格式（质量 80%），单张体积控制在 35-50 KB 之间 |
 | **P1-2** | 核心性能 | 首屏 Hero 透明底设备图为 195.7 KB 原生 PNG (`portable-pole-lifter-hero-cutout.png`) | 进一步减少首屏 LCP 渲染关键路径阻塞资源体积 | 前端 | 将 Hero 图转换为带 Alpha 透明通道的 WebP 格式，文件大小预期缩减至 45 KB 以内 |
-| **P1-3** | 站内 SEO | 全站 37 个页面标题超过 65 字符 (最长达 82 字符，如 `M16–M22 4-Bolt...`) | 防止在 Google 移动与桌面端 SERP 中被生硬截断，提升展示 CTR | SEO/内容 | 精简长标题至 55-60 字符，核心高价值搜索词前置（例：`M16–M22 Pole Lifter Configuration (180–260mm) \| volvet`） |
+| **P1-3** | 站内 SEO | 全站 37 个页面标题超过 65 字符 (最长达 82 字符，如 `M16–M22 4-Bolt...`) | 防止在 Google 移动与桌面端 SERP 中被生硬截断，提升展示 CTR | SEO/内容 | 精简长标题至 55-60 字符，核心高价值搜索词前置（例：`M16–M22 Pole Lifter Configuration (180–260mm) \| velolev`） |
 | **P1-4** | 站内 SEO | 全站 47 个页面元描述超过 160 字符 (最长达 225 字符，如 `/es/equipment/`) | 解决搜索结果元描述句末被 `...` 截断问题，确保 B2B 行动号召完整展示 | SEO/内容 | 压缩元描述至 140-155 字符，明确标注文档核心参数（12m / 300kg / 24V）与询价引导 |
 | **P1-5** | 页面排版 | 首页及多个工具页 H1 存在英文句号后缺失空格排版错误（`lifting.Made`、`scenario.Keep`） | 消除专业度硬伤，提升分词可读性与美感 | 前端/文案 | 修复模版文案：`Light pole lifting. Made portable.`、`Calculate a scenario. Keep the assumptions.` |
 

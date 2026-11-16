@@ -104,7 +104,7 @@ Meskipun tiang lampu dirancang tahan angin sesuai EN 40-3, proses pendirian tian
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

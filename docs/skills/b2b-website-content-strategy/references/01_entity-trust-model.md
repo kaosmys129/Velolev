@@ -20,10 +20,10 @@
 在进行建站内容规划时，必须确立以下三大标准事实：
 
 ### 1. 法定实体与品牌定义清晰对齐
-- **法定全称 (Legal Entity Name)**：明确工商注册实体名称，并在全站页脚及结构化数据中保持一致（如 `volvet Engineering & Equipment Co., Ltd.`）。
-- **品牌名称 (Brand Name)**：对外市场推广的权威品牌名（如 `volvet`）。
+- **法定全称 (Legal Entity Name)**：明确工商注册实体名称，并在全站页脚及结构化数据中保持一致（如 `velolev Engineering & Equipment Co., Ltd.`）。
+- **品牌名称 (Brand Name)**：对外市场推广的权威品牌名（如 `velolev`）。
 - **行业品类与专业定位 (Niche Category Definition)**：一句话说明核心业务，先给出总定义，再展开层级：
-  > *例：volvet is a specialized original equipment manufacturer (OEM) of portable hydraulic light pole lifting systems, engineered to eliminate crane dependency across global road lighting projects.*
+  > *例：velolev is a specialized original equipment manufacturer (OEM) of portable hydraulic light pole lifting systems, engineered to eliminate crane dependency across global road lighting projects.*
 - **层级分工 (Hierarchy of Offerings)**：标准设备制造、非标定制、配件供应还是系统工程，层级必须泾渭分明。
 
 ### 2. 实体物理职能清晰拆解
@@ -71,10 +71,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "volvet",
-  "legalName": "volvet Engineering & Equipment Co., Ltd.",
-  "url": "https://www.volvetlifter.com",
-  "logo": "https://www.volvetlifter.com/brand/volvet-logo.png",
+  "name": "velolev",
+  "legalName": "velolev Engineering & Equipment Co., Ltd.",
+  "url": "https://www.velolevlifter.com",
+  "logo": "https://www.velolevlifter.com/brand/velolev-logo.png",
   "description": "Specialized original equipment manufacturer (OEM) of portable hydraulic light pole lifters engineered to eliminate crane dependency across global infrastructure projects.",
   "knowsAbout": [
     "Crane-Free Street Light Installation",

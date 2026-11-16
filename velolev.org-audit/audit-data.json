@@ -3,7 +3,7 @@
     "health_score": 84,
     "business_type": "B2B Industrial Equipment Manufacturer & Exporter (Portable Light Pole Lifter)",
     "top_findings": [
-      "Brand Entity & Domain Mismatch: Domain is velolev.org but brand identity is exclusively volvet across all pages, titles, logos, and schemas without entity aliasing or sameAs linkage.",
+      "Brand Entity & Domain Mismatch: Domain is velolev.org but brand identity is exclusively velolev across all pages, titles, logos, and schemas without entity aliasing or sameAs linkage.",
       "Double Redirect Chain on Bare Domain: http://velolev.org -> 308 -> https://velolev.org/ -> 308 -> https://www.velolev.org/ (2 hops).",
       "Missing /sitemap.xml: Default /sitemap.xml returns HTTP 404; only /sitemap-index.xml is served, without a server redirect.",
       "Client-side Meta-Refresh (HTTP 200) on Legacy Routes: /equipment/ and /pricing-plan/ serve HTML 200 with meta-refresh rather than server-side HTTP 308 redirects.",
@@ -74,10 +74,10 @@
       ],
       "findings": [
         {
-          "title": "Critical Brand Entity & Domain Disconnect (velolev.org vs volvet)",
+          "title": "Critical Brand Entity & Domain Disconnect (velolev.org vs velolev)",
           "severity": "Critical",
-          "description": "The domain is velolev.org, yet the brand is exclusively identified as 'volvet' across all page titles, logos, schemas, and body copy. There is zero on-page or schema explanation of the relationship between velolev and volvet.",
-          "recommendation": "Add clear corporate brand entity linkage: explain on /about-us/ that volvet is the brand/trademark hosted at velolev.org, add sameAs and alternateName properties in Organization schema, or align domain branding."
+          "description": "The domain is velolev.org, yet the brand is exclusively identified as 'velolev' across all page titles, logos, schemas, and body copy. There is zero on-page or schema explanation of the relationship between velolev and velolev.",
+          "recommendation": "Add clear corporate brand entity linkage: explain on /about-us/ that velolev is the brand/trademark hosted at velolev.org, add sameAs and alternateName properties in Organization schema, or align domain branding."
         },
         {
           "title": "Multilingual Asymmetry (35 English Pages vs 18 in Other Locales)",
@@ -99,7 +99,7 @@
       "what_works": [
         "100% of 143 pages have title tags and meta descriptions",
         "100% of 143 pages follow the single H1 hierarchy standard",
-        "Consistent brand suffix appending (' | volvet') on all titles",
+        "Consistent brand suffix appending (' | velolev') on all titles",
         "Clean URL structure with trailing slashes and descriptive lowercase slugs",
         "Zero orphan pages: all 143 sitemap pages are discoverable through internal links"
       ],
@@ -107,8 +107,8 @@
         {
           "title": "37 Title Tags Exceed 65 Characters (SERP Truncation)",
           "severity": "Medium",
-          "description": "37 pages carry titles between 66 and 82 characters (e.g. 'M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | volvet' - 82 chars), resulting in truncated display snippets in Google search results.",
-          "recommendation": "Trim titles to 55-60 characters while front-loading core target keywords (e.g., 'M16–M22 Pole Lifter Configuration (180–260mm) | volvet')."
+          "description": "37 pages carry titles between 66 and 82 characters (e.g. 'M16–M22 4-Bolt Portable Light Pole Lifter Configuration (180–260 mm Span) | velolev' - 82 chars), resulting in truncated display snippets in Google search results.",
+          "recommendation": "Trim titles to 55-60 characters while front-loading core target keywords (e.g., 'M16–M22 Pole Lifter Configuration (180–260mm) | velolev')."
         },
         {
           "title": "47 Meta Descriptions Exceed 160 Characters",
@@ -149,7 +149,7 @@
           "title": "TechArticle Schema Omits Explicit Author Object",
           "severity": "Low",
           "description": "Guide pages deploy TechArticle schema without an explicit Person or Organization author entity.",
-          "recommendation": "Add author: {'@type': 'Organization', 'name': 'volvet Technical Engineering Team'} to TechArticle schema."
+          "recommendation": "Add author: {'@type': 'Organization', 'name': 'velolev Technical Engineering Team'} to TechArticle schema."
         }
       ]
     },
@@ -228,7 +228,7 @@
         "items": [
           "Configure permanent 308 redirects in vercel.json: /sitemap.xml -> /sitemap-index.xml, /equipment/ -> /products/light-pole-jack/, /pricing-plan/ -> /quote/.",
           "Fix bare domain HTTP redirect chain in Vercel to ensure single-hop http://velolev.org -> https://www.velolev.org/.",
-          "Add corporate entity clarification on /about-us/ and Organization schema linking the velolev.org domain with the volvet brand identity.",
+          "Add corporate entity clarification on /about-us/ and Organization schema linking the velolev.org domain with the velolev brand identity.",
           "Add Content-Security-Policy (CSP) header in vercel.json."
         ]
       },

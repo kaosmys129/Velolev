@@ -104,7 +104,7 @@ Apesar da EN 40-3 calcular a resistência da estrutura instalada, a montagem em 
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

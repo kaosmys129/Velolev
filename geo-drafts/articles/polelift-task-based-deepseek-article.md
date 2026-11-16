@@ -1,12 +1,12 @@
 ---
-coverImage: "/images/volvet-lifter-task-based-deepseek-article/cover-flow-hero-16x9.png"
+coverImage: "/images/velolev-lifter-task-based-deepseek-article/cover-flow-hero-16x9.png"
 ---
 
 # Installing 12m Street Light Poles Without a Crane: Engineering Feasibility, Structural Safety, and Field Limits
 
 
-![volvet Portable Light Pole Lifter Cinematic Engineering Cover Hero](/images/volvet-lifter-task-based-deepseek-article/cover-flow-hero-16x9.png)
-*Cover Hero: On-site zero-crane erection of 12m municipal lighting pole using volvet portable lifter. Integrated with site engineering layout and mechanical blueprint. Standard 2-person crew compliance eliminates heavy crane roadway closures.*
+![velolev Portable Light Pole Lifter Cinematic Engineering Cover Hero](/images/velolev-lifter-task-based-deepseek-article/cover-flow-hero-16x9.png)
+*Cover Hero: On-site zero-crane erection of 12m municipal lighting pole using velolev portable lifter. Integrated with site engineering layout and mechanical blueprint. Standard 2-person crew compliance eliminates heavy crane roadway closures.*
 
 
 
@@ -20,15 +20,15 @@ Erecting municipal street light poles has traditionally been synonymous with mob
 > - **Two-Person Operational Protocol:** Requires two workers utilizing an 85kg split-module system (45kg hydraulic cylinder + 40kg 24V power pack) for safe handling.
 > - **Anchor Bolt Load Transfer:** Universal base plate accommodates 180-260mm bolt patterns, transferring dynamic loads safely into ASTM F1554 foundation studs.
 
-![Portable Light Pole Lifter: Zero-Crane Erection up to 12m](/images/volvet-lifter-task-based-deepseek-article/01-feature-hero-cover-16x9.png)
-*Figure 1: volvet portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.*
+![Portable Light Pole Lifter: Zero-Crane Erection up to 12m](/images/velolev-lifter-task-based-deepseek-article/01-feature-hero-cover-16x9.png)
+*Figure 1: velolev portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.*
 
 ---
 
 ## 1. The Engineering Challenge of Crane-Free 12m Light Pole Erection
 
-![Jobsite feasibility comparison: 16-ton mobile crane vs volvet portable hydraulic pole lifter](/images/volvet-lifter-task-based-deepseek-article/05-crane-vs-lifter-comparison-16x9.png)
-*Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus volvet portable pole lifter across narrow access, crew size, and powerline clearances.*
+![Jobsite feasibility comparison: 16-ton mobile crane vs velolev portable hydraulic pole lifter](/images/velolev-lifter-task-based-deepseek-article/05-crane-vs-lifter-comparison-16x9.png)
+*Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus velolev portable pole lifter across narrow access, crew size, and powerline clearances.*
 
 Erecting a 10m to 12m street light pole involves dynamic structural forces that differ significantly from simple vertical lifting. When a light pole lies horizontally on the ground prior to erection, the pivot point is located at the foundation base plate. Raising the column from zero degrees (horizontal) to ninety degrees (vertical) creates a varying angular moment:
 - At the initial lift-off angle (0° to 15°), the required horizontal and vertical force vectors reach peak values due to the maximum horizontal distance between the pole center of gravity and the foundation pivot pin.
@@ -41,7 +41,7 @@ Under **ANSI/IES RP-8-18** roadway lighting guidelines, precise vertical alignme
 
 ## 2. Two-Person Hydraulic Mechanics: 300kg Rated Load on Factory Test Rigs
 
-![Portable light pole lifter two-module mechanical engineering architecture](/images/volvet-lifter-task-based-deepseek-article/02-two-module-architecture-16x9.png)
+![Portable light pole lifter two-module mechanical engineering architecture](/images/velolev-lifter-task-based-deepseek-article/02-two-module-architecture-16x9.png)
 *Figure 2: Split two-module fluid power architecture: 45kg hydraulic lifter rig and 40kg 24V power control cabinet compliant with international manual handling safety regulations.*
 
 To provide the required lifting force without heavy support trucks, modern portable erecting systems utilize closed-circuit fluid power driven by an integrated **24V DC battery system**. The hydraulic pump delivers high pressure to a heavy-wall alloy telescoping cylinder, generating consistent vertical thrust while drawing minimal electric current.
@@ -63,7 +63,7 @@ When evaluating overall project delivery, contractors should review the [portabl
 
 ## 3. Foundation Anchorage Mechanics: P.C.D. 180mm to 260mm and Bolt Shear Integrity
 
-![Base flange compatibility and P.C.D. 180mm to 260mm radial slotted geometry](/images/volvet-lifter-task-based-deepseek-article/03-flange-pcd-compatibility-16x9.png)
+![Base flange compatibility and P.C.D. 180mm to 260mm radial slotted geometry](/images/velolev-lifter-task-based-deepseek-article/03-flange-pcd-compatibility-16x9.png)
 *Figure 3: Heavy-duty base plate radial slotted geometry accommodating 180mm to 260mm bolt circle diameters (P.C.D.) and M16 to M24 foundation anchor studs per ASTM F1554.*
 
 A critical safety principle of the portable pole lifter is **self-anchoring**. Rather than relying on heavy counterweights or wide vehicle outriggers that block traffic, the machine rigidly clamps directly onto the existing concrete footing's pre-embedded anchor cage.
@@ -99,7 +99,7 @@ Safe and repeatable pole installation follows a disciplined, three-phase operati
 └────────────────────────────────────────────────────────┘
 ```
 
-![Standard two-worker ground-level erection SOP workflow](/images/volvet-lifter-task-based-deepseek-article/04-sop-field-workflow-16x9.png)
+![Standard two-worker ground-level erection SOP workflow](/images/velolev-lifter-task-based-deepseek-article/04-sop-field-workflow-16x9.png)
 *Figure 4: Standard three-phase ground-level erection SOP strictly mandating a two-person certified crew, neutralizing overhead electrical contact risks per OSHA 1926 and IEEE 516.*
 
 ### Phase 1: Foundation Survey and Clearance Check

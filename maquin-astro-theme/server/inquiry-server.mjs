@@ -11,6 +11,8 @@ import { EmailService } from "./email-service.mjs";
 import { SubscriptionStore } from "./subscription-store.mjs";
 import {publicOrigin as resolvePublicOrigin,siteRedirects as aliases} from "../src/lib/site-config.mjs";
 
+const root=fileURLToPath(new URL("../",import.meta.url));
+
 // 如果存在 .env 文件，尝试自动加载环境变量
 try {
   if (typeof process.loadEnvFile === "function") {
@@ -20,8 +22,6 @@ try {
     if (existsSync(parentEnv)) process.loadEnvFile(parentEnv);
   }
 } catch {}
-
-const root=fileURLToPath(new URL("../",import.meta.url));
 const mime={".csv":"text/csv; charset=utf-8",".html":"text/html; charset=utf-8",".js":"text/javascript; charset=utf-8",".css":"text/css; charset=utf-8",".json":"application/json; charset=utf-8",".svg":"image/svg+xml",".png":"image/png",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp",".woff2":"font/woff2",".woff":"font/woff",".ico":"image/x-icon",".txt":"text/plain; charset=utf-8",".xml":"application/xml; charset=utf-8"};
 const sharedHeaders={
   "X-Content-Type-Options":"nosniff",

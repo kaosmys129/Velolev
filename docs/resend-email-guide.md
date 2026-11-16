@@ -1,4 +1,4 @@
-# volvet 工业机械 - Resend 邮件服务全系统配置与运营指南
+# velolev 工业机械 - Resend 邮件服务全系统配置与运营指南
 
 本文档详细说明了在本项目中如何配置与使用 **Resend Email** 作为核心邮件基础设施，全面覆盖**询盘提交**、**订阅提交**与 **EDM 营销推广**三大核心场景。
 
@@ -58,7 +58,7 @@ cp .env.example .env
 | 环境变量名 | 说明 | 示例值 |
 |---|---|---|
 | `RESEND_API_KEY` | Resend API 密钥 (在 resend.com 获取) | `re_123456789_abcdef` |
-| `RESEND_FROM_EMAIL` | 默认发件人地址 (生产环境须在 Resend 验证域名) | `volvet <notifications@velolev.org>` |
+| `RESEND_FROM_EMAIL` | 默认发件人地址 (生产环境须在 Resend 验证域名) | `velolev <notifications@velolev.org>` |
 | `ADMIN_NOTIFICATION_EMAIL` | 业务/销售团队接收询盘通知的邮箱 | `sales@velolev.org` |
 | `RESEND_REPLY_TO` | 客户回复邮件时的目标邮箱 | `support@velolev.org` |
 | `RESEND_AUDIENCE_ID` | (可选) Resend 受众 Audience ID | `78261eea-8f8b-4381-83c6-79fa7120f1cf` |
@@ -87,7 +87,7 @@ cp .env.example .env
 
 ### 3.2 客户收件确认回执 (Customer Confirmation)
 - **收件人**：客户填写的邮箱（`inquiry.email`）
-- **主题**：`Inquiry Receipt Confirmation: {reference} | volvet`
+- **主题**：`Inquiry Receipt Confirmation: {reference} | velolev`
 - **邮件内容**：
   - 致谢并提供专属工单追踪编号
   - 项目关键参数回执表格
@@ -126,10 +126,10 @@ npm run edm:preview
 输出示例：
 ```
 ====================================================
-volvet Industrial EDM Campaign Dispatch Tool
+velolev Industrial EDM Campaign Dispatch Tool
 ====================================================
 Service Provider : RESEND (API Key Present)
-Sender Address   : volvet Procurement <notifications@velolev.org>
+Sender Address   : velolev Procurement <notifications@velolev.org>
 Campaign ID      : tech-brief-zero-crane-2026
 Subject Line     : "Field Engineering Report: Zero-Crane Light Pole Installation"
 Execution Mode   : DRY-RUN (No emails will actually be dispatched)

@@ -1,7 +1,7 @@
-# volvet 全站设计系统与 UI 规范说明书 (Design System Specification)
+# velolev 全站设计系统与 UI 规范说明书 (Design System Specification)
 
 > **版本**：v1.0.0 (2026-10-28)  
-> **适用范围**：volvet 便携式立杆机全球独立站 (Desktop / Tablet / Mobile)  
+> **适用范围**：velolev 便携式立杆机全球独立站 (Desktop / Tablet / Mobile)  
 > **设计基调**：**精密工业美学 (Precision Industrial Aesthetic)**。以工程参数严谨性为主导，米灰纸质感底色融合工业明黄，兼顾高可读性与专业感。
 
 ---

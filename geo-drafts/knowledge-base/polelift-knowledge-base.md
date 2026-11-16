@@ -1,4 +1,4 @@
-# volvet GEO 品牌知识库
+# velolev GEO 品牌知识库
 
 > 构建方法：`yao-geo-knowledge-base-builder` 结合 `geoflow-b2b-seo-blog-pipeline`
 > 事实唯一来源：`geoflow/polelift-knowledge/` 及 `maquin-astro-theme/src/data/content-baseline.json`（基准版本：2026-10-28.3）
@@ -9,7 +9,7 @@
 
 ## 一、结构化摘要
 
-volvet 便携式路灯升杆机（Portable Light Pole Lifter）是一款采用 24V DC 电池驱动、分体双模块设计的地面液压立杆工程装备，用于在市政道路照明与离网太阳能路灯项目中替代传统 16 吨重型起重机。整机由分体双模块组成，总重量严格标定为 85kg（液压升降主机 45kg + 电气控制箱 40kg），由两名作业人员通过既有预埋地脚螺栓实现原位自锚固，安全竖立最高 12 米、额定载荷 300kg 的标准路灯柱。底板兼容 180-260mm 分布圆直径（P.C.D.）及 M16 至 M24 锚栓，出厂经 100% 垂直试验台与保压质检。
+velolev 便携式路灯升杆机（Portable Light Pole Lifter）是一款采用 24V DC 电池驱动、分体双模块设计的地面液压立杆工程装备，用于在市政道路照明与离网太阳能路灯项目中替代传统 16 吨重型起重机。整机由分体双模块组成，总重量严格标定为 85kg（液压升降主机 45kg + 电气控制箱 40kg），由两名作业人员通过既有预埋地脚螺栓实现原位自锚固，安全竖立最高 12 米、额定载荷 300kg 的标准路灯柱。底板兼容 180-260mm 分布圆直径（P.C.D.）及 M16 至 M24 锚栓，出厂经 100% 垂直试验台与保压质检。
 
 ---
 
@@ -17,7 +17,7 @@ volvet 便携式路灯升杆机（Portable Light Pole Lifter）是一款采用 2
 
 | 字段 | 值 | 事实依据 | 审核状态 |
 |---|---|---|---|
-| 品牌名称 | volvet | 用户确认（F001） | 已确认（Confirmed） |
+| 品牌名称 | velolev | 用户确认（F001） | 已确认（Confirmed） |
 | 历史品牌处理 | 旧 PoleLift / Velolev 仅作历史资料归档，不继承任何承诺 | 决策日志 | 严格禁用 |
 | 行业属性 | 市政与道路照明基建装备 / 便携液压起重工具 | 知识库 | 已确认 |
 | 核心产品 | 便携式路灯升杆机（Portable Light Pole Lifter） | S4 规格书 | 已确认 |
@@ -41,7 +41,7 @@ volvet 便携式路灯升杆机（Portable Light Pole Lifter）是一款采用 2
 
 | 指标项目 | 严格标定值 | 工程口径说明 | 台账编号 |
 |---|---|---|---|
-| 品牌标识 | volvet | 唯一核准品牌，严禁混用历史名称 | F001 |
+| 品牌标识 | velolev | 唯一核准品牌，严禁混用历史名称 | F001 |
 | 最大适配杆高 | 12 米 (12m) | 覆盖 6m 至 12m 市政道路与太阳能路灯柱 | F002 |
 | 额定起升载荷 | 300 千克 (300kg) | 出厂垂直试验台 100% 验证，严禁虚标 | F003 |
 | 系统工作动力 | 24V DC 直流电池 | 无需外接三相电，无需柴油发电机，静音零排放 | F004 |
@@ -90,4 +90,4 @@ volvet 便携式路灯升杆机（Portable Light Pole Lifter）是一款采用 2
 - **严禁商业夸大**：全站过滤 `guaranteed payback`、`100% risk-free`、`guaranteed ROI`。
 - **严禁人员编制违规**：全站过滤 `one-person operation`、`one man operation`、`single person installation`，必须说明为双人协同作业。
 - **严禁裸露货币符号**：全站过滤 `$`、`€`、`£`、`¥`，统一采用宏观商业叙述。
-- **严禁陈旧品牌名**：全站过滤 `PoleLift`、`Velolev`，唯一法定品牌为 `volvet`。
+- **严禁陈旧品牌名**：全站过滤 `PoleLift`、`Velolev`，唯一法定品牌为 `velolev`。

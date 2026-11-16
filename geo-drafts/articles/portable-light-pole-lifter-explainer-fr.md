@@ -5,8 +5,8 @@ coverImage: "/images/portable-light-pole-lifter-explainer-fr/cover-flow-hero-16x
 # Élévateur Hydraulique Portable pour Candélabres : Architecture Mécanique, Compatibilité des Brides et Guide de Sélection Chantier
 
 
-![Élévateur de candélabre portable volvet couverture d'ingénierie cinématique](/images/portable-light-pole-lifter-explainer-fr/cover-flow-hero-16x9.png)
-*Image de Couverture : Déploiement sur site du système de levage hydraulique portable volvet pour mâts de 12 m sans camion-grue. Intégré aux plans de chantier et normes de sécurité.*
+![Élévateur de candélabre portable velolev couverture d'ingénierie cinématique](/images/portable-light-pole-lifter-explainer-fr/cover-flow-hero-16x9.png)
+*Image de Couverture : Déploiement sur site du système de levage hydraulique portable velolev pour mâts de 12 m sans camion-grue. Intégré aux plans de chantier et normes de sécurité.*
 
 
 
@@ -23,7 +23,7 @@ L'[élévateur hydraulique portable pour candélabres](/products/light-pole-jack
 > - **Compatibilité Universelle des Brides :** Platine d'assise renforcée à lumières radiales pour cercles de perçage (P.C.D.) de 180 mm à 260 mm recevant des tiges M16 à M24 (F015, F016).
 
 ![Élévateur hydraulique portable pour candélabres : érection sans grue jusqu'à 12m](/images/portable-light-pole-lifter-explainer-fr/01-feature-hero-cover-16x9.png)
-*Figure 1 : Guide de sélection technique de l'élévateur hydraulique portable volvet. Charge d'épreuve vérifiée de 300 kg et conception modulaire de 85 kg éliminant le recours aux camions-grues de 16 tonnes.*
+*Figure 1 : Guide de sélection technique de l'élévateur hydraulique portable velolev. Charge d'épreuve vérifiée de 300 kg et conception modulaire de 85 kg éliminant le recours aux camions-grues de 16 tonnes.*
 
 ---
 
@@ -116,8 +116,8 @@ Pour garantir une rigueur opérationnelle sans faille, les équipes sur site app
 
 ## 5. Limites Techniques et Idées Reçues Fréquentes
 
-![Comparatif de faisabilité sur chantier : camion-grue 16t vs élévateur volvet](/images/portable-light-pole-lifter-explainer-fr/05-crane-vs-lifter-comparison-16x9.png)
-*Figure 5 : Analyse de faisabilité opérationnelle et d'accès chantier : camion-grue conventionnel de 16 tonnes face à l'élévateur portable volvet en voie étroite et sécurité électrique.*
+![Comparatif de faisabilité sur chantier : camion-grue 16t vs élévateur velolev](/images/portable-light-pole-lifter-explainer-fr/05-crane-vs-lifter-comparison-16x9.png)
+*Figure 5 : Analyse de faisabilité opérationnelle et d'accès chantier : camion-grue conventionnel de 16 tonnes face à l'élévateur portable velolev en voie étroite et sécurité électrique.*
 
 Dans les décisions d'achat d'équipement B2B et la planification de projets, les ingénieurs doivent distinguer les faits techniques éprouvés des idées reçues :
 

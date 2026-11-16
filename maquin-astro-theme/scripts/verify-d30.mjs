@@ -7,7 +7,7 @@ import aliases from "../src/data/route-aliases.json" with {type:"json"};
 const root=fileURLToPath(new URL("../",import.meta.url));
 const configuredArg = process.argv.find(x => x.startsWith("--configured=") || x.startsWith("--production="));
 const argVal = configuredArg ? configuredArg.split("=")[1] : null;
-const buildMetaPath = join(root, "dist", ".volvet-build.json");
+const buildMetaPath = join(root, "dist", ".velolev-build.json");
 const buildMeta = existsSync(buildMetaPath) ? JSON.parse(readFileSync(buildMetaPath, "utf8")) : null;
 
 let isFixture = false;

@@ -24,7 +24,7 @@ function sanitizeOrigin(raw) {
 
 const configuredArg = process.argv.find((a) => a.startsWith("--configured=") || a.startsWith("--production="));
 const paramOrigin = configuredArg ? configuredArg.split("=")[1] : null;
-const buildMetaPath = join(dist, ".volvet-build.json");
+const buildMetaPath = join(dist, ".velolev-build.json");
 const buildMeta = existsSync(buildMetaPath) ? JSON.parse(readFileSync(buildMetaPath, "utf8")) : null;
 const rawEffectiveOrigin = process.env.PUBLIC_SITE_URL || paramOrigin || (process.argv.includes("--configured") || process.argv.includes("--production") ? (buildMeta?.origin || baseline.deployment?.publicOrigin || "https://www.velolev.org") : null) || (buildMeta?.origin && !/\.invalid$/.test(buildMeta.origin) ? buildMeta.origin : null);
 const effectiveOrigin = sanitizeOrigin(rawEffectiveOrigin);
@@ -42,7 +42,7 @@ for (const file of pages) {
     const originPattern = new RegExp(effectiveOrigin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
     metadataForIdentityCheck = metadata.replace(originPattern, "");
   }
-  check(!/\b(?:velvet|PoleLift)\b/i.test(visible + " " + metadataForIdentityCheck), `${name}: legacy identity`);
+  check(!/\b(?:volvet|velvet|PoleLift)\b/i.test(visible + " " + metadataForIdentityCheck), `${name}: legacy identity`);
   check(!/[$€£¥]|\b(?:USD|EUR|CNY|IDR|BRL)\b|ดอลลาร์|đô\s*la/i.test(visible + metadata), `${name}: public monetary amount`);
   check(!/\b(?:in stock|out of stock|inventory)\b|en stock|em estoque|tồn kho|stok tersedia|สินค้าคงคลัง/i.test(visible + metadata), `${name}: public stock status`);
   check(!/sales@(?:polelift|volvet|velvet)|\+86\s*21\s*1234|Shanghai Pilot Free Trade Zone/i.test(visible), `${name}: unconfigured legacy contact`);
@@ -69,7 +69,7 @@ for (const file of pages) {
       const value = JSON.parse((n.childNodes ?? []).map((x)=>x.value ?? "").join(""));
       const serialized = JSON.stringify(value);
       check(!/"(?:offers|price|priceCurrency|availability|aggregateRating|review)"/.test(serialized), `${name}: forbidden commercial/evidence schema`);
-      check(!/volvet\.com|polelift\.com|"legalName"/i.test(serialized),`${name}: unapproved media/domain/legalName schema`);
+      check(!/volvet|polelift\.com|"legalName"/i.test(serialized),`${name}: unapproved media/domain/legalName schema`);
     } catch (e) { failures.push(`${name}: invalid JSON-LD: ${e.message}`); }
   }
 }

@@ -1,4 +1,4 @@
-# Comment installer des mâts d'éclairage de 12 m sans camion grue | volvet
+# Comment installer des mâts d'éclairage de 12 m sans camion grue | velolev
 
 > **Executive Summary / Direct Answer**: Les chantiers d'éclairage public et d'infrastructures rencontrent d'importants goulots d'étranglement lors de l'acheminement de camions grues dans des accès exigus. Grâce à un système hydraulique modulaire d'une capacité certifiée de 300 kg alimenté par batterie 24 V CC, deux techniciens peuvent assembler, aligner et dresser des mâts jusqu'à 12 m sans camion grue, en parfaite conformité avec l'OSHA 1926 Subpart CC, les distances de sécurité IEEE 516 et les normes de tiges d'ancrage ASTM F1554.
 
@@ -95,7 +95,7 @@ Bien que la norme EN 40-3 dimensionne les mâts face au vent, les opérations d'
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Comment installer des mâts d'éclairage de 12 m sans camion grue | volvet",
+  "headline": "Comment installer des mâts d'éclairage de 12 m sans camion grue | velolev",
   "description": "Les chantiers d'éclairage public et d'infrastructures rencontrent d'importants goulots d'étranglement lors de l'acheminement de camions grues dans des accès exigus. Grâce à un système hydraulique modu...",
   "author": {
     "@type": "Person",
@@ -104,7 +104,7 @@ Bien que la norme EN 40-3 dimensionne les mâts face au vent, les opérations d'
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

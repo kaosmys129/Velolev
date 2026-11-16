@@ -1,10 +1,10 @@
-# volvet · 独立 GEOFlow 内容工作流
+# velolev · 独立 GEOFlow 内容工作流
 
 2026-10-31：本项目使用独立实例，原18080混合实例仅保留为迁移备份。本文件替代旧版共用实例工作流。
 
 ## 入口与启动
 
-- 项目：`liftpolemachine-web`；当前品牌：volvet；历史PoleLift名称只用于旧资料识别。
+- 项目：`liftpolemachine-web`；当前品牌：velolev；历史PoleLift名称只用于旧资料识别。
 - 后台：http://127.0.0.1:18082/geo_admin/articles
 - 项目映射：`content/geoflow-project.json`。
 - 客户端私密配置：项目根 `.env.geoflow`；部署私密配置：`ops/geoflow/private/`。
@@ -37,7 +37,7 @@ docker compose --env-file private/runtime.env -f compose.yaml up -d
 | 项目规划成本 | 3 | 13 | 13 |
 | 证据核验交付 | 4 | 14 | 14 |
 
-知识库10标识项目和品牌边界，15存放策略与审核规则。作者为“volvet 内容团队”。生产计划10–13分别绑定上述四支柱，全部暂停。ID1、2、3三篇历史文章归入栏目9“历史文章｜需按当前基准复审”，统一为待审草稿。演示和测试文章保留在旧备份。
+知识库10标识项目和品牌边界，15存放策略与审核规则。作者为“velolev 内容团队”。生产计划10–13分别绑定上述四支柱，全部暂停。ID1、2、3三篇历史文章归入栏目9“历史文章｜需按当前基准复审”，统一为待审草稿。演示和测试文章保留在旧备份。
 
 先完成英语事实审核，再按资源安排es/fr/pt/vi/th/id本地化。不编造价格、库存、认证、案例、质保、联系方式或正式域名；厂家标称与现场验证必须区分。
 
@@ -49,7 +49,7 @@ docker compose --env-file private/runtime.env -f compose.yaml up -d
 
 ## 独立发布渠道
 
-“volvet官网草稿审核收件箱”为本项目独立渠道，当前暂停，健康检查通过。只接受本项目密钥和栏目，接收端强制保存为 `draft/pending`，输出到 `geo-drafts/publishing-inbox/`，不能直接公开上线。网站发布仍走 `maquin-astro-theme` 的内容审核、构建和部署流程。
+“velolev官网草稿审核收件箱”为本项目独立渠道，当前暂停，健康检查通过。只接受本项目密钥和栏目，接收端强制保存为 `draft/pending`，输出到 `geo-drafts/publishing-inbox/`，不能直接公开上线。网站发布仍走 `maquin-astro-theme` 的内容审核、构建和部署流程。
 
 正式公共域名尚未确认；不得填写猜测地址。启用渠道、启动任务与公开发布必须分别按当次授权执行。
 

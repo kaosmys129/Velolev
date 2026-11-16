@@ -15,7 +15,7 @@ import {verifyBuiltVersion} from './lib/source-fingerprint.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),version=verifyBuiltVersion(root);
 const out=join(root,'../docs/content-strategy/qa-reconstruction');mkdirSync(out,{recursive:true});
-const directory=mkdtempSync(join(tmpdir(),'volvet-reconstruction-'));
+const directory=mkdtempSync(join(tmpdir(),'velolev-reconstruction-'));
 const {server}=createInquiryServer({directory,adminToken:randomBytes(36).toString('base64url'),testMode:true,logger:{error(){}}});
 server.listen(0,'127.0.0.1');await once(server,'listening');
 const base=`http://127.0.0.1:${server.address().port}`;

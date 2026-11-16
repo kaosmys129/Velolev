@@ -7,7 +7,7 @@ description: "GEOFlow 文章配图与工商业视觉卡片生成技能。全面�
 
 > **视觉风格公告**：本技能生成的全套视觉资产全面对齐出海独立站主站的 **高定浅色系（Nordic Light Industrial Palette）**：底色采用温暖典雅的工程纸白（`--paper: #f3f2ec` / `#fbfbf9`），主体文字采用深石墨黑（`--ink: #1d201e`），关键词高亮采用工业安全橙（`#ea580c`）与品牌黄（`#f4cc3d`），边框采用极细浅灰工程刻度（`--line: #d5d8cd`）。**彻底告别死板的深色暗夜 PPT 质感，与整站浅色风格 100% 完美交融！**
 
-本技能专为 **GEOFlow 出海独立站长文与 GEO 营销内容** 打造，深度融合 **Google Flow MCP 电影级明亮晨光写实摄影**、**多元工程现场实况与 CAD 蓝图背景**、**瑞士国际主义工商业卡片排版规范** 与 **企业级原子物理事实治理网 (F001–F031)**，为便携式路灯立杆机（volvet / portable light pole lifter）等重工装备文章输出高保真、多比例、全语种（en/es/fr/pt/vi/th/id + zh）的顶级商业交付视觉。
+本技能专为 **GEOFlow 出海独立站长文与 GEO 营销内容** 打造，深度融合 **Google Flow MCP 电影级明亮晨光写实摄影**、**多元工程现场实况与 CAD 蓝图背景**、**瑞士国际主义工商业卡片排版规范** 与 **企业级原子物理事实治理网 (F001–F031)**，为便携式路灯立杆机（velolev / portable light pole lifter）等重工装备文章输出高保真、多比例、全语种（en/es/fr/pt/vi/th/id + zh）的顶级商业交付视觉。
 
 ---
 
@@ -22,12 +22,12 @@ description: "GEOFlow 文章配图与工商业视觉卡片生成技能。全面�
      - *市政狭窄人行道与绿化带*：透水砖纹理铺装、路缘石、沿街预埋灯杆点位、双人搬运 1.2m 狭小空间准入通道；
      - *太阳能智慧离网照明*：单晶硅光伏组件（PV Panel）几何剖面、24V 动力储能箱能量流、分布式灯位矩阵点；
      - *地基法兰与土建力学*：混凝土短柱基座 CAD 剖面、M16-M24 地脚锚栓分布、P.C.D. 180-260mm 径向腰孔力学同心圆；
-   * **主体立姿**：volvet 真实便携式立杆机高精度透明立姿（橙灰工业配色），配合地面柔和自然漫射阴影与 0°-45° 激光起升动态圆弧；
+   * **主体立姿**：velolev 真实便携式立杆机高精度透明立姿（橙灰工业配色），配合地面柔和自然漫射阴影与 0°-45° 激光起升动态圆弧；
    * **用途**：文章 Frontmatter `coverImage`、独立站 Blog 头部 Banner、Google Discover 推荐大图、社交媒体分享大卡。
 
 1. **`01-feature-hero-cover-16x9.png` (1920 × 1080 · 16:9 · 瑞士工商业全景工程卡)**：
    * **用途**：篇首 Key Takeaways 前后的工程全景总览图、OpenGraph `og:image`；
-   * **要素**：volvet 官方品牌徽标、工程主标题、4 栏核心 KPI 塔（300kg 垂直载荷、12m 杆高、85kg 双模组分体、24V DC 电池）、真实主机透明立姿抠图、OSHA/IEEE/EN 权威标准引证。
+   * **要素**：velolev 官方品牌徽标、工程主标题、4 栏核心 KPI 塔（300kg 垂直载荷、12m 杆高、85kg 双模组分体、24V DC 电池）、真实主机透明立姿抠图、OSHA/IEEE/EN 权威标准引证。
 
 2. **`02-two-module-architecture-16x9.png` (1920 × 1080 · 16:9 · 机械工程架构分解图)**：
    * **用途**：篇内 Section 1 机械工程架构配图；
@@ -102,7 +102,7 @@ flowchart TD
 明确指定明亮高调的清晨自然光工业摄影，杜绝阴暗压抑的黑夜画面：
 
 ```text
-Cinematic, bright daylight, Scandinavian architectural documentary engineering photography of the volvet portable light pole lifter rig operating on site.
+Cinematic, bright daylight, Scandinavian architectural documentary engineering photography of the velolev portable light pole lifter rig operating on site.
 Subject: A heavy-duty, compact industrial fluid-power pole lifter machine with a telescoping hydraulic lift column (finished in industrial safety orange and graphite grey), firmly bolted to a concrete foundation base with heavy galvanized anchor bolts. A secondary mechanical safety lock pin is clearly visible on the hydraulic mast.
 Action & Crew: Two professional utility electricians wearing clean fluorescent high-visibility safety vests (EN ISO 20471 compliant) and hard hats are working collaboratively. One technician operates the handheld ergonomic remote control pendant, while the second technician observes at a 45-degree vantage angle to ensure clearance. A standard 10-meter octagonal galvanized steel street lighting pole is tilting steadily upward from 0 to 45 degrees towards the vertical position.
 Setting & Environment: [DYNAMIC_SPECIFIC_CONTEXT]. Bright morning natural sunlight, clear blue sky, clean pale concrete pavement and curb alignment. Clean site logistics. Noticeably NO large mobile cranes, NO 16-ton boom trucks, NO extended outriggers blocking traffic, leaving the street lane completely open and unobstructed.

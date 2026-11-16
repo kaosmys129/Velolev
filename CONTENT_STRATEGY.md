@@ -1,4 +1,4 @@
-# volvet 便携式路灯立杆机全站内容策略与原子事实治理权威规范 (CONTENT_STRATEGY.md)
+# velolev 便携式路灯立杆机全站内容策略与原子事实治理权威规范 (CONTENT_STRATEGY.md)
 
 > **版本**：v3.1.0-Production-Ready  
 > **生效日期**：2026-10-29  
@@ -63,7 +63,7 @@
 2. **重型设备作业进场受限**：狭窄人行道、绿化带、密集停车场、已铺装广场或乡村泥泞便道，吊车无法就位，强行进场面临道路封闭许可审批难（Traffic Permits）及压损昂贵地砖索赔的风险；
 3. **传统人工拉绳危险隐患**：缺少吊车时，施工队往往采用 5–8 人拉倒链人力死拼，极易发生倒杆倾覆事故。
 
-`volvet` 便携式路灯立杆机正是针对上述全球痛点而生的颠覆性工器具（Category Disruptor）。整机 85kg 分体式便携设计，仅需 2 人即可抬入普通皮卡车斗，20 秒液压平稳顶升，彻底终结了常规 12 米路灯杆安装对吊车的绝对依赖，施工综合成本直降 70%。
+`velolev` 便携式路灯立杆机正是针对上述全球痛点而生的颠覆性工器具（Category Disruptor）。整机 85kg 分体式便携设计，仅需 2 人即可抬入普通皮卡车斗，20 秒液压平稳顶升，彻底终结了常规 12 米路灯杆安装对吊车的绝对依赖，施工综合成本直降 70%。
 
 **然而，既有站点在内容呈现上陷入了两个极端的陷阱：**
 - **合规洁癖诱发的自杀式过度免责**：文案充斥 `pending`、`not verified`、`keep assumptions out`，关于页公然声明“企业身份待核实”，工况卡全部标注“需现场评估”，甚至在法兰图下标注“尺寸术语需要工程澄清”。这种过度防御性的语言彻底瓦解了海外大客户的采购信心；
@@ -125,7 +125,7 @@
 ```json
 {
   "id": "fact_rated_load_001",
-  "subject": "volvet Portable Light Pole Lifter",
+  "subject": "velolev Portable Light Pole Lifter",
   "predicate": "rated_lifting_capacity",
   "canonical_value": "300 kg",
   "value_type": "mass_quantity",
@@ -284,7 +284,7 @@ AI 引擎更偏好高信噪比、零废话、高结构化密度的内容供给�
 ### 4.3 竞品提及 (Competitor Mention) 与 AI 语义实体占位
 
 1. **品类替代定位**：在 AI 的语义知识图谱中，牢牢将产品与“传统汽车吊 (Mobile Crane)”、“手工倒链 (Manual Chain Hoist)”、“三脚架立杆 (Tripod Gin Pole)”建立强关联对比；
-2. **核心触发场景绑定**：在内容中深度穿插“Narrow sidewalk street light installation”、“Crane-free solar lighting installation”、“Parking lot light pole repair”等高频意图，使 AI 在回答类似工程问题时将 `volvet Portable Light Pole Lifter` 作为首选工具推荐。
+2. **核心触发场景绑定**：在内容中深度穿插“Narrow sidewalk street light installation”、“Crane-free solar lighting installation”、“Parking lot light pole repair”等高频意图，使 AI 在回答类似工程问题时将 `velolev Portable Light Pole Lifter` 作为首选工具推荐。
 
 ### 4.4 逆向 GEO 优化：由搜索提示词反推内容切片
 
@@ -299,7 +299,7 @@ AI 引擎更偏好高信噪比、零废话、高结构化密度的内容供给�
 
 **核心理论（《一个好的 About Us 页面，应该让客户和 AI 都知道你是谁》）**：
 - **拒绝空洞自嗨**：彻底抛弃“Leading innovator”、“Top-tier quality”、“Global excellence”等毫无信息增量的虚词；
-- **首句明确法定实体与核心能力**：`volvet: Specialized Original Equipment Manufacturer (OEM) for Crane-Free Pole Erection Equipment.`
+- **首句明确法定实体与核心能力**：`velolev: Specialized Original Equipment Manufacturer (OEM) for Crane-Free Pole Erection Equipment.`
 - **车间真实工序转化为交付信任背书**：详实呈现 4 道出厂质检工序（探伤检测、液压保压、300kg 满载测试台、防震木箱包装）；
 - **赋予全球物流节点明确的业务职能**：明确从中国主要工业港口（上海/青岛）直发，提供商检原产地证（CO）与全套报关单证支持。
 
@@ -479,7 +479,7 @@ AI 引擎更偏好高信噪比、零废话、高结构化密度的内容供给�
 
 建立立杆机 vs 汽车吊 vs 手工倒链的四维对比壁垒矩阵：
 
-| 评估维度 | volvet 便携式液压立杆机 | 传统汽车起重机 (Mobile Crane) | 手工倒链/三脚架土法 (Manual Hoist) |
+| 评估维度 | velolev 便携式液压立杆机 | 传统汽车起重机 (Mobile Crane) | 手工倒链/三脚架土法 (Manual Hoist) |
 | :--- | :--- | :--- | :--- |
 | **1. 机械使用成本** | **极低**：一次性设备采购，单杆施工摊销成本不足 $5 | **极高**：单日台班租金 $350–$850，不足 1 天按全天计费 | **低**：仅工具磨损，但人工工时成倍激增 |
 | **2. 施工人员与工效** | **高效**：2 名工人流水线作业，20秒顶升，每天立 15–20 根 | **繁琐**：需专业吊车司机、吊装指挥与地面辅助共 4–5 人 | **缓慢且危险**：需 5–8 人强力拉拽，日均仅能立 3–5 根 |
@@ -490,7 +490,7 @@ AI 引擎更偏好高信噪比、零废话、高结构化密度的内容供给�
 
 #### 1. 确立法定实体定位
 彻底删除 `about-copy.json` 中的“企业身份待核实”消极字样，正式确立专业源头设备制造商实体地位：
-- `volvet: Engineering Original Equipment Manufacturer (OEM) for Modern Crane-Free Street Light Installation.`
+- `velolev: Engineering Original Equipment Manufacturer (OEM) for Modern Crane-Free Street Light Installation.`
 
 #### 2. 出厂四道严苛质检工序图文背书 (`QualityTestingStrip.astro`)
 1. **工序一：母材硬度与焊缝探伤检测 (Material Hardness & Weld Integrity Inspection)**

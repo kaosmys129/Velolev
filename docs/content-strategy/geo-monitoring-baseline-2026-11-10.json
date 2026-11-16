@@ -4,7 +4,7 @@
   "samplingTimestamp": "2026-11-10T18:55:00+08:00",
   "sampleMode": "browser_live_authenticated_plus_web_search",
   "environment": {
-    "browser": "ego-browser (Space 1: volvet-rollout-audit)",
+    "browser": "ego-browser (Space 1: velolev-rollout-audit)",
     "chatgptAccount": "peter gonzales (Plus)",
     "chatgptMode": "temporary_chat_web_search_medium_thinking",
     "publicOrigin": "https://www.velolev.org",

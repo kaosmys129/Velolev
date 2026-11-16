@@ -59,7 +59,7 @@ test("Organization and FAQ schemas contain valid structured data without commerc
   const org = organizationSchema("https://example.com");
   assert.equal(org["@type"], "Organization");
   assert.equal(org.name, "velolev");
-  assert.deepEqual(org.alternateName, ["volvet", "Volvet Machinery", "沃维特"]);
+  assert.equal(org.alternateName, undefined);
   assert.equal(org.url, "https://example.com");
   for (const k of ["offers", "price", "availability", "aggregateRating", "review", "sku"]) assert.equal(k in org, false);
 
@@ -82,12 +82,12 @@ test("WebApplication and AboutPage schemas contain valid metadata without commer
   assert.equal(about["@type"], "AboutPage");
   assert.equal(about.url, "https://example.com/about-us/");
   assert.equal(about.mainEntity["@type"], "Organization");
-  assert.deepEqual(about.mainEntity.alternateName, ["volvet", "Volvet Machinery", "沃维特"]);
+  assert.equal(about.mainEntity.alternateName, undefined);
   for (const k of ["offers", "price", "availability", "aggregateRating", "review", "sku"]) assert.equal(k in about, false);
 });
 
-test("volvet brand entity is unblocked while legacy typos and old names remain normalized", () => {
-  assert.equal(publicText("volvet machinery"), "volvet machinery");
+test("retired and legacy brand names are normalized to velolev", () => {
+  assert.equal(publicText("volvet machinery"), "velolev machinery");
   assert.equal(publicText("velvet machinery"), "velolev machinery");
   assert.equal(publicText("PoleLift equipment"), "velolev equipment");
 });

@@ -8469,12 +8469,12 @@
       "sha256": "1170b7b3acef56be5f8f5cc4c9bea1ff399a5bb0444312fc44b7449a8cd72b98"
     },
     {
-      "path": "maquin-astro-theme/src/pages/resources/volvet-specifications.csv.ts",
+      "path": "maquin-astro-theme/src/pages/resources/velolev-specifications.csv.ts",
       "bytes": 251,
       "sha256": "4d63b3d47f1a6fd4af357b0c594974d92329f9584c2fc11ac0ab337000c33b8a"
     },
     {
-      "path": "maquin-astro-theme/src/pages/resources/volvet-specifications.json.ts",
+      "path": "maquin-astro-theme/src/pages/resources/velolev-specifications.json.ts",
       "bytes": 291,
       "sha256": "6ea3feb97c9fefd6a2eee440469b94f7b785da73c85cf695cf68dd104c789661"
     },

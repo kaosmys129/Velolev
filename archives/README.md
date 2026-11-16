@@ -8,10 +8,10 @@ Supplemental tools: `wordpress-retired-tools.tar.gz` (4 verified files).
 To inspect or recover, extract into a separate directory first:
 
 ```sh
-mkdir -p /tmp/volvet-wordpress-recovery
+mkdir -p /tmp/velolev-wordpress-recovery
 # Run from project root; choose a different empty destination if this already exists.
-tar -xzf archives/wordpress-before-retirement-2026-10-29.tar.gz -C /tmp/volvet-wordpress-recovery
-tar -xzf archives/wordpress-retired-tools.tar.gz -C /tmp/volvet-wordpress-recovery
+tar -xzf archives/wordpress-before-retirement-2026-10-29.tar.gz -C /tmp/velolev-wordpress-recovery
+tar -xzf archives/wordpress-retired-tools.tar.gz -C /tmp/velolev-wordpress-recovery
 ```
 
 Compare files and copy back only the required paths. Do not extract the main bundle over the active project: it contains old copies of current source files and package manifests as well as removed files. Restoring the entire former site requires the corresponding old layout, configuration and asset tree together. The active deployment never serves this directory.

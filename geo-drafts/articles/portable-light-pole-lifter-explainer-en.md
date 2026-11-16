@@ -5,8 +5,8 @@ coverImage: "/images/portable-light-pole-lifter-explainer-en/cover-flow-hero-16x
 # Portable Light Pole Lifter: Engineering Architecture, Flange Compatibility, and Jobsite Selection Guide
 
 
-![volvet Portable Light Pole Lifter Cinematic Engineering Cover Hero](/images/portable-light-pole-lifter-explainer-en/cover-flow-hero-16x9.png)
-*Cover Hero: On-site zero-crane erection of 12m municipal lighting pole using volvet portable lifter. Integrated with site engineering layout and mechanical blueprint. Standard 2-person crew compliance eliminates heavy crane roadway closures.*
+![velolev Portable Light Pole Lifter Cinematic Engineering Cover Hero](/images/portable-light-pole-lifter-explainer-en/cover-flow-hero-16x9.png)
+*Cover Hero: On-site zero-crane erection of 12m municipal lighting pole using velolev portable lifter. Integrated with site engineering layout and mechanical blueprint. Standard 2-person crew compliance eliminates heavy crane roadway closures.*
 
 
 
@@ -29,7 +29,7 @@ The [portable hydraulic pole lifter](/products/light-pole-jack/) represents a ne
 > - **Universal Foundation Fit:** Heavy-duty slotted base plate accommodates 180mm to 260mm bolt circle diameters (P.C.D.) supporting M16 to M24 anchor studs.
 
 ![Portable Light Pole Lifter: Zero-Crane Erection up to 12m](/images/portable-light-pole-lifter-explainer-en/01-feature-hero-cover-16x9.png)
-*Figure 1: volvet portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.*
+*Figure 1: velolev portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.*
 
 ---
 
@@ -122,8 +122,8 @@ To ensure disciplined field execution, jobsites follow a standardized three-phas
 
 ## 5. Engineering Boundaries & Critical Misconceptions
 
-![Jobsite feasibility comparison: 16-ton mobile crane vs volvet portable hydraulic pole lifter](/images/portable-light-pole-lifter-explainer-en/05-crane-vs-lifter-comparison-16x9.png)
-*Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus volvet portable pole lifter across narrow access, crew size, and powerline clearances.*
+![Jobsite feasibility comparison: 16-ton mobile crane vs velolev portable hydraulic pole lifter](/images/portable-light-pole-lifter-explainer-en/05-crane-vs-lifter-comparison-16x9.png)
+*Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus velolev portable pole lifter across narrow access, crew size, and powerline clearances.*
 
 In B2B equipment procurement and project planning, engineering decision-makers must distinguish verified boundaries from common industry misconceptions:
 

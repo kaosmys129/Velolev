@@ -1,4 +1,4 @@
-platform_name,domain,estimated_da,tier,category,submission_url,link_type,target_volvet_page,outreach_status,notes
+platform_name,domain,estimated_da,tier,category,submission_url,link_type,target_velolev_page,outreach_status,notes
 GitHub Official Specs,github.com,98,Tier1,Open Source Specs,https://github.com/kaosmys129/portable-pole-lifter-specifications,dofollow,https://www.velolev.org/products/light-pole-jack/,completed,已上线包含完整JSON/CSV及全站语义回链
 Zenodo Academic Archive,zenodo.org,89,Tier1,Academic Citation,https://zenodo.org/deposit/new,dofollow,https://www.velolev.org/resources/,planned,获取工程白皮书与规格库的DOI权威引用
 ThomasNet,thomasnet.com,78,Tier1,B2B Directory,https://www.thomasnet.com/register/,dofollow,https://www.velolev.org/,blocked_by_captcha,DataDome商用验证码拦截需非自动化环境独立登记
@@ -50,7 +50,7 @@ IndustryMart,industrymart.com,46,Tier3,Global B2B,https://www.industrymart.com/,
 SourceForge Project Profile,sourceforge.net,92,Tier3,Tech Directory,https://sourceforge.net/create/,dofollow,https://www.velolev.org/resources/,planned,托管开源选型表与计算逻辑的镜像档案
 Product Hunt Maker,producthunt.com,90,Tier3,Tech Directory,https://www.producthunt.com/posts/new,nofollow,https://www.velolev.org/tools/roi-calculator/,planned,发布工程在线ROI测算器免费工具
 AlternativeTo,alternativeto.net,81,Tier3,Software Directory,https://alternativeto.net/software/add/,dofollow,https://www.velolev.org/compare/pole-jack-vs-crane/,planned,作为传统起重机租赁规划工具的轻量开源替代品
-npm Package Registry,npmjs.com,94,Tier3,Developer Ecosystem,https://www.npmjs.com/package/@volvet/portable-pole-lifter-specifications,dofollow,https://www.velolev.org/products/light-pole-jack/,planned,在开源包元数据中长期锚定官网规格主页
+npm Package Registry,npmjs.com,94,Tier3,Developer Ecosystem,https://www.npmjs.com/package/@velolev/portable-pole-lifter-specifications,dofollow,https://www.velolev.org/products/light-pole-jack/,planned,在开源包元数据中长期锚定官网规格主页
 jsDelivr CDN Mirror,jsdelivr.com,89,Tier3,CDN Mirror,https://www.jsdelivr.com/,dofollow,https://www.velolev.org/,planned,开源参数CDN分发中保留官方规范回链
 Instructables DIY & Engineering,instructables.com,91,Tier3,DIY / Engineering,https://www.instructables.com/,nofollow,https://www.velolev.org/guides/install-light-pole-without-crane/,planned,分享狭窄空间无起重机安装路灯的工程全流程步骤图解
 Medium Engineering Publication,medium.com,95,Tier3,Content Syndication,https://medium.com/new-story,nofollow,https://www.velolev.org/compare/pole-jack-vs-crane/,planned,发布深度技术对比文章并规范附注官网引用

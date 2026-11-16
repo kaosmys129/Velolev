@@ -1,14 +1,14 @@
-# volvet 内容基线决策记录
+# velolev 内容基线决策记录
 
 生效日期：2026-10-28。用户本轮确认优先于三份研究报告、历史网页和历史生成稿。
 
 | 编号 | 决策 | 代码/台账对应 | 状态 |
 |---|---|---|---|
-| D01 | 对外品牌准确写作小写 `volvet`；Velolev、PoleLift 作为历史品牌引用，不再用于新发布内容 | content-baseline.json；渲染策略；文字标识；Meta/Schema | 已落实 |
+| D01 | 对外品牌准确写作小写 `velolev`；Velolev、PoleLift 作为历史品牌引用，不再用于新发布内容 | content-baseline.json；渲染策略；文字标识；Meta/Schema | 已落实 |
 | D02 | 产品资料以用户确认的规格图片 S4 为当前事实来源 | evidence 原图及 SHA-256；fact-register.csv | 已落实 |
 | D03 | “20秒、每次充电>50次、使用>3000次”是图片中的厂家标称数据；现场实测尚未完善 | 独立标称数据区；fieldValidation=pending；移除宣传段中的无条件实测表达 | 已落实 |
 | D04 | B2B 外贸询价；不公开设备价格、库存、起价、固定回本承诺 | commercialPolicy；价格页改询价；JSON-LD无Offer及availability | 已落实 |
-| D05 | 域名、邮箱、电话暂时标记待配置，不推测 volvet.com，不沿用旧品牌收件信息 | deployment/contact为空；预览noindex；release:check | 用户明确确认，已落实 |
+| D05 | 域名、邮箱、电话暂时标记待配置，不推测 velolev.com，不沿用旧品牌收件信息 | deployment/contact为空；预览noindex；release:check | 用户明确确认，已落实 |
 | D06 | 适配表M24不等于标准配置包含M24；标准配置为M16/M18/M20/M22各4套 | 产品模型与规格区分别展示 | 已落实 |
 | D07 | 基础/法兰/孔径、锚固深度、操作位置等歧义保留原文证据，待工程审核后形成可发布规程 | fact-register F020/F021；旧操作章节不作为规程展示 | 工程审核待后续补证 |
 | D08 | 保留英语根目录和当前六个语言前缀；D30仅激活已完成的英语采购目标，其他迁移继续按页审核 | url-migration-map.csv；EN equipment/equipment-detail→产品、pricing-plan→quote、en→根的本地301 | 本地已落实，生产未发布 |

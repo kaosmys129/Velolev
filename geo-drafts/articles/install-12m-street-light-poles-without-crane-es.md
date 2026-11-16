@@ -1,4 +1,4 @@
-# Cómo instalar postes de luz de 12 m sin grúa | volvet
+# Cómo instalar postes de luz de 12 m sin grúa | velolev
 
 > **Executive Summary / Direct Answer**: Los proyectos de alumbrado público municipal e infraestructura especializada enfrentan graves cuellos de botella logísticos al desplegar camiones grúa pesados en accesos reducidos. Mediante un sistema de elevación hidráulico modular con una carga de prueba verificada estrictamente de 300 kg y alimentación por batería autónoma de 24 V CC, dos técnicos certificados pueden ensamblar, alinear y levantar postes de alumbrado de hasta 12 m sin camión grúa, cumpliendo estrictamente con OSHA 1926 Subpart CC, distancias de seguridad IEEE 516 y especificaciones de pernos de anclaje ASTM F1554.
 
@@ -95,7 +95,7 @@ Aunque la norma europea EN 40-3 rige el cálculo estructural del poste frente al
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Cómo instalar postes de luz de 12 m sin grúa | volvet",
+  "headline": "Cómo instalar postes de luz de 12 m sin grúa | velolev",
   "description": "Los proyectos de alumbrado público municipal e infraestructura especializada enfrentan graves cuellos de botella logísticos al desplegar camiones grúa pesados en accesos reducidos. Mediante un sistema...",
   "author": {
     "@type": "Person",
@@ -104,7 +104,7 @@ Aunque la norma europea EN 40-3 rige el cálculo estructural del poste frente al
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

@@ -9,6 +9,7 @@ import {InquiryStore} from "./inquiry-store.mjs";
 import {validateInquiry,validateAttachment} from "./inquiry-validation.mjs";
 import {createInquiryServer,assertPrivateDirectory} from "./inquiry-server.mjs";
 import {canonicalUrl,publicOrigin,coreAlternates} from "../src/lib/site-config.mjs";
+import serverlessHandler from "../api/inquiries.js";
 const token="local-unit-tests-only-0123456789-0123456789";
 const payload=()=>({name:"Controlled test",email:"test@example.test",phone:"",country:"Test destination",consent:true,quantity:"2",poleHeight:"12",poleWeight:"250",locale:"en",sourcePage:"/quote/",application:"street-lighting",message:"TEST ONLY — not a sales lead"});
 const pdf=Buffer.from("%PDF-1.4\n1 0 obj\n<<>>\nendobj\n%%EOF");
@@ -108,4 +109,132 @@ test("canonical paths and locale mappings use page URLs, including article detai
 test("inquiry data cannot be configured in either public assets or the built site",()=>{
  assert.throws(()=>assertPrivateDirectory(new URL("../public/private-test",import.meta.url).pathname),/outside the public/);
  assert.throws(()=>assertPrivateDirectory("/tmp/test-site/private","/tmp/test-site"),/outside the public/);
+});
+
+test("serverless inquiry handler validates methods, body types, honeypot and contact inputs", async () => {
+  async function invoke(options = {}) {
+    const { method = "POST", headers = {}, body = "" } = options;
+    const req = {
+      method,
+      headers,
+      async *[Symbol.asyncIterator]() {
+        if (Buffer.isBuffer(body)) yield body;
+        else if (typeof body === "string") yield Buffer.from(body, "utf8");
+      }
+    };
+    let statusCode = 200;
+    const resHeaders = {};
+    let resBody = null;
+    let ended = false;
+    const res = {
+      setHeader(k, v) { resHeaders[k.toLowerCase()] = v; },
+      status(code) { statusCode = code; return res; },
+      json(data) { resBody = data; return res; },
+      end() { ended = true; return res; }
+    };
+    await serverlessHandler(req, res);
+    return { status: statusCode, headers: resHeaders, body: resBody, ended };
+  }
+
+  // 1. OPTIONS CORS
+  const optionsRes = await invoke({ method: "OPTIONS" });
+  assert.equal(optionsRes.status, 204);
+  assert.equal(optionsRes.ended, true);
+  assert.equal(optionsRes.headers["access-control-allow-methods"], "POST, OPTIONS");
+
+  // 2. Method Not Allowed
+  const getRes = await invoke({ method: "GET" });
+  assert.equal(getRes.status, 405);
+  assert.equal(getRes.body.error.code, "method_not_allowed");
+
+  // 3. Valid JSON
+  const jsonRes = await invoke({
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ name: "Audit Lead", email: "lead-audit@example.com", phone: "+1234567890", country: "ES", message: "Need 5 units", isTest: true })
+  });
+  assert.equal(jsonRes.status, 201);
+  assert.match(jsonRes.body.receipt.reference, /^INQ-\d{8}-[A-F0-9]{6}$/);
+  assert.equal(jsonRes.body.receipt.destination, "ES");
+  assert.equal(jsonRes.body.receipt.isTest, true);
+
+  // 4. Malformed JSON
+  const malformedRes = await invoke({
+    headers: { "content-type": "application/json" },
+    body: "{ unclosed_json: true"
+  });
+  assert.equal(malformedRes.status, 400);
+  assert.equal(malformedRes.body.error.code, "invalid_json");
+
+  // 5. Valid URL-Encoded
+  const urlencodedRes = await invoke({
+    headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: "name=Form+User&email=form-user%40example.com&phone=%2B123456789&country=FR&message=TEST+ONLY"
+  });
+  assert.equal(urlencodedRes.status, 201);
+  assert.match(urlencodedRes.body.receipt.reference, /^INQ-\d{8}-[A-F0-9]{6}$/);
+  assert.equal(urlencodedRes.body.receipt.isTest, true);
+
+  // 6. Valid Multipart with Content-Type header inside parts and hyphens
+  const boundary = "----TestBoundary123";
+  const multipartBody = [
+    `--${boundary}`,
+    'Content-Disposition: form-data; name="name"',
+    '',
+    'Multi User',
+    `--${boundary}`,
+    'Content-Disposition: form-data; name="email"',
+    'Content-Type: text/plain; charset=utf-8',
+    '',
+    'multi-part-user@example-domain.com',
+    `--${boundary}`,
+    'Content-Disposition: form-data; name="phone"',
+    '',
+    '+1-555-019-2834',
+    `--${boundary}`,
+    'Content-Disposition: form-data; name="country"',
+    '',
+    'DE',
+    `--${boundary}--`
+  ].join("\r\n");
+
+  const multipartRes = await invoke({
+    headers: { "content-type": `multipart/form-data; boundary=${boundary}` },
+    body: multipartBody
+  });
+  assert.equal(multipartRes.status, 201);
+  assert.match(multipartRes.body.receipt.reference, /^INQ-\d{8}-[A-F0-9]{6}$/);
+  assert.equal(multipartRes.body.receipt.destination, "DE");
+
+  // 7. Honeypot check
+  const honeypotRes = await invoke({
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ name: "Spam Bot", email: "bot@spam.com", website: "http://spam.org" })
+  });
+  assert.equal(honeypotRes.status, 422);
+  assert.equal(honeypotRes.body.error.code, "invalid_submission");
+
+  // 8. Missing Contact
+  const missingContact = await invoke({
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ name: "No Contact", email: "", phone: "" })
+  });
+  assert.equal(missingContact.status, 400);
+  assert.equal(missingContact.body.error.code, "validation_failed");
+  assert.equal(missingContact.body.error.fields.email, "Provide an email address or phone number.");
+
+  // 9. Invalid Email
+  const badEmail = await invoke({
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ name: "Bad Email", email: "not-an-email" })
+  });
+  assert.equal(badEmail.status, 400);
+  assert.equal(badEmail.body.error.fields.email, "Enter a valid email address.");
+
+  // 10. Invalid Phone
+  const badPhone = await invoke({
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ name: "Bad Phone", phone: "123" })
+  });
+  assert.equal(badPhone.status, 400);
+  assert.equal(badPhone.body.error.fields.phone, "Enter a valid phone number.");
 });

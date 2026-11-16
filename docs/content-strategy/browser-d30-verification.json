@@ -1,6 +1,6 @@
 {
-  "sourceDigest": "b33ac9ad13b3028f9b75cede082926aca9e2ee20e4487bf0d0a19ed4ecb21e84",
-  "assetDigest": "0d66cec69235266f6bae539cd50014382c3e1b8b4a59c165db7f15a284972bfd",
+  "sourceDigest": "33f16338573a273da343cba65fd7cff87721b8bbb2f56cf85e710c3efede5c83",
+  "assetDigest": "5193b91078a0748ce9eaaaadabfcec5ff7be7ffcc9c085580a36817d3593dae5",
   "date": "2026-10-28",
   "stage": "D15-D30",
   "passed": true,
@@ -334,37 +334,37 @@
   "httpErrors": [],
   "receipts": [
     {
-      "reference": "VOL-20261116-D390E572",
+      "reference": "VOL-20261116-AA5F0AFD",
       "isTest": true,
       "locale": "en"
     },
     {
-      "reference": "VOL-20261116-E051E339",
+      "reference": "VOL-20261116-521012FC",
       "isTest": true,
       "locale": "es"
     },
     {
-      "reference": "VOL-20261116-43277FC2",
+      "reference": "VOL-20261116-064143CC",
       "isTest": true,
       "locale": "fr"
     },
     {
-      "reference": "VOL-20261116-4651FAF8",
+      "reference": "VOL-20261116-3845539D",
       "isTest": true,
       "locale": "pt"
     },
     {
-      "reference": "VOL-20261116-875DFC3F",
+      "reference": "VOL-20261116-0C479865",
       "isTest": true,
       "locale": "vi"
     },
     {
-      "reference": "VOL-20261116-B608D5BD",
+      "reference": "VOL-20261116-826EC656",
       "isTest": true,
       "locale": "th"
     },
     {
-      "reference": "VOL-20261116-A535514F",
+      "reference": "VOL-20261116-72DA24F9",
       "isTest": true,
       "locale": "id"
     }

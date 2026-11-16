@@ -101,7 +101,7 @@ const items = [
 ];
 
 async function main() {
-  const tmpDir = "/tmp/volvet-equipment-raw";
+  const tmpDir = "/tmp/velolev-equipment-raw";
   mkdirSync(tmpDir, { recursive: true });
 
   for (const item of items) {

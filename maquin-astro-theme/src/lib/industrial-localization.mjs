@@ -25,7 +25,6 @@ export function translateText(value,locale="en",params={}) {
   const key=normalize(value),catalog=catalogs[locale];
   let translated=catalog[key];
   if(!translated&&key.endsWith(" | velolev"))translated=translateText(key.slice(0,-10),locale)+" | velolev";
-  if(!translated&&key.endsWith(" | volvet"))translated=translateText(key.slice(0,-9),locale)+" | velolev";
   if(!translated&&key.startsWith("Enlarge image: "))translated=translateText("Enlarge image: {title}",locale,{title:translateText(key.slice(15),locale)});
   if(!translated)return value;
   for(const [name,replacement] of Object.entries(params))translated=translated.replaceAll(`{${name}}`,String(replacement));

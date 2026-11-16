@@ -1,10 +1,10 @@
 # 内容质量与 E-E-A-T 专项审计 (Content Quality & E-E-A-T Findings)
 
 ## 1. 核心缺陷：品牌实体与域名严重割裂 (Critical P0)
-- **现象**：域名为 `velolev.org`，但全站标题、Logo、正文描述、结构化数据均声明品牌为 `volvet`，全站找不到任何关于 `velolev` 的说明。
-- **影响**：Google 知识图谱无法将 `volvet` 的品牌声量关联到 `velolev.org`，品牌实体处于悬空状态，海外用户与 AI 检索容易误判为冒牌或仿冒网站。
+- **现象**：域名为 `velolev.org`，但全站标题、Logo、正文描述、结构化数据均声明品牌为 `velolev`，全站找不到任何关于 `velolev` 的说明。
+- **影响**：Google 知识图谱无法将 `velolev` 的品牌声量关联到 `velolev.org`，品牌实体处于悬空状态，海外用户与 AI 检索容易误判为冒牌或仿冒网站。
 - **修复**：
-  - 在 `/about-us/` 中明确说明 `volvet` 是在 `velolev.org` 运营的官方设备品牌；
+  - 在 `/about-us/` 中明确说明 `velolev` 是在 `velolev.org` 运营的官方设备品牌；
   - 在 `Organization` Schema 中增加 `alternateName: ["velolev"]` 及权威社媒链接。
 
 ## 2. 工程事实严谨性与负向范围 (E-E-A-T 标杆)

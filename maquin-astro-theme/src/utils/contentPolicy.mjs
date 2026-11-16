@@ -5,7 +5,7 @@ import aboutCopy from "../data/about-copy.json" with { type: "json" };
 
 export { baseline };
 export const copyFor = (locale = "en") => copies[locale] ?? copies.en;
-const oldBrand = /\b(?:velvet|PoleLift)\b/gi;
+const oldBrand = /\b(?:volvet|velvet|PoleLift)\b/gi;
 const money = /[$€£¥]|\b(?:USD|EUR|CNY|IDR|BRL)\b|\bRp\s*\d|ดอลลาร์|đô\s*la/i;
 const bareLegacyPrice = /^\s*(?:1[,.\s]500|2[,.\s]500)\s*$/;
 const inventory = /\b(?:in\s*stock|out\s*of\s*stock|inventory|stock\s*(?:level|status)|instock|outofstock)\b|en stock|en existencia|em estoque|tồn kho|stok tersedia|สินค้าคงคลัง/i;
@@ -123,7 +123,6 @@ export function organizationSchema(origin, locale = "en") {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: baseline.brand.name,
-    alternateName: ["volvet", "Volvet Machinery", "沃维特"],
     description: desc,
     ...(origin ? {
       url: origin,
@@ -159,7 +158,6 @@ export function webApplicationSchema(origin, path = "/tools/roi-calculator/", lo
     creator: {
       "@type": "Organization",
       name: baseline.brand.name,
-      alternateName: ["volvet", "Volvet Machinery", "沃维特"],
       ...(origin ? { url: origin } : {})
     }
   };
@@ -178,7 +176,6 @@ export function aboutPageSchema(origin, path = "/about-us/", locale = "en") {
     mainEntity: {
       "@type": "Organization",
       name: baseline.brand.name,
-      alternateName: ["volvet", "Volvet Machinery", "沃维特"],
       ...(origin ? {
         url: origin,
         logo: `${origin}/brand/velolev-wordmark.svg`

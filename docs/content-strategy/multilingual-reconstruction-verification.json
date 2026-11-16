@@ -60,12 +60,12 @@
   "downloads": [
     {
       "locale": "en",
-      "path": "/resources/volvet-specifications.csv",
+      "path": "/resources/velolev-specifications.csv",
       "sha256": "8f789cca5b0ee878a1a0e1abf566eb1d4f8bd7db8a4975645cbe27d4371f3c03"
     },
     {
       "locale": "en",
-      "path": "/resources/volvet-specifications.json",
+      "path": "/resources/velolev-specifications.json",
       "sha256": "ab7edc4ca81be3d9d99c370a9be085b96e047f4de376b03117ff155cb288d43b"
     },
     {
@@ -75,12 +75,12 @@
     },
     {
       "locale": "es",
-      "path": "/es/resources/volvet-specifications.csv",
+      "path": "/es/resources/velolev-specifications.csv",
       "sha256": "b2b923e6ea569b6d8269cba252cf9f73faaeb82b8726f78f104e4477d879758c"
     },
     {
       "locale": "es",
-      "path": "/es/resources/volvet-specifications.json",
+      "path": "/es/resources/velolev-specifications.json",
       "sha256": "8deafcf7f638780dc8a045482eecfe19ba42b373089167da4ff056282bf2a089"
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "locale": "fr",
-      "path": "/fr/resources/volvet-specifications.csv",
+      "path": "/fr/resources/velolev-specifications.csv",
       "sha256": "d05fa402b877c414bbab82e4ea656bd2ae70258725612377ac6c7d80d63d04f3"
     },
     {
       "locale": "fr",
-      "path": "/fr/resources/volvet-specifications.json",
+      "path": "/fr/resources/velolev-specifications.json",
       "sha256": "96d351d5c3e7881b3a43db3595da3119be24ff3a3f2f9cb93e052ddb49f55210"
     },
     {
@@ -105,12 +105,12 @@
     },
     {
       "locale": "pt",
-      "path": "/pt/resources/volvet-specifications.csv",
+      "path": "/pt/resources/velolev-specifications.csv",
       "sha256": "96432d26281d5c5350d8e6a3225995e54b4395d13fbe7ae966589deee447e728"
     },
     {
       "locale": "pt",
-      "path": "/pt/resources/volvet-specifications.json",
+      "path": "/pt/resources/velolev-specifications.json",
       "sha256": "00c0868d403010388ffab74b6b4be72f46032e82a68b086a5788b79f9fc26e53"
     },
     {
@@ -120,12 +120,12 @@
     },
     {
       "locale": "vi",
-      "path": "/vi/resources/volvet-specifications.csv",
+      "path": "/vi/resources/velolev-specifications.csv",
       "sha256": "491c551e9aa2936e04a03620d0073628afa40da8cf44f83dfc21af1f1189aef3"
     },
     {
       "locale": "vi",
-      "path": "/vi/resources/volvet-specifications.json",
+      "path": "/vi/resources/velolev-specifications.json",
       "sha256": "4a5da75b972bf2ddaab678771a9aa8eea9c2ae9d4e4d485066c43df381588ac8"
     },
     {
@@ -135,12 +135,12 @@
     },
     {
       "locale": "th",
-      "path": "/th/resources/volvet-specifications.csv",
+      "path": "/th/resources/velolev-specifications.csv",
       "sha256": "9da90ecb6ee6dbabb4f90bd34a06a6c9ac6baf0bd0914a7971c362790a21a0d9"
     },
     {
       "locale": "th",
-      "path": "/th/resources/volvet-specifications.json",
+      "path": "/th/resources/velolev-specifications.json",
       "sha256": "a8c22dd45f28374748c96e51cd9244ef789989a36c9ad6c8f1ca75fdb2903520"
     },
     {
@@ -150,12 +150,12 @@
     },
     {
       "locale": "id",
-      "path": "/id/resources/volvet-specifications.csv",
+      "path": "/id/resources/velolev-specifications.csv",
       "sha256": "1f4404ef673c21ccb0add22b397927a49e11c249c349e3229aac050579a29962"
     },
     {
       "locale": "id",
-      "path": "/id/resources/volvet-specifications.json",
+      "path": "/id/resources/velolev-specifications.json",
       "sha256": "42c4b384e29630d0dd2a5cc462828a11a1e6331007f252ca0e05386c91cee27c"
     },
     {

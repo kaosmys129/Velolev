@@ -49,8 +49,8 @@ async function loadCredentials() {
 export function parseArticleMarkdown(content, filePath) {
   const baseName = path.basename(filePath, path.extname(filePath));
   let slug = baseName
-    .replace(/polelift/gi, 'volvet-lifter')
-    .replace(/velolev/gi, 'volvet');
+    .replace(/polelift/gi, 'velolev-lifter')
+    .replace(/velolev/gi, 'velolev');
 
   let title = '';
   let excerpt = '';

@@ -13,7 +13,7 @@ import {verifyBuiltVersion} from './lib/source-fingerprint.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),version=verifyBuiltVersion(root);
 const out=join(root,'../docs/content-strategy/qa-language-switching');mkdirSync(out,{recursive:true});
-const directory=mkdtempSync(join(tmpdir(),'volvet-language-switch-'));
+const directory=mkdtempSync(join(tmpdir(),'velolev-language-switch-'));
 const {server,store}=createInquiryServer({directory,adminToken:randomBytes(36).toString('base64url'),testMode:true,logger:{error(){}}});
 server.listen(0,'127.0.0.1');await once(server,'listening');
 const base=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({headless:true}),context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'});

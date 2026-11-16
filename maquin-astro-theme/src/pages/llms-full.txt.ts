@@ -14,8 +14,7 @@ export function GET() {
 > Comprehensive engineering reference for crane-free installation of 12 m class street light poles up to 300 kg using the velolev portable hydraulic lifting system.
 
 ## 1. System Engineering Specifications (F001–F031)
-- Manufacturer & Brand Entity: velolev (official international export and distribution brand of volvet / Volvet Machinery / 沃维特)
-- Entity Bridge: velolev represents the international product line and global engineering support for volvet portable hydraulic pole lifters. All technical parameters, manufacturing standards, and equipment configurations are developed by volvet machinery.
+- Manufacturer & Brand Entity: velolev
 - Canonical Origin: ${cleanOrigin}
 - Equipment Architecture: Two-module portable hydraulic machine (85 kg total system weight)
   - Hydraulic Lifting Module: 45 kg

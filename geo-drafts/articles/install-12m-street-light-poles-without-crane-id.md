@@ -1,4 +1,4 @@
-# Cara memasang tiang lampu jalan 12 meter tanpa truk crane | volvet
+# Cara memasang tiang lampu jalan 12 meter tanpa truk crane | velolev
 
 > **Executive Summary / Direct Answer**: Proyek penerangan jalan umum dan infrastruktur seringkali mengalami hambatan logistik parah ketika harus mengerahkan truk crane besar ke gang sempit. Melalui sistem ereksi tiang hidrolik modular dengan kapasitas uji beban 300 kg dan ditenagai baterai mandiri 24V DC, 2 teknisi bersertifikat dapat merakit, meluruskan, dan menegakkan tiang lampu jalan hingga 12m tanpa truk crane, sepenuhnya mematuhi standar keselamatan OSHA 1926 Subpart CC, batas jarak IEEE 516, dan spesifikasi angkur ASTM F1554.
 
@@ -95,7 +95,7 @@ Meskipun tiang lampu dirancang tahan angin sesuai EN 40-3, proses pendirian tian
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Cara memasang tiang lampu jalan 12 meter tanpa truk crane | volvet",
+  "headline": "Cara memasang tiang lampu jalan 12 meter tanpa truk crane | velolev",
   "description": "Proyek penerangan jalan umum dan infrastruktur seringkali mengalami hambatan logistik parah ketika harus mengerahkan truk crane besar ke gang sempit. Melalui sistem ereksi tiang hidrolik modular denga...",
   "author": {
     "@type": "Person",
@@ -104,7 +104,7 @@ Meskipun tiang lampu dirancang tahan angin sesuai EN 40-3, proses pendirian tian
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>

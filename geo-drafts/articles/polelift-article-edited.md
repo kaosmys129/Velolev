@@ -1,12 +1,12 @@
 ---
-coverImage: "/images/volvet-lifter-article-edited/cover-flow-hero-16x9.png"
+coverImage: "/images/velolev-lifter-article-edited/cover-flow-hero-16x9.png"
 ---
 
 # Portable Hydraulic Pole Lifter vs Mobile Crane: Narrow-Access Erection, Safety, and Cost Analysis
 
 
-![volvet Portable Light Pole Lifter Cinematic Engineering Cover Hero](/images/volvet-lifter-article-edited/cover-flow-hero-16x9.png)
-*Cover Hero: On-site zero-crane erection of 12m municipal lighting pole using volvet portable lifter. Integrated with site engineering layout and mechanical blueprint. Standard 2-person crew compliance eliminates heavy crane roadway closures.*
+![velolev Portable Light Pole Lifter Cinematic Engineering Cover Hero](/images/velolev-lifter-article-edited/cover-flow-hero-16x9.png)
+*Cover Hero: On-site zero-crane erection of 12m municipal lighting pole using velolev portable lifter. Integrated with site engineering layout and mechanical blueprint. Standard 2-person crew compliance eliminates heavy crane roadway closures.*
 
 
 
@@ -20,15 +20,15 @@ Municipal street lighting and roadway illumination projects increasingly encount
 > - **Two-Person Modular Transport:** Split two-module 85kg total system (45kg hydraulic lifter + 40kg 24V power unit) fits inside standard pickup beds and deploys in 10 minutes.
 > - **Universal Foundation Fit:** Slotted base plate accommodates 180mm to 260mm bolt circle diameters (P.C.D.) with M16 to M24 structural anchor studs.
 
-![Portable Light Pole Lifter: Zero-Crane Erection up to 12m](/images/volvet-lifter-article-edited/01-feature-hero-cover-16x9.png)
-*Figure 1: volvet portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.*
+![Portable Light Pole Lifter: Zero-Crane Erection up to 12m](/images/velolev-lifter-article-edited/01-feature-hero-cover-16x9.png)
+*Figure 1: velolev portable hydraulic pole lifter engineering selection guide. Verified 300kg proof load and 85kg split transport architecture eliminating 16-ton boom truck dependency.*
 
 ---
 
 ## 1. Municipal Jobsite Logistics: Why Mobile Cranes Fail in Narrow Access Corridors
 
-![Jobsite feasibility comparison: 16-ton mobile crane vs volvet portable hydraulic pole lifter](/images/volvet-lifter-article-edited/05-crane-vs-lifter-comparison-16x9.png)
-*Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus volvet portable pole lifter across narrow access, crew size, and powerline clearances.*
+![Jobsite feasibility comparison: 16-ton mobile crane vs velolev portable hydraulic pole lifter](/images/velolev-lifter-article-edited/05-crane-vs-lifter-comparison-16x9.png)
+*Figure 5: Operational feasibility and jobsite access comparison: traditional 16-ton mobile crane versus velolev portable pole lifter across narrow access, crew size, and powerline clearances.*
 
 In municipal infrastructure renewal, physical access limitations frequently undermine project timelines. Standard mobile telescopic cranes require substantial setup footprints. Operating a 16-ton boom truck typically demands a minimum paved roadway width of 6 to 8 meters to fully extend outriggers and establish dynamic stability. In historic city centers, pedestrian walkways, commercial alleyways, and landscaped parks, such physical clearance simply does not exist.
 
@@ -40,7 +40,7 @@ Beyond physical clearance, bureaucratic delays degrade contractor margins. Secur
 
 ## 2. 24V Modular Hydraulic Engineering vs Heavy Machinery
 
-![Portable light pole lifter two-module mechanical engineering architecture](/images/volvet-lifter-article-edited/02-two-module-architecture-16x9.png)
+![Portable light pole lifter two-module mechanical engineering architecture](/images/velolev-lifter-article-edited/02-two-module-architecture-16x9.png)
 *Figure 2: Split two-module fluid power architecture: 45kg hydraulic lifter rig and 40kg 24V power control cabinet compliant with international manual handling safety regulations.*
 
 The mechanical architecture of modern portable pole lifters centers on modularity and energy independence. Rather than relying on power take-off (PTO) shafts from diesel truck engines or loud gasoline generators, the equipment operates on an integrated **24V DC battery system**. This eliminates toxic exhaust emissions and noise pollution, making nighttime operations compliant with urban noise ordinances adjacent to residential zones and healthcare facilities.
@@ -75,10 +75,10 @@ In accordance with **EN 40-3** structural verification principles for lighting c
 
 ## 4. Universal Base Flange & Foundation Bolt Circle Compatibility (180mm to 260mm)
 
-![Standard two-worker ground-level erection SOP workflow](/images/volvet-lifter-article-edited/04-sop-field-workflow-16x9.png)
+![Standard two-worker ground-level erection SOP workflow](/images/velolev-lifter-article-edited/04-sop-field-workflow-16x9.png)
 *Figure 4: Standard three-phase ground-level erection SOP strictly mandating a two-person certified crew, neutralizing overhead electrical contact risks per OSHA 1926 and IEEE 516.*
 
-![Base flange compatibility and P.C.D. 180mm to 260mm radial slotted geometry](/images/volvet-lifter-article-edited/03-flange-pcd-compatibility-16x9.png)
+![Base flange compatibility and P.C.D. 180mm to 260mm radial slotted geometry](/images/velolev-lifter-article-edited/03-flange-pcd-compatibility-16x9.png)
 *Figure 3: Heavy-duty base plate radial slotted geometry accommodating 180mm to 260mm bolt circle diameters (P.C.D.) and M16 to M24 foundation anchor studs per ASTM F1554.*
 
 Foundation interface compatibility is the single most critical engineering checkpoint before deploying any ground-based erection device. Municipal light pole foundations vary widely across regional transportation departments, employing both square four-bolt cages and circular multi-bolt patterns.

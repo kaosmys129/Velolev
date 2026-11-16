@@ -28,8 +28,8 @@
        locArticle?.imageFolder,
        `portable-light-pole-lifter-explainer-${locale}`,
        article.slug,
-       `volvet-lifter-${article.slug}`,
-       "volvet-lifter-task-based-deepseek-article"
+       `velolev-lifter-${article.slug}`,
+       "velolev-lifter-task-based-deepseek-article"
      ].filter(Boolean);
      ```
   2. 修改第 681 行的表格渲染条件，使其与 `fig` 是否存在解耦（在第 1 节 `idx === 0` 或存在 `05` 对比图时稳定渲染）：
@@ -38,7 +38,7 @@
        <div class="editorial-table-wrapper">
          <table class="engineering-data-table">
      ```
-  3. 清理 `maquin-astro-theme/public/images/` 下的 4 个重复/历史遗留图集目录（`install-12m-street-light-poles-without-crane`、`portable-light-pole-lifter-explainer`、`volvet-lifter-article-edited`、`volvet-lifter-task-based-deepseek-article`），仅保留 `product/` 与 7 个语种的 `portable-light-pole-lifter-explainer-{en,es,fr,pt,vi,th,id}/`，消除 78.4% 孤立图片冗余。
+  3. 清理 `maquin-astro-theme/public/images/` 下的 4 个重复/历史遗留图集目录（`install-12m-street-light-poles-without-crane`、`portable-light-pole-lifter-explainer`、`velolev-lifter-article-edited`、`velolev-lifter-task-based-deepseek-article`），仅保留 `product/` 与 7 个语种的 `portable-light-pole-lifter-explainer-{en,es,fr,pt,vi,th,id}/`，消除 78.4% 孤立图片冗余。
 
 ---
 
@@ -46,7 +46,7 @@
 - **影响范围**：7 语种技术指南页、`/llms.txt`、7 语种首页
 - **目标文件与精确行号**：
   1. [maquin-astro-theme/src/components/procurement/GuideArticlePage.astro](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/components/procurement/GuideArticlePage.astro#L286-L524)（第 286–289、325–328、364–367、403–406、442–445、481–484、520–523 行及第 728–736 行）：
-     - 将 7 语种 `reviewerName` 从未核实的个人署名 `"Carlos Mendoza, PE (Lead Structural Systems Engineer)"` 统一替换为机构署名 `"volvet Engineering Review"`；
+     - 将 7 语种 `reviewerName` 从未核实的个人署名 `"Carlos Mendoza, PE (Lead Structural Systems Engineer)"` 统一替换为机构署名 `"velolev Engineering Review"`；
      - 将 `calibrationLabel` 从 `"ISO/IEC 17025 Calibration Protocol"` 替换为符合 [content-baseline.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/data/content-baseline.json#L27-L34) 的 `"Specification-Only Baseline (Field Validation Pending)"`；
      - 将 `fieldCaseBody` 中的未验证实测数字（`193kg/22s/3.2m/s/16MPa/375kg/52次循环`）替换为已确认的基线规格范围（300 kg WLL、85 kg 分体总重、65 kg 最重模块、200–450 mm 法兰跨距、现场实测数据待门禁解锁后发布）。
   2. [maquin-astro-theme/src/data/published-content-locales.json](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/data/published-content-locales.json#L15)：
@@ -72,7 +72,7 @@
      - 将第 26、35、46 行的无序列表（`- ...`）与第 61、67、73、81 行的有序列表（`1. ... \n2. ...`）恢复为 `\n` 分隔的多行字符串，使 [render-markdown.mjs](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/lib/render-markdown.mjs#L11-L34) 正确渲染出 `<ul><li>` 与 `<ol><li>`；
      - 移除第 55 行坍塌的 ASCII 字符框图（已由恢复后的 `04-sop-field-workflow-16x9.png` 视觉图替代）；
      - 移除第 38、48、74 行无链接的纯文本伪 CTA（特别是第 74 行承诺不存在的 PDF 手册的文案），统一由 `GuideArticlePage.astro` 组件渲染带真实 `<a href>` 的转化卡片；
-     - 将第 130 行 `reviewer` 改为 `"volvet Engineering Review"`。
+     - 将第 130 行 `reviewer` 改为 `"velolev Engineering Review"`。
   3. **防门禁回归指令（关键）**：[src/lib/reviewed-snapshot.mjs](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/lib/reviewed-snapshot.mjs#L11-L24) 在构建时强制校验 `r.contentSha256 !== articleContentHash(a)`。修改 `published-content.json` 后，必须运行以下命令自动重算并写回第 133 行的 `contentSha256`：
      ```bash
      node -e '
@@ -110,7 +110,7 @@
   3. [maquin-astro-theme/src/pages/about-us.astro](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/pages/about-us.astro#L1-L7)
   4. [maquin-astro-theme/src/components/procurement/AboutUsPage.astro](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/src/components/procurement/AboutUsPage.astro#L10)（第 10 行）
 - **代码修改规范**：
-  1. 将 `about-copy.json:4` 的 `en.metaDescription`（原 177 字符）精简至 150 字符以内（如 `"Learn volvet's confirmed portable hydraulic pole lifter focus, verified 300 kg WLL specifications, and transparent B2B engineering procurement workflow."`），并同步写入 `site-config.mjs:25` 的 `corePages.about.description` 与 `about-us.astro`（确保 [verify-d60.mjs](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/scripts/verify-d60.mjs#L9) 的 `title === page.title` 强校验通过）；
+  1. 将 `about-copy.json:4` 的 `en.metaDescription`（原 177 字符）精简至 150 字符以内（如 `"Learn velolev's confirmed portable hydraulic pole lifter focus, verified 300 kg WLL specifications, and transparent B2B engineering procurement workflow."`），并同步写入 `site-config.mjs:25` 的 `corePages.about.description` 与 `about-us.astro`（确保 [verify-d60.mjs](file:///Users/peterpc/Documents/liftpolemachine-web/maquin-astro-theme/scripts/verify-d60.mjs#L9) 的 `title === page.title` 强校验通过）；
   2. 将 `AboutUsPage.astro:10` 从 `const quotePath=current==="en"?"/quote/":\`/\${current}/contact-us/\`;` 修改为：
      ```javascript
      const quotePath = localizedPagePath("quote", current);
@@ -126,7 +126,7 @@
   {article.relatedPaths.map((p) => {
     const key = pageKeyForPath(p);
     const baseLabel = key && corePages[key]
-      ? corePages[key].title.replace(/\s*\|\s*volvet.*$/i, "")
+      ? corePages[key].title.replace(/\s*\|\s*velolev.*$/i, "")
       : p.replace(/^\/|\/$/g, "").replace(/-/g, " ");
     const label = locale === "en" ? baseLabel : translateText(baseLabel, locale);
     return (
@@ -162,9 +162,9 @@
   1. 在 `GuideArticlePage.astro:532` 中避免重复追加品牌后缀：
      ```javascript
      const rawSeoTitle = locArticle?.seoTitle || article.seoTitle || article.title;
-     const seoTitle = /\|\s*volvet/i.test(rawSeoTitle) ? rawSeoTitle : `${rawSeoTitle} | volvet`;
+     const seoTitle = /\|\s*velolev/i.test(rawSeoTitle) ? rawSeoTitle : `${rawSeoTitle} | velolev`;
      ```
-     并将英文版 `published-content.json:9` 的 `seoTitle` 收敛为 `"12m Light Pole Installation Without a Crane | volvet"`（53 字符）；同步收敛 `site-config.mjs:17-35` 与 `industrial-copy/*.json` 中超长/过短的 Title（控制在 50–60 字符）和 Description（控制在 120–158 字符）。
+     并将英文版 `published-content.json:9` 的 `seoTitle` 收敛为 `"12m Light Pole Installation Without a Crane | velolev"`（53 字符）；同步收敛 `site-config.mjs:17-35` 与 `industrial-copy/*.json` 中超长/过短的 Title（控制在 50–60 字符）和 Description（控制在 120–158 字符）。
   2. 在 `ProcurementLayout.astro` `<head>` 中补齐社交元数据：
      ```astro
      <meta property="og:type" content={page === "guide-article" ? "article" : "website"} />
@@ -264,7 +264,7 @@
 每次执行上述修复后，必须在仓库根目录按顺序运行以下自动化校验脚本，确保 0 回归失败：
 
 ```bash
-# 1. 重新构建静态产物并更新 .volvet-build.json 指纹
+# 1. 重新构建静态产物并更新 .velolev-build.json 指纹
 npm --prefix maquin-astro-theme run build
 
 # 2. 运行全套内容基线、D30/D60、7 语种翻译完整性与 WordPress 退役重定向门禁
@@ -275,7 +275,7 @@ npm --prefix maquin-astro-theme run locales:check
 npm --prefix maquin-astro-theme run retirement:check
 
 # 3. 模拟正式生产域名构建并校验 Canonical / Hreflang / Sitemap
-PUBLIC_SITE_URL="https://example.test" ./maquin-astro-theme/node_modules/.bin/astro build --root ./maquin-astro-theme --outDir /tmp/volvet-configured-check
-node ./maquin-astro-theme/scripts/verify-d60.mjs --configured=/tmp/volvet-configured-check
-rm -rf /tmp/volvet-configured-check
+PUBLIC_SITE_URL="https://example.test" ./maquin-astro-theme/node_modules/.bin/astro build --root ./maquin-astro-theme --outDir /tmp/velolev-configured-check
+node ./maquin-astro-theme/scripts/verify-d60.mjs --configured=/tmp/velolev-configured-check
+rm -rf /tmp/velolev-configured-check
 ```

@@ -5,8 +5,8 @@ coverImage: "/images/portable-light-pole-lifter-explainer-vi/cover-flow-hero-16x
 # Máy Dựng Cột Đèn Thủy Lực Di Động: Kiến Trúc Cơ Khí, Độ Tương Thích Mặt Bích và Cẩm Nang Lựa Chọn Thiết Bị
 
 
-![Máy dựng trụ đèn chiếu sáng di động volvet ảnh bìa kỹ thuật điện ảnh](/images/portable-light-pole-lifter-explainer-vi/cover-flow-hero-16x9.png)
-*Hình Bìa Toàn Cảnh: Hiện trường thi công lắp dựng cột đèn chiếu sáng 12m không cần xe cẩu bằng máy nâng thủy lực di động volvet kết hợp bản vẽ thiết kế thi công.*
+![Máy dựng trụ đèn chiếu sáng di động velolev ảnh bìa kỹ thuật điện ảnh](/images/portable-light-pole-lifter-explainer-vi/cover-flow-hero-16x9.png)
+*Hình Bìa Toàn Cảnh: Hiện trường thi công lắp dựng cột đèn chiếu sáng 12m không cần xe cẩu bằng máy nâng thủy lực di động velolev kết hợp bản vẽ thiết kế thi công.*
 
 
 
@@ -23,7 +23,7 @@ Trong các dự án chiếu sáng đô thị và hạ tầng đèn đường nă
 > - **Tương Thích Mặt Bích Toàn Năng:** Tấm đế chịu lực thiết kế rãnh xẻ hướng tâm tương thích đường kính vòng bu lông (P.C.D.) từ 180mm đến 260mm, vừa vặn với bu lông móng M16 đến M24 (F015, F016).
 
 ![Máy dựng cột đèn thủy lực di động: Dựng cột không dùng cẩu đến 12m](/images/portable-light-pole-lifter-explainer-vi/01-feature-hero-cover-16x9.png)
-*Hình 1: Hướng dẫn kỹ thuật và chọn thiết bị máy dựng cột thủy lực di động volvet. Tải trọng thử nghiệm 300kg và kết cấu tách 2 kiện 85kg giúp loại bỏ hoàn toàn xe cẩu 16 tấn.*
+*Hình 1: Hướng dẫn kỹ thuật và chọn thiết bị máy dựng cột thủy lực di động velolev. Tải trọng thử nghiệm 300kg và kết cấu tách 2 kiện 85kg giúp loại bỏ hoàn toàn xe cẩu 16 tấn.*
 
 ---
 
@@ -116,8 +116,8 @@ Nhằm đảm bảo tính chuẩn hóa và an toàn tối đa trên công trư�
 
 ## 5. Ranh Giới Kỹ Thuật và Những Ngộ Nhận Thường Gặp
 
-![So sánh tính khả thi hiện trường: Xe cẩu 16 tấn vs máy dựng cột volvet](/images/portable-light-pole-lifter-explainer-vi/05-crane-vs-lifter-comparison-16x9.png)
-*Hình 5: Phân tích khả thi thi công và tiếp cận hiện trường: Xe cẩu 16 tấn truyền thống so với máy dựng cột di động volvet về lối đi hẹp, nhân lực và an toàn điện lưới.*
+![So sánh tính khả thi hiện trường: Xe cẩu 16 tấn vs máy dựng cột velolev](/images/portable-light-pole-lifter-explainer-vi/05-crane-vs-lifter-comparison-16x9.png)
+*Hình 5: Phân tích khả thi thi công và tiếp cận hiện trường: Xe cẩu 16 tấn truyền thống so với máy dựng cột di động velolev về lối đi hẹp, nhân lực và an toàn điện lưới.*
 
 Khi lập kế hoạch mua sắm thiết bị và tổ chức thi công dự án B2B, các nhà quản lý dự án cần phân biệt rõ ranh giới kỹ thuật đã được kiểm chứng với những hiểu lầm phổ biến trên thị trường:
 

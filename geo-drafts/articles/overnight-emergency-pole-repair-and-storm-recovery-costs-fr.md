@@ -104,7 +104,7 @@ Bien que la norme EN 40-3 dimensionne les mâts face au vent, les opérations d'
   },
   "publisher": {
     "@type": "Organization",
-    "name": "volvet"
+    "name": "velolev"
   }
 }
 </script>
