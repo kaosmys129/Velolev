@@ -637,6 +637,181 @@
           ]
         }
       ]
+    },
+    "40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost": {
+      "locale": "pt",
+      "slug": "40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost",
+      "title": "Instalação de iluminação em estacionamento de 40 postes: comparando escopo e custos de guindaste vs elevador portátil | velolev",
+      "h1": "Instalação de iluminação em estacionamento de 40 postes: comparativo de escopo de trabalho e custos entre caminhão munck e elevador portátil",
+      "description": "Como comparar a locação de caminhão munck e o elevador hidráulico portátil velolev em projetos de iluminação de 40 postes usando escopo idêntico e tarifas locais.",
+      "imageFolder": "/images/guides/40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost",
+      "sections": [
+        {
+          "heading": "Por que a comparação de mesmo escopo é crucial em projetos de múltiplos postes",
+          "paragraphs": [
+            "Estacionamentos comerciais, pátios logísticos e campi universitários frequentemente exigem a instalação de 20 a 60 postes de iluminação viária ou de área em uma única fase de obra. Ao comparar um caminhão munck (ou guindaste móvel) com o Elevador Hidráulico Portátil de Postes velolev, o planejamento orçamentário preciso depende da definição de um pacote de trabalho rigorosamente idêntico, em vez de comparar apenas as horas de locação de equipamentos.",
+            "Como a velolev opera em um modelo de cotação B2B privada sem preços públicos de máquinas ou predefinições de moedas regionais, os orçamentistas inserem suas próprias taxas locais de locação de guindastes, custos de mão de obra e volume do projeto na Calculadora de Cenários de Custos velolev para testar a sensibilidade operacional sob fórmulas transparentes."
+          ]
+        },
+        {
+          "heading": "1. Tabela comparativa de pacotes de trabalho de mesmo escopo (exemplo de 40 postes)",
+          "paragraphs": [
+            "Antes de inserir dados no modelo de custos do projeto, certifique-se de que cada poste candidato esteja dentro da classe de altura aplicável de 12 m, limite de carga nominal de 300 kg e vão de furação da flange de 180–260 mm (ou que tenha sido aprovado em revisão de desenho cotado). Em seguida, compare cada vetor de custo nas mesmas atividades:",
+            "| Item de custo e escopo do projeto | Escopo com caminhão munck / guindaste | Escopo com elevador hidráulico portátil (S4) |\n| :--- | :--- | :--- |\n| Mobilização no canteiro e acesso de veículos | Trânsito de veículos pesados, patolamento com pranchas de apoio e bloqueio de faixas ou baias de estacionamento | Unidade bipartida de 85 kg (módulo hidráulico de 45 kg + gabinete de 24 V de 40 kg) transportada em veículos utilitários leves |\n| Base de tarifa do equipamento | Diária ou hora de locação do guindaste, somada a taxas mínimas de mobilização e deslocamento | Insira a base do equipamento cotado na calculadora; nenhum preço público é presumido |\n| Alocação de equipe | Operador de guindaste habilitado mais rigger e equipe de solo conforme normas do canteiro | 1–2 operadores listados na ficha técnica; compatibilize a equipe com o plano de segurança do canteiro |\n| Fluxo de içamento e alinhamento | Içamento aéreo com lança suspensa desde a carreta de entrega até os chumbadores de fundação | Acoplamento ao nível do solo na base e elevação hidráulica controlada para flanges revisadas |\n| Atividades complementares (fora do içamento) | Descarregamento de postes, fiação da luminária, prumo e aperto de porcas nos chumbadores | O mesmo escopo de descarregamento, passagem de fiação, prumo e torque de porcas se aplica |"
+          ]
+        },
+        {
+          "heading": "2. Isolando postes fora de escopo antes de modelar os custos",
+          "paragraphs": [
+            "Em muitos pacotes de estacionamento e vias perimetrais, a maioria das colunas consiste em postes de 8 m a 12 m com peso inferior a 300 kg, enquanto um pequeno subconjunto de postes de refletores perimetrais excede 12 m ou 300 kg. Exclua do escopo do elevador portátil essas colunas com excesso de altura ou peso, mantendo o guindaste móvel orçado especificamente para essas fundações dedicadas.",
+            "Além disso, revise as condições de contorno da Calculadora de Cenários de Custos: a ferramenta modela comparações operacionais diretas sem presumir valor residual de revenda, e um volume de projeto igual a zero retorna zero atividade de içamento."
+          ]
+        },
+        {
+          "heading": "3. Preparando o memorial de projeto de estacionamento para solicitação de cotação",
+          "paragraphs": [
+            "Ao solicitar uma cotação B2B privada para um projeto de iluminação de estacionamento ou campus com múltiplos postes, inclua quatro dados técnicos fundamentais:\n1. **Cronograma e especificação dos postes:** Quantidade total de postes, altura nominal (até a classe de 12 m) e peso total montado, incluindo braço de suporte e luminária (igual ou inferior a 300 kg).\n2. **Detalhes da flange e chumbadores de base:** Vão entre furos da flange (faixa listada de 180–260 mm), padrão de furação (4, 6 ou 8 furos) e diâmetro dos chumbadores (bitolas M16–M22 incluídas no kit; M24 e bases fora de padrão exigem revisão de desenho cotado).\n3. **Condições de acesso e layout do local:** Largura útil de pavimentação, limites de sobrecarga estrutural sobre lajes de garagens subterrâneas e presença de redes elétricas aéreas.\n4. **Destino e prazos de entrega:** País do projeto, porto ou canteiro de obras de destino e cronograma estimado de implantação."
+          ]
+        },
+        {
+          "heading": "Perguntas frequentes sobre modelagem de custos para múltiplos postes",
+          "paragraphs": [
+            "**Por que a Calculadora de Cenários de Custos da velolev mantém o preço do equipamento em branco?** A velolev orça configurações de exportação B2B de forma personalizada com base no escopo do projeto e no destino logístico, de modo que nenhum preço público de equipamento ou predefinição monetária regional é divulgado.",
+            "**O tempo de curso de 20 s informado pelo fabricante representa o tempo total de instalação por poste?** Não. O valor de 20 s refere-se estritamente ao curso de elevação hidráulica informado na ficha técnica (com validação em campo pendente). O tempo total do ciclo por poste deve incorporar etapas de transporte interno, montagem no solo, conexão elétrica, alinhamento de prumo e torque dos chumbadores."
+          ]
+        }
+      ]
+    },
+    "24v-battery-off-grid-rural-road-pole-lifting-planning": {
+      "locale": "pt",
+      "slug": "24v-battery-off-grid-rural-road-pole-lifting-planning",
+      "title": "Elevador portátil com bateria de 24 V para estradas rurais isoladas: elevações por carga e planejamento de campo | velolev",
+      "h1": "Elevador de postes portátil com bateria de 24 V para estradas rurais remotas: autonomia de elevações por carga e planejamento operacional",
+      "description": "Guia de planejamento em campo para uso do gabinete elétrico com bateria recarregável de 24 V em rodovias rurais isoladas da rede, com limites técnicos da ficha.",
+      "imageFolder": "/images/guides/24v-battery-off-grid-rural-road-pole-lifting-planning",
+      "sections": [
+        {
+          "heading": "Alimentação autônoma de 24 V para corredores rodoviários sem rede elétrica",
+          "paragraphs": [
+            "Projetos de iluminação em estradas rurais e corredores solares isolados frequentemente se estendem por quilômetros de rodovias onde a energia da rede pública está indisponível durante a fase de instalação civil e mecânica. Transportar um gerador a diesel dedicado junto com o maquinário de içamento acrescenta complexidade logística de combustível, ruído excessivo e movimentação adicional de veículos de apoio.",
+            "O Elevador Hidráulico Portátil de Postes velolev integra uma bateria recarregável de 24 V dentro do seu gabinete elétrico de 40 kg (500 × 300 × 250 mm), permitindo realizar os cursos de elevação hidráulica sem necessidade de conexão externa à rede elétrica. O planejamento adequado em campo exige separar as especificações confirmadas de hardware da bateria daquelas métricas de autonomia informadas pelo fabricante que permanecem sob validação em campo."
+          ]
+        },
+        {
+          "heading": "1. Especificações do gabinete elétrico de 24 V e status das evidências técnicas",
+          "paragraphs": [
+            "Examine os parâmetros exatos da ficha técnica S4 para o módulo de potência e controle antes de programar turnos de trabalho de múltiplos dias em áreas rurais:",
+            "| Parâmetro de energia e autonomia | Valor na especificação S4 | Classificação da evidência e diretriz de planejamento |\n| :--- | :--- | :--- |\n| Tensão de alimentação | Bateria recarregável de 24 V | Especificação confirmada na ficha S4; integrada dentro do gabinete elétrico |\n| Peso e dimensões do gabinete elétrico | 40 kg · 500 × 300 × 250 mm | Especificação confirmada na ficha S4; acomoda sistema de controle, motobomba hidráulica, bateria, amperímetro, voltímetro e botoeiras de elevação |\n| Elevações por carga completa | Mais de 50 elevações por carga | Dado informado pelo fabricante; validação em campo pendente — considerar como referência nominal de planejamento |\n| Duração do curso de elevação | Tempo de elevação informado de 20 s | Dado informado pelo fabricante; validação em campo pendente — não inclui posicionamento, fiação e torque de porcas |\n| Ciclos de vida útil informados | Mais de 3000 ciclos de operação | Dado informado pelo fabricante; validação em campo pendente — não constitui garantia formal de desgaste nem curva de carga |"
+          ]
+        },
+        {
+          "heading": "2. Planejamento prático de recarga e turnos de trabalho em rotas remotas",
+          "paragraphs": [
+            "Como a métrica de mais de 50 elevações por carga completa é um dado informado pelo fabricante com validação em campo ainda em andamento, os supervisores de obra devem incorporar margens conservadoras de recarga nos cronogramas de implantação rural, evitando descarregar as baterias até o limite a quilômetros da base de apoio.",
+            "Planeje a recarga noturna no alojamento do canteiro ou base logística, monitore continuamente os medidores integrados de corrente e tensão no painel do gabinete elétrico ao longo de cada turno e confirme a compatibilidade de tensão do carregador com a rede elétrica da base ao solicitar a sua cotação."
+          ]
+        },
+        {
+          "heading": "3. Verificações integradas para instalação de postes em rodovias rurais isoladas",
+          "paragraphs": [
+            "A autonomia energética é apenas um dos requisitos para a iluminação de vias rurais. Antes de mobilizar a equipe para um trecho isolado da rede, execute três verificações complementares obrigatórias:\n- **Peso total do conjunto montado:** Confirme que cada poste, braço de extensão, luminária e módulo solar fotovoltaico permaneça igual ou abaixo da carga nominal de 300 kg e dentro da classe de poste de 12 m.\n- **Flange de base e chumbadores:** Verifique o vão entre furos da flange de 180–260 mm e o diâmetro dos chumbadores de M16 a M24 (chumbadores M16–M22 incluídos no fornecimento; chumbadores M24 e flanges especiais exigem análise prévia de desenho técnico).\n- **Sustentação do solo e acostamento:** Certifique-se de que o acostamento de terra ou a faixa não pavimentada adjacente à base de concreto forneça suporte estável para o assentamento do equipamento e para 1–2 operadores."
+          ]
+        },
+        {
+          "heading": "Perguntas frequentes sobre a operação com bateria de 24 V",
+          "paragraphs": [
+            "**O elevador portátil velolev exige gerador a combustão em obras isoladas da rede?** Não. O gabinete elétrico abriga uma bateria recarregável de 24 V que aciona a unidade hidráulica durante a elevação.",
+            "**O dado de mais de 50 elevações por carga completa foi verificado de forma independente em testes de campo?** Ainda não. A ficha técnica de origem lista mais de 50 elevações por carga completa como um dado fornecido pelo fabricante com processo de validação em campo em andamento."
+          ]
+        }
+      ]
+    },
+    "pickup-truck-transport-modular-pole-jack-dimensions": {
+      "locale": "pt",
+      "slug": "pickup-truck-transport-modular-pole-jack-dimensions",
+      "title": "Transporte em picapes e vans do elevador modular de postes: embalagem de 650 × 350 × 500 mm e dimensões dos módulos | velolev",
+      "h1": "Transporte em picapes e furgões utilitários do elevador modular de postes: dimensões da embalagem de 650 × 350 × 500 mm e peso dos módulos",
+      "description": "Verifique as dimensões da caçamba, volume da embalagem (650 × 350 × 500 mm) e pesos bipartidos (45 kg + 40 kg) para transporte do elevador velolev em picapes e vans.",
+      "imageFolder": "/images/guides/pickup-truck-transport-modular-pole-jack-dimensions",
+      "sections": [
+        {
+          "heading": "Transporte de equipamentos de içamento de postes sem caminhões prancha",
+          "paragraphs": [
+            "Empreiteiras e concessionárias responsáveis pela manutenção de iluminação pública municipal, caminhos em parques e estacionamentos de centros empresariais operam rotineiramente com picapes utilitárias leves ou furgões compactos de serviço, em vez de caminhões pesados com plataforma de guindaste. Conhecer as dimensões exatas dos módulos e os pesos líquidos permite que a equipe de logística confirme a acomodação na caçamba e os pontos de amarração antes da saída da base.",
+            "O Elevador Hidráulico Portátil de Postes velolev possui um peso total combinado de 85 kg dividido em dois módulos operacionais, com dimensões de embalagem indicadas na ficha técnica original de 650 × 350 × 500 mm."
+          ]
+        },
+        {
+          "heading": "1. Tabela dimensional e de massa de referência para carregamento veicular",
+          "paragraphs": [
+            "Utilize as dimensões confirmadas da especificação S4 abaixo ao verificar a folga útil da caçamba, a altura da porta traseira do furgão ou a paletização de frete:",
+            "| Item / Subconjunto | Comprimento × Largura × Altura (mm) | Peso | Nota de manuseio e logística |\n| :--- | :--- | :--- | :--- |\n| Módulo de elevação hidráulico | 610 × 220 × 220 mm | 45 kg | Dimensões compactas; travar contra rolamento e deslocamento durante o transporte |\n| Gabinete elétrico (24 V) | 500 × 300 × 250 mm | 40 kg | Manter em posição vertical e protegido contra umidade e impactos durante o trânsito |\n| Conjunto desencaixado combinado | Dois módulos independentes | 85 kg no total | Pode ser transportado separadamente do veículo até a zona de trabalho de pedestres |\n| Embalagem da ficha técnica original | 650 × 350 × 500 mm | 85 kg de equipamento líquido | Material da embalagem e peso bruto de envio confirmados conforme pedido real |"
+          ]
+        },
+        {
+          "heading": "2. O que é confirmado na ficha técnica vs confirmado por pedido na logística de envio",
+          "paragraphs": [
+            "Para evitar equívocos em concorrências públicas ou agenciamento de cargas internacionais, é essencial distinguir os valores fixos da ficha técnica S4 dos detalhes de despacho customizados para cada fornecimento. As dimensões da embalagem de 650 × 350 × 500 mm e o peso do equipamento de 85 kg são valores confirmados da documentação de origem.",
+            "No entanto, o material construtivo da caixa externa de madeira/compensado, o peso bruto final embalado para frete e as marcações fitossanitárias de exportação não são fixados na ficha S4, sendo confirmados individualmente com base no modal de transporte e no país de destino ao formalizar a proposta comercial."
+          ]
+        },
+        {
+          "heading": "3. Checklist de transferência do veículo até a base da fundação",
+          "paragraphs": [
+            "Assim que a picape ou o furgão alcançar o ponto mais próximo de parada veicular no canteiro, verifique quatro detalhes essenciais para a transferência até a fundação:\n1. **Equipe e recursos de manuseio:** Observe o limite de 1–2 operadores da especificação técnica e utilize carrinhos adequados ou técnicas ergonômicas de levantamento em dupla para os módulos de 45 kg e 40 kg.\n2. **Kit de acessórios fornecido:** Certifique-se de que os 4 conjuntos de cada chumbador (M16, M18, M20 e M22) e 1 conjunto de estacas de fixação ao solo estejam conferidos antes da saída do almoxarifado.\n3. **Larguras de passagens e calçadas:** Confirme a largura útil dos acessos de pedestres e as restrições de sobrecarga de pavimentação entre a vaga veicular e cada base de fundação.\n4. **Envelope do poste e flange:** Garanta que os postes não excedam 12 m de altura nem 300 kg de peso total montado, correspondendo aos desenhos aprovados de flange."
+          ]
+        },
+        {
+          "heading": "Perguntas frequentes sobre transporte e embalagem",
+          "paragraphs": [
+            "**Quais são as dimensões da embalagem do elevador portátil de postes velolev?** A ficha técnica de origem especifica dimensões de embalagem de 650 × 350 × 500 mm e um peso líquido total do equipamento de 85 kg.",
+            "**O material da embalagem e o peso bruto de transporte são fixos na ficha técnica?** Não. O material do engradado e o peso bruto total para transporte internacional são confirmados para cada pedido real de acordo com o modal logístico e as exigências do país de entrega."
+          ]
+        }
+      ]
+    },
+    "overhead-power-lines-narrow-alley-pole-erection-planning": {
+      "locale": "pt",
+      "slug": "overhead-power-lines-narrow-alley-pole-erection-planning",
+      "title": "Planejamento de ereção de postes de 10 m e 12 m sob redes elétricas aéreas e becos estreitos | velolev",
+      "h1": "Planejamento de instalação de postes de iluminação de 10 m e 12 m junto a redes elétricas aéreas e vielas urbanas estreitas",
+      "description": "Checklist de inspeção prévia de canteiro para avaliar a ereção hidráulica ao nível do solo perto de linhas elétricas de distribuição, fachadas e vielas estreitas.",
+      "imageFolder": "/images/guides/overhead-power-lines-narrow-alley-pole-erection-planning",
+      "sections": [
+        {
+          "heading": "Por que corredores urbanos confinados exigem checagem de folgas em dois planos",
+          "paragraphs": [
+            "A modernização e substituição de postes de iluminação pública em centros históricos, vielas residenciais estreitas e alamedas densamente arborizadas impõem dois desafios geométricos simultâneos: corredores térreos estreitos que impedem o patolamento e a abertura de sapatas de caminhões munck, e cabos aéreos de energia ou projeções de fachadas que interceptam o raio de giro de postes de 10 m a 12 m.",
+            "Embora o Elevador Hidráulico Portátil velolev de 85 kg em dois módulos (módulo hidráulico de 45 kg mais gabinete elétrico de 40 kg) solucione integralmente a restrição de acesso veicular no solo, a portabilidade física do equipamento jamais substitui as distâncias mínimas de segurança em relação à rede energizada nem as autorizações municipais de içamento."
+          ]
+        },
+        {
+          "heading": "1. Matriz de levantamento prévio de corredores e espaço aéreo",
+          "paragraphs": [
+            "Documente estes cinco parâmetros do canteiro para o engenheiro responsável da obra e a concessionária de energia local antes de definir o método construtivo de ereção:",
+            "| Dimensão da restrição do canteiro | O que medir no canteiro de obras | Limite técnico de engenharia e governança |\n| :--- | :--- | :--- |\n| Altura e afastamento lateral de condutores aéreos | Distância vertical e horizontal da fundação até o condutor elétrico energizado mais próximo | Deve cumprir rigorosamente as distâncias mínimas de aproximação (NR-10 / concessionária) em todo o arco de 12 m do poste |\n| Largura e piso do corredor térreo | Ponto mais estreito de portões, vielas ou calçadas e estado da pavimentação | Deve permitir a passagem segura dos módulos de 610 × 220 × 220 mm e 500 × 300 × 250 mm |\n| Comprimento livre no solo para pré-montagem | Extensão linear desobstruída no solo ao longo do eixo de montagem do poste | O fuste do poste, braço de suporte e luminária exigem área nivelada para montagem antes da elevação |\n| Fachadas contíguas, árvores e sinalizações | Folga lateral dentro do envelope de giro da extremidade superior do poste | Evitar qualquer contato ou atrito durante a elevação do plano horizontal para o vertical |\n| Geometria da placa de base e fundação | Vão entre furos da flange (180–260 mm), diâmetro dos chumbadores (M16–M24) e integridade da sapata | Flanges fora das bitolas e medidas listadas exigem revisão prévia de desenho técnico cotado |"
+          ]
+        },
+        {
+          "heading": "2. Diretrizes de planejamento prévio vs procedimentos operacionais de campo",
+          "paragraphs": [
+            "Em total conformidade com as políticas editoriais e de engenharia da velolev, este guia destina-se ao planejamento preliminar do projeto e à coleta de dados no canteiro, não atuando como um manual de instruções operacionais de campo. Os procedimentos operacionais detalhados passo a passo, a delimitação de zonas de exclusão de pessoas e os protocolos de desenergização ou isolamento elétrico devem ser obrigatoriamente regidos pelos manuais formais do equipamento, supervisores técnicos credenciados e normas regulamentadoras de segurança elétrica aplicáveis."
+          ]
+        },
+        {
+          "heading": "3. Informações a anexar na solicitação de análise para canteiros confinados",
+          "paragraphs": [
+            "Se você estiver avaliando a instalação de postes sem guindaste em vielas estreitas ou vias adjacentes a redes aéreas de distribuição, inclua quatro itens fundamentais em seu pedido de cotação:\n- **Altura e peso total montado do poste:** Confirme a altura nominal da coluna (até a classe de 12 m) e o peso completo montado com luminária e suportes (igual ou inferior a 300 kg).\n- **Desenho técnico cotado da flange:** Forneça a quantidade de furos, a geometria do vão e o diâmetro dos chumbadores de ancoragem (bitolas M16–M22 incluídas no fornecimento básico; bitola M24 requer confirmação técnica dedicada).\n- **Fotografias do corredor e do canteiro:** Anexe fotos claras exibindo o entorno da fundação, a largura útil da passagem e a posição das fiações aéreas de utilidades.\n- **Governança de equipe e segurança:** Planeje a alocação de mão de obra dentro do parâmetro de 1–2 operadores da ficha técnica e das exigências locais de supervisão de içamento."
+          ]
+        },
+        {
+          "heading": "Perguntas frequentes sobre projetos em vielas estreitas e linhas aéreas",
+          "paragraphs": [
+            "**O equipamento compacto de 85 kg permite realizar a elevação diretamente embaixo de fiações elétricas aéreas baixas?** Não. Independentemente das dimensões compactas do elevador portátil, a ponta do poste de 10 m ou 12 m deve obrigatoriamente manter os afastamentos regulamentares de segurança elétrica aprovados pela concessionária e pelo responsável de segurança da obra.",
+            "**Este artigo pode ser utilizado como manual passo a passo de içamento e amarração no canteiro?** Não. Trata-se de um guia de planejamento prévio à instalação; sequências operacionais de campo exigem documentação técnica formal revisada e supervisão qualificada de segurança in loco."
+          ]
+        }
+      ]
     }
   },
   "vi": {
@@ -922,6 +1097,181 @@
           "heading": "Bagaimana peralatan mendapatkan daya di lokasi tanpa jaringan listrik?",
           "paragraphs": [
             "Kabinet listrik menggunakan baterai isi ulang 24 V sehingga tidak memerlukan pasokan listrik jaringan maupun generator selama pengangkatan. Lembar spesifikasi mencantumkan angka laporan pabrikan lebih dari 50 kali angkat per pengisian penuh dan waktu angkat 20 s, dengan validasi lapangan masih tertunda."
+          ]
+        }
+      ]
+    },
+    "40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost": {
+      "locale": "id",
+      "slug": "40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost",
+      "title": "Pemasangan Penerangan Area Parkir 40 Tiang: Perbandingan Cakupan Derek vs Alat Angkat Portabel dan Input Biaya | velolev",
+      "h1": "Pemasangan Penerangan Area Parkir 40 Tiang: Membandingkan Cakupan Sewa Truk Derek vs Alat Angkat Portabel dan Parameter Biaya",
+      "description": "Panduan membandingkan sewa truk derek bergerak dan alat angkat tiang hidrolik portabel untuk proyek penerangan area parkir 40 tiang dengan batasan cakupan setara dan tarif lokal kontraktor.",
+      "imageFolder": "/images/guides/40-pole-parking-lot-lighting-crane-vs-lifter-scope-cost",
+      "sections": [
+        {
+          "heading": "Mengapa Perbandingan Cakupan Setara Penting pada Proyek Parkir Multi-Tiang",
+          "paragraphs": [
+            "Area parkir komersial, terminal logistik, kawasan industri, dan kampus perguruan tinggi sering kali membutuhkan pemasangan 20 hingga 60 tiang lampu penerangan jalan atau penerangan area dalam satu tahap pengerjaan. Saat membandingkan penggunaan truk derek bergerak (mobile crane) dengan Alat Angkat Tiang Lampu Portabel velolev, penganggaran yang akurat bergantung pada penetapan paket kerja yang benar-benar identik, bukan sekadar membandingkan jam sewa alat berat semata.",
+            "Karena velolev beroperasi dengan model penawaran B2B privat tanpa mencantumkan harga publik mesin maupun asumsi nilai mata uang regional tertentu, estimator proyek dapat memasukkan tarif sewa derek lokal, biaya tenaga kerja lapangan, dan volume proyek ke dalam Kalkulator Skenario Biaya velolev untuk menguji sensitivitas anggaran menggunakan formula yang transparan."
+          ]
+        },
+        {
+          "heading": "1. Tabel Perbandingan Paket Kerja Cakupan Setara (Contoh Proyek 40 Tiang)",
+          "paragraphs": [
+            "Sebelum memasukkan angka ke dalam model biaya proyek, pastikan setiap tiang kandidat memenuhi batas spesifikasi: kelas tiang yang berlaku hingga 12 m, beban terukur maksimum 300 kg, dan rentang bentang lubang flensa 180–260 mm (atau telah lulus tinjauan gambar teknis berdimensi). Selanjutnya, bandingkan setiap komponen penggerak biaya pada aktivitas yang setara:",
+            "| Komponen Biaya & Cakupan Proyek | Cakupan Truk Derek Bergerak (Mobile Crane) | Cakupan Alat Angkat Hidrolik Portabel (S4) |\n| :--- | :--- | :--- |\n| Mobilisasi lokasi & akses kendaraan | Mobilisasi kendaraan berat, pemasangan bantalan kaki penopang (outrigger), dan penutupan jalur jalan atau lajur parkir | Unit dua modul 85 kg (modul hidrolik 45 kg + kabinet listrik 24 V 40 kg) diangkut dengan kendaraan servis ringan atau pikap |\n| Dasar tarif peralatan | Biaya sewa derek harian atau per jam ditambah biaya minimum mobilisasi alat berat | Masukkan tarif peralatan proyek Anda ke kalkulator; tidak ada harga publik yang diasumsikan |\n| Alokasi personel kerja | Operator derek berlisensi ditambah rigger dan kru darat sesuai regulasi lokasi proyek | 1–2 operator yang tercantum pada lembar spesifikasi; sesuaikan jumlah personel dengan rencana K3 lokasi kerja |\n| Alur kerja pengangkatan & penyejajaran | Pengangkatan gantung dengan tali kawat dari trailer ke atas baut angkur pondasi | Sambungan dasar tiang di permukaan tanah dan pengangkatan hidrolik untuk pelat dasar flensa yang telah ditinjau |\n| Aktivitas non-pengangkatan | Bongkar muat tiang, pengkabelan rumah lampu (luminaire), penyetelan ketegakan (plumbing), dan pengencangan mur angkur | Cakupan pembongkaran, pengkabelan, penegakan vertikal, dan pengencangan mur angkur yang sama tetap berlaku |"
+          ]
+        },
+        {
+          "heading": "2. Memisahkan Tiang di Luar Spesifikasi Sebelum Pemodelan Anggaran",
+          "paragraphs": [
+            "Pada paket pekerjaan area parkir dan jalan perimeter lingkar kawasan, sebagian besar kolom merupakan tiang lampu standar 8 m hingga 12 m dengan berat di bawah 300 kg. Namun, sebagian kecil tiang lampu sorot perimeter (high-mast floodlight) mungkin melebihi tinggi 12 m atau berat 300 kg. Pisahkan tiang yang melebihi batas tinggi dan beban tersebut dari lingkup alat angkat portabel, dan tetap alokasikan truk derek khusus untuk titik-titik pondasi tersebut.",
+            "Selain itu, perhatikan batasan teknis pada Kalkulator Skenario Biaya: alat ini memodelkan perbandingan biaya operasional langsung proyek tanpa mengasumsikan nilai jual kembali alat (resale value), dan input volume proyek nol akan menghasilkan nilai aktivitas pengangkatan nol."
+          ]
+        },
+        {
+          "heading": "3. Menyiapkan Kerangka Acuan Proyek Area Parkir untuk Penawaran",
+          "paragraphs": [
+            "Saat mengajukan permintaan penawaran B2B privat untuk proyek penerangan area parkir multi-tiang atau kawasan kampus, sertakan empat data faktual proyek berikut:\n1. **Daftar Jadwal Tiang (Pole Schedule):** Jumlah total tiang, tinggi tiang (dalam batas kelas 12 m), dan berat rakitan total termasuk lengan ornamen dan rumah lampu (sama dengan atau di bawah 300 kg).\n2. **Detail Pelat Flensa & Baut Angkur:** Bentang jarak antar lubang flensa (rentang terdaftar 180–260 mm), konfigurasi lubang (pola 4, 6, atau 8 lubang), dan diameter baut angkur (set M16–M22 disertakan dalam paket; baut M24 dan flensa non-standar memerlukan tinjauan gambar teknis).\n3. **Akses Lokasi & Tata Letak:** Izin jarak bebas perkerasan jalan, batas beban struktural lantai parkir (jika di atas dek atau lantai bawah tanah), dan lintasan kabel utilitas udara.\n4. **Tujuan Proyek & Ketentuan Pengiriman:** Negara lokasi proyek, pelabuhan atau titik serah di lokasi, dan target jadwal pengiriman."
+          ]
+        },
+        {
+          "heading": "Pertanyaan Umum Seputar Pemodelan Biaya Proyek Multi-Tiang",
+          "paragraphs": [
+            "**Mengapa Kalkulator Skenario Biaya velolev mengosongkan harga peralatan?** velolev memberikan penawaran konfigurasi ekspor B2B secara privat berdasarkan cakupan proyek dan negara tujuan pengiriman, sehingga tidak ada harga alat publik maupun preset mata uang regional yang dipublikasikan.",
+            "**Apakah waktu angkat 20 detik yang dilaporkan produsen mencakup seluruh waktu pemasangan per tiang?** Tidak. Angka 20 detik tersebut hanya mengacu pada langkah kayuhan pengangkatan hidrolik (dengan validasi lapangan yang masih tertunda). Total waktu siklus per tiang tetap harus memperhitungkan transportasi internal, penempatan posisi (staging), pengkabelan, penyejajaran vertikal, dan pengencangan baut angkur."
+          ]
+        }
+      ]
+    },
+    "24v-battery-off-grid-rural-road-pole-lifting-planning": {
+      "locale": "id",
+      "slug": "24v-battery-off-grid-rural-road-pole-lifting-planning",
+      "title": "Alat Angkat Tiang Portabel Baterai 24 V untuk Jalan Pedesaan Off-Grid: Jumlah Pengangkatan per Pengisian Daya dan Perencanaan Lapangan | velolev",
+      "h1": "Alat Angkat Tiang Portabel Baterai 24 V untuk Jalan Pedesaan Off-Grid: Jumlah Pengangkatan per Siklus Pengisian dan Perencanaan Kerja Lapangan",
+      "description": "Panduan perencanaan kerja lapangan menggunakan kabinet listrik baterai isi ulang 24 V untuk koridor jalan pedesaan off-grid, termasuk batasan estimasi pengangkatan per pengisian daya.",
+      "imageFolder": "/images/guides/24v-battery-off-grid-rural-road-pole-lifting-planning",
+      "sections": [
+        {
+          "heading": "Daya Mandiri 24 V untuk Koridor Jalan Tanpa Jaringan Listrik",
+          "paragraphs": [
+            "Proyek penerangan jalan pedesaan dan koridor jalan bertenaga surya (PJUTS off-grid) sering kali membentang puluhan kilometer di area yang sama sekali belum terjangkau jaringan listrik umum selama tahap pekerjaan sipil dan mekanikal. Membawa genset diesel terpisah di samping peralatan pengangkat menambah beban logistik bahan bakar, kebisingan, serta pergerakan kendaraan tambahan di jalan sempit.",
+            "Alat Angkat Tiang Lampu Portabel velolev mengintegrasikan baterai isi ulang 24 V di dalam kabinet listrik berbobot 40 kg (500 × 300 × 250 mm), memungkinkan siklus pengangkatan hidrolik bekerja mandiri tanpa memerlukan pasokan listrik jala-jala eksternal. Perencanaan lapangan yang tepat menuntut pemisahan tegas antara spesifikasi perangkat keras baterai yang telah terkonfirmasi dengan angka ketahanan yang dilaporkan produsen yang masih menunggu validasi lapangan."
+          ]
+        },
+        {
+          "heading": "1. Spesifikasi Kabinet Listrik 24 V dan Status Bukti Teknis",
+          "paragraphs": [
+            "Tinjau parameter spesifikasi S4 untuk modul daya dan kontrol sebelum menjadwalkan shift kerja berhari-hari di koridor terpencil:",
+            "| Parameter Daya & Ketahanan | Nilai Spesifikasi S4 | Klasifikasi Bukti & Aturan Perencanaan |\n| :--- | :--- | :--- |\n| Tegangan catu daya | Baterai isi ulang 24 V | Spesifikasi S4 terkonfirmasi; terpasang terlindung di dalam kabinet listrik |\n| Berat & dimensi kabinet listrik | 40 kg · 500 × 300 × 250 mm | Spesifikasi S4 terkonfirmasi; memuat sistem kontrol, pompa hidrolik, baterai, amperemeter, voltmeter, dan tombol pengangkat |\n| Pengangkatan per pengisian penuh | Lebih dari 50 kali pengangkatan per pengisian penuh | Dilaporkan produsen; validasi lapangan tertunda — gunakan sebagai referensi perencanaan nominal |\n| Durasi kayuhan pengangkatan | Waktu angkat 20 detik yang dilaporkan | Dilaporkan produsen; validasi lapangan tertunda — di luar waktu persiapan posisi dan pengencangan |\n| Peringkat siklus penggunaan | Lebih dari 3000 siklus penggunaan | Dilaporkan produsen; validasi lapangan tertunda — bukan jaminan garansi atau kurva beban |"
+          ]
+        },
+        {
+          "heading": "2. Perencanaan Pengisian Daya Praktis dan Manajemen Shift di Rute Terpencil",
+          "paragraphs": [
+            "Mengingat metrik lebih dari 50 kali pengangkatan per pengisian penuh merupakan data yang dilaporkan produsen dengan validasi lapangan yang masih tertunda, pengawas proyek di lapangan harus menerapkan margin cadangan daya yang konservatif dalam jadwal kerja pedesaan, alih-alih menguras baterai hingga batas kosong di lokasi yang jauh dari pangkalan logistik.",
+            "Rencanakan pengisian daya baterai semalaman di basecamp proyek atau gudang logistik pendukung, pantau indikator amperemeter dan voltmeter pada kabinet listrik secara berkala sepanjang shift, dan konfirmasikan kecocokan voltase pengisi daya (charger) dengan pasokan daya depot Anda saat mengajukan permintaan penawaran harga."
+          ]
+        },
+        {
+          "heading": "3. Pemeriksaan Terpadu Pemasangan Tiang di Jalan Pedesaan Off-Grid",
+          "paragraphs": [
+            "Kemandirian daya listrik hanyalah salah satu syarat kelancaran proyek penerangan jalan desa. Sebelum mobilisasi ke koridor terpencil tanpa jaringan listrik, verifikasi tiga parameter pendukung berikut:\n- **Berat Rakitan Lengkap:** Pastikan setiap tiang, lengan ornamen, rumah lampu, dan modul panel surya tidak melampaui beban terukur 300 kg dan berada dalam kelas tiang 12 m.\n- **Flensa Dasar & Baut Angkur:** Konfirmasikan bentang lubang flensa 180–260 mm dan ukuran baut angkur M16–M24 (set M16–M22 disertakan; baut M24 dan flensa non-standar memerlukan tinjauan gambar teknis).\n- **Daya Dukung Tanah & Bahu Jalan:** Pastikan bahu jalan tanah atau permukaan belum beraspal di sekitar pondasi beton cukup stabil untuk pijakan alat dan 1–2 operator kerja."
+          ]
+        },
+        {
+          "heading": "Pertanyaan Umum Seputar Pengoperasian Baterai 24 V",
+          "paragraphs": [
+            "**Apakah alat angkat portabel velolev memerlukan genset di lokasi proyek off-grid?** Tidak. Kabinet listrik telah dilengkapi baterai isi ulang 24 V internal yang menggerakkan pompa hidrolik selama proses pengangkatan.",
+            "**Apakah angka lebih dari 50 kali pengangkatan per pengisian daya telah diverifikasi secara independen dalam uji coba lapangan?** Belum. Lembar spesifikasi teknis sumber mencantumkan angka lebih dari 50 kali pengangkatan per pengisian penuh sebagai klaim yang dilaporkan pihak produsen dengan validasi lapangan yang masih tertunda."
+          ]
+        }
+      ]
+    },
+    "pickup-truck-transport-modular-pole-jack-dimensions": {
+      "locale": "id",
+      "slug": "pickup-truck-transport-modular-pole-jack-dimensions",
+      "title": "Transportasi Truk Pikap dan Minivan untuk Alat Angkat Tiang Modular: Dimensi Kemasan 650 × 350 × 500 mm dan Ukuran Modul | velolev",
+      "h1": "Transportasi Truk Pikap dan Minivan untuk Alat Angkat Tiang Modular: Dimensi Kemasan 650 × 350 × 500 mm dan Rincian Ukuran Sub-Modul",
+      "description": "Verifikasi dimensi kargo kendaraan operasional, ukuran kemasan (650 × 350 × 500 mm), dan bobot modul terpisah (45 kg + 40 kg) untuk transportasi alat angkat tiang velolev dengan pikap atau van.",
+      "imageFolder": "/images/guides/pickup-truck-transport-modular-pole-jack-dimensions",
+      "sections": [
+        {
+          "heading": "Mengangkut Peralatan Pengangkat Tiang Tanpa Truk Flatbed Derek",
+          "paragraphs": [
+            "Kontraktor pelaksana pemeliharaan penerangan jalan kota, jalur pedestrian taman kota, dan area parkir komersial umumnya mengandalkan armada mobil pikap servis utilitas ringan atau van tertutup, bukan truk flatbed derek besar. Mengetahui dimensi modul secara presisi dan bobot bersih unit memungkinkan perencana logistik memverifikasi ruang bak muatan serta titik pengikatan (tie-down) sebelum pemberangkatan tim ke lapangan.",
+            "Alat Angkat Tiang Lampu Portabel velolev memiliki berat total peralatan sebesar 85 kg yang terbagi menjadi dua modul terpisah, dengan dimensi kemasan pada lembar spesifikasi sumber sebesar 650 × 350 × 500 mm."
+          ]
+        },
+        {
+          "heading": "1. Tabel Referensi Dimensi & Bobot untuk Pemuatan Kendaraan Operasional",
+          "paragraphs": [
+            "Gunakan dimensi S4 terkonfirmasi di bawah ini saat memeriksa ruang bebas bak kendaraan, bukaan pintu van, atau paletisasi kargo pengiriman:",
+            "| Komponen / Sub-Modul Rakitan | Panjang × Lebar × Tinggi (mm) | Berat | Catatan Penanganan & Logistik |\n| :--- | :--- | :--- | :--- |\n| Modul pengangkat hidrolik | 610 × 220 × 220 mm | 45 kg | Dimensi ringkas; amankan dengan tali pengikat agar tidak bergeser atau terguling saat transit |\n| Kabinet listrik (24 V) | 500 × 300 × 250 mm | 40 kg | Posisikan selalu tegak, lindungi dari benturan dan paparan kelembapan/air hujan |\n| Total unit tanpa kemasan | Dua modul terpisah | 85 kg total | Dapat diangkat dan diangkut secara terpisah dari kendaraan menuju titik kerja pedestrian |\n| Kemasan pada lembar spesifikasi | 650 × 350 × 500 mm | 85 kg berat alat bersih | Material kemasan peti luar dan berat kotor pengiriman dikonfirmasi sesuai pesanan aktual |"
+          ]
+        },
+        {
+          "heading": "2. Membedakan Spesifikasi Sumber Terkonfirmasi vs Rincian Sesuai Pesanan Pengiriman",
+          "paragraphs": [
+            "Untuk menghindari kesalahpahaman dalam dokumen tender atau penanganan ekspedisi freight forwarding, bedakan secara tegas apa yang tercantum pasti pada lembar spesifikasi S4 dan apa yang ditetapkan per pesanan pengiriman aktual. Dimensi kemasan 650 × 350 × 500 mm dan berat peralatan 85 kg adalah nilai faktual yang terkonfirmasi pada lembar spesifikasi sumber.",
+            "Namun demikian, jenis bahan peti kemasan kayu/karton pelindung, berat kotor pengiriman ekspor (gross shipping weight), serta sertifikasi perlakuan kayu (fumigasi/ISPM) tidak ditetapkan secara kaku pada lembar spesifikasi S4, melainkan disesuaikan dan dikonfirmasi berdasarkan moda transportasi serta negara tujuan saat finalisasi penawaran ekspor."
+          ]
+        },
+        {
+          "heading": "3. Daftar Periksa Pemindahan Alat dari Kendaraan ke Titik Pondasi",
+          "paragraphs": [
+            "Setelah kendaraan pikap atau van servis tiba di titik pemberhentian kendaraan terdekat, verifikasi empat aspek teknis transfer alat menuju pondasi tiang:\n1. **Personel & Alat Bantu Angkut:** Ikuti panduan alokasi 1–2 operator yang tertera pada spesifikasi teknis, serta gunakan troli manual atau teknik angkat berpasangan untuk memindahkan modul 45 kg dan 40 kg.\n2. **Kelengkapan Perangkat Keras Bawaan:** Pastikan 4 set baut angkur untuk masing-masing ukuran M16, M18, M20, dan M22 serta 1 set pasak tanah (ground stakes) telah lengkap sebelum kendaraan berangkat dari pangkalan logistik.\n3. **Lebar Gerbang & Beban Jalur Pedestrian:** Pastikan lebar bukaan pintu gerbang, jalur trotoar, dan kapasitas beban permukaan lantai antara area parkir dan titik pondasi aman dilalui.\n4. **Kesesuaian Tiang & Pelat Flensa:** Pastikan tiang tidak melebihi tinggi 12 m atau berat rakitan 300 kg, serta telah sesuai dengan gambar peninjauan flensa pondasi."
+          ]
+        },
+        {
+          "heading": "Pertanyaan Umum Seputar Transportasi dan Dimensi Kemasan",
+          "paragraphs": [
+            "**Berapa dimensi kemasan alat angkat tiang portabel velolev?** Lembar spesifikasi sumber mencantumkan dimensi kemasan 650 × 350 × 500 mm dengan berat total peralatan sebesar 85 kg.",
+            "**Apakah jenis bahan kemasan dan berat kotor pengiriman bersifat mutlak pada lembar spesifikasi?** Tidak. Material kemasan luar dan berat kotor pengiriman dikonfirmasikan per pesanan aktual berdasarkan moda pengangkutan dan persyaratan logistik negara tujuan."
+          ]
+        }
+      ]
+    },
+    "overhead-power-lines-narrow-alley-pole-erection-planning": {
+      "locale": "id",
+      "slug": "overhead-power-lines-narrow-alley-pole-erection-planning",
+      "title": "Perencanaan Pemasangan Tiang Lampu Jalan 10 m dan 12 m di Dekat Kabel Listrik Udara dan Gang Sempit | velolev",
+      "h1": "Perencanaan Pemasangan Tiang Lampu Jalan 10 m dan 12 m di Dekat Kabel Listrik Udara dan Jalur Gang Perkotaan Sempit",
+      "description": "Daftar periksa survei lokasi pra-pemasangan untuk mengevaluasi pendirian tiang lampu hidrolik dari permukaan tanah di dekat jaringan kabel listrik udara, fasad gedung, dan gang sempit.",
+      "imageFolder": "/images/guides/overhead-power-lines-narrow-alley-pole-erection-planning",
+      "sections": [
+        {
+          "heading": "Mengapa Koridor Perkotaan Padat Memerlukan Pemeriksaan Ruang Bebas Dua Bidang",
+          "paragraphs": [
+            "Penggantian atau pemasangan tiang lampu penerangan jalan di kawasan bersejarah, pemukiman padat dengan gang sempit, dan koridor jalan berpepohonan menghadapi dua kendala geometris secara bersamaan: ruang darat yang sempit yang mustahil dimasuki kaki penopang (outrigger) truk derek besar, serta jaringan kabel listrik udara tegangan rendah/menengah atau tonjolan balkon bangunan yang bersinggungan dengan radius ayunan tiang 10 m hingga 12 m saat didirikan.",
+            "Meskipun Alat Angkat Tiang Lampu Portabel velolev dengan arsitektur dua modul 85 kg (modul hidrolik 45 kg ditambah kabinet kontrol listrik 40 kg) memecahkan masalah akses kendaraan di permukaan tanah, portabilitas alat tidak pernah menggugurkan persyaratan jarak bebas aman kelistrikan (safety clearance) maupun perizinan pengangkatan dari otoritas utilitas ketenagalistrikan setempat."
+          ]
+        },
+        {
+          "heading": "1. Matriks Survei Lapangan Koridor Tanah & Ruang Udara Pra-Pemasangan",
+          "paragraphs": [
+            "Dokumentasikan lima parameter kondisi lapangan berikut bersama pengawas berlisensi Anda dan pihak otoritas utilitas listrik (seperti PLN di Indonesia) sebelum menetapkan metode pendirian tiang:",
+            "| Dimensi Batasan Lokasi | Pengukuran yang Wajib Dilakukan di Lapangan | Batasan Teknis & Regulasi Keselamatan |\n| :--- | :--- | :--- |\n| Tinggi konduktor udara & jarak offset lateral | Jarak vertikal dan horizontal dari titik pondasi ke kabel beraliran listrik terdekat | Wajib memenuhi jarak aman minimum (minimum approach distance) sepanjang busur lintasan ayunan tiang 12 m |\n| Lebar koridor tanah & jenis permukaan | Bagian tersempit pada gerbang, gang, atau trotoar serta daya dukung perkerasan | Wajib memungkinkan mobilisasi modul ukuran 610 × 220 × 220 mm dan 500 × 300 × 250 mm dengan aman |\n| Panjang ruang perakitan rebah mendatar | Panjang area darat bebas rintangan searah sumbu perakitan tiang | Batang tiang, lengan ornamen, dan rumah lampu memerlukan ruang rata sebelum diangkat |\n| Fasad bangunan, pepohonan, dan papan reklame | Ruang bebas lateral di dalam area sapuan lintasan ujung atas tiang | Mencegah benturan selama proses rotasi tiang dari posisi rebah horizontal ke vertikal |\n| Geometri pelat flensa dasar & pondasi | Bentang lubang flensa (180–260 mm), diameter baut angkur (M16–M24), dan mutu beton pondasi | Pelat flensa non-standar wajib melalui tinjauan gambar teknis berdimensi |"
+          ]
+        },
+        {
+          "heading": "2. Batasan Panduan Perencanaan vs Prosedur Operasional Standar (SOP) Lapangan",
+          "paragraphs": [
+            "Sesuai dengan kebijakan editorial dan tata kelola teknis velolev, dokumen ini berfungsi sebagai panduan perencanaan awal proyek dan pengumpulan data teknis lokasi, bukan sebagai manual pengoperasian alat di lapangan (field operating SOP). Urutan langkah kerja operasional terperinci, penetapan zona isolasi bahaya personel, dan protokol pemadaman/isolasi listrik wajib mengacu pada buku manual peralatan resmi yang telah ditinjau, arahan pengawas bersertifikat, dan regulasi keselamatan instalasi ketenagalistrikan yang berlaku."
+          ]
+        },
+        {
+          "heading": "3. Data yang Wajib Disertakan Saat Mengajukan Tinjauan Lokasi Khusus / Terbatas",
+          "paragraphs": [
+            "Jika Anda sedang mengevaluasi pemasangan tiang tanpa truk derek untuk gang perkotaan yang sempit atau koridor yang berdekatan dengan jaringan kabel listrik udara, sertakan empat informasi berikut dalam permohonan penawaran harga Anda:\n- **Tinggi Tiang & Berat Rakitan Total:** Konfirmasikan tinggi tiang (hingga kelas 12 m) dan bobot rakitan lengkap termasuk rumah lampu dan bracket (sama dengan atau di bawah 300 kg).\n- **Gambar Berdimensi Pelat Flensa:** Cantumkan jumlah lubang, definisi jarak bentang antar lubang, dan diameter baut angkur (set M16–M22 disertakan; baut M24 memerlukan konfirmasi terpisah).\n- **Foto Dokumentasi Koridor Lokasi:** Lampirkan foto kondisi aktual di sekitar pondasi, lebar gang akses, serta posisi lintasan kabel listrik udara.\n- **Rencana Personel & Tata Kelola K3:** Rencanakan alokasi kru sesuai batasan spesifikasi 1–2 operator serta kepatuhan pada standar pengawasan pengangkatan setempat."
+          ]
+        },
+        {
+          "heading": "Pertanyaan Umum Seputar Proyek Gang Sempit dan Koridor Kabel Udara",
+          "paragraphs": [
+            "**Apakah alat angkat ringkas berbobot 85 kg memungkinkan pengangkatan tiang tepat di bawah kabel listrik udara bertegangan rendah?** Tidak. Terlepas dari ringkasnya ukuran peralatan pengangkat, ujung tiang 10 m atau 12 m yang diayunkan wajib selalu menjaga jarak bebas aman minimum dari konduktor bertegangan listrik sesuai persetujuan insinyur K3 dan otoritas utilitas penyedia listrik.",
+            "**Dapatkah artikel ini dijadikan panduan teknis langkah demi langkah untuk pekerjaan rigging di lapangan?** Tidak. Artikel ini merupakan panduan perencanaan awal survei lokasi; urutan langkah teknis operasional di lapangan harus berpedoman pada dokumentasi operasional resmi yang telah ditinjau serta di bawah pengawasan K3 spesifik lokasi kerja."
           ]
         }
       ]
