@@ -9,6 +9,8 @@ import HeaderDiscovery from "../components/procurement/HeaderDiscovery.astro";
 import LanguageSwitcher from "../components/LanguageSwitcher.astro";
 import "../styles/procurement.css";
 import MediaLightbox from "../components/procurement/MediaLightbox.astro";
+import WhatsAppChat from "../components/procurement/WhatsAppChat.astro";
+import CookieConsent from "../components/procurement/CookieConsent.astro";
 const {page="home",locale="en",article=null,errorPage=false,title: customTitle,description: customDescription,canonicalPath=null,alternates: customAlternates=null,breadcrumbs: customBreadcrumbs=null,extraSchemas=[]}=Astro.props;
 const current=Object.hasOwn(copies,locale)?locale:"en";
 const formCopy=copies[current];
@@ -147,6 +149,8 @@ const lcpImage = article?.heroCoverImage || (page === "home" || page === "produc
         <LanguageSwitcher locale={current} placement="footer" alternates={alternates}/>
       </div>
     </footer>
+    <WhatsAppChat locale={current}/>
+    <CookieConsent locale={current}/>
     <script>
       const toggle=document.querySelector<HTMLButtonElement>(".nav-toggle"),nav=document.getElementById("site-navigation");
       toggle?.addEventListener("click",()=>{const open=toggle.getAttribute("aria-expanded")!=="true";toggle.setAttribute("aria-expanded",String(open));nav?.classList.toggle("is-open",open);if(!open)nav?.querySelectorAll<HTMLDetailsElement>("details[open]").forEach(d=>d.open=false);});

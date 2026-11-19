@@ -35,7 +35,12 @@
     "newInquiry": "Start a new inquiry",
     "contactRequired": "Provide an email address or phone number.",
     "contactPending": "Business contact details are not published yet. You can use this form to send your request.",
-    "extraDetails": "Add pole details or a drawing (optional)"
+    "extraDetails": "Add pole details or a drawing (optional)",
+    "captcha": "Security verification",
+    "captchaRefresh": "Refresh",
+    "captchaPlaceholder": "Result",
+    "captchaRequired": "Please complete the verification problem.",
+    "captchaFailed": "Verification incorrect or expired. Please try again."
   },
   "es": {
     "title": "Consulta de proyecto",
@@ -73,7 +78,12 @@
     "newInquiry": "Nueva consulta",
     "contactRequired": "Indique un correo electrónico o teléfono.",
     "contactPending": "Los datos de contacto directo aún no están publicados. Puede enviar su solicitud con este formulario.",
-    "extraDetails": "Añadir datos del poste o un plano (opcional)"
+    "extraDetails": "Añadir datos del poste o un plano (opcional)",
+    "captcha": "Verificación de seguridad",
+    "captchaRefresh": "Actualizar",
+    "captchaPlaceholder": "Resultado",
+    "captchaRequired": "Por favor complete el problema de verificación.",
+    "captchaFailed": "Verificación incorrecta o caducada. Inténtelo de nuevo."
   },
   "fr": {
     "title": "Demande de projet",
@@ -111,7 +121,12 @@
     "newInquiry": "Nouvelle demande",
     "contactRequired": "Indiquez un e-mail ou un numéro de téléphone.",
     "contactPending": "Les coordonnées directes ne sont pas encore publiées. Vous pouvez utiliser ce formulaire.",
-    "extraDetails": "Ajouter les détails du mât ou un plan (facultatif)"
+    "extraDetails": "Ajouter les détails du mât ou un plan (facultatif)",
+    "captcha": "Vérification de sécurité",
+    "captchaRefresh": "Actualiser",
+    "captchaPlaceholder": "Résultat",
+    "captchaRequired": "Veuillez résoudre le problème de vérification.",
+    "captchaFailed": "Vérification incorrecte ou expirée. Veuillez réessayer."
   },
   "pt": {
     "title": "Consulta de projeto",
@@ -149,7 +164,12 @@
     "newInquiry": "Nova consulta",
     "contactRequired": "Informe um e-mail ou telefone.",
     "contactPending": "Os contatos diretos ainda não foram publicados. Use este formulário para enviar sua solicitação.",
-    "extraDetails": "Adicionar dados do poste ou desenho (opcional)"
+    "extraDetails": "Adicionar dados do poste ou desenho (opcional)",
+    "captcha": "Verificação de segurança",
+    "captchaRefresh": "Atualizar",
+    "captchaPlaceholder": "Resultado",
+    "captchaRequired": "Por favor, conclua o problema de verificação.",
+    "captchaFailed": "Verificação incorreta ou expirada. Tente novamente."
   },
   "vi": {
     "title": "Yêu cầu dự án",
@@ -187,7 +207,12 @@
     "newInquiry": "Yêu cầu mới",
     "contactRequired": "Cung cấp email hoặc số điện thoại.",
     "contactPending": "Thông tin liên hệ trực tiếp chưa được công bố. Bạn có thể gửi yêu cầu qua biểu mẫu này.",
-    "extraDetails": "Thêm thông số cột hoặc bản vẽ (tùy chọn)"
+    "extraDetails": "Thêm thông số cột hoặc bản vẽ (tùy chọn)",
+    "captcha": "Xác minh bảo mật",
+    "captchaRefresh": "Làm mới",
+    "captchaPlaceholder": "Kết quả",
+    "captchaRequired": "Vui lòng hoàn thành câu hỏi xác minh.",
+    "captchaFailed": "Xác minh không đúng hoặc đã hết hạn. Vui lòng thử lại."
   },
   "th": {
     "title": "สอบถามโครงการ",
@@ -225,7 +250,12 @@
     "newInquiry": "ส่งคำขอใหม่",
     "contactRequired": "กรอกอีเมลหรือหมายเลขโทรศัพท์",
     "contactPending": "ยังไม่ได้เผยแพร่ข้อมูลติดต่อโดยตรง คุณสามารถส่งคำขอผ่านแบบฟอร์มนี้",
-    "extraDetails": "เพิ่มข้อมูลเสาหรือแบบ (ไม่บังคับ)"
+    "extraDetails": "เพิ่มข้อมูลเสาหรือแบบ (ไม่บังคับ)",
+    "captcha": "การยืนยันความปลอดภัย",
+    "captchaRefresh": "รีเฟรช",
+    "captchaPlaceholder": "ผลลัพธ์",
+    "captchaRequired": "โปรดตอบคำถามยืนยันความถูกต้อง",
+    "captchaFailed": "การยืนยันไม่ถูกต้องหรือหมดอายุ โปรดลองอีกครั้ง"
   },
   "id": {
     "title": "Permintaan proyek",
@@ -263,6 +293,11 @@
     "newInquiry": "Permintaan baru",
     "contactRequired": "Masukkan email atau nomor telepon.",
     "contactPending": "Kontak langsung belum dipublikasikan. Gunakan formulir ini untuk mengirim permintaan.",
-    "extraDetails": "Tambahkan detail tiang atau gambar (opsional)"
+    "extraDetails": "Tambahkan detail tiang atau gambar (opsional)",
+    "captcha": "Verifikasi keamanan",
+    "captchaRefresh": "Segarkan",
+    "captchaPlaceholder": "Hasil",
+    "captchaRequired": "Silakan selesaikan masalah verifikasi.",
+    "captchaFailed": "Verifikasi salah atau kedaluwarsa. Silakan coba lagi."
   }
 }

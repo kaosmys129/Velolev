@@ -244,6 +244,10 @@
       "passed": true
     },
     {
+      "name": "home: local link /privacy/",
+      "passed": true
+    },
+    {
       "name": "product: built page exists",
       "passed": true
     },
@@ -484,6 +488,10 @@
       "passed": true
     },
     {
+      "name": "product: local link /privacy/",
+      "passed": true
+    },
+    {
       "name": "compatibility: built page exists",
       "passed": true
     },
@@ -696,6 +704,10 @@
       "passed": true
     },
     {
+      "name": "compatibility: local link /privacy/",
+      "passed": true
+    },
+    {
       "name": "quote: built page exists",
       "passed": true
     },
@@ -889,6 +901,10 @@
     },
     {
       "name": "quote: local link /id/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: local link /privacy/",
       "passed": true
     },
     {
@@ -1088,6 +1104,10 @@
       "passed": true
     },
     {
+      "name": "contact: local link /privacy/",
+      "passed": true
+    },
+    {
       "name": "privacy: built page exists",
       "passed": true
     },
@@ -1281,6 +1301,10 @@
     },
     {
       "name": "privacy: local link /id/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: local link /privacy/",
       "passed": true
     },
     {
@@ -1480,6 +1504,10 @@
       "passed": true
     },
     {
+      "name": "terms: local link /privacy/",
+      "passed": true
+    },
+    {
       "name": "editorial: built page exists",
       "passed": true
     },
@@ -1673,6 +1701,10 @@
     },
     {
       "name": "editorial: local link /id/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: local link /privacy/",
       "passed": true
     },
     {

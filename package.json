@@ -10,6 +10,7 @@
     "dev": "npm --prefix maquin-astro-theme run dev",
     "build": "npm --prefix maquin-astro-theme run build && node -e \"import fs from 'node:fs';fs.rmSync('dist',{recursive:true,force:true});fs.cpSync('maquin-astro-theme/dist','dist',{recursive:true})\"",
     "start": "npm --prefix maquin-astro-theme run serve",
+    "inquiry:test": "npm --prefix maquin-astro-theme run inquiry:test",
     "email:test": "npm --prefix maquin-astro-theme run email:test",
     "edm:send": "npm --prefix maquin-astro-theme run edm:send",
     "edm:preview": "npm --prefix maquin-astro-theme run edm:preview",

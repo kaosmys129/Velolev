@@ -1,5 +1,5 @@
 {
-  "sourceDigest": "a4082949ea80e3fcd6bc231dbd48414a3fa265aee4872bb1c533897400e040ce",
+  "sourceDigest": "9885a9d4341a96cfd5a2ed9772cf9cf5250bfaac20871686d1b855988ff521ad",
   "assetDigest": "5193b91078a0748ce9eaaaadabfcec5ff7be7ffcc9c085580a36817d3593dae5",
   "date": "2026-10-28",
   "stage": "D31-D60",
@@ -220,6 +220,10 @@
     },
     {
       "name": "solar: linked resource /id/solutions/solar-street-light-installation/",
+      "passed": true
+    },
+    {
+      "name": "solar: linked resource /privacy/",
       "passed": true
     },
     {
@@ -643,6 +647,10 @@
       "passed": true
     },
     {
+      "name": "parking: linked resource /privacy/",
+      "passed": true
+    },
+    {
       "name": "parking: canonical mode",
       "passed": true
     },
@@ -1051,6 +1059,10 @@
       "passed": true
     },
     {
+      "name": "compare: linked resource /privacy/",
+      "passed": true
+    },
+    {
       "name": "compare: canonical mode",
       "passed": true
     },
@@ -1440,6 +1452,10 @@
     },
     {
       "name": "roi: linked resource /id/tools/roi-calculator/",
+      "passed": true
+    },
+    {
+      "name": "roi: linked resource /privacy/",
       "passed": true
     },
     {
@@ -1852,6 +1868,10 @@
     },
     {
       "name": "method: linked resource /id/guides/install-light-pole-without-crane/",
+      "passed": true
+    },
+    {
+      "name": "method: linked resource /privacy/",
       "passed": true
     },
     {
@@ -2268,6 +2288,10 @@
     },
     {
       "name": "resources: linked resource /id/resources/",
+      "passed": true
+    },
+    {
+      "name": "resources: linked resource /privacy/",
       "passed": true
     },
     {
@@ -2708,6 +2732,10 @@
     },
     {
       "name": "faq: linked resource /id/faq/",
+      "passed": true
+    },
+    {
+      "name": "faq: linked resource /privacy/",
       "passed": true
     },
     {
@@ -3160,6 +3188,10 @@
     },
     {
       "name": "about: linked resource /id/about-us/",
+      "passed": true
+    },
+    {
+      "name": "about: linked resource /privacy/",
       "passed": true
     },
     {
@@ -3643,6 +3675,10 @@
       "passed": true
     },
     {
+      "name": "guides: linked resource /privacy/",
+      "passed": true
+    },
+    {
       "name": "guides: canonical mode",
       "passed": true
     },
@@ -4076,6 +4112,10 @@
     },
     {
       "name": "home: linked resource /id/",
+      "passed": true
+    },
+    {
+      "name": "home: linked resource /privacy/",
       "passed": true
     },
     {
@@ -4515,6 +4555,10 @@
       "passed": true
     },
     {
+      "name": "product: linked resource /privacy/",
+      "passed": true
+    },
+    {
       "name": "product: canonical mode",
       "passed": true
     },
@@ -4923,6 +4967,10 @@
       "passed": true
     },
     {
+      "name": "compatibility: linked resource /privacy/",
+      "passed": true
+    },
+    {
       "name": "compatibility: canonical mode",
       "passed": true
     },
@@ -5312,6 +5360,10 @@
     },
     {
       "name": "quote: linked resource /id/pricing-plan/",
+      "passed": true
+    },
+    {
+      "name": "quote: linked resource /privacy/",
       "passed": true
     },
     {
@@ -5707,6 +5759,10 @@
       "passed": true
     },
     {
+      "name": "contact: linked resource /privacy/",
+      "passed": true
+    },
+    {
       "name": "contact: canonical mode",
       "passed": true
     },
@@ -6096,6 +6152,10 @@
     },
     {
       "name": "privacy: linked resource /id/privacy/",
+      "passed": true
+    },
+    {
+      "name": "privacy: linked resource /privacy/",
       "passed": true
     },
     {
@@ -6491,6 +6551,10 @@
       "passed": true
     },
     {
+      "name": "terms: linked resource /privacy/",
+      "passed": true
+    },
+    {
       "name": "terms: canonical mode",
       "passed": true
     },
@@ -6880,6 +6944,10 @@
     },
     {
       "name": "editorial: linked resource /id/editorial-policy/",
+      "passed": true
+    },
+    {
+      "name": "editorial: linked resource /privacy/",
       "passed": true
     },
     {

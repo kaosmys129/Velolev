@@ -1,0 +1,814 @@
+---
+/**
+ * velolev 工业机械 - GDPR / ePrivacy Cookie 政策与偏好设置组件
+ * 
+ * 特性：
+ * 1. 严格遵循 GDPR / ePrivacy 规范，默认阻止非必要 Cookie，提供粒度化选项；
+ * 2. 7 语种完整支持 (en, es, fr, pt, vi, th, id)，自动生成对应语言的 Privacy Notice 链接；
+ * 3. 状态持久化于 localStorage 与 Cookie (velolev_cookie_consent)，避免重复弹出；
+ * 4. 平滑的 CSS Transform & Opacity 入场与退场动画，无首屏闪烁 (FOUC)；
+ * 5. 完善的无障碍设计 (a11y)：符合 WAI-ARIA 规范、Esc 快捷关闭、Tab 键焦点流与高对比度焦点环；
+ * 6. 对外暴露 window.velolevCookieConsent 全局 API 及 'velolev:cookie-consent' 自定义事件。
+ */
+import { localizedPagePath } from "../../lib/site-config.mjs";
+
+interface Props {
+  locale?: string;
+  privacyUrl?: string;
+  position?: "bottom-right" | "bottom";
+  variant?: "card" | "banner";
+}
+
+const {
+  locale = "en",
+  privacyUrl,
+  position = "bottom-right",
+  variant = "card"
+} = Astro.props;
+
+const supportedLocales = ["en", "es", "fr", "pt", "vi", "th", "id"] as const;
+type SupportedLocale = typeof supportedLocales[number];
+const currentLocale: SupportedLocale = supportedLocales.includes(locale as SupportedLocale)
+  ? (locale as SupportedLocale)
+  : "en";
+
+// 自动生成当前语言下的隐私政策路径
+let resolvedPrivacyUrl = privacyUrl;
+if (!resolvedPrivacyUrl) {
+  try {
+    resolvedPrivacyUrl = localizedPagePath("privacy", currentLocale) || (currentLocale === "en" ? "/privacy/" : `/${currentLocale}/privacy/`);
+  } catch {
+    resolvedPrivacyUrl = currentLocale === "en" ? "/privacy/" : `/${currentLocale}/privacy/`;
+  }
+}
+
+// 7 语种国际化文案字典
+const i18n = {
+  en: {
+    kicker: "00 / PRIVACY & DATA POLICY",
+    title: "Cookie & Privacy Choices",
+    desc: "We use essential cookies to maintain secure sessions and operational integrity. With your consent, analytical cookies help us understand how engineering guides and calculators are used so we can improve equipment documentation.",
+    privacyLinkText: "Privacy Notice",
+    acceptAll: "Accept All",
+    essentialOnly: "Essential Only",
+    preferences: "Preferences",
+    savePreferences: "Save Choices",
+    essentialTitle: "Strictly Necessary",
+    essentialDesc: "Required for core security, session continuity, and language preferences. Cannot be disabled.",
+    alwaysActive: "Always Active",
+    analyticsTitle: "Analytics & Performance",
+    analyticsDesc: "Helps us evaluate technical documentation traffic and improve procurement calculators without profiling individuals.",
+    close: "Close"
+  },
+  es: {
+    kicker: "00 / POLÍTICA DE PRIVACIDAD",
+    title: "Preferencias de Cookies y Privacidad",
+    desc: "Utilizamos cookies necesarias para mantener la seguridad del sitio y recordar sus preferencias. Con su permiso, las cookies analíticas nos ayudan a entender cómo se consultan las guías técnicas y calculadoras para perfeccionar la documentación.",
+    privacyLinkText: "Aviso de Privacidad",
+    acceptAll: "Aceptar todas",
+    essentialOnly: "Solo esenciales",
+    preferences: "Preferencias",
+    savePreferences: "Guardar selección",
+    essentialTitle: "Estrictamente necesarias",
+    essentialDesc: "Indispensables para la seguridad básica, gestión de sesión y selección de idioma. No se pueden desactivar.",
+    alwaysActive: "Siempre activas",
+    analyticsTitle: "Analítica y rendimiento",
+    analyticsDesc: "Nos ayudan a evaluar la interacción con las especificaciones técnicas y herramientas de cálculo.",
+    close: "Cerrar"
+  },
+  fr: {
+    kicker: "00 / POLITIQUE DE CONFIDENTIALITÉ",
+    title: "Gestion des Cookies et Confidentialité",
+    desc: "Nous utilisons des cookies essentiels pour assurer la sécurité du site et mémoriser vos préférences. Avec votre accord, des cookies d'analyse nous aident à mesurer l'audience de nos guides techniques et calculateurs afin d'améliorer la documentation.",
+    privacyLinkText: "Notice de confidentialité",
+    acceptAll: "Tout accepter",
+    essentialOnly: "Essentiels uniquement",
+    preferences: "Préférences",
+    savePreferences: "Enregistrer mes choix",
+    essentialTitle: "Strictement nécessaires",
+    essentialDesc: "Indispensables à la sécurité, à la navigation et au choix de la langue. Ne peuvent pas être désactivés.",
+    alwaysActive: "Toujours actif",
+    analyticsTitle: "Mesure d'audience et analyse",
+    analyticsDesc: "Permettent de comprendre comment les visiteurs consultent nos spécifications d'ingénierie.",
+    close: "Fermer"
+  },
+  pt: {
+    kicker: "00 / POLÍTICA DE PRIVACIDADE",
+    title: "Preferências de Cookies e Privacidade",
+    desc: "Utilizamos cookies necessários para manter a segurança do site e suas preferências. Com o seu consentimento, cookies analíticos nos ajudam a entender como nossos guias técnicos e calculadoras são utilizados para aprimorar a documentação.",
+    privacyLinkText: "Aviso de Privacidade",
+    acceptAll: "Aceitar todos",
+    essentialOnly: "Apenas essenciais",
+    preferences: "Preferências",
+    savePreferences: "Salvar escolhas",
+    essentialTitle: "Estritamente necessários",
+    essentialDesc: "Essenciais para segurança, navegação e seleção de idioma. Não podem ser desativados.",
+    alwaysActive: "Sempre ativo",
+    analyticsTitle: "Desempenho e análise",
+    analyticsDesc: "Ajudam a mensurar o tráfego e avaliar a consulta de especificações técnicas.",
+    close: "Fechar"
+  },
+  vi: {
+    kicker: "00 / CHÍNH SÁCH BẢO MẬT",
+    title: "Tùy chọn Cookie & Quyền riêng tư",
+    desc: "Chúng tôi sử dụng cookie cần thiết để duy trì bảo mật hệ thống và lưu tùy chọn ngôn ngữ. Với sự đồng ý của bạn, cookie phân tích giúp chúng tôi hiểu cách người dùng sử dụng tài liệu kỹ thuật và bảng tính để hoàn thiện tài liệu thiết bị.",
+    privacyLinkText: "Chính sách quyền riêng tư",
+    acceptAll: "Chấp nhận tất cả",
+    essentialOnly: "Chỉ cookie cần thiết",
+    preferences: "Tùy chỉnh",
+    savePreferences: "Lưu tùy chọn",
+    essentialTitle: "Thực sự cần thiết",
+    essentialDesc: "Cần thiết cho an toàn hệ thống, duy trì phiên và cài đặt ngôn ngữ. Không thể tắt.",
+    alwaysActive: "Luôn hoạt động",
+    analyticsTitle: "Phân tích & hiệu suất",
+    analyticsDesc: "Giúp đo lường lượng truy cập và đánh giá mức độ quan tâm đến thông số kỹ thuật.",
+    close: "Đóng"
+  },
+  th: {
+    kicker: "00 / นโยบายความเป็นส่วนตัว",
+    title: "การตั้งค่าคุกกี้และความเป็นส่วนตัว",
+    desc: "เราใช้คุกกี้ที่จำเป็นเพื่อความปลอดภัยของระบบและการตั้งค่าภาษาของคุณ และเมื่อได้รับความยินยอม คุกกี้เพื่อการวิเคราะห์จะช่วยให้เราเข้าใจการใช้งานคู่มือวิศวกรรมและเครื่องมือคำนวณ เพื่อพัฒนาข้อมูลให้ดียิ่งขึ้น",
+    privacyLinkText: "ประกาศความเป็นส่วนตัว",
+    acceptAll: "ยอมรับทั้งหมด",
+    essentialOnly: "เฉพาะที่จำเป็น",
+    preferences: "การตั้งค่า",
+    savePreferences: "บันทึกการตั้งค่า",
+    essentialTitle: "คุกกี้ที่จำเป็นอย่างยิ่ง",
+    essentialDesc: "จำเป็นสำหรับความปลอดภัยของเว็บไซต์ การทำงานพื้นฐาน และภาษา ไม่สามารถปิดการใช้งานได้",
+    alwaysActive: "เปิดใช้งานเสมอ",
+    analyticsTitle: "การวิเคราะห์และประสิทธิภาพ",
+    analyticsDesc: "ช่วยให้เราวัดปริมาณการเข้าชมและประเมินการเปิดดูข้อมูลจำเพาะทางวิศวกรรม",
+    close: "ปิด"
+  },
+  id: {
+    kicker: "00 / KEBIJAKAN PRIVASI",
+    title: "Pilihan Cookie & Privasi",
+    desc: "Kami menggunakan cookie penting untuk menjaga keamanan sistem dan preferensi Anda. Dengan izin Anda, cookie analitik membantu kami memahami bagaimana panduan teknis dan kalkulator digunakan untuk menyempurnakan dokumentasi peralatan.",
+    privacyLinkText: "Pemberitahuan Privasi",
+    acceptAll: "Terima Semua",
+    essentialOnly: "Hanya yang Penting",
+    preferences: "Pengaturan",
+    savePreferences: "Simpan Pilihan",
+    essentialTitle: "Sangat Diperlukan",
+    essentialDesc: "Diperlukan untuk keamanan situs, pemeliharaan sesi, dan preferensi bahasa. Tidak dapat dinonaktifkan.",
+    alwaysActive: "Selalu Aktif",
+    analyticsTitle: "Analitik & Kinerja",
+    analyticsDesc: "Membantu kami mengukur lalu lintas situs dan mengevaluasi interaksi dengan spesifikasi teknis.",
+    close: "Tutup"
+  }
+};
+
+const copy = i18n[currentLocale];
+---
+
+<aside
+  id="velolev-cookie-consent"
+  class={`velolev-cookie-consent ${position} ${variant}`}
+  role="region"
+  aria-labelledby="cookie-consent-title"
+  aria-describedby="cookie-consent-desc"
+  aria-live="polite"
+  data-cookie-module
+  data-locale={currentLocale}
+  hidden
+>
+  <div class="cookie-card-inner">
+    <div class="cookie-header">
+      <div class="cookie-kicker">
+        <span class="cookie-indicator" aria-hidden="true"></span>
+        <span>{copy.kicker}</span>
+      </div>
+      <button
+        type="button"
+        class="cookie-close-btn"
+        data-action="close"
+        aria-label={copy.close}
+        title={copy.close}
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="cookie-body">
+      <h3 id="cookie-consent-title">{copy.title}</h3>
+      <p id="cookie-consent-desc" class="cookie-desc">
+        {copy.desc}
+        <a href={resolvedPrivacyUrl} class="cookie-policy-link">
+          <span>{copy.privacyLinkText}</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </p>
+    </div>
+
+    <!-- 偏好设置折叠面板 -->
+    <div id="cookie-preferences-panel" class="cookie-prefs-panel" hidden data-prefs-panel>
+      <div class="pref-item">
+        <div class="pref-info">
+          <div class="pref-header">
+            <strong>{copy.essentialTitle}</strong>
+            <span class="pref-badge">{copy.alwaysActive}</span>
+          </div>
+          <p>{copy.essentialDesc}</p>
+        </div>
+        <div class="pref-toggle">
+          <input type="checkbox" id="pref-essential" checked disabled aria-label={copy.essentialTitle} />
+        </div>
+      </div>
+
+      <div class="pref-item">
+        <div class="pref-info">
+          <div class="pref-header">
+            <label for="pref-analytics"><strong>{copy.analyticsTitle}</strong></label>
+          </div>
+          <p>{copy.analyticsDesc}</p>
+        </div>
+        <div class="pref-toggle">
+          <input type="checkbox" id="pref-analytics" data-pref-analytics aria-label={copy.analyticsTitle} />
+        </div>
+      </div>
+    </div>
+
+    <div class="cookie-actions">
+      <button type="button" class="cookie-btn cookie-btn-primary" data-action="accept-all">
+        {copy.acceptAll}
+      </button>
+      <button type="button" class="cookie-btn cookie-btn-outline" data-action="essential-only">
+        {copy.essentialOnly}
+      </button>
+      <button
+        type="button"
+        class="cookie-btn cookie-btn-text"
+        data-action="toggle-preferences"
+        aria-expanded="false"
+        aria-controls="cookie-preferences-panel"
+      >
+        <span data-toggle-label>{copy.preferences}</span>
+      </button>
+      <button
+        type="button"
+        class="cookie-btn cookie-btn-save"
+        data-action="save-preferences"
+        hidden
+      >
+        {copy.savePreferences}
+      </button>
+    </div>
+  </div>
+</aside>
+
+<style is:inline>
+  /* 基础定位与容器 */
+  .velolev-cookie-consent {
+    position: fixed;
+    z-index: 9999;
+    box-sizing: border-box;
+    font-family: Geologica, "Trebuchet MS", sans-serif;
+    color: var(--paper, #f3f2ec);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1), transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* 出现状态 */
+  .velolev-cookie-consent.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1) !important;
+  }
+
+  /* 关闭动画中 */
+  .velolev-cookie-consent.is-closing {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(16px) scale(0.98) !important;
+    transition: opacity 0.22s ease-in, transform 0.22s ease-in;
+  }
+
+  /* 卡片模式 (右下角悬浮) */
+  .velolev-cookie-consent.bottom-right {
+    bottom: 24px;
+    right: 24px;
+    width: calc(100% - 48px);
+    max-width: 480px;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  /* 通栏模式 (底部固定条) */
+  .velolev-cookie-consent.bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(100%);
+  }
+
+  .cookie-card-inner {
+    background: var(--dark, #202622);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-top: 3px solid var(--yellow, #f4cc3d);
+    border-radius: 2px;
+    padding: 22px 24px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32), 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .velolev-cookie-consent.bottom .cookie-card-inner {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    max-width: var(--max, 1240px);
+    margin: 0 auto;
+    padding: 20px 32px;
+  }
+
+  /* 顶部状态栏 */
+  .cookie-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .cookie-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #b2b8ab;
+    font-weight: 600;
+  }
+
+  .cookie-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--yellow, #f4cc3d);
+    display: inline-block;
+  }
+
+  .cookie-close-btn {
+    background: transparent;
+    border: none;
+    color: #9ea599;
+    padding: 6px;
+    margin: -6px;
+    cursor: pointer;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s, background-color 0.15s;
+  }
+
+  .cookie-close-btn:hover {
+    color: var(--paper, #f3f2ec);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .cookie-close-btn:focus-visible {
+    outline: 2px solid var(--yellow, #f4cc3d);
+    outline-offset: 2px;
+  }
+
+  /* 标题与描述 */
+  .cookie-body h3 {
+    font-size: 18px;
+    font-weight: 650;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin: 0 0 6px 0;
+    line-height: 1.25;
+  }
+
+  .cookie-desc {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #ced5c7;
+    margin: 0;
+  }
+
+  .cookie-policy-link {
+    color: var(--yellow, #f4cc3d);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border-bottom: 1px solid rgba(244, 204, 61, 0.4);
+    text-decoration: none;
+    margin-left: 4px;
+    padding-bottom: 1px;
+    transition: border-color 0.15s;
+  }
+
+  .cookie-policy-link:hover {
+    border-color: var(--yellow, #f4cc3d);
+  }
+
+  /* 偏好设置面板 */
+  .cookie-prefs-panel {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .cookie-prefs-panel[hidden] {
+    display: none;
+  }
+
+  .pref-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .pref-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .pref-info {
+    flex: 1;
+  }
+
+  .pref-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3px;
+  }
+
+  .pref-header strong {
+    font-size: 13px;
+    color: #ffffff;
+  }
+
+  .pref-badge {
+    font-size: 10.5px;
+    padding: 1px 6px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #c6ceba;
+    border-radius: 2px;
+    font-family: "Courier New", monospace;
+  }
+
+  .pref-info p {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #a4ad9f;
+    margin: 0;
+  }
+
+  .pref-toggle input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--yellow, #f4cc3d);
+    margin-top: 2px;
+  }
+
+  .pref-toggle input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* 按钮操作组 */
+  .cookie-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .cookie-btn {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.15s, color 0.15s, transform 0.12s, border-color 0.15s;
+    line-height: 1.3;
+  }
+
+  .cookie-btn:active {
+    transform: translateY(1px);
+  }
+
+  .cookie-btn:focus-visible {
+    outline: 2px solid var(--yellow, #f4cc3d);
+    outline-offset: 2px;
+  }
+
+  .cookie-btn-primary {
+    background: var(--yellow, #f4cc3d);
+    color: var(--ink, #1d201e);
+  }
+
+  .cookie-btn-primary:hover {
+    background: #ffdb59;
+  }
+
+  .cookie-btn-outline {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.28);
+    color: var(--paper, #f3f2ec);
+  }
+
+  .cookie-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+
+  .cookie-btn-text {
+    background: transparent;
+    border: none;
+    color: #b2b8ab;
+    padding: 9px 12px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .cookie-btn-text:hover {
+    color: #ffffff;
+  }
+
+  .cookie-btn-save {
+    background: #445046;
+    color: #ffffff;
+    border-color: #556257;
+  }
+
+  .cookie-btn-save:hover {
+    background: #505e52;
+  }
+
+  .cookie-btn-save[hidden] {
+    display: none;
+  }
+
+  /* 移动端响应式处理 */
+  @media (max-width: 640px) {
+    .velolev-cookie-consent.bottom-right {
+      bottom: 12px;
+      right: 12px;
+      left: 12px;
+      width: calc(100% - 24px);
+      max-width: none;
+    }
+
+    .cookie-card-inner {
+      padding: 18px;
+      gap: 12px;
+    }
+
+    .cookie-body h3 {
+      font-size: 16px;
+    }
+
+    .cookie-desc {
+      font-size: 12.5px;
+    }
+
+    .cookie-actions {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+    }
+
+    .cookie-btn {
+      width: 100%;
+      text-align: center;
+      padding: 11px 16px;
+    }
+
+    .cookie-btn-text {
+      padding: 8px 12px;
+    }
+  }
+</style>
+
+<script>
+  interface CookieConsentPayload {
+    status: "accepted" | "essential" | "custom";
+    essential: boolean;
+    analytics: boolean;
+    timestamp: string;
+    locale: string;
+    version: string;
+  }
+
+  declare global {
+    interface Window {
+      velolevCookieConsent?: {
+        show: () => void;
+        hide: () => void;
+        getConsent: () => CookieConsentPayload | null;
+        reset: () => void;
+      };
+    }
+  }
+
+  const STORAGE_KEY = "velolev_cookie_consent";
+  const COOKIE_NAME = "velolev_cookie_consent";
+  const CONSENT_VERSION = "1.0";
+
+  function initCookieConsent() {
+    const banner = document.querySelector<HTMLElement>("[data-cookie-module]");
+    if (!banner) return;
+
+    const acceptAllBtn = banner.querySelector<HTMLButtonElement>('[data-action="accept-all"]');
+    const essentialBtn = banner.querySelector<HTMLButtonElement>('[data-action="essential-only"]');
+    const togglePrefsBtn = banner.querySelector<HTMLButtonElement>('[data-action="toggle-preferences"]');
+    const savePrefsBtn = banner.querySelector<HTMLButtonElement>('[data-action="save-preferences"]');
+    const closeBtn = banner.querySelector<HTMLButtonElement>('[data-action="close"]');
+    const prefsPanel = banner.querySelector<HTMLElement>("[data-prefs-panel]");
+    const analyticsCheckbox = banner.querySelector<HTMLInputElement>("[data-pref-analytics]");
+
+    const locale = banner.dataset.locale || document.documentElement.lang || "en";
+
+    // 读取 Cookie 辅助方法
+    function getStoredCookie(): string | null {
+      const match = document.cookie.match(new RegExp("(^|;\\s*)" + COOKIE_NAME + "=([^;]*)"));
+      return match ? decodeURIComponent(match[2]) : null;
+    }
+
+    // 读取已有的同意状态
+    function getStoredConsent(): CookieConsentPayload | null {
+      try {
+        const local = localStorage.getItem(STORAGE_KEY);
+        if (local) {
+          const parsed = JSON.parse(local);
+          if (parsed && typeof parsed === "object" && parsed.status) {
+            return parsed as CookieConsentPayload;
+          }
+        }
+      } catch (e) {
+        // localStorage 受限时 fallback 到 Cookie 简要状态
+      }
+
+      const cookieVal = getStoredCookie();
+      if (cookieVal) {
+        return {
+          status: cookieVal as "accepted" | "essential" | "custom",
+          essential: true,
+          analytics: cookieVal === "accepted",
+          timestamp: new Date().toISOString(),
+          locale,
+          version: CONSENT_VERSION
+        };
+      }
+
+      return null;
+    }
+
+    // 写入同意状态
+    function setConsent(status: "accepted" | "essential" | "custom", analytics: boolean) {
+      const payload: CookieConsentPayload = {
+        status,
+        essential: true,
+        analytics,
+        timestamp: new Date().toISOString(),
+        locale,
+        version: CONSENT_VERSION
+      };
+
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      } catch (e) {
+        // localStorage disabled or full
+      }
+
+      // 写入持久化 Cookie（有效期 1 年）
+      const maxAge = 60 * 60 * 24 * 365;
+      document.cookie = `${COOKIE_NAME}=${encodeURIComponent(status)}; Path=/; Max-Age=${maxAge}; SameSite=Lax`;
+
+      // 触发自定义事件通知分析脚本或其它系统模块
+      document.dispatchEvent(new CustomEvent("velolev:cookie-consent", { detail: payload }));
+
+      // 隐藏横幅
+      hideBanner();
+    }
+
+    // 显示横幅动画
+    function showBanner() {
+      banner.hidden = false;
+      // 微小延迟等待 DOM 渲染后触发 CSS 动画
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          banner.classList.remove("is-closing");
+          banner.classList.add("is-visible");
+        });
+      });
+    }
+
+    // 隐藏横幅动画
+    function hideBanner() {
+      banner.classList.remove("is-visible");
+      banner.classList.add("is-closing");
+      setTimeout(() => {
+        banner.hidden = true;
+        banner.classList.remove("is-closing");
+      }, 260);
+    }
+
+    // 注册全局 API 供隐私页面“Cookie 设置”按钮唤起或外部检查
+    window.velolevCookieConsent = {
+      show: () => {
+        // 打开时如果已有设置，回填 checkbox
+        const current = getStoredConsent();
+        if (current && analyticsCheckbox) {
+          analyticsCheckbox.checked = Boolean(current.analytics);
+        }
+        showBanner();
+      },
+      hide: hideBanner,
+      getConsent: getStoredConsent,
+      reset: () => {
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch (e) {}
+        document.cookie = `${COOKIE_NAME}=; Path=/; Max-Age=0; SameSite=Lax`;
+        showBanner();
+      }
+    };
+
+    // 事件绑定：接受全部
+    acceptAllBtn?.addEventListener("click", () => {
+      setConsent("accepted", true);
+    });
+
+    // 事件绑定：仅必要
+    essentialBtn?.addEventListener("click", () => {
+      setConsent("essential", false);
+    });
+
+    // 事件绑定：保存自定义选项
+    savePrefsBtn?.addEventListener("click", () => {
+      const analyticsAllowed = analyticsCheckbox ? analyticsCheckbox.checked : false;
+      setConsent("custom", analyticsAllowed);
+    });
+
+    // 事件绑定：切换偏好设置抽屉
+    togglePrefsBtn?.addEventListener("click", () => {
+      if (!prefsPanel) return;
+      const isOpen = !prefsPanel.hidden;
+      prefsPanel.hidden = isOpen;
+      togglePrefsBtn.setAttribute("aria-expanded", String(!isOpen));
+
+      if (savePrefsBtn) {
+        savePrefsBtn.hidden = isOpen;
+      }
+    });
+
+    // 事件绑定：关闭按钮（等同于选择必要）
+    closeBtn?.addEventListener("click", () => {
+      setConsent("essential", false);
+    });
+
+    // 键盘支持：Esc 快捷键关闭
+    document.addEventListener("keydown", (e: KeyboardEvent) => {
+      if (e.key === "Escape" && banner && !banner.hidden && banner.classList.contains("is-visible")) {
+        setConsent("essential", false);
+      }
+    });
+
+    // 检查初始状态：若无记录则弹出
+    const existing = getStoredConsent();
+    if (!existing) {
+      // 延迟 300ms 优雅弹出，避免阻塞首屏渲染
+      setTimeout(() => {
+        showBanner();
+      }, 300);
+    } else {
+      // 已有记录，广播事件确保页面内依赖该状态的分析代码能获取状态
+      document.dispatchEvent(new CustomEvent("velolev:cookie-consent", { detail: existing }));
+    }
+  }
+
+  // 保证在 DOM 就绪或 View Transitions 换页后正确运行
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCookieConsent);
+  } else {
+    initCookieConsent();
+  }
+
+  document.addEventListener("astro:page-load", initCookieConsent);
+</script>

@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { verifyCaptcha } from "./captcha.mjs";
 
 export class InquiryError extends Error {
   constructor(status, code, message, fields = {}) { super(message); this.status = status; this.code = code; this.fields = fields; }
@@ -14,7 +15,7 @@ function field(value, max = 200) {
   return value.trim().replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, "").slice(0, max + 1);
 }
 
-export function validateInquiry(input) {
+export function validateInquiry(input, options = {}) {
   if (!input || typeof input !== "object" || Array.isArray(input)) throw new InquiryError(400,"invalid_payload","Invalid request.");
   if (field(input.website)) throw new InquiryError(422,"invalid_submission","Please review your submission.");
   const errors = {};
@@ -40,6 +41,15 @@ export function validateInquiry(input) {
   if (data.foundation.length > 1000) errors.foundation = "Keep foundation notes within 1,000 characters.";
   if (data.message.length > 4000) errors.message = "Keep project notes within 4,000 characters.";
   if (!data.consent) errors.consent = "Confirm that we may use these details to handle your request.";
+  const captchaToken = typeof input.captchaToken === "string" ? input.captchaToken.trim() : "";
+  const captchaAnswer = field(input.captchaAnswer, 50);
+  if (!captchaToken || !captchaAnswer) {
+    errors.captcha = "Please complete the verification problem.";
+  } else if (!verifyCaptcha(captchaAnswer, captchaToken, options)) {
+    errors.captcha = "Verification incorrect or expired. Please try again.";
+  } else {
+    data.captchaAnswer = captchaAnswer;
+  }
   if (!data.sourcePage.startsWith("/") || data.sourcePage.startsWith("//")) data.sourcePage = "/quote/";
   data.sourcePage = data.sourcePage.split(/[?#]/)[0];
   if (input.attribution && typeof input.attribution === "object") {
@@ -85,3 +95,6 @@ export function validateSubscription(input) {
   sourcePage = sourcePage.split(/[?#]/)[0];
   return { email, locale, country, sourcePage };
 }
+
+export { generateCaptcha, verifyCaptcha } from "./captcha.mjs";
+

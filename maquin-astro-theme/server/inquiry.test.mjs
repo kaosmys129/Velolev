@@ -6,12 +6,28 @@ import {join} from "node:path";
 import {randomUUID} from "node:crypto";
 import {once} from "node:events";
 import {InquiryStore} from "./inquiry-store.mjs";
-import {validateInquiry,validateAttachment} from "./inquiry-validation.mjs";
+import {validateInquiry,validateAttachment,generateCaptcha,verifyCaptcha} from "./inquiry-validation.mjs";
 import {createInquiryServer,assertPrivateDirectory} from "./inquiry-server.mjs";
 import {canonicalUrl,publicOrigin,coreAlternates} from "../src/lib/site-config.mjs";
 import serverlessHandler from "../api/inquiries.js";
 const token="local-unit-tests-only-0123456789-0123456789";
-const payload=()=>({name:"Controlled test",email:"test@example.test",phone:"",country:"Test destination",consent:true,quantity:"2",poleHeight:"12",poleWeight:"250",locale:"en",sourcePage:"/quote/",application:"street-lighting",message:"TEST ONLY — not a sales lead"});
+
+function solveCaptcha(question) {
+  const m = question.match(/^(\d+)\s*([\+\-])\s*(\d+)/);
+  if (!m) return "";
+  const a = Number(m[1]), op = m[2], b = Number(m[3]);
+  return String(op === "+" ? a + b : a - b);
+}
+
+function validCaptcha() {
+  const { question, token: captchaToken } = generateCaptcha();
+  return { captchaToken, captchaAnswer: solveCaptcha(question) };
+}
+
+const payload=()=>{
+  const { captchaToken, captchaAnswer } = validCaptcha();
+  return {name:"Controlled test",email:"test@example.test",phone:"",country:"Test destination",consent:true,quantity:"2",poleHeight:"12",poleWeight:"250",locale:"en",sourcePage:"/quote/",application:"street-lighting",message:"TEST ONLY — not a sales lead",captchaToken,captchaAnswer};
+};
 const pdf=Buffer.from("%PDF-1.4\n1 0 obj\n<<>>\nendobj\n%%EOF");
 function workspace(t){const dir=mkdtempSync(join(tmpdir(),"velolev-inquiry-test-"));t.after(()=>rmSync(dir,{recursive:true,force:true}));return dir;}
 async function app(t,options={}){const dir=workspace(t),dist=join(dir,"public");mkdirSync(dist);writeFileSync(join(dist,"index.html"),"public test page");writeFileSync(join(dist,"404.html"),"not found");const created=createInquiryServer({directory:join(dir,"private"),dist,adminToken:token,testMode:true,logger:{error(){}},...options});created.server.listen(0,"127.0.0.1");await once(created.server,"listening");t.after(async()=>{created.server.close();await once(created.server,"close");});return {...created,url:`http://127.0.0.1:${created.server.address().port}`};}
@@ -38,6 +54,8 @@ test("required contact, consent and numeric fields are validated without inventi
  assert.throws(()=>validateInquiry({...p,quantity:"-1"}),e=>Boolean(e.fields.quantity));
  assert.throws(()=>validateInquiry({...p,poleWeight:"NaN"}),e=>Boolean(e.fields.poleWeight));
  assert.throws(()=>validateInquiry({...p,website:"bot.example"}),e=>e.status===422);
+ assert.throws(()=>validateInquiry({...p,captchaToken:"",captchaAnswer:""}),e=>e.status===422&&Boolean(e.fields.captcha));
+ assert.throws(()=>validateInquiry({...p,captchaAnswer:"wrong"}),e=>e.status===422&&Boolean(e.fields.captcha));
  const phoneOnly=validateInquiry({...p,email:"",phone:"+1 555 010 9999"});assert.equal(phoneOnly.email,"");
 });
 test("attachment type, signature, size and original filename are checked",()=>{
@@ -74,7 +92,7 @@ test("HTTP receipt is only returned after a persisted record is available to aut
  const unauthorized=await fetch(url+"/api/admin/inquiries");assert.equal(unauthorized.status,401);
 });
 test("simultaneous retries create one record, and a changed payload cannot reuse the key",async t=>{
- const {url,store}=await app(t),key=randomUUID();const responses=await Promise.all(Array.from({length:5},()=>post(url,payload(),key)));
+ const {url,store}=await app(t),key=randomUUID(),data=payload();const responses=await Promise.all(Array.from({length:5},()=>post(url,data,key)));
  assert.equal(responses.filter(r=>r.status===201).length,1);const receipts=await Promise.all(responses.map(r=>r.json()));assert.equal(new Set(receipts.map(r=>r.receipt.reference)).size,1);
  assert.equal(store.list({includeTests:true}).total,1);assert.equal((await post(url,{...payload(),quantity:"9"},key)).status,409);
 });
@@ -88,9 +106,9 @@ test("multipart attachment is saved and cannot be downloaded through a public UR
 test("cross-site origins, missing identifiers, invalid content and excess requests are rejected",async t=>{
  const {url}=await app(t,{rateLimit:2});assert.equal((await post(url,payload(),randomUUID(),{Origin:"https://unrelated.example"})).status,403);
  assert.equal((await post(url,payload(),"short")).status,400);
- const key=randomUUID();assert.equal((await post(url,payload(),key)).status,201);assert.equal((await post(url)).status,201);
+ const key=randomUUID(),data=payload();assert.equal((await post(url,data,key)).status,201);assert.equal((await post(url)).status,201);
  const limited=await post(url);assert.equal(limited.status,429);assert.ok(Number(limited.headers.get("retry-after"))>0);
- assert.equal((await post(url,payload(),key)).status,200);
+ assert.equal((await post(url,data,key)).status,200);
 });
 test("a storage failure returns an error and never claims receipt",async t=>{
  const {url,store}=await app(t);store.close();const response=await post(url);assert.equal(response.status,503);const result=await response.json();assert.equal(result.receipt,undefined);assert.equal(result.error.code,"storage_unavailable");
@@ -148,9 +166,10 @@ test("serverless inquiry handler validates methods, body types, honeypot and con
   assert.equal(getRes.body.error.code, "method_not_allowed");
 
   // 3. Valid JSON
+  const validC = validCaptcha();
   const jsonRes = await invoke({
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ name: "Audit Lead", email: "lead-audit@example.com", phone: "+1234567890", country: "ES", message: "Need 5 units", isTest: true })
+    body: JSON.stringify({ name: "Audit Lead", email: "lead-audit@example.com", phone: "+1234567890", country: "ES", message: "Need 5 units", isTest: true, ...validC })
   });
   assert.equal(jsonRes.status, 201);
   assert.match(jsonRes.body.receipt.reference, /^INQ-\d{8}-[A-F0-9]{6}$/);
@@ -166,15 +185,17 @@ test("serverless inquiry handler validates methods, body types, honeypot and con
   assert.equal(malformedRes.body.error.code, "invalid_json");
 
   // 5. Valid URL-Encoded
+  const { captchaToken: uToken, captchaAnswer: uAns } = validCaptcha();
   const urlencodedRes = await invoke({
     headers: { "content-type": "application/x-www-form-urlencoded" },
-    body: "name=Form+User&email=form-user%40example.com&phone=%2B123456789&country=FR&message=TEST+ONLY"
+    body: `name=Form+User&email=form-user%40example.com&phone=%2B123456789&country=FR&message=TEST+ONLY&captchaToken=${encodeURIComponent(uToken)}&captchaAnswer=${encodeURIComponent(uAns)}`
   });
   assert.equal(urlencodedRes.status, 201);
   assert.match(urlencodedRes.body.receipt.reference, /^INQ-\d{8}-[A-F0-9]{6}$/);
   assert.equal(urlencodedRes.body.receipt.isTest, true);
 
   // 6. Valid Multipart with Content-Type header inside parts and hyphens
+  const { captchaToken: mToken, captchaAnswer: mAns } = validCaptcha();
   const boundary = "----TestBoundary123";
   const multipartBody = [
     `--${boundary}`,
@@ -194,6 +215,14 @@ test("serverless inquiry handler validates methods, body types, honeypot and con
     'Content-Disposition: form-data; name="country"',
     '',
     'DE',
+    `--${boundary}`,
+    'Content-Disposition: form-data; name="captchaToken"',
+    '',
+    mToken,
+    `--${boundary}`,
+    'Content-Disposition: form-data; name="captchaAnswer"',
+    '',
+    mAns,
     `--${boundary}--`
   ].join("\r\n");
 
@@ -208,7 +237,7 @@ test("serverless inquiry handler validates methods, body types, honeypot and con
   // 7. Honeypot check
   const honeypotRes = await invoke({
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ name: "Spam Bot", email: "bot@spam.com", website: "http://spam.org" })
+    body: JSON.stringify({ name: "Spam Bot", email: "bot@spam.com", website: "http://spam.org", ...validCaptcha() })
   });
   assert.equal(honeypotRes.status, 422);
   assert.equal(honeypotRes.body.error.code, "invalid_submission");
@@ -216,7 +245,7 @@ test("serverless inquiry handler validates methods, body types, honeypot and con
   // 8. Missing Contact
   const missingContact = await invoke({
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ name: "No Contact", email: "", phone: "" })
+    body: JSON.stringify({ name: "No Contact", email: "", phone: "", ...validCaptcha() })
   });
   assert.equal(missingContact.status, 400);
   assert.equal(missingContact.body.error.code, "validation_failed");
@@ -225,7 +254,7 @@ test("serverless inquiry handler validates methods, body types, honeypot and con
   // 9. Invalid Email
   const badEmail = await invoke({
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ name: "Bad Email", email: "not-an-email" })
+    body: JSON.stringify({ name: "Bad Email", email: "not-an-email", ...validCaptcha() })
   });
   assert.equal(badEmail.status, 400);
   assert.equal(badEmail.body.error.fields.email, "Enter a valid email address.");
@@ -233,8 +262,65 @@ test("serverless inquiry handler validates methods, body types, honeypot and con
   // 10. Invalid Phone
   const badPhone = await invoke({
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ name: "Bad Phone", phone: "123" })
+    body: JSON.stringify({ name: "Bad Phone", phone: "123", ...validCaptcha() })
   });
   assert.equal(badPhone.status, 400);
   assert.equal(badPhone.body.error.fields.phone, "Enter a valid phone number.");
+
+  // 11. Missing Captcha
+  const missingCaptcha = await invoke({
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ name: "No Captcha", email: "user@example.com", phone: "+1234567890" })
+  });
+  assert.equal(missingCaptcha.status, 400);
+  assert.equal(missingCaptcha.body.error.code, "validation_failed");
+  assert.equal(missingCaptcha.body.error.fields.captcha, "Please complete the verification problem.");
+
+  // 12. Incorrect Captcha Answer
+  const { captchaToken: badToken } = validCaptcha();
+  const badCaptcha = await invoke({
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ name: "Bad Captcha", email: "user@example.com", phone: "+1234567890", captchaToken: badToken, captchaAnswer: "99999" })
+  });
+  assert.equal(badCaptcha.status, 400);
+  assert.equal(badCaptcha.body.error.code, "validation_failed");
+  assert.equal(badCaptcha.body.error.fields.captcha, "Verification incorrect or expired. Please try again.");
+});
+
+test("captcha challenges, token verification and API endpoints protect against automated submissions", async t => {
+  // 1. generateCaptcha format
+  const challenge = generateCaptcha();
+  assert.ok(challenge.question && typeof challenge.question === "string");
+  assert.ok(challenge.token && typeof challenge.token === "string");
+  const solved = solveCaptcha(challenge.question);
+  assert.ok(solved.length > 0);
+
+  // 2. 正确答案通过校验
+  assert.equal(verifyCaptcha(solved, challenge.token), true);
+
+  // 3. 错误答案失败
+  assert.equal(verifyCaptcha("0000", challenge.token), false);
+  assert.equal(verifyCaptcha("wrong", challenge.token), false);
+
+  // 4. 篡改 token 失败
+  const tampered = challenge.token.slice(0, -4) + "abcd";
+  assert.equal(verifyCaptcha(solved, tampered), false);
+
+  // 5. 过期 token 失败
+  assert.equal(verifyCaptcha(solved, challenge.token, { maxAgeMs: -1000 }), false);
+
+  // 6. 服务端端点测试
+  const { url } = await app(t);
+  const captchaRes = await fetch(url + "/api/captcha/");
+  assert.equal(captchaRes.status, 200);
+  const serverChallenge = await captchaRes.json();
+  assert.ok(serverChallenge.question);
+  assert.ok(serverChallenge.token);
+
+  // 7. 缺省或错误验证码提交给服务器时被 422 拦截
+  const failSubmit = await post(url, { ...payload(), captchaAnswer: "999999" });
+  assert.equal(failSubmit.status, 422);
+  const failData = await failSubmit.json();
+  assert.equal(failData.error.code, "validation_failed");
+  assert.ok(failData.error.fields.captcha);
 });

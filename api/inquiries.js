@@ -2,6 +2,7 @@
 // 用于线上处理海外 B2B 询盘提交，生成收据凭证，并支持邮件通知
 
 import { randomBytes } from "node:crypto";
+import { verifyCaptcha } from "../maquin-astro-theme/server/captcha.mjs";
 
 export const config = {
   api: {
@@ -44,6 +45,8 @@ export default async function handler(req, res) {
     let locale = "en";
     let isTest = false;
     let website = "";
+    let captchaAnswer = "";
+    let captchaToken = "";
 
     if (contentType.includes("application/json")) {
       try {
@@ -55,6 +58,8 @@ export default async function handler(req, res) {
         message = data.message || "";
         locale = data.locale || "en";
         website = data.website || "";
+        captchaAnswer = data.captchaAnswer || "";
+        captchaToken = data.captchaToken || "";
         isTest = Boolean(data.isTest || name.includes("TEST") || message.includes("TEST ONLY"));
       } catch {
         return res.status(400).json({
@@ -70,6 +75,8 @@ export default async function handler(req, res) {
       message = params.get("message") || "";
       locale = params.get("locale") || "en";
       website = params.get("website") || "";
+      captchaAnswer = params.get("captchaAnswer") || "";
+      captchaToken = params.get("captchaToken") || "";
       isTest = Boolean(name.includes("TEST") || message.includes("TEST ONLY"));
     } else {
       // 兼容解析 multipart (支持完整 UTF-8、多行头部与连字符/换行字段)
@@ -86,6 +93,8 @@ export default async function handler(req, res) {
       message = extract("message");
       locale = extract("locale") || "en";
       website = extract("website");
+      captchaAnswer = extract("captchaAnswer");
+      captchaToken = extract("captchaToken");
       isTest = Boolean(name.includes("TEST") || message.includes("TEST ONLY"));
     }
 
@@ -93,6 +102,27 @@ export default async function handler(req, res) {
     if (website && website.trim()) {
       return res.status(422).json({
         error: { code: "invalid_submission", message: "Please review your submission." }
+      });
+    }
+
+    // 验证码防刷单安全校验
+    if (!captchaToken || !captchaAnswer) {
+      return res.status(400).json({
+        error: {
+          code: "validation_failed",
+          message: "Please complete the verification problem.",
+          fields: { captcha: "Please complete the verification problem." }
+        }
+      });
+    }
+
+    if (!verifyCaptcha(captchaAnswer, captchaToken)) {
+      return res.status(400).json({
+        error: {
+          code: "validation_failed",
+          message: "Verification incorrect or expired. Please try again.",
+          fields: { captcha: "Verification incorrect or expired. Please try again." }
+        }
       });
     }
 

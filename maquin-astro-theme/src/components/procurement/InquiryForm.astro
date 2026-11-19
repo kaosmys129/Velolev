@@ -26,6 +26,19 @@ const id=`inquiry-${locale}`;
       <div class="inquiry-field full-width"><label for={`${id}-message`}>{c.message}</label><textarea id={`${id}-message`} name="message" rows="4" maxlength="4000"></textarea><small data-error-for="message" id={`${id}-message-error`}></small></div>
       <div class="inquiry-field full-width"><label for={`${id}-attachment`}>{c.attachment}</label><input id={`${id}-attachment`} name="attachment" type="file" accept=".pdf,.jpg,.jpeg,.png" aria-describedby={`${id}-file-help`}/><p class="inquiry-help" id={`${id}-file-help`}>{c.fileHelp}</p><small data-error-for="attachment" id={`${id}-attachment-error`}></small></div>
     </div></details>
+    <div class="inquiry-field full-width">
+      <label for={`${id}-captcha-answer`}>{c.captcha} <span aria-hidden="true">*</span></label>
+      <div class="captcha-box">
+        <span class="captcha-q" data-captcha-challenge aria-live="polite">…</span>
+        <button type="button" class="captcha-btn" data-captcha-refresh title={c.captchaRefresh} aria-label={c.captchaRefresh}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          <span>{c.captchaRefresh}</span>
+        </button>
+        <input id={`${id}-captcha-answer`} name="captchaAnswer" type="text" autocomplete="off" required placeholder={c.captchaPlaceholder} maxlength="20" inputmode="numeric" aria-describedby={`${id}-captcha-error`}/>
+      </div>
+      <input type="hidden" name="captchaToken" data-captcha-token/>
+      <small data-error-for="captcha" id={`${id}-captcha-error`}></small>
+    </div>
     <div class="trap" aria-hidden="true"><label for={`${id}-website`}>Website</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off"/></div>
     <label class="inquiry-consent"><input type="checkbox" name="consent" value="true" required/><span>{c.consent} <a href="/privacy/">{c.privacy} ↗</a></span></label><small class="field-error" data-error-for="consent"></small>
     <button class="inquiry-submit" type="submit">{c.submit}<span aria-hidden="true">↗</span></button>
@@ -35,13 +48,39 @@ const id=`inquiry-${locale}`;
   <section class="inquiry-success" data-inquiry-success hidden aria-live="polite" tabindex="-1"><span class="receipt-icon" aria-hidden="true">✓</span><h2>{c.successTitle}</h2><p>{c.success}</p><strong data-receipt-reference></strong><p data-test-marker hidden>Test submission / not a sales lead</p><button type="button" data-new-inquiry>{c.newInquiry}</button></section>
 </div>
 <style>
- .inquiry-details{border-top:1px solid #c8cec3;border-bottom:1px solid #c8cec3;margin-top:26px;padding:18px 0}.inquiry-details summary{cursor:pointer;font-size:13px;font-weight:600}.inquiry-details[open] summary{margin-bottom:24px}.inquiry-shell{font:inherit;color:#1d201e}.inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.inquiry-field label{color:#1d201e;display:block;font-size:12px;font-weight:600;margin-bottom:9px}.inquiry-field input:not([type=file]),.inquiry-field textarea,.inquiry-field select{width:100%;padding:13px 14px;background:#fff;border:1px solid #c8cec3;border-radius:2px;font:inherit;color:#1d201e;min-height:48px}.inquiry-field input[type=file]{width:100%;padding:12px;background:#e8ebdf;border:1px dashed #a8b29e;font-size:12px}.inquiry-field input[type=file]::file-selector-button{padding:8px 12px;margin-right:12px;border:1px solid #9ca593;background:#fff;cursor:pointer}.inquiry-field textarea{resize:vertical}.full-width{grid-column:1/-1}.inquiry-field input:focus,.inquiry-field textarea:focus,.inquiry-field select:focus{outline:2px solid #a08216;outline-offset:2px}.inquiry-field [aria-invalid=true]{border:2px solid #a52a20}.inquiry-help{font-size:12px;line-height:1.6;color:#60695f;margin:0}.inquiry-field .inquiry-help{margin-top:8px}.inquiry-consent{color:#1d201e;display:flex;gap:12px;align-items:start;font-size:12px;line-height:1.8;margin:28px 0 6px;cursor:pointer}.inquiry-consent input{width:18px;height:18px;flex-shrink:0;accent-color:#202622;margin-top:3px}.inquiry-consent a{text-decoration:underline}.inquiry-submit{display:flex;justify-content:space-between;align-items:center;gap:35px;background:#f4cc3d;color:#1d201e;font:inherit;font-weight:600;padding:17px 22px;border:0;border-radius:2px;cursor:pointer;margin-top:23px;min-width:260px}.inquiry-submit:hover{background:#ffdc57}.inquiry-submit:disabled{opacity:.6;cursor:wait}.inquiry-status{font-size:13px;margin-top:18px;color:#9f2b20}.inquiry-field small,.field-error{font-size:12px;display:block;color:#9f2b20;margin-top:6px;line-height:1.5}.trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.inquiry-success{background:#e6e9de;border-top:5px solid #f4cc3d;padding:40px 30px}.inquiry-success[hidden]{display:none}.receipt-icon{display:block;font-size:40px}.inquiry-success h2{font-size:32px;color:#1d201e;margin:20px 0}.inquiry-success p{color:#4c584d}.inquiry-success strong{display:block;font:20px 'Courier New',monospace;margin:25px 0;overflow-wrap:anywhere}.inquiry-success button{padding:12px 18px;border:1px solid #28352b;background:transparent;font:inherit;cursor:pointer}.inquiry-success [data-test-marker]{font-size:12px;border:1px solid #747f6c;padding:8px;margin-bottom:20px}@media(max-width:600px){.inquiry-grid{grid-template-columns:1fr;gap:18px}.inquiry-submit{width:100%;min-width:0}.inquiry-success{padding:30px 18px}}
+ .inquiry-details{border-top:1px solid #c8cec3;border-bottom:1px solid #c8cec3;margin-top:26px;padding:18px 0}.inquiry-details summary{cursor:pointer;font-size:13px;font-weight:600}.inquiry-details[open] summary{margin-bottom:24px}.inquiry-shell{font:inherit;color:#1d201e}.inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.inquiry-field label{color:#1d201e;display:block;font-size:12px;font-weight:600;margin-bottom:9px}.inquiry-field input:not([type=file]),.inquiry-field textarea,.inquiry-field select{width:100%;padding:13px 14px;background:#fff;border:1px solid #c8cec3;border-radius:2px;font:inherit;color:#1d201e;min-height:48px}.inquiry-field input[type=file]{width:100%;padding:12px;background:#e8ebdf;border:1px dashed #a8b29e;font-size:12px}.inquiry-field input[type=file]::file-selector-button{padding:8px 12px;margin-right:12px;border:1px solid #9ca593;background:#fff;cursor:pointer}.inquiry-field textarea{resize:vertical}.full-width{grid-column:1/-1}.inquiry-field input:focus,.inquiry-field textarea:focus,.inquiry-field select:focus{outline:2px solid #a08216;outline-offset:2px}.inquiry-field [aria-invalid=true]{border:2px solid #a52a20}.inquiry-help{font-size:12px;line-height:1.6;color:#60695f;margin:0}.inquiry-field .inquiry-help{margin-top:8px}.captcha-box{display:flex;gap:8px;max-width:380px}.captcha-q{display:inline-flex;align-items:center;padding:0 12px;background:#e8ebdf;border:1px solid #c8cec3;font:700 15px monospace;color:#1d201e;white-space:nowrap}.captcha-btn{display:inline-flex;align-items:center;gap:4px;padding:0 10px;background:#fff;border:1px solid #c8cec3;font:600 12px inherit;cursor:pointer}.captcha-box input{flex:1}.inquiry-consent{color:#1d201e;display:flex;gap:12px;align-items:start;font-size:12px;line-height:1.8;margin:28px 0 6px;cursor:pointer}.inquiry-consent input{width:18px;height:18px;flex-shrink:0;accent-color:#202622;margin-top:3px}.inquiry-consent a{text-decoration:underline}.inquiry-submit{display:flex;justify-content:space-between;align-items:center;gap:35px;background:#f4cc3d;color:#1d201e;font:inherit;font-weight:600;padding:17px 22px;border:0;border-radius:2px;cursor:pointer;margin-top:23px;min-width:260px}.inquiry-submit:hover{background:#ffdc57}.inquiry-submit:disabled{opacity:.6;cursor:wait}.inquiry-status{font-size:13px;margin-top:18px;color:#9f2b20}.inquiry-field small,.field-error{font-size:12px;display:block;color:#9f2b20;margin-top:6px;line-height:1.5}.trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.inquiry-success{background:#e6e9de;border-top:5px solid #f4cc3d;padding:40px 30px}.inquiry-success[hidden]{display:none}.receipt-icon{display:block;font-size:40px}.inquiry-success h2{font-size:32px;color:#1d201e;margin:20px 0}.inquiry-success p{color:#4c584d}.inquiry-success strong{display:block;font:20px 'Courier New',monospace;margin:25px 0;overflow-wrap:anywhere}.inquiry-success button{padding:12px 18px;border:1px solid #28352b;background:transparent;font:inherit;cursor:pointer}.inquiry-success [data-test-marker]{font-size:12px;border:1px solid #747f6c;padding:8px;margin-bottom:20px}@media(max-width:600px){.inquiry-grid{grid-template-columns:1fr;gap:18px}.captcha-box{flex-wrap:wrap}.inquiry-submit{width:100%;min-width:0}.inquiry-success{padding:30px 18px}}
 </style>
 <script>
  for(const shell of document.querySelectorAll<HTMLElement>("[data-inquiry-shell]")){
   const form=shell.querySelector<HTMLFormElement>("[data-inquiry-form]")!,success=shell.querySelector<HTMLElement>("[data-inquiry-success]")!,button=form.querySelector<HTMLButtonElement>('[type="submit"]')!,status=form.querySelector<HTMLElement>("[data-submit-status]")!;
+  const captchaChallenge = form.querySelector<HTMLElement>("[data-captcha-challenge]")!;
+  const captchaTokenInput = form.querySelector<HTMLInputElement>("[data-captcha-token]")!;
+  const captchaAnswerInput = form.querySelector<HTMLInputElement>('[name="captchaAnswer"]')!;
+  const captchaRefreshBtn = form.querySelector<HTMLButtonElement>("[data-captcha-refresh]")!;
   const copy=JSON.parse(shell.dataset.copy!),locale=document.documentElement.lang||"en";
   let key:string|null=null,busy=false;
+
+  const refreshCaptcha = async () => {
+    try {
+      captchaChallenge.textContent = "…";
+      const res = await fetch("/api/captcha/", { headers: { Accept: "application/json" } });
+      if (!res.ok) throw new Error("captcha fetch failed");
+      const d = await res.json();
+      if (d.question && d.token) {
+        captchaChallenge.textContent = d.question;
+        captchaTokenInput.value = d.token;
+        captchaAnswerInput.value = "";
+      }
+    } catch {
+      captchaChallenge.textContent = "—";
+    }
+  };
+  refreshCaptcha();
+  captchaRefreshBtn.addEventListener("click", () => {
+    refreshCaptcha();
+    captchaAnswerInput.focus();
+  });
+
   const clearErrors=()=>{form.querySelectorAll("[data-error-for]").forEach(n=>n.textContent="");form.querySelectorAll("[aria-invalid]").forEach(n=>n.removeAttribute("aria-invalid"));};
   form.addEventListener("invalid",event=>{const details=(event.target as HTMLElement).closest("details");if(details)details.open=true;},true);
   form.addEventListener("input",()=>{if(!busy)key=null;});
@@ -66,15 +105,15 @@ const id=`inquiry-${locale}`;
     const response=await fetch("/api/inquiries/",{method:"POST",body:data,headers:{"Idempotency-Key":key},signal:controller.signal});
     let result:any=null;
     try{result=await response.json();}catch{result=null;}
-    if(!response.ok||!result){status.textContent=result?.error?.code==="validation_failed"?copy.validation:copy.failed;for(const [name,message] of Object.entries(result?.error?.fields??{})){const note=form.querySelector<HTMLElement>(`[data-error-for="${name}"]`),field=form.elements.namedItem(name) as HTMLElement|null;if(note)note.textContent=copy.serverErrors[String(message)]??copy.validation;field?.setAttribute("aria-invalid","true");if(note?.id)field?.setAttribute("aria-describedby",note.id);const details=field?.closest("details");if(details)details.open=true;}status.focus();return;}
+    if(!response.ok||!result){refreshCaptcha();status.textContent=result?.error?.code==="validation_failed"?copy.validation:copy.failed;for(const [name,message] of Object.entries(result?.error?.fields??{})){const note=form.querySelector<HTMLElement>(`[data-error-for="${name}"]`),field=form.elements.namedItem(name) as HTMLElement|null;if(note)note.textContent=copy.serverErrors[String(message)]??copy.validation;field?.setAttribute("aria-invalid","true");if(note?.id)field?.setAttribute("aria-describedby",note.id);const details=field?.closest("details");if(details)details.open=true;}status.focus();return;}
     if(result.receipt?.status!=="received"||!result.receipt?.reference)throw new Error("No confirmed receipt");
     shell.querySelector<HTMLElement>("[data-receipt-reference]")!.textContent=result.receipt.reference;
     shell.querySelector<HTMLElement>("[data-test-marker]")!.hidden=!result.receipt.isTest;
     form.hidden=true;success.hidden=false;success.focus();
     document.dispatchEvent(new CustomEvent("velolev:inquiry-submitted",{detail:{locale,page:location.pathname,method:"private_inbox"}}));
-   }catch{status.textContent=copy.failed;status.focus();}
+   }catch{refreshCaptcha();status.textContent=copy.failed;status.focus();}
    finally{clearTimeout(timeout);busy=false;button.disabled=false;button.textContent=copy.submit;form.removeAttribute("aria-busy");form.querySelectorAll<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>("input,select,textarea").forEach(n=>n.disabled=false);}
   });
-  shell.querySelector("[data-new-inquiry]")?.addEventListener("click",()=>{form.reset();key=null;status.textContent="";clearErrors();form.hidden=false;success.hidden=true;form.querySelector<HTMLInputElement>('[name="name"]')?.focus();});
+  shell.querySelector("[data-new-inquiry]")?.addEventListener("click",()=>{form.reset();key=null;status.textContent="";clearErrors();refreshCaptcha();form.hidden=false;success.hidden=true;form.querySelector<HTMLInputElement>('[name="name"]')?.focus();});
  }
 </script>

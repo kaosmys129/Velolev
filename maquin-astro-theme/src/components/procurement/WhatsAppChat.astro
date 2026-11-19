@@ -1,0 +1,1078 @@
+---
+/**
+ * WhatsAppChat.astro - WhatsApp 在线快捷咨询悬浮组件
+ * 
+ * 专为海外 B2B 工业装备独立站设计，支持多语言适配、多预设问题快捷选择、
+ * 官方 WhatsApp 绿意品牌动效与移动端自适应防遮挡布局。
+ */
+interface Props {
+  /** 页面语言代码: en | es | fr | pt | vi | th | id */
+  locale?: string;
+  /** WhatsApp 国际格式号码，如 "+86 138 0000 0000" 或 "8613800000000" */
+  phoneNumber?: string;
+  /** 客服/技术支持顾问名称 */
+  agentName?: string;
+  /** 客服职务/业务线说明 */
+  agentRole?: string;
+  /** 企业/品牌名称 */
+  companyName?: string;
+  /** 默认初始预填消息（可选，若未指定则采用各语言预设模板） */
+  defaultMessage?: string;
+  /** 快捷问题列表覆盖（可选） */
+  quickQuestions?: string[];
+}
+
+const {
+  locale = "en",
+  phoneNumber = (typeof process !== "undefined" && process.env?.PUBLIC_WHATSAPP_NUMBER) || "+86 138 0000 0000",
+  agentName: customAgentName,
+  agentRole = "Pole Installation Specialist",
+  companyName = "velolev",
+  defaultMessage,
+  quickQuestions: customQuestions
+} = Astro.props;
+
+// 清洗电话号码，仅保留数字
+const cleanPhone = phoneNumber.replace(/[^0-9]/g, "");
+
+// 多语言文案字典
+const i18nDictionary: Record<string, {
+  tooltip: string;
+  dismissTooltip: string;
+  badgeText: string;
+  unreadBadge: string;
+  statusOnline: string;
+  typicalReply: string;
+  welcomeGreeting: string;
+  quickTitle: string;
+  questions: string[];
+  inputPlaceholder: string;
+  inputLabel: string;
+  sendAction: string;
+  footerNote: string;
+  closeLabel: string;
+  openLabel: string;
+  defaultMsg: string;
+  agentName: string;
+  teamName: string;
+  today: string;
+  now: string;
+}> = {
+  en: {
+    tooltip: "Need help? Chat with us",
+    dismissTooltip: "Dismiss tooltip",
+    badgeText: "1",
+    unreadBadge: "1 unread alert",
+    statusOnline: "Online",
+    typicalReply: "Replies in ~15 mins",
+    welcomeGreeting: "Hello! 👋 Welcome to velolev. How can we assist with your light pole installation or equipment procurement today?",
+    quickTitle: "Quick inquiry topics:",
+    questions: [
+      "I'd like to request a quotation for the portable pole lifter.",
+      "Can you help verify our pole and foundation flange compatibility?",
+      "What is the lead time, packing dimensions and shipping availability?",
+      "Could you share the technical specification sheet and operator manual?"
+    ],
+    inputPlaceholder: "Type your inquiry or choose a topic above...",
+    inputLabel: "Your inquiry message",
+    sendAction: "Start WhatsApp Chat",
+    footerNote: "Official WhatsApp Business · Direct Specialist Support",
+    closeLabel: "Close WhatsApp chat panel",
+    openLabel: "Open WhatsApp online consultation",
+    defaultMsg: "Hello, I am interested in the velolev Portable Light Pole Lifter. Please provide more procurement details.",
+    agentName: "velolev Technical Support",
+    teamName: "velolev Team",
+    today: "Today",
+    now: "Now"
+  },
+  es: {
+    tooltip: "¿Necesitas ayuda? Chatea con nosotros",
+    dismissTooltip: "Descartar aviso",
+    badgeText: "1",
+    unreadBadge: "1 alerta no leída",
+    statusOnline: "En línea",
+    typicalReply: "Responde en ~15 min",
+    welcomeGreeting: "¡Hola! 👋 Bienvenido a velolev. ¿En qué podemos ayudarle con su proyecto de instalación de postes o cotización de equipos?",
+    quickTitle: "Consultas rápidas frecuentes:",
+    questions: [
+      "Deseo solicitar una cotización formal para el elevador portátil de postes.",
+      "¿Podrían verificar la compatibilidad de nuestros postes y bridas de anclaje?",
+      "¿Cuál es el tiempo de entrega y las opciones de transporte marítimo/aéreo?",
+      "¿Podrían facilitarme la ficha de especificaciones técnicas y manual de usuario?"
+    ],
+    inputPlaceholder: "Escriba su consulta o elija un tema arriba...",
+    inputLabel: "Su mensaje de consulta",
+    sendAction: "Iniciar chat por WhatsApp",
+    footerNote: "WhatsApp Business Oficial · Atención Técnica Directa",
+    closeLabel: "Cerrar panel de chat",
+    openLabel: "Abrir consulta por WhatsApp",
+    defaultMsg: "Hola, me interesa el elevador portátil de postes velolev. Por favor, facilítenme más detalles para adquisición.",
+    agentName: "Soporte Técnico velolev",
+    teamName: "Equipo velolev",
+    today: "Hoy",
+    now: "Ahora"
+  },
+  fr: {
+    tooltip: "Besoin d'aide ? Discutez avec nous",
+    dismissTooltip: "Fermer l'infobulle",
+    badgeText: "1",
+    unreadBadge: "1 alerte non lue",
+    statusOnline: "En ligne",
+    typicalReply: "Réponse en ~15 min",
+    welcomeGreeting: "Bonjour ! 👋 Bienvenue chez velolev. Comment pouvons-nous vous assister pour votre projet de levage de mâts ou matériel ?",
+    quickTitle: "Sujets de demande rapide :",
+    questions: [
+      "Je souhaite demander un devis pour le lève-mât portable d'éclairage.",
+      "Pouvez-vous valider la compatibilité de nos mâts et platines de fixation ?",
+      "Quels sont les délais de fabrication et conditions d'expédition à l'international ?",
+      "Pourriez-vous me transmettre la fiche technique complète et le manuel d'utilisation ?"
+    ],
+    inputPlaceholder: "Tapez votre message ou sélectionnez une option...",
+    inputLabel: "Votre message de demande",
+    sendAction: "Ouvrir le chat WhatsApp",
+    footerNote: "WhatsApp Business Officiel · Support Technique Dédié",
+    closeLabel: "Fermer le panneau WhatsApp",
+    openLabel: "Ouvrir la consultation WhatsApp",
+    defaultMsg: "Bonjour, je suis intéressé par le lève-mât portable velolev. Merci de m'envoyer les conditions d'achat et devis.",
+    agentName: "Support Technique velolev",
+    teamName: "Équipe velolev",
+    today: "Aujourd'hui",
+    now: "Maintenant"
+  },
+  pt: {
+    tooltip: "Precisa de ajuda? Fale conosco",
+    dismissTooltip: "Descartar dica",
+    badgeText: "1",
+    unreadBadge: "1 alerta não lido",
+    statusOnline: "Disponível",
+    typicalReply: "Responde em ~15 min",
+    welcomeGreeting: "Olá! 👋 Bem-vindo à velolev. Como podemos ajudar com a instalação de postes de iluminação ou cotação de equipamentos?",
+    quickTitle: "Tópicos de consulta rápida:",
+    questions: [
+      "Gostaria de solicitar uma cotação para o elevador portátil de postes.",
+      "Poderiam verificar a compatibilidade técnica dos nossos postes e flanges?",
+      "Qual é o prazo de entrega e os modais de frete internacional disponíveis?",
+      "Poderiam enviar as especificações técnicas detalhadas e o manual do operador?"
+    ],
+    inputPlaceholder: "Digite sua mensagem ou selecione um tópico acima...",
+    inputLabel: "Sua mensagem de consulta",
+    sendAction: "Iniciar conversa no WhatsApp",
+    footerNote: "WhatsApp Business Oficial · Atendimento de Engenharia",
+    closeLabel: "Fechar painel de chat",
+    openLabel: "Abrir atendimento via WhatsApp",
+    defaultMsg: "Olá, tenho interesse no elevador portátil de postes velolev. Poderiam me passar mais informações para aquisição?",
+    agentName: "Suporte Técnico velolev",
+    teamName: "Equipe velolev",
+    today: "Hoje",
+    now: "Agora"
+  },
+  vi: {
+    tooltip: "Cần hỗ trợ? Trò chuyện ngay",
+    dismissTooltip: "Đóng gợi ý",
+    badgeText: "1",
+    unreadBadge: "1 thông báo chưa đọc",
+    statusOnline: "Đang hoạt động",
+    typicalReply: "Phản hồi trong ~15 phút",
+    welcomeGreeting: "Xin chào! 👋 Chào mừng đến với velolev. Chúng tôi có thể hỗ trợ gì cho dự án dựng cột đèn hoặc mua sắm thiết bị của quý khách?",
+    quickTitle: "Chủ đề hỏi nhanh:",
+    questions: [
+      "Tôi muốn yêu cầu báo giá cho thiết bị dựng cột đèn di động velolev.",
+      "Nhờ kỹ thuật kiểm tra tính tương thích giữa cột đèn và mặt bích của chúng tôi.",
+      "Thời gian giao hàng và phương thức vận chuyển quốc tế như thế nào?",
+      "Vui lòng gửi tài liệu thông số kỹ thuật và hướng dẫn vận hành thiết bị."
+    ],
+    inputPlaceholder: "Nhập câu hỏi hoặc nhấp vào gợi ý phía trên...",
+    inputLabel: "Tin nhắn yêu cầu của bạn",
+    sendAction: "Bắt đầu chat WhatsApp",
+    footerNote: "WhatsApp Doanh Nghiệp Chính Thức · Hỗ Trợ Trực Tiếp",
+    closeLabel: "Đóng cửa sổ hỗ trợ",
+    openLabel: "Mở tư vấn trực tuyến qua WhatsApp",
+    defaultMsg: "Xin chào, tôi quan tâm đến máy dựng cột đèn velolev. Xin vui lòng gửi báo giá và thông tin mua hàng.",
+    agentName: "Hỗ trợ Kỹ thuật velolev",
+    teamName: "Đội ngũ velolev",
+    today: "Hôm nay",
+    now: "Bây giờ"
+  },
+  th: {
+    tooltip: "ต้องการความช่วยเหลือ? แชทกับเรา",
+    dismissTooltip: "ปิดคำแนะนำ",
+    badgeText: "1",
+    unreadBadge: "1 การแจ้งเตือนที่ยังไม่ได้อ่าน",
+    statusOnline: "ออนไลน์",
+    typicalReply: "ตอบกลับภายใน ~15 นาที",
+    welcomeGreeting: "สวัสดีครับ/ค่ะ! 👋 ยินดีต้อนรับสู่ velolev มีสิ่งใดให้ฝ่ายวิศวกรรมช่วยเหลือเกี่ยวกับโครงการติดตั้งเสาไฟหรือเครื่องจักรบ้างครับ/ค่ะ?",
+    quickTitle: "หัวข้อสอบถามด่วน:",
+    questions: [
+      "ขอใบเสนอราคาสำหรับเครื่องยกเสาไฟส่องสว่างแบบพกพา velolev",
+      "ช่วยตรวจสอบความเข้ากันได้ของเสาไฟและหน้าแปลนฐานราก (Flange)",
+      "ระยะเวลาการผลิต การจัดส่ง และการขนส่งสินค้าระหว่างประเทศ",
+      "ขอรับเอกสารข้อมูลจำเพาะทางเทคนิคและคู่มือการใช้งาน"
+    ],
+    inputPlaceholder: "พิมพ์ข้อความหรือเลือกหัวข้อด้านบน...",
+    inputLabel: "ข้อความสอบถามของคุณ",
+    sendAction: "เริ่มแชทผ่าน WhatsApp",
+    footerNote: "WhatsApp ทางการสำหรับธุรกิจ · ให้คำปรึกษาทางเทคนิคโดยตรง",
+    closeLabel: "ปิดหน้าต่างแชท",
+    openLabel: "เปิดการสนทนาผ่าน WhatsApp",
+    defaultMsg: "สวัสดีครับ/ค่ะ ฉันสนใจเครื่องยกเสาไฟแบบพกพา velolev ขอข้อมูลการสั่งซื้อและใบเสนอราคาครับ/ค่ะ",
+    agentName: "ฝ่ายสนับสนุนด้านเทคนิค velolev",
+    teamName: "ทีมงาน velolev",
+    today: "วันนี้",
+    now: "ตอนนี้"
+  },
+  id: {
+    tooltip: "Butuh bantuan? Chat dengan kami",
+    dismissTooltip: "Tutup petunjuk",
+    badgeText: "1",
+    unreadBadge: "1 pemberitahuan belum dibaca",
+    statusOnline: "Aktif",
+    typicalReply: "Membalas dalam ~15 mnt",
+    welcomeGreeting: "Halo! 👋 Selamat datang di velolev. Ada yang bisa kami bantu terkait proyek penegakan tiang lampu atau pengadaan unit alat?",
+    quickTitle: "Topik pertanyaan cepat:",
+    questions: [
+      "Saya ingin meminta penawaran harga resmi untuk alat penegak tiang portabel.",
+      "Bisakah bantu verifikasi kompatibilitas tiang dan flens fondasi kami?",
+      "Berapa estimasi waktu pengiriman (lead time) dan opsi logistiknya?",
+      "Mohon kirimkan lembar spesifikasi teknis lengkap serta buku panduan operator."
+    ],
+    inputPlaceholder: "Ketik pesan Anda atau pilih opsi di atas...",
+    inputLabel: "Pesan pertanyaan Anda",
+    sendAction: "Mulai Chat WhatsApp",
+    footerNote: "WhatsApp Bisnis Resmi · Dukungan Spesialis Langsung",
+    closeLabel: "Tutup panel chat",
+    openLabel: "Buka konsultasi WhatsApp",
+    defaultMsg: "Halo, saya tertarik dengan unit penegak tiang portabel velolev. Mohon informasi penawaran dan spesifikasi pengadaannya.",
+    agentName: "Dukungan Teknis velolev",
+    teamName: "Tim velolev",
+    today: "Hari ini",
+    now: "Sekarang"
+  }
+};
+
+// 选定当前语言字典（支持 fallback 至英文）
+const t = i18nDictionary[locale] ?? i18nDictionary.en;
+const activeQuestions = customQuestions && customQuestions.length > 0 ? customQuestions : t.questions;
+const initialMessage = defaultMessage || t.defaultMsg;
+const agentName = customAgentName || t.agentName;
+const companyTeam = t.teamName;
+---
+
+<div class="wa-chat-wrapper" data-wa-root>
+  <!-- 悬浮触发按钮区 -->
+  <div class="wa-float-bar">
+    <!-- 桌面端与初次展示的引导浮动气泡 -->
+    <div class="wa-teaser-bubble" data-wa-teaser>
+      <span class="wa-teaser-text">{t.tooltip}</span>
+      <button class="wa-teaser-close" type="button" aria-label={t.dismissTooltip} data-wa-teaser-dismiss>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <!-- 主圆钮（带呼吸光晕与未读小红点） -->
+    <button 
+      class="wa-trigger-btn" 
+      type="button" 
+      aria-haspopup="dialog" 
+      aria-expanded="false" 
+      aria-controls="wa-chat-window" 
+      aria-label={t.openLabel}
+      data-wa-trigger
+    >
+      <span class="wa-pulse-glow" aria-hidden="true"></span>
+      <span class="wa-badge" aria-label={t.unreadBadge}>{t.badgeText}</span>
+      
+      <!-- WhatsApp 官方标志 SVG -->
+      <svg class="wa-icon-brand" viewBox="0 0 32 32" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2C8.268 2 2 8.268 2 16c0 2.68.756 5.187 2.067 7.322L2.3 29.7a1 1 0 001.233 1.233l6.378-1.767A13.935 13.935 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.442 11.442 0 01-5.834-1.597l-.418-.248-4.329 1.2 1.2-4.329-.248-.418A11.444 11.444 0 014.5 16C4.5 9.649 9.649 4.5 16 4.5S27.5 9.649 27.5 16 22.351 27.5 16 27.5zm6.548-8.878c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.895-1.785-1.07-.954-1.792-2.134-2.002-2.494-.21-.36-.022-.555.158-.734.162-.162.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.292-.702-.59-.607-.81-.618l-.69-.013c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3 0 1.77 1.29 3.48 1.47 3.72.18.24 2.535 3.87 6.14 5.428.857.37 1.526.591 2.048.757.86.273 1.644.235 2.263.142.69-.103 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" fill="#FFFFFF"/>
+      </svg>
+      
+      <!-- 展开时的关闭图标 -->
+      <svg class="wa-icon-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- 展开抽屉面板（聊天窗口模态） -->
+  <div 
+    id="wa-chat-window" 
+    class="wa-chat-panel" 
+    role="dialog" 
+    aria-modal="false" 
+    aria-labelledby="wa-panel-title" 
+    aria-hidden="true" 
+    data-wa-panel
+  >
+    <!-- 头部顶栏 -->
+    <div class="wa-panel-header">
+      <div class="wa-agent-info">
+        <div class="wa-avatar-box">
+          <!-- 工程师头像徽章 SVG -->
+          <svg viewBox="0 0 40 40" width="44" height="44" class="wa-avatar-svg" aria-hidden="true">
+            <circle cx="20" cy="20" r="20" fill="#128C7E"/>
+            <!-- 安全头盔与工程师轮廓 -->
+            <path d="M14 17C14 13.686 16.686 11 20 11C23.314 11 26 13.686 26 17V19H14V17Z" fill="#F4CC3D"/>
+            <rect x="12" y="18" width="16" height="3" rx="1.5" fill="#E0B726"/>
+            <circle cx="20" cy="22" r="5" fill="#FDE2C3"/>
+            <path d="M11 34C11 28.5 15 26.5 20 26.5C25 26.5 29 28.5 29 34" fill="#0A5B52"/>
+          </svg>
+          <span class="wa-status-dot" title={t.statusOnline} aria-label={t.statusOnline}></span>
+        </div>
+        <div class="wa-agent-meta">
+          <h3 id="wa-panel-title" class="wa-agent-name">{agentName}</h3>
+          <p class="wa-agent-status">
+            <span class="wa-status-text">{t.statusOnline}</span>
+            <span class="wa-bullet" aria-hidden="true">·</span>
+            <span class="wa-reply-time">{t.typicalReply}</span>
+          </p>
+        </div>
+      </div>
+      <button class="wa-panel-close-btn" type="button" aria-label={t.closeLabel} data-wa-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <!-- 聊天内容区（WhatsApp 背景贴图风格） -->
+    <div class="wa-panel-body">
+      <div class="wa-chat-timestamp">
+        <span>{t.today}</span>
+      </div>
+
+      <!-- 问候气泡 -->
+      <div class="wa-msg-bubble incoming">
+        <div class="wa-msg-sender">{companyTeam}</div>
+        <div class="wa-msg-text">{t.welcomeGreeting}</div>
+        <div class="wa-msg-meta">
+          <span class="wa-msg-time" data-wa-now>{t.now}</span>
+          <span class="wa-ticks" aria-hidden="true">✓✓</span>
+        </div>
+      </div>
+
+      <!-- 快捷问题选项 -->
+      <div class="wa-quick-options">
+        <div class="wa-quick-heading">{t.quickTitle}</div>
+        <div class="wa-quick-tags">
+          {activeQuestions.map((question) => (
+            <button 
+              type="button" 
+              class="wa-quick-tag-btn" 
+              data-wa-quick-text={question}
+            >
+              <span>{question}</span>
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 3l5 5-5 5"/>
+              </svg>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部输入与直接触发区 -->
+    <div class="wa-panel-footer">
+      <form class="wa-chat-form" data-wa-form>
+        <div class="wa-input-row">
+          <input 
+            type="text" 
+            class="wa-text-input" 
+            placeholder={t.inputPlaceholder} 
+            value={initialMessage} 
+            data-wa-input 
+            aria-label={t.inputLabel}
+          />
+        </div>
+        <button type="submit" class="wa-send-btn" data-wa-send-btn>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+          <span>{t.sendAction}</span>
+        </button>
+      </form>
+      <div class="wa-footer-badge">
+        <svg viewBox="0 0 16 16" width="12" height="12" fill="#128C7E" aria-hidden="true">
+          <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.707 6.707l-4.5 4.5a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L6.5 9.086l3.793-3.793a1 1 0 011.414 1.414z"/>
+        </svg>
+        <span>{t.footerNote}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:inline>
+  /* 根部定位容器：悬浮于右下角 */
+  .wa-chat-wrapper {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 1000;
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wa-float-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  /* 提示引导气泡 */
+  .wa-teaser-bubble {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: #1d201e;
+    padding: 10px 14px;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-size: 13px;
+    font-weight: 500;
+    max-width: 250px;
+    animation: wa-slide-up 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: right bottom;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .wa-teaser-bubble.is-hidden {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .wa-teaser-text {
+    line-height: 1.35;
+  }
+
+  .wa-teaser-close {
+    background: transparent;
+    border: 0;
+    color: #888;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 2px 4px;
+    margin-left: 2px;
+    border-radius: 50%;
+  }
+
+  .wa-teaser-close:hover {
+    color: #111;
+    background: #f0f0f0;
+  }
+
+  /* 主悬浮圆钮 */
+  .wa-trigger-btn {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #25D366;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s, box-shadow 0.2s;
+    outline-offset: 4px;
+  }
+
+  .wa-trigger-btn:hover {
+    transform: scale(1.08);
+    background: #20ba5a;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55), 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .wa-trigger-btn:active {
+    transform: scale(0.96);
+  }
+
+  /* 呼吸波纹动效 */
+  .wa-pulse-glow {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid #25D366;
+    opacity: 0.8;
+    animation: wa-pulse-ring 2.4s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    pointer-events: none;
+  }
+
+  @keyframes wa-pulse-ring {
+    0% {
+      transform: scale(0.92);
+      opacity: 0.85;
+    }
+    60% {
+      transform: scale(1.35);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+
+  /* 未读角标 */
+  .wa-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #ff3b30;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+
+  /* 按钮内图标切换 */
+  .wa-icon-brand {
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .wa-icon-close {
+    position: absolute;
+    color: #ffffff;
+    opacity: 0;
+    transform: scale(0.5) rotate(-90deg);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .wa-chat-wrapper.is-open .wa-icon-brand {
+    opacity: 0;
+    transform: scale(0.5) rotate(90deg);
+  }
+
+  .wa-chat-wrapper.is-open .wa-icon-close {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  .wa-chat-wrapper.is-open .wa-pulse-glow,
+  .wa-chat-wrapper.is-open .wa-badge,
+  .wa-chat-wrapper.is-open .wa-teaser-bubble {
+    display: none !important;
+  }
+
+  /* 弹出式抽屉/面板 */
+  .wa-chat-panel {
+    position: absolute;
+    bottom: 78px;
+    right: 0;
+    width: 370px;
+    max-width: calc(100vw - 36px);
+    height: 560px;
+    max-height: calc(100vh - 120px);
+    background: #efeae2;
+    background-image: 
+      radial-gradient(#00000006 1px, transparent 1px);
+    background-size: 16px 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22), 0 4px 12px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.92) translateY(20px);
+    transform-origin: right bottom;
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .wa-chat-wrapper.is-open .wa-chat-panel {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+  }
+
+  /* 面板头部 */
+  .wa-panel-header {
+    background: #075E54;
+    color: #ffffff;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .wa-agent-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .wa-avatar-box {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .wa-avatar-svg {
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .wa-status-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 11px;
+    height: 11px;
+    background: #25D366;
+    border-radius: 50%;
+    border: 2px solid #075E54;
+  }
+
+  .wa-agent-meta {
+    min-width: 0;
+  }
+
+  .wa-agent-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .wa-agent-status {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 2px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .wa-status-text {
+    color: #79f7a7;
+    font-weight: 500;
+  }
+
+  .wa-bullet {
+    opacity: 0.5;
+  }
+
+  .wa-panel-close-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    flex-shrink: 0;
+  }
+
+  .wa-panel-close-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  /* 聊天主体滚动区 */
+  .wa-panel-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+
+  .wa-panel-body::-webkit-scrollbar {
+    width: 5px;
+  }
+  .wa-panel-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+  }
+
+  .wa-chat-timestamp {
+    text-align: center;
+    margin: 4px 0;
+  }
+
+  .wa-chat-timestamp span {
+    background: rgba(255, 255, 255, 0.75);
+    color: #555e58;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* 气泡样式 */
+  .wa-msg-bubble {
+    position: relative;
+    max-width: 90%;
+    background: #ffffff;
+    border-radius: 0 10px 10px 10px;
+    padding: 10px 12px 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    align-self: flex-start;
+  }
+
+  .wa-msg-bubble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 0;
+    border-color: transparent #ffffff transparent transparent;
+  }
+
+  .wa-msg-sender {
+    font-size: 11px;
+    font-weight: 700;
+    color: #128C7E;
+    margin-bottom: 4px;
+  }
+
+  .wa-msg-text {
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #242725;
+  }
+
+  .wa-msg-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 4px;
+    font-size: 10px;
+    color: #88938c;
+  }
+
+  .wa-ticks {
+    color: #34B7F1;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  /* 快捷选择标签 */
+  .wa-quick-options {
+    margin-top: 4px;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px dashed rgba(18, 140, 126, 0.25);
+  }
+
+  .wa-quick-heading {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #2e4d3c;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  .wa-quick-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .wa-quick-tag-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #d5dbd3;
+    border-radius: 8px;
+    padding: 8px 11px;
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: #1d201e;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  }
+
+  .wa-quick-tag-btn:hover {
+    background: #f4fbf7;
+    border-color: #25D366;
+    color: #075E54;
+    transform: translateX(2px);
+  }
+
+  .wa-quick-tag-btn svg {
+    flex-shrink: 0;
+    color: #128C7E;
+  }
+
+  /* 底部操作区 */
+  .wa-panel-footer {
+    background: #f0f2f5;
+    padding: 12px 14px 10px;
+    border-top: 1px solid #e1e4ea;
+    flex-shrink: 0;
+  }
+
+  .wa-chat-form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .wa-input-row {
+    position: relative;
+    width: 100%;
+  }
+
+  .wa-text-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d0d5dc;
+    background: #ffffff;
+    font-size: 13px;
+    color: #1d201e;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .wa-text-input:focus {
+    border-color: #128C7E;
+    box-shadow: 0 0 0 2px rgba(18, 140, 126, 0.2);
+  }
+
+  .wa-send-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #25D366;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 13.5px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
+    transition: background 0.15s, transform 0.1s;
+  }
+
+  .wa-send-btn:hover {
+    background: #1eb956;
+    transform: translateY(-1px);
+  }
+
+  .wa-send-btn:active {
+    transform: translateY(0);
+  }
+
+  .wa-footer-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 10.5px;
+    color: #6d757d;
+  }
+
+  @keyframes wa-slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* 移动端与不同尺寸屏幕响应式适配 */
+  @media (max-width: 640px) {
+    .wa-chat-wrapper {
+      right: 18px;
+      bottom: 20px;
+    }
+
+    .wa-trigger-btn {
+      width: 56px;
+      height: 56px;
+    }
+
+    .wa-trigger-btn svg.wa-icon-brand {
+      width: 30px;
+      height: 30px;
+    }
+
+    .wa-teaser-bubble {
+      display: none; /* 移动端默认隐藏长气泡，避免干扰 */
+    }
+
+    .wa-chat-panel {
+      bottom: 70px;
+      right: 0;
+      width: min(360px, calc(100vw - 32px));
+      height: 500px;
+      max-height: calc(100dvh - 96px);
+    }
+  }
+
+  /* 减弱动效偏好适配 */
+  @media (prefers-reduced-motion: reduce) {
+    .wa-pulse-glow {
+      animation: none;
+      display: none;
+    }
+    .wa-teaser-bubble,
+    .wa-chat-panel,
+    .wa-trigger-btn {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+</style>
+
+<script define:vars={{ cleanPhone }}>
+  (function initWhatsAppChat() {
+    const root = document.querySelector('[data-wa-root]');
+    if (!root) return;
+
+    const triggerBtn = root.querySelector('[data-wa-trigger]');
+    const panel = root.querySelector('[data-wa-panel]');
+    const closeBtn = root.querySelector('[data-wa-close]');
+    const teaser = root.querySelector('[data-wa-teaser]');
+    const teaserDismiss = root.querySelector('[data-wa-teaser-dismiss]');
+    const form = root.querySelector('[data-wa-form]');
+    const textInput = root.querySelector('[data-wa-input]');
+    const quickTags = root.querySelectorAll('[data-wa-quick-text]');
+    const nowElement = root.querySelector('[data-wa-now]');
+
+    // 格式化当前时间为 HH:MM
+    if (nowElement) {
+      try {
+        const d = new Date();
+        nowElement.textContent = d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
+      } catch (e) {}
+    }
+
+    // 检查 sessionStorage 记忆气泡关闭状态
+    const TEASER_STORAGE_KEY = 'velolev_wa_teaser_dismissed';
+    try {
+      if (sessionStorage.getItem(TEASER_STORAGE_KEY) === 'true' && teaser) {
+        teaser.classList.add('is-hidden');
+      }
+    } catch (e) {}
+
+    // 关闭引导气泡
+    teaserDismiss?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      teaser?.classList.add('is-hidden');
+      try {
+        sessionStorage.setItem(TEASER_STORAGE_KEY, 'true');
+      } catch (e) {}
+    });
+
+    // 切换面板展开/收起
+    function setOpen(isOpen) {
+      root.classList.toggle('is-open', isOpen);
+      triggerBtn?.setAttribute('aria-expanded', String(isOpen));
+      panel?.setAttribute('aria-hidden', String(!isOpen));
+      if (isOpen) {
+        teaser?.classList.add('is-hidden');
+        // 自动将焦点移至输入框
+        setTimeout(() => textInput?.focus(), 150);
+      }
+    }
+
+    triggerBtn?.addEventListener('click', () => {
+      const isOpen = root.classList.contains('is-open');
+      setOpen(!isOpen);
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      setOpen(false);
+      triggerBtn?.focus();
+    });
+
+    // 点击外部区域自动收起
+    document.addEventListener('click', (event) => {
+      if (!root.contains(event.target)) {
+        if (root.classList.contains('is-open')) {
+          setOpen(false);
+        }
+      }
+    });
+
+    // ESC 快捷键关闭
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && root.classList.contains('is-open')) {
+        setOpen(false);
+        triggerBtn?.focus();
+      }
+    });
+
+    // 快捷标签点击：更新输入框内容并提供视觉反馈
+    quickTags.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const text = btn.getAttribute('data-wa-quick-text') || '';
+        if (textInput) {
+          textInput.value = text;
+          textInput.focus();
+        }
+      });
+    });
+
+    // 提交直接跳转 WhatsApp
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const message = textInput?.value?.trim() || '';
+      const targetUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
+
+      // 触发外发事件供分析监测（如 GA4 / 统计）
+      try {
+        document.dispatchEvent(new CustomEvent('velolev:whatsapp-inquiry', {
+          detail: {
+            phone: cleanPhone,
+            message: message,
+            page: window.location.pathname
+          }
+        }));
+      } catch (err) {}
+
+      // 打开 WhatsApp 对话
+      window.open(targetUrl, '_blank', 'noopener,noreferrer');
+    });
+  })();
+</script>

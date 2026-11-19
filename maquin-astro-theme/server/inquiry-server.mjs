@@ -6,7 +6,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { randomBytes, timingSafeEqual } from "node:crypto";
 import { brotliCompressSync, gzipSync } from "node:zlib";
 import { InquiryStore } from "./inquiry-store.mjs";
-import { InquiryError, MAX_BODY_BYTES, validateInquiry, validateAttachment, validateIdempotencyKey, validateSubscription } from "./inquiry-validation.mjs";
+import { InquiryError, MAX_BODY_BYTES, validateInquiry, validateAttachment, validateIdempotencyKey, validateSubscription, generateCaptcha } from "./inquiry-validation.mjs";
 import { EmailService } from "./email-service.mjs";
 import { SubscriptionStore } from "./subscription-store.mjs";
 import {publicOrigin as resolvePublicOrigin,siteRedirects as aliases} from "../src/lib/site-config.mjs";
@@ -135,7 +135,12 @@ export function createInquiryServer({
       if(req.headers.origin&&!allowedOrigins.has(req.headers.origin))throw new InquiryError(403,"origin_rejected","This request origin is not allowed.");
       if(req.headers["sec-fetch-site"]==="cross-site")throw new InquiryError(403,"origin_rejected","Cross-site submission is not allowed.");
       
-      // 1. 询盘系统状态 (兼容末尾斜杠)
+      // 1. 验证码获取/刷新 (兼容末尾斜杠)
+      if((url.pathname==="/api/captcha"||url.pathname==="/api/captcha/")&&req.method==="GET") {
+        return json(res,200,generateCaptcha());
+      }
+
+      // 2. 询盘系统状态 (兼容末尾斜杠)
       if((url.pathname==="/api/inquiry-status"||url.pathname==="/api/inquiry-status/")&&req.method==="GET") {
         return json(res,200,{receiving:true,delivery:"private_inbox",emailNotification:isEmailConfigured?"resend":"not_configured",testMode});
       }

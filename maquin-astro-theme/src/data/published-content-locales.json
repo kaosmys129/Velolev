@@ -93,6 +93,182 @@
           ]
         }
       ]
+    },
+    "m24-anchor-bolts-180-260mm-flange-compatibility": {
+      "locale": "es",
+      "slug": "m24-anchor-bolts-180-260mm-flange-compatibility",
+      "title": "Compatibilidad de pernos de anclaje M24 y rango de brida de 180–260 mm en elevadores portátiles | velolev",
+      "h1": "Compatibilidad de pernos de anclaje M24 y rango de brida de 180–260 mm en elevadores portátiles de postes",
+      "description": "Guía técnica de compatibilidad para espárragos de anclaje M24, distancias entre pernos de brida de 180–260 mm, pernos estándar M16–M22 incluidos y revisión de planos para bases especiales.",
+      "imageFolder": "/images/guides/m24-anchor-bolts-180-260mm-flange-compatibility",
+      "sections": [
+        {
+          "heading": "Respuesta directa sobre compatibilidad técnica",
+          "paragraphs": [
+            "La ficha técnica del elevador portátil de postes de luz velolev enumera tamaños de pernos de anclaje M16, M18, M20, M22 y M24 junto con un rango de entrecentro de orificios de brida de 180–260 mm. Sin embargo, la compatibilidad listada y los herrajes suministrados por defecto son conceptos distintos: el suministro estándar incluye 4 juegos de cada medida para M16, M18, M20 y M22, mientras que los pernos M24 no están incluidos en el kit de serie.",
+            "Asimismo, debido a que el esquema original de la brida contiene terminología dimensional sujeta a clarificación de ingeniería, los equipos de obra deben verificar cómo define el plano la distancia entre centros y enviar un plano acotado de la placa base siempre que se especifiquen espárragos M24, patrones de 6 u 8 orificios, o rangos fuera del intervalo de 180–260 mm."
+          ]
+        },
+        {
+          "heading": "1. Pernos estándar incluidos (M16–M22) frente a M24 y bridas no estándar",
+          "paragraphs": [
+            "Los equipos de compras y obra suelen asumir que todos los diámetros de perno impresos en la tabla de especificaciones vienen incluidos en el embalaje de serie. Diferenciar con claridad los herrajes estándar de aquellos sujetos a revisión técnica del proyecto evita paradas y demoras de última hora en el frente de trabajo.",
+            "| Parámetro de brida o perno | Indicación en ficha técnica | Alcance de suministro estándar | Requisito de revisión técnica |\n| :--- | :--- | :--- | :--- |\n| Pernos de anclaje M16, M18, M20, M22 | Listados en tabla de compatibilidad M16–M24 | Incluidos (4 juegos por medida) | Confirmar proyección de rosca y definición de distancia en plano |\n| Pernos de anclaje M24 | Listados en tabla de compatibilidad M16–M24 | No incluidos en el suministro estándar | Señalar M24 en la consulta; confirmar alcance de herrajes y plano |\n| Placa base de 4 orificios en rango de 180–260 mm | Listada en rango de comprobación rápida | Referencia para patrón estándar de 4 pernos | Verificar si el plano mide entrecentro entre pernos contiguos o diámetro primitivo |\n| Patrón de brida de 6 u 8 orificios | Fuera de la comprobación estándar de 4 pernos | No cubierto por el kit estándar | Las bases no estándar requieren revisión previa de plano acotado |\n| Distancia inferior a 180 mm o superior a 260 mm | Fuera del rango listado de 180–260 mm | No cubierto por el kit estándar | Las bases no estándar requieren revisión previa de plano acotado |"
+          ]
+        },
+        {
+          "heading": "2. Por qué debe cotejarse la terminología dimensional de la brida con los planos",
+          "paragraphs": [
+            "En los planos de cimentación de alumbrado público, los proyectistas pueden acotar la placa base según la distancia entre orificios opuestos, el espaciamiento entre orificios contiguos o el diámetro del círculo primitivo de pernos (PCD). En la ficha técnica original de referencia, el esquema de la brida incorpora términos dimensionales que aún requieren homologación técnica antes de poder considerarse una garantía automática de acoplamiento.",
+            "En lugar de asumir que una cota de 240 mm o 250 mm en un pliego licitatorio encaja de forma directa, adjunte siempre el plano acotado de la base del poste que especifique el diámetro del perno, el número de taladros, la geometría entre centros y la longitud de proyección del espárrago sobre la zapata de concreto. Las bases no estándar exigen una revisión técnica de planos, y nunca se comprometen herrajes de transición a medida sin una evaluación previa de ingeniería."
+          ]
+        },
+        {
+          "heading": "3. Lista de verificación de placa base previa a la consulta para proyectos con M24 o diseños especiales",
+          "paragraphs": [
+            "Antes de solicitar una cotización técnica para un proyecto que emplee espárragos de anclaje M24 o placas base no estándar, reúna los siguientes cuatro puntos para permitir una validación precisa del acoplamiento:\n1. **Plano acotado de la brida:** Indique el número de orificios (4, 6 u 8), el diámetro exacto del taladro y las distancias entre centros claramente rotuladas.\n2. **Especificación de los pernos de anclaje:** Indique el diámetro nominal de la rosca (por ejemplo, M24), la longitud de rosca libre proyectada sobre la cimentación y la disposición de tuercas y arandelas.\n3. **Dimensiones y peso del conjunto ensamblado:** Confirme el peso total del poste completamente montado (hasta la carga nominal de 300 kg) y la altura del fuste (clase de 12 m).\n4. **Estado de inspección de la zapata:** Asegúrese de que la cimentación de hormigón y los espárragos embebidos hayan sido inspeccionados y aprobados por la dirección facultativa o el ingeniero residente de la obra."
+          ]
+        },
+        {
+          "heading": "Preguntas frecuentes sobre pernos M24 y bridas de 180–260 mm",
+          "paragraphs": [
+            "**¿Se incluyen pernos de anclaje M24 en el kit estándar de velolev?** No. El suministro de serie incluye 1 conjunto de equipo elevador, 1 juego de estacas de anclaje al suelo y 4 juegos de cada una de las medidas M16, M18, M20 y M22. La medida M24 figura en la tabla de compatibilidad, pero debe confirmarse y gestionarse por separado según los requisitos del proyecto.",
+            "**¿Puede una brida de 6 orificios con una distancia de 220 mm emplear la configuración estándar de 4 pernos?** No. Cualquier placa base de 6 u 8 orificios, así como cualquier distancia entre pernos inferior a 180 mm o superior a 260 mm, se clasifica como base no estándar y requiere una revisión obligatoria del plano acotado antes de confirmar su viabilidad de montaje."
+          ]
+        }
+      ]
+    },
+    "solar-street-light-pole-weight-limits-panel-battery-erection": {
+      "locale": "es",
+      "slug": "solar-street-light-pole-weight-limits-panel-battery-erection",
+      "title": "Límites de peso en postes de alumbrado solar: verificación de paneles, soportes y baterías bajo 300 kg | velolev",
+      "h1": "Límites de peso en postes de alumbrado público solar: verificación de cargas de panel, soporte y batería bajo 300 kg",
+      "description": "Cómo calcular el peso total ensamblado de postes de alumbrado solar (columna, panel fotovoltaico, soporte, caja de baterías y luminaria) frente al límite nominal de 300 kg y clase de 12 m.",
+      "imageFolder": "/images/guides/solar-street-light-pole-weight-limits-panel-battery-erection",
+      "sections": [
+        {
+          "heading": "Por qué el peso del fuste desnudo es insuficiente en proyectos de alumbrado solar",
+          "paragraphs": [
+            "Las columnas de alumbrado público solar autónomo soportan una masa en punta considerablemente mayor que los postes viales convencionales conectados a la red. Cuando los contratistas comparan únicamente el peso del fuste de acero desnudo contra la carga nominal de 300 kg y la clase de poste aplicable de 12 m del elevador portátil velolev, corren el riesgo de ignorar el peso crítico de los paneles solares, estructuras de soporte, envolventes de baterías y brazos salientes.",
+            "Si bien el equipo funciona con una batería recargable integrada de 24 V y no requiere red eléctrica en corredores rurales o zonas remotas, la elevación de un conjunto solar completo aún no ha sido homologada como configuración estándar de fábrica. Por tanto, todo proyecto de alumbrado público solar debe someterse a una revisión técnica de peso total ensamblado, geometría y plano de brida antes de descartar el uso de grúa."
+          ]
+        },
+        {
+          "heading": "1. Tabla de auditoría de peso para postes solares ensamblados",
+          "paragraphs": [
+            "Antes de emitir una consulta técnica o planificar el montaje, sume cada componente que estará fijado a la columna durante la maniobra de izado. Si el total combinado supera los 300 kg o la altura sobrepasa la clase de 12 m, el uso de camión grúa es obligatorio.",
+            "| Subconjunto del poste solar | Elementos a verificar en la auditoría de izado | Impacto en los límites de 300 kg y 12 m |\n| :--- | :--- | :--- | :--- |\n| Fuste cónico u octagonal | Masa estructural del fuste desnudo y longitud total | Debe situarse dentro de la clase de 12 m y dejar margen de carga para los accesorios en punta |\n| Módulo(s) solar(es) fotovoltaico(s) | Masa del panel, peso del marco y cota de fijación | Incrementa el peso en el extremo superior y eleva el centro de gravedad del conjunto |\n| Estructura superior y brazo de luminaria | Soporte de acero, estructura de inclinación y brazo | Debe computarse íntegramente dentro del límite máximo de carga nominal de 300 kg |\n| Caja de baterías y controlador | Peso del gabinete de baterías montado en poste y regulador | A menudo constituye el accesorio individual más pesado en columnas autónomas |\n| Luminaria(s) LED y cableado interno | Una o dos luminarias, mazo de cables y tornillería | Incluir la totalidad de los componentes precableados que se eleven juntos |"
+          ]
+        },
+        {
+          "heading": "2. Alimentación por batería de 24 V frente a validación pendiente del conjunto solar",
+          "paragraphs": [
+            "En autopistas remotas y proyectos de electrificación rural, la batería recargable de 24 V integrada en el gabinete eléctrico de 40 kg elimina la necesidad de tomas de corriente en obra o generadores auxiliares para accionar la elevación. La ficha técnica del fabricante registra una cifra indicativa superior a 50 elevaciones por carga completa y un tiempo de elevación de 20 s, valores pendientes de validación en campo según las condiciones de obra.",
+            "Dado que los paneles solares y las cajas de baterías en altura alteran radicalmente la distribución de cargas y la resistencia al viento en comparación con un poste estándar con luminaria simple, la ficha técnica vigente clasifica los montajes solares completos como configuraciones sujetas a validación específica por proyecto, y no como un procedimiento estándar automático."
+          ]
+        },
+        {
+          "heading": "3. Documentación técnica requerida para proyectos de postes solares",
+          "paragraphs": [
+            "Para evaluar si su paquete de luminarias solares aisladas se ajusta a los límites de trabajo del equipo, incluya los siguientes cuatro elementos en su consulta de ingeniería:\n- **Hoja de desglose de pesos del conjunto montado:** Relación desglosada del fuste, módulo(s) fotovoltaico(s), herrajes de montaje, caja de baterías y luminaria, certificando el peso total ensamblado.\n- **Plano de alzado y distribución de cargas:** Esquema acotado que muestre la altura total (hasta la clase de 12 m) y la cota exacta de fijación del panel y la batería a lo largo del fuste.\n- **Plano acotado de brida y pernos:** Distancia entre centros de pernos de la placa base (rango listado de 180–260 mm), patrón de taladros y métrica de anclaje (M16–M22 incluidos; M24 y bases especiales requieren revisión técnica).\n- **Condiciones de zapata y entorno:** Confirmación de zapata de concreto curada y autorizada, así como estado y accesibilidad del corredor de trabajo."
+          ]
+        },
+        {
+          "heading": "Preguntas frecuentes sobre el montaje de postes de alumbrado solar",
+          "paragraphs": [
+            "**¿Se puede elevar un poste solar de 10 m o 12 m si el fuste desnudo pesa 210 kg y el conjunto de panel más batería pesa 110 kg?** No. El peso combinado ensamblado alcanza los 320 kg, superando la carga nominal de 300 kg del equipo. En este caso es obligatorio emplear un camión grúa o método alternativo de izaje homologado.",
+            "**¿Está homologada la elevación de postes solares completos como configuración estándar?** No. La maniobra con un conjunto solar completo montado no ha sido validada como configuración estándar en la ficha técnica de origen, por lo que cada proyecto solar requiere una revisión individual de pesos y planos de ingeniería."
+          ]
+        }
+      ]
+    },
+    "modular-85kg-pole-lifter-operator-planning-boundaries": {
+      "locale": "es",
+      "slug": "modular-85kg-pole-lifter-operator-planning-boundaries",
+      "title": "Elevador de postes modular de 85 kg en dos bloques: dimensiones de transporte y límites de planificación para 1–2 operarios | velolev",
+      "h1": "Elevador modular de postes de 85 kg en dos bloques: dimensiones de transporte y límites de planificación para 1–2 operarios",
+      "description": "Desglose técnico del elevador portátil de postes de 85 kg en dos módulos (unidad hidráulica de 45 kg y gabinete eléctrico de 24 V de 40 kg) y límites de planificación para 1–2 operarios en obra.",
+      "imageFolder": "/images/guides/modular-85kg-pole-lifter-operator-planning-boundaries",
+      "sections": [
+        {
+          "heading": "Arquitectura de dos módulos para zonas de alumbrado de acceso restringido",
+          "paragraphs": [
+            "Aceras urbanas, paseos peatonales, camellones ajardinados y plataformas de estacionamiento multinivel suelen imposibilitar el ingreso de camiones grúa debido a limitaciones de gálibo, pasos estrechos o restricciones de carga sobre pavimentos terminados. El elevador portátil de postes de luz velolev resuelve la logística de transporte en estos espacios mediante una arquitectura dividida en dos módulos de 85 kg en total, evitando un chasis único pesado.",
+            "De acuerdo con la ficha técnica confirmada S4, el equipo se descompone en un módulo elevador hidráulico de 45 kg y un gabinete eléctrico de 40 kg, con dimensiones de embalaje de origen de 650 × 350 × 500 mm. La adecuada planificación de cuadrillas y logística en obra exige comprender con exactitud tanto el peso de cada módulo como el criterio de operarios especificado en la tabla técnica."
+          ]
+        },
+        {
+          "heading": "1. Masa de módulos, dimensiones y desglose de componentes",
+          "paragraphs": [
+            "Cada módulo presenta dimensiones físicas diferenciadas y funciones operativas específicas en obra:",
+            "| Módulo del equipo | Dimensiones (S4) | Peso (S4) | Subcomponentes listados |\n| :--- | :--- | :--- | :--- |\n| Módulo de elevación hidráulica | 610 × 220 × 220 mm | 45 kg | Cilindro hidráulico, válvula hidráulica, bomba de aceite, manómetro de presión de aceite |\n| Gabinete eléctrico | 500 × 300 × 250 mm | 40 kg | Sistema de control, bomba hidráulica, batería recargable de 24 V, indicadores de corriente y voltaje, botonera de elevación |\n| Conjunto total del equipo | Dos módulos independientes | 85 kg | Conectados en obra al pie del poste |\n| Embalaje según ficha técnica | 650 × 350 × 500 mm | 85 kg netos de equipo | Material de embalaje y peso bruto de envío confirmados según pedido |"
+          ]
+        },
+        {
+          "heading": "2. Por qué se especifican 1–2 operarios en lugar de una operación unipersonal incondicional",
+          "paragraphs": [
+            "En la ficha técnica S4, la mención de un solo operario figura únicamente como nota introductoria condicional, mientras que la tabla formal de parámetros técnicos prescribe 1–2 operarios. Desde el punto de vista de la ingeniería y la seguridad laboral, este equipo nunca debe promocionarse ni planificarse como una labor incondicional de una sola persona.",
+            "El traslado de un módulo hidráulico de 45 kg y de un gabinete eléctrico de 40 kg sobre bordillos, bermas sin pavimentar o desniveles, la alineación de una columna de la clase de 12 m (de hasta 300 kg) sobre los espárragos de la cimentación y la vigilancia del espacio aéreo justifican plenamente el trabajo coordinado de dos personas bajo los protocolos de manipulación manual de cargas e izaje. Las secuencias de maniobra paso a paso y la ubicación del personal quedan estrictamente sujetas a los manuales de operación revisados y planes de seguridad del proyecto."
+          ]
+        },
+        {
+          "heading": "3. Lista de control de logística y accesibilidad en obra",
+          "paragraphs": [
+            "Al planificar una instalación de acceso estrecho en paseos peatonales, parques o recintos industriales, verifique cuatro aspectos logísticos fundamentales antes del despliegue en campo:\n1. **Ruta de traslado y capacidad portante del firme:** Compruebe anchos libres de paso, cancelas de acceso, escalones y límites de carga de adoquines o losas entre la zona de descarga del vehículo y cada punto de cimentación.\n2. **Equipamiento para manipulación de cargas:** Disponga de carretillas, carros de transporte o correas de elevación para dos operarios adaptadas a los módulos de 45 kg y 40 kg, en cumplimiento de la normativa local de prevención de riesgos laborales.\n3. **Radio de giro y espacio libre de elevación:** Aunque el acceso en tierra sea estrecho, confirme que el arco de izado en los 12 m de desarrollo vertical esté totalmente libre de líneas eléctricas aéreas, ramas de arbolado o cornisas.\n4. **Placa base y límites de carga:** Asegúrese de que cada columna no supere los 300 kg de peso total ensamblado y sea compatible con el rango de entrecentro de brida de 180–260 mm (o cuente con una revisión técnica de planos aprobada)."
+          ]
+        },
+        {
+          "heading": "Preguntas frecuentes sobre el transporte modular de 85 kg y el tamaño de cuadrilla",
+          "paragraphs": [
+            "**¿Cuál es el módulo individual más pesado del elevador portátil velolev?** El módulo hidráulico de elevación pesa 45 kg (610 × 220 × 220 mm) y el gabinete eléctrico de 24 V pesa 40 kg (500 × 300 × 250 mm), sumando un total de 85 kg de equipo.",
+            "**¿Cuántos operarios se requieren en el frente de trabajo?** La tabla de parámetros de la ficha técnica indica 1–2 operarios. El dimensionamiento real de la cuadrilla debe ajustarse a la evaluación de riesgos del proyecto, los límites de manipulación manual de cargas y la normativa local de seguridad en izajes."
+          ]
+        }
+      ]
+    },
+    "when-mobile-cranes-still-required-over-300kg-12m-direct-burial": {
+      "locale": "es",
+      "slug": "when-mobile-cranes-still-required-over-300kg-12m-direct-burial",
+      "title": "Cuándo sigue siendo necesario un camión grúa: altura superior a 12 m, peso mayor a 300 kg y postes de enterramiento directo | velolev",
+      "h1": "Cuándo sigue siendo obligatorio el uso de camión grúa: altura superior a 12 m, peso sobre 300 kg y límites de enterramiento directo",
+      "description": "Matriz de exclusión técnica que define cuándo no puede emplearse un elevador hidráulico portátil para postes de luz y se requiere obligatoriamente una grúa móvil o camión grúa.",
+      "imageFolder": "/images/guides/when-mobile-cranes-still-required-over-300kg-12m-direct-burial",
+      "sections": [
+        {
+          "heading": "Definición de límites operativos claros del equipo antes de la movilización",
+          "paragraphs": [
+            "Un elevador hidráulico portátil para postes de luz está diseñado para un campo de aplicación bien definido: columnas de alumbrado vial y urbano de la clase de 12 m, con un peso total ensamblado igual o inferior a 300 kg y una placa base abridada fijada mediante pernos de anclaje revisados. Considerar un elevador portátil como un sustituto universal del camión grúa genera graves riesgos estructurales, de seguridad laboral y de programación de obra.",
+            "Establecer reglas claras de exclusión durante el análisis inicial del pliego licitatorio garantiza que los postes estándar de 12 m se beneficien de un montaje ágil en dos módulos, mientras que las estructuras de mayor peso, mayor altura o sin brida se asignen a grúas móviles de tonelaje adecuado."
+          ]
+        },
+        {
+          "heading": "1. Cinco condiciones de obra donde el camión grúa es obligatorio",
+          "paragraphs": [
+            "Descarte el izaje portátil sin grúa y asigne obligatoriamente un camión grúa o sistema de izaje certificado cuando concurra cualquiera de las siguientes circunstancias en su proyecto:",
+            "| Condición de exclusión | Límite del elevador portátil (S4) | Medida obligatoria en obra |\n| :--- | :--- | :--- |\n| Peso total ensamblado superior a 300 kg | Carga nominal máxima de 300 kg | Utilizar camión grúa; computar fuste, soporte, luminaria y batería solar en el peso total |\n| Altura de poste superior a 12 m | Clase de poste aplicable de 12 m | Utilizar camión grúa para mástiles de gran altura, estadios o columnas viales elevadas |\n| Postes de enterramiento directo (empotrados) sin brida | Diseñado para fijación a placa base con pernos de anclaje | Utilizar camión grúa o barrena perforadora capaz de suspender el fuste dentro de la excavación |\n| Zapata de concreto dañada o pernos corroídos | Requiere cimentación íntegra y espárragos M16–M24 sanos | Detener el izaje hasta concluir la reparación civil y la inspección estructural |\n| Bridas especiales no revisadas o postes de servicios múltiples | Rango listado de 180–260 mm; bases no estándar requieren revisión de planos | No realizar la elevación sin aprobación previa de plano acotado o asignación de grúa |"
+          ]
+        },
+        {
+          "heading": "2. Licitaciones con alcance mixto: combinación de elevadores portátiles y grúas",
+          "paragraphs": [
+            "Numerosos proyectos de modernización de alumbrado público y polígonos industriales contemplan una combinación mayoritaria de columnas estándar de 8 m a 12 m junto con un número menor de postes de 14 m a 18 m en cruces viales o estructuras pesadas multi-brazo. Dividir las unidades de obra del presupuesto en dos paquetes técnicos evita forzar cualquiera de las dos herramientas fuera de sus márgenes de seguridad.",
+            "Asigne las columnas de la clase de 12 m (iguales o inferiores a 300 kg y con geometría de brida verificada) a la evaluación con elevadores hidráulicos portátiles, y programe el camión grúa exclusivamente para las unidades que sobrepasen la altura, el peso o carezcan de brida. Al comparar costes en el lote apto para elevador portátil, introduzca sus propias tarifas locales de alquiler de grúa y cuadrillas en la calculadora de escenarios de costes velolev, sin depender de tarifas fijas predeterminadas."
+          ]
+        },
+        {
+          "heading": "3. Pasos de verificación previa para ingenieros de proyecto",
+          "paragraphs": [
+            "Antes de cerrar la selección de maquinaria en un proyecto mixto o con parámetros límite, verifique cuatro comprobaciones técnicas:\n- **Verificar la masa total elevada:** Compruebe los planos estructurales de cada tipo de poste y sume todos los accesorios para garantizar que cada unidad sea igual o inferior a 300 kg.\n- **Confirmar la unión de la placa base:** Asegúrese de que los postes incorporen brida empernada en lugar de empotramiento directo en tierra, y verifique el entrecentro (180–260 mm) y el métrico del perno (M16–M24).\n- **Enviar planos de bridas no estándar:** Las placas base que difieran de las medidas estándar exigen una revisión técnica previa de planos antes de comprometer el equipo.\n- **Auditar la seguridad aérea y del terreno:** Inspeccione las distancias de seguridad con líneas de media o alta tensión y la normativa local de izajes en cada punto de montaje."
+          ]
+        },
+        {
+          "heading": "Preguntas frecuentes sobre los límites entre grúa y elevador portátil",
+          "paragraphs": [
+            "**¿Puede el elevador portátil velolev instalar postes de enterramiento directo que van empotrados en una excavación sin placa base?** No. El equipo se conecta exclusivamente a placas base abridas fijadas sobre espárragos de cimentación. Los postes de empotramiento directo requieren un camión grúa o método de izaje suspendido.",
+            "**¿Qué procedimiento aplica si un proyecto tiene 35 postes de menos de 300 kg y 5 postes con un peso de 380 kg?** Únicamente los 35 postes iguales o inferiores a 300 kg y pertenecientes a la clase de 12 m son aptos para izaje con el elevador portátil; los 5 postes restantes de 380 kg deben montarse obligatoriamente con camión grúa."
+          ]
+        }
+      ]
     }
   },
   "fr": {
@@ -186,6 +362,182 @@
           "heading": "Comment l'équipement est-il alimenté sur un site sans réseau électrique ?",
           "paragraphs": [
             "Le coffret électrique intègre une batterie rechargeable de 24 V, ne nécessitant ni raccordement secteur ni générateur pendant le levage. La fiche mentionne des valeurs déclarées de plus de 50 levées par charge complète et 20 s de temps de levée, sous réserve de validation terrain."
+          ]
+        }
+      ]
+    },
+    "m24-anchor-bolts-180-260mm-flange-compatibility": {
+      "locale": "fr",
+      "slug": "m24-anchor-bolts-180-260mm-flange-compatibility",
+      "title": "Tiges d'ancrage M24 et entraxe de platine 180–260 mm : compatibilité sur élévateur portable de candélabres | velolev",
+      "h1": "Compatibilité des tiges d'ancrage M24 et entraxes de platine 180–260 mm sur lève-mât portable",
+      "description": "Guide d'ingénierie sur la compatibilité des tiges d'ancrage M24, l'entraxe de platine de 180–260 mm, les boulons standards M16–M22 inclus et la revue de plans pour embases non standard.",
+      "imageFolder": "/images/guides/m24-anchor-bolts-180-260mm-flange-compatibility",
+      "sections": [
+        {
+          "heading": "Réponse directe sur la compatibilité",
+          "paragraphs": [
+            "La fiche technique de l'élévateur hydraulique portable pour candélabres velolev répertorie les diamètres de tiges d'ancrage M16, M18, M20, M22 et M24, associés à une plage d'entraxe de perçage de platine de 180–260 mm. Cependant, compatibilité répertoriée et fourniture standard constituent deux éléments distincts : la livraison standard comprend 4 jeux pour chacun des diamètres de tiges M16, M18, M20 et M22, tandis que la quincaillerie M24 n'est pas fournie par défaut.",
+            "De plus, le schéma de platine d'origine comportant une terminologie dimensionnelle qui requiert encore une clarification technique, les équipes d'ingénierie doivent impérativement vérifier le mode de cotation de l'entraxe sur leurs plans et soumettre un plan coté d'embase dès lors que des tiges M24, des configurations à 6 ou 8 trous, ou des entraxes situés hors de la plage 180–260 mm sont prescrits."
+          ]
+        },
+        {
+          "heading": "1. Boulons standards inclus (M16–M22) vs M24 et platines non standard",
+          "paragraphs": [
+            "Les équipes d'approvisionnement et de chantier supposent fréquemment que l'ensemble des diamètres figurant dans un tableau technique est livré d'office dans la caisse standard. Distinguer précisément la quincaillerie fournie de base des composants soumis à validation préalable permet d'éviter les arrêts imprévus sur site.",
+            "| Paramètre de platine ou de tige | Mention sur la fiche technique | Périmètre de livraison standard | Exigence de revue d'ingénierie |\n| :--- | :--- | :--- | :--- |\n| Tiges d'ancrage M16, M18, M20, M22 | Répertoriées dans le tableau de compatibilité M16–M24 | Incluses (4 jeux par dimension) | Confirmer le dépassement fileté et la définition de l'entraxe sur plan |\n| Tiges d'ancrage M24 | Répertoriées dans le tableau de compatibilité M16–M24 | Non incluses dans la fourniture standard | Signaler le M24 lors de la consultation ; valider la quincaillerie et le plan coté |\n| Embase à 4 trous dans l'entraxe 180–260 mm | Répertoriée dans la plage de contrôle rapide | Référence standard pour gabarit à 4 trous | Vérifier si la cotation indique l'entraxe direct ou le diamètre du cercle de perçage |\n| Gabarit d'embase à 6 ou 8 trous | Hors du gabarit de contrôle standard à 4 trous | Non couvert par le kit standard | Les embases non standard nécessitent l'examen d'un plan coté détaillé |\n| Entraxe inférieur à 180 mm ou supérieur à 260 mm | Hors de la plage répertoriée de 180–260 mm | Non couvert par le kit standard | Les embases non standard nécessitent l'examen d'un plan coté détaillé |"
+          ]
+        },
+        {
+          "heading": "2. Pourquoi la terminologie de l'entraxe doit être vérifiée sur plan",
+          "paragraphs": [
+            "Sur les plans d'exécution de massifs d'éclairage public, les projeteurs peuvent coter une platine de base selon l'écartement entre trous opposés, l'écartement entre trous adjacents ou le diamètre du cercle primitif de perçage (PCD). Sur la fiche technique d'origine, le schéma de platine emploie des désignations dimensionnelles qui nécessitent une clarification technique approfondie avant de pouvoir servir de garantie autonome d'ajustement mécanique.",
+            "Plutôt que de présumer qu'une mention de 240 mm ou 250 mm dans un dossier d'appel d'offres s'adapte automatiquement, il est requis de joindre le plan coté du pied de mât indiquant le diamètre des tiges, le nombre d'orifices, la géométrie d'implantation et le dépassement fileté des tiges au-dessus du massif béton. Les embases non standard font l'objet d'un examen technique systématique, et aucune pièce d'adaptation sur mesure n'est promise sans évaluation préalable du bureau d'études."
+          ]
+        },
+        {
+          "heading": "3. Liste de contrôle d'embase avant demande de devis pour projets M24 et spéciaux",
+          "paragraphs": [
+            "Avant de soumettre une demande de chiffrage pour un projet employant des tiges d'ancrage M24 ou des platines spécifiques, rassemblez les quatre éléments techniques suivants afin d'assurer une vérification rigoureuse du raccordement :\n1. **Plan coté de la platine :** Préciser le nombre de trous (4, 6 ou 8 orifices), le diamètre exact des perçages et les cotes d'entraxe clairement identifiées.\n2. **Spécification des tiges d'ancrage :** Indiquer le diamètre nominal de filetage (par exemple M24), la hauteur de filetage libre au-dessus de la fondation et le dispositif écrou/rondelle prévu.\n3. **Gabarit du mât assemblé :** Confirmer le poids total assemblé du candélabre (dans la limite de 300 kg de charge nominale) et la classe de hauteur du mât (jusqu'à 12 m).\n4. **État de réception du massif de fondation :** Confirmer que la semelle béton et les tiges scellées ont été inspectées et validées par l'ingénieur de suivi des travaux."
+          ]
+        },
+        {
+          "heading": "Foire aux questions sur les tiges M24 et l'entraxe 180–260 mm",
+          "paragraphs": [
+            "**Les tiges d'ancrage M24 sont-elles incluses dans le kit standard velolev ?** Non. La fourniture standard comprend 1 ensemble complet d'équipement, 1 jeu de piquets d'ancrage au sol et 4 jeux de tiges pour chacun des diamètres M16, M18, M20 et M22. Le diamètre M24 figure au tableau de compatibilité mais doit être confirmé et commandé spécifiquement.",
+            "**Une platine à 6 trous avec un entraxe de 220 mm peut-elle utiliser le montage standard à 4 boulons ?** Non. Toute platine à 6 ou 8 trous, de même que tout entraxe inférieur à 180 mm ou supérieur à 260 mm, est classée comme embase non standard et exige la validation d'un plan d'ingénierie coté avant confirmation d'assemblage."
+          ]
+        }
+      ]
+    },
+    "solar-street-light-pole-weight-limits-panel-battery-erection": {
+      "locale": "fr",
+      "slug": "solar-street-light-pole-weight-limits-panel-battery-erection",
+      "title": "Limites de charge pour candélabres solaires : calculer les charges panneaux, consoles et batteries sous 300 kg | velolev",
+      "h1": "Limites de poids pour candélabres solaires : contrôle des panneaux, supports et batteries sous 300 kg",
+      "description": "Méthode de calcul du poids total assemblé d'un candélabre solaire (fût, panneau photovoltaïque, support, coffre de batterie et luminaire) par rapport à la charge nominale de 300 kg et la limite de 12 m.",
+      "imageFolder": "/images/guides/solar-street-light-pole-weight-limits-panel-battery-erection",
+      "sections": [
+        {
+          "heading": "Pourquoi le poids du fût seul ne suffit pas pour les projets d'éclairage solaire",
+          "paragraphs": [
+            "Les candélabres d'éclairage public solaire autonome supportent une masse en tête nettement plus importante que les mâts de voirie classiques reliés au réseau électrique. Lorsque les entrepreneurs comparent uniquement le poids de la colonne en acier nu à la charge nominale de 300 kg et à la classe de mât de 12 m de l'élévateur portable velolev, ils risquent d'omettre les panneaux solaires, les châssis supports, les coffres de batterie et les crosses d'éclairage.",
+            "Bien que l'équipement soit alimenté par sa propre batterie rechargeable intégrée de 24 V et n'exige aucun raccordement électrique sur les chantiers ruraux isolés, le levage d'un candélabre solaire complet assemblé au sol n'a pas encore été validé en configuration standard. Chaque projet de candélabre solaire doit donc obligatoirement faire l'objet d'une vérification du poids total assemblé, de la géométrie et du plan d'embase avant d'opter pour une pose sans grue."
+          ]
+        },
+        {
+          "heading": "1. Tableau d'audit du poids total d'un candélabre solaire assemblé",
+          "paragraphs": [
+            "Avant de formuler une demande de projet d'éclairage solaire, additionnez scrupuleusement chaque élément fixé au candélabre lors de l'opération de levage. Si le poids cumulé dépasse 300 kg ou si la hauteur totale excède la classe 12 m, l'emploi d'une grue mobile devient obligatoire.",
+            "| Sous-ensemble du candélabre solaire | Éléments à mesurer pour l'audit de levage | Impact sur la limite 300 kg / 12 m |\n| :--- | :--- | :--- |\n| Fût cylindro-conique ou octogonal | Masse du mât nu et longueur hors-tout | Doit rester dans la classe 12 m et réserver une marge pour les équipements hauts |\n| Module(s) photovoltaïque(s) | Masse des panneaux solaires, cadre et hauteur de montage | Augmente la masse en tête et déplace le centre de gravité vers le haut |\n| Support de fixation haut et crosse | Console en acier, cadre d'inclinaison et bras de luminaire | Doit être intégré dans le plafond des 300 kg de charge nominale |\n| Coffre de batteries et régulateur | Poids du bac batterie monté sur mât et du régulateur de charge | Souvent le composant accessoire le plus lourd sur les mâts autonomes |\n| Luminaire(s) LED et câblage interne | Luminaire simple ou double, faisceaux et fixations | Prendre en compte l'ensemble des éléments pré-câblés levés simultanément |"
+          ]
+        },
+        {
+          "heading": "2. Alimentation autonome sur batterie 24 V et statut de validation du montage solaire",
+          "paragraphs": [
+            "Sur les chantiers routiers éloignés et les axes d'électrification rurale, la batterie rechargeable de 24 V intégrée dans le coffret électrique de 40 kg élimine tout besoin de raccordement au réseau ou de groupe électrogène pendant les manœuvres de levage. La fiche technique rapporte une valeur constructeur supérieure à 50 levées par charge complète pour un temps de montée de 20 s, bien que la validation de performance sur site demeure en cours.",
+            "Dans la mesure où les panneaux photovoltaïques et coffres de batteries situés en hauteur modifient considérablement la répartition des masses et la prise au vent par rapport à un candélabre classique à luminaire seul, la fiche technique actuelle considère l'érection d'ensembles solaires complets comme soumise à vérification spécifique au cas par cas, et non comme une configuration standard implicite."
+          ]
+        },
+        {
+          "heading": "3. Dossier technique d'ingénierie requis pour les projets solaires",
+          "paragraphs": [
+            "Pour déterminer si votre lot de candélabres solaires autonomes respecte les limites d'exploitation de l'équipement, transmettez les quatre documents suivants lors de votre consultation technique :\n- **Bordereau des poids détaillés de l'ensemble :** Poids détaillé du fût, des modules photovoltaïques, des consoles supports, du coffre de batterie et des luminaires, accompagné de la masse totale assemblée validée.\n- **Plan d'élévation et d'implantation des accessoires :** Schéma dimensionnel précisant la hauteur hors-tout (jusqu'à 12 m) et la position altimétrique du panneau et de la batterie sur le fût.\n- **Plan coté de la platine et des tiges :** Entraxe de perçage de platine (plage répertoriée de 180–260 mm), disposition des perçages et dimension des tiges d'ancrage (M16–M22 fournies ; M24 et platines spéciales soumises à examen).\n- **Contexte du massif et du site :** Attestation de réception du massif de fondation en béton et vérification des conditions d'accès le long de la voie."
+          ]
+        },
+        {
+          "heading": "Foire aux questions sur le levage de candélabres solaires",
+          "paragraphs": [
+            "**Peut-on lever un candélabre solaire de 10 m ou 12 m dont le fût nu pèse 210 kg et l'ensemble panneau/batterie 110 kg ?** Non. Le poids total assemblé atteint 320 kg, ce qui dépasse la charge nominale de 300 kg. Une grue mobile ou une méthode de manutention agréée doit impérativement être mise en œuvre.",
+            "**Le levage d'un candélabre solaire complet est-il validé comme configuration standard ?** Non. Le levage d'une structure solaire entièrement pré-équipée n'est pas qualifié de série sur la fiche technique de référence ; chaque projet solaire nécessite une analyse du poids total assemblé et des plans d'exécution."
+          ]
+        }
+      ]
+    },
+    "modular-85kg-pole-lifter-operator-planning-boundaries": {
+      "locale": "fr",
+      "slug": "modular-85kg-pole-lifter-operator-planning-boundaries",
+      "title": "Lève-mât modulaire de 85 kg en deux modules : dimensions de transport et organisation chantier à 1–2 opérateurs | velolev",
+      "h1": "Lève-candélabre modulaire de 85 kg : dimensions de transport et organisation d'équipe à 1–2 opérateurs",
+      "description": "Analyse technique de l'élévateur portable de candélabres de 85 kg en deux modules (unité hydraulique de 45 kg et coffret électrique 24 V de 40 kg) et limites d'organisation à 1–2 opérateurs.",
+      "imageFolder": "/images/guides/modular-85kg-pole-lifter-operator-planning-boundaries",
+      "sections": [
+        {
+          "heading": "Architecture à deux modules pour chantiers d'éclairage à accès restreint",
+          "paragraphs": [
+            "Les trottoirs urbains étroits, allées piétonnes, terre-pleins paysagers et plateaux de parcs de stationnement interdisent fréquemment l'accès des camions-grues en raison des largeurs de voirie limitées, des faibles gabarits en hauteur ou des limites de portance des revêtements de sol. L'élévateur portable de candélabres velolev résout la problématique de transport dans ces passages exigus grâce à son architecture scindée en deux modules totalisant 85 kg, évitant le recours à un châssis lourd monobloc.",
+            "Conformément à la fiche technique validée, le système se sépare en un module de levage hydraulique de 45 kg et un coffret électrique de 40 kg, avec des dimensions d'emballage mentionnées de 650 × 350 × 500 mm. Planifier adéquatement l'affectation du personnel et la logistique de chantier nécessite de bien appréhender le poids unitaire des modules ainsi que les limites de manœuvre prescrites dans le tableau des paramètres."
+          ]
+        },
+        {
+          "heading": "1. Masse des modules, encombrement et nomenclature des composants",
+          "paragraphs": [
+            "Chaque module présente des caractéristiques physiques distinctes et remplit une fonction dédiée sur le chantier :",
+            "| Module d'équipement | Dimensions spécifiées | Poids spécifié | Sous-composants répertoriés |\n| :--- | :--- | :--- | :--- |\n| Module de levage hydraulique | 610 × 220 × 220 mm | 45 kg | Vérin hydraulique, distributeur hydraulique, pompe à huile, manomètre de pression d'huile |\n| Coffret électrique | 500 × 300 × 250 mm | 40 kg | Système de contrôle, motopompe hydraulique, batterie rechargeable 24 V, ampèremètre et voltmètre, boutons de commande de levage |\n| Ensemble complet d'équipement | Deux modules séparés | 85 kg | Raccordés directement sur chantier au pied du candélabre |\n| Colis d'emballage d'origine | 650 × 350 × 500 mm | 85 kg net équipement | Matériaux de conditionnement et poids brut d'expédition confirmés selon la commande |"
+          ]
+        },
+        {
+          "heading": "2. Pourquoi 1–2 opérateurs sont prévus plutôt qu'une exploitation solitaire inconditionnelle",
+          "paragraphs": [
+            "Sur la fiche technique de référence, la mention d'un opérateur unique n'apparaît qu'à titre indicatif en note d'introduction, tandis que le tableau des spécifications fait foi en stipulant expressément 1–2 opérateurs. Du point de vue de l'ingénierie des méthodes et de la sécurité au travail (SST), cet équipement ne doit jamais être commercialisé ni planifié comme une tâche réalisable sans conditions par une seule personne.",
+            "Le portage d'un module hydraulique de 45 kg et d'un coffret de 40 kg à travers bordures, accotements non stabilisés ou terrains en pente, l'alignement d'un candélabre de classe 12 m (pouvant peser jusqu'à 300 kg) sur les tiges d'ancrage et la surveillance continue du gabarit aérien exigent généralement une équipe coordonnée de deux techniciens conformément aux normes de manutention manuelle et de levage. Les séquences opératoires détaillées pas à pas et le positionnement du personnel doivent être consignés dans les plans de prévention et consignes de sécurité du chantier."
+          ]
+        },
+        {
+          "heading": "3. Liste de contrôle logistique et accès au site d'installation",
+          "paragraphs": [
+            "Lors de la préparation d'un chantier d'éclairage en zone d'accès restreint (promenades, parcs ou campus), validez les quatre points logistiques suivants avant toute mobilisation :\n1. **Itinéraire de cheminement et portance du sol :** Vérifier la largeur des allées, le passage des portillons, les escaliers éventuels et la charge admissible sur les dallages entre la zone de déchargement du véhicule et chaque massif.\n2. **Moyens d'aide à la manutention :** Prévoir des chariots de transport adaptés, des diables à bandage large ou des sangles de portage à deux personnes pour les modules de 45 kg et 40 kg, conformément à la réglementation du travail.\n3. **Dégagement de l'arc de pivotement :** Même dans un couloir au sol très étroit, s'assurer que l'arc de déploiement complet sur 12 m de hauteur respecte les distances de sécurité avec les lignes électriques aériennes, la végétation et les façades de bâtiments.\n4. **Contrôle de l'embase et de la charge :** Vérifier que chaque candélabre ne dépasse pas 300 kg de masse totale assemblée et s'inscrit dans la plage d'entraxe de 180–260 mm (ou a reçu une approbation sur plan coté)."
+          ]
+        },
+        {
+          "heading": "Foire aux questions sur le transport modulaire de 85 kg et les effectifs",
+          "paragraphs": [
+            "**Quel est le module le plus lourd de l'élévateur portable velolev ?** Le module de levage hydraulique est le plus lourd avec 45 kg (610 × 220 × 220 mm), tandis que le coffret électrique 24 V pèse 40 kg (500 × 300 × 250 mm), pour un ensemble total de 85 kg.",
+            "**Combien d'opérateurs sont requis sur le terrain ?** Le tableau technique de référence stipule 1–2 opérateurs. La composition réelle de l'équipe de pose doit être déterminée par l'évaluation des risques du projet, les seuils de port de charge et les règles de sécurité en vigueur sur le site."
+          ]
+        }
+      ]
+    },
+    "when-mobile-cranes-still-required-over-300kg-12m-direct-burial": {
+      "locale": "fr",
+      "slug": "when-mobile-cranes-still-required-over-300kg-12m-direct-burial",
+      "title": "Quand la grue mobile reste obligatoire : hauteur > 12 m, poids > 300 kg et mâts à enfouissement direct | velolev",
+      "h1": "Critères d'exclusion : quand recourir obligatoirement à une grue mobile pour les candélabres de plus de 12 m, 300 kg ou enfouis",
+      "description": "Matrice d'exclusion d'ingénierie définissant les cas où un élévateur hydraulique portable ne peut pas être utilisé et où une grue mobile ou un engin de levage alternatif est obligatoire.",
+      "imageFolder": "/images/guides/when-mobile-cranes-still-required-over-300kg-12m-direct-burial",
+      "sections": [
+        {
+          "heading": "Définir des limites d'utilisation rigoureuses avant la mobilisation",
+          "paragraphs": [
+            "Un élévateur hydraulique portable pour candélabres est conçu pour un domaine d'emploi strictement délimité : mâts d'éclairage public ou d'aires de stationnement de classe 12 m, d'un poids total assemblé inférieur ou égal à 300 kg, fixés sur une platine boulonnée préalablement vérifiée. Considérer un lève-mât portable comme un substitut universel au camion-grue engendre de graves risques structurels, humains et calendaires.",
+            "Établir des règles d'exclusion formelles dès l'analyse des dossiers d'appels d'offres garantit que les candélabres standards de 12 m bénéficient de la flexibilité de l'appareil modulaire, tandis que les structures plus lourdes, plus hautes ou sans semelle restent systématiquement assignées à des engins de levage motorisés de capacité adaptée."
+          ]
+        },
+        {
+          "heading": "1. Cinq situations où le recours à une grue mobile est impératif",
+          "paragraphs": [
+            "Excluez la solution de levage manuel/portable et maintenez obligatoirement une grue mobile ou un engin de levage homologué dès lors que l'une des conditions suivantes se présente sur votre projet :",
+            "| Condition d'exclusion | Limite technique de l'élévateur portable | Mesure obligatoire sur chantier |\n| :--- | :--- | :--- |\n| Poids total assemblé supérieur à 300 kg | Charge nominale maximale de 300 kg | Utiliser une grue mobile ; intégrer dans le calcul le fût, la console, le luminaire et la batterie solaire |\n| Hauteur de mât supérieure à 12 m | Classe de mât applicable de 12 m | Utiliser un camion-grue pour les grands mâts, mâts d'éclairage sportif ou colonnes autoroutières hautes |\n| Mâts à enfouissement direct (sans platine de fixation) | Conçu exclusivement pour liaison sur platine à brides et tiges d'ancrage | Utiliser une grue mobile ou un camion tarière-grue capable de suspendre et guider le fût dans la fouille |\n| Massif béton dégradé ou tiges d'ancrage corrodées | Exige une fondation intègre et des tiges d'ancrage M16–M24 saines | Suspendre les opérations de levage jusqu'à réfection du génie civil et validation structurelle |\n| Platines non standard non validées ou mâts multi-équipements | Entraxe répertorié de 180–260 mm ; bases spécifiques soumises à étude de plan | Ne pas entreprendre le levage sans approbation préalable d'un plan coté ou mobiliser une grue |"
+          ]
+        },
+        {
+          "heading": "2. Marchés à périmètre mixte : combiner élévateur portable et grue mobile",
+          "paragraphs": [
+            "De nombreux marchés publics de modernisation de l'éclairage urbain ou d'aménagement de zones industrielles associent une majorité de candélabres courants de 8 m à 12 m à quelques mâts de carrefour de 14 m à 18 m ou à des poteaux lourds multi-projecteurs. Fractionner le bordereau quantitatif en deux lots distincts évite de contraindre un outil au-delà de ses limites de sécurité.",
+            "Allouez les candélabres de classe 12 m (au plus 300 kg avec géométrie d'embase conforme) à la méthodologie de levage hydraulique portable, et planifiez les interventions de grue mobile uniquement pour les éléments hors gabarit, surpondérés ou directement scellés en fouille. Pour comparer économiquement les options sur le sous-ensemble éligible à l'élévateur, intégrez vos propres coûts locaux de location d'engins et de main-d'œuvre dans le simulateur de scénario de coûts velolev, sans présupposés tarifaires figés."
+          ]
+        },
+        {
+          "heading": "3. Procédure de vérification préalable pour les ingénieurs d'études et de travaux",
+          "paragraphs": [
+            "Avant d'arrêter le choix du matériel sur un projet à périmètre mixte ou en limite de gabarit, effectuez scrupuleusement ces quatre vérifications d'ingénierie :\n- **Vérifier la masse totale levée :** Contrôler les plans d'exécution de chaque typologie de mât et sommer l'ensemble des accessoires pour garantir que chaque unité candidate reste à 300 kg ou moins.\n- **Confirmer l'interface de pied de mât :** Vérifier que les colonnes disposent d'une semelle à platine boulonnée (et non d'un enfouissement direct dans le sol), et contrôler l'entraxe (180–260 mm) ainsi que le diamètre des tiges (M16–M24).\n- **Transmettre les plans des embases spécifiques :** Tout mât disposant d'une platine non standard doit faire l'objet d'un examen de plan d'ingénierie coté avant engagement des équipements.\n- **Auditer la sécurité au sol et les réseaux aériens :** Vérifier les distances réglementaires par rapport aux lignes électriques sous tension et s'assurer du respect des prescriptions de sécurité de levage applicables au site."
+          ]
+        },
+        {
+          "heading": "Foire aux questions sur les limites d'utilisation de la grue vs lève-mât portable",
+          "paragraphs": [
+            "**L'élévateur portable velolev peut-il installer des mâts à enfouissement direct fichés en terre sans platine ?** Non. L'appareil prend appui mécaniquement sur la semelle métallique du candélabre et s'ancre sur les tiges de fondation. Les mâts plantés en pleine terre nécessitent une grue mobile ou un engin de suspension adapté.",
+            "**Que faire si un chantier comprend 35 candélabres de moins de 300 kg et 5 candélabres pesant 380 kg ?** Seuls les 35 mâts de moins de 300 kg relevant de la classe 12 m peuvent être validés pour l'élévateur portable ; les cinq mâts de 380 kg doivent impérativement être mis en place à l'aide d'une grue mobile."
           ]
         }
       ]
