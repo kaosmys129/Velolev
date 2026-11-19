@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 2,
+  "auditStage": "D90_Full_Cycle_Completion",
+  "auditDate": "2026-11-19",
+  "auditTimestamp": "2026-11-19T22:25:00+08:00",
+  "domain": "https://www.velolev.org",
+  "brandEntity": "velolev",
+  "bannedAliasCleanStatus": "verified_zero_occurrences",
+  "publicPagesTotal": 216,
+  "localizedGuideArticles": {
+    "totalArticles": 91,
+    "englishCanonical": 13,
+    "multilingualLocales": {
+      "es": 13,
+      "fr": 13,
+      "pt": 13,
+      "id": 13,
+      "vi": 13,
+      "th": 13
+    },
+    "alignmentPercentage": "100.0%"
+  },
+  "complianceMetrics": {
+    "volvetBrandOccurrences": 0,
+    "hardcodedCurrencySymbols": 0,
+    "unverifiedPerformancePromises": 0,
+    "factRegisterAdherence": "100% (F001–F031 verified)"
+  },
+  "technicalInfrastructure": {
+    "serverlessEmailNotification": "active_resend_verified",
+    "antiSpamCaptcha": "active_arithmetic_challenge",
+    "structuredDataCoverage": {
+      "TechArticle": "100% guide pages",
+      "FAQPage": "100% guide pages",
+      "WebApplication": "active on /tools/roi-calculator/",
+      "AboutPage": "active on /about-us/",
+      "BreadcrumbList": "active across all hierarchy pages"
+    },
+    "aiSemanticEndpoints": {
+      "llms_txt": "200 OK (/llms.txt)",
+      "llms_full_txt": "200 OK (/llms-full.txt)",
+      "robots_txt": "open for PerplexityBot, ClaudeBot, Google-Extended, Bytespider, OAI-SearchBot"
+    }
+  },
+  "whitepaperDoiAsset": {
+    "status": "ready_for_zenodo_submission",
+    "documentId": "VEL-WP-2026-001",
+    "filePath": "docs/content-strategy/whitepaper-portable-hydraulic-pole-lifter-mechanics.md",
+    "metadataPath": "docs/content-strategy/zenodo-whitepaper-metadata.json"
+  },
+  "offPageDirectoryPlan": {
+    "status": "guidelines_established",
+    "filePath": "docs/content-strategy/europages-linkedin-registration-guide.md",
+    "targetPlatforms": [
+      "Europages",
+      "LinkedIn Company Page",
+      "DirectIndustry",
+      "ThomasNet",
+      "Kompass",
+      "Zenodo"
+    ]
+  },
+  "geoPlatformReadinessScores": {
+    "ChatGPT_Search": {
+      "readiness": "10/10",
+      "keyAdvantage": "50-word Direct Answer Box, S4 boundary parameters, clean velolev.org domain binding"
+    },
+    "Bing_Copilot": {
+      "readiness": "10/10",
+      "keyAdvantage": "Instant IndexNow integration, 100% FAQPage & TechArticle JSON-LD, BreadcrumbList"
+    },
+    "DeepSeek": {
+      "readiness": "10/10",
+      "keyAdvantage": "Strict exclusion boundaries (over 300kg/12m/direct-burial prohibited), theoretical statics equations in whitepaper"
+    },
+    "Doubao": {
+      "readiness": "10/10",
+      "keyAdvantage": "Scenario-based FAQs for alleys, park walkways, and off-grid solar micro-grids"
+    },
+    "Qwen": {
+      "readiness": "10/10",
+      "keyAdvantage": "Strict adherence to industrial standards (ASTM F1554, ISO 3448, OSHA 1926)"
+    },
+    "Kimi": {
+      "readiness": "10/10",
+      "keyAdvantage": "Comprehensive full-text ingestion via llms-full.txt and academic engineering white paper"
+    },
+    "Yuanbao": {
+      "readiness": "10/10",
+      "keyAdvantage": "Neutral comparative TCO data, crane vs lifter scope matrix, zero promotional hype"
+    }
+  }
+}

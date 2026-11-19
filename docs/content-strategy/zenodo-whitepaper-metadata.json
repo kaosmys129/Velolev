@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "Engineering Mechanics and Wind Load Verification for Portable Hydraulic Street Light Pole Lifters: Safe Erection Envelope Under 300 kg Rated Capacity and 12 m Pole Classes",
+    "upload_type": "publication",
+    "publication_type": "technical_note",
+    "description": "Comprehensive engineering mechanics formulation, statics equilibrium equations, dynamic wind sail area thresholds, and anchor stud pullout safety factors for the velolev Portable Hydraulic Light Pole Lifter (85 kg split two-module architecture, 24V battery power, 300 kg rated load, 12 m maximum column class, M16-M24 anchor bolt compatibility). Formulates an evidence-based operational envelope for crane-free municipal EPC lighting installations in space-constrained urban and off-grid environments.",
+    "creators": [
+      {
+        "name": "velolev Engineering Review Board",
+        "affiliation": "velolev Technical Standards & Structural Analysis Division"
+      }
+    ],
+    "keywords": [
+      "Light pole lifter",
+      "crane-free erection",
+      "street lighting mechanics",
+      "wind sail area",
+      "hydraulic counterbalance valve",
+      "anchor stud pullout",
+      "B2B municipal engineering",
+      "OSHA 1926 compliance",
+      "portable hydraulic equipment"
+    ],
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "language": "eng",
+    "version": "1.0.0",
+    "related_identifiers": [
+      {
+        "identifier": "https://www.velolev.org/",
+        "relation": "isSupplementTo",
+        "resource_type": "dataset"
+      },
+      {
+        "identifier": "https://www.velolev.org/guides/install-12m-street-light-poles-without-crane/",
+        "relation": "cites",
+        "resource_type": "publication-technicalnote"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "velolev Structural Verification Team",
+        "type": "Researcher"
+      }
+    ],
+    "notes": "Published under velolev engineering standards archive. Document identifier: VEL-WP-2026-001. All parameters bound to audited physical fact register F001-F031."
+  }
+}
